@@ -1,0 +1,32 @@
+{
+	"layers": [
+		{
+			"type": "LayerGroup",
+			"title": "他の機関",
+			"iconUrl": "",
+			"entries": [
+				{
+					"type": "LayerGroup",
+					"title": "気象庁",
+					"open": false,
+					"toggleall": false,
+					"entries": [
+						{
+							"type": "Layer",
+							"id": "active_volcanoes",
+							"title": "活火山分布",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/101.png",
+							"url": "http://cyberjapandata.gsi.go.jp/overlay/active_volcanoes.kml",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"html": ""
+						}
+					]
+				}
+			],
+			"open": false,
+			"toggleall": false
+		}
+	]
+}
