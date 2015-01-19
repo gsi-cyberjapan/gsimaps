@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>国土地理院 layers.txt編集ツール</title>
+
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css"/>
+<script type="text/javascript" src="jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.mjs.nestedSortable.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="config.css"/>
+<script type="text/javascript" src="config.js"></script>
+
+</head>
+<body>
+	
+	<div class="menu">
+		<span>レイヤ定義ファイル編集ツール(地理院地図)</span>
+		<a menu_method="new" class="new_btn" href="javascript:void(0);">新規に作成する</a>
+		<a menu_method="load" class="load_btn" href="javascript:void(0);">ファイルを開く</a>
+		<a menu_method="save" class="save_btn" href="javascript:void(0);">ファイルに保存</a>
+		<!--a menu_method="search" class="search_btn" href="javascript:void(0);">条件検索</a-->
+	</div>
+	
+	<div class="tree"></div>
+	<!--
+	<div class="search">
+		<a class="close_btn" href="javascript:void(0);">×</a>
+		<div class="check_frame">
+			<form name="search_f">
+			<label><input type="checkbox" name="notype">種別未設定</label>
+			<label><input type="checkbox" name="notitle">タイトル未入力</label>
+			<label><input type="checkbox" name="nourl">URL未入力</label>
+			<label><input type="checkbox" name="nolegendUrl">凡例未入力</label>
+			<label><input type="checkbox" name="nohtml">説明未入力</label>
+			</form>
+		</div>
+		<div class="result_frame">
+			<ul></ul>
+		</div>
+	</div>
+	-->
+	<div class="edit">
+		<div class="edit_folder tableframe">
+		<form name="folder">
+			<dl>
+					
+				<dt>名称<span>必須</span></dt>
+				<dd><input type="text" title="名称を入力します。<br>例：図書館 都道府県別" class="inputtext" name="title"></dd>
+				
+				<dt>アイコンURL</dt>
+				<dd><input type="text" title="情報ボタン内に表示されるアイコンのURLを記入します。" class="inputtext" name="iconUrl"></dd>
+				<!--
+				<dt>初期状態</dt>
+				<dd><label><input type="radio"  name="open" value="1">開く</label> <label><input type="radio"  name="open" value="0" checked>閉じる</label</dd>
+				-->
+				<!-- 全表示ボタンの設定を利用する場合を有効に -->
+				<!--
+				<dt>全表示ボタン</dt>
+				<dd><label><input type="checkbox"  title="表示できる情報に全表示ボタンを表示するかどうか" name="toggleall">利用する</label></dd>
+				-->
+				
+				
+			</dl>
+		</form>
+		</div>
+		
+		
+		<div class="edit_layer tableframe">
+		<form name="layer">
+			<dl>
+				<dt>種別<span>必須</span></dt>
+				<dd>
+					<label><input type="radio" name="type" layer_mode="feature" value="kml">KML</label>
+					<label><input type="radio" name="type" layer_mode="" value="geojson">GeoJSON</label>
+					<label><input type="radio" name="type" layer_mode="" value="topojson">TopoJSON</label> <br>
+					<label><input type="radio" name="type" layer_mode="tile" value="tile">画像タイル</label>
+					<label><input type="radio" name="type" layer_mode="tile" value="geojson_tile">GeoJSONタイル</label>
+					<label><input type="radio" name="type" layer_mode="tile" value="topojson_tile">TopoJSONタイル</label>
+					<!--label><input type="radio" name="type" layer_mode="tile" value="tms">TMS</label-->
+				</dd>
+				
+				<div class="layer_edit_frame">
+				<dt>ID</dt>
+				<dd><input type="text" title="「地図を共有」機能でレイヤーを特定するために利用します。他と重複しないよう設定します。" class="inputtext" name="id"></dd>
+				
+					
+				<dt>名称<span>必須</span></dt>
+				<dd><input type="text" title="情報ボタン内に表示される名称を入力します。<br>例：東京都の図書館" class="inputtext" name="title"></dd>
+				
+				<dt>URL<span>必須</span></dt>
+				<dd><input type="text" title="データへのURLを入力します。<br>KMLの例：http://cyberjapandata.gsi.go.jp/sample.kml<br>タイルの例：http://cyberjapandata.gsi.go.jp/xyz/sample/{z}/{x}/{y}.png" class="inputtext" name="url"></dd>
+				
+				<dt layer_mode="tile">subdomains</dt>
+				<dd layer_mode="tile"><input type="text" title="" class="inputtext" name="subdomains"></dd>
+				
+				<dt>attribution</dt>
+				<dd><input type="text" title="" class="inputtext" name="attribution"></dd>
+				
+				<dt>アイコンURL</dt>
+				<dd><input type="text" title="情報ボタン内に表示されるアイコンのURLを記入します。" class="inputtext" name="iconUrl"></dd>
+				
+				<!-- ココタイルの設定を利用する場合を有効に -->
+				<!--
+				<dt layer_mode="tile">ココタイル</dt>
+				<dd layer_mode="tile"><label><input type="checkbox"  title="ココタイルに対応しているか場合はチェック" name="cocotile">対応</label></dd>
+				-->
+				
+				<dt>minZoom</dt>
+				<dd>
+					<select name="minZoom" title="表示される最小ズームレベルを指定します。">
+					<option value="">指定しない</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					</select>
+				</dd>
+				
+				<dt>maxZoom</dt>
+				<dd>
+					<select name="maxZoom" title="表示される最大ズームレベルを指定します。">
+					<option value="">指定しない</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					</select>
+				</dd>
+				
+				<dt layer_mode="tile">maxNativeZoom</dt>
+				<dd layer_mode="tile">
+					<select name="maxNativeZoom" title="ここで指定したズームレベル以上は拡大させて表示します。">
+					<option value="">指定しない</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					</select>
+				</dd>
+				
+				<dt>凡例URL</dt>
+				<dd><input type="text" class="inputtext" name="legendUrl" title="凡例で使用するPDFやページのURLを入力します。<br>例：http://sample.com/sample.pdf"></dd>
+				
+				<dt>説明</dt>
+				<dd><textarea class="inputtext" rows="8" name="html" title="このレイヤーの説明文を入力します。"></textarea></dd>
+				</div>
+				
+			</dl>
+		</form>
+		</div>
+		
+		
+	</div>
+	
+	
+	<div class="load dialog_frame">
+		<h3 class="dialog_header">レイヤー設定形式のファイルを選択して下さい</h3>
+		<form>
+			<div><input type="file" name="layers_file"></div>
+			<div class="control">
+				<a href="javascript:void(0);" load_method="load">読み込み</a>
+				&nbsp;
+				<a href="javascript:void(0);" load_method="cancel">中止</a>
+			</div>
+		</form>
+	</div>
+	
+	<div class="save dialog_frame">
+		<h3 class="dialog_header">「保存」ボタンをクリックし保存して下さい</h3>
+		<form>
+			<div>
+				<div style="margin-bottom:4px;">ファイル名：<input type="text" size="32" name="download_filename" placeholder="layers.txt"></div>
+				
+				<textarea rows="8" style="width:450px;" name="download_text" wrap="off"></textarea>
+				<br>
+				<label><input type="checkbox" name="download_text_indent">読み易く（インデントを付ける）</label>
+			</div>
+			<div class="control">
+				<a href="" target="_blank"  download="a.html" save_method="load">保存</a>
+				&nbsp;
+				<a href="javascript:void(0);" save_method="cancel">中止</a>
+			</div>
+		</form>
+	</div>
+	
+	<div class="popupmenu folder_menu">
+		<ul>
+			<li><a href="javascript:void(0);" popup_method="createfolder_next">直下に新規フォルダを追加</a></li>
+			<li><a href="javascript:void(0);" popup_method="createlayer_next">直下に新規レイヤーを追加</a></li>
+			<li><hr></li>
+			<li><a href="javascript:void(0);" popup_method="createfolder_in">フォルダ内に新規フォルダを追加</a></li>
+			<li><a href="javascript:void(0);" popup_method="createlayer_in">フォルダ内に新規レイヤーを追加</a></li>
+			<li><hr></li>
+			<li><a href="javascript:void(0);" popup_method="remove">このフォルダを削除</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="popupmenu layer_menu">
+		<ul>
+			<li><a href="javascript:void(0);" popup_method="createfolder_next">直下に新規フォルダを追加</a></li>
+			<li><a href="javascript:void(0);" popup_method="createlayer_next">直下に新規レイヤーを追加</a></li>
+			<li><hr></li>
+			<li><a href="javascript:void(0);" popup_method="remove">このレイヤーを削除</a></li>
+		</ul>
+	</div>
+	
+	<div class="popupmenu top_menu">
+		<ul>
+			<li><a href="javascript:void(0);" popup_method="createfolder_top">ルートに新規フォルダを追加</a></li>
+			<li><a href="javascript:void(0);" popup_method="createlayer_top">ルートに新規レイヤーを追加</a></li>
+		</ul>
+	</div>
+	
+	<div class="nosupport">
+		
+		<div>大変申し訳ありません。ご利用できないブラウザです。<br>
+		下記のブラウザでご利用ください</div>
+		
+		<ul>
+		<li>Internet Explorer 10 以降</li>
+		<li>Chrome 38 以降</li>
+		<li>Firefox 24 以降</li>
+		</ul>
+	
+	</div>
+	
+</body>
+</html>
