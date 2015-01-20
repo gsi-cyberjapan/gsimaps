@@ -396,6 +396,10 @@ CONFIG.MAPMENU = {
 				{
 					title : '地理院ホーム',
 					href : 'http://www.gsi.go.jp/'
+				},
+				{
+					title : 'ライブラリー',
+					href : 'http://geolib.gsi.go.jp/'
 				}
 
 			]
