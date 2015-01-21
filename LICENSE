@@ -5,7 +5,8 @@
 As for the work provided by GSI, the 2-clause BSD license, as shown 
 in the last part of this document, applies. This is according to 
 "Geospatial Information Authority of Japan Website Terms of Use" 
-(http://www.gsi.go.jp/ENGLISH/page_e30286.html ).
+(http://www.gsi.go.jp/ENGLISH/page_e30286.html ) which conform to 
+the Open Data Strategy of the Japanese Government.
 
 As for existing libraries such as Leaflet, jQuery and their plugins, 
 respective licenses apply. Please see the following for the detail.
