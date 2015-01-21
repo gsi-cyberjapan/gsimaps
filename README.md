@@ -1,7 +1,7 @@
 # gsimaps
 地理院地図
 
-- 地理院地図（国土地理院サーバからの提供）：http://map.gsi.go.jp/
+- 地理院地図（国土地理院サーバからの提供）：http://maps.gsi.go.jp/
 - 地理院地図（本レポジトリからの提供）：http://gsi-cyberjapan.github.io/gsimaps/
 
 # ご利用上の留意点
