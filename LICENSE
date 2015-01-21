@@ -1,6 +1,14 @@
-As for the work provided by GSI, the following license applies. 
-As for existing libraries such as Leaflet or jQuery, respective licenses apply.
-Please see the following for detail.
+**************
+0. In short...
+**************
+
+As for the work provided by GSI, the 2-clause BSD license, as shown 
+in the last part of this document, applies. This is according to 
+"Geospatial Information Authority of Japan Website Terms of Use" 
+(http://www.gsi.go.jp/ENGLISH/page_e30286.html ).
+
+As for existing libraries such as Leaflet, jQuery and their plugins, 
+respective licenses apply. Please see the following for the detail.
 
 **************************
 1. Leaflet and its plugins
