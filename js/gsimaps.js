@@ -7760,6 +7760,7 @@ GSI.IconSelector = L.Class.extend( {
 
 		table.append( tbody);
 		this.container.append( table );
+		this.container.css('overflow', 'scroll').css('height', '500px');
 
 		$( document.body ).append( this.container );
 	},
