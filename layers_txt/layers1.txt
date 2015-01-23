@@ -318,7 +318,7 @@
 							"cocotile": true,
 							"minZoom": 4,
 							"maxZoom": 16,
-							"legendUrl": null,
+							"legendUrl": "http://cyberjapan.jp/legend/lcm25k_2012/lc_legend.html",
 							"html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
 						{
@@ -330,7 +330,7 @@
 							"attribution": "",
 							"cocotile": true,
 							"maxZoom": 16,
-							"legendUrl": null,
+							"legendUrl": "http://cyberjapan.jp/legend/LCM_hanrei.png",
 							"html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_index.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
 					]
