@@ -28,11 +28,11 @@ CONFIG.layers = [
 
 
 // トップメッセージ
-//CONFIG.TOPMESSAGE = null;
-CONFIG.TOPMESSAGE = {
+CONFIG.TOPMESSAGE = null;
+/*CONFIG.TOPMESSAGE = {
 	MESSAGE : '新しい地理院地図です。<a href="http://portal.cyberjapan.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
 	DETAILS : ''
-};
+};*/
 
 
 // 初期位置
