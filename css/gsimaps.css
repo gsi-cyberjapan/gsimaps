@@ -382,11 +382,13 @@ form {
 	position:absolute;
 	z-index:999999;
 	background:#fff;
+	/*
 	width:100%;
 	height:100%;
+	overflow:auto;
+	*/
 	top:0px;
 	left:0px;
-	overflow:auto;
 }
 
 .gsi_pageprinter .header_container
