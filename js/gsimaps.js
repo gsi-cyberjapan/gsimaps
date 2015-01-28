@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.30";
+GSI.Version = "0.9.9.32";
 
 var CONFIG = {};
 
@@ -30,7 +30,7 @@ CONFIG.layers = [
 // トップメッセージ
 CONFIG.TOPMESSAGE = null;
 /*CONFIG.TOPMESSAGE = {
-	MESSAGE : '新しい地理院地図です。<a href="http://portal.cyberjapan.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
+	MESSAGE : '<a href="http://portal.cyberjapan.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
 	DETAILS : ''
 };*/
 
@@ -189,7 +189,7 @@ GSI.TEXT.SHARE.DIALOG_SAVE_TITLE = '名前を付けて保存';
 GSI.TEXT.SHARE.DIALOG_LINK_MESSAGE = '次のURLをメール等で送付することで、現在表示されている地図を共有することができます。'+
 	'<div style="font-size:85%;">※作図結果を反映した状態で共有したい場合は、本サイトの「名前をつけて保存」機能をご利用下さい</div>';
 GSI.TEXT.SHARE.DIALOG_BUILTIN_MESSAGE = '次のタグをHTMLファイルに加えることで、地理院地図をウェブサイトに埋め込むことができます。';
-GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを<string>上記のHTMLを保存</strong>ボタンをクリックして保存して下さい。' ;
+GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを<string>[次のHTMLを保存]</strong>ボタンをクリックして保存して下さい。' ;
 GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '次のHTMLをテキストエディタで<strong>文字コードUTF-8</strong>で保存して下さい。' ;
 
 GSI.TEXT.SHARE.DIALOG_TEMPLATELOADERROR = '大変申し訳ありません。しばらく経ってからご利用下さい' ;
@@ -845,7 +845,14 @@ function initialize()
 
 	// ハッシュ解析
 	var hashPosition = L.Hash.parseHash( location.hash );
-
+	
+	var startUpCenter = GSI.GLOBALS.queryParams.getPosition(
+			hashPosition && hashPosition.center ? hashPosition.center : CONFIG.DEFAULT.CENTER
+		);
+	var startUpZoom = GSI.GLOBALS.queryParams.getZoom(
+			hashPosition && hashPosition.zoom ? hashPosition.zoom : CONFIG.DEFAULT.ZOOM
+		);
+		
 	// マップオブジェクト生成
 	GSI.GLOBALS.map = GSI.map('map',
 		{
@@ -854,12 +861,12 @@ function initialize()
 			attributionControl : false,
 			//maxBounds : L.latLngBounds(L.latLng(-3600, -3600), L.latLng(3600, 3600)),
 			worldCopyJump : false,
-			inertiaMaxSpeed : 1000
+			inertiaMaxSpeed : 1000,
+			center: startUpCenter,
+		    zoom: startUpZoom
 		});
 
-	// ハッシュ
-	GSI.GLOBALS.hash = new L.Hash(GSI.GLOBALS.map, {useReplace:( GSI.ClientMode .location ? false : true )});
-
+	
 	// スクロール後に正しい位置へ移動
 	GSI.GLOBALS.map.on( 'moveend', function() {
 		var center = GSI.GLOBALS.map.getCenter();
@@ -881,15 +888,9 @@ function initialize()
 		( new GSI.Control.AccessCounter({url:CONFIG.SERVERAPI.ACCESSCOUNTER, refreshInterval:0}) ).addTo(GSI.GLOBALS.map);
 	}
 	L.control.scale({imperial:false}).addTo(GSI.GLOBALS.map);
-
-	GSI.GLOBALS.map.setView(
-		GSI.GLOBALS.queryParams.getPosition(
-			hashPosition && hashPosition.center ? hashPosition.center : CONFIG.DEFAULT.CENTER
-		),
-		GSI.GLOBALS.queryParams.getZoom(
-			hashPosition && hashPosition.zoom ? hashPosition.zoom : CONFIG.DEFAULT.ZOOM
-		)
-	);
+	
+		
+	//GSI.GLOBALS.map.setView(center,zoom);
 
 
 
@@ -910,7 +911,9 @@ function initialize()
 
 	GSI.GLOBALS.baseLayer = baseLayerSelector.getBaseLayer();
 
-
+	// ハッシュ
+	GSI.GLOBALS.hash = new L.Hash(GSI.GLOBALS.map, {useReplace:( GSI.ClientMode .location ? false : true )});
+	
 
 	GSI.GLOBALS.onoffObjects = {};
 	// 中心マーク
@@ -1201,8 +1204,10 @@ function initialize()
 	GSI.GLOBALS.header.on( 'topmessagechange', adjustWindow );
 	$( window ).resize( adjustWindow );
 	adjustWindow();
-
-
+	
+	// 初期位置設定
+	GSI.GLOBALS.map.setView(startUpCenter,startUpZoom, {reset:true});
+	
 	// ページの状態管理
 	GSI.GLOBALS.pageStateManager = new GSI.PageStateManager(
 		GSI.GLOBALS.map, GSI.GLOBALS.baseLayer, GSI.GLOBALS.onoffObjects,
@@ -1318,7 +1323,21 @@ GSI.PagePrinter = L.Class.extend( {
 
 	hide : function()
 	{
-
+		
+		$( document.body ).css( {"overflow":"hidden", "height": "100%"} );
+		$( "html" ).css( {"overflow":"hidden", "height": "100%"} );
+			
+		var children = $( document.body ).children();
+		for ( var i=0; i<children.length; i++ )
+		{
+			if ( this._container && children[i] != this._container[0] )
+			{
+				var child = $( children[i] );
+				if ( child.data( '_before_print_visible' ) )
+					child.show();
+			}
+		}
+			
 		var tileList = this._mapLayerList.getTileList();
 
 		for ( var i=tileList.length-1; i>=0; i-- )
@@ -1354,7 +1373,8 @@ GSI.PagePrinter = L.Class.extend( {
 				},
 			this ) );
 		}
-
+		
+		this._originalMap.invalidateSize(false);
 		this._container.fadeOut('fast', L.bind( function(){
 
 			this._map.remove();
@@ -1486,6 +1506,33 @@ GSI.PagePrinter = L.Class.extend( {
 
 
 		this._container.fadeIn('fast', L.bind( function(){
+			
+			$( document.body ).css( {"overflow":"auto", "height": "auto"} );
+			$( "html" ).css( {"overflow":"auto", "height": "auto"} );
+			
+			var children = $( document.body ).children();
+			for ( var i=0; i<children.length; i++ )
+			{
+				if ( children[i] != this._container[0] )
+				{
+					
+					var child = $( children[i] );
+					
+					
+					if ( child.is(":visible") )
+					{
+						child.data( { '_before_print_visible':true } ) ;
+						$( children[i] ).hide();
+					}
+					else
+					{
+						child.data( { '_before_print_visible':false } ) ;
+						
+					}
+				
+				}
+			}
+			
 			this._map.invalidateSize(false);
 		}, this ) );
 	},
@@ -1510,8 +1557,8 @@ GSI.PagePrinter = L.Class.extend( {
 
 	_create : function()
 	{
-		this._container = $( '<div>' ).addClass( 'gsi_pageprinter' );//.click( L.bind( function(){this.hide();},this) );
-
+		this._container = $( '<div>' ).addClass( 'gsi_pageprinter' );//.click( L.bind( function(){this.hide();},this) );		
+		
 		this._headerContainer = $( '<div>' ).addClass( 'header_container' );
 		this._mapContainer = $( '<div>' ).addClass( 'map_container' );
 
@@ -1566,7 +1613,7 @@ GSI.PagePrinter = L.Class.extend( {
 
 		// 戻るボタン
 		td = $( '<td>' ).css( {width:"120px"} );
-		var backBtn  = $( '<button>' ).html( '元の画面に戻る' ).addClass( 'no_print' ).click( L.bind( this.hide, this ) );
+		var backBtn  = $( '<button>' ).css({'white-space':'nowrap'}).html( '元の画面に戻る' ).addClass( 'no_print' ).click( L.bind( this.hide, this ) );
 		td.append( backBtn );
 		tr.append( td );
 
@@ -1589,6 +1636,8 @@ GSI.PagePrinter = L.Class.extend( {
 
 		//this._container.append( $( '<div>' ).css({'height':'20px'}).addClass( 'no_print' ) );
 		this._container.hide();
+		//this._container.css( {"background":"none"} );
+		
 		$( document.body) .append( this._container );
 	},
 
@@ -19386,10 +19435,22 @@ GSI.LayersJSON = L.Class.extend( {
 			}
 			else
 			{
+				/*
 				var dlg = new GSI.Modal.FileSelectDialog({title:'layers.txtファイルを選択してください'});
 				dlg.on( "positive", L.bind( this._onFileLoad, this ) );
 				dlg.on( "negative", L.bind( this._onLoadErrorExit, this ) );
 				dlg.show();
+				*/
+				alert( 'layers.txtファイルを読み込めません' );
+				this._timerId = setTimeout( L.bind( function(){
+					clearTimeout( this._timerId  );
+
+					this._timerId  = null;
+					this.layers = [];
+					this.fire( "load", { tree: this.tree, visibleLayers : this.visibleLayers } );
+
+				}, this ), 0 );
+				
 			}
 
 		}
