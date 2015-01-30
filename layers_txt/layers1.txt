@@ -2965,6 +2965,27 @@
 							"entries": [
 								{
 									"type": "LayerGroup",
+									"title": "2015年更新情報",
+									"open": false,
+									"toggleall": false,
+									"entries": [
+										{
+											"type": "Layer",
+											"id": "kiban_koushin2015_01",
+											"title": "1月更新",
+											"url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update/2015-01/{z}/{x}/{y}.png",
+											"subdomains": "",
+											"attribution": "",
+											"cocotile": true,
+											"minZoom": 4,
+											"maxZoom": 12,
+											"legendUrl": null,
+											"html": ""
+										}
+									]
+								},
+								{
+									"type": "LayerGroup",
 									"title": "2014年更新情報",
 									"open": false,
 									"toggleall": false,
