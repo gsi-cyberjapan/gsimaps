@@ -367,7 +367,7 @@
 							"type": "Layer",
 							"id": "sar1409ontake",
 							"title": "推定火口(9/30暫定版：航空機SAR画像判読)",
-							"url": "http://cyberjapandata.gsi.go.jp/overlay/limited/1409ontake/sar1409ontake.kml",
+							"url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake_l/sar1409ontake.kml",
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": false,
