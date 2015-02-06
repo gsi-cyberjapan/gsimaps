@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.32";
+GSI.Version = "0.9.9.35";
 
 var CONFIG = {};
 
@@ -49,8 +49,17 @@ CONFIG.LAYERTYPELIST = {
 	"tms"           : { caption : "TMS", isTile: true, isTileImage : true }
 };
 
-// ココタイルのデフォルト値
+// ココタイルONOFFのデフォルト値
 CONFIG.COCOTILEVISIBLE = false;
+
+//ココタイルURL設定
+CONFIG.COCOTILEURL = 'http://{s}.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv';
+CONFIG.COCOTILESUBDOMAINS = [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ];
+// ココタイルでドメインシャーディングを利用しない場合
+// URLの指定で{s}を入れない、サブドメインの指定を空の配列([])に[]
+//   CONFIG.COCOTILEURL = 'http://cyberjapandata-t1.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv';
+//   CONFIG.COCOTILESUBDOMAINS = [];
+
 
 // アクセスカウンターを表示するかどうか
 CONFIG.USEACCESSCOUNTER = true;
@@ -941,8 +950,8 @@ function initialize()
 
 
 	// ココタイル
-	GSI.GLOBALS.cocoTileLayer = new  GSI.COCOTileLayer( GSI.GLOBALS.map, 'http://{s}.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', {
-		subdomains: [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
+	GSI.GLOBALS.cocoTileLayer = new  GSI.COCOTileLayer( GSI.GLOBALS.map, CONFIG.COCOTILEURL, {
+		subdomains: CONFIG.COCOTILESUBDOMAINS,
 		visible: CONFIG.COCOTILEVISIBLE,
 		onLoad : function(tileIdList) { GSI.GLOBALS.layersJSON.setHasTileList( tileIdList ); }
 	});
@@ -1229,6 +1238,12 @@ GSI.Map
 
 ************************************************************************/
 GSI.Map = L.Map.extend( {
+	_initPanes: function () {
+		
+		L.Map.prototype._initPanes.call( this );
+		this._panes.gsiObjectsPane = this._createPane('gsi-objects-pane');
+	},
+	
 	_limitCenter: function (center, zoom, bounds) {
 
 		if (!bounds) { return center; }
@@ -1545,9 +1560,15 @@ GSI.PagePrinter = L.Class.extend( {
 		var hq = ( paperSizeArr.length >= 2 && paperSizeArr[1] == 'hq' ? true: false );
 		this._baseLayer.setHighQuality( hq );
 		var paperSize = this.printSize2MapSize( paperSizeVal );
-
+		
+		
+		
 		this._mapContainer.css( { width:paperSize.w + 'px', height: paperSize.h + 'px' } );
 		this._map.invalidateSize(true);
+		
+		
+		$(window).resize();
+		
 	},
 
 	_qualityChange : function()
@@ -9092,7 +9113,11 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		if ( layer )
 		{
- 			
+			if ( !layer._information )
+			{
+				layer._information = this._getLayerInfo( layer );
+			}
+		
  			var title = layer._information.title;
  			var description = layer._information.description;
 
@@ -9495,13 +9520,13 @@ GSI.SakuzuListItem = L.Class.extend( {
 			case  GSI.SakuzuListItem.CIRCLE:
 
 				var color = layer.options.color;
-				var opacity = Math.floor( ( layer.options.opacity ? layer.options.opacity : 1 ) * 255 );
+				var opacity = Math.floor( ( layer.options.opacity || layer.options.opacity == 0 ? layer.options.opacity : 1 ) * 255 );
 				var weight = layer.options.weight;
 
 
 				var fillColor = layer.options.fillColor;
 				if ( !fillColor ) fillColor = color;
-				var fillOpacity = Math.floor( ( layer.options.fillOpacity ? layer.options.fillOpacity : 1 ) * 255 );
+				var fillOpacity = Math.floor( ( layer.options.fillOpacity || layer.options.fillOpacity == 0 ? layer.options.fillOpacity : 1 ) * 255 );
 				color = this._color2kmlColor( color, opacity );
 				fillColor = this._color2kmlColor( fillColor, fillOpacity );
 
@@ -9541,7 +9566,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 			case GSI.SakuzuListItem.LINESTRING:
 				var color = layer.options.color;
-				var opacity = Math.floor( ( layer.options.opacity ? layer.options.opacity : 1 ) * 255 );
+				var opacity = Math.floor( ( layer.options.opacity || layer.options.opacity == 0 ? layer.options.opacity : 1 ) * 255 );
 				var weight = layer.options.weight;
 				color = this._color2kmlColor( color, opacity );
 
@@ -10093,7 +10118,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 		}
 
 		var color = options.color;
-		var opacity = ( options.opacity ? options.opacity : 1 );
+		var opacity = ( options.opacity || options.opacity == 0  ? options.opacity : 1 );
 		var weight = options.weight;
 
 		result.properties[ "_color"] = color;
@@ -10119,12 +10144,12 @@ GSI.SakuzuListItem = L.Class.extend( {
 			}
 		}
 		var color = options.color;
-		var opacity = ( options.opacity ? options.opacity : 1 );
+		var opacity = ( options.opacity || options.opacity == 0 ? options.opacity : 1 );
 		var weight = options.weight;
 
 
 		var fillColor = options.fillColor;
-		var fillOpacity = ( options.fillOpacity ? options.fillOpacity : 1 );
+		var fillOpacity = ( options.fillOpacity || options.fillOpacity == 0 ? options.fillOpacity : 1 );
 
 		result.properties[ "_markerType"] = "CircleMarker";
 		result.properties[ "_color"] = color;
@@ -10157,11 +10182,11 @@ GSI.SakuzuListItem = L.Class.extend( {
 		var iconSize = options.icon.options.iconSize;
 		var iconAnchor = options.icon.options.iconAnchor;
 		var html = options.icon.options.html;
-
-		if ( html )
+		
+		if ( options.icon.options.className == 'gsi-div-icon' )
 		{
 			result.properties[ "_markerType"] = "DivIcon";
-			result.properties[ "_html"] = html;
+			result.properties[ "_html"] =( html || html != '' ? html : '　');
 		}
 
 		else
@@ -10198,12 +10223,12 @@ GSI.SakuzuListItem = L.Class.extend( {
 		if ( !options ) options = {};
 
 		var color = options.color;
-		var opacity = ( options.opacity ? options.opacity : 1 );
+		var opacity = ( options.opacity || options.opacity == 0 ? options.opacity : 1 );
 		var weight = options.weight;
 
 
 		var fillColor = options.fillColor;
-		var fillOpacity = ( options.fillOpacity ? options.fillOpacity : 1 );
+		var fillOpacity = ( options.fillOpacity || options.fillOpacity == 0 ? options.fillOpacity : 1 );
 
 		if ( !fillColor ) fillColor = color;
 
@@ -14822,10 +14847,10 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 					var styles = ( drawnInfo.drawLayer.options ? drawnInfo.drawLayer.options : {} );
 					if ( styles.color ) geoJSON.properties[ '_color' ] = styles.color;
 					if ( styles.weight ) geoJSON.properties[ '_weight' ] = styles.weight;
-					if ( styles.opacity ) geoJSON.properties[ '_opacity' ] = styles.opacity;
+					if ( styles.opacity || styles.opacity == 0 ) geoJSON.properties[ '_opacity' ] = styles.opacity;
 					if ( styles.fill ) geoJSON.properties[ '_fill' ] = styles.fill;
 					if ( styles.fillColor ) geoJSON.properties[ '_fillColor' ] = styles.fillColor;
-					if ( styles.fillOpacity ) geoJSON.properties[ '_fillOpacity' ] = styles.fillOpacity;
+					if ( styles.fillOpacity || styles.fillOpacity == 0 ) geoJSON.properties[ '_fillOpacity' ] = styles.fillOpacity;
 					if ( styles.dashArray ) geoJSON.properties[ '_dashArray' ] = styles.dashArray;
 					if ( styles.lineCap ) geoJSON.properties[ '_lineCap' ] = styles.lineCap;
 					if ( styles.lineJoin ) geoJSON.properties[ '_lineJoin' ] = styles.lineJoin;
@@ -14838,12 +14863,13 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 				case 'polygon':
 
 					var styles = ( drawnInfo.drawLayer.options ? drawnInfo.drawLayer.options : {} );
+					
 					if ( styles.color ) geoJSON.properties[ '_color' ] = styles.color;
 					if ( styles.weight ) geoJSON.properties[ '_weight' ] = styles.weight;
-					if ( styles.opacity ) geoJSON.properties[ '_opacity' ] = styles.opacity;
+					if ( styles.opacity || styles.opacity == 0 ) geoJSON.properties[ '_opacity' ] = styles.opacity;
 					if ( styles.fill ) geoJSON.properties[ '_fill' ] = styles.fill;
 					if ( styles.fillColor ) geoJSON.properties[ '_fillColor' ] = styles.fillColor;
-					if ( styles.fillOpacity ) geoJSON.properties[ '_fillOpacity' ] = styles.fillOpacity;
+					if ( styles.fillOpacity || styles.fillOpacity == 0 ) geoJSON.properties[ '_fillOpacity' ] = styles.fillOpacity;
 					if ( styles.dashArray ) geoJSON.properties[ '_dashArray' ] = styles.dashArray;
 					if ( styles.lineCap ) geoJSON.properties[ '_lineCap' ] = styles.lineCap;
 					if ( styles.lineJoin ) geoJSON.properties[ '_lineJoin' ] = styles.lineJoin;
@@ -16004,6 +16030,7 @@ GSI.GeoJSON = L.Class.extend( {
 					if ( iconAnchor ) options.iconAnchor = iconAnchor;
 					if ( html ) options.html = html;
 					if ( className ) options.className = className;
+					
 					marker = L.marker( latlng, { icon : GSI.divIcon(options) });
 
 					break;
@@ -16066,7 +16093,7 @@ GSI.GeoJSON = L.Class.extend( {
 
 		for( var key in feature.properties )
 		{
-			if ( !feature.properties[key] ) continue;
+			if ( !feature.properties[key] && feature.properties[key] != 0 ) continue;
 
 			if ( key != "" && key.charAt(0) == '_' )
 			{
@@ -16079,12 +16106,10 @@ GSI.GeoJSON = L.Class.extend( {
 					var value = feature.properties[key];
 					key = key.slice(1);
 					if ( !style ) style ={};
-
 					style[ key ] = value;
 				}
 			}
 		}
-
 		return style;
 	},
 
@@ -16695,7 +16720,7 @@ L.Util.extend(GSI.KML, {
 			el = e.getElementsByTagName('PolyStyle');
 			if (el && el[0]) { poptions = _parse(el[0]); }
 			if (poptions.color) { options.fillColor = poptions.color; }
-			if (poptions.opacity) { options.fillOpacity = poptions.opacity; }
+			if (poptions.opacity || poptions.opacity == 0 ) { options.fillOpacity = poptions.opacity; }
 			el = e.getElementsByTagName('IconStyle');
 			if (el && el[0]) { ioptions = _parse(el[0]); }
 			if (ioptions.href) {
@@ -17025,10 +17050,10 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 	_opacity : 1,
 
 	initialize: function (url, options, geojsonOptions) {
-		this._loadStyle( url );
 		options.clipTiles = false;
 		//options.maxNativeZoom = 16;
 		L.TileLayer.GeoJSON.prototype.initialize.call(this, url, options, geojsonOptions);
+		this._loadStyle( url );
 	},
 
 	_tileLoaded: function (tile, tilePoint) {
@@ -17056,7 +17081,6 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 				//data = $.parseXML( result.data );
 			}
 			else data = result;
-
 			data = eval( "(" + data + ")" );
 			if ( data.geojsonOptions ) this.geojsonLayer.options =  data.geojsonOptions;
 			if ( data.options )
@@ -17093,10 +17117,11 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 				//console.log( this.options );
 				*/
 			}
-
+			
 		}
 		catch(e)
 		{
+			
 		}
 		this._reset();
 		this._update();
@@ -18901,7 +18926,7 @@ GSI.CenterCrossMarker = L.Marker.extend( {
 		var panes = this._map._panes;
 
 		if (addIcon) {
-			panes.shadowPane.appendChild(this._icon);
+			panes.gsiObjectsPane.appendChild(this._icon);
 		}
 
 		if (newShadow && addShadow) {
@@ -18916,7 +18941,7 @@ GSI.CenterCrossMarker = L.Marker.extend( {
 			    .off(this._icon, 'mouseout', this._resetZIndex);
 		}
 
-		this._map._panes.shadowPane.removeChild(this._icon);
+		this._map._panes.gsiObjectsPane.removeChild(this._icon);
 
 		this._icon = null;
 	},
