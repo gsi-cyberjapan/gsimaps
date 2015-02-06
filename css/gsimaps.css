@@ -40,6 +40,12 @@ strong
 	font-size:8pt;
 }
 
+.gsi-objects-pane {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+}
 .gsi-div-icon
 {
 	white-space:nowrap;
