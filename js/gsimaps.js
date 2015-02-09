@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.35";
+GSI.Version = "0.9.9.36";
 
 var CONFIG = {};
 
@@ -75,9 +75,15 @@ CONFIG.USEIE11GRAYSCALE = true;
 // CORS強制(CONFIG.SERVERAPI.GETJSONPを使用するかどうか)
 CONFIG.FORCECORS = true;
 
+
+
+
 // 検索結果クリック時のズームレベル
 CONFIG.SEARCHRESULTCLICKZOOM = 15;
 
+
+// 検索結果のマーカー表示件数(-1で全て)
+CONFIG.SEARCHRESULTMAXMARKERNUM = 1000;
 
 // 緯度経度グリッドスタイル
 CONFIG.LATLNGGRIDSTYLE = {
@@ -410,6 +416,7 @@ CONFIG.MAPMENU = {
 					title : 'ライブラリー',
 					href : 'http://geolib.gsi.go.jp/'
 				}
+
 			]
 		}
 
@@ -563,6 +570,9 @@ CONFIG.DEFAULTIMAGE = {
 
 };
 
+
+// ダブルクリック判定の時間
+CONFIG.DBLCLICKINTERVAL = 300; // ミリ秒
 
 // 右ダブルクリック判定ミリ秒
 CONFIG.RIGHTDBLCLICKINTERVAL = 500;
@@ -865,6 +875,7 @@ function initialize()
 	// マップオブジェクト生成
 	GSI.GLOBALS.map = GSI.map('map',
 		{
+			doubleClickZoom : false,
 			zoomsliderControl: false,
 			zoomControl: false,
 			attributionControl : false,
@@ -960,7 +971,7 @@ function initialize()
 		= { obj : GSI.GLOBALS.cocoTileLayer, setter : 'setVisible', getter : 'getVisible' };
 
 	// クリックで移動
-	GSI.GLOBALS.mapMouse = new GSI.MapMouse( GSI.GLOBALS.map, { dblclickInterval : CONFIG.RIGHTDBLCLICKINTERVAL} );
+	GSI.GLOBALS.mapMouse = new GSI.MapMouse( GSI.GLOBALS.map, { dblClickInterval: CONFIG.DBLCLICKINTERVAL, rightDblClickInterval : CONFIG.RIGHTDBLCLICKINTERVAL} );
 	GSI.GLOBALS.onoffObjects[ CONFIG.PARAMETERNAMES.CLICKMOVE ]
 		= { obj : GSI.GLOBALS.mapMouse, setter : 'setClickMoveVisible', getter  : 'getClickMoveVisible' };
 
@@ -1144,7 +1155,7 @@ function initialize()
 	// 検索ダイアログ
 	if ( ctrlSetting.header.visible )
 	{
-		GSI.GLOBALS.searchDialog = new GSI.SearchResultDialog(GSI.GLOBALS.map, { left :8, top :40, effect : CONFIG.EFFECTS.DIALOG, resizable: "all" });
+		GSI.GLOBALS.searchDialog = new GSI.SearchResultDialog(GSI.GLOBALS.map, { left :8, top :40, effect : CONFIG.EFFECTS.DIALOG, resizable: "all", maxMarkerNum: CONFIG.SEARCHRESULTMAXMARKERNUM });
 		new GSI.Searcher(GSI.GLOBALS.map,GSI.GLOBALS.searchDialog,
 			"#search_f","#query", "#search_result", { visible : ctrlSetting.header.visible });
 	}
@@ -2746,8 +2757,8 @@ GSI.MapMouse = L.Class.extend( {
 	rightClickTime : null,
 
 	options : {
-		dblclickInterval : 500
-
+		dblClickInterval : 500,
+		rightDblClickInterval : 500
 	},
 	initialize : function (map, options )
 	{
@@ -2758,9 +2769,9 @@ GSI.MapMouse = L.Class.extend( {
 
 		map.on('mousedown',L.bind( this.onMouseDown, this ) );
 		map.on('zoomend',L.bind( this.onZoomEnd, this ) );
+		map.on('dblclick',L.bind( this.onMapDblClick, this ) );
 
 		L.setOptions(this, options);
-
 	},
 
 	onZoomEnd : function(e)
@@ -2798,9 +2809,8 @@ GSI.MapMouse = L.Class.extend( {
 			else
 			{
 				var date = new Date();
-
 				//ダブルクリック判定
-				if ( date < this.rightClickTime + this.options.dblclickInterval   )
+				if ( date < this.rightClickTime + this.options.rightDblClickInterval )
 				{
 					this._rightDblClickZoomOut( e.latlng );
 					this.rightClickTime = null;
@@ -2820,9 +2830,44 @@ GSI.MapMouse = L.Class.extend( {
 
 	onMapClick : function(e)
 	{
-		if ( this.clickMoveVisible ) this.map.panTo( e.latlng );
+		if ( this.clickMoveVisible ) 
+		{
+			this._startClickTimer( e.latlng );
+			
+		}
 	},
-
+	
+	_move : function(latlng)
+	{
+		this.map.panTo( latlng );
+	},
+	
+	_clearClickTimer : function()
+	{
+		if ( this._clickTimerId  )
+		{
+			clearTimeout( this._clickTimerId  );
+			this._clickTimerId  = null;
+		}
+	},
+	
+	_startClickTimer : function(latlng)
+	{
+		this._clearClickTimer ();
+		this._clickTimerId = setTimeout( L.bind( this._move, this, latlng ), this.options.dblClickInterval );
+	},
+	
+	onMapDblClick : function( e)
+	{
+		if ( !this._clickTimerId  ) return;
+		
+		this._clearClickTimer ();
+		var zoom = this.map.getZoom();
+		if ( zoom < 18 )
+		{
+			this.map.setZoomAround( e.latlng, zoom + 1);
+		}
+	},
 
 	setClickMoveVisible : function( visible, init )
 	{
@@ -6357,7 +6402,8 @@ GSI.SearchResultDialog
 GSI.SearchResultDialog = GSI.Dialog.extend( {
 
 	options : {
-		title : '検索'
+		title : '検索',
+		maxMarkerNum:30
 	},
 
 	initialize : function(map,options)
@@ -6571,7 +6617,9 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 		a.mouseenter( L.bind( this.onResultMouseover, this, item) );
 		a.mouseleave( L.bind( this.onResultMouseout, this, item) );
 		a.css( { "padding-left": '32px'} );
-		if ( index < 30 )
+		
+		
+		if ( this.options.maxMarkerNum < 0 || this.markerNum < this.options.maxMarkerNum )
 		{
 			if ( item.latitude && item.longitude && item.latitude > 0  && item.longitude > 0 )
 			{
@@ -6603,6 +6651,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 					}
 					);
 				this.markerList.addLayer(item._marker);
+				this.markerNum++;
 			}
 		}
 		return a;
@@ -6629,7 +6678,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 		var ul = this.listContainer;
 		ul.empty();
 		var viewNum = 0;
-
+		this.markerNum = 0;
 		//if ( $( this.resultSelector + ' .control' ).find( "input[name='search_addr']" ).is(':checked') )
 		{
 			for ( var i=0; i<this.addressResult.length; i++ )
@@ -9919,6 +9968,12 @@ GSI.SakuzuListItem = L.Class.extend( {
 		{
 			result.data += latLngs[i].lng + "," + latLngs[i].lat + ",0\n";
 		}
+		// close polygon
+		if ( latLngs.length > 0 )
+		{
+			result.data += latLngs[0].lng + "," + latLngs[0].lat + ",0\n";
+		}
+			
 		result.data += '</coordinates>\n' +
 		'</LinearRing>' + '\n' +
 		'</outerBoundaryIs>' + '\n' +
@@ -16890,10 +16945,10 @@ L.Util.extend(GSI.KML, {
 		
 		if ( layer._information.table ) layer._information.description = null;
 
-
-		if ( descr && descr != ''  )
+		
+		if ( ( name && name != '' ) || ( descr && descr != '' )  )
 		{
-			layer.bindPopup( ( name && name != '' ? '<h2>' + name + '</h2>' : '' ) + ( descr ? descr : '' ),
+			layer.bindPopup( ( name && name != '' ? '<h2>' + name + '</h2>' : '' ) + ( descr && descr != '' ? descr : '' ),
 					{
 						maxWidth:5000
 					});
