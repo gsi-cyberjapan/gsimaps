@@ -1,17 +1,22 @@
-# gsimaps
-地理院地図
+# gsimaps (地理院地図)
+
+## hashtag
+このレポジトリのハッシュタグは #gsimaps です。
+Twitter: https://twitter.com/hashtag/gsimaps
+
+## 地理院地図
 
 - 地理院地図（国土地理院が運営しているもの）：http://maps.gsi.go.jp/
 - 地理院地図（本レポジトリを用いたデモ）：http://gsi-cyberjapan.github.io/gsimaps/
 
-# 動作確認方法
+## 本レポジトリの利用方法
 本レポジトリの一式をダウンロードしたものをウェブサーバに置き、index.html を開いてください。
 
 ファイルシステム上で index.html を開いても機能の多くは動作しますが、ベクトルデータを扱う部分など
 一部の機能については、ウェブサーバにホストすることによって初めて正常に動作します。
 
-# ご利用上の留意点
-ご利用上の留意点は次の通りです。LICENSE ファイルをあわせてご参照ください。
+## 利用上の留意点
+利用上の留意点は次の通りです。LICENSE ファイルもあわせてご参照ください。
 
 - 本レポジトリで提供しているのは、国土地理院が運営する「地理院地図」http://maps.gsi.go.jp/ のソースです。
 - Leaflet, jQuery 等の既存ソフトウェアについては既存ソフトウェアのライセンスが適用されます。
@@ -22,7 +27,7 @@
 
 いずれにせよ本レポジトリに適宜同期していただければ、特段問題が発生しないように運用を進めていければと考えています。
 
-# See Also
+## See Also
 - レイヤ定義ファイル編集ツール（本レポジトリからの提供）：http://gsi-cyberjapan.github.io/gsimaps/config/config.html
 - レイヤ定義規約（別レポジトリからの提供）：https://github.com/gsi-cyberjapan/layers-dot-txt-spec
 
