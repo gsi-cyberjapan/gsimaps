@@ -112,17 +112,20 @@ CONFIG.UTMGRIDSTYLE = {
 CONFIG.UTMGRIDLABELCLASSNAME = 'utmgrid_label';
 
 // 磁北線の数
-CONFIG.JIHOKULINECOUNT = 5;
+CONFIG.JIHOKULINECOUNT = 3;
 
 // 磁北線のスタイル
 CONFIG.JIHOKULINESTYLE = {
 	"color":' #ff0000',
-	"weight": 2,
-	"opacity": 1,
+	"weight": 1,
+	"opacity": 0.8,
 	"fill" : false,
 	"fillOpacity":1,
 	"clickable" : false
 };
+
+// 磁北線が表示される閾値（ZLがこの値以上で表示される）
+CONFIG.JIHOKULINEAVAILABLEZOOM = 11;
 
 // 印刷用紙サイズ
 CONFIG.PAPERSIZE = {
@@ -461,7 +464,7 @@ CONFIG.FUNCMENU = {
 				},
 				{
 					id : CONFIG.PARAMETERNAMES.JIHOKULINE,
-					title : '磁北線',
+					title : '磁北線' + '<span class="mini_comment">（ズーム11以上）</span>',
 					typeA : 'check',
 					defaultCheck : false
 				},
@@ -4012,7 +4015,7 @@ GSI.Footer = L.Class.extend( {
 		}
 		zlist = zlist.substring(0,zlist.length-2);
 		$( '#zumei' ).html( zlist );
-
+		
 		this.refreshSize();
 		//this.refresh(center.lng,center.lat);
 	},
@@ -18751,8 +18754,10 @@ GSI.JihokuLine = L.Class.extend( {
 			"fill" : false,
 			"fillOpacity":1,
 			"clickable" : false
-		}
+		},
+		labelClassName : 'jihoku_label'
 	},
+	
 	initialize : function (map,options)
 	{
 		options = L.setOptions(this, options);
@@ -18765,29 +18770,21 @@ GSI.JihokuLine = L.Class.extend( {
 
 	getVariation : function ()
 	{
-		var center = this._map.getCenter();
-		var px = center.lng;
-		var py = center.lat;
-
-		//経緯度座標(10進数)を小数点以下6桁に丸める
-		px = px * 1000000;
-		px = parseInt(px);
-		px = px / 1000000;
-		py = py * 1000000;
-		py = parseInt(py);
-		py = py / 1000000;
-
 		//円周率
 		var pi = Math.PI;
+		var center = this._map.getCenter();
+		return GSI.Utils.getVariation(center) * pi / 180;	// 角度をラジアンに変換
+	},
 
-		//西偏角計算
-		var KEE = px - 138;
-		var KNN = py - 37;
-		var KKK = (7+40.585/60) + (19.003/60) * KNN - (6.265 / 60) * KEE + (0.009 / 60) * KNN * KNN + (0.024 / 60) * KNN * KEE - (0.591 / 60) * KEE * KEE;
-
-		//度からラジアンに
-		KKK = KKK * pi / 180;
-		return KKK;
+	clear : function()
+	{
+		if (this._layer)
+		{
+			this._map.removeLayer( this._layer );
+			this._layer = null;
+		}
+		this._lines = null;
+		this._label = null;
 	},
 
 	refresh : function()
@@ -18799,9 +18796,10 @@ GSI.JihokuLine = L.Class.extend( {
 		if (
 			( !this.options.visible )
 			||
-			( center.lat < 20 || center.lat > 46 || center.lng <122 || center.lng >154 )
+			!GSI.Utils.isVaridVariation(center)
 			)
 		{
+/*
 			if ( this._layer )
 			{
 				this._map.removeLayer( this._layer );
@@ -18809,13 +18807,26 @@ GSI.JihokuLine = L.Class.extend( {
 			}
 
 			this._lines = null;
+*/
+			this.clear();
+			return ;
+		}
+
+		// ズームレベルが設定を下回る場合、表示しない
+		if (this._map.getZoom() < CONFIG.JIHOKULINEAVAILABLEZOOM ) {
+			this.clear();
 			return ;
 		}
 
 		var count = this.options.num;
 
-		var variation = this.getVariation();
-
+		var variation = GSI.Utils.getVariation(center);
+		
+		//円周率
+		var pi = Math.PI;
+		var center = this._map.getCenter();
+		var rad = variation * pi / 180;	// 角度をラジアンに変換
+		
 		// 地図中央の経度
 		var centerLng = this._map.getCenter().lng;
 		var bounds = this._map.getBounds();
@@ -18844,17 +18855,17 @@ GSI.JihokuLine = L.Class.extend( {
 			*/
 			var latLngArr = null;
 
-			if (Math.tan(variation) >= 0)
+			if (Math.tan(rad) >= 0)
 			{
 
 				latLngArr =[
-					L.latLng(bounds.getNorth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(variation)) * i / (count - 1) ),
-					L.latLng(bounds.getSouth(), bounds.getWest()  + (mapWidth - mapHeight * Math.tan(variation)) * i / (count - 1) + mapHeight * Math.tan(variation))
+					L.latLng(bounds.getNorth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(rad)) * i / (count - 1) ),
+					L.latLng(bounds.getSouth(), bounds.getWest()  + (mapWidth - mapHeight * Math.tan(rad)) * i / (count - 1) + mapHeight * Math.tan(rad))
 				];
 			} else {
 				latLngArr =[
-					L.latLng(bounds.getNorth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(variation)) * i / (count - 1) + mapHeight * Math.tan(variation) ),
-					L.latLng(bounds.getSouth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(variation)) * i / (count - 1))
+					L.latLng(bounds.getNorth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(rad)) * i / (count - 1) + mapHeight * Math.tan(rad) ),
+					L.latLng(bounds.getSouth(), bounds.getWest() + (mapWidth - mapHeight * Math.tan(rad)) * i / (count - 1))
 				];
 
 			}
@@ -18870,6 +18881,30 @@ GSI.JihokuLine = L.Class.extend( {
 			{
 				this._lines[i].setLatLngs(latLngArr);
 			}
+		}
+
+		var KKK = parseInt(variation * 100 + 0.5) / 100;
+		var KKK_NUM = parseInt(KKK * 10 + 0.5) / 10;
+		KKK_NUM = parseFloat(KKK_NUM).toFixed(1);
+		if (!this._label) {
+
+			// ラベル表示
+			var label = new L.Label({
+				zoomAnimation : true,
+				noHide : true,
+				offset: [0, -34],
+				className: this.options.labelClassName,
+				clickable : false
+			});
+
+			label.setContent('<div unselectable="on">' + KKK_NUM + '°' + '</div>');
+			label.setLatLng(this._map.getCenter());
+			this._label = label;
+			layer.addLayer(label);
+		}
+		else {
+			this._label.setContent('<div unselectable="on">' + KKK_NUM + '°' + '</div>');
+			this._label.setLatLng(this._map.getCenter());
 		}
 
 		if ( !this._layer )
@@ -21601,7 +21636,35 @@ GSI.Utils.latLngToDMS = function(latLng) {
 	};
 };
 
+// 磁北線を表示できる範囲内かどうかを返す
+GSI.Utils.isVaridVariation = function(latLng)
+{
+	//経度：122度～154度
+	//緯度：20度～46度
+	return !( latLng.lat < 20 || latLng.lat > 46 || latLng.lng <122 || latLng.lng >154 );
+}
 
+// 指定緯度経度の偏角を算出し、角度を返す
+GSI.Utils.getVariation = function(latLng)
+{
+	var px = latLng.lng;
+	var py = latLng.lat;
+
+	//経緯度座標(10進数)を小数点以下6桁に丸める
+	px = px * 1000000;
+	px = parseInt(px);
+	px = px / 1000000;
+	py = py * 1000000;
+	py = parseInt(py);
+	py = py / 1000000;
+
+	//西偏角計算
+	var KEE = px - 138;
+	var KNN = py - 37;
+	var KKK = (7+40.585/60) + (19.003/60) * KNN - (6.265 / 60) * KEE + (0.009 / 60) * KNN * KNN + (0.024 / 60) * KNN * KEE - (0.591 / 60) * KEE * KEE;
+
+	return KKK;
+};
 
 
 
