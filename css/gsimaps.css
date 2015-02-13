@@ -1135,6 +1135,15 @@ form {
 	text-align:right;
 	background:url(../image/system/arrow_l.png) no-repeat left 50%;
 }
+.menu_item_frame label .mini_comment {
+	font-size:7.5pt;
+	color: #ccc;
+}
+.menu_item_frame label .mini_comment.landscape {
+	display : block;
+	margin-top:-2px;
+	margin-left:3em;
+}
 
 /* レイヤー一覧
 ---------------------------------------------------------------------- */
@@ -1491,8 +1500,17 @@ form {
 	-webkit-user-select: none;
 }
 
+.jihoku_label
+{
+	color: #FF0000;
+	font-size: 80%;
+	white-space:nowrap;
 
-
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
 
 /* GSI.Dialog 
 ---------------------------------------------------------------------- */
