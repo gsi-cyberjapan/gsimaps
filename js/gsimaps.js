@@ -11,7 +11,8 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.36";
+GSI.Version = "0.9.9.37";
+
 
 var CONFIG = {};
 
@@ -29,10 +30,15 @@ CONFIG.layers = [
 
 // トップメッセージ
 CONFIG.TOPMESSAGE = null;
+// 閉じた時のID != 現在のID または EXPIRES時間過ぎた場合にお知らせ復活
+//
 /*CONFIG.TOPMESSAGE = {
 	MESSAGE : '<a href="http://portal.cyberjapan.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
-	DETAILS : ''
+	DETAILS : '',
+	ID : '20150216', // 文字列を指定この値に変更あった場合はお知らせが復活
+	EXPIRES : -1 //-1  // クッキーの有効期限( hour )
 };*/
+
 
 
 // 初期位置
@@ -110,6 +116,7 @@ CONFIG.UTMGRIDSTYLE = {
 	visible : false
 };
 CONFIG.UTMGRIDLABELCLASSNAME = 'utmgrid_label';
+
 
 // 磁北線の数
 CONFIG.JIHOKULINECOUNT = 3;
@@ -332,6 +339,7 @@ CONFIG.GEOJSONSPECIALKEYS ={
 	"_color": true,
 	"_opacity": true,
 	"_weight": true,
+	"_fill": true,
 	"_fillColor": true,
 	"_fillOpacity": true,
 	"_weight": true
@@ -699,6 +707,9 @@ CONFIG.SERVERAPI.SEARCH = "http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geoc
 CONFIG.SERVERAPI.SEARCH_SHISETU = "http://portal.cyberjapan.jp/GsiJsLibrary/shisetsu.php";
 CONFIG.SERVERAPI.SEARCH_CHIMEI = "http://portal.cyberjapan.jp/GsiJsLibrary/chimei.php";
 
+// UTMポイント変換の処理 指定なしでJavascriptで変換
+CONFIG.SERVERAPI.MGRSXY = "";
+//CONFIG.SERVERAPI.MGRSXY = "http://portal.cyberjapan.jp/site/mapuse4/grid/mgrsXY.php";
 
 // 作図関連
 CONFIG.SAKUZU = {
@@ -748,6 +759,7 @@ CONFIG.SAKUZU = {
 		DEFAULTICON : '080.png'
 	}
 };
+
 
 
 
@@ -983,7 +995,9 @@ function initialize()
 	GSI.GLOBALS.header = new GSI.Header( GSI.GLOBALS.map,
 		{
 			visible : ctrlSetting.header.visible,
-			message : ( CONFIG.TOPMESSAGE && CONFIG.TOPMESSAGE.MESSAGE ? CONFIG.TOPMESSAGE.MESSAGE : null )
+			message : ( CONFIG.TOPMESSAGE && CONFIG.TOPMESSAGE.MESSAGE ? CONFIG.TOPMESSAGE.MESSAGE : null ),
+			id : ( CONFIG.TOPMESSAGE && CONFIG.TOPMESSAGE.ID ? CONFIG.TOPMESSAGE.ID : null ),
+			expires : ( CONFIG.TOPMESSAGE && CONFIG.TOPMESSAGE.EXPIRES ? CONFIG.TOPMESSAGE.EXPIRES : null )
 		} );
 
 	GSI.GLOBALS.footer = new GSI.Footer( GSI.GLOBALS.map, GSI.GLOBALS.bottomLeftSpacer, GSI.GLOBALS.bottomRightSpacer, "#map", "#footerbtn", "#footer", "image/system/footer_up.png", "image/system/footer_down.png",
@@ -2942,7 +2956,8 @@ GSI.Searcher = L.Class.extend( {
 	QUERY_UTMPOINT : 5,
 	QUERY_QUERY : 4,
 
-	options : {},
+	options : {
+	},
 
 	initialize : function (map, dialog, formSelector, querySelector, resultSelector, options )
 	{
@@ -2997,21 +3012,25 @@ GSI.Searcher = L.Class.extend( {
 			}
 			else if ( qType == this.QUERY_UTMPOINT )
 			{
-
-				this._utmPoint( query );
-				/*
-				var latLng = this.parseUTMPointText( query );
-
-				if ( latLng )
+				if ( CONFIG.SERVERAPI.MGRSXY  && CONFIG.SERVERAPI.MGRSXY  != '' )
 				{
-
+					this._utmPoint( query );
 				}
 				else
 				{
+				
+					var latLng = GSI.UTM.Utils.point2LatLng( query );
 
-					alert( 'UTMポイントを正しく入力して下さい' );
+					if ( latLng )
+					{
+						this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+					}
+					else
+					{
+
+						alert( 'UTMポイントを正しく入力して下さい' );
+					}
 				}
-				*/
 			}
 
 		}
@@ -3035,7 +3054,7 @@ GSI.Searcher = L.Class.extend( {
         pointX = center.substring(5,9);
         pointY = center.substring(9,13);
         $.ajax({
-          url: 'http://portal.cyberjapan.jp/site/mapuse4/grid/mgrsXY.php?mgrs=' + newMgrs + '&mark=' + mark,
+          url: CONFIG.SERVERAPI.MGRSXY + '?mgrs=' + newMgrs + '&mark=' + mark,
           type: 'GET',
           dataType: 'jsonp',
           success: L.bind( function(data) {
@@ -3613,14 +3632,7 @@ GSI.Searcher = L.Class.extend( {
 			return null;
 		}
 
-	},
-
-
-	parseUTMPointText : function( s )
-	{
-		return GSI.UTM.Utils.point2LatLng( s );
 	}
-
 
 } );
 
@@ -3709,7 +3721,7 @@ GSI.Header = L.Class.extend( {
 			this.topMessage = $( "#topmessage" );
 
 			// お知らせ表示
-			if ( options.message && options.message != '' )
+			if ( this._isVisibleStart() ) //options.message && options.message != '' )
 			{
 				this.topMessage.empty() .append( $("<div>").addClass('message').html( options.message ) );
 				var closeBtn = $( '<a>' ).addClass( 'closebtn' ).attr( {'href': 'javascript:void(0);'} ).html( '×' );
@@ -3722,18 +3734,77 @@ GSI.Header = L.Class.extend( {
 			}
 			else
 			{
-				this.hideTopMessage();
+				//this.hideTopMessage();
+				
+				$( "#topmessage" ).hide();
+				this.header.addClass( 'border_bottom' );
+				this.topMessageVisible = false;
 			}
 
 		}
 		this.map = map;
 	},
-
+	
+	_isVisibleStart : function()
+	{
+		if ( this.options.message && this.options.message != '' )
+		{
+			if ( this.options.expires > 0 )
+			{
+				try
+				{
+					var cookie = new GSI.Utils.Cookie();
+					var isHidden = cookie.get( 'topmessage_hidden' );
+					var id = cookie.get( 'topmessage_id' );
+					// id change
+					if ( isHidden == '1' && ( id == this.options.id ) ) return false;
+				}
+				catch( e ){}
+			}
+			else
+			{
+				try
+				{
+					cookie.remove( 'topmessage_hidden' );
+					cookie.remove( 'topmessage_id' );
+				}
+				catch( e ){}
+			}
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	},
+	
 	hideTopMessage : function()
 	{
 		this.topMessage .hide();
 		this.header.addClass( 'border_bottom' );
 		this.topMessageVisible=false;
+		
+		try
+		{
+			if ( this.options.expires > 0 )
+			{
+				var cookie = new GSI.Utils.Cookie();
+				cookie.set( 'topmessage_hidden', '1', { expires: this.options.expires } );
+				if ( this.options.id )
+					cookie.set( 'topmessage_id', this.options.id, { expires: this.options.expires } );
+				else
+					cookie.remove( 'topmessage_id' );
+			}
+			else
+			{
+				cookie.remove( 'topmessage_hidden' );
+				cookie.remove( 'topmessage_id' );
+			}
+		}
+		catch( e ){}
+	
+		
 	},
 
 	onCloseClick : function()
@@ -4015,7 +4086,7 @@ GSI.Footer = L.Class.extend( {
 		}
 		zlist = zlist.substring(0,zlist.length-2);
 		$( '#zumei' ).html( zlist );
-		
+
 		this.refreshSize();
 		//this.refresh(center.lng,center.lat);
 	},
@@ -8490,10 +8561,12 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 			case GSI.SakuzuListItem.POLYGON:
 				result =L.polygon( layer.getLatLngs(), layer.options );
+				result.feature = layer.feature;
 				break;
 
 			case GSI.SakuzuListItem.LINESTRING:
 				result =L.polyline( layer.getLatLngs(), layer.options );
+				result.feature = layer.feature;
 				break;
 
 
@@ -8523,8 +8596,10 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		}
 
-		if ( result ) result._information = layer._information;
-
+		if ( result )
+		{
+			result._information = layer._information;
+		}
 		return result;
 	},
 
@@ -9409,7 +9484,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 				}
 
-
 			}
 			else
 			{
@@ -10137,17 +10211,15 @@ GSI.SakuzuListItem = L.Class.extend( {
 	{
 		if ( !info ) return {};
 		var result = {};
-
+		
+		if ( info.title && info.title != '' )
+			result[ 'name' ] = info.title;
 		if ( info.description && info.description != '' )
 		{
-			if ( info.title && info.title != '' )
-				result[ 'name' ] = info.title;
 			result[ 'description' ] = info.description;
 		}
 		else if ( info.table )
 		{
-			if ( info.title && info.title != '' )
-				result[ 'name' ] = info.title;
 			for ( var i=0; i<info.table.length; i++ )
 			{
 				result[ info.table[i].key ] = info.table[i].value;
@@ -10181,8 +10253,22 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		result.properties[ "_color"] = color;
 		result.properties[ "_opacity"] = opacity;
-		result.properties[ "_weight"] = weight;
-
+		result.properties[ "_weight"] = parseInt(weight);
+		
+		if ( layer.feature &&  layer.feature.properties )
+		{
+			
+			for ( var key in layer.feature.properties )
+			{
+				if ( CONFIG.GEOJSONSPECIALKEYS[ key ] )
+				{
+					key = key.slice(1);
+					if ( !result.properties["_"+key] )
+						result.properties["_"+key] = options[ key ];
+				}
+			}
+			
+		}
 		return result;
 	},
 
@@ -10212,18 +10298,33 @@ GSI.SakuzuListItem = L.Class.extend( {
 		result.properties[ "_markerType"] = "CircleMarker";
 		result.properties[ "_color"] = color;
 		result.properties[ "_opacity"] = opacity;
-		result.properties[ "_weight"] = weight;
+		result.properties[ "_weight"] = parseInt(weight);
 		result.properties[ "_fillColor"] = fillColor;
 		result.properties[ "_fillOpacity"] = fillOpacity;
 		result.properties[ "_radius"] = layer.getRadius();
-
+		
+		if ( layer.feature &&  layer.feature.properties )
+		{
+			for ( var key in layer.feature.properties )
+			{
+				if ( CONFIG.GEOJSONSPECIALKEYS[ key ] )
+				{
+					key = key.slice(1);
+					if ( !result.properties["_"+key] )
+					{
+						result.properties["_"+key] = options[ key ];
+					}
+				}
+			}
+			
+		}
+		
 		return result;
 	},
 
 	_makeGeoJSONPoint : function( layer )
 	{
 		var result = layer.toGeoJSON();
-
 		result.properties = this._layerInfo2Properties( this._getLayerInfo( layer ) );
 
 		var options = layer.options;
@@ -10240,7 +10341,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 		var iconSize = options.icon.options.iconSize;
 		var iconAnchor = options.icon.options.iconAnchor;
 		var html = options.icon.options.html;
-		
 		if ( options.icon.options.className == 'gsi-div-icon' )
 		{
 			result.properties[ "_markerType"] = "DivIcon";
@@ -10258,7 +10358,23 @@ GSI.SakuzuListItem = L.Class.extend( {
 		if ( ! result.properties[ "_iconSize"]  ) delete result.properties[ "_iconSize"] ;
 
 		if ( ! result.properties[ "_iconAnchor"]  ) delete result.properties[ "_iconAnchor"] ;
-
+		
+		if ( layer.feature &&  layer.feature.properties )
+		{
+			for ( var key in layer.feature.properties )
+			{
+				if ( CONFIG.GEOJSONSPECIALKEYS[ key ] )
+				{
+					key = key.slice(1);
+					if ( !result.properties["_"+key] )
+					{
+						result.properties["_"+key] = options.icon.options[ key ];
+					}
+				}
+			}
+			
+		}
+		
 		return result;
 	},
 
@@ -10292,10 +10408,24 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		result.properties[ "_color"] = color;
 		result.properties[ "_opacity"] = opacity;
-		result.properties[ "_weight"] = weight;
+		result.properties[ "_weight"] = parseInt(weight);
 		result.properties[ "_fillColor"] = fillColor;
 		result.properties[ "_fillOpacity"] = fillOpacity;
-
+		
+		if ( layer.feature &&  layer.feature.properties )
+		{
+			for ( var key in layer.feature.properties )
+			{
+				if ( CONFIG.GEOJSONSPECIALKEYS[ key ] )
+				{
+					key = key.slice(1);
+					if ( !result.properties["_"+key] )
+						result.properties["_"+key] = options[ key ];
+				}
+			}
+			
+		}
+		
 		return result;
 	}
 
@@ -15984,6 +16114,106 @@ GSI.TileLayer
 ************************************************************************/
 
 GSI.TileLayer = L.TileLayer.extend( {
+	
+	initialize: function (url, options) {
+		
+		
+		L.TileLayer.prototype.initialize.call(this, url, options);
+		
+		
+		//if ( ! this.options.unloadInvisibleTiles && 
+		//	( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8) )
+	//		this.options.unloadInvisibleTiles = true;
+	},
+	/*
+	_reset: function (e) {
+		for (var key in this._tiles) {
+			this.fire('tileunload', {tile: this._tiles[key]});
+		}
+		
+		this._tiles = {};
+		this._tilesToLoad = 0;
+
+		if (this.options.reuseTiles) {
+			this._unusedTiles = [];
+		}
+
+		this._tileContainer.innerHTML = '';
+
+		if (this._animated && e && e.hard) {
+			this._clearBgBuffer();
+		}
+
+		this._initContainer();
+	},
+	*/
+	/*
+	_initContainer: function () {
+		var tilePane = this._map._panes.tilePane;
+
+		if (!this._container) {
+			this._container = L.DomUtil.create('div', 'leaflet-layer');
+
+			this._updateZIndex();
+
+			if (this._animated) {
+				var className = 'leaflet-tile-container';
+
+				this._bgBuffer = L.DomUtil.create('div', className, this._container);
+				this._tileContainer = L.DomUtil.create('div', className, this._container);
+
+			} else {
+				this._tileContainer = this._container;
+			}
+
+			tilePane.appendChild(this._container);
+
+			if (this.options.opacity < 1 || L.Browser.ielt9) {
+				this._updateOpacity();
+			}
+		}
+	},
+	_updateOpacity: function () {
+		var i,
+		    tiles = this._tiles;
+		console.log( "!!" );
+		if (L.Browser.ielt9) {
+			
+			for (i in tiles) {
+				L.DomUtil.setOpacity(tiles[i], this.options.opacity);
+			}
+		} else {
+			L.DomUtil.setOpacity(this._container, this.options.opacity);
+		}
+	},
+	*/
+	_addTile: function (tilePoint, container) {
+		var tilePos = this._getTilePos(tilePoint);
+
+		// get unused tile - or create a new tile
+		var tile = this._getTile();
+
+		/*
+		Chrome 20 layouts much faster with top/left (verify with timeline, frames)
+		Android 4 browser has display issues with top/left and requires transform instead
+		(other browsers don't currently care) - see debug/hacks/jitter.html for an example
+		*/
+		L.DomUtil.setPosition(tile, tilePos, L.Browser.chrome);
+
+		this._tiles[tilePoint.x + ':' + tilePoint.y] = tile;
+
+		this._loadTile(tile, tilePoint);
+
+		if (tile.parentNode !== this._tileContainer) {
+			container.appendChild(tile);
+		}
+		if (( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8)
+			 && this.options.opacity !== undefined) {
+			L.DomUtil.setOpacity(tile, this.options.opacity);
+		}
+	},
+	
+	
 	_update: function () {
 
 		if (!this._map) { return; }
@@ -16001,13 +16231,15 @@ GSI.TileLayer = L.TileLayer.extend( {
 		var tileBounds = L.bounds(
 		        bounds.min.divideBy(tileSize)._floor(),
 		        bounds.max.divideBy(tileSize)._floor());
-
+		//this._updateOpacity();
+		
 		this._addTilesFromCenterOut(tileBounds);
-
-		if (this.options.unloadInvisibleTiles || this.options.reuseTiles) {
+		
+		if ( this.options.unloadInvisibleTiles || this.options.reuseTiles) {
 			this._removeOtherTiles(tileBounds);
 		}
 	}
+	
 } );
 
 
@@ -16118,16 +16350,17 @@ GSI.GeoJSON = L.Class.extend( {
 
 		if ( !marker )
 		{
-
 			var iconUrl = feature.properties[ "_iconUrl" ];
 			var iconSize = feature.properties[ "_iconSize" ];
 			var iconAnchor = feature.properties[ "_iconAnchor" ];
+			var className = feature.properties[ "_className" ];
 			var iconOptions = {};
 			if ( iconUrl ) iconOptions.iconUrl = iconUrl;
 			if ( iconSize ) iconOptions.iconSize = iconSize;
 			if ( iconAnchor ) iconOptions.iconAnchor = iconAnchor;
+			if ( className ) iconOptions.className = className;
 			marker = L.marker( latlng, { icon : L.icon(iconOptions) });
-
+			
 		}
 
 		return marker;
@@ -16168,6 +16401,7 @@ GSI.GeoJSON = L.Class.extend( {
 				}
 			}
 		}
+		//console.log( style );
 		return style;
 	},
 
@@ -16722,10 +16956,16 @@ L.Util.extend(GSI.KML, {
 	// Return false if e's first parent Folder is not [folder]
 	// - returns true if no parent Folders
 	_check_folder: function (e, folder) {
-		e = e.parentElement;
+		
+		//console.log( e.parentElement );
+		e = ( e.parentElement ?  e.parentElement : e.parentNode );
+		//e = e.parentElement;
+		
+		//if ( e ) console.log ( e.tagName );
 		while (e && e.tagName !== 'Folder')
 		{
-			e = e.parentElement;
+			e = ( e.parentElement ?  e.parentElement : e.parentNode );
+			//e = e.parentElement;
 		}
 		return !e || e === folder;
 	},
@@ -18019,13 +18259,166 @@ GSI.UTM.Utils = {
 		}
 		return mark;
 	},
+	
+	
+	_parseUSNGText : function (s)
+	{
+		var result = {};
+		var j = 0;
+		var k;
+		var usngStr = [];
+		var usngStr_temp = []
 
+		usngStr_temp = s.toUpperCase()
+
+		var regexp = /%20/g
+		usngStr = usngStr_temp.replace(regexp,"")
+		regexp = / /g
+		usngStr = usngStr_temp.replace(regexp,"")
+
+		if (usngStr.length < 7) {
+		  return null;
+		}
+
+		result.zone = usngStr.charAt(j++)*10 + usngStr.charAt(j++)*1;
+		result.let = usngStr.charAt(j++)
+		result.sq1 = usngStr.charAt(j++)
+		result.sq2 = usngStr.charAt(j++)
+
+		result.precision = (usngStr.length-j) / 2;
+		result.east='';
+		result.north='';
+		for (var k=0; k<result.precision; k++)
+		{
+		   result.east += usngStr.charAt(j++)
+		}
+
+		if (usngStr[j] == " ") { j++ }
+		for (var k=0; k<result.precision; k++)
+		{
+		   result.north += usngStr.charAt(j++)
+		}
+		
+		return result;
+	},
+	
+	_USNGtoUTM : function (zone,let,sq1,sq2,east,north)
+	{ 
+		var result = {};
+		
+		//Starts (southern edge) of N-S zones in millons of meters
+		var zoneBase = [1.1,2.0,2.9,3.8,4.7,5.6,6.5,7.3,8.2,9.1,   0, 0.8, 1.7, 2.6, 3.5, 4.4, 5.3, 6.2, 7.0, 7.9];
+
+		var segBase = [0,2,2,2,4,4,6,6,8,8,   0,0,0,2,2,4,4,6,6,6];  //Starts of 2 million meter segments, indexed by zone 
+		
+		// convert easting to UTM
+		var eSqrs="ABCDEFGHJKLMNPQRSTUVWXYZ".indexOf(sq1);          
+		var appxEast=1+eSqrs%8; 
+
+		// convert northing to UTM
+		var letNorth = "CDEFGHJKLMNPQRSTUVWX".indexOf(let);
+		if (zone%2)  //odd number zone
+		var nSqrs="ABCDEFGHJKLMNPQRSTUV".indexOf(sq2) 
+		else        // even number zone
+		var nSqrs="FGHJKLMNPQRSTUVABCDE".indexOf(sq2); 
+
+		var zoneStart = zoneBase[letNorth];
+		var appxNorth = Number(segBase[letNorth])+nSqrs/10;
+		if ( appxNorth < zoneStart)
+		   appxNorth += 2; 	  
+
+		result.N=appxNorth*1000000+Number(north)*Math.pow(10,5-north.length);
+		result.E=appxEast*100000+Number(east)*Math.pow(10,5-east.length)
+		result.zone=zone;
+		result.letter=let;
+
+		return result;
+	},
+	
+	_UTMtoLL : function (UTMNorthing, UTMEasting, UTMZoneNumber, ret)
+	{
+		var EASTING_OFFSET  = 500000.0;   // (meters)
+		var NORTHING_OFFSET = 10000000.0; // (meters)
+		var k0 = 0.9996;
+		var EQUATORIAL_RADIUS    = 6378137.0; // GRS80 ellipsoid (meters)
+		var ECC_SQUARED = 0.006694380023;
+		var ECC_PRIME_SQUARED = ECC_SQUARED / (1 - ECC_SQUARED);
+		var E1 = (1 - Math.sqrt(1 - ECC_SQUARED)) / (1 + Math.sqrt(1 - ECC_SQUARED));
+		var RAD_2_DEG   = 180.0 / Math.PI;
+		
+		// remove 500,000 meter offset for longitude
+		var xUTM = parseFloat(UTMEasting) - EASTING_OFFSET; 
+		var yUTM = parseFloat(UTMNorthing);
+		var zoneNumber = parseInt(UTMZoneNumber);
+
+		// origin longitude for the zone (+3 puts origin in zone center) 
+		var lonOrigin = (zoneNumber - 1) * 6 - 180 + 3; 
+
+		// M is the "true distance along the central meridian from the Equator to phi
+		// (latitude)
+		var M = yUTM / k0;
+		var mu = M / ( EQUATORIAL_RADIUS * (1 - ECC_SQUARED / 4 - 3 * ECC_SQUARED * 
+		              ECC_SQUARED / 64 - 5 * ECC_SQUARED * ECC_SQUARED * ECC_SQUARED / 256 ));
+
+		// phi1 is the "footprint latitude" or the latitude at the central meridian which
+		// has the same y coordinate as that of the point (phi (lat), lambda (lon) ).
+		var phi1Rad = mu + (3 * E1 / 2 - 27 * E1 * E1 * E1 / 32 ) * Math.sin( 2 * mu) 
+		             + ( 21 * E1 * E1 / 16 - 55 * E1 * E1 * E1 * E1 / 32) * Math.sin( 4 * mu)
+		             + (151 * E1 * E1 * E1 / 96) * Math.sin(6 * mu);
+		var phi1 = phi1Rad * RAD_2_DEG;
+
+		// Terms used in the conversion equations
+		var N1 = EQUATORIAL_RADIUS / Math.sqrt( 1 - ECC_SQUARED * Math.sin(phi1Rad) * 
+		          Math.sin(phi1Rad));
+		var T1 = Math.tan(phi1Rad) * Math.tan(phi1Rad);
+		var C1 = ECC_PRIME_SQUARED * Math.cos(phi1Rad) * Math.cos(phi1Rad);
+		var R1 = EQUATORIAL_RADIUS * (1 - ECC_SQUARED) / Math.pow(1 - ECC_SQUARED * 
+		            Math.sin(phi1Rad) * Math.sin(phi1Rad), 1.5);
+		var D = xUTM / (N1 * k0);
+
+		// Calculate latitude, in decimal degrees
+		var lat = phi1Rad - ( N1 * Math.tan(phi1Rad) / R1) * (D * D / 2 - (5 + 3 * T1 + 10
+		    * C1 - 4 * C1 * C1 - 9 * ECC_PRIME_SQUARED) * D * D * D * D / 24 + (61 + 90 * 
+		      T1 + 298 * C1 + 45 * T1 * T1 - 252 * ECC_PRIME_SQUARED - 3 * C1 * C1) * D * D *
+		      D * D * D * D / 720);
+		lat = lat * RAD_2_DEG;
+
+		// Calculate longitude, in decimal degrees
+		var lng = (D - (1 + 2 * T1 + C1) * D * D * D / 6 + (5 - 2 * C1 + 28 * T1 - 3 * 
+		        C1 * C1 + 8 * ECC_PRIME_SQUARED + 24 * T1 * T1) * D * D * D * D * D / 120) /
+		        Math.cos(phi1Rad);
+
+		lng = lonOrigin + lng * RAD_2_DEG;
+		//ret.lat = lat;
+		//ret.lon = lng;
+		return L.latLng(lat, lng);
+	},
+	
 	point2LatLng : function( s )
 	{
+		var latLng = null;
+		try
+		{
+			var usngp = this._parseUSNGText(s,usngp);
+			if ( !usngp ) return null;
+			var coords = this._USNGtoUTM(usngp.zone,usngp.let,usngp.sq1,usngp.sq2,usngp.east,usngp.north) 
+			
+			if (usngp.let < 'N') 
+			{
+				coords.N -= NORTHING_OFFSET
+			}
 
-		return null;
+			latLng = this._UTMtoLL(coords.N, coords.E, usngp.zone)
+		}
+		catch( e )
+		{
+			latLng = null;
+		}
+		//latlon[0] = coords.lat
+		//latlon[1] = coords.lon
+		return latLng;
 	},
-
+	
 	latlng2PointName : function(lat, lng)
 	{
 		var zone = GSI.UTM.Utils.lng2Zone( lng );
@@ -18786,7 +19179,7 @@ GSI.JihokuLine = L.Class.extend( {
 		this._lines = null;
 		this._label = null;
 	},
-
+	
 	refresh : function()
 	{
 		var center = this._map.getCenter();
@@ -21667,7 +22060,109 @@ GSI.Utils.getVariation = function(latLng)
 };
 
 
+GSI.Utils.Cookie = L.Class.extend( {
+	
+	_config : {
+		defaults : {}
+	},
+	
+	initialize : function ()
+	{
+		
 
+	},
+	
+	_encode : function(s)
+	{
+		return this._config.raw ? s : encodeURIComponent(s);
+	},
+	
+	_decode : function (s) 
+	{
+		return this._config.raw ? s : decodeURIComponent(s);
+	},
+
+	_stringifyCookieValue : function(value) 
+	{
+		return this._encode(this._config.json ? JSON.stringify(value) : String(value));
+	},
+
+	_parseCookieValue : function (s)
+	{
+		if (s.indexOf('"') === 0) {
+			s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+		}
+
+		try {
+			var pluses = /\+/g;
+			s = decodeURIComponent(s.replace(pluses, ' '));
+			return this._config.json ? JSON.parse(s) : s;
+		} catch(e) {}
+	},
+	
+	_read : function(s, converter) 
+	{
+		//var value = this._config.raw ? s : this._parseCookieValue(s);
+		return this._config.raw ? s : this._parseCookieValue(s);
+	},
+	
+	get : function( key )
+	{
+		var result = key ? undefined : {};
+
+		var cookies = document.cookie ? document.cookie.split('; ') : [];
+
+		for (var i = 0, l = cookies.length; i < l; i++) 
+		{
+			var parts = cookies[i].split('=');
+			var name = this._decode(parts.shift());
+			var cookie = parts.join('=');
+			if (key && key === name) {
+				result = this._read(cookie);
+				break;
+			}
+
+			if (!key && (cookie = this._read(cookie)) !== undefined) {
+				result[name] = cookie;
+			}
+		}
+
+		return result;
+	},
+	
+	set : function(key, value, options)
+	{
+		options = $.extend({}, this._config.defaults, options);
+
+		if (typeof options.expires === 'number') {
+			var hours = options.expires, t = options.expires = new Date();
+			t.setTime(+t + hours * 1000 * 60 * 60 );// 
+		}
+
+		return (document.cookie = [
+			this._encode(key), '=', this._stringifyCookieValue(value),
+			options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+			options.path    ? '; path=' + options.path : '',
+			options.domain  ? '; domain=' + options.domain : '',
+			options.secure  ? '; secure' : ''
+		].join(''));
+	
+
+	},
+	
+	remove : function (key, options)
+	{
+		if (this.get(key) === undefined) 
+		{
+			return false;
+		}
+
+		this.set(key, '', $.extend({}, options, { expires: -1 }));
+		return !this.get(key);
+	}
+	
+	
+} );
 
 
 
