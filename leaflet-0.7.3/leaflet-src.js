@@ -2884,15 +2884,6 @@ L.TileLayer = L.Class.extend({
 	// image-specific code (override to implement e.g. Canvas or SVG tile layer)
 
 	getTileUrl: function (tilePoint) {
-		if(this._url.match(/\/JIKIZU\//) && tilePoint.z >= 4 && tilePoint.z <= 7) {
-			var my_y = Math.pow(2, tilePoint.z) - tilePoint.y -1;
-			return L.Util.template(this._url, L.extend({
-				s: this._getSubdomain(tilePoint),
-				z: tilePoint.z,
-				x: tilePoint.x,
-				y: my_y
-			}, this.options));
-		}
 		return L.Util.template(this._url, L.extend({
 			s: this._getSubdomain(tilePoint),
 			z: tilePoint.z,
