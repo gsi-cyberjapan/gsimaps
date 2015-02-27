@@ -2824,6 +2824,7 @@ GSI.MapMouse = L.Class.extend( {
 				// 一回目
 				var date = new Date();
 				this.rightClickTime = date.getTime();
+				this._startRightClickTimer( e.latlng );
 			}
 			else
 			{
@@ -2931,11 +2932,34 @@ GSI.MapMouse = L.Class.extend( {
 	{
 		this.clickMoveEnable = enable;
 		this.refresh();
+	},
 
+	_startRightClickTimer : function(latlng)
+	{
+		this._clearRightClickTimer ();
+		this._RightClickTimerId = setTimeout( L.bind( this._zoom_Out, this, latlng ), this.options.dblClickInterval );
+	},
+
+	_clearRightClickTimer : function()
+	{
+		if ( this._RightClickTimerId  )
+		{
+			clearTimeout( this._RightClickTimerId  );
+			this._RightClickTimerId  = null;
+		}
+	},
+
+	_zoom_Out : function(latlng)
+	{
+		if ( this.rightClickTime != null )
+		{
+
+
+			GSI.GLOBALS.footer.onBtnClick();
+		}
+		this.rightClickTime	=	null;
+//		this.map.panTo( latlng );
 	}
-
-
-
 } );
 
 
@@ -5443,19 +5467,13 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		var legend = null;
 		var description = null;
 
+
 		if ( item.legendUrl && item.legendUrl != '')
 		{
 			legend =$( '<a>' ).html( '凡例を表示' ).addClass( 'legend' ).attr( { 'href' : item.legendUrl, 'target' : '_blank' } );
 		}
-
-		if ( item.html )
-		{
-			description =$( '<div>' ).addClass( 'description' ).html( item.html );
-		}
-		if ( legend ) infoFrame.append( legend );
-		if ( description ) infoFrame.append( description );
-
-
+		if ( legend )
+			infoFrame.append( legend );
 		if ( item._visibleInfo )
 		{
 			var sliderFrame = $('<table>').addClass( 'slider_frame' );
@@ -5491,6 +5509,16 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				"stop" : sliderChangeHandler
 			});
 		}
+
+
+		if ( item.html )
+		{
+			description =$( '<div>' ).addClass( 'description' ).html( item.html );
+		}
+		if ( description )
+			infoFrame.append( description );
+
+
 		return infoFrame;
 	},
 
@@ -6144,15 +6172,19 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
 		var opacitySlider = $( '<div>' ).addClass( 'slider' );
 
-		if ( legend ) infoFrame.append( legend );
-		if ( description ) infoFrame.append( description );
 
 		tr.append( $( '<td>' ).html('透過率').css( {"white-space":"nowrap"} ) );
 		tr.append( $( '<td>' ).append(opacitySlider).css( {width:"100%"} ) );
 
 		tbody.append( tr );
 		sliderFrame.append( tbody );
+		if ( legend )
+			infoFrame.append( legend );
 		infoFrame.append( sliderFrame );
+		if ( description )
+			infoFrame.append( description );
+
+
 		var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
 
 
