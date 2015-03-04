@@ -758,7 +758,10 @@ CONFIG.SAKUZU = {
 		],
 		ICONSIZE : [20,20],
 		ICONANCHOR : [10,10],
-		DEFAULTICON : '080.png'
+		DEFAULTICON : '080.png',
+		INIT_DEFAULTICON : '080.png',
+		ICON_SCALE : 1,
+		INIT_ICON_SCALE : 1
 	}
 };
 
@@ -1068,6 +1071,8 @@ function initialize()
 
 			case 'sakuzu':
 			// 作図ダイアログ
+				CONFIG.SAKUZU.SYMBOL.DEFAULTICON = CONFIG.SAKUZU.SYMBOL.INIT_DEFAULTICON;
+				CONFIG.SAKUZU.SYMBOL.ICON_SCALE = CONFIG.SAKUZU.SYMBOL.INIT_ICON_SCALE;
 				if ( GSI.GLOBALS.measureDialog && GSI.GLOBALS.measureDialog.getVisible() )
 				{
 					GSI.GLOBALS.measureDialog.hide();
@@ -1201,7 +1206,8 @@ function initialize()
 	GSI.GLOBALS.sakuzuList =  new GSI.SakuzuList(GSI.GLOBALS.map,GSI.GLOBALS.mapMouse,{
 		url : CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON,
 		size : CONFIG.SAKUZU.SYMBOL.ICONSIZE,
-		anchor : CONFIG.SAKUZU.SYMBOL.ICONANCHOR
+		anchor : CONFIG.SAKUZU.SYMBOL.ICONANCHOR,
+		_iconScale : CONFIG.SAKUZU.SYMBOL.ICON_SCALE
 	}, { defaultList : GSI.ClientMode.sakuzuList} );
 
 	// layers.js読み込み
@@ -8956,14 +8962,29 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		this._editingPathList = [];
 
+		var myiconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
+		var myiconSize = this._owner._defaultIcon.size;
+		var __myIconSize = [
+			Math.floor( this._owner._defaultIcon.size[0] * myiconScale ),
+			Math.floor( this._owner._defaultIcon.size[1] * myiconScale )
+		];
+		var myiconAnchor = this._owner._defaultIcon.anchor;
+		var __myiconAnchor = [
+			Math.floor( this._owner._defaultIcon.anchor[0] * myiconScale ),
+			Math.floor( this._owner._defaultIcon.anchor[1] * myiconScale )
+		];
+
+		this._owner._defaultIcon.url = CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
+		this._owner._defaultIcon._iconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
+
 		var path =  new  L.Draw.Marker(this._owner._map,{
 			edit: { featureGroup: this._editingFreatureGroup },
 			showLength : false,
 			icon : L.icon( {
 				iconUrl: this._owner._defaultIcon.url,
-				iconSize: $.extend( true, [], this._owner._defaultIcon.size ),
-				iconAnchor:$.extend( true, [], this._owner._defaultIcon.anchor ),
-				_iconScale : 1 } )
+				iconSize: __myIconSize,
+				iconAnchor: __myiconAnchor,
+				_iconScale : CONFIG.SAKUZU.SYMBOL.ICON_SCALE } )
 		});
 
 		path.enable();
@@ -11524,6 +11545,9 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 					this._editingTarget = null;
 				}
 			}
+			GSI.GLOBALS.sakuzuList._defaultIcon.url = CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
+			GSI.GLOBALS.sakuzuList._defaultIcon._iconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
+
 
 			if ( editMode != GSI.SakuzuListItem.EDIT )
 			{
@@ -11672,6 +11696,18 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				_iconScale: iconScale
 			};
 			this._refreshEditing( { _iconInfo: iconInfo });
+			if( iconInfo.iconUrl != null )
+			{
+				GSI.GLOBALS.sakuzuList._defaultIcon.url = iconInfo.iconUrl;
+				GSI.GLOBALS.sakuzuList._defaultIcon._iconScale = iconInfo._iconScale;
+
+				var nPos = iconInfo.iconUrl.lastIndexOf( "/" );
+				if( nPos != -1 )
+				{
+					var sFileName = iconInfo.iconUrl.substr( nPos + 1 );
+					CONFIG.SAKUZU.SYMBOL.DEFAULTICON = sFileName;
+				}
+			}
 		},
 
 		_refreshEditingIconHTML : function( html )
@@ -11689,7 +11725,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		_onPointIconSizeChange : function()
 		{
 			var selectedIcon = this._pointIconSelector.selectedIcon;
-
+			CONFIG.SAKUZU.SYMBOL.ICON_SCALE = parseFloat( this._pointIconSizeSelect.val() );
+			selectedIcon.url = GSI.GLOBALS.sakuzuList._defaultIcon.url;
 			this._refreshEditingIcon( selectedIcon );
 		},
 
@@ -13874,7 +13911,7 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 							url : CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON,
 							size: CONFIG.SAKUZU.SYMBOL.ICONSIZE,
 							anchor: CONFIG.SAKUZU.SYMBOL.ICONANCHOR,
-							scale : 1
+							scale : CONFIG.SAKUZU.SYMBOL.ICON_SCALE
 						}
 					};
 				}
