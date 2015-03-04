@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.37";
+GSI.Version = "0.9.9.39";
 
 
 var CONFIG = {};
@@ -1321,6 +1321,56 @@ GSI.map = function (id, options) {
 
 
 
+/************************************************************************
+
+L.Popup _updateLayout上書き
+tableのwidth指定時修正
+
+************************************************************************/
+
+L.Popup.prototype._updateLayout = function () {
+	var container = this._contentNode,
+	    style = container.style;
+
+	var table = $( container ).find( "table" );
+	var tableWidth = null;
+	
+	if ( table.length > 0 )
+	{
+		tableWidth = table.attr( 'width' );
+		if ( !tableWidth )
+		{
+			tableWidth = table[0].style.width;
+		}
+		
+	}
+	
+	style.width = '';
+	if ( !tableWidth) style.whiteSpace = 'nowrap';
+	
+	
+	var width = container.offsetWidth;
+	width = Math.min(width, this.options.maxWidth);
+	width = Math.max(width, this.options.minWidth);
+
+	style.width = (width + 1) + 'px';
+	style.whiteSpace = '';
+
+	style.height = '';
+
+	var height = container.offsetHeight,
+	    maxHeight = this.options.maxHeight,
+	    scrolledClass = 'leaflet-popup-scrolled';
+
+	if (maxHeight && height > maxHeight) {
+		style.height = maxHeight + 'px';
+		L.DomUtil.addClass(container, scrolledClass);
+	} else {
+		L.DomUtil.removeClass(container, scrolledClass);
+	}
+
+	this._containerWidth = this._container.offsetWidth;
+};
 
 /************************************************************************
 
@@ -6761,7 +6811,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 					( subTitle && subTitle != '' ? subTitle + '<br>' : '' ) +
 					item.latitude + "," + item.longitude,
 					{
-						maxWidth:3000
+						maxWidth:5000
 					}
 					);
 				this.markerList.addLayer(item._marker);
@@ -7940,7 +7990,19 @@ GSI.IconSelector = L.Class.extend( {
 		this.fire( 'select', { selectedIcon : iconInfo } );
 		this.hide();
 	},
-
+	
+	setSelectedIcon : function( iconUrl )
+	{
+		this.selectedIcon = null;
+		for ( var i=0; i<this.iconList.length; i++ )
+		{
+			if ( this.iconList[i].url == iconUrl )
+			{
+				this.selectedIcon = this.iconList[i];
+				break;
+			}
+		}
+	},
 
 	create : function()
 	{
@@ -8477,7 +8539,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 					shape.setStyle( newStyle );
 
 				}
-
 				if ( this._editingPathList.setOptions )
 					this._editingPathList.setOptions( {shapeOptions: newStyle} );
 
@@ -8547,7 +8608,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 		this.editMode = GSI.SakuzuListItem.EDIT;
 
 		this._editingType = id;
-
+		
+		
 		if ( !this._editingFreatureGroup )
 		{
 			this._editingFreatureGroup = L.featureGroup();
@@ -8558,9 +8620,14 @@ GSI.SakuzuListItem = L.Class.extend( {
 			layer._information = this._getLayerInfo( layer );
 		}
 		this._editingEditingLayerInfo = $.extend( true, {}, layer._information ? layer._information : {} );
+		
 		this._editingOriginalLayer = layer;
-		this._layer.removeLayer( layer );
+		
+	
+		( layer._parent ? layer._parent : this._layer ).removeLayer( layer );
 		this._editingEditingLayer = this._cloneLayer( this._editingType, layer );
+		
+		
 		this._editingFreatureGroup.addLayer( this._editingEditingLayer );
 		//this._editingFreatureGroup.addLayer(layer);
 		//this._owner._map.addLayer( event.layer );
@@ -8571,7 +8638,24 @@ GSI.SakuzuListItem = L.Class.extend( {
 		this._startPathEdit();
 
 	},
-
+	
+	
+	_cloneLatLngs : function( src )
+	{
+			
+		var result  = [];
+		
+		for ( var i=0; i<src.length; i++ )
+		{
+			if ( src[i].lat )
+			{
+				result.push( L.latLng( src[i].lat, src[i].lng ) );
+			}
+		}
+		
+		return result;
+	},
+	
 	_cloneLayer : function( layerType, layer )
 	{
 		var result = null;
@@ -8600,12 +8684,12 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 
 			case GSI.SakuzuListItem.POLYGON:
-				result =L.polygon( layer.getLatLngs(), layer.options );
+				result =L.polygon( this._cloneLatLngs(layer.getLatLngs()), layer.options );
 				result.feature = layer.feature;
 				break;
 
 			case GSI.SakuzuListItem.LINESTRING:
-				result =L.polyline( layer.getLatLngs(), layer.options );
+				result =L.polyline( this._cloneLatLngs( layer.getLatLngs() ), layer.options );
 				result.feature = layer.feature;
 				break;
 
@@ -8721,7 +8805,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 		}
 	},
 
-	_getLayers : function( layer, list )
+	_getLayers : function( layer, list, parent )
 	{
 		if ( !layer ) return;
 
@@ -8729,13 +8813,14 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		if ( layerType != GSI.SakuzuListItem.FEATURES )
 		{
+			layer._parent = parent;
 			list.push( layer );
 		}
 		else
 		{
 			var layers = layer.getLayers();
 			for ( var i=0;i<layers.length; i++ )
-				this._getLayers( layers[i], list );
+				this._getLayers( layers[i], list,layer );
 		}
 
 
@@ -9188,7 +9273,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 		{
 			case GSI.SakuzuListItem.POINT:
 			case GSI.SakuzuListItem.POINT_TEXT:
-
 				var path = new GSI.Edit.Marker( targetLayer, { edit: { featureGroup: this._editingFreatureGroup } } );
 				path.enable();
 				if ( clearPathList )this._editingPathList = [];
@@ -9232,13 +9316,13 @@ GSI.SakuzuListItem = L.Class.extend( {
 	editFinish : function()
 	{
 		if (this.editMode == GSI.SakuzuListItem.NONE ) return;
-
+		
 		//this.editMode = GSI.SakuzuListItem.EDIT;
+		this._editingEditingLayer._parent = ( this._editingOriginalLayer  ?this._editingOriginalLayer._parent : null );
 		this._destroyEditPathList();
-
 	 	this._editingFreatureGroup.removeLayer( this._editingEditingLayer );
-		this._layer.addLayer( this._editingEditingLayer );
-
+		( this._editingEditingLayer._parent ? this._editingEditingLayer._parent : this._layer ).addLayer( this._editingEditingLayer );
+		
 		if ( this._editingOriginalLayer && this._editingOriginalLayer._clickEditHandler )
  		{
 
@@ -9310,7 +9394,7 @@ GSI.SakuzuListItem = L.Class.extend( {
  			var popupContent = '';
  			if ( title && title != '' )
  			{
-				popupContent = '<h2>' + title + '</h2>';
+				popupContent = '<h2>' + GSI.Utils.encodeHTML(title)  + '</h2>';
 			}
 
 			if ( description && description != '' )
@@ -9347,19 +9431,27 @@ GSI.SakuzuListItem = L.Class.extend( {
 	editCancel : function()
 	{
 		if (this.editMode == GSI.SakuzuListItem.NONE ) return;
-
+		var aaa = null;
 		if ( this._editingOriginalLayer )
  		{
- 			this._layer.addLayer( this._editingOriginalLayer );
+			
+			//if ( this._editingOriginalLayerLatLngs  )
+			//	this._editingOriginalLayer.setLatLngs( this._editingOriginalLayerLatLngs );
+			( this._editingOriginalLayer._parent ? this._editingOriginalLayer._parent : this._layer ).addLayer( this._editingOriginalLayer );
+ 			//this._layer.addLayer( this._editingOriginalLayer );
 			this._editingOriginalLayer = null;
 		}
-
+		
+		
  		this._destroyEditObjects();
 
  		if ( this.editMode == GSI.SakuzuListItem.EDIT  )
 			this._owner._mapMouse.setClickMoveEnable( false );
 
 		this.editMode = GSI.SakuzuListItem.NONE;
+		
+		
+		
 	},
 
 	removeEditObject : function()
@@ -9437,7 +9529,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 
  		if ( this._editingOriginalLayer )
  		{
-	 		this._layer.removeLayer( this._editingOriginalLayer );
+			( this._editingOriginalLayer._parent ? this._editingOriginalLayer._parent : this._layer ).removeLayer( this._editingOriginalLayer );
+	 		//this._layer.removeLayer( this._editingOriginalLayer );
  			this._editingOriginalLayer = null;
 		}
 
@@ -11538,7 +11631,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			if ( this._editingTarget )
 			{
 				editMode = this._editingTarget.editMode;
-				//console.log( this._editingTarget );
 				this._editingTarget.editCancel();
 				if ( editMode != GSI.SakuzuListItem.EDIT )
 				{
@@ -11726,7 +11818,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		{
 			var selectedIcon = this._pointIconSelector.selectedIcon;
 			CONFIG.SAKUZU.SYMBOL.ICON_SCALE = parseFloat( this._pointIconSizeSelect.val() );
-			selectedIcon.url = GSI.GLOBALS.sakuzuList._defaultIcon.url;
+			//selectedIcon.url = GSI.GLOBALS.sakuzuList._defaultIcon.url;
 			this._refreshEditingIcon( selectedIcon );
 		},
 
@@ -12240,7 +12332,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		if ( this._editingTarget )
 		{
 			this._createEditPanel();
-
 			this._initEditFrame(event.itemType);
 			this._infoEditFrame.show();
 
@@ -12271,11 +12362,12 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			else
 			{
 				this._pointIconImage.attr( { src: style.icon.options.iconUrl } );
+				this._pointIconSelector.setSelectedIcon(  style.icon.options.iconUrl );
 				this._pointIconSizeSelect.val( parseFloat( style.icon.options._iconScale ).toFixed(1) );
 				this._pointEditTextFrame.hide();
 				this._pointEditMarkerFrame.show();
 			}
-
+			//console.log( this._pointIconSelector );
 
 			//this._pointIconSelector
 
@@ -12966,7 +13058,7 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 					if ( ( drawingInfo.title && drawingInfo.title != '' ) || description != '' )
 					{
 						drawingInfo.drawLayer.bindPopup(
-								( drawingInfo.title && drawingInfo.title != '' ? '<h2>' + drawingInfo.title + '</h2>' : '' ) +
+								( drawingInfo.title && drawingInfo.title != '' ? '<h2>' + GSI.Utils.encodeHTML(drawingInfo.title)  + '</h2>' : '' ) +
 								( description && description != '' ? description : '' ),
 								{
 									maxWidth:5000
@@ -13606,6 +13698,7 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 
 	encodeHTML : function( src)
 	{
+		src = src.replace( '&' , '&amp;' );
 		src = src.replace( '<' , '&lt;' );
 		src = src.replace( '>' , '&gt;' );
 		return src;
@@ -14825,7 +14918,7 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 				if ( this.drawingInfo.title != '' || this.drawingInfo.editedDescription != '' )
 				{
 					targetLayer.bindPopup(
-							( this.drawingInfo.title ? '<h2>' + this.drawingInfo.title + '</h2>' : '' ) +
+							( this.drawingInfo.title ? '<h2>' + GSI.Utils.encodeHTML(this.drawingInfo.title) + '</h2>' : '' ) +
 							( this.drawingInfo.editedDescription ? this.drawingInfo.editedDescription : '' ),
 							{
 								maxWidth:5000
@@ -16503,7 +16596,7 @@ GSI.GeoJSON = L.Class.extend( {
 
 		if ( feature.properties['name' ] )
 		{
-			popupContent += '<h2>' + feature.properties['name' ]  + '</h2>';
+			popupContent += '<h2>' + GSI.Utils.encodeHTML(feature.properties['name' ] ) + '</h2>';
 		}
 
 		if ( feature.properties['description' ] )
@@ -17143,7 +17236,7 @@ L.Util.extend(GSI.KML, {
 			if (l) { layers.push(l); }
 		}
 		if (!layers.length) { return; }
-		if (layers.length === 1) { return layers[0]; }
+		//if (layers.length === 1) { return layers[0]; }
 		return new L.FeatureGroup(layers);
 	},
 
@@ -17262,7 +17355,7 @@ L.Util.extend(GSI.KML, {
 		
 		if ( ( name && name != '' ) || ( descr && descr != '' )  )
 		{
-			layer.bindPopup( ( name && name != '' ? '<h2>' + name + '</h2>' : '' ) + ( descr && descr != '' ? descr : '' ),
+			layer.bindPopup( ( name && name != '' ? '<h2>' + GSI.Utils.encodeHTML(name) + '</h2>' : '' ) + ( descr && descr != '' ? descr : '' ),
 					{
 						maxWidth:5000
 					});
@@ -21901,6 +21994,7 @@ GSI.Control.Button = L.Control.extend({
 
 GSI.Utils.encodeHTML = function( src)
 {
+	src = src.replace( '&' , '&amp;' );
 	src = src.replace( '<' , '&lt;' );
 	src = src.replace( '>' , '&gt;' );
 	return src;
