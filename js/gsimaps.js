@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.39";
+GSI.Version = "0.9.9.40";
 
 
 var CONFIG = {};
@@ -1299,8 +1299,7 @@ GSI.Map = L.Map.extend( {
 			offset = this._getBoundsOffset(viewBounds, bounds, zoom);
 
 		var result = this.unproject(centerPoint.add(offset), zoom);
-		//console.log( result );
-
+	
 		return result;
 
 	},
@@ -1319,6 +1318,34 @@ GSI.map = function (id, options) {
 	return new GSI.Map(id, options);
 };
 
+
+/************************************************************************
+
+L.LayerGroup
+
+************************************************************************/
+
+L.LayerGroup.prototype.setMarkerZIndex = function(offset ) {
+	
+	this._setMarkerZIndex( this, offset );
+	
+};
+
+L.LayerGroup.prototype._setMarkerZIndex = function( layer, offset )
+{
+	if ( layer.setZIndexOffset )
+	{
+		layer.setZIndexOffset( offset );
+	}
+	else if ( layer.getLayers )
+	{
+		var layers = layer.getLayers();
+		for ( var i=0; i<layers.length; i++ )
+		{
+			this._setMarkerZIndex( layers[i], offset );
+		}
+	}
+};
 
 
 /************************************************************************
@@ -3418,7 +3445,6 @@ GSI.Searcher = L.Class.extend( {
 							{
 								result[n]['muniNm'] += muniNm[3];
 							}
-							//console.log( obj.result[i] );
 							*/
 						}
 					}
@@ -7265,7 +7291,6 @@ GSI.Draw.Polygon = L.Draw.Polygon.extend( {
 
 	_area2MeasurementString : function( area )
 	{
-		//console.log( area );
 		var result = '0 m&sup2;';
 		if ( area )
 		{
@@ -7382,7 +7407,6 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 			this.map.removeLayer( this.measureLayer );
 			this.measureLayer = null;
 		}
-		//console.log( e.distance );
 		this.distance.html( e.distance );
 	},
 	onMeasureTypeChange : function()
@@ -11640,7 +11664,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			GSI.GLOBALS.sakuzuList._defaultIcon.url = CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
 			GSI.GLOBALS.sakuzuList._defaultIcon._iconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
 
-
 			if ( editMode != GSI.SakuzuListItem.EDIT )
 			{
 				this._showTopPanel( this._editPanel );
@@ -12367,7 +12390,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				this._pointEditTextFrame.hide();
 				this._pointEditMarkerFrame.show();
 			}
-			//console.log( this._pointIconSelector );
 
 			//this._pointIconSelector
 
@@ -14815,7 +14837,7 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 			  "application/xml"
 			  );
 		}
-		var layer = new GSI.KML(null, {async: true});
+		var layer = new GSI.KML(null, {async: true });
 
 		layer._addKML( xmlDoc, {} );
 		//this.map.addLayer(layer,true);
@@ -15752,7 +15774,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 		javascript += 'GSI.ClientMode .baseUrl = "' + baseUrl + '";' + '\n';
 		javascript += 'GSI.ClientMode .location = ' + JSON.stringify( originalLocation ) + '\n';
-		javascript += 'GSI.ClientMode .LayerJS = ' + JSON.stringify( layersJSONData ) + ';' + '\n';
+		javascript += 'GSI.ClientMode .LayerJS = ' + JSON.stringify( layersJSONData ).split("</script>").join("<\\/script>") + ';' + '\n';
 
 		html = html.replace( '/*INSERT-SCRIPT*/', javascript + '/*INSERT-SCRIPT*/');
 
@@ -15851,7 +15873,6 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		{
 			// カレントフォルダ取得
 			currentPath = this.pageStateManager.getCurrentPathQueryString();
-			//console.log( currentPath );
 			if ( currentPath && currentPath != '' )
 				queryString += ( queryString != '' ? '&' : '' ) + currentPath;
 		}
@@ -16340,7 +16361,6 @@ GSI.TileLayer = L.TileLayer.extend( {
 	_updateOpacity: function () {
 		var i,
 		    tiles = this._tiles;
-		console.log( "!!" );
 		if (L.Browser.ielt9) {
 			
 			for (i in tiles) {
@@ -16565,7 +16585,6 @@ GSI.GeoJSON = L.Class.extend( {
 				}
 			}
 		}
-		//console.log( style );
 		return style;
 	},
 
@@ -16637,7 +16656,14 @@ GSI.GeoJSON = L.Class.extend( {
 	{
 		this.fire( "load", { "src":this } );
 	},
-
+	
+	setMarkerZIndex : function( zIndex )
+	{
+		this.options.zIndexOffset = zIndex;
+		if ( this.layer && this.layer.setMarkerZIndex )
+			this.layer.setMarkerZIndex( this.options.zIndexOffset )
+	},
+	
 	addData : function( json )
 	{
 
@@ -16654,7 +16680,11 @@ GSI.GeoJSON = L.Class.extend( {
 			{
 				this.layer.addData( json );
 			}
-
+			
+			if ( this.options.zIndexOffset && this.layer.setMarkerZIndex )
+				this.layer.setMarkerZIndex( this.options.zIndexOffset )
+			
+			
 		}
 		catch(e)
 		{
@@ -16940,14 +16970,12 @@ GSI.KML = L.FeatureGroup.extend({
 	},
 
 	onAdd: function (map) {
-		//console.log( '&' );
 		this._map = map;
 		this._map.on( 'zoomend', this._onZoomChange, this );
 		this._onZoomChange();
 	},
 
 	onRemove: function (map) {
-		//console.log( '&!' );
 		if ( map ) map.off( 'zoomend', this._onZoomChange, this );
 		this.eachLayer(map.removeLayer, map);
 		this._map = null;
@@ -16983,7 +17011,6 @@ GSI.KML = L.FeatureGroup.extend({
 
 	_onKMLLoadError : function()
 	{
-		//console.log( a );
 		this.fire('loaded');
 	},
 
@@ -17048,7 +17075,14 @@ GSI.KML = L.FeatureGroup.extend({
 			this.fire('loaded');
 		}
 	},
-
+	
+	setMarkerZIndex : function( zIndex ) {
+		
+		this.options.zIndexOffset = zIndex;
+		L.FeatureGroup.prototype.setMarkerZIndex.call(this,this.options.zIndexOffset);
+			
+	},
+	
 	_addKML: function(xml, options) {
 
 		try
@@ -17067,6 +17101,12 @@ GSI.KML = L.FeatureGroup.extend({
 				
 				this.addLayer(layers[i]);
 			}
+			
+			if ( this.options.zIndexOffset )
+			{
+				this.setMarkerZIndex( this.options.zIndexOffset );
+			}
+			
 			this.latLngs = GSI.KML.getLatLngs(xml);
 			if ( this.opacity )
 			{
@@ -17121,11 +17161,9 @@ L.Util.extend(GSI.KML, {
 	// - returns true if no parent Folders
 	_check_folder: function (e, folder) {
 		
-		//console.log( e.parentElement );
 		e = ( e.parentElement ?  e.parentElement : e.parentNode );
 		//e = e.parentElement;
 		
-		//if ( e ) console.log ( e.tagName );
 		while (e && e.tagName !== 'Folder')
 		{
 			e = ( e.parentElement ?  e.parentElement : e.parentNode );
@@ -17381,7 +17419,6 @@ L.Util.extend(GSI.KML, {
 		if (!el.length) {
 			return;
 		}
-		//console.log( options );
 		var ll = el[0].childNodes[0].nodeValue.split(',');
 		return new GSI.KMLMarker(new L.LatLng(ll[1], ll[0]), options);
 	},
@@ -17517,7 +17554,16 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 		L.TileLayer.GeoJSON.prototype.initialize.call(this, url, options, geojsonOptions);
 		this._loadStyle( url );
 	},
-
+	
+	
+	setMarkerZIndex : function( zIndex )
+	{
+		this.options.zIndexOffset = zIndex;
+		if ( this.geojsonLayer && this.geojsonLayer.setMarkerZIndex )
+			this.geojsonLayer.setMarkerZIndex( this.options.zIndexOffset )
+	},
+	
+	
 	_tileLoaded: function (tile, tilePoint) {
 		if ( tile && tile.datum && this.options.isTopoJSON)
 		{
@@ -17527,6 +17573,14 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 		if (tile.datum === null) { return null; }
 		this.addTileData(tile.datum, tilePoint);
 		if ( this._opacity != 1 )this.setOpacity( this._opacity );
+		
+		if ( this.geojsonLayer )
+		{
+			if ( this.options.zIndexOffset && this.geojsonLayer.setMarkerZIndex )
+			{
+				this.geojsonLayer.setMarkerZIndex( this.options.zIndexOffset )
+			}
+		}
 	},
 	
 	_onStyleLoad : function(result)
@@ -17561,9 +17615,7 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 
 				//this.options =  data.options;
 				
-				//console.log( this.options );
 				L.setOptions(this, data.options);
-				//console.log( this.options );
 				/*
 				if ( data.options.minZoom )
 					this.options.minZoom = data.options.minZoom;
@@ -17576,7 +17628,6 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 
 				if ( data.options.attribution )
 					this.options.attribution = data.options.attribution;
-				//console.log( this.options );
 				*/
 			}
 			
@@ -17696,7 +17747,7 @@ GSI.MapLayerList = L.Class.extend( {
 			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
 			if ( info.maxNativeZoom && info.maxNativeZoom!="" ) options.maxNativeZoom =info.maxNativeZoom;
 			if ( info.attribution ) options.attribution =info.attribution;
-			//console.log( options );
+			
 			info._visibleInfo.layer = new GSI.TileLayer(info.url,options);
 			if ( isHide)
 				info._visibleInfo._isHidden = true;
@@ -17712,7 +17763,7 @@ GSI.MapLayerList = L.Class.extend( {
 			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
 			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
 			if ( info.attribution ) options.attribution =info.attribution;
-			
+			//options.zIndexOffset = this.list.length * 10000;
 			info._visibleInfo .layer = new GSI.KML(info.url, options);
 			info._visibleInfo .layer._noFinishMove = noFinishMove;
 			info._visibleInfo .layer.on("loadstart", L.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "KML"  ) );
@@ -17726,7 +17777,7 @@ GSI.MapLayerList = L.Class.extend( {
 				this.map.addLayer(info._visibleInfo.layer,true);
 
 			this.list.unshift( info );
-			this._initZIndex( this.list );
+			this._initZIndexOffset( this.list, 10000 );
 		}
 		else if ( info.layerType=="geojson" )
 		{
@@ -17736,6 +17787,7 @@ GSI.MapLayerList = L.Class.extend( {
 			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
 			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
 			if ( info.attribution ) options.attribution =info.attribution;
+			//options.zIndexOffset = this.list.length * 10000;
 
 			info._visibleInfo .layer = new GSI.GeoJSON(info.url,options);
 			info._visibleInfo .layer._noFinishMove = noFinishMove;
@@ -17749,7 +17801,7 @@ GSI.MapLayerList = L.Class.extend( {
 				this.map.addLayer(info._visibleInfo.layer);
 			
 			this.list.unshift( info );
-			this._initZIndex( this.list );
+			this._initZIndexOffset( this.list, 10000 );
 
 		}
 		else if ( info.layerType=="geojson_tile" )
@@ -17785,6 +17837,7 @@ GSI.MapLayerList = L.Class.extend( {
 				options.attribution =info.attribution;
 				options._attribution =info.attribution;
 			}
+			//options.zIndexOffset = this.list.length * 10000;
 
 			info._visibleInfo.layer = new GSI.GeoJSONTileLayer(info.url,options, options2);
 
@@ -17795,7 +17848,7 @@ GSI.MapLayerList = L.Class.extend( {
 
 
 			this.list.unshift( info );
-			this._initZIndex( this.tileList );
+			this._initZIndexOffset( this.list, 10000 );
 
 		}
 		else if ( info.layerType=="topojson_tile" )
@@ -17830,6 +17883,7 @@ GSI.MapLayerList = L.Class.extend( {
 				options.attribution =info.attribution;
 				options._attribution =info.attribution;
 			}
+			//options.zIndexOffset = this.list.length * 10000;
 
 
 			info._visibleInfo.layer = new GSI.GeoJSONTileLayer(info.url,options, options2);
@@ -17838,7 +17892,7 @@ GSI.MapLayerList = L.Class.extend( {
 			else
 				this.map.addLayer(info._visibleInfo.layer,true);
 			this.list.unshift( info );
-			this._initZIndex( this.tileList );
+			this._initZIndexOffset( this.list, 10000 );
 
 		}
 		else if ( info.layerType=="topojson" )
@@ -17849,6 +17903,7 @@ GSI.MapLayerList = L.Class.extend( {
 			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
 			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
 			if ( info.attribution ) options.attribution =info.attribution;
+			//options.zIndexOffset = this.list.length * 10000;
 
 			info._visibleInfo .layer = new GSI.GeoJSON(info.url,options);
 			info._visibleInfo .layer._noFinishMove = noFinishMove;
@@ -17861,7 +17916,7 @@ GSI.MapLayerList = L.Class.extend( {
 				this.map.addLayer(info._visibleInfo.layer);
 
 			this.list.unshift( info );
-			this._initZIndex( this.list );
+			this._initZIndexOffset( this.list, 10000 );
 
 		}
 		else if ( info.layerType=="tms" )
@@ -17937,7 +17992,25 @@ GSI.MapLayerList = L.Class.extend( {
 		this._hideLoading();
 	},
 
+	_initZIndexOffset : function( list, offset )
+	{
+		var zIndex = 0;
+		
+		for ( var i=list.length-1; i>= 0; i-- )
+		{
+			var info = list[i];
+			if ( info._visibleInfo.layer )
+			{
+				if ( info._visibleInfo.layer.setMarkerZIndex )
+				{
+					info._visibleInfo.layer.setMarkerZIndex( zIndex );
+					zIndex+= offset;
+				}
 
+			}
+		}
+	},
+	
 	_initZIndex : function( list )
 	{
 		var zIndex = 100;
@@ -19062,7 +19135,6 @@ GSI.UTM.Grid = L.Class.extend( {
 
 					if( !gridPoints[i] ) continue;
 					
-					//console.log( i);
 					if ( this._lines.length <= lineIndex )
 					{
 						
@@ -20397,7 +20469,6 @@ GSI.LayersJSON = L.Class.extend( {
 					tree[ i ] .id = ( parent ? parent.id + '_' + folderCount : 'f' + folderCount );
 					folderCount ++;
 
-					//console.log( tree[ i ] .id + '/' + tree[ i ] .title );
 				}
 			}
 			tree[i].parent = parent;
@@ -20866,7 +20937,7 @@ GSI.COCOTileLayer = L.Class.extend({
 			cache: false,
 			crossDomain : true,
 			success:  L.Util.bind( this._tileLoaded, this, tile ),
-			error : function(e) { } //console.log( e );}
+			error : function(e) { } 
 		});
 		/*
 		var target = document.createElement('script');
