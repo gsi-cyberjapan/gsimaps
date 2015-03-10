@@ -33,7 +33,7 @@ CONFIG.TOPMESSAGE = null;
 // 閉じた時のID != 現在のID または EXPIRES時間過ぎた場合にお知らせ復活
 //
 /*CONFIG.TOPMESSAGE = {
-	MESSAGE : '<a href="http://portal.cyberjapan.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
+	MESSAGE : '<a href="http://maps.gsi.go.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
 	DETAILS : '',
 	ID : '20150216', // 文字列を指定この値に変更あった場合はお知らせが復活
 	EXPIRES : -1 //-1  // クッキーの有効期限( hour )
@@ -373,11 +373,11 @@ CONFIG.MAPMENU = {
 				},
 				{
 					title : 'ヘルプ',
-					href : 'http://portal.cyberjapan.jp/help/howtouse.html'
+					href : 'http://maps.gsi.go.jp/help/howtouse.html'
 				},
 				{
 					title : '技術情報',
-					href : 'http://portal.cyberjapan.jp/help/development.html'
+					href : 'http://maps.gsi.go.jp/development/index.html'
 				},
 				{
 					title : 'お知らせ（twitter）',
@@ -385,7 +385,7 @@ CONFIG.MAPMENU = {
 				},
 				{
 					title : 'お問い合わせ',
-					href : 'http://portal.cyberjapan.jp/help/query.html'
+					href : 'http://maps.gsi.go.jp/help/query.html'
 				},
 				{
 					title : '入手',
