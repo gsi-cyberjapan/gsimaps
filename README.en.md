@@ -16,7 +16,7 @@ The access counter on the lower right side is disabled .
 Most of the functions of gsimaps should work even if you open index.html from your filesystem.
 Howerver, some important functions such as a function to handle vector tile data, will work only when you host index.html on a web server.
 
-## Attention
+## Remarks
 - This repository provides the source code of "GSI Maps" http://maps.gsi.go.jp/ operated by GSI (Geospatial Information Authority of Japan.)
 - As for Leaflet, jQuery, or all other existing software included in this repository, the Licenses for the respective projects applies.
 - According to <a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>GSI Contents License</a> which is based on the Japanese Government's Standard License, 2-clause BSD license, which is the same as Leaflet's, applies for the work by GSI.
