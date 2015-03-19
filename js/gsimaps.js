@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.40";
+GSI.Version = "0.9.9.41";
 
 
 var CONFIG = {};
@@ -13720,9 +13720,9 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 
 	encodeHTML : function( src)
 	{
-		src = src.replace( '&' , '&amp;' );
-		src = src.replace( '<' , '&lt;' );
-		src = src.replace( '>' , '&gt;' );
+		src = src.replace( /&/g , '&amp;' );
+		src = src.replace( /</g , '&lt;' );
+		src = src.replace( />/g , '&gt;' );
 		return src;
 
 	},
@@ -17373,7 +17373,7 @@ L.Util.extend(GSI.KML, {
 					if ( td.length == 2 )
 					{
 						if ( !layer._information.table ) layer._information.table = [];
-						layer._information.table.push( { key : $(td[0]).html(), value: $(td[1]).html() } );
+						layer._information.table.push( { key : $(td[0]).text(), value: $(td[1]).text() } );
 					}
 					else
 					{
@@ -22065,12 +22065,16 @@ GSI.Control.Button = L.Control.extend({
 
 GSI.Utils.encodeHTML = function( src)
 {
-	src = src.replace( '&' , '&amp;' );
-	src = src.replace( '<' , '&lt;' );
-	src = src.replace( '>' , '&gt;' );
+	src = src.replace( /&/g , '&amp;' );
+	src = src.replace( /</g , '&lt;' );
+	src = src.replace( />/g , '&gt;' );
 	return src;
 
 };
+
+
+
+
 
 GSI.Utils.getInternetExplorerVersion = function (){
 	var rv = -1;
