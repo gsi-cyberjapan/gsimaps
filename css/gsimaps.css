@@ -120,6 +120,15 @@ strong
 	
 }
 
+
+
+.ui-resizable-se
+{
+	bottom:-7px;
+	right:-7px;
+}
+
+
 img {
 	border:0;
 }
@@ -1561,7 +1570,7 @@ form {
 	behavior: url(border-radius.htc);/*for IE*/
 	font-size:90%;
 	padding: 1px 20px 1px 4px;
-	//border: 2px solid #555;
+	/*border: 2px solid #555;*/
 	cursor:move;
 	
 	
@@ -1623,7 +1632,7 @@ form {
 }
 
 .gsi_dialog_content {
-	padding-top:2px 3px 2px 3px;
+	padding-top:2px;
 	-moz-border-radius: 3px;/*for Firefox*/
 	-webkit-border-radius: 3px;/*for Safari and chrome*/
 	border-radius: 3px;
@@ -1632,7 +1641,6 @@ form {
 
 .gsi_dialog_content a:active {
 }
-
 
 
 
