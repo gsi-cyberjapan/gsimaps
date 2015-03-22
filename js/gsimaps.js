@@ -21027,19 +21027,9 @@ GSI.Links.getURL = function( id, center, z ) {
 	}
 	else if ( id == 'mapion' )
 	{
-		var zoomLevel = 10;
-
-		if(z <= 6)			{zoomLevel = 1;}
-		else if(z <= 8)		{zoomLevel = 2;}
-		else if(z <= 9)		{zoomLevel = 3;}
-		else if(z <= 10)	{zoomLevel = 4;}
-		else if(z <= 11)	{zoomLevel = 5;}
-		else if(z <= 13)	{zoomLevel = 6;}
-		else if(z <= 14)	{zoomLevel = 7;}
-		else if(z <= 16)	{zoomLevel = 8;}
-		else if(z <= 17)	{zoomLevel = 9;}
-		else				{zoomLevel = 10;}
-		return 'http://www.mapion.co.jp/m/' + center.lat + '_' + center.lng + '_' + zoomLevel + '/?wgs=1';
+		var zoomLevel = z;
+		if(z <= 6) {zoomLevel = 6;}
+		return 'http://www.mapion.co.jp/m2/' + center.lat + ',' + center.lng + ',' + zoomLevel;
 	}
 	else if ( id == 'itsumonavi' )
 	{
