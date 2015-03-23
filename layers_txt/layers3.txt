@@ -1319,6 +1319,19 @@
 							"entries": [
 								{
 									"type": "Layer",
+									"id": "20150317lsi",
+									"title": "2015.3.17",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150317lsi/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": true,
+									"minZoom": 13,
+									"maxZoom": 16,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.3.17)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
+								},
+								{
+									"type": "Layer",
 									"id": "nishinoshima_2015_03_01",
 									"title": "2015.3.1",
 									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150301lsi/{z}/{x}/{y}.png",
