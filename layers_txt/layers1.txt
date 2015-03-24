@@ -102,120 +102,16 @@
 					"html": "<div class=\"gsi_layerinfo_title\">簡易空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div>この画像は測量用写真として撮影したものではないため、測量に用いることはできません。</div><a target=\"_blank\" href=\"http://cyberjapan.jp/legend/kannikuchu-description.pdf\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 				},
 				{
-					"type": "LayerGroup",
+					"type": "Layer",
+					"id": "pp",
 					"title": "単写真",
-					"open": false,
-					"toggleall": false,
-					"entries": [
-						{
-							"type": "Layer",
-							"id": "photopoint_2011_",
-							"title": "2011年～",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=2011",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(2011年～)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_2001_2010",
-							"title": "2001年～2010年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=2001&searchDateTo=2010",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(2001年～2010年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1991_2000",
-							"title": "1991年～2000年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1991&searchDateTo=2000",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1991年～2000年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1981_1990",
-							"title": "1981年～1990年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1981&searchDateTo=1990",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1981年～1990年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1971_1980",
-							"title": "1971年～1980年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1971&searchDateTo=1980",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1971年～1980年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1961_1970",
-							"title": "1961年～1970年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1961&searchDateTo=1970",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1970年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1951_1960",
-							"title": "1951年～1960年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1951&searchDateTo=1960",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1951年～1960年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1941_1950",
-							"title": "1941年～1950年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1941&searchDateTo=1950",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1941年～1950年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						},
-						{
-							"type": "Layer",
-							"id": "photopoint_1931_1940",
-							"title": "1931年～1940年",
-							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
-							"url": "http://portal.cyberjapan.jp/GsiJsLibrary/photoprot.php?topLat={top}&leftLon={left}&bottomLat={bottom}&rightLon={right}&searchDateFrom=1931&searchDateTo=1940",
-							"subdomains": "",
-							"attribution": "",
-							"cocotile": false,
-							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">単写真</div><div class=\"gsi_layerinfo_subtitle\">(1931年～1940年)</div><div class=\"gsi_layerinfo_kaisetu\">写真は地図の中心に近いものから最大100点まで表示されます。</div>"
-						}
-					]
+					"url": "http://cyberjapandata.gsi.go.jp/xyz/pp/{z}/{x}/{y}.geojson",
+					"subdomains": "",
+					"attribution": "",
+					"minZoom": 15,
+					"maxNativeZoom": 14,
+					"maxZoom": 18,
+					"html": "単写真（毎月更新、ズーム15～18で表示）<br>絞込み<script>var pparray = [\"pp2010\",\"pp2000\",\"pp1990\",\"pp1980\",\"pp1970\",\"pp1960\",\"pp1950\",\"pp1940\",\"pp1930\",\"pp1110\"];function ppstylein(Obj){var stylesheet = document.styleSheets.item(0);for (var i = 0; i < pparray.length; i++) {if(pparray[i]==Obj.options[Obj.selectedIndex].value || Obj.options[Obj.selectedIndex].value == \"ppall\"){if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:inline; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:inline\");}continue;}if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:none; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:none\");}}}</script><form name=\"ppstyle\"><select name=\"ppselect\" onchange=\"ppstylein(this)\"><option value=\"ppall\">全年代</option><option value=\"pp2010\">2010年代</option><option value=\"pp2000\">2000年代</option><option value=\"pp1990\">1990年代</option><option value=\"pp1980\">1980年代</option><option value=\"pp1970\">1970年代</option><option value=\"pp1960\">1960年代</option><option value=\"pp1950\">1950年代</option><option value=\"pp1940\">1940年代</option><option value=\"pp1930\">1930年代</option><option value=\"pp1110\">不明</option></select></form><br>詳しい情報:<a href=\"http://mapps.gsi.go.jp/\" target='_blank'>地図・空中写真閲覧サービス</a>"
 				},
 				{
 					"type": "LayerGroup",
