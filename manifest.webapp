@@ -1,0 +1,14 @@
+{
+  "name": "地理院地図",
+  "description": "firefoxOSアプリとして地理院地図を利用する",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/icon128x128.png"
+  },
+  "type": "web",
+  "permissions": {
+    "geolocation": {
+      "description" : "Used to locate me"
+    }
+  }
+}
