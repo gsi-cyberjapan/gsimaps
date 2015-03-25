@@ -85,6 +85,36 @@
 							"maxZoom": 18,
 							"legendUrl": "http://www.gsi.go.jp/johofukyu/kani_ortho_1.html",
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1974年～1978年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "ort_old10",
+							"title": "1961年～1964年",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": 2,
+							"maxNativeZoom": 17,
+							"maxZoom": 18,
+							"legendUrl": null,
+							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1964年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "ort_USA10",
+							"title": "1945年～1950年",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": 2,
+							"maxNativeZoom": 17,
+							"maxZoom": 18,
+							"legendUrl": null,
+							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
 					]
 				},
