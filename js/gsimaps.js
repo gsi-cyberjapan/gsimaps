@@ -4168,15 +4168,15 @@ GSI.Footer = L.Class.extend( {
 		var dms = GSI.Utils.latLngToDMS( center );
 
 		$( '#latlng_60' ).html(
-			dms.lat.d + '度' + dms.lat.m + '分' + ( Math.round( dms.lat.s * 100 ) / 100 )  + '秒'
+			dms.lat.d + '度' + dms.lat.m + '分' + ( Math.round( dms.lat.s * 100 ) / 100 ).toFixed(2)  + '秒'
 			+ '&nbsp;'  +
-			dms.lng.d + '度' + dms.lng.m + '分' + ( Math.round( dms.lng.s * 100 ) / 100 )  + '秒'
+			dms.lng.d + '度' + dms.lng.m + '分' + ( Math.round( dms.lng.s * 100 ) / 100 ).toFixed(2)  + '秒'
 			);
 		
 		$( '#latlng_10' ).html(
-			( Math.round( center.lat * 1000000 ) / 1000000 )
+			( Math.round( center.lat * 1000000 ) / 1000000 ).toFixed(6)
 			+ ','
-			+ ( Math.round( center.lng * 1000000 ) / 1000000 )
+			+ ( Math.round( center.lng * 1000000 ) / 1000000 ).toFixed(6)
 			);
 
 		var utmPoint = GSI.UTM.Utils.latlng2PointName( center.lat, center.lng );
