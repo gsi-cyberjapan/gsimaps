@@ -21154,7 +21154,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
 
 			var td = $("<td>" ).css( {"text-align":"center"} ).addClass( className );
 			var div = $( '<div>' );
-			var a = $( '<a>' ).attr( { title:'背景地図を「' + this.tiles[i ].title+ '」に変更">','href':'javascript:void(0);', "tileindex":i} );
+			var a = $( '<a>' ).attr( { title:'背景地図を「' + this.tiles[i ].title+ '」に変更','href':'javascript:void(0);', "tileindex":i} );
 			var img = $( "<img>" )
 				.css( { width:"60px", height:"60px"} )
 				.attr( { 'src' : this.tiles[i ].icon } );
