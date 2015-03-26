@@ -3037,8 +3037,11 @@ GSI.MapMouse = L.Class.extend( {
 		if ( this.rightClickTime != null )
 		{
 
-
-			GSI.GLOBALS.footer.onBtnClick();
+			this._move(latlng);
+			var visible = GSI.GLOBALS.footer.isVisible();
+			if (visible == false) {
+				GSI.GLOBALS.footer.onBtnClick();
+			}
 		}
 		this.rightClickTime	=	null;
 //		this.map.panTo( latlng );
@@ -4017,6 +4020,11 @@ GSI.Footer = L.Class.extend( {
 		$(this.btnSelector).css( { 'visibility' : 'visible'} ).show();
 	},
 
+	isVisible : function()
+	{
+		return $(this.footerSelector).is(':visible');
+	},
+	
 	onWindowResize : function()
 	{
 
@@ -5565,18 +5573,22 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			var opacitySlider = $( '<div>' ).addClass( 'slider' );
 
 
-
-			tr.append( $( '<td>' ).html('透過率').css( {"white-space":"nowrap"} ) );
-			tr.append( $( '<td>' ).append(opacitySlider).css( {width:"100%"} ) );
+			var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
+			var opacityPercentage = Math.floor((1 - opacity) * 100);
+			var opacityTextColumn = $( '<td>' ).css( {"width":"100px"} );
+			opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
+			tr.append( opacityTextColumn );
+			tr.append( $( '<td>' ).append(opacitySlider).css( {width:"150px"} ) );
 
 			tbody.append( tr );
 			sliderFrame.append( tbody );
 			infoFrame.append( sliderFrame );
-			var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
 
 
 			var sliderChangeHandler = L.bind( function(item, opacitySlider) {
 				var opacity = opacitySlider.slider( 'option' , 'value');
+				var opacityPercentage = Math.floor(opacity);
+				opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
 				opacity = (100 - opacity) / 100;
 
 
@@ -6254,9 +6266,12 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
 		var opacitySlider = $( '<div>' ).addClass( 'slider' );
 
-
-		tr.append( $( '<td>' ).html('透過率').css( {"white-space":"nowrap"} ) );
-		tr.append( $( '<td>' ).append(opacitySlider).css( {width:"100%"} ) );
+		var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
+		var opacityPercentage = Math.floor(parseInt((1 - opacity) * 100));
+		var opacityTextColumn = $( '<td>' ).css( {"width":"100px"} );
+		opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
+		tr.append( opacityTextColumn );
+		tr.append( $( '<td>' ).append(opacitySlider).css( {width:"150px"} ) );
 
 		tbody.append( tr );
 		sliderFrame.append( tbody );
@@ -6267,12 +6282,13 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 			infoFrame.append( description );
 
 
-		var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
 
 
 
 		var sliderChangeHandler = L.bind( function(li, opacitySlider) {
 			var opacity = opacitySlider.slider( 'option' , 'value');
+			var opacityPercentage = Math.floor(opacity);
+			opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
 			opacity = (100 - opacity) / 100;
 
 
@@ -11926,7 +11942,9 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			var table2 = $( '<table>' );
 			var tbody2 = $( '<tbody>' );
 			var tr2 = $( '<tr>' );
-			tr2.append( $( '<td>' ).css({"white-space":"nowrap"}).html( '線の透過率:' ) );
+			this._lineOpacityTextArea = $( '<div>' ).css({"white-space":"nowrap"});
+			this._lineOpacityTextArea.text('線の透過率:0%');
+			tr2.append( $( '<td>' ).css( { 'width':'120px' }).append( this._lineOpacityTextArea ) );
 			var td2 = $( '<td>' ).css( { 'width':'150px',"padding":"4px 0 4px 8px"} );
 
 
@@ -11934,6 +11952,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 
 			var sliderChangeHandler = L.bind( function(opacitySlider) {
 				opacity = this._lineOpacitySlider.slider( 'value' );
+				var opacityPercentage = opacity;
+				this._lineOpacityTextArea.text('線の透過率:'+opacityPercentage+'%');
 				opacity = 1 - ( opacity / 100 );
 				this._refreshEditing( { opacity:opacity });
 				//this.drawingInfo.style.opacity = opacity;
@@ -12021,12 +12041,16 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			var table2 = $( '<table>' );
 			var tbody2 = $( '<tbody>' );
 			var tr2 = $( '<tr>' );
-			tr2.append( $( '<td>' ).css({"white-space":"nowrap"}).html( '塗潰しの透過率:' ) );
+			this._fillOpacityTextArea = $( '<div>' ).css({"white-space":"nowrap"});
+			this._fillOpacityTextArea.text('塗潰しの透過率:0%');
+			tr2.append( $( '<td>' ).css( { 'width':'150px' }).append( this._fillOpacityTextArea ) );
 			var td2 = $( '<td>' ).css( { 'width':'150px',"padding":"4px 0 4px 8px"} );
 
 
 			var sliderChangeHandler = L.bind( function(opacitySlider) {
 				opacity = this._fillOpacitySlider.slider( 'value' );
+				var opacityPercentage = opacity;
+				this._fillOpacityTextArea.text('塗潰しの透過率:'+opacityPercentage+'%');
 				opacity = 1 - ( opacity / 100 );
 				this._refreshEditing( { fillOpacity:opacity });
 			}, this );
