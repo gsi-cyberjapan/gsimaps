@@ -2278,7 +2278,7 @@
 				},
 				{
 					"type": "Layer",
-					"id": "25000zukaku",
+					"id": "zk25000",
 					"title": "２万５千分1地形図郭",
 					"url": "http://cyberjapandata.gsi.go.jp/xyz/zk25000/{z}/{x}/{y}.geojson",
 					"subdomains": "",
