@@ -665,11 +665,11 @@ CONFIG.BASETILES = [
 	},
 	{
 		id : 'english',
-		title : 'Romanized',
+		title : 'English',
 		url : 'http://{s}.gsi.go.jp/xyz/english/{z}/{x}/{y}.png',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/jaise.png',
-		"legendUrl" : "http://cyberjapan.jp/legend/english.pdf",
+		"legendUrl" : "http://cyberjapan.jp/legend/english2.pdf",
 		maxNativeZoom:11,
 		errorTileUrl : 'image/map/no-data-english.png',
 		minZoom : 2
