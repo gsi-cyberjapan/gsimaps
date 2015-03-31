@@ -228,7 +228,7 @@
 				{
 					"type": "Layer",
 					"id": "meijiswale",
-					"title": "明治前期の低湿地",
+					"title": "明治期の低湿地",
 					"url": "http://cyberjapandata.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
 					"subdomains": "",
 					"attribution": "",
@@ -236,7 +236,7 @@
 					"minZoom": 5,
 					"maxZoom": 16,
 					"legendUrl": "http://cyberjapan.jp/legend/SWALE_hanrei.pdf",
-					"html": "<div class=\"gsi_layerinfo_title\">明治前期の低湿地</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+					"html": "<div class=\"gsi_layerinfo_title\">明治期の低湿地</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 				},
 				{
 					"type": "LayerGroup",
