@@ -107,7 +107,7 @@ CONFIG.LAYERTREEDIALOGKEEPCURRENT = false;
 
 // UTMグリッドスタイル
 CONFIG.UTMGRIDSTYLE = {
-	color : "#004E2D",
+	color : "#FF0000",
 	weight : 2,
 	opacity: 1,
 	fill: false,
@@ -18850,9 +18850,9 @@ GSI.UTM.Grid = L.Class.extend( {
 
 	options : {
 		lineStyle : {
-			color : "#004E2D",
+			color : "#FF0000",
 			weight : 2,
-			color2 : "#004E2D",
+			color2 : "#FF0000",
 			opacity: 1,
 			fillOpacity:1,
 			dashArray : [3,3],
