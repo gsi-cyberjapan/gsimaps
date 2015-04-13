@@ -12434,17 +12434,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		td.append( valueTextarea );
 		tr.append( td );
 
-		nameTextarea.ahPlaceholder ( {
-				placeholderAttr : 'placeholder',
-				likeApple : true
-			} );
-		
-		
-		valueTextarea.ahPlaceholder ( {
-				placeholderAttr : 'placeholder',
-				likeApple : true
-			} );
-			
 		td = $( '<td>' ).css( { width:"24px","text-align":"center"} );
 
 		//var btn = $( '<input>' ).attr( { type: 'button'} ).val( '削除' );
@@ -12535,12 +12524,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		else
 			this._titleInput.val( '' );
 		
-		this._titleInput.ahPlaceholder ( {
-				placeholderAttr : 'placeholder',
-				likeApple : true
-			} );
-
-
 		if ( info && info.description )
 			this._infoFreeWordTextarea.val(info.description);
 		else
