@@ -381,7 +381,7 @@ CONFIG.MAPMENU = {
 				},
 				{
 					title : '技術情報（GitHub）',
-					href : 'http://maps.gsi.go.jp/development/index.html'
+					href : 'https://github.com/gsi-cyberjapan'
 				},
 				{
 					title : 'お問い合わせ',
