@@ -368,24 +368,28 @@ CONFIG.MAPMENU = {
 			childrenWidth:160,
 			children : [
 				{
-					title : '利用規約',
-					href : 'http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'
-				},
-				{
 					title : 'ヘルプ',
 					href : 'http://maps.gsi.go.jp/help/howtouse.html'
+				},
+				{
+					title : 'お知らせ（Twitter）',
+					href : 'https://twitter.com/gsi_cyberjapan'
 				},
 				{
 					title : '技術情報',
 					href : 'http://maps.gsi.go.jp/development/index.html'
 				},
 				{
-					title : 'お知らせ（twitter）',
-					href : 'https://twitter.com/gsi_cyberjapan'
+					title : '技術情報（GitHub）',
+					href : 'http://maps.gsi.go.jp/development/index.html'
 				},
 				{
 					title : 'お問い合わせ',
 					href : 'http://maps.gsi.go.jp/help/query.html'
+				},
+				{
+					title : '利用規約',
+					href : 'http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'
 				},
 				{
 					title : '入手',
