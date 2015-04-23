@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.43";
+GSI.Version = "0.9.9.44";
 
 
 var CONFIG = {};
@@ -9607,9 +9607,14 @@ GSI.SakuzuListItem = L.Class.extend( {
 			var key = table[i].key;
 			var value = table[i].value;
 
-			if ( key && key != '' && value && value != '' )
+			if ( key && key != '' )
 			{
-				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key) + '</td><td>' + GSI.Utils.encodeHTML(value) + '</td></tr>' + '\n';
+				if ( !value || value == '' )
+				{
+					value= '';
+				}
+				
+				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key) + '</td><td>' + value + '</td></tr>' + '\n';
 			}
 		}
 
@@ -11589,7 +11594,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 						key : $( keyTextAreaList[i]).val(),
 						value : $( valueTextAreaList[i]).val()
 					};
-					if ( item.key != '' && item.value != '' )
+					if ( item.key != '' )
 						result.table.push( item);
 
 				}
