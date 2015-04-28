@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.44";
+GSI.Version = "0.9.9.45";
 
 
 var CONFIG = {};
@@ -10137,7 +10137,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 			'<Point>\n' +
 			'<coordinates>';
 
-			result.data += latLng.lng + "," + latLng.lat + "\n";
+			result.data += latLng.lng + "," + latLng.lat; // + "\n";
 
 			result.data +=
 			'</coordinates>\n' +
@@ -10218,12 +10218,15 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		for ( var i= 0; i<latLngs.length; i++ )
 		{
-			result.data += latLngs[i].lng + "," + latLngs[i].lat + "\n";
+			//result.data += latLngs[i].lng + "," + latLngs[i].lat + "\n";
+			result.data += ( i > 0 ? ' ' : '' ) + latLngs[i].lng + "," + latLngs[i].lat;
 		}
 		// close polygon
 		if ( latLngs.length > 0 )
 		{
-			result.data += latLngs[0].lng + "," + latLngs[0].lat + "\n";
+			//result.data += latLngs[0].lng + "," + latLngs[0].lat + "\n";
+			result.data += ' ' + latLngs[0].lng + "," + latLngs[0].lat;
+			
 		}
 			
 		result.data += '</coordinates>\n' +
@@ -10277,7 +10280,9 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 		for ( var i= 0; i<latLngs.length; i++ )
 		{
-			result.data += latLngs[i].lng + "," + latLngs[i].lat + "\n";
+			result.data += ( i > 0 ? ' ' : '' ) + latLngs[i].lng + "," + latLngs[i].lat;
+			//result.data +=  latLngs[i].lng + "," + latLngs[i].lat + "\n";
+			
 		}
 		result.data += '</coordinates>\n' +
 		'</LineString>\n' +
