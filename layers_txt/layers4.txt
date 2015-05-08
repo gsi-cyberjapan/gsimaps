@@ -1,0 +1,38 @@
+{
+	"layers": [
+		{
+			"type": "LayerGroup",
+			"title": "他機関の情報",
+			"iconUrl": "",
+			"entries": [
+						{
+							"type": "Layer",
+							"id": "kunijiban",
+							"title": "地盤情報（KuniJiban）",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png",
+							"url": "http://org.cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
+							"minZoom": 15,
+							"maxZoom": 18,
+							"maxNativeZoom": 15,
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"html": "国土地盤情報サイト <a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/'>KuniJiban</a> が提供する国土交通省の地盤情報です（ズームレベル15以上で表示されます）。ご利用にあたっては<a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/terms.html'>利用規約</a>を遵守いただけますようお願い致します。<br>＜凡例＞<br><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png' width='15' height='15'>XML提供<br><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/099.png' width='15' height='15'>PDF提供"
+						},
+						{
+							"type": "Layer",
+							"id": "active_volcanoes",
+							"title": "活火山分布（気象庁）",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/101.png",
+							"url": "http://cyberjapandata.gsi.go.jp/overlay/active_volcanoes.kml",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"html": ""
+						}
+					],
+			"open": false,
+			"toggleall": false
+		}
+	]
+}
