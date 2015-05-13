@@ -3,7 +3,8 @@
 		{
 			"type": "LayerGroup",
 			"title": "防災関連",
-			"iconUrl": "",
+			"open": false,
+			"toggleall": false,
 			"entries": [
 				{
 					"type": "LayerGroup",
@@ -13,10 +14,37 @@
 					"entries": [
 						{
 							"type": "Layer",
+							"id": "20150301-20150510a_sar_hakoneyama",
+							"title": "2015/03/01-2015/05/10_AR",
+							"iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/20150301-20150510a_sar_hakoneyama/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": "5",
+							"maxZoom": "18",
+							"maxNativeZoom": "15",
+							"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+							"html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"line-height:1em\"><a href=\"http://www.tenki.jp/past/2015/03/01/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/03/01</a><br><a href=\"http://www.tenki.jp/past/2015/05/10/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/05/10</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">23:37頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">北行(A)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\" \ntitle=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\">\n</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">33.3°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+20m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([35.2316500,139.0225000],9);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionAR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarAR.png\" width=\"270\">"
+						},
+						{
+							"type": "Layer",
+							"id": "hakoneyama20150301_20150510",
+							"title": "┗コメント",
+							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505hakoneyama/hakoneyama20150301_20150510.kml",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"legendUrl": "",
+							"html": "<div class=\\\"gsi_layerinfo_title\\\">箱根山火山活動 - 干渉SARコメント(2015/3/1-2015/5/10)</div><div class=\\\"gsi_layerinfo_copy\\\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
 							"id": "20141009-20150507d_sar_hakoneyama",
 							"title": "2014/10/09-2015/05/07_DR",
-							"iconUrl": "",
+							"iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
 							"url": "http://cyberjapandata.gsi.go.jp/xyz/20141009-20150507d_sar_hakoneyama/{z}/{x}/{y}.png",
+							"subdomains": "",
 							"attribution": "",
 							"cocotile": false,
 							"minZoom": "5",
@@ -28,13 +56,113 @@
 						{
 							"type": "Layer",
 							"id": "hakoneyama20141019_20150507",
-							"title": "コメント",
-							"iconUrl": "",
+							"title": "┗コメント",
 							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505hakoneyama/hakoneyama20141019_20150507.kml",
+							"subdomains": "",
 							"attribution": "",
 							"cocotile": false,
 							"legendUrl": "",
 							"html": "<div class=\\\"gsi_layerinfo_title\\\">箱根山火山活動 - 干渉SARコメント(2014/10/9-2015/5/7)</div><div class=\\\"gsi_layerinfo_copy\\\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "20141212-20150417a_sar_hakoneyama",
+							"title": "2014/12/12-2015/04/17_AR",
+							"iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/20141212-20150417a_sar_hakoneyama/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": "5",
+							"maxZoom": "18",
+							"maxNativeZoom": "15",
+							"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+							"html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"line-height:1em\"><a href=\"http://www.tenki.jp/past/2014/12/12/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2014/12/12</a><br><a href=\"http://www.tenki.jp/past/2015/04/17/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/04/17</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">23:44頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">北行(A)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\" \ntitle=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\">\n</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">43.1°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">-13m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([35.2316500,139.0225000],9);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionAR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarAR.png\" width=\"270\">"
+						},
+						{
+							"type": "LayerGroup",
+							"title": "SAR干渉画像に影響を及ぼす誤差事例",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "sar_eg_water",
+									"title": "【説明範囲】水面による非干渉",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/050.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/sar_eg/area_water.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": "<div class=\"gsi_layerinfo_title\">水面の非干渉（霞ヶ浦）</div>\n<div class=\"gsi_layerinfo_kaisetu\">\n湖や川などの水面は常に揺らいでいるため、<u  class=\"gsi_layerinfo_kaisetu\">基本的に干渉しません（非干渉）</u>。湖や川以外にも非干渉の部分が見られますが、これらは<u  class=\"gsi_layerinfo_kaisetu\">水田</u>の位置とよく一致しています。水田の表面は一年間で大きく状態を変化させるので、非干渉になりやすいのです。<br>\n干渉して色の変化が見られることもありますが、これは水田の<u  class=\"gsi_layerinfo_kaisetu\">季節的な変化</u>を表していると考えられます。\n</div>"
+								},
+								{
+									"type": "Layer",
+									"id": "sar_eg_water",
+									"title": "　　┗【干渉画像】",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/sar_eg_water/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"minZoom": "5",
+									"maxZoom": "18",
+									"maxNativeZoom": "13",
+									"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+									"html": "<div class=\"gsi_layerinfo_title\">水面の非干渉（霞ヶ浦）</div><input type=\"button\" value=\"画像の位置へ\" onclick=\"GSI.GLOBALS.map.setView([36.03,140.40],12);\"/>\n<div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA</div>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbar.png\" width=\"270\">"
+								},
+								{
+									"type": "Layer",
+									"id": "sar_eg_atmosphere",
+									"title": "【説明範囲】大気による誤差",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/050.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/sar_eg/area_atmosphere.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": "<div class=\"gsi_layerinfo_title\">大気による誤差1（紀伊半島）</div>\n<div class=\"gsi_layerinfo_kaisetu\">\nSAR干渉画像に衛星―地表視線方向の変位を表す色の変化が数多く見られますが、<a href=\"http://www.tenki.jp/past/2014/08/27/radar/5/27/\" target=\"_blank\" title=\"雨雲のようす\" class=\"gsi_layerinfo_kaisetu\">SAR観測日時（13時頃）の雨雲のようす</a>とよく似た分布となっています。この色の変化は<u class=\"gsi_layerinfo_kaisetu\">空気中の水蒸気分布の不均質</u>による誤差です。<br>\nSAR干渉画像では、このような誤差がしばしば見られます。水蒸気の分布は時間とともに変化するので、<u class=\"gsi_layerinfo_kaisetu\">異なる観測日時の複数のSAR干渉画像を見比べる</u>ことで、本物の変動と誤差かをある程度見分けることができます。<br><br>\n※SAR干渉解析の過程で<a href=\"http://www.gsi.go.jp/common/000090170.pdf\" target=\"_blank\" title=\"SAR 干渉解析のための数値気象モデルを用いた大気遅延誤差の低減処理ツールの開発\" class=\"gsi_layerinfo_kaisetu\">数値気象モデルから誤差量を推定・除去する処理</a>を行っていますが、現状の数値気象モデルの時空間分解能では、この誤差を完全に除去するのは困難です。\n</div>"
+								},
+								{
+									"type": "Layer",
+									"id": "sar_eg_atmosphere",
+									"title": "　　┗【干渉画像】",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/sar_eg_atmosphere/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"minZoom": "5",
+									"maxZoom": "18",
+									"maxNativeZoom": "13",
+									"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+									"html": "<div class=\"gsi_layerinfo_title\">大気による誤差1（紀伊半島）</div>\n<input type=\"button\" value=\"画像の位置へ\" onclick=\"GSI.GLOBALS.map.setView([34.00,135.77],11);\"/>\n<div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA</div>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbar.png\" width=\"270\">"
+								}
+							]
+						},
+						{
+							"type": "Layer",
+							"id": "VBM2_csr_hakoneyama",
+							"title": "火山基本図「箱根山」（陰影段彩）",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/VBM2_csr_hakoneyama/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": 8,
+							"maxZoom": 17,
+							"html": "<div class=\\\"gsi_layerinfo_title\\\">火山基本図「箱根山」（陰影段彩）</div><div class=\\\"gsi_layerinfo_copy\\\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "VBM2_hakoneyama",
+							"title": "火山基本図「箱根山」",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/VBM/vbm19hakone/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": 8,
+							"maxZoom": 17,
+							"legendUrl": "http://cyberjapan.jp/legend/l_vbm_hakone.jpg",
+							"html": "<div class=\"gsi_layerinfo_title\">火山基本図「箱根山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/Volcano/volcano.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
 					]
 				},
@@ -105,7 +233,6 @@
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">過去の空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div>この画像は測量用写真として撮影したものではないため、測量に用いることはできません。</div><a target=\"_blank\" href=\"http://cyberjapan.jp/legend/kannikuchu-description.pdf\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
-
 						{
 							"type": "Layer",
 							"id": "seikaTeishi1411nagano",
@@ -138,7 +265,7 @@
 									"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
 									"html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"font-size:8pt\">2014/09/19<br>2014/11/28</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">23:44頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">北行(A)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\"\ntitle=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\">\n</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">38.9°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">-111m</td></tr>\n</table>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br>本成果は、地震予知連絡会SAR解析ワーキンググループの活動による</div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionAR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarAR.png\" width=\"270\">"
 								},
-						 		{
+								{
 									"type": "Layer",
 									"id": "BUILD_NGN__http2014.10.02-2014.11.27",
 									"title": "2014/10/02-2014/11/27_DL",
@@ -199,15 +326,15 @@
 									"html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"font-size:8pt\">2014/09/29<br>2014/11/24</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">11:29頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">南行(D)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\" title=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\"></td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">22m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">61.8°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+149m</td></tr>\n</table>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br>本成果は、地震予知連絡会SAR解析ワーキンググループの活動による</div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionDR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarDR.png\" width=\"270\">"
 								},
 								{
-									"type"  :  "Layer",
-									"id"  :  "genchichosa1411nagano",
-									"title"  :  "SAR干渉画像に基づく現地調査",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/genchichosa1411nagano.kml",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  false,
-									"legendUrl"  :  null,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">干渉SAR - SAR干渉画像に基づく現地調査ダム等の位置</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+									"type": "Layer",
+									"id": "genchichosa1411nagano",
+									"title": "SAR干渉画像に基づく現地調査",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/genchichosa1411nagano.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">干渉SAR - SAR干渉画像に基づく現地調査ダム等の位置</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -222,8 +349,6 @@
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 余震震源分布(11/29現在)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
-
-
 					]
 				},
 				{
@@ -1032,33 +1157,33 @@
 									"attribution": "",
 									"cocotile": true,
 									"minZoom": 10,
-									"maxZoom"  :  17,
+									"maxZoom": 17,
 									"legendUrl": null,
 									"html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.3.1（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
 								{
-									"type"  :  "Layer",
-									"id"  :  "20141210doh",
-									"title"  :  "2014.12.10",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/xyz/20141210doh/{z}/{x}/{y}.png",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  true,
-									"maxZoom"  :  18,
-									"legendUrl"  :  null,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">2014.12.10</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+									"type": "Layer",
+									"id": "20141210doh",
+									"title": "2014.12.10",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20141210doh/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": true,
+									"maxZoom": 18,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">2014.12.10</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
 								},
 								{
-									"type"  :  "Layer",
-									"id"  :  "20141204doh",
-									"title"  :  "2014.12.4",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/xyz/20141204doh/{z}/{x}/{y}.png",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  true,
-									"maxZoom"  :  18,
-									"legendUrl"  :  null,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">2014.12.4</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+									"type": "Layer",
+									"id": "20141204doh",
+									"title": "2014.12.4",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20141204doh/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": true,
+									"maxZoom": 18,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">2014.12.4</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1151,29 +1276,29 @@
 							"toggleall": false,
 							"entries": [
 								{
-									"type"  :  "Layer",
-									"id"  :  "handoku20150301dol2",
-									"title"  :  "2015.3.1(無人航空機(UAV)撮影)",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/xyz/20150301dol2/{z}/{x}/{y}.png",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  true,
-									"minZoom" : 13,
-									"maxZoom"  :  17,
-									"legendUrl"  :  null,
+									"type": "Layer",
+									"id": "handoku20150301dol2",
+									"title": "2015.3.1(無人航空機(UAV)撮影)",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150301dol2/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": true,
+									"minZoom": 13,
+									"maxZoom": 17,
+									"legendUrl": null,
 									"html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2015.3.1(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2015.3.1 と合わせてご覧下さい。</font></div>"
 								},
 								{
-									"type"  :  "Layer",
-									"id"  :  "handoku20141210doh2",
-									"title"  :  "2014.12.10",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/xyz/20141210doh2/{z}/{x}/{y}.png",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  true,
-									"maxZoom"  :  17,
-									"legendUrl"  :  null,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.12.10)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.12.10 と合わせてご覧下さい。</font></div>"
+									"type": "Layer",
+									"id": "handoku20141210doh2",
+									"title": "2014.12.10",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20141210doh2/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": true,
+									"maxZoom": 17,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.12.10)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.12.10 と合わせてご覧下さい。</font></div>"
 								},
 								{
 									"type": "Layer",
@@ -1244,16 +1369,16 @@
 							"toggleall": false,
 							"entries": [
 								{
-									"type"  :  "Layer",
-									"id"  :  "3D1311nishinoshima6",
-									"title"  :  "2015.3.1",
+									"type": "Layer",
+									"id": "3D1311nishinoshima6",
+									"title": "2015.3.1",
 									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/080.png",
-									"url"  :  "http://cyberjapandata.gsi.go.jp/overlay/1311nishinoshima/3D1311nishinoshima8.kml",
-									"subdomains"  :  "",
-									"attribution"  :  "",
-									"cocotile"  :  false,
-									"legendUrl"  :  null,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">立体図 - 2015.3.1</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/1311nishinoshima/3D1311nishinoshima8.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": null,
+									"html": "<div class=\"gsi_layerinfo_title\">立体図 - 2015.3.1</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1308,7 +1433,6 @@
 									"legendUrl": null,
 									"html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2014.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
-
 								{
 									"type": "Layer",
 									"id": "seisyazukaku1311nishinoshima3",
@@ -1352,28 +1476,58 @@
 							"entries": [
 								{
 									"type": "Layer",
+									"id": "20150504lsi",
+									"title": "2015.5.4",
+									"iconUrl": "",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150504lsi/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"minZoom": "13",
+									"maxZoom": "16",
+									"legendUrl": "",
+									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.5.4)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
+								},
+								{
+									"type": "Layer",
+									"id": "20150418lsi",
+									"title": "2015.4.18",
+									"iconUrl": "",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150418lsi/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"minZoom": "13",
+									"maxZoom": "16",
+									"legendUrl": "",
+									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.4.18)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
+								},
+								{
+									"type": "Layer",
 									"id": "20150402lsi",
 									"title": "2015.4.2",
+									"iconUrl": "",
 									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150402lsi/{z}/{x}/{y}.png",
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"minZoom": 13,
-									"maxZoom": 16,
-									"legendUrl": null,
+									"minZoom": "13",
+									"maxZoom": "16",
+									"legendUrl": "",
 									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.4.2)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
 								},
 								{
 									"type": "Layer",
 									"id": "20150317lsi",
 									"title": "2015.3.17",
+									"iconUrl": "",
 									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150317lsi/{z}/{x}/{y}.png",
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"minZoom": 13,
-									"maxZoom": 16,
-									"legendUrl": null,
+									"minZoom": "13",
+									"maxZoom": "16",
+									"legendUrl": "",
 									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.3.17)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
 								},
 								{
@@ -1471,13 +1625,14 @@
 									"type": "Layer",
 									"id": "20140821lsi",
 									"title": "2014.8.21",
+									"iconUrl": "",
 									"url": "http://cyberjapandata.gsi.go.jp/xyz/20140821lsi/{z}/{x}/{y}.png",
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"minZoom": 13,
-									"maxZoom": 16,
-									"legendUrl": null,
+									"minZoom": "13",
+									"maxZoom": "16",
+									"legendUrl": "",
 									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.8.21)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
 								},
 								{
@@ -3594,9 +3749,7 @@
 						}
 					]
 				}
-			],
-			"open": false,
-			"toggleall": false
+			]
 		}
 	]
 }
