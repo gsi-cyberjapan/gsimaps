@@ -684,7 +684,7 @@ CONFIG.BASETILES = [
 		url : 'http://{s}.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/djbmo.png',
-		"legendUrl" : "http://www.gsi.go.jp/gazochosa/gazochosa40001.html",
+		"legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#ort",
 		maxNativeZoom:17,
 		errorTileUrl : 'image/map/no-data-ort.png',
 		minZoom : 2

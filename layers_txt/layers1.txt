@@ -20,11 +20,11 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": 10,
+							"minZoom": 2,
 							"maxNativeZoom": 17,
 							"maxZoom": 18,
 							"legendUrl": null,
-							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/gazochosa/gazochosa40001.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
 						{
 							"type": "Layer",
@@ -1846,6 +1846,34 @@
 							]
 						}
 					]
+				},
+				{
+					"type": "Layer",
+					"id": "modis",
+					"title": "世界衛星モザイク画像",
+					"url": "http://cyberjapandata.gsi.go.jp/xyz/modis/{z}/{x}/{y}.png",
+					"subdomains": "",
+					"attribution": "",
+					"cocotile": true,
+					"minZoom": 2,
+					"maxNativeZoom": 8,
+					"maxZoom": 18,
+					"legendUrl": null,
+					"html": "<div class=\"gsi_layerinfo_title\">世界衛星モザイク画像</div><br>データソース：<br>MODIS8日間コンポジット画像<br>※MODISデータ欠損域は灰色で示しています"
+				},
+				{
+					"type": "Layer",
+					"id": "lndst",
+					"title": "全国ランドサットモザイク画像",
+					"url": "http://cyberjapandata.gsi.go.jp/xyz/lndst/{z}/{x}/{y}.png",
+					"subdomains": "",
+					"attribution": "",
+					"cocotile": true,
+					"minZoom": 2,
+					"maxNativeZoom": 12,
+					"maxZoom": 18,
+					"legendUrl": null,
+					"html": "<div class=\"gsi_layerinfo_title\">全国ランドサットモザイク画像</div><br>国土地理院と東海大学との共同研究による<br><br>データソース：<br>Landsat8画像（GSI,TSIC,GEO Grid/AIST）<br>海底地形（GEBCO）"
 				},
 				{
 					"type": "Layer",
