@@ -3,7 +3,8 @@
 		{
 			"type": "LayerGroup",
 			"title": "地図・空中写真",
-			"iconUrl": "",
+			"open": false,
+			"toggleall": false,
 			"entries": [
 				{
 					"type": "LayerGroup",
@@ -21,8 +22,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 2,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -36,8 +37,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 10,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1988年～1990年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -51,8 +52,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 10,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1984年～1987年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -66,8 +67,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 10,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1979年～1983年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -81,8 +82,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 10,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1974年～1978年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -96,8 +97,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 2,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1964年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -111,8 +112,8 @@
 							"attribution": "",
 							"cocotile": true,
 							"minZoom": 2,
-							"maxNativeZoom": 17,
 							"maxZoom": 18,
+							"maxNativeZoom": 17,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
@@ -138,9 +139,10 @@
 					"url": "http://cyberjapandata.gsi.go.jp/xyz/pp/{z}/{x}/{y}.geojson",
 					"subdomains": "",
 					"attribution": "",
+					"cocotile": false,
 					"minZoom": 15,
-					"maxNativeZoom": 14,
 					"maxZoom": 18,
+					"maxNativeZoom": 14,
 					"html": "単写真（毎月更新、ズーム15～18で表示）<br>絞込み<script>var pparray = [\"pp2010\",\"pp2000\",\"pp1990\",\"pp1980\",\"pp1970\",\"pp1960\",\"pp1950\",\"pp1940\",\"pp1930\",\"pp1110\"];function ppstylein(Obj){var stylesheet = document.styleSheets.item(0);for (var i = 0; i < pparray.length; i++) {if(pparray[i]==Obj.options[Obj.selectedIndex].value || Obj.options[Obj.selectedIndex].value == \"ppall\"){if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:inline; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:inline\");}continue;}if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:none; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:none\");}}}</script><form name=\"ppstyle\"><select name=\"ppselect\" onchange=\"ppstylein(this)\"><option value=\"ppall\">全年代</option><option value=\"pp2010\">2010年代</option><option value=\"pp2000\">2000年代</option><option value=\"pp1990\">1990年代</option><option value=\"pp1980\">1980年代</option><option value=\"pp1970\">1970年代</option><option value=\"pp1960\">1960年代</option><option value=\"pp1950\">1950年代</option><option value=\"pp1940\">1940年代</option><option value=\"pp1930\">1930年代</option><option value=\"pp1110\">不明</option></select></form><br>詳しい情報:<a href=\"http://mapps.gsi.go.jp/\" target='_blank'>地図・空中写真閲覧サービス</a>"
 				},
 				{
@@ -424,7 +426,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -437,7 +439,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -450,7 +452,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -463,7 +465,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -476,7 +478,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -489,7 +491,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -502,7 +504,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -515,7 +517,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -526,10 +528,9 @@
 									"attribution": "",
 									"cocotile": true,
 									"minZoom": 3,
-									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -542,7 +543,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -555,7 +556,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -568,7 +569,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -589,7 +590,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -602,7 +603,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -615,7 +616,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -628,7 +629,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -641,7 +642,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -654,7 +655,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -667,7 +668,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -678,9 +679,9 @@
 									"attribution": "",
 									"cocotile": true,
 									"minZoom": 3,
-									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
 									"maxZoom": 10,
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -693,7 +694,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -706,7 +707,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -719,7 +720,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -732,7 +733,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -753,7 +754,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -766,7 +767,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -779,7 +780,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -792,7 +793,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -805,7 +806,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -818,7 +819,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -831,7 +832,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -844,7 +845,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -857,7 +858,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -870,7 +871,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -883,7 +884,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -896,7 +897,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -917,7 +918,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -930,7 +931,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -943,7 +944,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -956,7 +957,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -969,7 +970,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -982,7 +983,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -995,7 +996,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1008,7 +1009,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1021,7 +1022,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1034,7 +1035,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1047,7 +1048,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1060,7 +1061,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -1081,7 +1082,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1094,7 +1095,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1107,7 +1108,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1120,7 +1121,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1133,7 +1134,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1146,7 +1147,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1159,7 +1160,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1172,7 +1173,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1185,7 +1186,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1198,7 +1199,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1211,7 +1212,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1224,7 +1225,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -1245,7 +1246,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1258,7 +1259,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1271,7 +1272,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1284,7 +1285,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1297,7 +1298,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1310,7 +1311,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1323,7 +1324,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1336,7 +1337,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1349,7 +1350,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1362,7 +1363,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1375,7 +1376,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1388,7 +1389,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -1409,7 +1410,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1422,7 +1423,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1435,7 +1436,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1448,7 +1449,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1461,7 +1462,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1474,7 +1475,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1487,7 +1488,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1500,7 +1501,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1513,7 +1514,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1526,7 +1527,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1539,7 +1540,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1552,7 +1553,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -1573,7 +1574,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1586,7 +1587,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1599,7 +1600,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1612,7 +1613,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1625,7 +1626,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1638,7 +1639,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1651,7 +1652,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1664,7 +1665,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1677,7 +1678,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1690,7 +1691,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1703,7 +1704,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1716,7 +1717,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						},
@@ -1737,7 +1738,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1750,7 +1751,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1763,7 +1764,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1776,7 +1777,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1789,7 +1790,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1802,7 +1803,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1815,7 +1816,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1828,7 +1829,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
@@ -1841,7 +1842,7 @@
 									"minZoom": 3,
 									"maxZoom": 10,
 									"legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/NDVI_250m/legend_ndvi250m.pdf",
-									"html"  :  "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/EODAS/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
 								}
 							]
 						}
@@ -1856,8 +1857,8 @@
 					"attribution": "",
 					"cocotile": true,
 					"minZoom": 2,
-					"maxNativeZoom": 8,
 					"maxZoom": 18,
+					"maxNativeZoom": 8,
 					"legendUrl": null,
 					"html": "<div class=\"gsi_layerinfo_title\">世界衛星モザイク画像</div><br>データソース：<br>MODIS8日間コンポジット画像<br>※MODISデータ欠損域は灰色で示しています"
 				},
@@ -1870,8 +1871,8 @@
 					"attribution": "",
 					"cocotile": true,
 					"minZoom": 2,
-					"maxNativeZoom": 12,
 					"maxZoom": 18,
+					"maxNativeZoom": 12,
 					"legendUrl": null,
 					"html": "<div class=\"gsi_layerinfo_title\">全国ランドサットモザイク画像</div><br>国土地理院と東海大学との共同研究による<br><br>データソース：<br>Landsat8画像（GSI,TSIC,GEO Grid/AIST）<br>海底地形（GEBCO）"
 				},
@@ -2212,9 +2213,9 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"minZoom": 4,
-									"maxZoom": 12,
-									"legendUrl": null,
+									"minZoom": "4",
+									"maxZoom": "12",
+									"legendUrl": "",
 									"html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(縮尺2500分1相当以上の概ねの範囲)</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
 								},
 								{
@@ -2272,9 +2273,9 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": 4,
-											"maxZoom": 12,
-											"legendUrl": null,
+											"minZoom": "4",
+											"maxZoom": "12",
+											"legendUrl": "",
 											"html": ""
 										},
 										{
@@ -2285,9 +2286,9 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": 4,
-											"maxZoom": 12,
-											"legendUrl": null,
+											"minZoom": "4",
+											"maxZoom": "12",
+											"legendUrl": "",
 											"html": ""
 										}
 									]
@@ -2306,9 +2307,9 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": 4,
-											"maxZoom": 12,
-											"legendUrl": null,
+											"minZoom": "4",
+											"maxZoom": "12",
+											"legendUrl": "",
 											"html": ""
 										}
 									]
@@ -2324,10 +2325,654 @@
 					"url": "http://cyberjapandata.gsi.go.jp/xyz/zk25000/{z}/{x}/{y}.geojson",
 					"subdomains": "",
 					"attribution": "",
-					"minZoom": 10,
-					"maxNativeZoom": 8,
-					"maxZoom": 18,
+					"cocotile": false,
+					"minZoom": "10",
+					"maxZoom": "18",
+					"maxNativeZoom": "8",
+					"legendUrl": "",
 					"html": "２万５千分1地形図郭（ズーム10～18で表示）<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/chizuhensyu/zukaku_ido_keido1.html\">多色刷の２万５千分１地形図の図郭</a>です。"
+				},
+				{
+					"type": "LayerGroup",
+					"title": "電子国土基本図の更新情報",
+					"open": false,
+					"toggleall": false,
+					"entries": [
+						{
+							"type": "LayerGroup",
+							"title": "2015年迅速更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "jin201504",
+									"title": "4月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/083.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201504.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201503",
+									"title": "3月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201503.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201502",
+									"title": "2月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201502.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201501",
+									"title": "1月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201501.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								}
+							]
+						},
+						{
+							"type": "LayerGroup",
+							"title": "2015年面的更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "men201503",
+									"title": "3月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2015/201503.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201502",
+									"title": "2月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2015/201502.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201501",
+									"title": "1月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2015/201501.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"html": ""
+								}
+							]
+						},
+						{
+							"type": "LayerGroup",
+							"title": "2014年迅速更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "jin201412",
+									"title": "12月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/104.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201412.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201411",
+									"title": "11月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/103.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201411.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201410",
+									"title": "10月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201410.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201409",
+									"title": "9月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201409.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201408",
+									"title": "8月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/087.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201408.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201407",
+									"title": "7月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/086.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201407.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201406",
+									"title": "6月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/085.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201406.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201405",
+									"title": "5月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/084.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201405.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201404",
+									"title": "4月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/083.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201404.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201403",
+									"title": "3月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201403.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201402",
+									"title": "2月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201402.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201401",
+									"title": "1月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2014/201401.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								}
+							]
+						},
+						{
+							"type": "LayerGroup",
+							"title": "2014年面的更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "men201412",
+									"title": "12月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201412.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201410",
+									"title": "10月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201410.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201408",
+									"title": "8月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201408.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201407",
+									"title": "7月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201407.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201406",
+									"title": "6月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201406.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201405",
+									"title": "5月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201405.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201404",
+									"title": "4月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201404.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201403",
+									"title": "3月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201403.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "men201402",
+									"title": "2月更新",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2014/201402.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"html": ""
+								}
+							]
+						},
+						{
+							"type": "LayerGroup",
+							"title": "2013年迅速更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "jin201312",
+									"title": "12月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/104.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201312.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201311",
+									"title": "11月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/103.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201311.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201310",
+									"title": "10月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201310.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201309",
+									"title": "9月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201309.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201308",
+									"title": "8月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/087.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201308.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201307",
+									"title": "7月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/086.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201307.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201306",
+									"title": "6月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/085.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201306.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201305",
+									"title": "5月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/084.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201305.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201304",
+									"title": "4月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/083.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201304.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201303",
+									"title": "3月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201303.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201302",
+									"title": "2月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201302.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201301",
+									"title": "1月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2013/201301.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								}
+							]
+						},
+						{
+							"type": "LayerGroup",
+							"title": "2012年迅速更新情報",
+							"open": false,
+							"toggleall": false,
+							"entries": [
+								{
+									"type": "Layer",
+									"id": "jin201212",
+									"title": "12月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/104.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201212.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201211",
+									"title": "11月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/103.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201211.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201210",
+									"title": "10月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201210.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201209",
+									"title": "9月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201209.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201208",
+									"title": "8月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/087.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201208.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201207",
+									"title": "7月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/086.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201207.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201206",
+									"title": "6月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/085.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201206.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201205",
+									"title": "5月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/084.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201205.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201204",
+									"title": "4月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/083.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201204.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								},
+								{
+									"type": "Layer",
+									"id": "jin201203",
+									"title": "3月更新",
+									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+									"url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2012/201203.kml",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"legendUrl": "",
+									"html": ""
+								}
+							]
+						}
+					]
 				},
 				{
 					"type": "LayerGroup",
@@ -2377,9 +3022,7 @@
 						}
 					]
 				}
-			],
-			"open": false,
-			"toggleall": false
+			]
 		}
 	]
 }
