@@ -21040,7 +21040,27 @@ GSI.Links.getURL = function( id, center, z ) {
 			return null;
 		}
 		if ( z >= 15 ) z = 14;
-		return 'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z=' + z + '&lat=' + center.lat + '&lon=' + center.lng;
+		
+		var id = GSI.GLOBALS.baseLayer.activeIndex;
+		var did = GSI.GLOBALS.baseLayer.baseLayerList[id].id;
+		var tiles = GSI.GLOBALS.mapLayerList.tileList;
+		
+		if ( tiles.length > 0 )
+		{
+			for( var i = 0; i < tiles.length; i++ )
+			{
+				if( tiles[i].id == 'yk74' )
+				{
+					did = 'gazo1';
+					break;
+				}
+			}
+		}
+		if ( ( did != 'std' ) && ( did != 'ort' )  && ( did != 'gazo1' ) )
+		{
+			did = 'std';
+		}
+		return 'http://cyberjapandata.gsi.go.jp/3d/site/index.html?did=' + did + '&z=' + z + '&lat=' + center.lat + '&lon=' + center.lng;
 	}
 	else if ( id == 'mapion' )
 	{
