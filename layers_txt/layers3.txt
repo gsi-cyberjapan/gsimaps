@@ -9,7 +9,6 @@
 				{
 					"type": "LayerGroup",
 					"title": "箱根山の火山活動",
-					"iconUrl": "",
 					"open": false,
 					"toggleall": false,
 					"entries": [
@@ -32,7 +31,6 @@
 							"type": "Layer",
 							"id": "hakoneyama20150507_20150521",
 							"title": "┗コメント",
-							"iconUrl": "",
 							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505hakoneyama/hakoneyama20150507_20150521.kml",
 							"subdomains": "",
 							"attribution": "",
@@ -59,7 +57,6 @@
 							"type": "Layer",
 							"id": "hakoneyama20150417_20150515",
 							"title": "┗コメント",
-							"iconUrl": "",
 							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505hakoneyama/hakoneyama20150417_20150515.kml",
 							"subdomains": "",
 							"attribution": "",
@@ -1531,8 +1528,23 @@
 							"entries": [
 								{
 									"type": "Layer",
+									"id": "20150520lsi",
+									"title": "2015.5.20",
+									"iconUrl": "",
+									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150520lsi/{z}/{x}/{y}.png",
+									"subdomains": "",
+									"attribution": "",
+									"cocotile": false,
+									"minZoom": "7",
+									"maxZoom": "16",
+									"legendUrl": "",
+									"html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.5.20)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
+								},
+								{
+									"type": "Layer",
 									"id": "20150504lsi",
 									"title": "2015.5.4",
+									"iconUrl": "",
 									"url": "http://cyberjapandata.gsi.go.jp/xyz/20150504lsi/{z}/{x}/{y}.png",
 									"subdomains": "",
 									"attribution": "",
