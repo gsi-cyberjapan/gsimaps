@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.45";
+GSI.Version = "0.9.9.46";
 
 
 var CONFIG = {};
@@ -170,7 +170,7 @@ GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDDIVMARKER = 'テキストを追加';
 GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDLINE = '線を追加';
 GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDPOLY = 'ポリゴンを追加';
 GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDCIRCLE = '円を追加';
-GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDFREEHAND = '円フリーハンドで線を追加';
+GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDFREEHAND = 'フリーハンドで線を追加';
 
 GSI.TEXT.SAKUZU.DIALOG_LIST_EDITBTN = '編集';
 GSI.TEXT.SAKUZU.DIALOG_LIST_REMOVEBTN = '削除';
@@ -4181,11 +4181,11 @@ GSI.Footer = L.Class.extend( {
 	{
 		var center = this.map.getCenter().wrap();
 		var dms = GSI.Utils.latLngToDMS( center );
-
+		
 		$( '#latlng_60' ).html(
-			dms.lat.d + '度' + dms.lat.m + '分' + ( Math.round( dms.lat.s * 100 ) / 100 ).toFixed(2)  + '秒'
+			(center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + ( Math.round( dms.lat.s * 100 ) / 100 ).toFixed(2)  + '秒'
 			+ '&nbsp;'  +
-			dms.lng.d + '度' + dms.lng.m + '分' + ( Math.round( dms.lng.s * 100 ) / 100 ).toFixed(2)  + '秒'
+			(center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + ( Math.round( dms.lng.s * 100 ) / 100 ).toFixed(2)  + '秒'
 			);
 		
 		$( '#latlng_10' ).html(
@@ -18320,9 +18320,9 @@ GSI.LatLngGrid = L.Class.extend( {
 
 
 				var content =
-					'<div unselectable = "on">' + dms.lat.d + '°' +  dms.lat.m + ' ′' + Math.round( dms.lat.s) + ' ″' + '</div>'
+					'<div unselectable = "on">' + (lat < 0 ? '-' : '') + dms.lat.d + '°' +  dms.lat.m + ' ′' + Math.round( dms.lat.s) + ' ″' + '</div>'
 					+
-					'<div unselectable = "on">' +dms.lng.d + '°' + dms.lng.m + '′' + Math.round( dms.lng.s )  + ' ″' + '</div>';
+					'<div unselectable = "on">' + (lng < 0 ? '-' : '') + dms.lng.d + '°' + dms.lng.m + '′' + Math.round( dms.lng.s )  + ' ″' + '</div>';
 				var latLng = { 'lng' : lng, 'lat' : lat};
 
 
@@ -22272,6 +22272,14 @@ GSI.Utils.world2Japan = function(latLng){
 
 
 GSI.Utils.latLngToDMS = function(latLng) {
+	
+	var latLng = { lat : latLng.lat, lng : latLng.lng};
+	var latMinus = ( latLng.lat < 0 ? -1 : 1 );
+	var lngMinus = ( latLng.lng < 0 ? -1 : 1 );
+	
+	latLng.lat = Math.abs( latLng.lat);
+	latLng.lng = Math.abs( latLng.lng);
+	
 	var latD = Math.floor(latLng.lat);
 	var latM = Math.floor( ( latLng.lat - latD ) * 60 );
 	var latS = (latLng.lat-latD-(latM/60))*3600;
