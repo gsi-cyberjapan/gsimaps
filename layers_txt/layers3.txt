@@ -8,6 +8,42 @@
 			"entries": [
 				{
 					"type": "LayerGroup",
+					"title": "口永良部島の火山活動",
+					"open": false,
+					"toggleall": false,
+					"entries": [
+						{
+							"type": "Layer",
+							"id": "20150529_relief_kuchinoerabu",
+							"title": "口永良部島　陰影段彩図",
+							"iconUrl": "",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/20150529_relief_kuchinoerabu/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": "8",
+							"maxZoom": "18",
+							"legendUrl": "",
+							"html": "<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "20150529_taisakuzu_kuchinoerabu",
+							"title": "口永良部島　火山災害対策図",
+							"iconUrl": "",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/20150529_taisakuzu_kuchinoerabu/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": true,
+							"minZoom": "8",
+							"maxZoom": "18",
+							"legendUrl": "",
+							"html": "<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+						}
+					]
+				},
+				{
+					"type": "LayerGroup",
 					"title": "箱根山の火山活動",
 					"open": false,
 					"toggleall": false,
