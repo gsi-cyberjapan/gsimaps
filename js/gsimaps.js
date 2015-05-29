@@ -11,7 +11,7 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.46";
+GSI.Version = "0.9.9.47";
 
 
 var CONFIG = {};
@@ -17138,6 +17138,7 @@ GSI.KML = L.FeatureGroup.extend({
 		try{
 			this.fire('loaded');
 		} catch(e ) {}
+		this._onZoomChange();
 	},
 
 	setOpacity : function( opacity)
