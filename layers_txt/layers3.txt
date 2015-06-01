@@ -87,6 +87,7 @@
 							"type": "Layer",
 							"id": "sar_pwr_141114_150529kuchinoerabu",
 							"title": "┗コメント（強度画像）",
+							"iconUrl": "",
 							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505kuchinoerabu/sar_pwr_141114_150529kuchinoerabu.kml",
 							"subdomains": "",
 							"attribution": "",
@@ -100,6 +101,7 @@
 							"title": "斜め写真(5/29)",
 							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/183.png",
 							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505kuchinoerabu/naname150529kuchinoerabu.kml",
+							"subdomains": "",
 							"attribution": "",
 							"cocotile": false,
 							"legendUrl": "",
@@ -132,6 +134,19 @@
 							"maxZoom": "18",
 							"legendUrl": "",
 							"html": "<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
+							"id": "airphoto_kuchinoerabu",
+							"title": "過去の簡易空中写真（2012年4月）",
+							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/photo.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"minZoom": "5",
+							"legendUrl": "",
+							"html": "<a href=\"http://maps.gsi.go.jp/development/ichiran.html#airphoto\" target=\"_blank\">簡易空中写真</a><br>\n口永良部島は2012年4月撮影\n<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
 					]
 				},
@@ -2222,7 +2237,6 @@
 							"type": "Layer",
 							"id": "laserortho1204",
 							"title": "正射画像（H24.4）",
-							"iconUrl": "",
 							"url": "http://cyberjapandata.gsi.go.jp/xyz/201204dol/{z}/{x}/{y}.png",
 							"subdomains": "",
 							"attribution": "",
