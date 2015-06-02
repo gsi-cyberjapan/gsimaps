@@ -742,6 +742,7 @@ CONFIG.SAKUZU = {
 			'181.png', '182.png', '183.png', '184.png', '185.png', '186.png', '187.png', '188.png',            '200.png',
 			'201.png', '202.png', '203.png', '204.png', '205.png', '206.png', '207.png', '208.png', '209.png', '210.png',
 			'211.png', '212.png', '213.png', '214.png', '215.png', '216.png', '217.png',                       '300.png',
+			'364.png',
 			'301.png', '302.png', '303.png', '304.png', '305.png', '306.png', '307.png', '308.png', '309.png', '310.png',
 			'311.png', '312.png', '313.png',
 			                      '363.png',
