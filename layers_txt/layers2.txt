@@ -4413,7 +4413,7 @@
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "散布山⁄指臼岳⁄小田萌山⁄択捉焼山",
+							  "title": "散布山?指臼岳?小田萌山?択捉焼山",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -4430,7 +4430,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">散布山⁄指臼岳⁄小田萌山⁄択捉焼山 - 2010.06.03-2010.10.19</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/chirippuyama.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">散布山?指臼岳?小田萌山?択捉焼山 - 2010.06.03-2010.10.19</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/chirippuyama.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4445,13 +4445,13 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">散布山⁄指臼岳⁄小田萌山⁄択捉焼山 - 2007.09.25-2010.07.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/chirippuyama.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">散布山?指臼岳?小田萌山?択捉焼山 - 2007.09.25-2010.07.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/chirippuyama.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "択捉阿登佐岳⁄ベルタルベ山",
+							  "title": "択捉阿登佐岳?ベルタルベ山",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -4468,7 +4468,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">択捉阿登佐岳⁄ベルタルベ山 - 2010.08.06-2010.09.21</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/etorofuatosadake.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">択捉阿登佐岳?ベルタルベ山 - 2010.08.06-2010.09.21</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/etorofuatosadake.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4483,13 +4483,13 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">択捉阿登佐岳⁄ベルタルベ山 - 2007.09.29-2010.05.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/etorofuatosadake.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">択捉阿登佐岳?ベルタルベ山 - 2007.09.29-2010.05.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/etorofuatosadake.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "ルルイ岳⁄爺爺岳",
+							  "title": "ルルイ岳?爺爺岳",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -4506,7 +4506,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2010.06.08-2010.10.24</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2010.06.08-2010.10.24</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4521,7 +4521,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2010.06.09-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2010.06.09-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4536,7 +4536,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2007.10.17-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2007.10.17-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4551,7 +4551,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2007.09.01-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2007.09.01-2010.07.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4566,7 +4566,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2007.10.17-2010.06.09</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2007.10.17-2010.06.09</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4581,13 +4581,13 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳⁄爺爺岳 - 2007.10.16-2010.06.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">ルルイ岳?爺爺岳 - 2007.10.16-2010.06.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/ruruidake.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "羅臼山⁄泊山",
+							  "title": "羅臼山?泊山",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -4604,7 +4604,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2010.05.10-2010.09.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2010.05.10-2010.09.25</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4619,7 +4619,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2010.06.26-2010.08.11</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2010.06.26-2010.08.11</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4634,7 +4634,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2007.09.18-2010.05.11</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2007.09.18-2010.05.11</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4649,7 +4649,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2007.11.02-2010.05.10</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2007.11.02-2010.05.10</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4664,7 +4664,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2009.09.22-2009.11.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2009.09.22-2009.11.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -4679,7 +4679,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山⁄泊山 - 2009.05.07-2009.11.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">羅臼山?泊山 - 2009.05.07-2009.11.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/rausuyama.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
@@ -6151,7 +6151,7 @@
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "岩手山⁄秋田駒ヶ岳",
+							  "title": "岩手山?秋田駒ヶ岳",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -6168,7 +6168,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2010.06.06-2010.10.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2010.06.06-2010.10.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6183,7 +6183,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2007.10.14-2010.07.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2007.10.14-2010.07.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6198,7 +6198,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2007.10.14-2010.06.06</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2007.10.14-2010.06.06</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6213,7 +6213,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2009.06.03-2009.09.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2009.06.03-2009.09.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6228,7 +6228,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2008.07.16-2009.09.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2008.07.16-2009.09.03</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6243,7 +6243,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2008.06.23-2009.06.26</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2008.06.23-2009.06.26</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -6258,7 +6258,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">岩手山⁄秋田駒ヶ岳 - 2007.09.21-2008.06.23</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">岩手山?秋田駒ヶ岳 - 2007.09.21-2008.06.23</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/iwate.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
@@ -8069,7 +8069,7 @@
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "新島⁄神津島",
+							  "title": "新島?神津島",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -8086,7 +8086,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2010.11.08-2011.02.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2010.11.08-2011.02.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8101,7 +8101,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2008.05.02-2011.02.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2008.05.02-2011.02.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8116,7 +8116,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2010.12.23-2011.02.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2010.12.23-2011.02.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8131,7 +8131,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2008.05.02-2010.12.24</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2008.05.02-2010.12.24</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8146,7 +8146,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2009.12.21-2010.08.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2009.12.21-2010.08.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8161,7 +8161,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2010.03.22-2010.08.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2010.03.22-2010.08.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8176,7 +8176,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2008.01.30-2010.08.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2008.01.30-2010.08.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8191,7 +8191,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2010.03.22-2010.05.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n8\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2010.03.22-2010.05.07</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n8\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8206,7 +8206,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2009.12.21-2010.03.23</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n9\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2009.12.21-2010.03.23</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n9\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8221,7 +8221,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2007.10.30-2010.03.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n10\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2007.10.30-2010.03.22</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n10\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8236,7 +8236,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2009.08.05-2009.12.21</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n11\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2009.08.05-2009.12.21</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n11\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8251,7 +8251,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2009.06.19-2009.12.20</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n12\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2009.06.19-2009.12.20</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n12\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8266,7 +8266,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2007.01.28-2009.08.05</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n13\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2007.01.28-2009.08.05</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n13\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8281,7 +8281,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2006.09.12-2008.09.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n14\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2006.09.12-2008.09.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n14\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -8296,7 +8296,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">新島⁄神津島 - 2006.09.11-2007.06.14</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n15\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">新島?神津島 - 2006.09.11-2007.06.14</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/nijima.html#n15\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
@@ -9533,7 +9533,7 @@
 							  },
 							  {
 							  "type": "LayerGroup",
-							  "title": "鶴見岳・伽藍岳⁄九重山",
+							  "title": "鶴見岳・伽藍岳?九重山",
 							  "open": false,
 							  "toggleall": false,
 							  "entries": [
@@ -9550,7 +9550,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2008.05.10-2010.11.16</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2008.05.10-2010.11.16</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n1\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9565,7 +9565,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2010.04.16-2010.10.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2010.04.16-2010.10.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n2\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9580,7 +9580,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2008.02.24-2010.10.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2008.02.24-2010.10.17</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n3\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9595,7 +9595,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2009.11.29-2010.04.16</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2009.11.29-2010.04.16</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n4\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9610,7 +9610,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.11.24-2010.03.01</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.11.24-2010.03.01</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n5\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9625,7 +9625,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.11.08-2009.12.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.11.08-2009.12.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n6\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9640,7 +9640,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2009.07.14-2009.11.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2009.07.14-2009.11.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n7\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9655,7 +9655,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.11.24-2009.11.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n8\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.11.24-2009.11.29</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n8\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9670,7 +9670,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2008.11.10-2009.03.28</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n9\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2008.11.10-2009.03.28</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n9\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9685,7 +9685,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.01.06-2008.11.26</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n10\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.01.06-2008.11.26</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n10\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9700,7 +9700,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.02.05-2008.11.10</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n11\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.02.05-2008.11.10</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n11\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    },
 							    {
 							    "type": "Layer",
@@ -9715,7 +9715,7 @@
 							    "maxZoom": "18",
 							    "maxNativeZoom": "13",
 							    "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
-							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳⁄九重山 - 2007.02.05-2007.11.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n12\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
+							    "html":"<div class=\"gsi_layerinfo_title\">鶴見岳・伽藍岳?九重山 - 2007.02.05-2007.11.08</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/sar/result/sar_data/volcano/kujyu.html#n12\">解説</a></div><div class=\"gsi_layerinfo_copy\">解析：国土地理院<br>原初データ所有：JAXA/METI</div>"
 							    }
 							  ]
 							  },
@@ -14205,6 +14205,18 @@
 							]
 						}
 					]
+				},
+				{
+					"type": "Layer",
+					"id": "regmos",
+					"title": "REGMOS",
+					"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
+					"url": "http://cyberjapandata.gsi.go.jp/overlay/regmos.kml",
+					"subdomains": "",
+					"attribution": "",
+					"cocotile": false,
+					"legendUrl": "",
+					"html": "＜REGMOS（GNSS火山変動リモート観測装置）＞<br>活動的な火山における詳細な地殻変動を捉えるために、REGMOSを設置しています<br><br>詳しい情報：<a href=\"http://www.gsi.go.jp/kidou/regmos.html\">REGMOSの紹介</a>"
 				}
 			],
 			"open": false,
