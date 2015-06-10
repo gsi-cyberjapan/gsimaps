@@ -5517,6 +5517,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 
 	_onLayerMouseEnter : function( a, item )
 	{
+		if ( !this._toolTipViewCounter )
+		{
+			this._toolTipViewCounter = 0;
+		}
+		this._toolTipViewCounter++;
+					
 		this._showItemTooltip( a, item );
 	},
 
@@ -5598,6 +5604,29 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	{
 		if ( item  )
 		{
+			if ( !this._curItem )
+			{
+				this._curItem = item;
+			}
+			else
+			{
+				if ( ( this._toolTipViewCounter % 2) == 0)
+				{
+					if ( this._curItem == item )
+					{
+						this._curItem = undefined;
+						this._toolTipViewCounter = 0;
+						return;
+					}
+					else
+					{
+						this._toolTipViewCounter--;
+					}
+				}
+				this._curItem = item;
+
+			}
+		
 			if ( !this._itemTooltip )
 			{
 				this._itemTooltip = $( '<div>' ).addClass( 'gsi_layertreedialog_itemtooltip' ).hide();
@@ -5645,6 +5674,11 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				}
 
 				this._hideItemTooltip();
+				
+				if ( event.type == "scroll" )
+				{
+					this._toolTipViewCounter = 0;
+				}
 
 			}, this );
 
@@ -5890,6 +5924,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	onMapLayerListChange : function()
 	{
 		this._initializeList( this.current ? this.current.entries : this.tree, true );
+		this._toolTipViewCounter = 0;
 	}
 
 });
