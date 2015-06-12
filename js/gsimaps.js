@@ -402,23 +402,19 @@ CONFIG.MAPMENU = {
 							href : 'http://fgd.gsi.go.jp/download/'
 						},
 						{
-							title : '数値地図(オンライン)',
-							href : 'http://net.jmc.or.jp/digital_data_gsiol.html'
-						},
-						{
-							title : '数値地図(CD/DVD)',
-							href : 'http://www.jmc.or.jp/data/index.html'
+							title : '数値地図',
+							href : 'http://www.jmc.or.jp/buy_map_digi.html'
 						},
 						{
 							title : '紙地図',
-							href : 'http://www.jmc.or.jp/map/index.html'
+							href : 'http://www.jmc.or.jp/buy_map_kami.html'
 						},
 						{
 							title : '空中写真',
-							href : 'http://www.jmc.or.jp/photo/index.html'
+							href : 'http://www.jmc.or.jp/buy_photo_kokudo.html'
 						},
 						{
-							title : '国土地理院技術情報',
+							title : '国土地理院技術資料',
 							href : 'http://www.gsi.go.jp/REPORT/TECHNICAL/technical.html'
 						}
 					]
