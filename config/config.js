@@ -1273,7 +1273,7 @@ $(function () {
 					// フォルダ
 					newItem.type = "LayerGroup";
 					newItem.title = item.title;
-					newItem.iconUrl = item.icon;
+					newItem.iconUrl = ( item.icon ? item.icon : '' );
 					//if ( item.open )
 					//	newItem.open = item.open;
 					newItem.open = ( item.open ? item.open : false );
@@ -1287,7 +1287,7 @@ $(function () {
 					newItem.type = "Layer";
 					newItem.id = item.id;
 					newItem.title = item.title;
-					newItem.iconUrl = item.icon;
+					newItem.iconUrl = ( item.icon ? item.icon : '' );
 					newItem.url = item.url;
 					newItem.subdomains = ( item.subdomains ? item.subdomains : "" );
 					newItem.attribution = ( item.attribution ? item.attribution : "" );
@@ -1583,4 +1583,3 @@ $(function () {
 	};
 
 })(jQuery);
-
