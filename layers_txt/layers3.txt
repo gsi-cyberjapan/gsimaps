@@ -3496,14 +3496,14 @@
 								{
 									"type": "Layer",
 									"id": "gejechikaku_tokyo",
-									"title": "東京県",
+									"title": "東京都",
 									"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/site/mapuse4/js/skin/geje.png",
 									"url": "http://cyberjapandata.gsi.go.jp/overlay/tokyo.kml",
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": false,
 									"legendUrl": "http://cyberjapan.jp/legend/geje-chikaku_legend.html",
-									"html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 東京県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+									"html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 東京都</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
 								{
 									"type": "Layer",
