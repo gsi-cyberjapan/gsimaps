@@ -1127,7 +1127,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": 5,
+							"minZoom": 10,
 							"legendUrl": null,
 							"html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 過去の正射画像(1974年～1978年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
