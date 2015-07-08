@@ -288,7 +288,7 @@
 				},
 				{
 					"type": "LayerGroup",
-					"title": "大涌谷周辺（箱根山）の火山活動",
+					"title": "箱根山の火山活動",
 					"iconUrl": "",
 					"open": false,
 					"toggleall": false,
