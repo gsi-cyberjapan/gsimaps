@@ -11,13 +11,13 @@ Twitter: https://twitter.com/hashtag/gsimaps
 - 地理院地図（本レポジトリを用いたデモ）：http://gsi-cyberjapan.github.io/gsimaps/
 
 ## 本レポジトリの利用方法
-本レポジトリの一式をダウンロードしたものをウェブサーバに置き、index.html を開いてください。
+本レポジトリの一式をダウンロードしたものをウェブサーバに置き、[index.html](index.html) を開いてください。
 
 ファイルシステム上で index.html を開いても機能の多くは動作しますが、ベクトルデータを扱う部分など
 一部の機能については、ウェブサーバにホストすることによって初めて正常に動作します。
 
 ## 利用上の留意点
-利用上の留意点は次の通りです。LICENSE ファイルもあわせてご参照ください。
+利用上の留意点は次の通りです。[LICENSE](LICENSE) 及び[LICENSE_LIBRARIES.md](LICENSE_LIBRARIES.md)もあわせてご参照ください。
 
 - 本レポジトリで提供しているのは、国土地理院が運営する「地理院地図」http://maps.gsi.go.jp/ のソースです。
 - Leaflet, jQuery 等の既存ソフトウェアについては既存ソフトウェアのライセンスが適用されます。
