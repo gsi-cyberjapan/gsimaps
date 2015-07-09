@@ -11,8 +11,6 @@ var GSI = {
 	TEXT : {}
 };
 
-GSI.Version = "0.9.9.47";
-
 
 var CONFIG = {};
 
