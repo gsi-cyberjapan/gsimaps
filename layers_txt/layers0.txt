@@ -1,38 +1,40 @@
-{"layers": [
 {
-  "type": "Layer",
-  "id": "std",
-  "title": "標準地図",
-  "url": "http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
-  "legendUrl": "http://cyberjapan.jp/legend/std.pdf"
-},
-{
-  "type": "Layer",
-  "id": "pale",
-  "title": "淡色地図",
-  "url": "http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
-  "legendUrl" : "http://cyberjapan.jp/legend/pale.pdf"
-},
-{
-  "type": "Layer",
-  "id": "blank",
-  "title": "白地図",
-  "url": "http://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
-  "legendUrl" : ""
-},
-{
-  "type": "Layer",
-  "id": "english",
-  "title": "English",
-  "url": "http://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
-  "legendUrl" : "http://cyberjapan.jp/legend/english2.pdf"
-},
-{
-  "type": "Layer",
-  "id": "ort",
-  "title": "写真",
-  "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
-  "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
-  "maxNativeZoom": 17
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "std",
+      "title": "標準地図",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "legendUrl": "http://cyberjapan.jp/legend/std.pdf"
+    },
+    {
+      "type": "Layer",
+      "id": "pale",
+      "title": "淡色地図",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "legendUrl": "http://cyberjapan.jp/legend/pale.pdf"
+    },
+    {
+      "type": "Layer",
+      "id": "blank",
+      "title": "白地図",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "legendUrl": ""
+    },
+    {
+      "type": "Layer",
+      "id": "english",
+      "title": "English",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
+      "legendUrl": "http://cyberjapan.jp/legend/english2.pdf"
+    },
+    {
+      "type": "Layer",
+      "id": "ort",
+      "title": "写真",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
+      "maxNativeZoom": 17
+    }
+  ]
 }
-]}
