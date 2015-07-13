@@ -295,6 +295,33 @@
 					"entries": [
 						{
 							"type": "Layer",
+							"id": "20150515-20150710a_sar_hakoneyama",
+							"title": "2015/05/15-2015/07/10_AR",
+							"iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/20150515-20150710a_sar_hakoneyama/{z}/{x}/{y}.png",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"minZoom": "5",
+							"maxZoom": "18",
+							"maxNativeZoom": "15",
+							"legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+							"html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2015/05/15/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/05/15</a><br>\n<a href=\"http://www.tenki.jp/past/2015/07/10/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/07/10</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">23:44頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">北行(A)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\" \ntitle=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\">\n</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">43.7°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+67m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([35.23165,139.02250],9);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionAR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarAR.png\" width=\"270\">"
+						},
+						{
+							"type": "Layer",
+							"id": "hakoneyama20150515-20150710",
+							"title": "┗コメント",
+							"iconUrl": "",
+							"url": "http://cyberjapandata.gsi.go.jp/overlay/1505hakoneyama/hakoneyama20150515_20150710.kml",
+							"subdomains": "",
+							"attribution": "",
+							"cocotile": false,
+							"legendUrl": "",
+							"html": "<div class=\\\"gsi_layerinfo_title\\\">箱根山火山活動 - 干渉SARコメント(2015/05/15-2015/07/10)</div><div class=\\\"gsi_layerinfo_copy\\\">(c)国土地理院</div>"
+						},
+						{
+							"type": "Layer",
 							"id": "20150607-20150705a_sar_hakoneyama",
 							"title": "2015/06/07-2015/07/05_AR",
 							"iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
