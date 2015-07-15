@@ -10,7 +10,7 @@
 							"id": "kunijiban",
 							"title": "地盤情報（KuniJiban）",
 							"iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png",
-							"url": "http://org.cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
+							"url": "http://cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
 							"minZoom": 15,
 							"maxZoom": 18,
 							"maxNativeZoom": 15,
