@@ -164,7 +164,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": false,
-							"minZoom": "5",
+							"minZoom": 5,
 							"legendUrl": "",
 							"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後オルソ画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://cyberjapan.jp/info/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -177,7 +177,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": "5",
+							"minZoom": 5,
 							"legendUrl": "",
 							"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後オルソ画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://cyberjapan.jp/info/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -190,7 +190,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": "5",
+							"minZoom": 5,
 							"legendUrl": "",
 							"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後オルソ画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://cyberjapan.jp/info/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -203,7 +203,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": "5",
+							"minZoom": 5,
 							"legendUrl": "",
 							"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後オルソ画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://cyberjapan.jp/info/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
@@ -277,8 +277,8 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"minZoom": "4",
-							"maxZoom": "16",
+							"minZoom": 4,
+							"maxZoom": 16,
 							"legendUrl": "http://cyberjapan.jp/legend/lcm25k_2012/lc_legend.pdf",
 							"html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						},
@@ -291,7 +291,7 @@
 							"subdomains": "",
 							"attribution": "",
 							"cocotile": true,
-							"maxZoom": "16",
+							"maxZoom": 16,
 							"legendUrl": "http://cyberjapan.jp/legend/LCM_hanrei.png",
 							"html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_index.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 						}
@@ -2066,7 +2066,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(2005年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2079,7 +2079,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(2000年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2166,7 +2166,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(2003年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2179,7 +2179,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1997年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2253,7 +2253,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(2008年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2266,7 +2266,7 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"maxZoom": "16",
+									"maxZoom": 16,
 									"legendUrl": "http://cyberjapan.jp/legend/takuchi_hanrei.png",
 									"html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(2001年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/LandUse/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 								},
@@ -2397,8 +2397,8 @@
 									"subdomains": "",
 									"attribution": "",
 									"cocotile": true,
-									"minZoom": "4",
-									"maxZoom": "12",
+									"minZoom": 4,
+									"maxZoom": 12,
 									"legendUrl": "",
 									"html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(縮尺2500分1相当以上の概ねの範囲)</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
 								},
@@ -2463,8 +2463,8 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": "4",
-											"maxZoom": "12",
+											"minZoom": 4,
+											"maxZoom": 12,
 											"legendUrl": "",
 											"html": ""
 										},
@@ -2477,8 +2477,8 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": "4",
-											"maxZoom": "12",
+											"minZoom": 4,
+											"maxZoom": 12,
 											"legendUrl": "",
 											"html": ""
 										}
@@ -2500,8 +2500,8 @@
 											"subdomains": "",
 											"attribution": "",
 											"cocotile": true,
-											"minZoom": "4",
-											"maxZoom": "12",
+											"minZoom": 4,
+											"maxZoom": 12,
 											"legendUrl": "",
 											"html": ""
 										}
@@ -2520,9 +2520,9 @@
 					"subdomains": "",
 					"attribution": "",
 					"cocotile": false,
-					"minZoom": "10",
-					"maxZoom": "18",
-					"maxNativeZoom": "8",
+					"minZoom": 10,
+					"maxZoom": 18,
+					"maxNativeZoom": 8,
 					"legendUrl": "",
 					"html": "２万５千分1地形図郭（ズーム10～18で表示）<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/chizuhensyu/zukaku_ido_keido1.html\">多色刷の２万５千分１地形図の図郭</a>です。"
 				},
