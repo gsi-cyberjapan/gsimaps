@@ -7139,7 +7139,7 @@ GSI.Draw.convertRadius = function(radius)
 	};
 	if ( result.radius > 1000 )
 	{
-		result.radius = (radius  / 1000).toFixed(3);
+		result.radius = (radius  / 1000).toFixed(4);
 		result.unit = 'km';
 	}
 	return result;
@@ -8477,7 +8477,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 	{
 
 		var radius = style.radius;
-		if ( radius ) delete style["radius"];
 		var currentStyle = this.getEditingStyle();
 
 		var icon = null;
@@ -8556,6 +8555,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 			// 円
 			if ( this._editingEditingLayer.setRadius && radius ) this._editingEditingLayer.setRadius( radius );
+			if ( this._editingEditingLayer._mRadius && radius ) this._editingEditingLayer._mRadius = radius;
+			
 			// その他
 			if ( this._editingEditingLayer.setStyle )
 			{
@@ -10506,13 +10507,13 @@ GSI.SakuzuListItem = L.Class.extend( {
 		var fillColor = options.fillColor;
 		var fillOpacity = ( options.fillOpacity || options.fillOpacity == 0 ? options.fillOpacity : 1 );
 
-		result.properties[ "_markerType"] = "CircleMarker";
+		result.properties[ "_markerType"] = "Circle";
 		result.properties[ "_color"] = color;
 		result.properties[ "_opacity"] = opacity;
 		result.properties[ "_weight"] = parseInt(weight);
 		result.properties[ "_fillColor"] = fillColor;
 		result.properties[ "_fillOpacity"] = fillOpacity;
-		result.properties[ "_radius"] = layer.getRadius();
+		result.properties[ "_radius"] = parseFloat( parseFloat(layer.getRadius() ).toFixed( 1 ) );
 		
 		if ( layer.feature &&  layer.feature.properties )
 		{
@@ -12148,6 +12149,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			this._circleRadiusInput.val(event.radius);
 
 			this._circleRadiusUnitSelect.val(event.unit);
+			this._onCircleRadiusChange();
 		},
 
 		_onCircleRadiusUnitChange : function()
@@ -12157,11 +12159,16 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			if( this._circleRadiusUnitSelect.val() == 'km' )
 			{
 				radius /= 1000;
+                radius = radius.toFixed(4);
 			}
 			else
 			{
 				radius *= 1000;
+				radius = radius.toFixed(1);
 			}
+			
+			this._circleRadiusInput.val(radius);
+			radius = parseFloat( radius );
 			this._circleRadiusInput.val( radius );
 		},
 
@@ -12177,7 +12184,12 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				{
 					radius *= 1000;
 				}
-				this._refreshEditing( { radius:radius });
+				else
+				{
+                }
+				
+                radius = radius.toFixed(1);
+				this._refreshEditing( { radius: parseFloat(radius) });
 			}
 		},
 
@@ -12460,6 +12472,36 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			opacity = Math.floor( ( 1-opacity ) * 100 );
 			this._fillOpacitySlider.slider( "value", opacity );
 		}
+		
+		// 円
+		
+		if ( style.radius || style.radius == 0 )
+		{
+            try
+            {
+    			if ( style.radius  > 1000 )
+    			{
+                    this._circleRadiusInput.val( ( style.radius / 1000 ).toFixed(4) );
+                    this._circleRadiusUnitSelect.val('km');
+                }
+                else
+                {
+                    
+                    this._circleRadiusInput.val( style.radius.toFixed(1) );
+                    this._circleRadiusUnitSelect.val('m');
+                }
+            }
+            catch( e )
+            {
+            }
+        }
+        else
+        {
+            this._circleRadiusInput.val( '' );
+            this._circleRadiusUnitSelect.val('m');
+        }
+        
+        
 	},
 
 	_createEditInfoTableLine : function( no, key, value )
@@ -13617,8 +13659,15 @@ GSI.SakuzuDialog2 = GSI.Dialog.extend( {
 			if( this.circleRadiusUnitSelect.val() == 'km' )
 			{
 				radius *= 1000;
+                radius = radius.toFixed(4);
 			}
-
+			else
+			{
+                radius = radius.toFixed(1);
+            }
+            this.circleRadiusInput.val(radius);
+			radius = parseFloat( radius );
+            
 			if ( this.drawingInfo && this.drawingInfo.drawLayer && this.drawingInfo.drawLayer.setRadius )
 			{
 				this.drawingInfo.drawLayer.setRadius( radius );
@@ -16556,6 +16605,7 @@ GSI.GeoJSON = L.Class.extend( {
 					break;
 
 				case "CircleMarker":
+				case "Circle":
 					var options ={};
 					for( var key in feature.properties )
 					{
