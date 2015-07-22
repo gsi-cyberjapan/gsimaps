@@ -208,10 +208,10 @@ GSI.TEXT.SHARE = {};
 GSI.TEXT.SHARE.DIALOG_TITLE = '共有';
 GSI.TEXT.SHARE.DIALOG_LINK_TITLE = 'リンクを取得';
 GSI.TEXT.SHARE.DIALOG_BUILTIN_TITLE = 'ウェブサイトに埋め込む';
-GSI.TEXT.SHARE.DIALOG_SAVE_TITLE = '名前を付けて保存';
+GSI.TEXT.SHARE.DIALOG_SAVE_TITLE = '名前を付けて一時保存';
 
 GSI.TEXT.SHARE.DIALOG_LINK_MESSAGE = '次のURLをメール等で送付することで、現在表示されている地図を共有することができます。'+
-	'<div style="font-size:85%;">※作図結果を反映した状態で共有したい場合は、本サイトの「名前をつけて保存」機能をご利用下さい</div>';
+	'<div style="font-size:85%;">※作図結果を反映した状態で共有したい場合は、本サイトの「名前をつけて一時保存」機能をご利用下さい</div>';
 GSI.TEXT.SHARE.DIALOG_BUILTIN_MESSAGE = '次のタグをHTMLファイルに加えることで、地理院地図をウェブサイトに埋め込むことができます。';
 GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを<string>[上記のHTMLを保存]</strong>ボタンをクリックして保存して下さい。' ;
 GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '次のHTMLをテキストエディタで<strong>文字コードUTF-8</strong>で保存して下さい。' ;
@@ -535,7 +535,7 @@ CONFIG.FUNCMENU = {
 						},
 						{
 							id : 'share_file',
-							title : '名前を付けて保存',
+							title : '名前を付けて一時保存',
 							arrow : true
 						}
 					]
