@@ -1,26 +1,27 @@
 {
-	"layers": [
-		{
-			"type": "LayerGroup",
-			"title": "提供実験",
-			"iconUrl": "",
-			"entries": [
-						{
-							"type": "Layer",
-							"id": "experimental_anno",
-							"title": "地図情報（注記）",
-							"iconUrl": "",
-							"url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
-							"minZoom": 15,
-							"maxZoom": 18,
-							"maxNativeZoom": 15,
-							"attribution": "",
-							"cocotile": false,
-							"html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
-						}
-					],
-			"open": false,
-			"toggleall": false
-		}
-	]
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "提供実験",
+      "iconUrl": "",
+      "open": false,
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "experimental_anno",
+          "title": "地図情報（注記）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+        }
+      ]
+    }
+  ]
 }
