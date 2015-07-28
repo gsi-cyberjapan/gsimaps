@@ -2365,6 +2365,34 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "20150723lsi",
+                  "title": "2015.7.23",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150723lsi/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 13,
+                  "maxZoom": 16,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.7.23)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20150707lsi",
+                  "title": "2015.7.7",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150707lsi/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 13,
+                  "maxZoom": 16,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.7.7)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                },             
+                {
+                  "type": "Layer",
                   "id": "20150621lsi",
                   "title": "2015.6.21",
                   "iconUrl": "",
