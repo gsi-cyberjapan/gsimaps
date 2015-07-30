@@ -25,8 +25,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 18,
-              "maxNativeZoom": 17,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -41,7 +40,7 @@
               "minZoom": 10,
               "maxZoom": 18,
               "maxNativeZoom": 17,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1988年～1990年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -56,7 +55,7 @@
               "minZoom": 10,
               "maxZoom": 18,
               "maxNativeZoom": 17,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1984年～1987年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -71,7 +70,7 @@
               "minZoom": 10,
               "maxZoom": 18,
               "maxNativeZoom": 17,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1979年～1983年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -116,7 +115,7 @@
               "minZoom": 2,
               "maxZoom": 18,
               "maxNativeZoom": 17,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
