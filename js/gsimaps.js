@@ -20543,7 +20543,7 @@ GSI.LayersJSON = L.Class.extend( {
 				info._cocotileId = '';
 				if ( info.cocotile  )
 				{
-					var matchArr = info.url.match(/\/xyz\/([^\/]+)\//);
+					var matchArr = info.url.match(/\/xyz\/(..*?)\/(?={)/);
 					if ( matchArr )
 					{
 						info._cocotileId = matchArr[1];
