@@ -2480,6 +2480,20 @@
                       "maxZoom": 12,
                       "legendUrl": "",
                       "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "kiban_koushin2015_07",
+                      "title": "7月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update/2015-07/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
                     }
                   ]
                 },
