@@ -20,6 +20,45 @@
           "maxZoom": 18,
           "maxNativeZoom": 15,
           "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_rdcl",
+          "title": "地図情報（道路中心線）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_rdcl/{z}/{x}/{y}.geojson",
+          "minZoom": 16,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "attribution": "",
+          "cocotile": false,
+          "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_railcl",
+          "title": "地図情報（鉄道中心線）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_railcl/{z}/{x}/{y}.geojson",
+          "minZoom": 16,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "attribution": "",
+          "cocotile": false,
+          "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+       },
+       {
+          "type": "Layer",
+          "id": "experimental_rvrcl",
+          "title": "地図情報（河川中心線）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_rvrcl/{z}/{x}/{y}.geojson",
+          "minZoom": 16,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "attribution": "",
+          "cocotile": false,
+          "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         }
       ]
     }
