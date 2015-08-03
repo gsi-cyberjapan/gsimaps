@@ -115,7 +115,7 @@ CONFIG.UTMGRIDSTYLE = {
 	visible : false
 };
 CONFIG.UTMGRIDLABELCLASSNAME = 'utmgrid_label';
-
+CONFIG.UTMGRIDBOUNDARYLABEL_HIDEMETER = true; 
 
 // 磁北線の数
 CONFIG.JIHOKULINECOUNT = 3;
@@ -18975,12 +18975,24 @@ GSI.UTM.Grid = L.Class.extend( {
 			visible : false,
 			clickable : false
 		},
+		zoneLineStyle : {
+			color : "#FF0000",
+			weight : 2,
+			color2 : "#FF0000",
+			opacity: 1,
+			fillOpacity:1,
+			dashArray : null,
+			visible : false,
+			clickable : false
+		},
 		labelClassName : 'utmgrid_label',
 		visible : false
 	},
 
 	_lines : [],
 	_labels : [],
+	_zoneLines : [],
+	_zoneLabels : [],
 
 	initialize : function (map, options )
 	{
@@ -19028,11 +19040,14 @@ GSI.UTM.Grid = L.Class.extend( {
 
 				if ( c.grid == 'a')
 				{
+            		this._clearLayerArr(this._lines, 0);
+            		this._clearLayerArr(this._labels, 0);
 					this.drawZoneGrid( bounds );
 				}
 				else
 				{
 					this.drawGrid( bounds, zoom, c.grid);
+					this.drawZoneGrid( bounds, true, this.options.zoneLineStyle );
 				}
 				try
 				{
@@ -19090,6 +19105,7 @@ GSI.UTM.Grid = L.Class.extend( {
 		var xExit = false;
 
 		var gridPoints = [];
+		var gridPoints2 = [];
 
 		var lineIndex = 0;
 		var labelIndex = 0;
@@ -19111,9 +19127,11 @@ GSI.UTM.Grid = L.Class.extend( {
 
 			// y軸ループ
 			var latlngs = [];
+			var labelLatlngs = [];
 			var utmYs = [];
 			var utmY = startUTMPoint.y;
 			var yIndex = 0;
+			var yIndex2 = 0;
 
 			var x10mNumber = '';
 			if ( meter <100 * 1000 )
@@ -19121,18 +19139,42 @@ GSI.UTM.Grid = L.Class.extend( {
 				x10mNumber = utmX;
 
 			}
+			
+			var lastMark = '';
+			
 			while( true )
 			{
 				var utmPoint =new Proj4js.Point(utmX,utmY);
 				var latLngPoint = Proj4js.transform(projUTM, GSI.UTM.Utils.PROJ_WORLD,utmPoint);
 				var mark = GSI.UTM.Utils.getUTMMark( latLngPoint.y );
-
+				
+				if ( lastMark != '' && lastMark != mark )
+				{
+					
+					var latLng = L.latLng( 24 + Math.floor( (latLngPoint.y - 24 ) / 8 ) * 8, latLngPoint.x);
+					
+					var changeUTMPoint = Proj4js.transform(GSI.UTM.Utils.PROJ_WORLD,projUTM,new Proj4js.Point(latLng.lng,latLng.lat ) );
+					//console.log( changeUTMPoint.y );
+					
+				    utmYs.push( changeUTMPoint.y );
+				    if ( CONFIG.UTMGRIDBOUNDARYLABEL_HIDEMETER ) latLng._hideMeter = true
+					labelLatlngs.push( latLng );
+					
+					if ( !gridPoints2[ yIndex2 ] ) gridPoints2[ yIndex2 ] = [];
+					gridPoints2[ yIndex2 ].push( latLng );
+					
+					
+					yIndex2++;
+				}
+				
+				lastMark = mark;
 				//
 				var latLng = L.latLng(latLngPoint.y, latLngPoint.x);
 
 				utmYs.push( utmY );
 				latlngs.push( latLng );
-
+				labelLatlngs.push( latLng );
+				
 				if ( !gridPoints[ yIndex ] ) gridPoints[ yIndex ] = [];
 				gridPoints[ yIndex ].push( latLng );
 
@@ -19181,7 +19223,27 @@ GSI.UTM.Grid = L.Class.extend( {
 					}
 					lineIndex++;
 				}
+				
+				for ( var i=0; i<gridPoints2.length; i++ )
+				{
+					if( !gridPoints2[i] ) continue;
+					if ( this._lines.length <= lineIndex )
+					{
+						var polyline = L.polyline(gridPoints2[i], lineStyle);
+						polyline._noMeasure = true;
+						layer.addLayer( polyline );
+						this._lines.push( polyline );
+					}
+					else
+					{
+						var polyline = this._lines[lineIndex];
+						polyline.setLatLngs( gridPoints2[i] );
+					}
+					lineIndex++;
+				}
+				
 				gridPoints = [];
+				gridPoints2 = [];
 				zone++;
 				projUTM = new Proj4js.Proj(GSI.UTM.Utils.getUTMDefName( zone ));
 
@@ -19199,10 +19261,11 @@ GSI.UTM.Grid = L.Class.extend( {
 			else
 			{
 				// ラベル表示
-				for ( var i=0; i<latlngs.length; i++ )
+				for ( var i=0; i<labelLatlngs.length; i++ )
 				{
-					var latlng = latlngs[i];
+					var latlng = labelLatlngs[i];
 					var utmY = utmYs[i];
+					var mark = GSI.UTM.Utils.getUTMMark( latlng.lat ); // 2015-07-19
 					if ( this._labels.length <= labelIndex )
 					{
 						var label = new L.Label({
@@ -19212,7 +19275,7 @@ GSI.UTM.Grid = L.Class.extend( {
 								className: this.options.labelClassName,
 								clickable : false
 							});
-						label.setContent(  GSI.UTM.Utils.getUTMPointName( zone, mark, utmX, utmY, 4, meter >=100000 ) );
+						label.setContent(  GSI.UTM.Utils.getUTMPointName( zone, mark, utmX, utmY, 4, ( latlng._hideMeter || meter >=100000 ) ) );
 						label.setLatLng( latlng);
 						layer.addLayer( label );
 						this._labels.push( label );
@@ -19220,7 +19283,7 @@ GSI.UTM.Grid = L.Class.extend( {
 					else
 					{
 						var label = this._labels[labelIndex];
-						label.setContent(  GSI.UTM.Utils.getUTMPointName( zone, mark, utmX, utmY, 4, meter >=100000 ) );
+						label.setContent(  GSI.UTM.Utils.getUTMPointName( zone, mark, utmX, utmY, 4, ( latlng._hideMeter || meter >=100000 ) ) );
 						label.setLatLng( latlng );
 					}
 					labelIndex++;
@@ -19252,7 +19315,27 @@ GSI.UTM.Grid = L.Class.extend( {
 					lineIndex++;
 
 				}
+				
+				for ( var i=0; i<gridPoints2.length; i++ )
+				{
+					if( !gridPoints2[i] ) continue;
+					if ( this._lines.length <= lineIndex )
+					{
+						var polyline = L.polyline(gridPoints2[i], lineStyle);
+						polyline._noMeasure = true;
+						layer.addLayer( polyline );
+						this._lines.push( polyline );
+					}
+					else
+					{
+						var polyline = this._lines[lineIndex];
+						polyline.setLatLngs( gridPoints2[i] );
+					}
+					lineIndex++;
+				}
+				
 				gridPoints = [];
+				gridPoints2 = [];
 				break;
 			}
 
@@ -19272,7 +19355,7 @@ GSI.UTM.Grid = L.Class.extend( {
 	},
 
 	// 小縮尺用グリッド
-	drawZoneGrid : function(bounds)
+	drawZoneGrid : function(bounds, nolabel, style)
 	{
 		var startX = Math.floor( bounds.getWest() / 6 ) * 6;
 		var startY = Math.floor( bounds.getSouth() / 8 ) * 8;
@@ -19280,8 +19363,8 @@ GSI.UTM.Grid = L.Class.extend( {
 		var endX = ( Math.floor( bounds.getEast() / 6 ) + 1 ) * 6;
 		var endY = ( Math.floor( bounds.getNorth() / 8 ) + 1 ) * 8;
 
-		var lineStyle = $.extend( true, {} , this.options.lineStyle );
-
+		var lineStyle = $.extend( true, {} ,( style ? style : this.options.lineStyle ) );
+		
 		var lineIndex = 0;
 		var labelIndex = 0;
 
@@ -19298,52 +19381,55 @@ GSI.UTM.Grid = L.Class.extend( {
 			var latlngs = [];
 			for ( var x = startX; x<=endX; x+=6 )
 			{
-
-				var zone = Math.floor(x/6) + 31;
-				var nextZone = Math.floor((x+6)/6) + 31;
-
-				if ( zone < 51 ) continue;
-				if (  zone > 57 ) break;
-
-				if ( y+8 <= endY && y +8 < 57 && x+6 <= endX && nextZone <=57 )
+				if ( !nolabel )
 				{
+    				var zone = Math.floor(x/6) + 31;
+    				var nextZone = Math.floor((x+6)/6) + 31;
 
-					if ( this._labels.length <= labelIndex )
-					{
-						var label = new L.Label({
-								zoomAnimation : true,
-								noHide : true,
-								offset: [8, -24],
-								className: this.options.labelClassName
+    				if ( zone < 51 ) continue;
+    				if (  zone > 57 ) break;
 
-							});
-						label.setContent( zone + mark);
-						label.setLatLng( { 'lng' : x, 'lat' : y} );
-						layer.addLayer( label );
-						this._labels.push( label );
-					}
-					else
-					{
-						var label = this._labels[labelIndex];
-						label.setContent( zone + mark);
-						label.setLatLng( { 'lng' : x, 'lat' : y} );
-					}
-					labelIndex ++;
+    				if ( y+8 <= endY && y +8 < 57 && x+6 <= endX && nextZone <=57 )
+    				{
 
-				}
+    					if ( this._zoneLabels.length <= labelIndex )
+    					{
+    						var label = new L.Label({
+    								zoomAnimation : true,
+    								noHide : true,
+    								offset: [8, -24],
+    								className: this.options.labelClassName
+
+    							});
+    						label.setContent( zone + mark);
+    						label.setLatLng( { 'lng' : x, 'lat' : y} );
+    						layer.addLayer( label );
+    						this._zoneLabels.push( label );
+    					}
+    					else
+    					{
+    						var label = this._zoneLabels[labelIndex];
+    						label.setContent( zone + mark);
+    						label.setLatLng( { 'lng' : x, 'lat' : y} );
+    					}
+    					labelIndex ++;
+
+    				}
+    			}
 				latlngs.push( L.latLng(y, x) );
 			}
 
-			if ( this._lines.length <= lineIndex )
+			if ( this._zoneLines.length <= lineIndex )
 			{
 				var polyline = L.polyline(latlngs, lineStyle);
 				polyline._noMeasure = true;
 				layer.addLayer( polyline );
-				this._lines.push( polyline );
+				this._zoneLines.push( polyline );
 			}
 			else
 			{
-				var polyline = this._lines[lineIndex];
+				var polyline = this._zoneLines[lineIndex];
+				polyline.setStyle( lineStyle );
 				polyline.setLatLngs( latlngs );
 			}
 			lineIndex++;
@@ -19365,17 +19451,18 @@ GSI.UTM.Grid = L.Class.extend( {
 
 				latlngs.push( L.latLng(y, x) );
 			}
-			if ( this._lines.length <= lineIndex )
+			if ( this._zoneLines.length <= lineIndex )
 			{
 				var polyline = L.polyline(latlngs, lineStyle);
 				polyline._noMeasure = true;
 				layer.addLayer( polyline );
 
-				this._lines.push( polyline );
+				this._zoneLines.push( polyline );
 			}
 			else
 			{
-				var polyline = this._lines[lineIndex];
+				var polyline = this._zoneLines[lineIndex];
+				polyline.setStyle( lineStyle );
 				polyline.setLatLngs( latlngs );
 			}
 			lineIndex++;
@@ -19388,8 +19475,8 @@ GSI.UTM.Grid = L.Class.extend( {
 			this._map.addLayer( this._layer );
 		}
 
-		this._clearLayerArr(this._lines, lineIndex);
-		this._clearLayerArr(this._labels, labelIndex);
+		this._clearLayerArr(this._zoneLines, lineIndex);
+		this._clearLayerArr(this._zoneLabels, labelIndex);
 
 	},
 
@@ -19419,6 +19506,8 @@ GSI.UTM.Grid = L.Class.extend( {
 
 		this._lines = [];
 		this._labels = [];
+		this._zoneLines = [];
+		this._zoneLabels = [];
 	},
 
 	setVisible : function( visible )
