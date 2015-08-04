@@ -8,7 +8,7 @@
       "url": "http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
       "subdomains": "",
       "attribution": "",
-      "cocotile": false,
+      "cocotile": true,
       "legendUrl": "http://cyberjapan.jp/legend/std.pdf",
       "html": ""
     },
@@ -20,7 +20,7 @@
       "url": "http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
       "subdomains": "",
       "attribution": "",
-      "cocotile": false,
+      "cocotile": true,
       "legendUrl": "http://cyberjapan.jp/legend/pale.pdf",
       "html": ""
     },
@@ -32,7 +32,7 @@
       "url": "http://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
       "subdomains": "",
       "attribution": "",
-      "cocotile": false,
+      "cocotile": true,
       "legendUrl": "",
       "html": ""
     },
@@ -44,7 +44,7 @@
       "url": "http://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
       "subdomains": "",
       "attribution": "",
-      "cocotile": false,
+      "cocotile": true,
       "legendUrl": "http://cyberjapan.jp/legend/english2.pdf",
       "html": ""
     },
@@ -56,7 +56,7 @@
       "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
       "subdomains": "",
       "attribution": "",
-      "cocotile": false,
+      "cocotile": true,
       "maxNativeZoom": 17,
       "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
       "html": ""

@@ -15,7 +15,7 @@
           "url": "http://cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
           "subdomains": "",
           "attribution": "",
-          "cocotile": false,
+          "cocotile": true,
           "minZoom": 15,
           "maxZoom": 18,
           "maxNativeZoom": 15,
