@@ -637,7 +637,7 @@ CONFIG.BASETILES = [
 		url : 'http://{s}.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/tmb_bas_n.png',
-		"legendUrl" : "http://cyberjapan.jp/legend/std.pdf",
+		"legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#std",
 		errorTileUrl : 'image/map/no-data-std.png',
 		minZoom : 2
 	},
@@ -647,7 +647,7 @@ CONFIG.BASETILES = [
 		url : 'http://{s}.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/tmb_pal_n.png',
-		"legendUrl" : "http://cyberjapan.jp/legend/pale.pdf",
+		"legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#pale",
 		errorTileUrl : 'image/map/no-data-pale.png',
 		minZoom : 2
 	},
@@ -657,7 +657,7 @@ CONFIG.BASETILES = [
 		url : 'http://{s}.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/icon_white.png',
-		"legendUrl" : "",
+		"legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#blank",
 		maxNativeZoom:14,
 		errorTileUrl : 'image/map/no-data-blank.png',
 		minZoom : 2
@@ -668,7 +668,7 @@ CONFIG.BASETILES = [
 		url : 'http://{s}.gsi.go.jp/xyz/english/{z}/{x}/{y}.png',
 		subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
 		icon : 'image/map/jaise.png',
-		"legendUrl" : "http://cyberjapan.jp/legend/english2.pdf",
+		"legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#english",
 		maxNativeZoom:11,
 		errorTileUrl : 'image/map/no-data-english.png',
 		minZoom : 2
