@@ -312,7 +312,6 @@ CONFIG.HIDDENCONTROLPARAMETER = {
 CONFIG.DIALOGPARAMETER = {
 	VIEWLISTDIALOG : 'v',
 	LAYERTREEDIALOG : 'l',
-	VIEWLISTHIDEALL : 'h'
 };
 
 
@@ -1236,11 +1235,11 @@ function initialize()
 		{
 			var l = e.visibleLayers[i];
 		
-			if ( l && l.info )layers.push( l.info );
-			
+			if ( l && l.info ){
+				layers.push( l.info );
+				GSI.GLOBALS.mapLayerList.append(l.info, true,l.hidden);
+			}
 		}
-		
-		GSI.GLOBALS.mapLayerList.appendList( layers, GSI.GLOBALS.queryParams.getViewListHideAll() );
  		GSI.GLOBALS.cocoTileLayer.refresh();
  	} );
 
@@ -1990,6 +1989,48 @@ GSI.PageStateManager = L.Class.extend( {
 		}
 
 		return result;
+	},
+	getTileViewSetting : function( options ) {
+		if ( !options )options = {};
+		var result = '';
+
+		var tileIdList = [];
+		if ( !options.noTile )
+		{
+			var tileList = this._mapLayerList.getTileList();
+
+			for ( var i=0; i<tileList.length; i++ )
+				tileIdList.push( tileList[i] );
+
+		}
+
+		for ( var i=tileIdList.length-1; i>=0; i-- )
+		{
+			result += ( tileIdList[i]._visibleInfo && tileIdList[i]._visibleInfo._isHidden ? '0' : '1' );
+		}
+
+		var idList = [];
+		if ( !options.noList )
+		{
+			var list = this._mapLayerList.getList();
+
+			for ( var i=0; i<list.length; i++ )
+				idList.push( list[i] );
+
+		}
+		for ( var i=idList.length-1; i>=0; i-- )
+		{
+			result += ( idList[i]._visibleInfo && idList[i]._visibleInfo._isHidden ? '0' : '1' );
+		}
+
+		if ( result != '' )
+		{
+			return "disp=" + result;
+		}
+		else
+		{
+			return "";
+		}
 	}
 } );
 
@@ -2090,10 +2131,7 @@ GSI.QueryParams = L.Class.extend( {
 	},
 
 
-	getViewListHideAll: function()
-	{
-		return this._viewListHideAll;
-	},
+
 
 	getControlSetting : function( )
 	{
@@ -2151,17 +2189,38 @@ GSI.QueryParams = L.Class.extend( {
 		this._layers = [];
 		if ( this.params["ls"] )
 		{
+			var disp = this.params["disp"];
+			
 			var layers = this.params["ls"].split( '|' );
 
 			for ( var i=0; i<layers.length; i++ )
 			{
 				if ( $.trim( layers[i] ) == '' ) continue;
 				var parts  = layers[i].split( ',' );
-				
+				var $hdn = false;
+
+				if ( disp && disp.length > i)
+				{
+					if ( disp.charAt(i) == '0' )
+					{
+						$hdn = true;
+					}
+					else
+					{
+						$hdn = false;
+					}
+				}
+				else
+				{
+					$hdn = false;
+				}
+
 				var layerData = {
 					id : parts[ 0 ],
-					opacity : 1
+					opacity : 1,
+					hidden : $hdn
 				};
+
 				
 				if ( parts.length >= 2 )
 				{
@@ -2280,9 +2339,7 @@ GSI.QueryParams = L.Class.extend( {
 						this._layerTreeDialogVisible = true;
 						break;
 
-					case CONFIG.DIALOGPARAMETER.VIEWLISTHIDEALL:
-						this._viewListHideAll = true;
-						break;
+
 
 				}
 			}
@@ -15743,7 +15800,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 
 		this._setCheckdState( this._visibleViewListDlgCheck, false );
-		this._setCheckdState( this._viewListHideAllCheck, false );
+
 		this._setCheckdState( this._visibleLayerTreeDlgCheck, false );
 		this._setCheckdState( this._showCurrentFolderCheck, false );
 
@@ -15924,7 +15981,11 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 			{
 				queryString += ( queryString != '' ? '&' : '' ) + ls;
 			}
-
+			var disp = this.pageStateManager.getTileViewSetting();
+			if ( disp != '' )
+			{
+				queryString += ( queryString != '' ? '&' : '' ) + disp;
+			}
 		}
 
 
@@ -15961,7 +16022,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 		var visibleDialogs = {};
 		visibleDialogs[ CONFIG.DIALOGPARAMETER.VIEWLISTDIALOG] = this._visibleViewListDlgCheck.is( ':checked' );
-		visibleDialogs[ CONFIG.DIALOGPARAMETER.VIEWLISTHIDEALL] = this._viewListHideAllCheck.is( ':checked' );
+
 		visibleDialogs[ CONFIG.DIALOGPARAMETER.LAYERTREEDIALOG] = this._visibleLayerTreeDlgCheck.is( ':checked' );
 
 		var currentPath = null;
@@ -16260,10 +16321,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		ul.append( item.li );
 		this._visibleViewListDlgCheck = item.checkbox;
 
-		// 全て非表示の状態に
-		item = __createItem( this,'表示中の情報を「全非表示」状態にする' );
-		ul.append( item.li );
-		this._viewListHideAllCheck = item.checkbox;
+
 
 
 
@@ -17738,7 +17796,9 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 		{
 			
 		}
-		this._reset();
+		if(this._tileContainer)
+			this._reset();
+
 		this._update();
 	},
 
@@ -20308,8 +20368,10 @@ GSI.LayersJSON = L.Class.extend( {
 			var info = {
 				id : layerData.id,
 				idx : this.visibleLayers.length,
-				initialOpacity : layerData.opacity
+				initialOpacity : layerData.opacity,
+				hidden : layerData.hidden
 			};
+
 			this.visibleLayers.push( info );
 			this.visibleLayersHash[ layerData.id ] = info;
 		}
