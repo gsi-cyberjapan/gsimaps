@@ -21407,9 +21407,9 @@ GSI.BaseLayerSelector = L.Class.extend( {
 				.attr( { 'src' : this.tiles[i ].icon } );
 
 			var cx = $("<img>").css({"width":"16px","height":"16px","background":"#0022ee","position":"absolute","left":"1px","top":"1px","opacity":"1"})
-							.attr({ "src": "./image/map/i.png" });
+							.attr({ "src": "./image/map/i.png" , "title" : "凡例・関連情報を表示" });
 			var a2 = $("<a>").css({"position":"absolute", "left":"1px","top":"1px"})
-						.html("　").attr( {'title' : '凡例・関連情報を表示'} );
+						.html("　");
 			a2.append(cx);
 			div.css({'position':'relative'});
 			a.append( img );
