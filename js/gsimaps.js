@@ -21406,24 +21406,26 @@ GSI.BaseLayerSelector = L.Class.extend( {
 				.css( { width:"60px", height:"60px"} )
 				.attr( { 'src' : this.tiles[i ].icon } );
 
+			var cx = $("<img>").css({"width":"16px","height":"16px","background":"#0022ee","position":"absolute","left":"1px","top":"1px","opacity":"1"})
+							.attr({ "src": "./image/map/i.png" });
+			var a2 = $("<a>").css({"position":"absolute", "left":"1px","top":"1px"})
+						.html("　").attr( {'title' : '凡例・関連情報を表示'} );
+			a2.append(cx);
+			div.css({'position':'relative'});
 			a.append( img );
 			div.append( a );
-			td.append( div );
 
-
-			//var title = $( '<a title="凡例・関連情報を表示" href="' + this.tiles[i].legendUrl + '" >' + this.tiles[i ].title + '</a>' );
-
-			var title = $( '<a>' ).attr( {'title' : '凡例・関連情報を表示'} ).html( this.tiles[i ].title  );
-
+			var timg=$("<img>").attr({ 'src' : './image/map/tmg'+i+'.png' })
+			.css({ 'position':'absolute','right':'1px','bottom':'0px','opacity':'1'});
+			a.append(timg);
+			
 			if ( this.tiles[i].legendUrl && this.tiles[i].legendUrl != '' )
 			{
-				title.attr( { 'href' : this.tiles[i].legendUrl, 'target' : '_blank' } );
+				a2.attr( { 'href' : this.tiles[i].legendUrl, 'target' : '_blank' } );
+				div.append(a2);
 			}
-			else
-			{
-				title.attr( { 'href' : 'javascript:void(0);'} );
-			}
-			td.append( title );
+			
+			td.append( div );
 			tr.append( td );
 
 
@@ -21451,17 +21453,20 @@ GSI.BaseLayerSelector = L.Class.extend( {
 		// 透過率
 
 		tr = $( "<tr>" );
-		var td =$( "<td>" ).html( '透過率' );
-		tr.append( td);
-
 		var td =$( '<td width="200">' );
 
-
+		var optext = $('<td>').css({'width':'88px'});
+		
 		var opacity = this.baseLayer.getOpacity();
+		
+		optext.text('透過率：' + (100 - ( opacity * 100 )) + '%'); 
 
 		var opacitySlider = $( '<div style="margin-left:12px;">' );
 		var sliderChangeHandler = L.bind( function(opacitySlider) {
 				var opacity = opacitySlider.slider( 'option' , 'value');
+
+				optext.text('透過率：' + opacity + '%').css({'white-space':'nowrap'});
+
 				opacity = (100 - opacity) / 100;
 				this.baseLayer.setOpacity( opacity );
 			}, this, opacitySlider );
@@ -21472,6 +21477,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
 			"stop" : sliderChangeHandler
 		});
 		td.append( opacitySlider );
+		tr.append(optext);
 		tr.append (td);
 
 		tbody.append( tr );
