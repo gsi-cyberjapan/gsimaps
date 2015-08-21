@@ -2814,7 +2814,7 @@ GSI.Modal.FileSelectDialog = GSI.Modal.Dialog.extend( {
 
 			},this ) );
 
-			tabFrame.append( this.switcher.getElement().css({float:"right"}));
+			tabFrame.append( this.switcher.getElement().css({"float":"right"}));
 
 			this.fileFrame =$('<div>').addClass( "gsi_modal_fileselect_dlg_inputframe" );
 			this.fileInput = $( '<input>' ).attr( { 'type':'file'} );//.css( { "margin": "14px 4px 14px 4px" } );
@@ -5287,7 +5287,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		onoffFrame.append( label );
 
 		/*
-		var visibleAllFrame = $( '<div>' ).css({float:"right"});
+		var visibleAllFrame = $( '<div>' ).css({"float":"right"});
 		var visibleAllSwitch  =new GSI.OnOffSwitch( {className:'visibleall', checked:true, title: ""} );
 		visibleAllFrame.append( visibleAllSwitch.getElement() );
 		frame.append( visibleAllFrame );
@@ -16177,22 +16177,22 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 		//if (!window.File || !window.FileReader || !window.FileList || !window.Blob)
 
-		this._downloadButton = $( '<a>' ).attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {float:'right'} )
+		this._downloadButton = $( '<a>' ).attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {'float':'right'} )
 				.html(GSI.TEXT.SHARE.DIALOG_DOWNLOADBTN).click( L.bind( this._onDownLoadClick,this ) );
 
 		if ( !GSI.Utils.canUseFlashPlayer() )
 		{
-			this._copyButton = $( '<span>' ).css( {float:'right'} ) .html( GSI.TEXT.SHARE.DIALOG_NOCOPYMSG );
+			this._copyButton = $( '<span>' ).css( {'float':'right'} ) .html( GSI.TEXT.SHARE.DIALOG_NOCOPYMSG );
 		}
 		else
 		{
-			this._copyButton = $( '<a>' ).attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {float:'right'} )
+			this._copyButton = $( '<a>' ).attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {'float':'right'} )
 				.html( GSI.TEXT.SHARE.DIALOG_COPYBTN );
 		}
 
 		frame.append( textareaFrame );
 
-		var settingButton = $( '<a>').attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {float:'left'} )
+		var settingButton = $( '<a>').attr( {'href':'javascript:void(0);'} ).addClass( "normalbutton").css( {'float':'left'} )
 			.html( '詳細設定' )
 			.click( L.bind( function() { this._settingFrame.slideToggle('fast'); }, this ) );
 
@@ -18680,7 +18680,7 @@ GSI.UTM.Utils = {
 		}
 
 		result.zone = usngStr.charAt(j++)*10 + usngStr.charAt(j++)*1;
-		result.let = usngStr.charAt(j++)
+		result.mylet = usngStr.charAt(j++)
 		result.sq1 = usngStr.charAt(j++)
 		result.sq2 = usngStr.charAt(j++)
 
@@ -18701,7 +18701,7 @@ GSI.UTM.Utils = {
 		return result;
 	},
 	
-	_USNGtoUTM : function (zone,let,sq1,sq2,east,north)
+	_USNGtoUTM : function (zone,mylet,sq1,sq2,east,north)
 	{ 
 		var result = {};
 		
@@ -18715,7 +18715,7 @@ GSI.UTM.Utils = {
 		var appxEast=1+eSqrs%8; 
 
 		// convert northing to UTM
-		var letNorth = "CDEFGHJKLMNPQRSTUVWX".indexOf(let);
+		var letNorth = "CDEFGHJKLMNPQRSTUVWX".indexOf(mylet);
 		if (zone%2)  //odd number zone
 		var nSqrs="ABCDEFGHJKLMNPQRSTUV".indexOf(sq2) 
 		else        // even number zone
@@ -18729,7 +18729,7 @@ GSI.UTM.Utils = {
 		result.N=appxNorth*1000000+Number(north)*Math.pow(10,5-north.length);
 		result.E=appxEast*100000+Number(east)*Math.pow(10,5-east.length)
 		result.zone=zone;
-		result.letter=let;
+		result.letter=mylet;
 
 		return result;
 	},
@@ -18800,9 +18800,9 @@ GSI.UTM.Utils = {
 		{
 			var usngp = this._parseUSNGText(s,usngp);
 			if ( !usngp ) return null;
-			var coords = this._USNGtoUTM(usngp.zone,usngp.let,usngp.sq1,usngp.sq2,usngp.east,usngp.north) 
+			var coords = this._USNGtoUTM(usngp.zone,usngp.mylet,usngp.sq1,usngp.sq2,usngp.east,usngp.north) 
 			
-			if (usngp.let < 'N') 
+			if (usngp.mylet < 'N') 
 			{
 				coords.N -= NORTHING_OFFSET
 			}
