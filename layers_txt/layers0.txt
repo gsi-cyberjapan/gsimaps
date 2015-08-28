@@ -57,7 +57,6 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
-      "maxNativeZoom": 17,
       "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
       "html": ""
     }
