@@ -1,0 +1,16 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "dem",
+      "title": "",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/demtile.html",
+      "html": ""
+    }
+  ]
+}
