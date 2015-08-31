@@ -2331,6 +2331,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "20150728dol",
+                  "title": "2015.7.28（無人航空機（UAV）撮影）",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150728dol/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 14,
+                  "maxZoom": 18,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.7.28（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "20150301dol",
                   "title": "2015.3.1（無人航空機（UAV）撮影）",
                   "iconUrl": "",
@@ -2469,6 +2483,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "handoku20150728dol2",
+                  "title": "2015.7.28(無人航空機(UAV)撮影)",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150728dol2/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 13,
+                  "maxZoom": 17,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2015.7.28(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2015.7.28 と合わせてご覧下さい。</font></div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "handoku20150301dol2",
                   "title": "2015.3.1(無人航空機(UAV)撮影)",
                   "iconUrl": "",
@@ -2601,6 +2629,18 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "seisyazukaku1311nishinoshima7",
+                  "title": "2015.7.28",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1311nishinoshima/seisyazukaku1311nishinoshima_150728.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2015.7.28</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
                 {
                   "type": "Layer",
                   "id": "seisyazukaku1311nishinoshima6",
@@ -3076,6 +3116,18 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "coastline1311nishinoshima_150728",
+                  "title": "2015.7.28",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1311nishinoshima/coastline1311nishinoshima_150728.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2015.7.28</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "coastline1311nishinoshima_150301",
                   "title": "2015.3.1",
                   "iconUrl": "",
@@ -3212,6 +3264,18 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "movie1311nishinoshima20150728",
+                  "title": "2015.7.28～29(無人航空機（UAV）)",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1311nishinoshima/movie1311nishinoshima_150728.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">簡易動画 - 2015.7.28(無人航空機(UAV))</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
                 {
                   "type": "Layer",
                   "id": "movie1311nishinoshima",
