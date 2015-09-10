@@ -1487,6 +1487,27 @@
         },
         {
           "type": "LayerGroup",
+          "title": "平成27年台風18号による大雨",
+          "iconUrl": "",
+          "open": false,
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "150910genchiphoto",
+              "title": "現地調査写真（9月10日）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/overlay/1509typhoon18/genchi/150910/150910genchiphoto.kml",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "legendUrl": "",
+              "html": "現地調査写真（9月10日）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
           "title": "長野県北部地震",
           "iconUrl": "",
           "open": false,
