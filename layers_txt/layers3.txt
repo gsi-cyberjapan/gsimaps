@@ -1506,6 +1506,20 @@
             },      
             {
               "type": "Layer",
+              "id": "20150911dol1",
+              "title": "常総地区正射画像（2015.9.11午前撮影)",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol1/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
               "id": "1509typhoon18_nanamel_joso_150911_2",
               "title": "常総地区斜め写真（2015.9.11午後撮影)",
               "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
@@ -1533,6 +1547,21 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }, 
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_shinsui_joso_150911_4",
+              "title": "常総市の推定浸水範囲（2015.9.11 13:00時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_4/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月11日11:30～13:00）の画像判読により推定<br>※9月11日 13:00時点の想定浸水範囲は、常総地区のみを対象としており、板東市周辺地区は調査対象としていません。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }, 
             {
               "type": "Layer",
@@ -1575,7 +1604,22 @@
               "cocotile": false,
               "legendUrl": "",
               "html": "現地調査写真（9月10日）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_nanameh_kanuma_150911_1",
+              "title": "鹿沼地区斜め写真（2015.9.11撮影)",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_kanuma_150911_1/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            } 
           ]
         },
         {
