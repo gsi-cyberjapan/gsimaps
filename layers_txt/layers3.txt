@@ -1506,6 +1506,21 @@
             },      
             {
               "type": "Layer",
+              "id": "1509typhoon18_shinsui_joso_150911_2",
+              "title": "常総市の推定浸水範囲（精査中 第3報）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_2/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "常総市の推定浸水範囲（精査中 第3報）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },      
+            {
+              "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150911_1",
               "title": "常総市の推定浸水範囲（精査中 第2報）",
               "iconUrl": "",
@@ -1522,7 +1537,7 @@
             {
               "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150910",
-              "title": "常総市の推定浸水範囲（精査中）",
+              "title": "常総市の推定浸水範囲（精査中 第1報）",
               "iconUrl": "",
               "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150910/{z}/{x}/{y}.geojson",
               "subdomains": "",
@@ -1532,7 +1547,7 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "legendUrl": "",
-              "html": "常総市の推定浸水範囲（精査中）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "常総市の推定浸水範囲（精査中 第1報）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
