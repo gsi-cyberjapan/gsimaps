@@ -1506,6 +1506,21 @@
             },      
             {
               "type": "Layer",
+              "id": "1509typhoon18_nanameh_joso_150911_1",
+              "title": "常総地区斜め写真（2015.9.11午前撮影)",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150911_1/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },      
+            {
+              "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150911_2",
               "title": "常総市の推定浸水範囲（精査中 第3報）",
               "iconUrl": "",
@@ -1517,7 +1532,7 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "legendUrl": "",
-              "html": "常総市の推定浸水範囲（精査中 第3報）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "関東地方整備局防災ヘリ撮影（9月10日13：50～14：50）及び報道情報（9月10日18：00時点）の画像判読により推定<br>浸水範囲は、面積約21平方キロメートル、東西約4キロメートル、南北約9キロメートル<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },      
             {
               "type": "Layer",
@@ -1532,7 +1547,7 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "legendUrl": "",
-              "html": "常総市の推定浸水範囲（精査中 第2報）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "関東地方整備局防災ヘリ撮影（9月10日13：50～14：50）及び報道情報（9月10日18：00時点）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },      
             {
               "type": "Layer",
@@ -1547,7 +1562,7 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "legendUrl": "",
-              "html": "常総市の推定浸水範囲（精査中 第1報）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "関東地方整備局防災ヘリ撮影（9月10日13:50～14:50）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
