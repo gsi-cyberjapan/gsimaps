@@ -1494,6 +1494,21 @@
           "entries": [
             {
               "type": "Layer",
+              "id": "1509typhoon18_suichokul_ohsaki_150911_1",
+              "title": "大崎地区垂直写真（2015.9.12撮影）",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_ohsaki_150912/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
               "id": "1509typhoon18_nanamel_ohsaki_150911_1",
               "title": "大崎地区斜め写真（2015.9.11撮影）",
               "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
@@ -1518,7 +1533,37 @@
               "cocotile": true,
               "legendUrl": "",
               "html": "破堤箇所周辺の写真（2006年渋井川）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },      
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_shinsui_yoshida_150912",
+              "title": "大崎地区（吉田川）の推定浸水範囲（2015.9.12 9:00時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_yoshida_150912/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月12日9:00）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_shinsui_shibui_150912",
+              "title": "大崎地区（渋井川）の推定浸水範囲（2015.9.12 9:00時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_shibui_150912/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月12日9:00）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
             {
               "type": "Layer",
               "id": "20150911dol2",
@@ -1561,7 +1606,7 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }, 
+            },
             {
               "type": "Layer",
               "id": "1509typhoon18_suichokul_joso_150911_1",
@@ -1576,7 +1621,22 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }, 
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_nanamel_joso_150912",
+              "title": "常総地区斜め写真（2015.9.12午後撮影)",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150912/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
             {
               "type": "Layer",
               "id": "1509typhoon18_nanamel_joso_150911_2",
@@ -1591,7 +1651,7 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }, 
+            },
             {
               "type": "Layer",
               "id": "1509typhoon18_nanameh_joso_150911_1",
@@ -1606,11 +1666,26 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }, 
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_shinsui_joso_150912",
+              "title": "常総地区南部の推定浸水範囲（2015.9.12 15:30時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150912/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月12日15:30）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
             {
               "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150911_4",
-              "title": "常総市の推定浸水範囲（2015.9.11 13:00時点）",
+              "title": "常総地区の推定浸水範囲（2015.9.11 13:00時点）",
               "iconUrl": "",
               "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_4/{z}/{x}/{y}.geojson",
               "subdomains": "",
@@ -1620,14 +1695,14 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "legendUrl": "",
-              "html": "国土地理院撮影（9月11日11:30～13:00）の画像判読により推定<br>※9月11日 13:00時点の想定浸水範囲は、常総地区のみを対象としており、板東市周辺地区は調査対象としていません。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }, 
+              "html": "国土地理院撮影（9月11日11:30～13:00）の画像判読により推定<br>※9月11日 13:00時点の想定浸水範囲は、常総地区のみを対象としており、坂東市周辺地区は調査対象としていません。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
             {
               "type": "Layer",
-              "id": "1509typhoon18_shinsui_joso_150911_3",
-              "title": "常総市の推定浸水範囲（2015.9.11 10:00時点）",
+              "id": "1509typhoon18_shinsui_joso_150911_3a",
+              "title": "常総地区の推定浸水範囲（2015.9.11 10:00時点）",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_3/{z}/{x}/{y}.geojson",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_3a/{z}/{x}/{y}.geojson",
               "subdomains": "",
               "attribution": "",
               "cocotile": false,
@@ -1636,11 +1711,26 @@
               "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "国土地理院撮影（9月11日8:00～10:00）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },                      
+            },
+            {
+              "type": "Layer",
+              "id": "1509typhoon18_shinsui_bando_150911_3a",
+              "title": "坂東地区の推定浸水範囲（2015.9.11 10:00時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_bando_150911_3a/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月11日8:00～10:00）の画像判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
             {
               "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150911_2",
-              "title": "常総市の推定浸水範囲（2015.9.10 18:00時点）",
+              "title": "常総地区の推定浸水範囲（2015.9.10 18:00時点）",
               "iconUrl": "",
               "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_2/{z}/{x}/{y}.geojson",
               "subdomains": "",
