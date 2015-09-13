@@ -1683,6 +1683,21 @@
             },
             {
               "type": "Layer",
+              "id": "1509typhoon18_shinsui_joso_150913",
+              "title": "常総地区の推定浸水範囲（2015.9.13 10:40時点）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150913/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "国土地理院撮影（9月13日10:40）の画像（斜め写真）判読により推定<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
               "id": "1509typhoon18_shinsui_joso_150912",
               "title": "常総地区南部の推定浸水範囲（2015.9.12 15:30時点）",
               "iconUrl": "",
