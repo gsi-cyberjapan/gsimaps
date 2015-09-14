@@ -1654,6 +1654,21 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "1509typhoon18_nanamel_joso_150913_1",
+                  "title": "常総地区斜め写真（2015.9.13午前撮影）",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150913_1/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "1509typhoon18_nanamel_joso_150912",
                   "title": "常総地区斜め写真（2015.9.12午後撮影)",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
