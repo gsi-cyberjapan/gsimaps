@@ -1770,7 +1770,7 @@
                   "maxNativeZoom": 2,
                   "legendUrl": "",
                   "html": "国土地理院撮影（9月15日10:30）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-                }, 
+                },
                 {
                   "type": "Layer",
                   "id": "1509typhoon18_shinsui_joso_150914",
@@ -1785,7 +1785,7 @@
                   "maxNativeZoom": 2,
                   "legendUrl": "",
                   "html": "国土地理院撮影（9月14日9:30）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-                },                
+                },
                 {
                   "type": "Layer",
                   "id": "1509typhoon18_shinsui_joso_150913",
@@ -2102,6 +2102,18 @@
               "cocotile": false,
               "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">阿蘇山の火山活動 - SAR干渉画像コメント</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "2013_s-ortho_asosan",
+              "title": "過去の簡易空中写真（2013年）",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/2013_s-ortho_asosan/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "legendUrl": "",
+              "html": ""
             }
           ]
         },
