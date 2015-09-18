@@ -31,7 +31,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 16,
           "attribution": "",
-          "cocotile": false,
+          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         },
         {
@@ -44,7 +44,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 16,
           "attribution": "",
-          "cocotile": false,
+          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
        },
        {
@@ -57,7 +57,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 16,
           "attribution": "",
-          "cocotile": false,
+          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         }
       ]

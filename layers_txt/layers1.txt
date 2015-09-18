@@ -2489,7 +2489,7 @@
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update/2015-07/{z}/{x}/{y}.png",
                       "subdomains": "",
                       "attribution": "",
-                      "cocotile": false,
+                      "cocotile": true,
                       "minZoom": 4,
                       "maxZoom": 12,
                       "legendUrl": "",
