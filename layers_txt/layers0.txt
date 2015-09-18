@@ -9,7 +9,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
-      "legendUrl": "http://cyberjapan.jp/legend/std.pdf",
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#std",
       "html": ""
     },
     {
@@ -21,7 +21,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
-      "legendUrl": "http://cyberjapan.jp/legend/pale.pdf",
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#pale",
       "html": ""
     },
     {
@@ -33,7 +33,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
-      "legendUrl": "",
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#blank",
       "html": ""
     },
     {
@@ -45,7 +45,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
-      "legendUrl": "http://cyberjapan.jp/legend/english2.pdf",
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#english",
       "html": ""
     },
     {
