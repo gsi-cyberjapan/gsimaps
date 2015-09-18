@@ -1487,7 +1487,7 @@
         },
         {
           "type": "LayerGroup",
-          "title": "平成27年台風18号による大雨",
+          "title": "平成27年9月関東・東北豪雨",
           "iconUrl": "",
           "open": false,
           "toggleall": false,
