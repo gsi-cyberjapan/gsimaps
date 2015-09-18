@@ -33,7 +33,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "legendUrl": null,
+          "legendUrl": "",
           "html": "<div class=\"gsi_layerinfo_title\">験潮場</div><div class=\"gsi_layerinfo_kaisetu\">＜海岸昇降検知センター登録験潮場＞<br/>国土地理院、気象庁、海上保安庁、国交省等の験潮場<br/>験潮記録から地殻変動を検知しています<br/><br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/655.png' alt='国土地理院'>　国土地理院<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/657.png' alt='気象庁'>　気象庁<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/659.png' alt='海上保安庁'>　海上保安庁<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/661.png' alt='東京大学地震研究所'>　東京大学地震研究所<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/663.png' alt='北海道開発局・沖縄総合事務局'>　北海道開発局・沖縄総合事務局<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/665.png' alt='地方整備局'>　地方整備局<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/667.png' alt='港湾空港技術研究所'>　港湾空港技術研究所<br/><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/669.png' alt='県・その他'>　県・その他</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
@@ -59,7 +59,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 測距</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'>※1</span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'>※2</span><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'>※3</span><br/><p style='text-indent:-2em;padding-left:2em;'><img src='http://portal.cyberjapan.jp/sys/v4/symbols/105.png' alt='火山' width='15' height='15'>　火山（水準、GNSS<span style='vertical-align:super;font-size:0.8em;'>※4</span>、重力、地磁気<span style='vertical-align:super;font-size:0.8em;'>※5</span>、干渉SAR<span style='vertical-align:super;font-size:0.8em;'>※6</span>）</p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -71,7 +71,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 水準</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'>※1</span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'>※2</span><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'>※3</span><br/><p style='text-indent:-2em;padding-left:2em;'><img src='http://portal.cyberjapan.jp/sys/v4/symbols/105.png' alt='火山' width='15' height='15'>　火山（水準、GNSS<span style='vertical-align:super;font-size:0.8em;'>※4</span>、重力、地磁気<span style='vertical-align:super;font-size:0.8em;'>※5</span>、干渉SAR<span style='vertical-align:super;font-size:0.8em;'>※6</span>）</p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -83,7 +83,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 重力</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'>※1</span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'>※2</span><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'>※3</span><br/><p style='text-indent:-2em;padding-left:2em;'><img src='http://portal.cyberjapan.jp/sys/v4/symbols/105.png' alt='火山' width='15' height='15'>　火山（水準、GNSS<span style='vertical-align:super;font-size:0.8em;'>※4</span>、重力、地磁気<span style='vertical-align:super;font-size:0.8em;'>※5</span>、干渉SAR<span style='vertical-align:super;font-size:0.8em;'>※6</span>）</p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -95,7 +95,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 火山</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'>※1</span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'>※2</span><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'>※3</span><br/><p style='text-indent:-2em;padding-left:2em;'><img src='http://portal.cyberjapan.jp/sys/v4/symbols/105.png' alt='火山' width='15' height='15'>　火山（水準、GNSS<span style='vertical-align:super;font-size:0.8em;'>※4</span>、重力、地磁気<span style='vertical-align:super;font-size:0.8em;'>※5</span>、干渉SAR<span style='vertical-align:super;font-size:0.8em;'>※6</span>）</p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -116,7 +116,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">過去に観測していた地区 - 測距</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'>※1</span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'>※2</span><br/><img src='http://portal.cyberjapan.jp/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'>※3</span><br/><p style='text-indent:-2em;padding-left:2em;'><img src='http://portal.cyberjapan.jp/sys/v4/symbols/105.png' alt='火山' width='15' height='15'>　火山（水準、GNSS<span style='vertical-align:super;font-size:0.8em;'>※4</span>、重力、地磁気<span style='vertical-align:super;font-size:0.8em;'>※5</span>、干渉SAR<span style='vertical-align:super;font-size:0.8em;'>※6</span>）</p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -141,7 +141,7 @@
               "cocotile": true,
               "minZoom": 4,
               "maxZoom": 13,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 偏角図/偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、偏角の分布を図に表したものです。<br/>拡大すると2次メッシュに対応した偏角値（偏角一覧図）が確認できます。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -155,7 +155,7 @@
               "cocotile": true,
               "minZoom": 4,
               "maxZoom": 7,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 伏角図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -169,7 +169,7 @@
               "cocotile": true,
               "minZoom": 4,
               "maxZoom": 7,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 全磁力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、全磁力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -183,7 +183,7 @@
               "cocotile": true,
               "minZoom": 4,
               "maxZoom": 7,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 水平分力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、水平分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -197,7 +197,7 @@
               "cocotile": true,
               "minZoom": 4,
               "maxZoom": 7,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 鉛直分力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、鉛直分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
@@ -13975,7 +13975,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">ダム等の位置</div><div class=\"gsi_layerinfo_kaisetu\"></div>"
                     },
                     {

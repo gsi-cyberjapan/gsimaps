@@ -2200,7 +2200,7 @@
                   "cocotile": true,
                   "minZoom": 10,
                   "maxZoom": 17,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.3.1（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2213,7 +2213,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "maxZoom": 18,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">2014.12.10</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
                 },
                 {
@@ -2226,7 +2226,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "maxZoom": 18,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">2014.12.4</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
                 },
                 {
@@ -2239,7 +2239,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 8,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.7.4（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2252,7 +2252,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.3.22（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2265,7 +2265,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.2.16</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2278,7 +2278,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2013.12.17</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2291,7 +2291,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2013.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -2305,7 +2305,7 @@
               "subdomains": "",
               "attribution": "",
               "cocotile": false,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.7.4_飛行経路（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -2317,7 +2317,7 @@
               "subdomains": "",
               "attribution": "",
               "cocotile": false,
-              "legendUrl": null,
+              "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.3.22_飛行経路（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -2352,7 +2352,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 17,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2015.3.1(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2015.3.1 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2365,7 +2365,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "maxZoom": 17,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.12.10)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.12.10 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2378,7 +2378,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 14,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.7.4(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.7.4 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2391,7 +2391,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 15,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.3.22（無人航空機（UAV）撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.3.22 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2404,7 +2404,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 15,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.2.16)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.2.16 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2417,7 +2417,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 15,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2013.12.17)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2013.12.17 と合わせてご覧下さい。</font></div>"
                 },
                 {
@@ -2430,7 +2430,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2013.12.4)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2013.12.4 と合わせてご覧下さい。</font></div>"
                 }
               ]
@@ -2451,7 +2451,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">立体図 - 2015.3.1</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
                 },
                 {
@@ -2463,7 +2463,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">立体図 - 2013.12～2014.12</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -2496,7 +2496,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2015.3.1</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2508,7 +2508,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2014.12.10</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2520,7 +2520,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2014.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2532,7 +2532,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2014.2.16</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2544,7 +2544,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2013.12.17</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2556,7 +2556,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版 - 2013.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -2747,7 +2747,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.1.12)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2789,7 +2789,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.10.8)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2845,7 +2845,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.6.2)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2859,7 +2859,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.5.17)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2873,7 +2873,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.3.30)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2887,7 +2887,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2014.2.26)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2901,7 +2901,7 @@
                   "cocotile": true,
                   "minZoom": 13,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2013.12.24)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像（GSI, TSIC, GEO Grid/AIST)</div>"
                 },
                 {
@@ -2936,7 +2936,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">垂直写真 - 2014.7.4(無人航空機(UAV)撮影)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2948,7 +2948,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">垂直写真 - 2014.3.22（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -2981,7 +2981,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2015.3.1</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -2993,7 +2993,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2014.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3005,7 +3005,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2014.2.16</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3017,7 +3017,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2013.12.17</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3029,7 +3029,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定） - 2013.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3041,7 +3041,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定）</div><div class=\"gsi_layerinfo_subtitle\">(2013.11.21)</div><div class=\"gsi_layerinfo_kaisetu\">海上保安庁撮影の空中写真と、東大地震研究所金子隆之助教撮影の空中写真を使用。</div>"
                 }
               ]
@@ -3062,7 +3062,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">斜め写真</div><div class=\"gsi_layerinfo_subtitle\">(2014.12.4)</div><div class=\"gsi_layerinfo_kaisetu\"></div>"
                 },
                 {
@@ -3074,7 +3074,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">斜め写真</div><div class=\"gsi_layerinfo_subtitle\">(2014.7.4(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\">協力：（株）エアフォートサービス</div>"
                 },
                 {
@@ -3086,7 +3086,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">斜め写真</div><div class=\"gsi_layerinfo_subtitle\">(2013.11.21（海上保安庁）)</div>"
                 },
                 {
@@ -3098,7 +3098,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">斜め写真</div><div class=\"gsi_layerinfo_subtitle\">(2013.11.20（海上保安庁）)</div>"
                 }
               ]
@@ -3131,7 +3131,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">簡易動画 - 2015.3.1(無人航空機(UAV))</div><div class=\"gsi_layerinfo_copy\">赤色のアイコン:一部、噴煙で見にくいところがあります。<br>(c)国土地理院</div>"
                 }
               ]
@@ -3152,7 +3152,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">関連情報 - 地形等（地理院取得2009ALOS画像）</div><div class=\"gsi_layerinfo_kaisetu\">2009年2月24日にJAXAの衛星「だいち」で撮影された三方向視の画像を使用し、その位置については現在の地図をもとにして作成したものです。</div>"
                 },
                 {
@@ -3164,7 +3164,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">関連情報 - 垂直写真（1947、76、78撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3176,7 +3176,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">関連情報 - （参考）国土地理院・気象庁</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -3206,7 +3206,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 震央</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3218,7 +3218,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 斜め写真(11/24)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3230,7 +3230,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 電子基準点(点名:白馬)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/WNEW/PRESS-RELEASE/chikakukansi_nagano20141122.html\">報道発表資料（平成26年（2014年）11月22日22時08分頃の長野県北部の地震に伴う地殻変動について）</a></div>"
                 },
                 {
@@ -3256,7 +3256,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 5,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">過去の空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div>この画像は測量用写真として撮影したものではないため、測量に用いることはできません。</div><a target=\"_blank\" href=\"http://cyberjapan.jp/legend/kannikuchu-description.pdf\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3268,7 +3268,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 基準点成果公表停止範囲(12/1)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3362,7 +3362,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">干渉SAR - SAR干渉画像に基づく現地調査ダム等の位置</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
                     }
                   ]
@@ -3376,7 +3376,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">長野県北部地震 - 余震震源分布(11/29現在)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -3397,7 +3397,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 斜め写真(9/28)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3409,7 +3409,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 斜め写真(9/29)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3421,7 +3421,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 正射画像_分割版(9/28)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3433,7 +3433,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 正射画像_分割版(9/29)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3446,7 +3446,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 正射画像(9/28)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3459,7 +3459,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 正射画像(9/29)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3472,7 +3472,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 航空機SAR画像(9/29)</div><div class=\"gsi_layerinfo_kaisetu\">航空機SAR画像(9/29)のレーダー照射方向は南から北方向</div>"
                 },
                 {
@@ -3485,7 +3485,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 航空機SAR画像(9/30)</div><div class=\"gsi_layerinfo_kaisetu\">航空機SAR画像(9/30)のレーダー照射方向は南西から北東方向</div>"
                 },
                 {
@@ -3497,7 +3497,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 干渉SARコメント(8/18-9/29)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3522,7 +3522,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 干渉SARコメント(8/22-10/3)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3548,7 +3548,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 5,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 衛星SAR強度画像(8/18)</div><div class=\"gsi_layerinfo_kaisetu\">衛星:ALOS-2<br/>軌道方向:北行(A)<br/>観測モード:高分解能(3m)<br/>入射角:53°<br/>偏波:HH<br/>原初データ所有:JAXA<br/>本成果は、火山噴火予知連絡会衛星解析グループの活動による</div>"
                 },
                 {
@@ -3561,7 +3561,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 5,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 衛星SAR強度画像(9/29)</div><div class=\"gsi_layerinfo_kaisetu\">衛星:ALOS-2<br/>軌道方向:北行(A)<br/>観測モード:高分解能(3m)<br/>入射角:53°<br/>偏波:HH<br/>原初データ所有:JAXA<br/>本成果は、火山噴火予知連絡会衛星解析グループの活動による</div>"
                 },
                 {
@@ -3573,7 +3573,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 推定火口(9/30暫定版：航空機SAR画像判読)</div><div class=\"gsi_layerinfo_kaisetu\">凡例　赤：火口　黄色：推定される火口</div>"
                 },
                 {
@@ -3586,7 +3586,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "maxZoom": 17,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 火山基本図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3598,7 +3598,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": true,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 火山基本図(透過)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3611,7 +3611,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "maxZoom": 16,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 火山土地条件図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3623,7 +3623,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 過去に撮影した空中写真(1991年～2000年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3635,7 +3635,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 過去に撮影した空中写真(1981年～1990年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3647,7 +3647,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 過去に撮影した空中写真(1971年～1980年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -3660,7 +3660,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">御嶽山噴火活動 - 過去の正射画像(1974年～1978年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -3688,7 +3688,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/20)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3700,7 +3700,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/21)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3712,7 +3712,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 垂直写真(8/28)</div><div class=\"gsi_layerinfo_kaisetu\">一部、雲の障害があります</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3724,7 +3724,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 垂直写真(8/30)</div>"
                     },
                     {
@@ -3736,7 +3736,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 垂直写真(8/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3748,7 +3748,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 写真判読図(8/28・30・31垂直写真)</div><div class=\"gsi_layerinfo_kaisetu\">8月28・30・31日撮影垂直写真のうち雲の影響のない部分を対象として、土砂の流出が確認できる範囲を判読したものです。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3761,7 +3761,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像(8/28)</div>"
                     },
                     {
@@ -3774,7 +3774,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像(8/30)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3787,7 +3787,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像(8/30・31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3799,7 +3799,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像_図郭版(8/28)</div>"
                     },
                     {
@@ -3811,7 +3811,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像_図郭版(8/30)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3823,7 +3823,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 正射画像_図郭版(8/30・31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3843,7 +3843,7 @@
                           "attribution": "",
                           "cocotile": true,
                           "minZoom": 10,
-                          "legendUrl": null,
+                          "legendUrl": "",
                           "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 斜め写真による正射画像(8/20 安佐南区八木)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                         },
                         {
@@ -3856,7 +3856,7 @@
                           "attribution": "",
                           "cocotile": true,
                           "minZoom": 10,
-                          "legendUrl": null,
+                          "legendUrl": "",
                           "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 斜め写真による正射画像(8/20 安佐南区山本)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                         },
                         {
@@ -3869,7 +3869,7 @@
                           "attribution": "",
                           "cocotile": true,
                           "minZoom": 10,
-                          "legendUrl": null,
+                          "legendUrl": "",
                           "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 斜め写真による正射画像(8/20 安佐北区可部)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                         }
                       ]
@@ -3885,7 +3885,7 @@
                       "cocotile": true,
                       "minZoom": 4,
                       "maxZoom": 16,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3911,7 +3911,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去に撮影した空中写真(2005～2009年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3923,7 +3923,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去に撮影した空中写真（1948年）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3936,7 +3936,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(1947～1948年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3949,7 +3949,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(1962年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3962,7 +3962,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 5,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(1974～1978年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3975,7 +3975,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 5,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(1979～1983年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -3988,7 +3988,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 5,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(1988～1990年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4001,7 +4001,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 5,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 過去の正射画像(2007年～)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4013,7 +4013,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真による正射画像 - 立体図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4034,7 +4034,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">丹波市市島地区 - 斜め写真(8/19)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4046,7 +4046,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">丹波市市島地区 - 垂直写真(8/19)</div><div class=\"gsi_layerinfo_kaisetu\">一部、雲の障害があります</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4058,7 +4058,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">丹波市市島地区 - 写真判読図(8/19)</div><div class=\"gsi_layerinfo_kaisetu\">8月19日撮影垂直写真及び斜め写真の範囲から土砂流出範囲を判読したものです。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4071,7 +4071,7 @@
                       "attribution": "",
                       "cocotile": true,
                       "minZoom": 10,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">丹波市市島地区 - 正射画像(8/19)</div><div class=\"gsi_layerinfo_kaisetu\">一部、雲の障害があります</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4083,7 +4083,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">丹波市市島地区 - 正射画像_図郭版(8/19)</div><div class=\"gsi_layerinfo_kaisetu\">一部、雲の障害があります</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4104,7 +4104,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">福知山市街地区 - 斜め写真(8/19)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4127,7 +4127,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第11号等による大雨 - 斜め写真 (8/13)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4139,7 +4139,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第11号等による大雨 - 垂直写真 (8/13)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4152,7 +4152,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第11号等による大雨 - 正射画像 (8/13)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4164,7 +4164,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第11号等による大雨 - 正射画像_図郭版 (8/13)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -4185,7 +4185,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第8号等による大雨 - 斜め写真（7/11)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4198,7 +4198,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 8,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第8号等による大雨 - 斜め写真による正射画像（7/11)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4210,7 +4210,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">台風第8号等による大雨 - 災害概況図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -4240,7 +4240,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 斜め写真（10/16)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4252,7 +4252,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 垂直写真（10/17)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4264,7 +4264,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 土砂流出箇所</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4276,7 +4276,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 土砂流出箇所（断面図）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4302,7 +4302,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 正射画像（10/17）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4315,7 +4315,7 @@
                   "attribution": "",
                   "cocotile": true,
                   "minZoom": 10,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 正射画像（10/28）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4327,7 +4327,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 正射画像_図郭版（10/17）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4339,7 +4339,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 正射画像_図郭版（10/28）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4412,7 +4412,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第18号等による大雨 - 垂直写真(9/20)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -4433,7 +4433,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年9月2日からの突風 - 撮影範囲</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4445,7 +4445,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": true,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年9月2日からの突風 - 正射画像(9/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4457,7 +4457,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年9月2日からの突風 - 正射画像/正射地図(9/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4469,7 +4469,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年9月2日からの突風 - 被災箇所</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -4497,7 +4497,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 垂直写真(7/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4509,7 +4509,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 垂直写真(8/7 A)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4521,7 +4521,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 垂直写真(8/7 B)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4533,7 +4533,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 被災箇所(7/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4545,7 +4545,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 被災箇所(8/7)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4557,7 +4557,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": true,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射画像(7/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4569,7 +4569,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": true,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射画像(8/7)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4581,7 +4581,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射画像_図郭版（7/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4593,7 +4593,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射画像_図郭版（8/7)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4605,7 +4605,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射写真地図_図郭版（7/31)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4617,7 +4617,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「須佐地区」 - 正射写真地図_図郭版（8/7)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4638,7 +4638,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">島根地方「津和野地区」 - 垂直写真(8/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4650,7 +4650,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">島根地方「津和野地区」 - 被災箇所(8/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4671,7 +4671,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「阿東地区」 - 垂直写真(8/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4683,7 +4683,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">山口地方「阿東地区」 - 被災箇所(8/9)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4715,7 +4715,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 斜面崩壊(7/25)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4727,7 +4727,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 斜め写真(7/15)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4739,7 +4739,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 堤防決壊(7/15)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4751,7 +4751,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 越水(7/17、7/25)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4763,7 +4763,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/15)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4775,7 +4775,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/17)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -4787,7 +4787,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/25)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
@@ -4815,7 +4815,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 河道閉塞（大）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4827,7 +4827,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 土砂崩れ（大）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4839,7 +4839,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 土石流（大）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4851,7 +4851,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 家屋流出</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4863,7 +4863,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 河道閉塞（小）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4875,7 +4875,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 土砂崩れ（小）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4887,7 +4887,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">写真判読 - 土石流（小）</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4908,7 +4908,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">情報収集 - 土石流・土砂崩れ</div><div class=\"gsi_layerinfo_kaisetu\">一部不明瞭な情報を含みます。また、記号はおおよその位置を示しています。<br/><br/><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4920,7 +4920,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">情報収集 - 橋流失</div><div class=\"gsi_layerinfo_kaisetu\">一部不明瞭な情報を含みます。また、記号はおおよその位置を示しています。<br/><br/><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -4932,7 +4932,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">情報収集 - 灯台崩壊</div><div class=\"gsi_layerinfo_kaisetu\">一部不明瞭な情報を含みます。また、記号はおおよその位置を示しています。<br/><br/><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4953,7 +4953,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">災害前との比較 - 新旧比較地点</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -4974,7 +4974,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 作成範囲</div><div class=\"gsi_layerinfo_kaisetu\"><a href='http://saigai.gsi.go.jp/2011typhoon12/pdf/info.xls' target='_blank'>一覧表をダウンロード（Excel形式）</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -5193,7 +5193,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県六ヶ所村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5205,7 +5205,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県三沢市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5217,7 +5217,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県おいらせ町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5229,7 +5229,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県八戸市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5241,7 +5241,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県階上町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5253,7 +5253,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県洋野町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5265,7 +5265,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県久慈市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5277,7 +5277,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県野田村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5289,7 +5289,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県普代村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5301,7 +5301,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県田野畑村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5313,7 +5313,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県岩泉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5325,7 +5325,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県宮古市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5337,7 +5337,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県山田町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5349,7 +5349,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県大槌町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5361,7 +5361,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県釜石市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5373,7 +5373,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県大船渡市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5385,7 +5385,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県陸前高田市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5397,7 +5397,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県気仙沼市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5409,7 +5409,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県南三陸町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5421,7 +5421,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県女川町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5433,7 +5433,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県石巻市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5445,7 +5445,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県東松島市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5457,7 +5457,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県松島町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5469,7 +5469,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県塩竈市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5481,7 +5481,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県利府町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5493,7 +5493,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県七ヶ浜町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5505,7 +5505,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県多賀城市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5517,7 +5517,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県仙台市宮城野区</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5529,7 +5529,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県仙台市若林区</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5541,7 +5541,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県名取市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5553,7 +5553,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県岩沼市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5565,7 +5565,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県亘理町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5577,7 +5577,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県山元町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5589,7 +5589,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県新地町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5601,7 +5601,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県相馬市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5613,7 +5613,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県南相馬市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5625,7 +5625,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県浪江町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5637,7 +5637,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県双葉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5649,7 +5649,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県大熊町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5661,7 +5661,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県富岡町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5673,7 +5673,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県楢葉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5685,7 +5685,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県広野町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5697,7 +5697,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県いわき市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5709,7 +5709,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県北茨城市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5721,7 +5721,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県高萩市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5733,7 +5733,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県日立市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5745,7 +5745,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県東海村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5757,7 +5757,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県ひたちなか市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5769,7 +5769,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県大洗町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5781,7 +5781,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県鉾田市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5793,7 +5793,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県鹿嶋市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5805,7 +5805,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県神栖市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5817,7 +5817,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 千葉県銚子市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5829,7 +5829,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 千葉県旭市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -5850,7 +5850,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 青森県　三八地方沿岸（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5862,7 +5862,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 青森県　三八上北地方沿岸（4月5日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5874,7 +5874,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　沿岸北部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5886,7 +5886,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　沿岸南部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5898,7 +5898,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県～宮城県　三陸海岸（4月1日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5910,7 +5910,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　三陸海岸（4月5日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5922,7 +5922,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　沿岸北部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5934,7 +5934,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　石巻市周辺（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5946,7 +5946,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　仙台市周辺（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5958,7 +5958,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　仙台市周辺（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5970,7 +5970,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　沿岸南部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5982,7 +5982,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　三陸海岸（3月19日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -5994,7 +5994,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 福島県　沿岸北部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -6006,7 +6006,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 茨城県　沿岸北部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     },
                     {
@@ -6018,7 +6018,7 @@
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
-                      "legendUrl": null,
+                      "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 茨城県　沿岸南部（3月27日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
@@ -6032,7 +6032,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 新旧写真比較</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、別画面で、新旧画像を比較することができます。<br/><br/>別画面において、画像中央の縦棒をドラッグすると、被災前後の画像をずらして見ることが出来ます。<br/><br/>別画面の上方が写真と写真の比較で、下方が地図と写真の比較です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -6044,7 +6044,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">空中写真 - デジタル標高図</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
@@ -6056,7 +6056,7 @@
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
-                  "legendUrl": null,
+                  "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 震央</div><div class=\"gsi_layerinfo_kaisetu\">＊電子基準点で検出した地殻変動情報は<a href='http://www.gsi.go.jp/chibankansi/chikakukansi_tohoku.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による震源断層モデル(暫定)は<a href='http://www.gsi.go.jp/cais/topic110313-index.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による滑り分布モデル(地震時，暫定)は<a href='http://www.gsi.go.jp/cais/topic110314.2-index.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による滑り分布モデル(地震後，暫定)は<a href='http://www.gsi.go.jp/cais/topic110314-index.html' target='_blank'>こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
