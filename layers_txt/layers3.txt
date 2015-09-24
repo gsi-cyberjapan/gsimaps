@@ -2095,6 +2095,21 @@
           "entries": [
             {
               "type": "Layer",
+              "id": "20150907_20150921_u07r_sar_asosan",
+              "title": "2015/09/07-2015/09/21_DR",
+              "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/20150907_20150921_u07r_sar_asosan/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+              "html": "<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測日</td><td style=\"line-height:1em\"><a href=\"http://www.tenki.jp/past/2015/09/07/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/09/07</a><br><a href=\"http://www.tenki.jp/past/2015/09/21/radar/\" target=\"_blank\" title=\"雨雲のようす\" style=\"font-size:8pt\">2015/09/21</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">12:18頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">南行(D)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/question.png\" width=\"10\" \ntitle=\"S:スポットライト&#13;&#10;U:高分解能(3m)&#13;&#10;H:高分解能(6m)&#13;&#10;F:高分解能(10m)&#13;&#10;W:広域観測(350km)&#13;&#10;V:広域観測(490km)\">\n</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">35.7°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">偏波</td><td style=\"font-size:8pt\">HH</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+46m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([32.884885,131.085176],14);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionDR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarDR.png\" width=\"270\">"
+            },
+            {
+              "type": "Layer",
               "id": "20150706_20150914_u13l_sar_asosan",
               "title": "2015/07/06-2015/09/14_DL",
               "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
