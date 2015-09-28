@@ -1,3 +1,8 @@
+var userAgent = window.navigator.userAgent.toLowerCase();
+var msie = ( userAgent.match(/(msie|MSIE)/) || userAgent.match(/(T|t)rident/) ) ;
+
+	
+
 /*****************
  画面サイズ取得
 ******************/
@@ -123,7 +128,7 @@ $(function () {
 	}
 
 	// ツールチップ
-	$( ".edit *" ).tooltip({
+	$( msie ?".edit input,.edit textarea" : ".edit *" ).tooltip({
 		content: function() {
 			var element = $( this );
 			if ( element.is( "[title]" ) ) {
@@ -1083,7 +1088,7 @@ $(function () {
 		set : function(data, options)
 		{
 			try{
-			$( ".edit *" ).tooltip( 'destroy' );
+			$( msie ?".edit input,.edit textarea" : ".edit *"  ).tooltip( 'destroy' );
 			}catch(e){}
 			if ( $(this).data( "_editingData" ) == data )
 			{
@@ -1210,7 +1215,7 @@ $(function () {
 				$( '.edit_layer' ).scrollTop(0).fadeIn('normal');
 			}
 
-			$( ".edit *" ).tooltip({
+			$( msie ?".edit input,.edit textarea" : ".edit *" ).tooltip({
 				content: function() {
 					var element = $( this );
 					if ( element.is( "[title]" ) ) {
@@ -1296,11 +1301,11 @@ $(function () {
 					//	newItem.cocotile = item.cocotile;
 					newItem.cocotile = ( item.cocotile ? item.cocotile : false );
 					if ( item.minZoom && item.minZoom != '' )
-						newItem.minZoom = item.minZoom;
+						newItem.minZoom = parseInt(item.minZoom);
 					if ( item.maxZoom && item.maxZoom != '' )
-						newItem.maxZoom = item.maxZoom;
+						newItem.maxZoom = parseInt(item.maxZoom);
 					if ( item.maxNativeZoom && item.maxNativeZoom != '' )
-						newItem.maxNativeZoom = item.maxNativeZoom;
+						newItem.maxNativeZoom = parseInt(item.maxNativeZoom);
 
 					newItem.legendUrl = item.legendUrl;
 					newItem.html = ( item.description ? item.description : "" );
