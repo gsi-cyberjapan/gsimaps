@@ -1596,6 +1596,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "20150929dol",
+                  "title": "常総地区正射画像（2015.9.29午前撮影）",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150929dol/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": true,
+                  "minZoom": 14,
+                  "maxZoom": 18,
+                  "legendUrl": "",
+                  "html": "雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "20150916dol",
                   "title": "常総地区正射画像（2015.9.15午前撮影）",
                   "iconUrl": "",
