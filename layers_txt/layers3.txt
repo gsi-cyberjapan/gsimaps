@@ -1610,7 +1610,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "20150916dol",
+                  "id": "20150915dol",
                   "title": "常総地区正射画像（2015.9.15午前撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20150915dol/{z}/{x}/{y}.png",
