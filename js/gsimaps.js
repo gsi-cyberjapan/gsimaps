@@ -13494,7 +13494,7 @@ GSI.UTM.Utils = {
 		if ( defName == '' ) return '';
 
 		var projUTM = new Proj4js.Proj(defName);
-		var latLngPoint = new Proj4js.Point(lng,lat );
+		var latLngPoint = new Proj4js.Point( lng,lat );
 		var utmPoint = Proj4js.transform(GSI.UTM.Utils.PROJ_WORLD,projUTM,latLngPoint);
 
 		return GSI.UTM.Utils.getUTMPointName(
@@ -13507,7 +13507,6 @@ GSI.UTM.Utils = {
 	},
 	getUTMPointName : function( zone, mark, x, y, num, hideNumber)
 	{
-		var letters = GSI.UTM.Utils.findGridLetters(zone, y, x);
 
 		var x10mNumber = '';
 		var y10mNumber = '';
@@ -13524,7 +13523,8 @@ GSI.UTM.Utils = {
 			y10mNumber = zero + Math.round( y /10 );
 			y10mNumber = y10mNumber.substr(y10mNumber.length - num, num);
 		}
-
+		
+		var letters = GSI.UTM.Utils.findGridLetters(zone, Math.round( y /10 ) * 10, Math.round( x /10 ) * 10);
 		return zone + mark + letters + x10mNumber + y10mNumber;
 	},
 	findSet : function(zoneNum)
