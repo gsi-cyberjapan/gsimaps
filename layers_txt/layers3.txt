@@ -292,7 +292,21 @@
             },
             {
               "type": "Layer",
-              "id": "seisha150714kuchinoerabu",
+              "id": "20150911dol",
+              "title": "UAV撮影による正射画像(9/8,11,12)",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 14,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "無人航空機(UAV)撮影による正射画像（2015/9/8,11,12撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20150714dol",
               "title": "UAV撮影による正射画像(7/14)",
               "iconUrl": "",
               "url": "http://cyberjapandata.gsi.go.jp/xyz/20150714dol/{z}/{x}/{y}.png",
@@ -303,6 +317,21 @@
               "maxZoom": 18,
               "legendUrl": "",
               "html": "無人航空機(UAV)撮影による正射画像（2015.7.14撮影）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "kuchinoerabu_nanamel_150911",
+              "title": "UAV撮影による斜め写真（9/11）",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/kuchinoerabu_nanamel_150911/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "無人航空機(UAV)撮影による斜め写真（2015.9.11撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
@@ -318,6 +347,21 @@
             },
             {
               "type": "Layer",
+              "id": "kuchinoerabu_suichokul_150911",
+              "title": "UAV撮影による垂直写真（9/11）",
+              "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/kuchinoerabu_suichokul_150911/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "無人航空機(UAV)撮影による垂直写真（2015.9.11撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
               "id": "suichoku150714kuchinoerabu",
               "title": "UAV撮影による垂直写真（7/14）",
               "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
@@ -327,6 +371,60 @@
               "cocotile": false,
               "legendUrl": "",
               "html": "無人航空機(UAV)撮影による垂直写真（2015.7.14撮影）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "UAV撮影による写真判読図（9/11）",
+              "iconUrl": "",
+              "open": false,
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "20150911_kasairyuresult_kuchinoerabu",
+                  "title": "火砕流・泥流判読結果（9/11）",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911_kasairyuresult_kuchinoerabu/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 16,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20150911_dourotsuukou_kuchinoerabu",
+                  "title": "道路通行困難箇所（9/11）",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911_dourotsuukou_kuchinoerabu/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 16,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20150911_houraku_kuchinoerabu",
+                  "title": "崩落箇所・土砂流出箇所（9/11）",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911_houraku_kuchinoerabu/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 16,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                }
+              ]
             },
             {
               "type": "LayerGroup",
