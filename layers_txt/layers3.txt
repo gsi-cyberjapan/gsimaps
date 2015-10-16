@@ -391,8 +391,8 @@
                   "minZoom": 2,
                   "maxZoom": 16,
                   "maxNativeZoom": 2,
-                  "legendUrl": "",
-                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                  "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/20150714_kasairyuresult_kuchinoerabu.jpg",
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
                 },
                 {
                   "type": "Layer",
@@ -407,7 +407,7 @@
                   "maxZoom": 16,
                   "maxNativeZoom": 2,
                   "legendUrl": "",
-                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
                 },
                 {
                   "type": "Layer",
@@ -422,7 +422,7 @@
                   "maxZoom": 16,
                   "maxNativeZoom": 2,
                   "legendUrl": "",
-                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。"
+                  "html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
                 }
               ]
             },
