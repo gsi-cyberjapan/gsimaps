@@ -4831,7 +4831,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			var opacitySlider = $( '<div>' ).addClass( 'slider' );
 
 			var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
-			var opacityPercentage = Math.floor((1 - opacity) * 100);
+			var opacityPercentage = Math.round( 100 - ( opacity * 100 ) ) ;
+			
 			var opacityTextColumn = $( '<td>' ).css( {"width":"100px"} );
 			opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
 			tr.append( opacityTextColumn );
@@ -4852,7 +4853,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				if ( item._opacityChange ) item._opacityChange( opacity );
 			}, this,item,opacitySlider );
 
-			opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.floor(( 1 - opacity ) * 100 ),
+			opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.round( 100 - ( opacity  * 100 ) ),
 				"slide" : sliderChangeHandler,
 				"change" : sliderChangeHandler,
 				"stop" : sliderChangeHandler
@@ -5454,7 +5455,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		var opacitySlider = $( '<div>' ).addClass( 'slider' );
 
 		var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
-		var opacityPercentage = Math.floor(parseInt((1 - opacity) * 100));
+		var opacityPercentage = Math.round( 100 - ( opacity * 100 ) );
 		var opacityTextColumn = $( '<td>' ).css( {"width":"100px"} );
 		opacityTextColumn.text('透過率:'+opacityPercentage+'%').css( {"white-space":"nowrap"} );
 		tr.append( opacityTextColumn );
@@ -5473,7 +5474,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		item._opacityChange = function(opacity)
 		{
 			if ( opacitySlider )
-				opacitySlider.slider( 'value', (1 - opacity ) * 100 );
+				opacitySlider.slider( 'value', Math.round( 100 - ( opacity * 100 ) ) );
 		};
 
 		var sliderChangeHandler = L.bind( function(li, opacitySlider) {
@@ -5487,7 +5488,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 			item._visibleInfo.opacity = opacity;
 		}, this,li,opacitySlider );
 
-		opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.floor(( 1 - opacity ) * 100 ),
+		opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.round( 100 - ( opacity * 100 ) ),
 			"slide" : sliderChangeHandler,
 			"change" : sliderChangeHandler,
 			"stop" : sliderChangeHandler
@@ -10642,7 +10643,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			this._lineWeightSelect.val( style.weight );
 			this._lineColorSelector.css( { background:style.color } );//.ColorPickerSetColor(style.color);
 			var opacity = style.opacity;
-			opacity = Math.floor( ( 1-opacity ) * 100 );
+			opacity = Math.round( ( 1-opacity ) * 100 );
 			this._lineOpacitySlider.slider( "value", opacity );
 		}
 
@@ -10651,7 +10652,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		{
 			this._fillColorSelector.css( { background:style.fillColor } );//.ColorPickerSetColor(style.fillColor);
 			var opacity = style.fillOpacity;
-			opacity = Math.floor( ( 1-opacity ) * 100 );
+			opacity = Math.round( ( 1-opacity ) * 100 );
 			this._fillOpacitySlider.slider( "value", opacity );
 		}
 		
@@ -15700,7 +15701,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
 				this.baseLayer.setOpacity( opacity );
 			}, this, opacitySlider );
 
-		opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.floor(( 1 - opacity ) * 100 ),
+		opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.round( 100 - ( opacity * 100 ) ),
 			"slide" : sliderChangeHandler,
 			"change" : sliderChangeHandler,
 			"stop" : sliderChangeHandler
@@ -15928,7 +15929,7 @@ GSI.Control.BaseLayerSelector = L.Control.extend({
 					this.baseLayer.setOpacity( opacity );
 				}, this, opacitySlider );
 
-			opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.floor(( 1 - opacity ) * 100 ),
+			opacitySlider.slider({range: "min",min: 0,max: 100, value: Math.round( 100 - ( opacity * 100 ) ),
 				"slide" : sliderChangeHandler,
 				"change" : sliderChangeHandler,
 				"stop" : sliderChangeHandler
