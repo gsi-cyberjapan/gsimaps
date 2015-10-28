@@ -6454,8 +6454,8 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 	{
 		if ( this.polyLin ) return;
 		L.drawLocal.draw.handlers.polyline.tooltip.start = '開始位置を選択';
-		L.drawLocal.draw.handlers.polyline.tooltip.cont = '次の位置を選択(最終点をクリックで終了)';
-		L.drawLocal.draw.handlers.polyline.tooltip.end = '次の位置を選択(最終点をクリックで終了)';
+		L.drawLocal.draw.handlers.polyline.tooltip.cont = '次の位置を選択(最終点を2回クリックして終了)';
+		L.drawLocal.draw.handlers.polyline.tooltip.end = '次の位置を選択(最終点を2回クリックして終了)';
 
 		this.polyLine =  new GSI.Draw.Polyline(this.map,{
 			shapeOptions: {
@@ -6481,7 +6481,7 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 		if ( this.polygon ) return;
 		L.drawLocal.draw.handlers.polygon.tooltip.start = '開始位置を選択';
 		L.drawLocal.draw.handlers.polygon.tooltip.cont = '次の位置を選択';
-		L.drawLocal.draw.handlers.polygon.tooltip.end = '次の位置を選択(最終点をクリックで終了)';
+		L.drawLocal.draw.handlers.polygon.tooltip.end = '次の位置を選択(最終点を2回クリックして終了)';
 
 		this.polygon =  new GSI.Draw.Polygon(this.map,{
 			shapeOptions: {
@@ -7827,8 +7827,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 	{
 		// ライン編集開始
 		L.drawLocal.draw.handlers.polyline.tooltip.start = '開始位置を選択';
-		L.drawLocal.draw.handlers.polyline.tooltip.cont = '次の位置を選択(最終点をクリックで終了)';
-		L.drawLocal.draw.handlers.polyline.tooltip.end = '次の位置を選択(最終点をクリックで終了)';
+		L.drawLocal.draw.handlers.polyline.tooltip.cont = '次の位置を選択(最終点を2回クリックして終了)';
+		L.drawLocal.draw.handlers.polyline.tooltip.end = '次の位置を選択(最終点を2回クリックして終了)';
 
 		this._editingPathList = [];
 
@@ -7856,7 +7856,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 		// ポリゴン編集開始
 		L.drawLocal.draw.handlers.polygon.tooltip.start = '開始位置を選択';
 		L.drawLocal.draw.handlers.polygon.tooltip.cont = '次の位置を選択';
-		L.drawLocal.draw.handlers.polygon.tooltip.end = '次の位置を選択(最終点をクリックで終了)';
+		L.drawLocal.draw.handlers.polygon.tooltip.end = '次の位置を選択(最終点を2回クリックして終了)';
 
 		this._editingPathList = [];
 
