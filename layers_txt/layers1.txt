@@ -2494,6 +2494,20 @@
                       "maxZoom": 12,
                       "legendUrl": "",
                       "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "kiban_koushin2015_10",
+                      "title": "10月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update/2015-10/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
                     }
                   ]
                 },
