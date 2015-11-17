@@ -1,0 +1,30 @@
+{
+  "name": "gsimaps",
+  "version": "1.0.0",
+  "description": "The source of GSI Maps, the web maps by Geospatial Information Authority of Japan (GSI,) Japan's National Geospatial Information Authority (NGIA.)",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/gulp/bin/gulp.js",
+    "start": "./node_modules/http-server/bin/http-server -c1 -o",
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsi-cyberjapan/gsimaps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsi-cyberjapan/gsimaps/issues"
+  },
+  "homepage": "https://github.com/gsi-cyberjapan/gsimaps#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-qunit": "^1.2.1",
+    "gulp-uglify": "^1.4.2",
+    "http-server": "^0.8.5",
+    "node-qunit-phantomjs": "^1.2.2",
+    "proj4": "^2.3.12"
+  }
+}
