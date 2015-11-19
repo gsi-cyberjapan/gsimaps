@@ -234,17 +234,40 @@
           "html": "<div class=\"gsi_layerinfo_title\">色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
-          "type": "Layer",
-          "id": "fm",
+          "type": "LayerGroup",
           "title": "都市圏活断層図",
           "iconUrl": "",
-          "url": "http://cyberjapandata.gsi.go.jp/xyz/AFM/{z}/{x}/{y}.png",
-          "subdomains": "",
-          "attribution": "",
-          "cocotile": true,
-          "maxZoom": 16,
-          "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
-          "html": "<div class=\"gsi_layerinfo_title\">都市圏活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "open": false,
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "afm",
+              "title": "都市圏活断層図",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">都市圏活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+              "type": "Layer",
+              "id": "afm_spec",
+              "title": "諸元情報",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+            }
+          ]
         },
         {
           "type": "Layer",
