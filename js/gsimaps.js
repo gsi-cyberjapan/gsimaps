@@ -480,6 +480,12 @@ CONFIG.FUNCMENU = {
 					checkCondition : function() { return GSI.GeoLocation.can; }
 				},
 				{
+					id : 'ucode',
+					title : '場所情報コード',
+					arrow : true,
+					href : 'ucodehref'//'http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php?lat={y}&lng={x}&zoom={z}'
+				},
+				{
 					title : '共有',
 					arrow : true,
 					childrenWidth:200,
@@ -15574,6 +15580,10 @@ GSI.Links.getURL = function( id, center, z ) {
 		else				{zoomLevel = 18;}
 
 		return "http://www.its-mo.com/z-" + y +"-" + x + "-" + zoomLevel + ".htm";
+	}
+	else if ( id == 'ucodehref' )
+	{
+		return 'http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php?lat=' + center.lat +'&lng=' + center.lng + '&zoom=' + z;
 	}
 	else
 	{
