@@ -252,8 +252,8 @@
               "maxZoom": 16,
               "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
               "html": "<div class=\"gsi_layerinfo_title\">都市圏活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-        },
-        {
+            },
+            {
               "type": "Layer",
               "id": "afm_spec",
               "title": "諸元情報",
@@ -2592,6 +2592,18 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "jin2015011",
+                  "title": "11月更新",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201511.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
                   "id": "jin2015010",
                   "title": "10月更新",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
@@ -2719,6 +2731,18 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men201511",
+                  "title": "11月更新",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2015/201511.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                },
                 {
                   "type": "Layer",
                   "id": "men201510",
