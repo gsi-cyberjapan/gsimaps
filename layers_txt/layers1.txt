@@ -2592,7 +2592,19 @@
               "entries": [
                 {
                   "type": "Layer",
-                  "id": "jin2015011",
+                  "id": "jin201512",
+                  "title": "12月更新",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201512.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "jin201511",
                   "title": "11月更新",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/103.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201511.kml",
@@ -2604,7 +2616,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "jin2015010",
+                  "id": "jin201510",
                   "title": "10月更新",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2015/201510.kml",
@@ -2731,6 +2743,18 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men201512",
+                  "title": "12月更新",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2015/201512.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                },
                 {
                   "type": "Layer",
                   "id": "men201511",
