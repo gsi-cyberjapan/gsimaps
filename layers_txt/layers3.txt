@@ -2358,6 +2358,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "20151209dol",
+                  "title": "2015.12.9",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20151209dol/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 13,
+                  "maxZoom": 18,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">正射画像-2015.12.9</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "20150728dol",
                   "title": "2015.7.28（無人航空機（UAV）撮影）",
                   "iconUrl": "",
@@ -2510,6 +2524,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "20151209doh2",
+                  "title": "2015.12.9",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20151209doh2/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 13,
+                  "maxZoom": 17,
+                  "legendUrl": "http://cyberjapandata.gsi.go.jp/xyz/20151209doh2/151209doh2-legend.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2015.12.9)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2015.12.9 と合わせてご覧下さい。</font></div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "handoku20150728dol2",
                   "title": "2015.7.28(無人航空機(UAV)撮影)",
                   "iconUrl": "",
@@ -2656,6 +2684,21 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "151209_nishinoshima_seishazukaku",
+                  "title": "2015.12.9",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/151209_nishinoshima_seishazukaku/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">正射画像_図郭版-2015.12.9</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
                 {
                   "type": "Layer",
                   "id": "seisyazukaku1311nishinoshima7",
@@ -3199,6 +3242,21 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "151209_nishinoshima_coastline",
+                  "title": "2015.12.9",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/151209_nishinoshima_coastline/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">海岸線（暫定）-2015.12.9</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "coastline1311nishinoshima_150728",
                   "title": "2015.7.28",
                   "iconUrl": "",
@@ -3290,6 +3348,21 @@
               "open": false,
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "151209_nishinoshima_naname",
+                  "title": "2015.12.9",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/151209_nishinoshima_naname/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">斜め写真-2015.12.9</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
                 {
                   "type": "Layer",
                   "id": "naname1311nishinoshima4",
