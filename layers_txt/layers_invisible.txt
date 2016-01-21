@@ -19,6 +19,22 @@
     },
     {
       "type": "Layer",
+      "id": "dem5a",
+      "title": "標高表示用データ5a",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "dem5b",
+      "title": "標高表示用データ5b",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
       "id": "20131217dd5",
       "title": "西之島付近噴火活動 標高タイル（2013年12月17日）",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20131217dd5/{z}/{x}/{y}.txt",
