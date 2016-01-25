@@ -657,7 +657,7 @@ CONFIG.SERVERAPI.ACCESSCOUNTER = './cgi-bin/CounterJson.php?id=001';
 CONFIG.SERVERAPI.INTERFACE = "http://portal.cyberjapan.jp/GsiJsLibrary/interface.php";
 
 CONFIG.SERVERAPI.GETADDR = "http://portal.cyberjapan.jp/GsiJsLibrary/LonLatToLv01.php";
-CONFIG.SERVERAPI.GETELEVATION = "http://cyberjapandata.gsi.go.jp/cgi-bin/getelevation.php";
+CONFIG.SERVERAPI.GETELEVATION = "http://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php";
 
 CONFIG.SERVERAPI.SEARCH = "http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geocode.cgi";
 CONFIG.SERVERAPI.SEARCH_SHISETU = "http://portal.cyberjapan.jp/GsiJsLibrary/shisetsu.php";
