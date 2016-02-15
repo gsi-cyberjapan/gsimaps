@@ -2608,6 +2608,48 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "2016年迅速更新情報",
+              "iconUrl": "",
+              "open": false,
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "jin201601",
+                  "title": "1月更新",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/jinsoku2016/201601.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2016年面的更新情報",
+              "iconUrl": "",
+              "open": false,
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men201601",
+                  "title": "1月更新",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/update_std/data/men2016/201601.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
               "title": "2015年迅速更新情報",
               "iconUrl": "",
               "open": false,
