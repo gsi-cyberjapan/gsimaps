@@ -2398,6 +2398,78 @@
         },
         {
           "type": "LayerGroup",
+          "title": "霧島山の火山活動",
+          "iconUrl": "",
+          "open": false,
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "SAR解析結果",
+              "iconUrl": "",
+              "open": false,
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "urgent_volcano_kirishimayama_20151105_20160211_u06r",
+                  "title": "2015/11/06～2016/02/12_AR",
+                  "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/urgent_volcano_kirishimayama_20151105_20160211_u06r/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 15,
+                  "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+                  "html": "<table border=\"0\" cellspacing=\"0\" width=\"150\">\n<tr align=\"center\"><td style=\"font-size:8pt\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/specification.html\" target=\"_blank\" title=\"表の見方\" style=\"font-size:8pt\">表の見方</a></td></tr>\n</table>\n<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">SAR衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">1回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2015/11/06/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2015/11/06</a><br>\n<tr align=\"center\"><td style=\"font-size:8pt\">2回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2016/02/12/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2016/02/12</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">取得間隔</td><td style=\"font-size:8pt\">98日間</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">0:11頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">北行(A)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方位</td><td style=\"font-size:8pt\">東(E)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">32.5°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">-32m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([31.946614,130.852967],15);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionAR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarAR.png\" width=\"270\">\n<div align=\"center\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html\" target=\"_blank\" title=\"SAR干渉画像の見方\" style=\"font-size:8pt\">色と変位量の関係</a></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "urgent_volcano_kirishimayama20151106_20160212",
+                  "title": "┗コメント",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1602kirishimayama/urgent_volcano_kirishimayama20151106_20160212.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "urgent_volcano_kirishimayama_20150921_20151130_u07r",
+                  "title": "2015/09/21～2015/11/30_DR",
+                  "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/urgent_volcano_kirishimayama_20150921_20151130_u07r/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 15,
+                  "legendUrl": "http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html",
+                  "html": "<table border=\"0\" cellspacing=\"0\" width=\"150\">\n<tr align=\"center\"><td style=\"font-size:8pt\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/specification.html\" target=\"_blank\" title=\"表の見方\" style=\"font-size:8pt\">表の見方</a></td></tr>\n</table>\n<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">SAR衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">1回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2015/09/21/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2015/09/21</a><br>\n<tr align=\"center\"><td style=\"font-size:8pt\">2回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2015/11/30/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2015/11/30</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">取得間隔</td><td style=\"font-size:8pt\">70日間</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">12:18頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">南行(D)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方位</td><td style=\"font-size:8pt\">西(W)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">36.3°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+186m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([31.946614,130.852967],15);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionDR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarDR.png\" width=\"270\">\n<div align=\"center\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html\" target=\"_blank\" title=\"SAR干渉画像の見方\" style=\"font-size:8pt\">色と変位量の関係</a></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "1602kirishimayama/urgent_volcano_kirishimayama20150921_20151130",
+                  "title": "┗コメント",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1602kirishimayama/urgent_volcano_kirishimayama20150921_20151130.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
           "title": "西之島付近噴火活動",
           "iconUrl": "",
           "open": false,
