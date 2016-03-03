@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "Layer",
-          "id": "controlpoint",
+          "id": "cp",
           "title": "基準点",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/cp/{z}/{x}/{y}.geojson",
@@ -132,10 +132,10 @@
           "entries": [
             {
               "type": "Layer",
-              "id": "chijikiD",
+              "id": "jikizu_chijikid",
               "title": "偏角図/偏角一覧図",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/JIKIZU/CHIJIKID/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/jikizu_chijikid/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
@@ -146,10 +146,10 @@
             },
             {
               "type": "Layer",
-              "id": "chijikiI",
+              "id": "jikizu_chijikii",
               "title": "伏角図",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/JIKIZU/CHIJIKII/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/jikizu_chijikii/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
@@ -160,10 +160,10 @@
             },
             {
               "type": "Layer",
-              "id": "chijikiF",
+              "id": "jikizu_chijikif",
               "title": "全磁力図",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/JIKIZU/CHIJIKIF/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/jikizu_chijikif/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
@@ -174,10 +174,10 @@
             },
             {
               "type": "Layer",
-              "id": "chijikiH",
+              "id": "jikizu_chijikih",
               "title": "水平分力図",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/JIKIZU/CHIJIKIH/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/jikizu_chijikih/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
@@ -188,10 +188,10 @@
             },
             {
               "type": "Layer",
-              "id": "chijikiZ",
+              "id": "jikizu_chijikiz",
               "title": "鉛直分力図",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/JIKIZU/CHIJIKIZ/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/jikizu_chijikiz/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
