@@ -2487,7 +2487,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "1602kirishimayama/urgent_volcano_kirishimayama20150921_20151130",
+                  "id": "urgent_volcano_kirishimayama20150921_20151130",
                   "title": "┗コメント",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1602kirishimayama/urgent_volcano_kirishimayama20150921_20151130.kml",
