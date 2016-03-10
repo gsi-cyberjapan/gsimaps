@@ -1,17 +1,15 @@
-﻿{
+{
   "layers": [
     {
       "type": "LayerGroup",
       "title": "地図・空中写真",
       "iconUrl": "",
-      "open": false,
       "toggleall": false,
       "entries": [
         {
           "type": "LayerGroup",
           "title": "写真",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -151,7 +149,6 @@
           "type": "LayerGroup",
           "title": "東日本大震災後オルソ画像",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -237,7 +234,6 @@
           "type": "LayerGroup",
           "title": "都市圏活断層図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -287,7 +283,6 @@
           "type": "LayerGroup",
           "title": "土地条件図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -323,7 +318,6 @@
           "type": "LayerGroup",
           "title": "沿岸海域土地条件図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -358,7 +352,6 @@
           "type": "LayerGroup",
           "title": "治水地形分類図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -421,14 +414,12 @@
           "type": "LayerGroup",
           "title": "地球地図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
               "title": "地球地図全球版",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -465,14 +456,12 @@
           "type": "LayerGroup",
           "title": "全国植生指標データ（250m）",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
               "title": "2012年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -649,7 +638,6 @@
               "type": "LayerGroup",
               "title": "2011年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -826,7 +814,6 @@
               "type": "LayerGroup",
               "title": "2010年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1003,7 +990,6 @@
               "type": "LayerGroup",
               "title": "2009年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1180,7 +1166,6 @@
               "type": "LayerGroup",
               "title": "2008年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1357,7 +1342,6 @@
               "type": "LayerGroup",
               "title": "2007年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1534,7 +1518,6 @@
               "type": "LayerGroup",
               "title": "2006年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1711,7 +1694,6 @@
               "type": "LayerGroup",
               "title": "2005年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -1888,7 +1870,6 @@
               "type": "LayerGroup",
               "title": "2004年",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2069,14 +2050,12 @@
           "type": "LayerGroup",
           "title": "宅地利用動向調査",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
               "title": "首都圏",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2176,7 +2155,6 @@
               "type": "LayerGroup",
               "title": "中部圏",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2263,7 +2241,6 @@
               "type": "LayerGroup",
               "title": "近畿圏",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2365,7 +2342,6 @@
           "type": "LayerGroup",
           "title": "湖沼図",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
@@ -2400,14 +2376,12 @@
           "type": "LayerGroup",
           "title": "基盤地図情報",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
               "title": "基盤地図情報の提供地域",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2466,22 +2440,20 @@
               "type": "LayerGroup",
               "title": "基盤地図情報更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
                   "type": "LayerGroup",
                   "title": "2016年更新情報",
                   "iconUrl": "",
-                  "open": false,
                   "toggleall": false,
                   "entries": [
                     {
                       "type": "Layer",
-                      "id": "kiban_koushin2016_01",
+                      "id": "fgd_update_2016_01",
                       "title": "1月更新",
                       "iconUrl": "",
-                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update/2016-01/{z}/{x}/{y}.png",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2016_01/{z}/{x}/{y}.png",
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": true,
@@ -2496,7 +2468,6 @@
                   "type": "LayerGroup",
                   "title": "2015年更新情報",
                   "iconUrl": "",
-                  "open": false,
                   "toggleall": false,
                   "entries": [
                     {
@@ -2515,7 +2486,7 @@
                     },
                     {
                       "type": "Layer",
-                      "id": "fgd_update_2015_01",
+                      "id": "fgd_update_2015_04",
                       "title": "4月更新",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2015_04/{z}/{x}/{y}.png",
@@ -2529,7 +2500,7 @@
                     },
                     {
                       "type": "Layer",
-                      "id": "fgd_update_2015_01",
+                      "id": "fgd_update_2015_07",
                       "title": "7月更新",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2015_07/{z}/{x}/{y}.png",
@@ -2543,7 +2514,7 @@
                     },
                     {
                       "type": "Layer",
-                      "id": "fgd_update_2015_01",
+                      "id": "fgd_update_2015_10",
                       "title": "10月更新",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2015_10/{z}/{x}/{y}.png",
@@ -2561,7 +2532,6 @@
                   "type": "LayerGroup",
                   "title": "2014年更新情報",
                   "iconUrl": "",
-                  "open": false,
                   "toggleall": false,
                   "entries": [
                     {
@@ -2618,14 +2588,12 @@
           "type": "LayerGroup",
           "title": "電子国土基本図の更新情報",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
               "title": "2016年迅速更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2658,7 +2626,6 @@
               "type": "LayerGroup",
               "title": "2016年面的更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2691,7 +2658,6 @@
               "type": "LayerGroup",
               "title": "2015年迅速更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2844,7 +2810,6 @@
               "type": "LayerGroup",
               "title": "2015年面的更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -2984,7 +2949,6 @@
               "type": "LayerGroup",
               "title": "2014年迅速更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -3137,7 +3101,6 @@
               "type": "LayerGroup",
               "title": "2014年面的更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -3253,7 +3216,6 @@
               "type": "LayerGroup",
               "title": "2013年迅速更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -3406,7 +3368,6 @@
               "type": "LayerGroup",
               "title": "2012年迅速更新情報",
               "iconUrl": "",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -3537,7 +3498,6 @@
           "type": "LayerGroup",
           "title": "南極の地理空間情報",
           "iconUrl": "",
-          "open": false,
           "toggleall": false,
           "entries": [
             {
