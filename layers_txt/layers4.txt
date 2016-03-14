@@ -5308,6 +5308,33 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "urgent_volcano_kirishimayama_20160208_20160307_u07r_ft05",
+                      "title": "2016/02/08～2016/03/07_DR",
+                      "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/urgent_volcano_kirishimayama_20160208_20160307_u07r_ft05/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 5,
+                      "maxZoom": 18,
+                      "maxNativeZoom": 15,
+                      "legendUrl": "",
+                      "html": "<table border=\"0\" cellspacing=\"0\" width=\"150\">\n<tr align=\"center\"><td style=\"font-size:8pt\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/specification.html\" target=\"_blank\" title=\"表の見方\" style=\"font-size:8pt\">表の見方</a></td></tr>\n</table>\n<table align=\"left\" border=\"1\" cellspacing=\"0\">\n<tr align=\"center\"><td style=\"font-size:8pt\">SAR衛星</td><td style=\"font-size:8pt\">だいち2号</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">1回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2016/02/08/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2016/02/08</a><br>\n<tr align=\"center\"><td style=\"font-size:8pt\">2回目観測日</td><td style=\"line-height:1em\">\n<a href=\"http://www.tenki.jp/past/2016/03/07/radar/\" target=\"_blank\" title=\"雨雲の動き\" style=\"font-size:8pt\">2016/03/07</a></td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">取得間隔</td><td style=\"font-size:8pt\">28日間</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測時間</td><td style=\"font-size:8pt\">12:18頃</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">衛星進行方向</td><td style=\"font-size:8pt\">南行(D)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方向</td><td style=\"font-size:8pt\">右(R)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">電波照射方位</td><td style=\"font-size:8pt\">西(W)</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">観測モード</td><td style=\"font-size:8pt\">U-U</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">ﾋﾟｸｾﾙｽﾍﾟｰｼﾝｸﾞ</td><td style=\"font-size:8pt\">11m</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">入射角（中心）</td><td style=\"font-size:8pt\">36.2°</td></tr>\n<tr align=\"center\"><td style=\"font-size:8pt\">垂直基線長</td><td style=\"font-size:8pt\">+183m</td></tr>\n</table>\n<input type=\"button\" value=\"画像中心へ\" onclick=\"GSI.GLOBALS.map.setView([31.946718,130.852811],15);\"/>\n<div class=\"gsi_layerinfo_kaisetu\">解析:国土地理院<br>原初データ所有:JAXA<br></div><br><br>\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/directionDR.png\" width=\"120\"><br clear=\"left\">\n<img src=\"http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/colorbarDR.png\" width=\"270\">\n<div align=\"center\"><a href=\"http://vldb.gsi.go.jp/sokuchi/sar/mechanism/interpretation.html\" target=\"_blank\" title=\"SAR干渉画像の見方\" style=\"font-size:8pt\">色と変位量の関係</a></div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "urgent_volcano_kirishimayama20160208_20160307",
+                      "title": "┗コメント",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1602kirishimayama/urgent_volcano_kirishimayama20160208_20160307.kml",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "urgent_volcano_kirishimayama_20151222_20160301_u09r",
                       "title": "2015/12/23～2016/03/02_AR",
                       "iconUrl": "http://vldb.gsi.go.jp/sokuchi/sar/image/cyberjapan/GSISAR_logo22.png",

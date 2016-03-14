@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "Layer",
-          "id": "y2k7",
+          "id": "_ort",
           "title": "最新（2007年～）",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
@@ -35,7 +35,7 @@
         },
         {
           "type": "Layer",
-          "id": "yk88",
+          "id": "gazo4",
           "title": "1988年～1990年",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg",
@@ -50,7 +50,7 @@
         },
         {
           "type": "Layer",
-          "id": "yk84",
+          "id": "gazo3",
           "title": "1984年～1987年",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg",
@@ -65,7 +65,7 @@
         },
         {
           "type": "Layer",
-          "id": "yk79",
+          "id": "gazo2",
           "title": "1979年～1983年",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg",
@@ -80,7 +80,7 @@
         },
         {
           "type": "Layer",
-          "id": "yk74",
+          "id": "gazo1",
           "title": "1974年～1978年",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
