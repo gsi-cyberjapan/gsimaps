@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="shortcut icon" href="http://portal.cyberjapan.jp/favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>地理院地図3D</title>
+
+    <script src="js.lib/leaflet-0.7.3/leaflet-src.js"></script>
+
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./js.lib/jquery/jquery-ui.css">
+
+    <script type="text/javascript" src="./js.lib/three/three.min.js"></script>
+    <script type="text/javascript" src="./js.lib/three/TrackballControls.js"></script> 
+
+    <script type="text/javascript" src="./js/index_3d.js"></script> 
+    <style>
+	    html, body  {
+            height          : 100%;
+            width           : 100%;
+            font-family     : "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+            font-size       : 62.5%;
+	    }
+
+	    body        {
+            padding         : 0;
+            margin          : 0;
+	    }
+
+        table   {
+	        border-collapse :collapse;
+	        border          :1px solid #333;
+            font-size       : 16px;
+        }
+        td      {
+            text-align      :left;
+            vertical-align  :middle;
+            border-collapse :collapse;
+            border          :1px solid #333;
+            padding         :5px;
+        }
+    </style>
+</head>
+
+<body onload="Init('frame');" style="margin:0 auto;">
+	<div id="frame"></div>
+</body>
+</html>

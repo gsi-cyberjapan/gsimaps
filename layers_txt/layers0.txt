@@ -33,6 +33,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
+      "maxNativeZoom": 14,
       "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#blank",
       "html": ""
     },
@@ -45,6 +46,7 @@
       "subdomains": "",
       "attribution": "",
       "cocotile": true,
+      "maxNativeZoom": 11,
       "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#english",
       "html": ""
     },

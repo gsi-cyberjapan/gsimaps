@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>地理院地図3D</title>
+
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/index_3d_download.js"></script> 
+
+    <script type="text/javascript">
+        var args    = new Object();
+        var oResult = null;
+        var dResult = "<div id=\"result\"></div>";
+        /*-----------------------------------------------------------------------------------------------*/
+        // 初期処理
+        /*-----------------------------------------------------------------------------------------------*/
+        function Init(i){
+                if(window.opener && window.opener.oScene != null){
+                dResult = "";
+
+                var o = document.getElementById(i);
+                if(o != null){
+                    var search = document.location.search;
+	                if(search.length > 1){
+		                var params = search.substring(1).split('&');
+		                for(var i = 0; i < params.length; i++){
+			                var element = params[i].split('=');
+			                var paramName  = decodeURIComponent(element[0]);
+			                var paramValue = decodeURIComponent(element[1]);
+			                args[paramName] = decodeURIComponent(paramValue);
+		                }
+                    }
+
+                    var vTitle    = "";
+                    var vContents = "";
+                    if(     args["type"] == "stl"){
+                        vTitle    = "STLダウンロード";
+                        vContents = ""
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">dem.stl</td>"
+                        + "<td><input id=\"dl_stl\" onclick=\"Download('dem.stl');\" type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        ;
+                    }
+                    else if(args["type"] == "vrml"){
+                        vTitle    = "VRMLダウンロード";
+                        vContents = ""
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">dem.wrl</td>"
+                        + "<td><input id=\"dl_vrml_wrl\" onclick=\"Download('dem.wrl');\"     type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">texture.png</td>"
+                        + "<td><input id=\"dl_vwrl_png\" onclick=\"Download('texture.png');\" type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        ;
+                    }
+                    else if(args["type"] == "webgl"){
+                        vTitle    = "WebGL用ダウンロード";
+                        vContents = ""
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">index.html</td>"
+                        + "<td><input id=\"dl_webgl_index\" onclick=\"Download('index.html');\"  type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">dem.csv</td>"
+                        + "<td><input id=\"dl_webgl_csv\"   onclick=\"Download('dem.csv');\"     type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td style=\"font-weight: bold;\">texture.png</td>"
+                        + "<td><input id=\"dl_webgl_png\"   onclick=\"Download('texture.png');\" type=\"button\" value=\"ダウンロード\"></td>"
+                        + "</tr>"
+                        ;
+                    }
+
+                    o.innerHTML = ""
+                        + "<p>" + vTitle + "</p>"
+                        + "<div style=\"padding:3px;\">"
+                        + "<table>"
+		                + "<tbody>"
+                        + "<tr>"
+                        + vContents
+                        + "</tr>"
+                        + "</tbody>"
+                        + "</table>"
+                        + "<br />"
+                        + "<div id=\"wait\" style=\"visibility:hidden;\">・・・・・しばらくお待ちください・・・・・</div>"
+                        + dResult
+                        + "</div>"
+                    ;
+                }
+            }
+        };
+    </script>
+    <style>
+	    html, body  {
+            height          : 100%;
+            width           : 100%;
+            font-family     : "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+            font-size       : 12px;
+	    }
+
+	    body        {
+            padding         : 0px;
+            margin          : 0px;
+	    }
+
+        p       {
+            padding         : 0px;
+            margin          : 5px;
+            font-size       : 24px;
+        }
+
+        table   {
+	        border-collapse :collapse;
+	        border          :1px solid #333;
+        }
+        td      {
+            text-align      :left;
+            vertical-align  :middle;
+            border-collapse :collapse;
+            border          :1px solid #333;
+            padding         :5px;
+        }
+    </style>
+</head>
+
+<body onload="Init('frame');">
+	<div id="frame" style="padding:5px;"></div>
+</body>
+</html>

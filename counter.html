@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <link rel="shortcut icon" href="http://portal.cyberjapan.jp/favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>地理院地図（アクセスカウンター）</title>
+
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        var vURL = './cgi-bin/CounterJson.php?id=001';
+
+        function Init(){
+            var o = document.getElementById("counter");
+            if(o != null){
+                $.ajax(
+                    { url : vURL }
+                )
+                .done(
+                    function(data, status, jqXHR){
+                        var dataCounter = JSON.parse(data);
+                       
+		                var today            = new Date();
+		                var yesterday        = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
+		                var todayCaption     = ( '00' + ( today.getMonth() + 1 ) ).slice(-2) + '/' +( '00' + today.getDate() ).slice(-2);
+		                var yesterdayCaption = ( '00' + ( yesterday.getMonth() + 1 ) ).slice(-2) + '/' + ( '00' + yesterday.getDate() ).slice(-2);
+
+                        o.innerHTML = todayCaption + '&nbsp;' + dataCounter.today + '、' + yesterdayCaption +'&nbsp;' + dataCounter.yesterday + '、' + '総計&nbsp;' +  ( dataCounter.total + '' ).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+                    }
+                )
+                .fail(
+                    function(data, status, error){
+                    }
+                );
+            }
+        };
+
+    </script>
+</head>
+
+<body onload="Init();">
+    <div id="counter"></div>
+</body>
+
+</html>

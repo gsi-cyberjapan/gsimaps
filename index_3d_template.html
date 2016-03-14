@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+    <title>WebGL 3D</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
+
+    <script src="http://cyberjapandata.gsi.go.jp/3d/three.min.js"></script>
+    <script src="http://cyberjapandata.gsi.go.jp/3d/TrackballControls.js"></script> 
+    <script>
+    //<!--
+    /****************************************************/
+    // 高さの強調度を変える場合は、
+    // vSceneMeshZRate = 数値を変更する
+    /****************************************************/
+    var vSceneMeshZRate        = 1;       
+    /****************************************************/
+    var Dem                    = "./dem.csv";
+    var DemTextue              = "./texture.png";
+    /****************************************************/
+    var oRenderer              = null;
+    var oScene                 = null;
+    var oSceneLight            = null;
+    var oSceneMesh             = null;
+    var oSceneMeshBase         = null;
+    var oCamera                = null;
+    var oCameraCtrl            = null;
+    /****************************************************/
+    var vSceneMesh             = null;
+    var vSceneMeshDistanceRate = 0.1;
+    /****************************************************/
+    var vWinSizeW              = 0;
+    var vWinSizeH              = 0;
+    /****************************************************/
+
+    function Init(){
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function(evt){
+            vSceneMesh = (evt.target.response || evt.target.responseText).replace(/\n/g, ",").split(",");
+            LoadScene();
+        }, false);
+        xhr.open('GET', Dem, true);
+        xhr.send(null);
+
+        EvtResize();
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // LoadScene
+    /*-----------------------------------------------------------------------------------------------*/
+    function LoadScene(){
+        oRenderer = new THREE.WebGLRenderer({ antialias: true });
+        oRenderer.setSize(vWinSizeW, vWinSizeH);
+        oRenderer.setClearColor(0xe6e6fa, 1.0);
+        document.getElementById('webgl').appendChild(oRenderer.domElement);
+            
+        oScene = new THREE.Scene();
+        oScene.add(new THREE.AmbientLight(0xffffff));
+
+        oCamera = new THREE.PerspectiveCamera(45, vWinSizeW / vWinSizeH, 1, 10000);
+        oCamera.position.set(0, -100, 100);
+		oCamera.up.set(0, 0, 1);
+		oCamera.lookAt( {x:0, y:0, z:0 } );
+
+        oCameraCtrl = new THREE.TrackballControls(oCamera);
+
+        var geometry = new THREE.PlaneGeometry( 100, 100, 256, 256 );
+	    var texture = THREE.ImageUtils.loadTexture(DemTextue);
+	    texture.needsUpdate = true;
+        texture.minFilter = THREE.LinearFilter;
+        texture.magFilter = THREE.LinearFilter;
+        var material = new THREE.MeshPhongMaterial({ map: texture });
+
+        oSceneMesh = new THREE.Mesh(geometry, material);
+        oScene.add(oSceneMesh);
+
+        LoadSceneMeshBase();
+        SceneGeometryZ();
+
+        SceneRender();
+        SceneRender();
+    };
+
+    function LoadSceneMeshBase(){
+        oSceneMeshBase = new Array(5);
+
+        var i = 0;
+	    var material = new THREE.MeshBasicMaterial({color: 0x444444});
+	    var geometry = new THREE.PlaneGeometry(100, 100, 1, 1);
+	    for(i = 0; i < geometry.vertices.length; i++){
+		    geometry.vertices[i].z = -1 * vSceneMeshDistanceRate * 100;
+	    }
+	    geometry.vertices[0].y = -50;
+	    geometry.vertices[1].y = -50;
+	    geometry.vertices[2].y =  50;
+	    geometry.vertices[3].y =  50;
+	    geometry.computeFaceNormals();
+	    geometry.computeVertexNormals();
+	    geometry.dynamic            = true;
+	    geometry.verticesNeedUpdate = true;
+
+        oSceneMeshBase[0] = new THREE.Mesh(geometry, material);
+	    oScene.add(oSceneMeshBase[0]);
+
+        var nz = 0;
+        var x  = null;
+        var y  = null;
+        for(n = 1; n < 5; n++){
+	        geometry = new THREE.PlaneGeometry(100, 1,256, 1);
+	        for(i = 0; i < geometry.vertices.length; i++){
+                if     (n == 1){ nz = 257 * 256 + i;         material = new THREE.MeshBasicMaterial({color: 0xcccccc}); }
+                else if(n == 2){ nz = 257 * i;               material = new THREE.MeshBasicMaterial({color: 0x888888}); }
+                else if(n == 3){ nz = 257 * (256 - i) + 256; material = new THREE.MeshBasicMaterial({color: 0xaaaaaa}); }
+                else if(n == 4){ nz = 256 - i;               material = new THREE.MeshBasicMaterial({color: 0x666666}); }
+
+		        if((0 <= i) && (i <= 256)){
+			        geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+		        }
+		        else{
+			        geometry.vertices[i].z = -1 * vSceneMeshDistanceRate * 100;
+		        }
+
+                x = null;
+                y = null;
+                if     (n == 1){ x = null;                 y = -50;                 }
+                else if(n == 2){ x =  -50;                 y =  50-100/256*(i%257); }
+                else if(n == 3){ x =   50;                 y = -50+100/256*(i%257); }
+                else if(n == 4){ x =   50-100/256*(i%257); y =  50;                 }
+
+                if(x != null){ geometry.vertices[i].x = x; }
+                if(y != null){ geometry.vertices[i].y = y; }
+	        }
+
+            oSceneMeshBase[n] = new THREE.Mesh(geometry, material);
+            oScene.add(oSceneMeshBase[n]);
+        }
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // Scene
+    /*-----------------------------------------------------------------------------------------------*/
+    function SceneGeometryZ(){
+        var n  = 0;
+        var nz = 0;
+        for(nx = 0; nx <= 256; nx++){
+	        for(ny = 0; ny <= 256; ny++){
+                nz = nx * 257 + ny;
+			    oSceneMesh.geometry.vertices[nz].z = vSceneMesh[nz] * vSceneMeshZRate;
+		    }
+	    }
+
+	    oSceneMesh.geometry.computeFaceNormals();
+	    oSceneMesh.geometry.computeVertexNormals();
+	    oSceneMesh.geometry.dynamic            = true;
+	    oSceneMesh.geometry.verticesNeedUpdate = true;
+
+        if(oSceneMeshBase != null){
+            for(n = 1; n < 5; n++){
+	            for(i = 0; i < 257; i++){
+                    if     (n == 1){ nz = 257 * 256 + i;         }
+                    else if(n == 2){ nz = 257 * i;               }
+                    else if(n == 3){ nz = 257 * (256 - i) + 256; }
+                    else if(n == 4){ nz = 256 - i;               }
+		            oSceneMeshBase[n].geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+	            }
+	            oSceneMeshBase[n].geometry.computeFaceNormals();
+	            oSceneMeshBase[n].geometry.computeVertexNormals();
+	            oSceneMeshBase[n].geometry.dynamic            = true;
+	            oSceneMeshBase[n].geometry.verticesNeedUpdate = true;
+            }
+        }
+    };
+
+    function SceneRender(){
+        if(oRenderer != null && oScene != null && oCamera != null && oCameraCtrl != null){
+            oCameraCtrl.update();
+            requestAnimationFrame(SceneRender);
+            oRenderer.render(oScene, oCamera);
+        }
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // イベント
+    /*-----------------------------------------------------------------------------------------------*/
+    function EvtResize(){
+	    vWinSizeW = window.innerWidth;
+	    vWinSizeH = window.innerHeight;
+
+        if(oCamera != null && oRenderer != null){
+            oRenderer.setSize(vWinSizeW, vWinSizeH);
+            oCamera.aspect = vWinSizeW / vWinSizeH;
+            oCamera.updateProjectionMatrix();
+
+    	    SceneRender();
+        }
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    window.onresize = EvtResize;
+
+    //-->
+    </script>
+</head>
+<body onload="Init();">
+    高さの強調度を変えたい場合は、「index.html」の20行目の数値を変更してください。
+    <div id="webgl"></div>
+</body>
+</html>

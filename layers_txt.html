@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>地理院タイル一覧</title>
+    <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css"/>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/layers_txt.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./css/layers_txt.css"/>
+</head>
+
+<body>
+	<div class="tree"></div>
+
+	<div class="edit">
+		<div class="edit_layer tableframe">
+		<form name="layer">
+            <div class="tile"></div>
+			<dl>
+				<dt>ID</dt>
+				<dd><input type="text" class="inputtext" name="id"          readonly="readonly"></dd>
+				<dt>URL</dt>
+				<dd><input type="text" class="inputtext" name="url"         readonly="readonly"></dd>
+				<dt>最大ズームレベル</dt>
+				<dd><input type="text" class="inputtext" name="maxZoom"     readonly="readonly"></dd>
+				<dt>最小ズームレベル</dt>
+				<dd><input type="text" class="inputtext" name="minZoom"     readonly="readonly"></dd>
+				<dt>提供期間</dt>
+				<dd><input type="text" class="inputtext" name="period"      readonly="readonly"></dd>
+				<dt>凡例</dt>
+				<dd><input type="text" class="inputtext" name="legendUrl"   readonly="readonly"></dd>
+				<dt>基本測量成果</dt>
+				<dd><input type="text" class="inputtext" name="basicsurvey" readonly="readonly"></dd>
+				<dt>備考</dt>
+				<dd><div class="info"></div></dd>
+			</dl>
+		</form>
+		</div>
+	</div>
+
+	<div class="nosupport">
+		<div>大変申し訳ありません。ご利用できないブラウザです。<br>
+		下記のブラウザでご利用ください</div>
+		<ul>
+		<li>Internet Explorer 10 以降</li>
+		<li>Chrome 38 以降</li>
+		<li>Firefox 24 以降</li>
+		</ul>
+	</div>
+</body>
+</html>
+

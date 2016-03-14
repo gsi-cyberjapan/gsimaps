@@ -1,0 +1,202 @@
+* {
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font-size: 10pt;
+}
+
+html,body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+
+/***********************************
+ nosupport
+***********************************/
+.nosupport
+{
+	display:none;
+}
+
+/***********************************
+ edit
+***********************************/
+.edit
+{
+	position:absolute;
+	top : 2px;
+	bottom:2px;
+	overflow-y:scroll;
+	border:1px solid #bbb;
+	background:#fff;
+	padding:8px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+}
+
+.edit .inputtext
+{
+	padding:2px;
+	border:none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+	width:100%;
+	box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+}
+
+.edit select
+{
+	border:1px solid #888;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+}
+
+.edit div.tableframe
+{
+	margin:0px;
+	padding:0px;
+	display:none;
+}
+
+.edit div.tableframe dl
+{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+	margin:0;
+	border-left: 1px solid #B0B0B0;
+	border-right: 1px solid #B0B0B0;
+	border-bottom: 1px solid #B0B0B0;
+	background-color: #C7E6E2; 
+	color: #4B4B4B;
+}
+
+.edit div.tableframe dt
+{
+	margin: 0;
+	margin-right: -120px;
+	padding: 5px 0;
+	border-top: 1px solid #B0B0B0;
+	float: left;
+	clear: both;
+	display: inline;
+	width: 160px;
+	text-indent: 5px;
+	font-weight: bold;
+}
+
+.edit div.tableframe dd
+{
+	margin-left:120px;
+	padding: 5px;
+	border-left: 1px solid #B0B0B0;
+	border-top: 1px solid #B0B0B0;
+	background-color: #fff;
+}
+
+.edit div.info
+{
+	padding: 5px;
+}
+
+.edit div.tile
+{
+    display:table-cell;
+    text-align:center;
+
+	padding: 5px;
+}
+
+/***********************************
+ tree
+***********************************/
+.tree
+{
+	z-index:1;
+	position:absolute;
+	top : 2px;
+	left:2px;
+	width:35%;
+	overflow:scroll;
+	border:1px solid #aaa;
+	background:#fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+}
+
+.tree { 
+	padding: 8px;
+}
+
+.tree ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: white;
+}
+
+.tree li { 
+	margin: 0;
+}
+
+.tree li a{ 
+	border: 1px solid #fff;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 0;
+	padding: 2px 2pt 2px 20px;
+	color:#333;
+	text-decoration:none;
+}
+
+.tree li a.arrow {
+	opacity: .60;
+	filter: alpha(opacity=60);
+	-ms-filter: "alpha(opacity=60)";
+	-khtml-opacity: .60;
+	-moz-opacity: .60;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0px;
+	width:20px;
+	background-image: url(../image/layers_txt/arrow-right.png); background-position:50% 50% ;background-repeat:no-repeat;
+}
+
+.tree li a.arrow.open {
+	background-image: url(../image/layers_txt/arrow-down.png); background-position:50% 50% ;background-repeat:no-repeat;
+}
+
+.tree li a.folder      { background-image: url(../image/layers_txt/folder.png); background-position:0 50% ;background-repeat:no-repeat; }
+.tree li a.folder.open { background-image: url(../image/layers_txt/folder-open.png); background-position:0 50%; background-repeat:no-repeat; }
+.tree li a.layer       { margin-left:20px; background-image: url(../image/layers_txt/file.png); background-position:0px 50%; background-repeat:no-repeat; }
+
+.tree a.selected {
+	background-color: #C7E6E2; 
+	border:1px dotted #333;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #000;
+}

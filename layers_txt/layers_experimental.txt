@@ -2,9 +2,8 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "提供実験",
+      "title": "ベクトルタイル提供実験",
       "iconUrl": "",
-      "open": false,
       "toggleall": false,
       "entries": [
         {
@@ -27,11 +26,12 @@
           "title": "地図情報（道路中心線）",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_rdcl/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
           "minZoom": 16,
           "maxZoom": 18,
           "maxNativeZoom": 16,
-          "attribution": "",
-          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         },
         {
@@ -40,24 +40,26 @@
           "title": "地図情報（鉄道中心線）",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_railcl/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
           "minZoom": 16,
           "maxZoom": 18,
           "maxNativeZoom": 16,
-          "attribution": "",
-          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
-       },
-       {
+        },
+        {
           "type": "Layer",
           "id": "experimental_rvrcl",
           "title": "地図情報（河川中心線）",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_rvrcl/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
           "minZoom": 16,
           "maxZoom": 18,
           "maxNativeZoom": 16,
-          "attribution": "",
-          "cocotile": true,
           "html": "ズーム16～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         },
         {
@@ -66,11 +68,12 @@
           "title": "基盤地図情報_基本項目",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_fgd/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
           "minZoom": 18,
           "maxZoom": 18,
           "maxNativeZoom": 18,
-          "attribution": "",
-          "cocotile": true,
           "html": "ズーム18で表示します。現在のところ、点及び線のデータ（測量の基準点,標高点,街区の代表点,町字の代表点,行政区画代表点,海岸線,等高線,水部構造物線,水涯線,道路縁,道路構成線,軌道の中心線,建築物の外周線,街区線,町字界線,行政区画界）を提供実験しています。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         },
         {
@@ -79,11 +82,12 @@
           "title": "基盤地図情報_数値標高モデル(10m)",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_dem10b/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
           "minZoom": 18,
           "maxZoom": 18,
           "maxNativeZoom": 18,
-          "attribution": "",
-          "cocotile": true,
           "html": "ズーム18で表示します。基盤地図情報数値標高モデル10mメッシュDEMです。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
         },
         {
@@ -92,11 +96,12 @@
           "title": "地形分類",
           "iconUrl": "",
           "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
           "minZoom": 2,
           "maxZoom": 16,
           "maxNativeZoom": 14,
-          "attribution": "",
-          "cocotile": false,
           "html": "ズーム14～16で表示します。<br>数値地図25000（土地条件）及び脆弱地形データより作成したデータです。"
         }
       ]

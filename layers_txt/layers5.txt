@@ -1,0 +1,50 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "他機関の情報",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "kunijiban",
+          "title": "地盤情報（KuniJiban）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "国土地盤情報サイト <a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/'>KuniJiban</a> が提供する国土交通省の地盤情報です（ズームレベル15以上で表示されます）。ご利用にあたっては<a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/terms.html'>利用規約</a>を遵守いただけますようお願い致します。<br>＜凡例＞<br><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png' width='15' height='15'>XML提供<br><img src='http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/099.png' width='15' height='15'>PDF提供"
+        },
+        {
+          "type": "Layer",
+          "id": "active_volcanoes",
+          "title": "活火山分布（気象庁）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
+          "url": "http://cyberjapandata.gsi.go.jp/overlay/active_volcanoes.kml",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "did2010",
+          "title": "人口集中地区Ｈ２２年（総務省統計局）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/did2010/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 8,
+          "maxZoom": 18,
+          "html": "総務省統計局が提供する　平成２２年国勢調査　人口集中地区（ＤＩＤ）境界データです（ズームレベル8～18で表示されます）。ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+        }
+      ]
+    }
+  ]
+}

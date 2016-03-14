@@ -1,95 +1,83 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="ja">
 
 <head>
+    <link rel="shortcut icon" href="http://portal.cyberjapan.jp/favicon.ico" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-<!--INSERT-BASE-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
 
-<link rel="shortcut icon" href="http://portal.cyberjapan.jp/favicon.ico" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <title>地理院地図</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="description" content="地形図、写真、標高、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
+    <link rel="stylesheet" href="js.lib/leaflet-0.7.3/leaflet.css" />
+    <script src="js.lib/leaflet-0.7.3/leaflet-src.js"></script>
 
-<title>地理院地図</title>
+    <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css"/>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
 
-<link rel="stylesheet" href="leaflet-0.7.3/leaflet.css" />
-<script src="leaflet-0.7.3/leaflet-src.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
 
-<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css"/>
-<script type="text/javascript" src="jquery/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/jquery.simple-color-picker.css"/>
+    <script type="text/javascript" src="./js.lib/jquery/colorpicker/jquery.simple-color-picker.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
+    <script type="text/javascript" src="js.lib/OSGeo/proj4js-combined.js"></script>
 
-<script type="text/javascript" src="jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
-<script type="text/javascript" src="jquery/jquery.xdomainrequest.min.js"></script>
-<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
-<script type="text/javascript" src="jquery/jquery.ui.touch-punch.js"></script>
-<link rel="stylesheet" type="text/css" href="jquery/colorpicker/jquery.simple-color-picker.css"/>
-<script type="text/javascript" src="jquery/colorpicker/jquery.simple-color-picker.js"></script>
-<script type="text/javascript" src="jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
-<script type="text/javascript" src="js/proj4js-combined.js"></script>
-<link rel="stylesheet" type="text/css" href="leaflet-plugin/leaflet.label/leaflet.label-gsi.css"/>
-<script type="text/javascript" src="leaflet-plugin/leaflet.label/leaflet.label.js"></script>
-<link rel="stylesheet" type="text/css" href="leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.css"/>
-<script type="text/javascript" src="leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.js"></script>
-<script type="text/javascript" src="leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
-<script type="text/javascript" src="leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
-<link rel="stylesheet" type="text/css" href="leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css"/>
-<script type="text/javascript" src="leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
-<script type="text/javascript" src="leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
-<link rel="stylesheet" type="text/css" href="css/gsimaps.css"/>
-<script type="text/javascript" src="js/gsimaps.js"></script>
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.label/leaflet.label-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.label/leaflet.label.js"></script>
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
 
-<noscript>
+    <link rel="stylesheet" type="text/css" href="./css/gsimaps.css"/>
 
-<div class="noscript">
-JavaScriptを有効にしてご覧ください。
-</div>
-
-</noscript>
-
-<!-- ここから地図共有時使用 ※変更・削除しないでください -->
-
-<script type="text/javascript">
-
-/*INSERT-SCRIPT*/
-
-</script>
-
-<!-- ここまで地図共有時使用 -->
-
+    <script type="text/javascript" src="js/gsimaps.js"></script>
+    <noscript>
+        <div class="noscript">
+        JavaScriptを有効にしてご覧ください。
+        </div>
+    </noscript>
 </head>
 
 <body>
+    <div id="header" class="logo_s">
+        <div class="logoarea">
+	        <a href="">
+	        </a>
+        </div>
 
-<div id="header" class="logo_s">
+        <form name="search_f" id="search_f" autocomplete="off">
+	        <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
+        </form>
 
-<div class="logoarea"><a href=""><!-- replace with your logo <img id="logoimage" src="image/logo_s.png"> --></a></div>
+		<div class="help">
+		    <div id="title_help" onclick="HelpButton()">？</div>
+        </div>
+    </div>
 
-<form name="search_f" id="search_f" autocomplete="off">
-	<input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920">
-</form>
+    <div id="topmessage"></div>
+    <div id="map"></div>
 
-</div>
+    <a id="footerbtn" href="javascript:void(0);"><img src="image/system/footer_up.png" style="width:96px;height:12px;"></a>
 
-<div id="topmessage"></div>
-<div id="map"></div>
-
-<a id="footerbtn" href="javascript:void(0);"><img src="image/system/footer_up.png" width="96" height="12"></a>
-
-<div id="footer">
-
-	<div class="item_frame item_start"><span class="heading">住所:</span><span id="address">----</span><span class="mini_comment">（付近の住所。正確な所属を示すとは限らない。）</span></div>
-	<div class="item_frame"><span id="latlng_60">----</span></div>
-	<div class="item_frame"><span id="latlng_10">----</span>&nbsp;&nbsp;<span class="heading">ズーム:</span><span id="current_zoom"></span></div>
-	<div class="item_frame"><span class="heading">UTMポイント：</span><span id="utm_point">----</span></div>
-	<div class="item_frame"><span class="heading">標高：</span><span id="elevation">----</span></div>
-	<a class="normalbutton footer_description_btn" target="_blank" href="http://maps.gsi.go.jp/help/howtouse.html#h2-3">表示値の説明</a>
-
-</div>
-
+    <div id="footer">
+	    <div class="item_frame item_start"><span class="heading">住所:</span><span id="address">----</span><span class="mini_comment">（付近の住所。正確な所属を示すとは限らない。）</span></div>
+	    <div class="item_frame"><span id="latlng_60">----</span></div>
+	    <div class="item_frame"><span id="latlng_10">----</span>&nbsp;&nbsp;<span class="heading">ズーム:</span><span id="current_zoom"></span></div>
+	    <div class="item_frame"><span class="heading">UTMポイント：</span><span id="utm_point">----</span></div>
+	    <div class="item_frame"><span class="heading">標高：</span><span id="elevation">----</span></div>
+	    <a class="normalbutton footer_description_btn" target="_blank" href="http://maps.gsi.go.jp/help/howtouse.html#h2-3">表示値の説明</a>
+    </div>
 </body>
 
 </html>

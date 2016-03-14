@@ -1,0 +1,58 @@
+{
+	"std":
+	{
+		"period": "平成26年4月1日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/std/5/28/12.png",
+		"basicsurvey": "",
+		"info": "この地理院タイルは基本測量成果（名称：電子地形図（タイル））です。利用にあたっては、国土地理院の地図の利用手続をご覧ください。<div style='border:1px solid #FF00FF;'>ＨＴＭＬもＯＫ</div>"
+	},
+	"pale":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/pale/12/3637/1612.png",
+		"basicsurvey": "",
+		"info": "この地理院タイルは基本測量成果（名称：電子地形図（タイル））です。利用にあたっては、国土地理院の地図の利用手続をご覧ください。"
+	},
+	"blank":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/blank/8/228/98.png",
+		"basicsurvey": "可",
+		"info": ""
+	},
+	"english":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/english/7/113/50.png",
+		"basicsurvey": "否",
+		"info": "この地理院タイルは基本測量成果（名称：電子地形図（タイル））です。利用にあたっては、国土地理院の地図の利用手続をご覧ください。<br />Japan And Its Surroundings 凡例<br />Geospatil Information Authority of Japan (GSI)<br />尚、本地図（Japan And Its Surroundings）を利用する場合は、「地理院コンテンツ利用規約」で定める方法での出所明示に加え、以下の出所も合わせて明示してください。<br />「The bathymetric contours are derived from those contained within the GEBCO Digital Atlas, published by the BODC on behalf of IOC and IHO (2003) (http://www.gebco.net)<br />海上保安庁許可第２６２５２０号（水路業務法第２５条に基づく類似刊行物）」"
+	},
+	"ort":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/relief/7/113/50.png",
+		"basicsurvey": "ＯＫ！",
+		"info": "色別標高図の説明<br />なお、本地図（段彩陰影図）を利用する場合は、「地理院コンテンツ利用規約」で定める方法での出所明示に加え、以下の文言も合わせて明示してください。<br />「海域部は海上保安庁海洋情報部の資料を使用して作成」"
+	},
+	"error":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/relief/7/113/50.png",
+		"basicsurvey": "ＯＫ！",
+		"info": "色別標高図の説明<br />なお、本地図（段彩陰影図）を利用する場合は、「地理院コンテンツ利用規約」で定める方法での出所明示に加え、以下の文言も合わせて明示してください。<br />「海域部は海上保安庁海洋情報部の資料を使用して作成」"
+	},
+	"y2k7":
+	{
+		"period": "平成26年4月1日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/std/5/28/12.png",
+		"basicsurvey": "",
+		"info": "この地理院タイルは基本測量成果（名称：電子地形図（タイル））です。利用にあたっては、国土地理院の地図の利用手続をご覧ください。"
+	},
+	"yk84":
+	{
+		"period": "平成25年10月30日",
+		"typicalimg": "http://cyberjapandata.gsi.go.jp/xyz/pale/12/3637/1612.png",
+		"basicsurvey": "",
+		"info": "この地理院タイルは基本測量成果（名称：電子地形図（タイル））です。利用にあたっては、国土地理院の地図の利用手続をご覧ください。"
+	}
+}

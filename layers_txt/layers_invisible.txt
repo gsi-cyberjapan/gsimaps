@@ -4,15 +4,23 @@
       "type": "Layer",
       "id": "dem",
       "title": "標高タイル",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt",
-      "minZoom": 0,
-      "maxZoom": 14
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
+      "maxZoom": 14,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "experimental_dem5a",
       "title": "基盤地図情報_数値標高モデル(5m)",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_dem5a/{z}/{x}/{y}.geojson",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 18,
       "maxZoom": 18,
       "html": "<a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
@@ -21,81 +29,131 @@
       "type": "Layer",
       "id": "dem5a",
       "title": "標高表示用データ5a",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "dem5b",
       "title": "標高表示用データ5b",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20131217dd5",
       "title": "西之島付近噴火活動 標高タイル（2013年12月17日）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20131217dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20140216dd5",
       "title": "西之島付近噴火活動 標高タイル（2014年2月16日）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140216dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20140322dd5",
       "title": "西之島付近噴火活動 標高タイル（2014年3月22日、UAVを用いて作成）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140322dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20140704dd5",
       "title": "西之島付近噴火活動 標高タイル（2014年7月4日、UAVを用いて作成）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140704dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20141204dd5",
       "title": "西之島付近噴火活動 標高タイル（2014年12月4日）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20141204dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20150301dd5",
       "title": "西之島付近噴火活動 標高タイル（2015年3月1日、UAVを用いて作成）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150301dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20150728dd5",
       "title": "西之島付近噴火活動 標高タイル（2015年7月28日、UAVを用いて作成）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150728dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     },
     {
       "type": "Layer",
       "id": "20151209dd5",
       "title": "西之島付近噴火活動 標高タイル（2015年12月9日）",
+      "iconUrl": "",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20151209dd5/{z}/{x}/{y}.txt",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": false,
       "minZoom": 15,
-      "maxZoom": 15
+      "maxZoom": 15,
+      "html": ""
     }
   ]
 }
