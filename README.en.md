@@ -29,7 +29,7 @@ Howerver, some important functions such as a function to handle vector tile data
 See the [LICENSE file](LICENSE) also.
 
 ## See Also
-- Edit tool for layers definition (from this repository): http://gsi-cyberjapan.github.io/gsimaps/config/config.html
+- Edit tool for layers definition (from this repository): http://gsi-cyberjapan.github.io/gsimaps/config.html
 - The specifications for layers definition (also from our github repository): https://github.com/gsi-cyberjapan/layers-dot-txt-spec
 
 ## hashtag
