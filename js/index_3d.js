@@ -31,6 +31,7 @@ GSI =
  *-----------------------------------------------------------------------------------------------*/
 var CONFIG = {};
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
+CONFIG.layerBaseDefaultID = "std";
 CONFIG.layers             = [
 	 './layers_txt/layers1.txt'
 	,'./layers_txt/layers2.txt'
@@ -170,8 +171,9 @@ function Init(iFrame){
     if(oWin != null){
         try{
             if(oWin.CONFIG){
-                if(oWin.CONFIG.layerBase && oWin.CONFIG.layerBase.length > 0){ CONFIG.layerBase = oWin.CONFIG.layerBase; }
-                if(oWin.CONFIG.layers    && oWin.CONFIG.layers.length    > 0){ CONFIG.layers    = oWin.CONFIG.layers;    }
+                if(oWin.CONFIG.layerBase          && oWin.CONFIG.layerBase.length          > 0){ CONFIG.layerBase          = oWin.CONFIG.layerBase; }
+                if(oWin.CONFIG.layerBaseDefaultID && oWin.CONFIG.layerBaseDefaultID.length > 0){ CONFIG.layerBaseDefaultID = oWin.CONFIG.layerBaseDefaultID; }
+                if(oWin.CONFIG.layers             && oWin.CONFIG.layers.length             > 0){ CONFIG.layers             = oWin.CONFIG.layers;    }
             }
         }
         catch(e){
@@ -269,7 +271,17 @@ function InitGet(){
                 ret["ls"].push(dItem);
             }
         }
+        else{
+            ret["ls"] = new Array();
 
+            var dItem = {
+                    id        : CONFIG.layerBaseDefaultID
+                , opacity   : 1
+                , grayscale : false
+            };
+
+            ret["ls"].push(dItem);
+        }
 
         // 引数：DEM
         if(!(vDemType == "PNG" || vDemType == "TXT")){
@@ -278,7 +290,7 @@ function InitGet(){
         }
 
         ret["tile_n"]    = nTextureTileN;
-        ret["tile_n_px"] = 0;
+        ret["tile_n_px"] = vTextureCanvas_W;
         if(ret["pxsize"]){
             ret["tile_n_px"] = parseInt(ret["pxsize"], 10);
             if(isFinite(ret["tile_n_px"])){
@@ -2342,7 +2354,14 @@ function LoadLayers_Vectors(oCanvas, oData, vUrl){
 
                         if(vDataGeometryArray.length >= 2){
                             /*-------------------------------------------------------------------------------------------------------*/
-                            if(     vData.properties["_markerType"] == "Font"){
+                            if(     vData.properties["_markerType"]    == "Font"
+                                || (vData.properties["_text_fontText"] != null && vData.properties["_text_fontText"] != "")
+                            ){
+                                var iDataName = "";
+                                if(vData.properties["_markerType"] != "Font"){
+                                    iDataName = "_text";
+                                }                                
+
                                 var vDataGeometryLon = parseFloat(vDataGeometryArray[0]);
                                 var vDataGeometryLat = parseFloat(vDataGeometryArray[1]);
 
@@ -2351,19 +2370,19 @@ function LoadLayers_Vectors(oCanvas, oData, vUrl){
                                 var vXA       = 0;
                                 var vYA       = 0;
 
-                                var vText              = vData["properties"]["_fontText"];
-                                var vTextFontWight     = vData["properties"]["_fontWeight"];
-                                var vTextFontSize      = vData["properties"]["_fontSize"];
-                                var vTextFontFamily    = vData["properties"]["_fontFamily"];
-                                var vTextFontColor     = vData["properties"]["_fontColor"];
-                                var vTextFontWriteMode = vData["properties"]["_fontWriteMode"];
-                                var vRotate            = parseFloat(vData["properties"]["_rotate"]);
-                                var vShadow            = vData["properties"]["_Shadow"];
-                                var vShadowSize        = vData["properties"]["_Shadow_size"];
-                                var vShadowFontColor   = vData["properties"]["_Shadow_fontColor"];
-
-                                vXA = 0; if(vData["properties"]["_anchorL"] != null){ vXA = vData["properties"]["_anchorL"]; }
-                                vYA = 0; if(vData["properties"]["_anchorT"] != null){ vYA = vData["properties"]["_anchorT"]; }
+                                var vText              = vData["properties"][iDataName + "_fontText"];
+                                var vTextFontWight     = vData["properties"][iDataName + "_fontWeight"];
+                                var vTextFontSize      = vData["properties"][iDataName + "_fontSize"];
+                                var vTextFontFamily    = vData["properties"][iDataName + "_fontFamily"];
+                                var vTextFontColor     = vData["properties"][iDataName + "_fontColor"];
+                                var vTextFontWriteMode = vData["properties"][iDataName + "_fontWriteMode"];
+                                var vRotate            = parseFloat(vData["properties"][iDataName + "_rotate"]);
+                                var vShadow            = vData["properties"][iDataName + "_Shadow"];
+                                var vShadowSize        = vData["properties"][iDataName + "_Shadow_size"];
+                                var vShadowFontColor   = vData["properties"][iDataName + "_Shadow_fontColor"];
+                                
+                                vXA = 0; if(vData["properties"][iDataName + "_anchorL"] != null){ vXA = vData["properties"][iDataName + "_anchorL"]; }
+                                vYA = 0; if(vData["properties"][iDataName + "_anchorT"] != null){ vYA = vData["properties"][iDataName + "_anchorT"]; }
 
                                 var nTextMax = 1;
                                 if(vShadow){
@@ -2404,7 +2423,7 @@ function LoadLayers_Vectors(oCanvas, oData, vUrl){
                                     }
                                 }
                             }
-                            else if(vData.properties["_markerType"] == "DivIcon"){
+                            if(vData.properties["_markerType"] == "DivIcon"){
                                 var vDataGeometryLon = parseFloat(vDataGeometryArray[0]);
                                 var vDataGeometryLat = parseFloat(vDataGeometryArray[1]);
                                 var vX        = LoadLayers_Vectors_2PX(vDataGeometryLon, vRange_Lon_L, vDeg2PxX, "lon");
@@ -2453,7 +2472,7 @@ function LoadLayers_Vectors(oCanvas, oData, vUrl){
                                 }
                             }
                             /*-------------------------------------------------------------------------------------------------------*/
-                            else if(vData.properties["_markerType"] == "Icon"){
+                            if(vData.properties["_markerType"] == "Icon"){
                                 var vDataGeometryLon = parseFloat(vDataGeometryArray[0]);
                                 var vDataGeometryLat = parseFloat(vDataGeometryArray[1]);
 
@@ -2497,8 +2516,8 @@ function LoadLayers_Vectors(oCanvas, oData, vUrl){
                                     vVectors++;
                             }
                             /*-------------------------------------------------------------------------------------------------------*/
-                            else if(vData.properties["_markerType"] == "Circle"       ||
-                                    vData.properties["_markerType"] == "CircleMarker"    
+                            if(vData.properties["_markerType"] == "Circle"       ||
+                               vData.properties["_markerType"] == "CircleMarker"    
                             ){
                                 var vDataGeometryLon = parseFloat(vDataGeometryArray[0]);
                                 var vDataGeometryLat = parseFloat(vDataGeometryArray[1]);
