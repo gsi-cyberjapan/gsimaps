@@ -13794,7 +13794,7 @@ GSI.QueryParams = L.Class.extend( {
         }
 
         var fBaseMap = true;
-        if(this._f_queryStrings == ""){
+        if(this._f_queryStrings == "" || this._f_queryStrings.lastIndexOf("=") == -1){
             fBaseMap = false;
         }
 
