@@ -8154,7 +8154,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 	},
 	_initializeLinkMode : function()
 	{
-		this._textarea.val( this.getUrl() );
+		this._textarea.val(location.href);
 	},
 	_initializeBuiltInMode : function()
 	{
@@ -8298,12 +8298,12 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		var queryString = '';
 		if ( this._positionShareCheck.is( ':checked' ) )
 		{
-			queryString += ( queryString != '' ? '&' : '' ) + this.pageStateManager.getPositionQueryString();
+			queryString = this.pageStateManager.getPositionQueryString();
 		}
 
 		if ( this._basemapCheck.is( ':checked' ) )
 		{
-			queryString += ( queryString != '' ? '&' : '' ) + this.pageStateManager.getBaseLayerQueryString();
+			queryString += ( queryString != '' ? '&' : '#' ) + this.pageStateManager.getBaseLayerQueryString();
 		}
 
 		if ( this._layerpCheck.is( ':checked' ) )
@@ -8311,12 +8311,12 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 			var ls = this.pageStateManager.getLayersQueryString();
 			if ( ls != '' )
 			{
-				queryString += ( queryString != '' ? '&' : '' ) + ls;
+				queryString += ( queryString != '' ? '&' : '#' ) + ls;
 			}
 			var disp = this.pageStateManager.getTileViewSetting();
 			if ( disp != '' )
 			{
-				queryString += ( queryString != '' ? '&' : '' ) + disp;
+				queryString += ( queryString != '' ? '&' : '#' ) + disp;
 			}
 		}
 
@@ -8361,27 +8361,29 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 			visibleDialogs : visibleDialogs
 		} );
 
+        var queryArgs = "";
 		for ( var key in queryParams )
 		{
-			queryString += ( queryString != '' ? '&' : '' ) + key + '=' + queryParams[key];
+            if(key == "hc"){
+			    queryArgs += ( queryString != '' ? '?' : '' ) + key + '=' + queryParams[key];
+            }
+            else{
+                queryString += ( queryString != '' ? '&' : '#' ) + key + '=' + queryParams[key];
+            }
 		}
 
 		if ( additionalParam && additionalParam != '' )
 		{
-			queryString += ( queryString != '' ? '&' : '' ) + additionalParam;
+			queryString += ( queryString != '' ? '&' : '#' ) + additionalParam;
 		}
 
-		return queryString;
+		return queryArgs + queryString;
 	},
 	getUrl :function(additionalParam)
 	{
-		var url = GSI.Utils.getCurrentPath();
-        queryString  = this.pageStateManager.getPositionQueryString();
-        queryString += GSI.GLOBALS.hash_options.HashCreateProc().replace("/&", "&");
-		if ( queryString != '' ){
-			url += '?' + queryString;
-        }
-		return url;
+		var url         = GSI.Utils.getCurrentPath();
+        var queryString = this._makeQueryString();
+        return url + queryString;
 	},
 	afterShow : function()
 	{
@@ -13112,7 +13114,9 @@ GSI.PagePrinter = L.Class.extend( {
 			if ( tileList[i]._printInfo._visible )
 			{
 				this._map.removeLayer( tileList[i]._visibleInfo.layer );
-				this._originalMap.addLayer ( tileList[i]._visibleInfo.layer );
+                if(tileList[i].parent && tileList[i].parent.title_sys != CONFIG.layerBaseFolderSYS){
+				    this._originalMap.addLayer ( tileList[i]._visibleInfo.layer );
+                }
 			}
 			tileList[i]._printInfo = null;
 		}
@@ -13167,16 +13171,11 @@ GSI.PagePrinter = L.Class.extend( {
 		});
 		L.control.scale({imperial:false}).addTo(this._map);
 
-		this._baseLayer = new GSI.BaseLayer(CONFIG.BASETILES, this._originalBaseLayer.getActiveId());
-
-		this._baseLayer.setHighQuality( hq );
-		this._baseLayer.addTo(this._map);
-
+        var fBase = false;
 		this._map.setView( this._originalMap.getCenter(), this._originalMap.getZoom() );
 
 		// タイル
 		var tileList = this._mapLayerList.getTileList();
-
 		for ( var i=tileList.length-1; i>=0; i-- )
 		{
 			tileList[i]._printInfo = {};
@@ -13187,9 +13186,21 @@ GSI.PagePrinter = L.Class.extend( {
 			if ( visible )
 			{
 				tileList[i]._printInfo._visible = true;
-				this._map.addLayer( tileList[i]._visibleInfo.layer );
+                if(tileList[i].parent && tileList[i].parent.title_sys == CONFIG.layerBaseFolderSYS){
+                    fBase = true;
+                }
+                else{
+    				this._map.addLayer( tileList[i]._visibleInfo.layer );
+                }
 			}
 		}
+        this._baseLayer = null;
+        if(fBase){
+		    this._baseLayer = new GSI.BaseLayer(CONFIG.BASETILES, this._originalBaseLayer.getActiveId());
+
+		    this._baseLayer.setHighQuality( hq );
+		    this._baseLayer.addTo(this._map);
+        }
 
 		// ファイル
 		var list = this._mapLayerList.getList();
@@ -13288,6 +13299,9 @@ GSI.PagePrinter = L.Class.extend( {
 
 		var paperSizeVal = paperSizeArr[0];
 		var hq = ( paperSizeArr.length >= 2 && paperSizeArr[1] == 'hq' ? true: false );
+        if(this._baseLayer != null){
+		    this._baseLayer.setHighQuality( hq );
+        }
 		this._baseLayer.setHighQuality( hq );
 		var paperSize = this.printSize2MapSize( paperSizeVal );
 		
@@ -13299,7 +13313,9 @@ GSI.PagePrinter = L.Class.extend( {
 	},
 	_qualityChange : function()
 	{
-		this._baseLayer.setHighQuality( this._qualityCheck.is( ':checked' )  );
+        if(this._baseLayer != null){
+		    this._baseLayer.setHighQuality( this._qualityCheck.is( ':checked' )  );
+        }
 	},
 
 	_create : function()
@@ -13388,10 +13404,7 @@ GSI.PageStateManager = L.Class.extend( {
 		var center = this._map.getCenter().wrap();
 		var zoom = this._map.getZoom();
 
-		return "ll="
-			+ ( Math.round( center.lat * 1000000 ) / 1000000 ) + ',' + ( Math.round( center.lng * 1000000 ) / 1000000 )
-			+ '&z=' + zoom;
-
+		return "#" + zoom + "/" + ( Math.round( center.lat * 1000000 ) / 1000000 ) + '/' + ( Math.round( center.lng * 1000000 ) / 1000000 );
 	},
 	getCurrentPathQueryString : function()
 	{
@@ -13674,6 +13687,8 @@ GSI.QueryParams = L.Class.extend( {
         }
         queryStrings += vHashOptions;
 
+        this._f_queryLocation = queryStrings;
+        this._f_queryOptions  = vHashOptions;
         this._f_queryStrings  = queryStrings + vHashLocation;
 
         this.initialize_proc(queryStrings);
@@ -13794,7 +13809,7 @@ GSI.QueryParams = L.Class.extend( {
         }
 
         var fBaseMap = true;
-        if(this._f_queryStrings == "" || this._f_queryStrings.lastIndexOf("=") == -1){
+        if(this._f_queryStrings == "" || (this._f_queryOptions.lastIndexOf("base") == -1 && this._f_queryOptions.lastIndexOf("=") == -1)){
             fBaseMap = false;
         }
 
@@ -18497,6 +18512,8 @@ GSI.BaseLayer = L.TileLayer.extend({
 			}
 		}
 		this.baseLayerList = baseLayerList;
+		options = L.setOptions(this, {});
+		options.minZoom = 2;
 		this.setActiveIndex(this.activeIndex);
         this.setGrayScale(defaultMapGrayScale);
 	},
