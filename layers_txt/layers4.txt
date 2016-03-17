@@ -1358,7 +1358,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "平成20年岩手・宮城内陸地震関連",
+              "title": "平成20年岩手・宮城内陸地震",
               "iconUrl": "",
               "toggleall": false,
               "entries": [
