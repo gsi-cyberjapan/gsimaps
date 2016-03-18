@@ -128,7 +128,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1411nagano",
-                  "title": "斜め写真(11/24)",
+                  "title": "斜め写真（11/24）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/naname1411nagano.kml",
                   "subdomains": "",
@@ -140,7 +140,7 @@
                 {
                   "type": "Layer",
                   "id": "denshi1411nagano",
-                  "title": "電子基準点(点名:白馬)",
+                  "title": "電子基準点（点名:白馬）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/476.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/denshi1411nagano.kml",
                   "subdomains": "",
@@ -152,7 +152,7 @@
                 {
                   "type": "Layer",
                   "id": "seikaTeishi1411nagano",
-                  "title": "基準点成果公表停止範囲(12/1)",
+                  "title": "基準点成果公表停止範囲（12/1）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/seikaTeishi1411nagano.kml",
                   "subdomains": "",
@@ -164,7 +164,7 @@
                 {
                   "type": "Layer",
                   "id": "yosin1411nagano",
-                  "title": "余震震源分布(11/29現在)",
+                  "title": "余震震源分布（11/29現在）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1411nagano/yosin1411nagano.kml",
                   "subdomains": "",
@@ -1107,7 +1107,7 @@
                     {
                       "type": "Layer",
                       "id": "001airphoto1103tohoku",
-                      "title": "青森県　三八地方沿岸（3月13日撮影）",
+                      "title": "青森県　三八地方沿岸（3/13撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/aomori_kokudo45n.kml",
                       "subdomains": "",
@@ -1119,7 +1119,7 @@
                     {
                       "type": "Layer",
                       "id": "002airphoto1103tohoku",
-                      "title": "青森県　三八上北地方沿岸（4月5日撮影）",
+                      "title": "青森県　三八上北地方沿岸（4/5撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/097.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/aomori_sanrikukaigan0405.kml",
                       "subdomains": "",
@@ -1131,7 +1131,7 @@
                     {
                       "type": "Layer",
                       "id": "003airphoto1103tohoku",
-                      "title": "岩手県　沿岸北部（3月13日撮影）",
+                      "title": "岩手県　沿岸北部（3/13撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/iwate_kokudo45n.kml",
                       "subdomains": "",
@@ -1143,7 +1143,7 @@
                     {
                       "type": "Layer",
                       "id": "004airphoto1103tohoku",
-                      "title": "岩手県　沿岸南部（3月13日撮影）",
+                      "title": "岩手県　沿岸南部（3/13撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/iwate_kokudo45s.kml",
                       "subdomains": "",
@@ -1155,7 +1155,7 @@
                     {
                       "type": "Layer",
                       "id": "005airphoto1103tohoku",
-                      "title": "岩手県～宮城県　三陸海岸（4月1日撮影）",
+                      "title": "岩手県～宮城県　三陸海岸（4/1撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/iwate_sanrikukaigan0401.kml",
                       "subdomains": "",
@@ -1167,7 +1167,7 @@
                     {
                       "type": "Layer",
                       "id": "006airphoto1103tohoku",
-                      "title": "岩手県　三陸海岸（4月5日撮影）",
+                      "title": "岩手県　三陸海岸（4/5撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/097.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/iwate_sanrikukaigan0405.kml",
                       "subdomains": "",
@@ -1179,7 +1179,7 @@
                     {
                       "type": "Layer",
                       "id": "007airphoto1103tohoku",
-                      "title": "宮城県　沿岸北部（3月13日撮影）",
+                      "title": "宮城県　沿岸北部（3/13撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_kokudo45s.kml",
                       "subdomains": "",
@@ -1191,7 +1191,7 @@
                     {
                       "type": "Layer",
                       "id": "008airphoto1103tohoku",
-                      "title": "宮城県　石巻市周辺（3月12日撮影）",
+                      "title": "宮城県　石巻市周辺（3/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_ishinomaki.kml",
                       "subdomains": "",
@@ -1203,7 +1203,7 @@
                     {
                       "type": "Layer",
                       "id": "009airphoto1103tohoku",
-                      "title": "宮城県　仙台市周辺（3月12日撮影）",
+                      "title": "宮城県　仙台市周辺（3/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_sendai0312.kml",
                       "subdomains": "",
@@ -1215,7 +1215,7 @@
                     {
                       "type": "Layer",
                       "id": "010airphoto1103tohoku",
-                      "title": "宮城県　仙台市周辺（3月13日撮影）",
+                      "title": "宮城県　仙台市周辺（3/13撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_sendai0313.kml",
                       "subdomains": "",
@@ -1227,7 +1227,7 @@
                     {
                       "type": "Layer",
                       "id": "011airphoto1103tohoku",
-                      "title": "宮城県　沿岸南部（3月12日撮影）",
+                      "title": "宮城県　沿岸南部（3/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_kokudo6.kml",
                       "subdomains": "",
@@ -1239,7 +1239,7 @@
                     {
                       "type": "Layer",
                       "id": "012airphoto1103tohoku",
-                      "title": "宮城県　三陸海岸（3月19日撮影）",
+                      "title": "宮城県　三陸海岸（3/19撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/098.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/miyagi_sanrikukaigan0319.kml",
                       "subdomains": "",
@@ -1251,7 +1251,7 @@
                     {
                       "type": "Layer",
                       "id": "013airphoto1103tohoku",
-                      "title": "福島県　沿岸北部（3月12日撮影）",
+                      "title": "福島県　沿岸北部（3/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/fukushima_kokudo6.kml",
                       "subdomains": "",
@@ -1263,7 +1263,7 @@
                     {
                       "type": "Layer",
                       "id": "014airphoto1103tohoku",
-                      "title": "茨城県　沿岸北部（3月12日撮影）",
+                      "title": "茨城県　沿岸北部（3/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/ibaraki0312.kml",
                       "subdomains": "",
@@ -1275,7 +1275,7 @@
                     {
                       "type": "Layer",
                       "id": "015airphoto1103tohoku",
-                      "title": "茨城県　沿岸南部（3月27日撮影）",
+                      "title": "茨城県　沿岸南部（3/27撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/099.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1103tohoku/ibaraki0327.kml",
                       "subdomains": "",
@@ -1389,7 +1389,7 @@
                 {
                   "type": "Layer",
                   "id": "mobile_0806tohoku",
-                  "title": "現地緊急調査_被害状況(速報)",
+                  "title": "現地緊急調査_被害状況（速報）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/mobile.geojson",
                   "subdomains": "",
@@ -1401,7 +1401,7 @@
                 {
                   "type": "Layer",
                   "id": "airphoto3_0806tohoku",
-                  "title": "空中写真(土砂災害)_駒の湯温泉上流部",
+                  "title": "空中写真（土砂災害）_駒の湯温泉上流部",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/airphoto3.geojson",
                   "subdomains": "",
@@ -1413,7 +1413,7 @@
                 {
                   "type": "Layer",
                   "id": "airphoto2_0806tohoku",
-                  "title": "空中写真(土砂災害)_荒砥沢ダム上流地域",
+                  "title": "空中写真（土砂災害）_荒砥沢ダム上流地域",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/airphoto2.geojson",
                   "subdomains": "",
@@ -1425,7 +1425,7 @@
                 {
                   "type": "Layer",
                   "id": "airphoto1_0806tohoku",
-                  "title": "空中写真(土砂災害)_市野々原地区",
+                  "title": "空中写真（土砂災害）_市野々原地区",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/airphoto1.geojson",
                   "subdomains": "",
@@ -1533,7 +1533,7 @@
                 {
                   "type": "Layer",
                   "id": "syamendai_0806tohoku",
-                  "title": "災害状況図_斜面崩壊(大)",
+                  "title": "災害状況図_斜面崩壊（大）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/syamendai.geojson",
                   "subdomains": "",
@@ -1557,7 +1557,7 @@
                 {
                   "type": "Layer",
                   "id": "syamensho_0806tohoku",
-                  "title": "災害状況図_斜面崩壊(小)",
+                  "title": "災害状況図_斜面崩壊（小）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0806tohoku/syamensho.geojson",
                   "subdomains": "",
@@ -1637,7 +1637,7 @@
                 {
                   "type": "Layer",
                   "id": "gsi5f02_0707niigata",
-                  "title": "緊急現地調査_被害状況(速報)(7月18日調査)",
+                  "title": "緊急現地調査_被害状況（速報）（7/18調査）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0707niigata/gsi5f02.geojson",
                   "subdomains": "",
@@ -1649,7 +1649,7 @@
                 {
                   "type": "Layer",
                   "id": "gsi5f01_0707niigata",
-                  "title": "緊急現地調査_被害状況(速報)(7月17日調査)",
+                  "title": "緊急現地調査_被害状況（速報）（7/17調査）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0707niigata/gsi5f01.geojson",
                   "subdomains": "",
@@ -1661,7 +1661,7 @@
                 {
                   "type": "Layer",
                   "id": "photo_point_0707niigata",
-                  "title": "空中写真(7月19日撮影)",
+                  "title": "空中写真（7/19撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0707niigata/photo_point.geojson",
                   "subdomains": "",
@@ -1953,7 +1953,7 @@
                 {
                   "type": "Layer",
                   "id": "tansui2_0410niigata",
-                  "title": "河道閉塞(天然ダムの形成)に伴う湛水域(11月8日)",
+                  "title": "河道閉塞（天然ダムの形成）に伴う湛水域（11/8）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0410niigata/tansui2.geojson",
                   "subdomains": "",
@@ -1965,7 +1965,7 @@
                 {
                   "type": "Layer",
                   "id": "tansui_0410niigata",
-                  "title": "河道閉塞(天然ダムの形成)に伴う湛水域(10月28日)",
+                  "title": "河道閉塞（天然ダムの形成）に伴う湛水域（10/28）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0410niigata/tansui.geojson",
                   "subdomains": "",
@@ -1977,7 +1977,7 @@
                 {
                   "type": "Layer",
                   "id": "ryuiki_0410niigata",
-                  "title": "流域界(山古志村付近)",
+                  "title": "流域界（山古志村付近）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0410niigata/ryuiki.geojson",
                   "subdomains": "",
@@ -1989,7 +1989,7 @@
                 {
                   "type": "Layer",
                   "id": "airphoto_area2_0410niigata",
-                  "title": "調査範囲(11月8日)",
+                  "title": "調査範囲（11/8）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0410niigata/airphoto_area2.geojson",
                   "subdomains": "",
@@ -2001,7 +2001,7 @@
                 {
                   "type": "Layer",
                   "id": "airphoto_area_0410niigata",
-                  "title": "調査範囲(10月28日)",
+                  "title": "調査範囲（10/28）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/0410niigata/airphoto_area.geojson",
                   "subdomains": "",
@@ -2059,7 +2059,7 @@
                     {
                       "type": "Layer",
                       "id": "20150912dol",
-                      "title": "大崎地区正射画像（2015.9.12撮影)",
+                      "title": "大崎地区正射画像（2015/9/12撮影）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150912dol/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -2073,7 +2073,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_suichokul_ohsaki_150912",
-                      "title": "大崎地区垂直写真（2015.9.12撮影）",
+                      "title": "大崎地区垂直写真（2015/9/12撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_ohsaki_150912/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2088,7 +2088,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_nanamel_ohsaki_150911_1",
-                      "title": "大崎地区斜め写真（2015.9.11撮影）",
+                      "title": "大崎地区斜め写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_ohsaki_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2103,7 +2103,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_photo_shibuigawa_150911_1",
-                      "title": "破堤箇所周辺の写真（2006年渋井川）",
+                      "title": "破堤箇所周辺の写真（2006年、渋井川）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_photo_shibuigawa_150911_1/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -2115,7 +2115,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_shinsui_yoshida_150912",
-                      "title": "大崎地区（吉田川）の推定浸水範囲（2015.9.12 9:00時点）",
+                      "title": "大崎地区（吉田川）の推定浸水範囲（2015/9/12 9:00時点）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_yoshida_150912/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2130,7 +2130,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_shinsui_shibui_150912",
-                      "title": "大崎地区（渋井川）の推定浸水範囲（2015.9.12 9:00時点）",
+                      "title": "大崎地区（渋井川）の推定浸水範囲（2015/9/12 9:00時点）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_shibui_150912/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2159,7 +2159,7 @@
                         {
                           "type": "Layer",
                           "id": "20150929dol",
-                          "title": "常総地区正射画像（2015.9.29午前撮影）",
+                          "title": "常総地区正射画像（2015/9/29午前撮影）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20150929dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2173,7 +2173,7 @@
                         {
                           "type": "Layer",
                           "id": "20150915dol",
-                          "title": "常総地区正射画像（2015.9.15午前撮影）",
+                          "title": "常総地区正射画像（2015/9/15午前撮影）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20150915dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2187,7 +2187,7 @@
                         {
                           "type": "Layer",
                           "id": "20150913dol",
-                          "title": "常総地区正射画像（2015.9.13午前撮影）",
+                          "title": "常総地区正射画像（2015/9/13午前撮影）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20150913dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2201,7 +2201,7 @@
                         {
                           "type": "Layer",
                           "id": "20150911dol2",
-                          "title": "常総地区正射画像（2015.9.11午後撮影)",
+                          "title": "常総地区正射画像（2015/9/11午後撮影）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol2/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2215,7 +2215,7 @@
                         {
                           "type": "Layer",
                           "id": "20150911dol1",
-                          "title": "常総地区正射画像（2015.9.11午前撮影)",
+                          "title": "常総地区正射画像（2015/9/11午前撮影）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol1/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2237,7 +2237,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_suichokul_joso_150911_2",
-                          "title": "常総地区垂直写真（2015.9.11午後撮影)",
+                          "title": "常総地区垂直写真（2015/9/11午後撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_joso_150911_2/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2252,7 +2252,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_suichokul_joso_150911_1",
-                          "title": "常総地区垂直写真（2015.9.11午前撮影)",
+                          "title": "常総地区垂直写真（2015/9/11午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_joso_150911_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2275,7 +2275,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150916_1",
-                          "title": "常総地区斜め写真（2015.9.16午前撮影）",
+                          "title": "常総地区斜め写真（2015/9/16午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150916_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2290,7 +2290,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150915_1",
-                          "title": "常総地区斜め写真（2015.9.15午前撮影）",
+                          "title": "常総地区斜め写真（2015/9/15午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150915_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2305,7 +2305,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150914_1",
-                          "title": "常総地区斜め写真（2015.9.14午前撮影）",
+                          "title": "常総地区斜め写真（2015/9/14午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150914_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2320,7 +2320,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150913_1",
-                          "title": "常総地区斜め写真（2015.9.13午前撮影）",
+                          "title": "常総地区斜め写真（2015/9/13午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150913_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2335,7 +2335,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150912",
-                          "title": "常総地区斜め写真（2015.9.12午後撮影)",
+                          "title": "常総地区斜め写真（2015/9/12午後撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150912/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2350,7 +2350,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150911_2",
-                          "title": "常総地区斜め写真（2015.9.11午後撮影)",
+                          "title": "常総地区斜め写真（2015/9/11午後撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150911_2/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2365,7 +2365,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_nanamel_joso_150911_1",
-                          "title": "常総地区斜め写真（2015.9.11午前撮影)",
+                          "title": "常総地区斜め写真（2015/9/11午前撮影）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_joso_150911_1/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2388,7 +2388,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150916",
-                          "title": "常総地区の推定浸水範囲（2015.9.16 10:20時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/16 10:20時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150916/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2403,7 +2403,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150915",
-                          "title": "常総地区の推定浸水範囲（2015.9.15 10:30時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/15 10:30時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150915/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2418,7 +2418,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150914",
-                          "title": "常総地区の推定浸水範囲（2015.9.14 9:30時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/14 9:30時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150914/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2433,7 +2433,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150913",
-                          "title": "常総地区の推定浸水範囲（2015.9.13 10:40時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/13 10:40時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150913/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2448,7 +2448,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150912",
-                          "title": "常総地区南部の推定浸水範囲（2015.9.12 15:30時点）",
+                          "title": "常総地区南部の推定浸水範囲（2015/9/12 15:30時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150912/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2463,7 +2463,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150911_4",
-                          "title": "常総地区の推定浸水範囲（2015.9.11 13:00時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/11 13:00時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_4/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2478,7 +2478,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150911_3a",
-                          "title": "常総地区の推定浸水範囲（2015.9.11 10:00時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/11 10:00時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_3a/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2493,7 +2493,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_bando_150911_3a",
-                          "title": "坂東地区の推定浸水範囲（2015.9.11 10:00時点）",
+                          "title": "坂東地区の推定浸水範囲（2015/9/11 10:00時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_bando_150911_3a/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2508,7 +2508,7 @@
                         {
                           "type": "Layer",
                           "id": "1509typhoon18_shinsui_joso_150911_2",
-                          "title": "常総地区の推定浸水範囲（2015.9.10 18:00時点）",
+                          "title": "常総地区の推定浸水範囲（2015/9/10 18:00時点）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_shinsui_joso_150911_2/{z}/{x}/{y}.geojson",
                           "subdomains": "",
@@ -2525,7 +2525,7 @@
                     {
                       "type": "Layer",
                       "id": "150910genchiphoto",
-                      "title": "現地調査写真（9月10日）",
+                      "title": "現地調査写真（2015/9/10）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1509typhoon18/genchi/150910/150910genchiphoto.kml",
                       "subdomains": "",
@@ -2545,7 +2545,7 @@
                     {
                       "type": "Layer",
                       "id": "20150911dol3",
-                      "title": "鹿沼地区正射画像（2015.9.11撮影)",
+                      "title": "鹿沼地区正射画像（2015/9/11撮影）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol3/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -2559,7 +2559,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_suichokul_kanuma_150911_1",
-                      "title": "鹿沼地区垂直写真（2015.9.11撮影)",
+                      "title": "鹿沼地区垂直写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_kanuma_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2574,7 +2574,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_nanamel_kanuma_150911_1",
-                      "title": "鹿沼地区斜め写真（2015.9.11撮影)",
+                      "title": "鹿沼地区斜め写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_kanuma_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2589,7 +2589,7 @@
                     {
                       "type": "Layer",
                       "id": "20150911dol4",
-                      "title": "鬼怒川温泉地区正射画像（2015.9.11撮影)",
+                      "title": "鬼怒川温泉地区正射画像（2015/9/11撮影）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol4/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -2603,7 +2603,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_suichokul_kinugawaonsen_150911_1",
-                      "title": "鬼怒川温泉地区垂直写真（2015.9.11撮影)",
+                      "title": "鬼怒川温泉地区垂直写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_kinugawaonsen_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2626,7 +2626,7 @@
                     {
                       "type": "Layer",
                       "id": "20150911dol5",
-                      "title": "結城地区正射画像（2015.9.11撮影)",
+                      "title": "結城地区正射画像（2015/9/11撮影）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20150911dol5/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -2640,7 +2640,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_suichokul_yuuki_150911_1",
-                      "title": "結城地区垂直写真（2015.9.11撮影)",
+                      "title": "結城地区垂直写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_suichokul_yuuki_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2655,7 +2655,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_nanamel_yuuki_150911_1",
-                      "title": "結城地区斜め写真（2015.9.11撮影)",
+                      "title": "結城地区斜め写真（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_nanamel_yuuki_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2670,7 +2670,7 @@
                     {
                       "type": "Layer",
                       "id": "1509typhoon18_uav_miyatogawa_150911_1",
-                      "title": "宮戸川地区UAV撮影（2015.9.11撮影)",
+                      "title": "宮戸川地区UAV撮影（2015/9/11撮影）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/1509typhoon18_uav_miyatogawa_150911_1/{z}/{x}/{y}.geojson",
                       "subdomains": "",
@@ -2699,28 +2699,36 @@
                   "toggleall": false,
                   "entries": [
                     {
-                      "type": "Layer",
-                      "id": "naname1408ooame_hiroshima_1",
-                      "title": "斜め写真(8/20)",
-                      "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
-                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_hiroshima.kml",
-                      "subdomains": "",
-                      "attribution": "",
-                      "cocotile": false,
-                      "legendUrl": "",
-                      "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/20)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-                    },
-                    {
-                      "type": "Layer",
-                      "id": "naname1408ooame_hiroshima2",
-                      "title": "斜め写真(8/21)",
-                      "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
-                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_hiroshima2.kml",
-                      "subdomains": "",
-                      "attribution": "",
-                      "cocotile": false,
-                      "legendUrl": "",
-                      "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/21)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                      "type": "LayerGroup",
+                      "title": "斜め写真",
+                      "iconUrl": "",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "naname1408ooame_hiroshima2",
+                          "title": "斜め写真（8/21）",
+                          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+                          "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_hiroshima2.kml",
+                          "subdomains": "",
+                          "attribution": "",
+                          "cocotile": false,
+                          "legendUrl": "",
+                          "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/21)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        },
+                        {
+                          "type": "Layer",
+                          "id": "naname1408ooame_hiroshima_1",
+                          "title": "斜め写真（8/20）",
+                          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+                          "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_hiroshima.kml",
+                          "subdomains": "",
+                          "attribution": "",
+                          "cocotile": false,
+                          "legendUrl": "",
+                          "html": "<div class=\"gsi_layerinfo_title\">広島市内 - 斜め写真(8/20)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
                     },
                     {
                       "type": "LayerGroup",
@@ -2731,7 +2739,7 @@
                         {
                           "type": "Layer",
                           "id": "suichoku1408ooame_hiroshima3_l",
-                          "title": "垂直写真(8/31)",
+                          "title": "垂直写真（8/31）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/suichoku1408ooame_hiroshima3_l.kml",
                           "subdomains": "",
@@ -2743,7 +2751,7 @@
                         {
                           "type": "Layer",
                           "id": "suichoku1408ooame_hiroshima2_l",
-                          "title": "垂直写真(8/30)",
+                          "title": "垂直写真（8/30）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/suichoku1408ooame_hiroshima2_l.kml",
                           "subdomains": "",
@@ -2755,7 +2763,7 @@
                         {
                           "type": "Layer",
                           "id": "suichoku1408ooame_hiroshima_l",
-                          "title": "垂直写真(8/28)",
+                          "title": "垂直写真（8/28）",
                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/suichoku1408ooame_hiroshima_l.kml",
                           "subdomains": "",
@@ -2769,7 +2777,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1408ooame_hiroshima3",
-                      "title": "写真判読図(8/28・30・31垂直写真)",
+                      "title": "写真判読図（8/28・30・31垂直写真）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/hisai1408ooame_hiroshima3.kml",
                       "subdomains": "",
@@ -2787,7 +2795,7 @@
                         {
                           "type": "Layer",
                           "id": "20140831dol",
-                          "title": "正射画像(8/30・31)",
+                          "title": "正射画像（8/30・31）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140831dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2800,7 +2808,7 @@
                         {
                           "type": "Layer",
                           "id": "20140830dol",
-                          "title": "正射画像(8/30)",
+                          "title": "正射画像（8/30）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140830dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2813,7 +2821,7 @@
                         {
                           "type": "Layer",
                           "id": "20140828dol",
-                          "title": "正射画像(8/28)",
+                          "title": "正射画像（8/28）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140828dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2826,7 +2834,7 @@
                         {
                           "type": "Layer",
                           "id": "seisyazukaku1408ooame_hiroshima3_l",
-                          "title": "正射画像_図郭版(8/30・31)",
+                          "title": "正射画像_図郭版（8/30・31）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/seisyazukaku1408ooame_hiroshima3_l.kml",
                           "subdomains": "",
@@ -2838,7 +2846,7 @@
                         {
                           "type": "Layer",
                           "id": "seisyazukaku1408ooame_hiroshima2_l",
-                          "title": "正射画像_図郭版(8/30)",
+                          "title": "正射画像_図郭版（8/30）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/seisyazukaku1408ooame_hiroshima2_l.kml",
                           "subdomains": "",
@@ -2850,7 +2858,7 @@
                         {
                           "type": "Layer",
                           "id": "seisyazukaku1408ooame_hiroshima_l",
-                          "title": "正射画像_図郭版(8/28)",
+                          "title": "正射画像_図郭版（8/28）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/seisyazukaku1408ooame_hiroshima_l.kml",
                           "subdomains": "",
@@ -2870,7 +2878,7 @@
                         {
                           "type": "Layer",
                           "id": "19620000dol",
-                          "title": "過去の正射画像(1962年)",
+                          "title": "過去の正射画像（1962年）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/19620000dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2883,7 +2891,7 @@
                         {
                           "type": "Layer",
                           "id": "19480000dol",
-                          "title": "過去の正射画像(1947～1948年)",
+                          "title": "過去の正射画像（1947～1948年）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/19480000dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2904,7 +2912,7 @@
                         {
                           "type": "Layer",
                           "id": "20140820dol",
-                          "title": "斜め写真による正射画像(8/20 安佐南区八木)",
+                          "title": "斜め写真による正射画像（8/20 安佐南区八木）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140820dol/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2917,7 +2925,7 @@
                         {
                           "type": "Layer",
                           "id": "20140820dol2",
-                          "title": "斜め写真による正射画像(8/20 安佐南区山本)",
+                          "title": "斜め写真による正射画像（8/20 安佐南区山本）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140820dol2/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2930,7 +2938,7 @@
                         {
                           "type": "Layer",
                           "id": "20140820dol3",
-                          "title": "斜め写真による正射画像(8/20 安佐北区可部)",
+                          "title": "斜め写真による正射画像（8/20 安佐北区可部）",
                           "iconUrl": "",
                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20140820dol3/{z}/{x}/{y}.png",
                           "subdomains": "",
@@ -2945,7 +2953,7 @@
                     {
                       "type": "Layer",
                       "id": "airphoto1408ooame_hiroshima",
-                      "title": "過去に撮影した空中写真(2005～2009年)",
+                      "title": "過去に撮影した空中写真（2005～2009年）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/airphoto1408ooame_hiroshima.kml",
                       "subdomains": "",
@@ -2989,7 +2997,7 @@
                     {
                       "type": "Layer",
                       "id": "naname1408ooame_tanba_1",
-                      "title": "斜め写真(8/19)",
+                      "title": "斜め写真（8/19）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_tanba.kml",
                       "subdomains": "",
@@ -3001,7 +3009,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1408ooame_tanba",
-                      "title": "垂直写真(8/19)",
+                      "title": "垂直写真（8/19）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/suichoku1408ooame_tanba.kml",
                       "subdomains": "",
@@ -3013,7 +3021,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1408ooame_tanba",
-                      "title": "写真判読図(8/19)",
+                      "title": "写真判読図（8/19）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/hisai1408ooame_tanba.kml",
                       "subdomains": "",
@@ -3025,7 +3033,7 @@
                     {
                       "type": "Layer",
                       "id": "20140819dol",
-                      "title": "正射画像(8/19)",
+                      "title": "正射画像（8/19）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140819dol/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -3038,7 +3046,7 @@
                     {
                       "type": "Layer",
                       "id": "seisyazukaku1408ooame_tanba",
-                      "title": "正射画像_図郭版(8/19)",
+                      "title": "正射画像_図郭版（8/19）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/seisyazukaku1408ooame_tanba.kml",
                       "subdomains": "",
@@ -3058,7 +3066,7 @@
                     {
                       "type": "Layer",
                       "id": "naname1408ooame_fukuchiyama_1",
-                      "title": "斜め写真(8/19)",
+                      "title": "斜め写真（8/19）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1408ooame/naname1408ooame_fukuchiyama.kml",
                       "subdomains": "",
@@ -3080,7 +3088,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1408typhoon11",
-                  "title": "斜め写真 (8/13)",
+                  "title": "斜め写真（8/13）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1408typhoon11/naname1408typhoon11.kml",
                   "subdomains": "",
@@ -3092,7 +3100,7 @@
                 {
                   "type": "Layer",
                   "id": "suichoku1408typhoon11",
-                  "title": "垂直写真 (8/13)",
+                  "title": "垂直写真（8/13）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1408typhoon11/suichoku1408typhoon11.kml",
                   "subdomains": "",
@@ -3104,7 +3112,7 @@
                 {
                   "type": "Layer",
                   "id": "20140813dol",
-                  "title": "正射画像 (8/13)",
+                  "title": "正射画像（8/13）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140813dol/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -3117,7 +3125,7 @@
                 {
                   "type": "Layer",
                   "id": "1408typhoon11",
-                  "title": "正射画像_図郭版 (8/13)",
+                  "title": "正射画像_図郭版（8/13）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1408typhoon11/seisyazukaku1408typhoon11.kml",
                   "subdomains": "",
@@ -3137,7 +3145,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1407typhoon8",
-                  "title": "斜め写真（7/11)",
+                  "title": "斜め写真（7/11）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1407typhoon8/naname1407typhoon8.kml",
                   "subdomains": "",
@@ -3149,7 +3157,7 @@
                 {
                   "type": "Layer",
                   "id": "20140711dol",
-                  "title": "斜め写真による正射画像（7/11)",
+                  "title": "斜め写真による正射画像（7/11）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140711dol/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -3181,20 +3189,8 @@
               "entries": [
                 {
                   "type": "Layer",
-                  "id": "suichoku1310typhoon26",
-                  "title": "垂直写真（10/17)",
-                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1310typhoon26/suichoku1310typhoon26.kml",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 垂直写真（10/17)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-                },
-                {
-                  "type": "Layer",
                   "id": "naname1310typhoon26",
-                  "title": "斜め写真（10/16)",
+                  "title": "斜め写真（10/16）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1310typhoon26/naname1310typhoon26.kml",
                   "subdomains": "",
@@ -3202,6 +3198,18 @@
                   "cocotile": false,
                   "legendUrl": "",
                   "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 斜め写真（10/16)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "suichoku1310typhoon26",
+                  "title": "垂直写真（10/17）",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1310typhoon26/suichoku1310typhoon26.kml",
+                  "subdomains": "",
+                  "attribution": "",
+                  "cocotile": false,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 垂直写真（10/17)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
                   "type": "Layer",
@@ -3341,7 +3349,7 @@
                 {
                   "type": "Layer",
                   "id": "suichoku1309typhoon18",
-                  "title": "垂直写真(9/20)",
+                  "title": "垂直写真（9/20）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1309typhoon18/suichoku1309typhoon18.kml",
                   "subdomains": "",
@@ -3373,7 +3381,7 @@
                 {
                   "type": "Layer",
                   "id": "20130902dol",
-                  "title": "正射画像(9/9)",
+                  "title": "正射画像（9/9）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20130902dol/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -3385,7 +3393,7 @@
                 {
                   "type": "Layer",
                   "id": "seisyahani1309saitama",
-                  "title": "正射画像/正射地図(9/9)",
+                  "title": "正射画像/正射地図（9/9）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1309saitama/seisyahani1309saitama.kml",
                   "subdomains": "",
@@ -3423,7 +3431,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1307yamaguchi2B",
-                      "title": "垂直写真(8/7 B)",
+                      "title": "垂直写真（8/7 B）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/suichoku1307yamaguchi2B.kml",
                       "subdomains": "",
@@ -3435,7 +3443,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1307yamaguchi2A",
-                      "title": "垂直写真(8/7 A)",
+                      "title": "垂直写真（8/7 A）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/suichoku1307yamaguchi2A.kml",
                       "subdomains": "",
@@ -3447,7 +3455,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1307yamaguchi",
-                      "title": "垂直写真(7/31)",
+                      "title": "垂直写真（7/31）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/suichoku1307yamaguchi.kml",
                       "subdomains": "",
@@ -3459,7 +3467,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1307yamaguchi2",
-                      "title": "被災箇所(8/7)",
+                      "title": "被災箇所（8/7）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/hisai1307yamaguchi2.kml",
                       "subdomains": "",
@@ -3471,7 +3479,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1307yamaguchi",
-                      "title": "被災箇所(7/31)",
+                      "title": "被災箇所（7/31）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/hisai1307yamaguchi.kml",
                       "subdomains": "",
@@ -3483,7 +3491,7 @@
                     {
                       "type": "Layer",
                       "id": "20130717dol2",
-                      "title": "正射画像(8/7)",
+                      "title": "正射画像（8/7）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20130717dol2/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -3495,7 +3503,7 @@
                     {
                       "type": "Layer",
                       "id": "20130717dol",
-                      "title": "正射画像(7/31)",
+                      "title": "正射画像（7/31）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20130717dol/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -3507,7 +3515,7 @@
                     {
                       "type": "Layer",
                       "id": "ortho130807yamaguchi",
-                      "title": "正射画像_図郭版（8/7)",
+                      "title": "正射画像_図郭版（8/7）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/ortho130807yamaguchi.kml",
                       "subdomains": "",
@@ -3519,7 +3527,7 @@
                     {
                       "type": "Layer",
                       "id": "ortho130731yamaguchi",
-                      "title": "正射画像_図郭版（7/31)",
+                      "title": "正射画像_図郭版（7/31）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/ortho130731yamaguchi.kml",
                       "subdomains": "",
@@ -3531,7 +3539,7 @@
                     {
                       "type": "Layer",
                       "id": "orthomap130807yamaguchi",
-                      "title": "正射写真地図_図郭版（8/7)",
+                      "title": "正射写真地図_図郭版（8/7）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/ortho-map130807yamaguchi.kml",
                       "subdomains": "",
@@ -3543,7 +3551,7 @@
                     {
                       "type": "Layer",
                       "id": "orthomap130731yamaguchi",
-                      "title": "正射写真地図_図郭版（7/31)",
+                      "title": "正射写真地図_図郭版（7/31）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/ortho-map130731yamaguchi.kml",
                       "subdomains": "",
@@ -3563,7 +3571,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1307tsuwano_l2",
-                      "title": "垂直写真(8/9)",
+                      "title": "垂直写真（8/9）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/suichoku1307tsuwano_l2.kml",
                       "subdomains": "",
@@ -3575,7 +3583,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1307tsuwano2",
-                      "title": "被災箇所(8/9)",
+                      "title": "被災箇所（8/9）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/hisai1307tsuwano2.kml",
                       "subdomains": "",
@@ -3595,7 +3603,7 @@
                     {
                       "type": "Layer",
                       "id": "suichoku1307ato_l2",
-                      "title": "垂直写真(8/9)",
+                      "title": "垂直写真（8/9）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/suichoku1307ato_l2.kml",
                       "subdomains": "",
@@ -3607,7 +3615,7 @@
                     {
                       "type": "Layer",
                       "id": "hisai1307ato2",
-                      "title": "被災箇所(8/9)",
+                      "title": "被災箇所（8/9）",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1307yamaguchi/hisai1307ato2.kml",
                       "subdomains": "",
@@ -3629,7 +3637,7 @@
                 {
                   "type": "Layer",
                   "id": "shamen1207kyushu",
-                  "title": "斜面崩壊(7/25)",
+                  "title": "斜面崩壊（7/25）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/453.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/shamenari.kml",
                   "subdomains": "",
@@ -3641,7 +3649,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1207kyushu",
-                  "title": "斜め写真(7/15)",
+                  "title": "斜め写真（7/15）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/naname.kml",
                   "subdomains": "",
@@ -3653,7 +3661,7 @@
                 {
                   "type": "Layer",
                   "id": "teibou1207kyushu",
-                  "title": "堤防決壊(7/15)",
+                  "title": "堤防決壊（7/15）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/454.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/teibou.kml",
                   "subdomains": "",
@@ -3665,7 +3673,7 @@
                 {
                   "type": "Layer",
                   "id": "essui1207kyushu",
-                  "title": "越水(7/17、7/25)",
+                  "title": "越水（7/17、7/25）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/452.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/essuiari.kml",
                   "subdomains": "",
@@ -3676,20 +3684,20 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "orthomap1207kyushu",
-                  "title": "正射画像/正射写真地図(7/15)",
+                  "id": "ortho3map1207kyushu",
+                  "title": "正射画像/正射写真地図（7/25）",
                   "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/ortho_map.kml",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/ortho3_map.kml",
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
                   "legendUrl": "",
-                  "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/15)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                  "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/25)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
                   "type": "Layer",
                   "id": "ortho2map1207kyushu",
-                  "title": "正射画像/正射写真地図(7/17)",
+                  "title": "正射画像/正射写真地図（7/17）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/ortho2_map.kml",
                   "subdomains": "",
@@ -3700,15 +3708,15 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "ortho3map1207kyushu",
-                  "title": "正射画像/正射写真地図(7/25)",
+                  "id": "orthomap1207kyushu",
+                  "title": "正射画像/正射写真地図（7/15）",
                   "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/ortho3_map.kml",
+                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1207kyushu/ortho_map.kml",
                   "subdomains": "",
                   "attribution": "",
                   "cocotile": false,
                   "legendUrl": "",
-                  "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/25)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                  "html": "<div class=\"gsi_layerinfo_title\">平成24年7月九州北部豪雨 - 正射画像/正射写真地図(7/15)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
             },
@@ -3973,7 +3981,7 @@
                 {
                   "type": "Layer",
                   "id": "20100718airphoto_1007chugoku",
-                  "title": "空中写真_山陽小野田市(2010/07/18撮影)",
+                  "title": "空中写真_山陽小野田市（2010/07/18撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100718airphoto.geojson",
                   "subdomains": "",
@@ -3985,7 +3993,7 @@
                 {
                   "type": "Layer",
                   "id": "20100719airphoto_1007chugoku",
-                  "title": "空中写真_庄原市(2010/07/19撮影)",
+                  "title": "空中写真_庄原市（2010/07/19撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100719airphoto.geojson",
                   "subdomains": "",
@@ -3997,7 +4005,7 @@
                 {
                   "type": "Layer",
                   "id": "20100718orthophotoV1_1007chugoku",
-                  "title": "正射写真図_山陽小野田市(2010/07/18撮影)",
+                  "title": "正射写真図_山陽小野田市（2010/07/18撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100718orthophotoV1.geojson",
                   "subdomains": "",
@@ -4009,7 +4017,7 @@
                 {
                   "type": "Layer",
                   "id": "20100719orthophotoV1_1007chugoku",
-                  "title": "正射写真図_庄原市(2010/07/19撮影)",
+                  "title": "正射写真図_庄原市（2010/07/19撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100719orthophotoV1.geojson",
                   "subdomains": "",
@@ -4021,7 +4029,7 @@
                 {
                   "type": "Layer",
                   "id": "20100718orthophotoV2_1007chugoku",
-                  "title": "正射写真_山陽小野田市(2010/07/18撮影)",
+                  "title": "正射写真_山陽小野田市（2010/07/18撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100718orthophotoV2.geojson",
                   "subdomains": "",
@@ -4033,7 +4041,7 @@
                 {
                   "type": "Layer",
                   "id": "20100719orthophotoV2_1007chugoku",
-                  "title": "正射写真_庄原市(2010/07/19撮影)",
+                  "title": "正射写真_庄原市（2010/07/19撮影）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100719orthophotoV2.geojson",
                   "subdomains": "",
@@ -4043,100 +4051,108 @@
                   "html": ""
                 },
                 {
-                  "type": "Layer",
-                  "id": "20100722chosa_hani_1007chugoku",
-                  "title": "被災状況(庄原市)_判読範囲",
+                  "type": "LayerGroup",
+                  "title": "被災状況_庄原市",
                   "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_hani.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_1_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(1)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_1.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_2_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(2)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_2.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_3_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(3)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_3.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_4_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(4)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_4.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_5_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(5)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_5.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_houkai_6_1007chugoku",
-                  "title": "被災状況(庄原市)_表層崩壊(6)",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_6.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "20100722chosa_kumo_1007chugoku",
-                  "title": "被災状況(庄原市)_雲等の範囲",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_kumo.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "legendUrl": "",
-                  "html": ""
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_hani_1007chugoku",
+                      "title": "判読範囲",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_hani.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_1_1007chugoku",
+                      "title": "表層崩壊（1）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_1.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_2_1007chugoku",
+                      "title": "表層崩壊（2）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_2.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_3_1007chugoku",
+                      "title": "表層崩壊（3）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_3.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_4_1007chugoku",
+                      "title": "表層崩壊（4）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_4.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_5_1007chugoku",
+                      "title": "表層崩壊（5）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_5.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_houkai_6_1007chugoku",
+                      "title": "表層崩壊（6）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_houkai_6.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20100722chosa_kumo_1007chugoku",
+                      "title": "雲等の範囲",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/overlay/1007chugoku/20100722chosa_kumo.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    }
+                  ]
                 }
               ]
             },
@@ -5020,7 +5036,7 @@
                     {
                       "type": "Layer",
                       "id": "seisyazukaku1409ontake2",
-                      "title": "正射画像_分割版(2014/9/29)",
+                      "title": "正射画像_分割版（2014/9/29）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake/seisyazukaku1409ontake2.kml",
                       "subdomains": "",
@@ -5032,7 +5048,7 @@
                     {
                       "type": "Layer",
                       "id": "seisyazukaku1409ontake1_l",
-                      "title": "正射画像_分割版(2014/9/28)",
+                      "title": "正射画像_分割版（2014/9/28）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake/seisyazukaku1409ontake1_l.kml",
                       "subdomains": "",
@@ -5044,7 +5060,7 @@
                     {
                       "type": "Layer",
                       "id": "20140929dol",
-                      "title": "正射画像(2014/9/29)",
+                      "title": "正射画像（2014/9/29）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140929dol/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -5057,7 +5073,7 @@
                     {
                       "type": "Layer",
                       "id": "20140928dol",
-                      "title": "正射画像(2014/9/28)",
+                      "title": "正射画像（2014/9/28）",
                       "iconUrl": "",
                       "url": "http://cyberjapandata.gsi.go.jp/xyz/20140928dol/{z}/{x}/{y}.png",
                       "subdomains": "",
@@ -5072,7 +5088,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1409ontake2_l",
-                  "title": "斜め写真(2014/9/29)",
+                  "title": "斜め写真（2014/9/29）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake/naname1409ontake2_l.kml",
                   "subdomains": "",
@@ -5084,7 +5100,7 @@
                 {
                   "type": "Layer",
                   "id": "naname1409ontake1_l",
-                  "title": "斜め写真(2014/9/28)",
+                  "title": "斜め写真（2014/9/28）",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake/naname1409ontake1_l.kml",
                   "subdomains": "",
@@ -5096,7 +5112,7 @@
                 {
                   "type": "Layer",
                   "id": "20140930dol",
-                  "title": "航空機SAR画像(2014/9/30)",
+                  "title": "航空機SAR画像（2014/9/30）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140930dol/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -5109,7 +5125,7 @@
                 {
                   "type": "Layer",
                   "id": "20140929dol2",
-                  "title": "航空機SAR画像(2014/9/29)",
+                  "title": "航空機SAR画像（2014/9/29）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140929dol2/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -5122,7 +5138,7 @@
                 {
                   "type": "Layer",
                   "id": "20140929d_mag_ontake",
-                  "title": "衛星SAR強度画像(2014/9/29)",
+                  "title": "衛星SAR強度画像（2014/9/29）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140929d_mag_ontake/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -5135,7 +5151,7 @@
                 {
                   "type": "Layer",
                   "id": "20140818d_mag_ontake",
-                  "title": "衛星SAR強度画像(2014/8/18)",
+                  "title": "衛星SAR強度画像（2014/8/18）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140818d_mag_ontake/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -5148,7 +5164,7 @@
                 {
                   "type": "Layer",
                   "id": "sar1409ontake",
-                  "title": "推定火口(2014/9/30暫定版：航空機SAR画像判読)",
+                  "title": "推定火口（2014/9/30暫定版：航空機SAR画像判読）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/overlay/1409ontake_l/sar1409ontake.kml",
                   "subdomains": "",
@@ -5173,7 +5189,7 @@
                 {
                   "type": "Layer",
                   "id": "20140927d_vlcd_t_ontake",
-                  "title": "火山基本図(透過)",
+                  "title": "火山基本図（透過）",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/20140927d_vlcd_t_ontake/{z}/{x}/{y}.png",
                   "subdomains": "",
@@ -6306,7 +6322,7 @@
                   "type": "Layer",
                   "id": "_airphoto_2015_05",
                   "title": "過去の簡易空中写真（2012/4）",
-                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/photo.png",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
                   "subdomains": "",
                   "attribution": "",
