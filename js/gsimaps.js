@@ -2671,6 +2671,9 @@ GSI.Draw.convertRadius = function(radius, latlng, unit)
 		    result.unit   = 'km';
 	    }
     }
+    if(unit == "px"){
+        result.radius = Math.floor(result.radius);
+    }
 	return result;
 
 };
@@ -4828,7 +4831,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		this.mapLayerList.on( 'change', L.bind( this.onMapLayerListChange, this ) );
 		GSI.Dialog.prototype.initialize.call(this, options);
 
-        this.path = this.options.currentPath;
+        this._current_id = this.path = this.options.currentPath;
 
 		cocoTileLayer.on( 'load', L.bind( this.onCOCOTileLoad, this ) );
 		cocoTileLayer.on( 'hide', L.bind( this.onCOCOTileHide, this ) );
@@ -7129,7 +7132,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 	},
 	_onCircleChange : function( event )
 	{
-    
         var vLatLng = event.latlng;
         var vRadius = event.radius;
         var vUnit   = event.unit;
@@ -8141,7 +8143,6 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		this._setCheckdState( this._visibleInfoMenuCheck, ( mode != GSI.ShareDialog.MODE.BUILTIN ) );
 		this._setCheckdState( this._visibleFuncMenuCheck, ( mode != GSI.ShareDialog.MODE.BUILTIN ) );
 		this._setCheckdState( this._visibleContextMenuCheck, ( mode != GSI.ShareDialog.MODE.BUILTIN ) );
-		this._setCheckdState( this._visibleBaseLayerSelectorCheck, ( mode != GSI.ShareDialog.MODE.BUILTIN ) );
 
 		this._setCheckdState( this._visibleViewListDlgCheck, false );
 		this._setCheckdState( this._visibleLayerTreeDlgCheck, false );
@@ -8204,18 +8205,21 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 			javascript += 'GSI.ClientMode.sakuzuList = ' + JSON.stringify( list ) + ';' + '\n';
 		}
-	    javascript += 'GSI.ClientMode.queryString = "' + this._makeQueryString() + '";' + '\n';
 
         var _location = ( GSI.ClientMode .location ? GSI.ClientMode .location : location );
         
         var url      = _location.protocol + "//" + _location.host;
-        var url_site = _location.pathname + "?postmessage=1";
+        var url_     = this._makeQueryString();
+        if(url_.indexOf("?") == 0){
+            url_ = "&" + url_.substring(1, url_.length);
+        }
+        var url_site = _location.pathname + "?postmessage=1" +url_;
 
         html       = html      .replace('/*url*/'     , url     );
         html       = html      .replace('/*url_site*/', url_site);
         html       = html      .replace(/GSI.ClientMode/g, 'ClientMode');
         javascript = javascript.replace(/GSI.ClientMode/g, 'ClientMode');
-
+        
 		html = html.replace( '/*INSERT-SCRIPT*/', javascript );
 		this._textarea.focus();
 		this._textarea.val( html );
@@ -8242,32 +8246,6 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 	{
 		this._htmlTemplate = html.replace( '\r\n', '\n' );
 		this._htmlTemplate = this._htmlTemplate.replace( '\r', '\n' );
-
-		var baseUrl = GSI.Utils.getCurrentPath();
-
-		if ( baseUrl.charAt( baseUrl.length - 1 ) != '/' )
-		{
-			var slPos = baseUrl.lastIndexOf( '/' );
-			baseUrl = baseUrl.substring(0,slPos+1);
-		}
-
-		var metaBaseTag = '<base href="' + baseUrl + '">';
-		html = html.replace( '<!--INSERT-BASE-->', metaBaseTag);
-
-		var layersJSONData = this.layersJSON.getOriginal();
-		var originalLocation = {
-			href : location.href,
-			protocol : location.protocol,
-			path : location.path,
-			pathname : location.pathname,
-			host : location.host,
-			hostname : location.hostname,
-			port : location.port
-		};
-		var javascript = '';
-
-		javascript += 'GSI.ClientMode .baseUrl = "' + baseUrl + '";' + '\n';
-		html = html.replace( '/*INSERT-SCRIPT*/', javascript + '/*INSERT-SCRIPT*/');
 
 		this._htmlTemplate = html;
 		this._refreshShareFile();
@@ -8299,26 +8277,118 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		if ( this._positionShareCheck.is( ':checked' ) )
 		{
 			queryString = this.pageStateManager.getPositionQueryString();
+            if(queryString != ""){
+                queryString += "/";
+            }
 		}
+        else{
+            queryString += "#//";
+        }
 
+        var fBase        = false;
+        var fBassLS_Trim = false;
+        var base = this.pageStateManager.getBaseLayerQueryString();
+        if(base != ''){
+            fBase   = true;
+        }
 		if ( this._basemapCheck.is( ':checked' ) )
 		{
-			queryString += ( queryString != '' ? '&' : '#' ) + this.pageStateManager.getBaseLayerQueryString();
+            if( base != '' )
+            {
+			    queryString += ( queryString != '' ? '&' : '#' ) + base;
+            }
 		}
+        else{
+            if(fBase){
+                fBassLS_Trim = true;
+            }
+        }
 
+		var ls = this.pageStateManager.getLayersQueryString();
+        var disp = this.pageStateManager.getTileViewSetting();
 		if ( this._layerpCheck.is( ':checked' ) )
 		{
-			var ls = this.pageStateManager.getLayersQueryString();
 			if ( ls != '' )
 			{
-				queryString += ( queryString != '' ? '&' : '#' ) + ls;
+                if(fBassLS_Trim){
+                    var ls_ary = ls.split("%7C");
+                    ls = "";
+                    for(var n_ls_ary = 1; n_ls_ary < ls_ary.length; n_ls_ary++){
+                        if(ls != ""){
+                            ls += "%7C";
+                        }
+                        ls += ls_ary[n_ls_ary];
+                    }
+                    if(ls != ""){
+                        ls = "ls=" + ls;
+                    }
+                }
+                if ( ls != '' ){
+				    queryString += ( queryString != '' ? '&' : '#' ) + ls;
+                }
 			}
-			var disp = this.pageStateManager.getTileViewSetting();
+			
 			if ( disp != '' )
 			{
-				queryString += ( queryString != '' ? '&' : '#' ) + disp;
+                if(fBassLS_Trim){
+                    var disp_trim = "";
+                    for(var n_disp = 6; n_disp < disp.length; n_disp++){
+                        disp_trim += disp.charAt(n_disp);
+                    }
+                    disp = "";
+                    if(disp_trim != ""){
+                        disp = "disp=" + disp_trim;
+                    }
+                }
+                if ( disp != '' ){
+				    queryString += ( queryString != '' ? '&' : '#' ) + disp;
+                }
 			}
 		}
+        else{
+            if ( this._basemapCheck.is( ':checked' ) ){
+                if( base != '' ){
+			        if ( ls != '' )
+			        {
+                        var ls_ary = ls.split("%7C");
+                        ls = "";
+                        if(ls_ary.length > 1){
+                            ls += ls_ary[0];
+                        }
+                        if(ls != ""){
+                            ls = "ls=" + ls;
+                        }
+                    }
+                    if ( ls != '' ){
+				        queryString += ( queryString != '' ? '&' : '#' ) + ls;
+                    }
+			
+			        if ( disp != '' )
+			        {
+                        var disp_trim = "";
+                        if(disp.length >= 6){
+                            disp_trim = disp.charAt(5);
+                        }
+                        disp = "";
+                        if(disp_trim != ""){
+                            disp = "disp=" + disp_trim;
+                        }
+                    }
+                    if ( disp != '' ){
+				        queryString += ( queryString != '' ? '&' : '#' ) + disp;
+                    }
+                }
+            }
+        }
+
+        if ( this._showCurrentFolderCheck.is( ':checked' ) )
+        {
+            var lcd = this.pageStateManager.getCurrentPathQueryString();
+            if(lcd != '')
+            {
+			    queryString += ( queryString != '' ? '&' : '#' ) + lcd;
+            }
+        }
 
 		var hcList = [];
 		if ( !this._visibleHeaderCheck.is( ':checked' ) )
@@ -8332,9 +8402,6 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 		if ( !this._visibleContextMenuCheck.is( ':checked' ) )
 			hcList.push( CONFIG.HIDDENCONTROLPARAMETER.CONTEXTMENU );
-
-		if ( !this._visibleBaseLayerSelectorCheck.is( ':checked' ) )
-			hcList.push( CONFIG.HIDDENCONTROLPARAMETER.BASEMAPSELECTOR );
 
 		var skips = {};
 		skips[ CONFIG.PARAMETERNAMES.CLICKMOVE] = true;
@@ -8559,10 +8626,6 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		ul.append( item.li );
 		this._visibleContextMenuCheck = item.checkbox;
 
-		// 背景地図選択を表示
-		item = __createItem( this,'背景地図選択を表示' );
-		ul.append( item.li );
-		this._visibleBaseLayerSelectorCheck = item.checkbox;
 		this._settingContent.append( ul );
 
 		this._settingContent.append( $( '<h3>' ).html( '選択中の情報設定' ) );
@@ -9194,7 +9257,6 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 			}
 			else
 			{
-				if ( ( this._toolTipViewCounter % 2) == 0)
 				{
 					if ( this._curItem == item )
 					{
@@ -10195,7 +10257,7 @@ GSI.HashOptions = L.Class.extend( {
             , this.vTM);
         }
     },
-   HashCreate : function(){
+    HashCreate : function(){
         var hash          = location.hash;
         var hash_location = "";
         var hash_options  = this.HashCreateProc();
@@ -13302,7 +13364,6 @@ GSI.PagePrinter = L.Class.extend( {
         if(this._baseLayer != null){
 		    this._baseLayer.setHighQuality( hq );
         }
-		this._baseLayer.setHighQuality( hq );
 		var paperSize = this.printSize2MapSize( paperSizeVal );
 		
 		this._mapContainer.css( { width:paperSize.w + 'px', height: paperSize.h + 'px' } );
@@ -14301,8 +14362,8 @@ GSI.SakuzuListItem = L.Class.extend( {
                     radius  = GSI.Utils.ConverUnit(vLatLng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
                 }
             }
-			if ( this._editingEditingLayer.setRadius && radius ) this._editingEditingLayer.setRadius( radius );
-			if ( this._editingEditingLayer._mRadius && radius ) this._editingEditingLayer._mRadius = radius;
+			if ( this._editingEditingLayer.setRadius && radius){ this._editingEditingLayer.setRadius( radius ); }
+			if ( this._editingEditingLayer._mRadius  && radius){ this._editingEditingLayer._mRadius = radius;   }
 			
 			// その他
 			if ( this._editingEditingLayer.setStyle )
@@ -14420,7 +14481,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 		
 		( layer._parent ? layer._parent : this._layer ).removeLayer( layer );
 		this._editingEditingLayer = this._cloneLayer( this._editingType, layer );
-		
+        this._editingEditingLayerSRC = $.extend(true, {}, this._editingEditingLayer);
+
 		this._editingFreatureGroup.addLayer( this._editingEditingLayer );
 
 		this._destroyEditEventHandler();
@@ -14630,6 +14692,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 		for ( var i=0; i<layers.length; i++ )
 		{
 			var layer = layers[i];
+            layer.id = (i + 1);
 
 			// ポップアップストップ
 			if ( layer.closePopup )layer.closePopup();
@@ -14664,17 +14727,22 @@ GSI.SakuzuListItem = L.Class.extend( {
                 Circle:_hideLabel
                 */
                 if((layer.feature && layer.feature.propertiesl && layer.feature.properties._markerType == "CircleMarker") || (layer.getLabel && layer._showLabel)){
+                    rect = new GSI.PixelRectangle( layer.getLatLng(), radius * 2, radius * 2, radius, radius, rectStyle );
+
                     radius = GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
+
                     f_fitBounds = false;
                 }
-				var latRadius = ( radius / 40075017 * 360 );
-				var lngRadius = ( latRadius / Math.cos(L.LatLng.DEG_TO_RAD * latlng.lat) );
+                else{
+				    var latRadius = ( radius / 40075017 * 360 );
+				    var lngRadius = ( latRadius / Math.cos(L.LatLng.DEG_TO_RAD * latlng.lat) );
 
-				rect = L.rectangle(
-					new L.LatLngBounds(
-						[latlng.lat - latRadius, latlng.lng - lngRadius],
-						[latlng.lat + latRadius, latlng.lng + lngRadius]),
-					rectStyle );
+				    rect = L.rectangle(
+					    new L.LatLngBounds(
+						    [latlng.lat - latRadius, latlng.lng - lngRadius],
+						    [latlng.lat + latRadius, latlng.lng + lngRadius]),
+					    rectStyle );
+                }
 			}
 			else if ( layer.getBounds )
 			{
@@ -14714,14 +14782,15 @@ GSI.SakuzuListItem = L.Class.extend( {
 						anchorX = Math.round( w / 2 );
 						anchorY = Math.round( h / 2 );
 					}
-
 					rect = new GSI.PixelRectangle( layer.getLatLng(), w, h, anchorX, anchorY, rectStyle );
 				}
 			}
 
-			layer._boundRect = rect;
-			if ( rect ) this._editingBoundsRects.addLayer( rect );
-
+            layer._boundRect = rect;
+			if ( rect ){
+                rect.id = layer.id;                
+                this._editingBoundsRects.addLayer( rect );
+            }
 		}
 		if ( this._editingBoundsRects.getBounds )
 		{
@@ -14752,6 +14821,8 @@ GSI.SakuzuListItem = L.Class.extend( {
 		for ( var i=0; i<layers.length; i++ )
 		{
 			var layer = layers[i];
+            layer.id = (i + 1);
+
 			var rect = null;
 			var rectStyle = {color: "#ff3333", weight: 2, fill:false, opacity:1,dashArray : [3,3]};
 
@@ -14769,16 +14840,20 @@ GSI.SakuzuListItem = L.Class.extend( {
                 Circle:_hideLabel
                 */
                 if((layer.feature && layer.feature.propertiesl && layer.feature.properties._markerType == "CircleMarker") || (layer.getLabel && layer._showLabel)){                    
+                    rect = new GSI.PixelRectangle( layer.getLatLng(), radius * 2, radius * 2, radius, radius, rectStyle );
+
                     radius = GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
                 }
-				var latRadius = ( radius / 40075017 * 360 );
-				var lngRadius = ( latRadius / Math.cos(L.LatLng.DEG_TO_RAD * latlng.lat) );
+                else{
+				    var latRadius = ( radius / 40075017 * 360 );
+				    var lngRadius = ( latRadius / Math.cos(L.LatLng.DEG_TO_RAD * latlng.lat) );
 
-				rect = L.rectangle(
-					new L.LatLngBounds(
-						[latlng.lat - latRadius, latlng.lng - lngRadius],
-						[latlng.lat + latRadius, latlng.lng + lngRadius]),
-					rectStyle );
+				    rect = L.rectangle(
+					    new L.LatLngBounds(
+						    [latlng.lat - latRadius, latlng.lng - lngRadius],
+						    [latlng.lat + latRadius, latlng.lng + lngRadius]),
+					    rectStyle );
+                }
 			}
 			else if ( layer.getBounds )
 			{
@@ -14824,7 +14899,10 @@ GSI.SakuzuListItem = L.Class.extend( {
 				}
 			}
 			layer._boundRect = rect;
-			if ( rect ) this._editingBoundsRects.addLayer( rect );
+			if ( rect ){
+                rect.id = layer.id;                
+                this._editingBoundsRects.addLayer( rect );
+            }
 		}
 	},
 	_startEditPoint : function()
@@ -15027,11 +15105,20 @@ GSI.SakuzuListItem = L.Class.extend( {
 	},
 	_onCircleChange : function(event)
 	{
+        if(this._editingType == GSI.SakuzuListItem.POINT_CIRCLE){
+            this._editingEditingLayer_radius_px = event.radius;
+            if(this._editingEditingLayer){
+                this._editingEditingLayer._radius_px = this._editingEditingLayer_radius_px;
+            }
+        }
 		this._owner.fire( 'circlechange', event );
 	},
 	_onPathCreated : function(event)
 	{
 		this._editingEditingLayer = event.layer;
+        if(this._editingType == GSI.SakuzuListItem.POINT_CIRCLE){
+            this._editingEditingLayer._radius_px = this._editingEditingLayer_radius_px;
+        }
 		this._editingFreatureGroup.addLayer(event.layer);
 
 		this._destroyEditEventHandler();
@@ -15083,7 +15170,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 			case GSI.SakuzuListItem.CIRCLE:
                 var path = null;
                 if(layerType == GSI.SakuzuListItem.CIRCLE      ){ path = new GSI.Edit.Circle      ( targetLayer, { edit: { featureGroup: this._editingFreatureGroup } } ); }
-                if(layerType == GSI.SakuzuListItem.POINT_CIRCLE){ path = new GSI.Edit.CircleMarker( targetLayer, { edit: { featureGroup: this._editingFreatureGroup } } ); }
+                if(layerType == GSI.SakuzuListItem.POINT_CIRCLE){ path = new GSI.Edit.CircleMarker( targetLayer, { edit: { featureGroup: this._editingFreatureGroup }, map : this._owner._map } ); }
 				path.on( 'change', L.bind( this._onCircleChange, this ) );
 				path.enable();
 				if ( clearPathList )this._editingPathList = [];
@@ -15140,7 +15227,7 @@ GSI.SakuzuListItem = L.Class.extend( {
         if(this._editingType == GSI.SakuzuListItem.POINT_CIRCLE){
             var o       = this._editingEditingLayer;
             var vLatLng = o.getLatLng();
-            var vRadius = this._editingEditingLayer._radius_px;
+            var vRadius = o._radius_px;
             if(!vRadius){
                 vRadius = GSI.Utils.ConverUnit(vLatLng.lat, GSI.GLOBALS.map.getZoom(), o.getRadius(), "m", "px");
             }
@@ -17443,15 +17530,45 @@ GSI.Edit.Circle = L.Edit.Circle.extend( {
 GSI.Edit.CircleMarker = L.Edit.Circle.extend( {
 	includes: L.Mixin.Events,
 
+    initialize: function (layer, options) {
+        L.Edit.Circle.prototype.initialize.call(this, layer, options);
+
+        this.map        = options.map;
+        this.layer      = layer;
+
+		this._onZoomEnd = L.bind( this.onZoomEnd, this );
+        this.map.on( 'zoomend', this._onZoomEnd );
+    },
 	_resize : function(latlng)
 	{
 		L.Edit.Circle.prototype._resize.call(this,latlng);
 
-		var result = GSI.Draw.convertRadius( GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), this._shape.getRadius(), "m", "px"), latlng, "px" );
+		var result = GSI.Draw.convertRadius( GSI.Utils.ConverUnit(latlng.lat, this.map.getZoom(), this._shape.getRadius(), "m", "px"), latlng, "px" );
 
 		this.fire( "change", result );
+	},
+    disable : function()
+    {
+        L.Edit.Circle.prototype.disable.call(this);
+        this.map.off( 'zoomend', this._onZoomEnd );
+    },
+	onZoomEnd : function()
+	{
+        var vLatLng  = this._shape.getLatLng();
+        var vRadius  = this._shape._radius_px;
+
+        vRadius = GSI.Utils.ConverUnit(vLatLng.lat, this.map.getZoom(), vRadius, "px", "m");
+
+        this._shape.setRadius(vRadius);
+        for(var i=0,l=this._resizeMarkers.length;i<l;i++){
+            this._unbindMarker(this._resizeMarkers[i]);
+            this._map.removeLayer(this._resizeMarkers[i]);
+        }
+        this._resizeMarkers=null;
+
+        this._createResizeMarker();
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Edit.Poly
@@ -19182,9 +19299,53 @@ GSI.GeoJSON = L.Class.extend( {
 window.addEventListener('message', function(event){
     var d = event.data;
     try{
-        if(d.baseUrl     != null){ GSI.ClientMode.baseUrl     = d.baseUrl;     }
+        GSI.ClientMode.queryString = "";
+
         if(d.sakuzuList  != null){ GSI.ClientMode.sakuzuList  = d.sakuzuList;  }
-        if(d.queryString != null){ GSI.ClientMode.queryString = d.queryString; }
+        if(d.queryString != null){ GSI.ClientMode.queryString = d.queryString; 
+            if(GSI.ClientMode.queryString.indexOf("#") != -1){
+                var nPos = (GSI.ClientMode.queryString.match(new RegExp("/", "g")) || []).length;
+                if(     nPos == 0){ GSI.ClientMode.queryString = GSI.ClientMode.queryString.replace("#", "#//"); }
+                else if(nPos == 1){ GSI.ClientMode.queryString = GSI.ClientMode.queryString.replace("#", "#/" ); }
+                GSI.ClientMode.queryString = GSI.ClientMode.queryString.replace("#//", "#//&")
+
+                var vUrl      = GSI.ClientMode.queryString.split("#");
+                var vUrl_Args = "";
+                var vUrl_Hash = "";
+                if(vUrl.length == 2){
+                    vUrl_Args = vUrl[0].replace("?", "");
+                    vUrl_Hash = vUrl[1];
+                }
+                if(vUrl_Hash.indexOf("/&") == -1){
+                    var nOpt = vUrl_Hash.indexOf("&");
+                    vUrl_Hash = vUrl_Hash.slice(0, nOpt) + "/" + vUrl_Hash.slice(nOpt, vUrl_Hash.length);
+                    var vHash = vUrl_Hash.split("/");
+                    if(vHash.length >= 3){
+                        var z   = vHash[0];
+                        var lat = vHash[1];
+                        var lon = vHash[2];
+                        vUrl_Hash = "";
+                        if(lat != "" && lon != ""){
+                            vUrl_Hash += "ll=" + lat + "," + lon;
+                        }
+                        if(z != ""){
+                            vUrl_Hash += "&z=" + z;
+                        }
+                        if(vHash.length >= 4){
+                            vUrl_Hash += vHash[3];
+                        }
+                    }
+                }
+
+                GSI.ClientMode.queryString = vUrl_Args;
+                if(GSI.ClientMode.queryString != ""){
+                    GSI.ClientMode.queryString += "&";
+                }
+                GSI.ClientMode.queryString += vUrl_Hash;
+            }
+        }
+
+        GSI.ClientMode.queryString += location.hash;
 
         GSI.GLOBALS.queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
         initialize_proc();
