@@ -281,8 +281,8 @@ CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{
 
 // サーバーサイドAPI
 CONFIG.SERVERAPI = {};
-CONFIG.SERVERAPI.HOSTNAME = 'portal.cyberjapan.jp';
-CONFIG.SERVERAPI.BASE = 'http://portal.cyberjapan.jp/';
+CONFIG.SERVERAPI.HOSTNAME = 'cyberjapandata2.gsi.go.jp';
+CONFIG.SERVERAPI.BASE = 'http://cyberjapandata2.gsi.go.jp/';
 CONFIG.SERVERAPI.KML2JSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php';
 CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php';
 
@@ -290,17 +290,17 @@ CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php
 CONFIG.SERVERAPI.ACCESSCOUNTER = './cgi-bin/CounterJson.php?id=001';
 //CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://maps.gsi.go.jp/cgi-bin/CounterJson.php?id=001';
 
-CONFIG.SERVERAPI.INTERFACE = "http://portal.cyberjapan.jp/GsiJsLibrary/interface.php";
+CONFIG.SERVERAPI.INTERFACE = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/interface.php";
 
-CONFIG.SERVERAPI.GETADDR = "http://portal.cyberjapan.jp/GsiJsLibrary/LonLatToLv01.php";
+CONFIG.SERVERAPI.GETADDR = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/LonLatToLv01.php";
 
 CONFIG.SERVERAPI.SEARCH = "http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geocode.cgi";
-CONFIG.SERVERAPI.SEARCH_SHISETU = "http://portal.cyberjapan.jp/GsiJsLibrary/shisetsu.php";
-CONFIG.SERVERAPI.SEARCH_CHIMEI = "http://portal.cyberjapan.jp/GsiJsLibrary/chimei.php";
+CONFIG.SERVERAPI.SEARCH_SHISETU = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/shisetsu.php";
+CONFIG.SERVERAPI.SEARCH_CHIMEI = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/chimei.php";
 
 // UTMポイント変換の処理 指定なしでJavascriptで変換
 CONFIG.SERVERAPI.MGRSXY = "";
-//CONFIG.SERVERAPI.MGRSXY = "http://portal.cyberjapan.jp/site/mapuse4/grid/mgrsXY.php";
+//CONFIG.SERVERAPI.MGRSXY = "http://cyberjapandata2.gsi.go.jp/site/mapuse4/grid/mgrsXY.php";
 ﻿
 
 /************************************************************************
@@ -16842,7 +16842,7 @@ GSI.Searcher = L.Class.extend( {
 				result[n]['latitude'] = $(this).find('latitude').text();
 				result[n]['value'] = dispAddr;
 				result[n]['series'] = "STATION";
-				var subUrl = "http://portal.cyberjapan.jp/GsiJsLibrary/LonLatToLv01.php?longitude=" + $(this).find('longitude').text() + "&latitude=" + $(this).find('latitude').text();
+				var subUrl = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/LonLatToLv01.php?longitude=" + $(this).find('longitude').text() + "&latitude=" + $(this).find('latitude').text();
 
 				// 駅の検索結果に対し、同期処理で都道府県コード・市町村コードをチェックする
 				$.ajax({
