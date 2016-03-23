@@ -4907,7 +4907,19 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	},
 	_onCocoTileCheckChangeProc : function(onOffSwitch)
 	{
-		this.cocoTileLayer.setVisible( onOffSwitch.checked() );
+        if(onOffSwitch.checked()){
+            var path = "";
+            this._CurrentData_SRC    = new Array();
+            this._CurrentData_SRC_ID = "";
+
+            this._initializeList_ID_Mode = "cocoTileLayer";
+            this._initializeList_IDProc_Data(this.tree, path);
+            this._CurrentData_SRC_ID  = path;
+            this._initializeList_IDProc_DataSrc();
+        }
+        else{
+		    this.cocoTileLayer.setVisible( onOffSwitch.checked() );
+        }
 	},
 	setMaxScrollHeight : function( maxHeight )
 	{
@@ -5127,6 +5139,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	},
 	_initializeList_IDProc : function(current)
 	{
+        var fInit = true;
         if(this._initializeList_ID_Mode == "visible"){
             if(current == null){            
 		        for(var i = 0; i < this.visibleLayers.length; i++){
@@ -5142,7 +5155,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		    this.current             = current;
 		    this.options.currentPath = null;
         }
-        this._initializeListProc();
+        if(this._initializeList_ID_Mode == "cocoTileLayer"){
+            this.cocoTileLayer.setVisible( true );
+            fInit = false;
+        }
+
+        if(fInit){
+            this._initializeListProc();
+        }
     },
     _initializeList_IDProc_Data : function(tree, id)
     {
@@ -5302,11 +5322,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				var counter = 0;
 				var currentCounter = 0;
 
-                if( item.src ){
-
-
-                }
-                else{
+                if(entries){
 				    for ( var i=0; i<entries.length; i++ )
 				    {
 					    var entry = entries[i];
