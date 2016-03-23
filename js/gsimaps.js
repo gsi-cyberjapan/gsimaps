@@ -62,7 +62,7 @@ CONFIG.COCOTILEVISIBLE = false;
 //ココタイルURL設定
 // 複数設定例
 // CONFIG.COCOTILEURL = ['http://cyberjapandata-t1.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', 'http://cyberjapandata-t2.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', 'http://cyberjapandata-t3.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv']
-CONFIG.COCOTILEURL = ['http://cyberjapandata-t1.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv' ];
+CONFIG.COCOTILEURL = ['http://cyberjapandata-t1.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', 'http://cyberjapandata-t2.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', 'http://cyberjapandata-t3.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv', 'http://insarmap.gsi.go.jp/xyz/cocotile/{z}/{x}/{y}.csv'];
 
 // アクセスカウンターを表示するかどうか
 CONFIG.USEACCESSCOUNTER = true;
