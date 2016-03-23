@@ -2858,6 +2858,10 @@ function LoadLayers_DemNormarize(v, nTilesX, nTilesY, pxTile){
                 ret[nz] = v[ny * nTilesOTS * pxTile * nTilesOTS + nx * nTilesOTS];
 			}
 
+            if(isNaN(ret[nz])){
+                ret[nz] = "0";
+            }
+
             if(vSceneMesh_ZMin == null){
                 vSceneMesh_ZMin = ret[nz];
             }
