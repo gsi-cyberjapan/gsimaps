@@ -287,21 +287,17 @@ CONFIG.SERVERAPI.KML2JSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.ph
 CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php';
 
 // アクセスカウンター
-CONFIG.SERVERAPI.ACCESSCOUNTER = './cgi-bin/CounterJson.php?id=001';
-//CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://maps.gsi.go.jp/cgi-bin/CounterJson.php?id=001';
+CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://mcounter.gsi.go.jp/CounterJson.php?id=001';
 
 CONFIG.SERVERAPI.INTERFACE = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/interface.php";
 
-CONFIG.SERVERAPI.GETADDR = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/LonLatToLv01.php";
-
-CONFIG.SERVERAPI.SEARCH = "http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geocode.cgi";
-CONFIG.SERVERAPI.SEARCH_SHISETU = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/shisetsu.php";
-CONFIG.SERVERAPI.SEARCH_CHIMEI = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/chimei.php";
+CONFIG.SERVERAPI.GETADDR = "http://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress";
+CONFIG.SERVERAPI.GETELEVATION = "";
+CONFIG.SERVERAPI.CHIMEI_SEARCH="http://msearch.gsi.go.jp/address-search/AddressSearch";
 
 // UTMポイント変換の処理 指定なしでJavascriptで変換
 CONFIG.SERVERAPI.MGRSXY = "";
-//CONFIG.SERVERAPI.MGRSXY = "http://cyberjapandata2.gsi.go.jp/site/mapuse4/grid/mgrsXY.php";
-﻿
+
 
 /************************************************************************
  設定：メニュー：情報
@@ -2776,13 +2772,13 @@ GSI.Draw.CircleMarker = L.Draw.Circle.extend( {
 
 			this._tooltip.updateContent({
 				text: this._endLabelText,
-				subtext: showRadius ? '半径: ' + GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "m", "px") + 'px': ''
+				subtext: showRadius ? '半径: ' + GSI.Utils.ConverUnit(GSI.GLOBALS.map, this._shape, radius, "m", "px") + 'px': ''
 			});
 		}
 
 		if (this._isDrawing)
 		{
-			this.fire( "change",GSI.Draw.convertRadius(GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "m", "px"), latlng, "px") );
+			this.fire( "change",GSI.Draw.convertRadius(GSI.Utils.ConverUnit(GSI.GLOBALS.map, this._shape, radius, "m", "px"), latlng, "px") );
 		}
 	}
 } );
@@ -3225,15 +3221,31 @@ GSI.Utils.getVariation = function(latLng)
 	return KKK;
 };
 
-GSI.Utils.ConverUnit = function(lat, z, radius, unit_src, unit_to)
+GSI.Utils.ConverUnit = function(map, shape, radius, unit_src, unit_to)
 {
-    if(unit_src == "m" || unit_src == "km"){ unit_src = "m"; }
-    if(unit_to  == "m" || unit_to  == "km"){ unit_to  = "m"; }
+    if(unit_src == "px" && unit_to == "m" ){
+        var r_radius = radius;
+        var r_latlng = shape.getLatLng();
+        var p        = map.latLngToContainerPoint(r_latlng);
+        var p_to_x   = p.x;
+        var p_to_y   = p.y;
+        p_to_x += r_radius;
 
-    var mppx = Math.abs(Math.cos(lat / 180  * Math.PI) * 2 * Math.PI * 6378137) / Math.pow(2, z + 8);
-    if     (unit_src == "m"  && unit_to == "px"){ radius = Math.floor(radius / mppx); }
-    else if(unit_src == "px" && unit_to == "m" ){ radius = Math.floor(radius * mppx); }
+        var r_latlng_to = map.containerPointToLatLng( L.point( p_to_x, p_to_y ) );
+        var r           = r_latlng.distanceTo(r_latlng_to);
 
+        radius = r;
+    }
+
+    if(unit_src == "m"  && unit_to == "px"){ 
+        var r_latlng = shape.getBounds();
+        var n_p = map.latLngToContainerPoint(r_latlng._northEast);
+        var s_p = map.latLngToContainerPoint(r_latlng._southWest);
+
+        var r   = Math.floor((n_p.x - s_p.x) * 0.5);
+
+        radius = r;
+    }
     return radius;
 };
 
@@ -4424,6 +4436,7 @@ GSI.COCOTileLayer = L.Class.extend({
 	_moveend : function() {
 		if (!this._map) { return; }
 
+        this._reset();
 		this.refreshTimerId =  setTimeout(
 			L.Util.bind( this._timerRefresh, this ),
 			this.options.refreshInterval );
@@ -4644,8 +4657,10 @@ GSI.COCOTileLayer = L.Class.extend({
         }
 
         tile.loaded = true;
+        var n = 0;
 		for ( var id in this._tiles )
 		{
+            n++;
 			var tile = this._tiles[ id ];
 			if ( tile.ajax || !tile.loaded )
 			{
@@ -4654,7 +4669,24 @@ GSI.COCOTileLayer = L.Class.extend({
 		}
 
 		if ( this.options.onLoad ) this.options.onLoad( this._haveTiles );
-		this.fire('load', { tileIds : this._haveTiles } );
+
+        if(this.refreshTimerId_load){
+            clearTimeout(this.refreshTimerId_load);
+            this.refreshTimerId_load = null;
+        }
+
+        if(n == 0){
+            return;
+        }
+
+        var that = this;
+		this.refreshTimerId_load =  setTimeout(
+            function(){
+                that.refreshTimerId_load = null;
+		        that.fire('load', { tileIds : that._haveTiles } );
+            }
+        , 100 );
+
     }
 } );﻿
 
@@ -4908,19 +4940,26 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	_onCocoTileCheckChangeProc : function(onOffSwitch)
 	{
         if(onOffSwitch.checked()){
-            var path = "";
-            this._CurrentData_SRC    = new Array();
-            this._CurrentData_SRC_ID = "";
+            if(!this._initializeList_ID_Mode_cocoTileLayer){
+                var path = "";
+                this._CurrentData_SRC    = new Array();
+                this._CurrentData_SRC_ID = "";
 
-            this._initializeList_ID_Mode = "cocoTileLayer";
-            this._initializeList_IDProc_Data(this.tree, path);
-            this._CurrentData_SRC_ID  = path;
-            this._initializeList_IDProc_DataSrc();
+                this._initializeList_ID_Mode = "cocoTileLayer";
+                this._initializeList_IDProc_Data(this.tree, path);
+                this._CurrentData_SRC_ID  = path;
+                this._initializeList_IDProc_DataSrc();
+
+                this._initializeList_ID_Mode_cocoTileLayer = true;
+            }
+            else{
+		        this.cocoTileLayer.setVisible( onOffSwitch.checked() );
+            }
         }
         else{
 		    this.cocoTileLayer.setVisible( onOffSwitch.checked() );
         }
-	},
+    },
 	setMaxScrollHeight : function( maxHeight )
 	{
 		if ( this.listFrame )
@@ -7812,21 +7851,6 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 	{
 		this.showResult();
 	},
-	setAddressResult : function( result )
-	{
-		this.addressResult = result;
-		this.showResult();
-	},
-	setStationResult : function( result )
-	{
-		this.stationResult = result;
-		this.showResult();
-	},
-	setSisetuResult : function( result )
-	{
-		this.sisetuResult = result;
-		this.showResult();
-	},
 	setChimeisResult : function( result )
 	{
 		this.chimeiResult = result;
@@ -7836,10 +7860,8 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 	{
 		if ( this.markerList ) this.map.removeLayer( this.markerList );
 		this.setTitle( '検索中' );
-		this.addressResult = null;
-		this.stationResult = null;
-		this.sisetuResult = null;
-		this.chimeiResult = null;
+		this.addressResult = [];
+		this.chimeiResult = [];
 		var ul = this.listContainer;
 		ul.empty();
 		var li = $( '<li>' ).addClass( 'nodata' ).html( '検索中' );
@@ -7853,7 +7875,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 	{
 		var a = $( '<a>' ).attr( { 'href' : 'javascript:void(0);' } );
 
-		var div = $( '<div>' ).html( item.value ).addClass('title');
+		var div = $( '<div>' ).html( item.properties.title ).addClass('title');
 		a.append( div );
 
 		if ( subTitle && subTitle != '' )
@@ -7866,10 +7888,11 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 		a.mouseenter( L.bind( this.onResultMouseover, this, item) );
 		a.mouseleave( L.bind( this.onResultMouseout, this, item) );
 		a.css( { "padding-left": '32px'} );
-		
 		if ( this.options.maxMarkerNum < 0 || this.markerNum < this.options.maxMarkerNum )
 		{
-			if ( item.latitude && item.longitude && item.latitude > 0  && item.longitude > 0 )
+			var latitude = item.geometry.coordinates[1];
+			var longitude = item.geometry.coordinates[0];
+			if ( latitude && longitude )
 			{
 				a.css(
 					{
@@ -7886,14 +7909,14 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 					});
 				}
 				item._isActive = false;
-				item._marker = L.marker([item.latitude, item.longitude],{
+				item._marker = L.marker([latitude,longitude],{
 						title : item.value,
 						icon : this._resultIcon
 					});
 				item._marker.bindPopup(
 					item.value + "<br>" +
 					( subTitle && subTitle != '' ? subTitle + '<br>' : '' ) +
-					item.latitude + "," + item.longitude,
+					latitude + "," + longitude,
 					{
 						maxWidth:5000
 					}
@@ -7906,90 +7929,74 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 	},
 	showResult : function()
 	{
-		if ( !this.addressResult || !this.stationResult || !this.sisetuResult || !this.chimeiResult ) return;
-
 		if ( this.markerList ) this.map.removeLayer( this.markerList );
 
 		this.markerList = L.layerGroup();
 
-		var num = this.addressResult.length + this.stationResult.length + this.sisetuResult.length + this.chimeiResult.length;
 		var selectedKen = this.kenSelect.val().split( ',');
 		var selectedKenCode = selectedKen[0];
-		var selectedKenName = selectedKen[1];
 
 		var selectedSi = this.shiSelect.val().split( ',');
 		var selectedSiCode = selectedSi[0];
-		var selectedSiName = selectedSi[1];
 
 		var ul = this.listContainer;
 		ul.empty();
 		var viewNum = 0;
 		this.markerNum = 0;
-		//if ( $( this.resultSelector + ' .control' ).find( "input[name='search_addr']" ).is(':checked') )
-		{
-			for ( var i=0; i<this.addressResult.length; i++ )
-			{
-				if ( selectedKenName != '' && selectedKenName != this.addressResult[i].pref ) continue;
-				if ( selectedSiName != '' && selectedSiName != this.addressResult[i].muniNm ) continue;
-
+		var results = [this.addressResult,this.chimeiResult];
+		var that = this;
+		var num = 0;
+		$.each(results,function() {
+			num += this.length;
+			$.each(this,function() {
+				var record = this;
+				var addressCode = "";
+				if (record.properties.addressCode) {
+					addressCode = parseInt(record.properties.addressCode,10)+"";
+				}
+				if (selectedKenCode != '' && addressCode.substring(0,addressCode.length-3) != selectedKenCode) return;
+				if (selectedSiCode != '' && selectedSiCode != addressCode) return;
 				var li = $( '<li>' );
-
-				var a = this.makeItem( this.addressResult[i], viewNum, '' );
-				li.append( a );
-				ul.append( li );
+				var muniNm = "";
+				if (addressCode) {
+					var addressData = GSI.MUNI_ARRAY[addressCode];
+					if (addressData) {
+						addressData = addressData.split(",");
+						muniNm = (addressData[1]+addressData[3]).replace("　","");
+					}
+					var a = that.makeItem( record, viewNum, muniNm );
+					li.append( a );
+					ul.append( li );
+				} else {
+					var a = that.makeItem( record, viewNum, "    " );
+					li.append( a );
+					ul.append( li );
+					// 緯度経度からリバースジオコーダ機能を呼び出して地名を取得
+					$.ajax({
+						url : CONFIG.SERVERAPI.GETADDR,
+						dataType : "json",
+						data : {
+							lon : record.geometry.coordinates[0],
+							lat : record.geometry.coordinates[1]
+						},
+						success : function(data2){
+							// リバースジオコーダの結果を画面に表示
+							if (data2.results){
+								var addressCode = parseInt(data2.results.muniCd);
+								record.properties.addressCode = addressCode;
+								var addressData = GSI.MUNI_ARRAY[addressCode];
+								if (addressData) {
+									addressData = addressData.split(",");
+									muniNm = (addressData[1]+addressData[3]).replace("　","");
+									li.find("div.muni").html(muniNm);
+								}
+							}
+						}
+					});
+				}
 				viewNum++;
-			}
-		}
-
-		//if ( $( this.resultSelector + ' .control' ).find( "input[name='search_station']" ).is(':checked') )
-		{
-			for ( var i=0; i<this.stationResult.length; i++ )
-			{
-				if ( selectedKenCode != '' && selectedSiCode == '' && selectedKenCode != this.stationResult[i].prefCd ) continue;
-
-				if ( selectedSiCode != '' && selectedSiCode != this.stationResult[i].muniCd ) continue;
-
-				var li = $( '<li>' );
-				var a = this.makeItem( this.stationResult[i], viewNum,this.stationResult[i].muniNm );
-				li.append( a );
-				ul.append( li );
-				viewNum++;
-			}
-		}
-
-		//if ( $( this.resultSelector + ' .control' ).find( "input[name='search_sisetu']" ).is(':checked') )
-		{
-			for ( var i=0; i<this.sisetuResult.length; i++ )
-			{
-				if ( selectedKenCode != '' && selectedSiCode == '' && selectedKenCode != this.sisetuResult[i].pref ) continue;
-
-				if ( selectedSiCode != '' && selectedSiCode != this.sisetuResult[i].muniCd ) continue;
-
-				var li = $( '<li>' );
-				var a = this.makeItem( this.sisetuResult[i], viewNum,this.sisetuResult[i].muniNm );
-				li.append( a );
-				ul.append( li );
-				viewNum++;
-			}
-		}
-
-		//if ( $( this.resultSelector + ' .control' ).find( "input[name='search_chimei']" ).is(':checked') )
-		{
-			for ( var i=0; i<this.chimeiResult.length; i++ )
-			{
-				if ( selectedKenCode != '' && selectedSiCode == '' && selectedKenCode != this.chimeiResult[i].pref ) continue;
-
-				if ( selectedSiCode != '' && selectedSiCode != this.chimeiResult[i].muniCd ) continue;
-
-				var li = $( '<li>' );
-
-				var a = this.makeItem( this.chimeiResult[i], viewNum,this.chimeiResult[i].muniNm );
-				li.append( a );
-				ul.append( li );
-				viewNum++;
-			}
-		}
-
+			});
+		});
 		this.setTitle( '検索結果:' + num + '件中' + viewNum + '件表示' );
 		this.markerList.addTo( this.map );
 	},
@@ -7998,11 +8005,13 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 		this._setActiveItem( null );
 		this._setActiveItem( resultItem );
 
-		if ( resultItem.latitude && resultItem.longitude && resultItem.latitude > 0  && resultItem.longitude > 0 )
+		var latitude = resultItem.geometry.coordinates[1];
+		var longitude = resultItem.geometry.coordinates[0];
+		if ( longitude && resultItem )
 		{
-			this.map.setView( [resultItem.latitude, resultItem.longitude ],CONFIG.SEARCHRESULTCLICKZOOM );
-
+			this.map.setView( [latitude, longitude ],CONFIG.SEARCHRESULTCLICKZOOM );
 		}
+
 	},
 	_setActiveItem : function( item )
 	{
@@ -8032,6 +8041,8 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 				this.markerList.removeLayer(item._marker);
 			}
 
+			var latitude = item.geometry.coordinates[1];
+			var longitude = item.geometry.coordinates[0];
 			if ( !this._resultActiveMarker )
 			{
 				var icon = L.icon({
@@ -8040,14 +8051,15 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 					iconAnchor: [5, 29]
 				});
 
-				this._resultActiveMarker = L.marker([item.latitude, item.longitude],{
+				this._resultActiveMarker = L.marker([latitude, longitude],{
 						icon : icon,
 						zIndexOffset : 1000
 					});
+
 			}
 			else
 			{
-				this._resultActiveMarker.setLatLng( [item.latitude, item.longitude] );
+				this._resultActiveMarker.setLatLng( [latitude, longitude] );
 			}
 
 			this.markerList.addLayer(this._resultActiveMarker);
@@ -9966,25 +9978,18 @@ GSI.Footer = L.Class.extend( {
 		this.clear();
 		this.refreshTimerId  = setTimeout( L.Util.bind( this.execRefresh, this, lon, lat ), 800 );
 	},
-	getAddressRusult : function(json)
+	getAddressResult : function(json)
 	{
-		var json = json['result'];
-		if (json){
+		if (json.results){
 			var address = "";
-			if (json.indexOf('{"result":[') != -1){
-				var result = json;
-				var obj;
-				var html="";
-				obj = eval("obj=" + result);
-
-				var addObj = obj.result[0];
-				if (addObj){
-					if (addObj.prefNm) address += addObj.prefNm;
-					if (addObj.conNm) address += addObj.conNm;
-					if (addObj.muniNm) address += addObj.muniNm;
-					if (addObj.lv01Nm) address += addObj.lv01Nm;
-				}
+			var addObj = json.results;
+			var addressData = GSI.MUNI_ARRAY[parseInt(addObj.muniCd,10)+""];
+			if (addressData) {
+				addressData = addressData.split(",");
+				var muniNm = (addressData[1]+addressData[3]).replace("　","");
+				address += muniNm;
 			}
+			if (addObj.lv01Nm) address += addObj.lv01Nm;
 
 			$("#address").empty();
 			$("#address").append(address ? address : "---");
@@ -10000,20 +10005,16 @@ GSI.Footer = L.Class.extend( {
 	},
 	execRefresh : function (lon, lat)
 	{
-		var address = "";
-		var url = CONFIG.SERVERAPI.GETADDR;
-		url += "?longitude=" + lon + "&latitude=" + lat;
-
-		var parameter = {};
-		parameter['request'] = url;
-
 		this.ajaxAddress = $.ajax({
 			type: "GET",
-			url:CONFIG.SERVERAPI.INTERFACE,
-			data: parameter,
-			dataType: "jsonp",
+			url:CONFIG.SERVERAPI.GETADDR,
+			data: {
+				"lon" : lon,
+				"lat" : lat
+			},
+			dataType: "json",
 			timeout: 30000,
-			success: L.Util.bind( this.getAddressRusult, this ),
+			success: L.Util.bind( this.getAddressResult, this ),
 			error : function(){}
 		});
 
@@ -14375,12 +14376,20 @@ GSI.SakuzuListItem = L.Class.extend( {
 
                     var o        = this._editingEditingLayer;
                     var vLatLng  = o.getLatLng();
-                    radius  = GSI.Utils.ConverUnit(vLatLng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
+                    radius  = GSI.Utils.ConverUnit(GSI.GLOBALS.map, o, radius, "px", "m");
                 }
             }
 			if ( this._editingEditingLayer.setRadius && radius){ this._editingEditingLayer.setRadius( radius ); }
 			if ( this._editingEditingLayer._mRadius  && radius){ this._editingEditingLayer._mRadius = radius;   }
 			
+            if(radius){
+                if(this._editingType == GSI.SakuzuListItem.POINT_CIRCLE){
+                    if(this._editingPathList.length >= 1){
+                        this._editingPathList[0].onZoomEnd();
+                    }
+                }
+            }
+
 			// その他
 			if ( this._editingEditingLayer.setStyle )
 			{
@@ -14555,8 +14564,7 @@ GSI.SakuzuListItem = L.Class.extend( {
                 var radius_px = null;
                 if(layerType == GSI.SakuzuListItem.POINT_CIRCLE){
                     radius_px = radius;
-                    layer.getRadius()
-                    radius = GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
+                    radius = GSI.Utils.ConverUnit(GSI.GLOBALS.map, layer, radius_px, "px", "m");
                 }
 				result = L.circle(latlng, radius, layer.options );
                 if(radius_px != null){
@@ -14745,7 +14753,7 @@ GSI.SakuzuListItem = L.Class.extend( {
                 if((layer.feature && layer.feature.propertiesl && layer.feature.properties._markerType == "CircleMarker") || (layer.getLabel && layer._showLabel)){
                     rect = new GSI.PixelRectangle( layer.getLatLng(), radius * 2, radius * 2, radius, radius, rectStyle );
 
-                    radius = GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
+                    radius = GSI.Utils.ConverUnit(GSI.GLOBALS.map, layer, radius, "px", "m");
 
                     f_fitBounds = false;
                 }
@@ -14855,10 +14863,10 @@ GSI.SakuzuListItem = L.Class.extend( {
                 Circle:_showLabel
                 Circle:_hideLabel
                 */
-                if((layer.feature && layer.feature.propertiesl && layer.feature.properties._markerType == "CircleMarker") || (layer.getLabel && layer._showLabel)){                    
+                if((layer.feature && layer.feature.propertiesl && layer.feature.properties._markerType == "CircleMarker") || (layer.getLabel && layer._showLabel)){
                     rect = new GSI.PixelRectangle( layer.getLatLng(), radius * 2, radius * 2, radius, radius, rectStyle );
 
-                    radius = GSI.Utils.ConverUnit(latlng.lat, GSI.GLOBALS.map.getZoom(), radius, "px", "m");
+                    radius = GSI.Utils.ConverUnit(GSI.GLOBALS.map, layer, radius, "px", "m");
                 }
                 else{
 				    var latRadius = ( radius / 40075017 * 360 );
@@ -15245,7 +15253,7 @@ GSI.SakuzuListItem = L.Class.extend( {
             var vLatLng = o.getLatLng();
             var vRadius = o._radius_px;
             if(!vRadius){
-                vRadius = GSI.Utils.ConverUnit(vLatLng.lat, GSI.GLOBALS.map.getZoom(), o.getRadius(), "m", "px");
+                vRadius = GSI.Utils.ConverUnit(GSI.GLOBALS.map, o, o.getRadius(), "m", "px");
             }
 
             var vOptions = o.options;
@@ -16815,21 +16823,6 @@ GSI.Searcher = L.Class.extend( {
 	},
 	clearSearch : function()
 	{
-		if ( this.addresAjax )
-		{
-			try{ this.addresAjax.abort(); } catch(e){}
-			this.addresAjax = null;
-		}
-		if ( this.stationAjax )
-		{
-			try{ this.stationAjax.abort(); } catch(e){}
-			this.stationAjax = null;
-		}
-		if ( this.sisetuAjax )
-		{
-			try{ this.sisetuAjax.abort(); } catch(e){}
-			this.sisetuAjax = null;
-		}
 		if ( this.chimeiAjax )
 		{
 			try{ this.chimeiAjax.abort(); } catch(e){}
@@ -16843,319 +16836,25 @@ GSI.Searcher = L.Class.extend( {
 		this.clearSearch();
 		this.dialog.show();
 
-		this.addresAjax = this.searchAddress( q, "","" );
-
-		this.stationAjax = this.searchStation( q,"","" );
-		this.sisetuAjax = this.searchSisetu( q, "","" );
 		this.chimeiAjax = this.searchChimei( q, "","" );
 	},
-	getAddressRusult : function(json)
+	setChimeiRusult : function(json)
 	{
-		var xmlDoc = null;
-		if (window.ActiveXObject)
-		{
-			xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-			xmlDoc.async = false;
-			xmlDoc.loadXML(json['result']);
-		}
-		else if (window.DOMParser)
-		{
-			xmlDoc = new DOMParser().parseFromString(
-				json['result'],
-				"application/xml"
-			);
-		}
-		var xmlObj = $(xmlDoc);
-		var result = [];
-		xmlObj.find("candidate").each(function(){
-			if ($(this).find('iLvl').text() > 0){
-				temp=$(this).find('address').text().split('/');
-				addr=new Array();
-				dispAddr = "";
-				for (var i=0; i<temp.length; i++){
-					if (temp[i].substr(temp[i].length-1) == '郡'){
-						//郡は省きます
-					}else if (temp[i].substr(temp[i].length-1) == '区'){
-						if (temp[i-1].substr(temp[i-1].length-1) == '市'){
-							//政令指定都市の区は市名と合わせます
-							addr[addr.length-1] += temp[i];
-						}
-					}else{
-						addr[addr.length] = temp[i];
-					}
-					dispAddr += temp[i];
-				}
-
-				var n = result.length;
-				result[n] = new Array();
-				if (addr[0]) result[n]['pref']=addr[0];
-				if (addr[1]) result[n]['muniNm']=addr[1];
-				if (addr[2]) result[n]['lv01']=addr[2];
-				result[n]['longitude'] = $(this).find('longitude').text();
-				result[n]['latitude'] = $(this).find('latitude').text();
-				result[n]['value'] = dispAddr;
-				result[n]['series'] = "ADDRESS";
-			}
-		});
-
-		this.dialog.setAddressResult( result );
-	},
-	getStationRusult : function(json)
-	{
-		var xmlDoc = null;
-		if (window.ActiveXObject)
-		{
-			xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-			xmlDoc.async = false;
-			xmlDoc.loadXML(json['result']);
-		}
-		else if (window.DOMParser)
-		{
-			xmlDoc = new DOMParser().parseFromString(
-				json['result'],
-				"application/xml"
-			);
-		}
-		var xmlObj = $(xmlDoc);
-		var result = [];
-		xmlObj.find("candidate").each(function(){
-			if ($(this).find('iLvl').text() > 0){
-				temp=$(this).find('address').text().split('/');
-				addr=[];
-				dispAddr = "";
-				for (var i=0; i<temp.length; i++){
-					if (temp[i].substr(temp[i].length-1) == '郡'){
-						//郡は省きます
-					}else if (temp[i].substr(temp[i].length-1) == '区'){
-						if (temp[i-1].substr(temp[i-1].length-1) == '市'){
-							//政令指定都市の区は市名と合わせます
-							addr[addr.length-1] += temp[i];
-						}
-					}else{
-						addr[addr.length] = temp[i];
-					}
-					dispAddr += temp[i];
-				}
-
-				var n = result.length;
-				result[n] = {};
-				if (addr[0]) result[n]['pref']=addr[0];
-				if (addr[2]) result[n]['lv01']=addr[2];
-				result[n]['longitude'] = $(this).find('longitude').text();
-				result[n]['latitude'] = $(this).find('latitude').text();
-				result[n]['value'] = dispAddr;
-				result[n]['series'] = "STATION";
-				var subUrl = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/LonLatToLv01.php?longitude=" + $(this).find('longitude').text() + "&latitude=" + $(this).find('latitude').text();
-
-				// 駅の検索結果に対し、同期処理で都道府県コード・市町村コードをチェックする
-				$.ajax({
-					async: false,
-					type: "POST",
-					data: $(this),
-					dataType: 'json',
-					timeout: 1000,
-					error: function() {
-					},
-					url: subUrl,
-					success: function(data, status){
-						if (data.error) return;
-
-						result[n]['prefCd'] = data.result[0]['prefCd'];
-						result[n]['muniCd'] = data.result[0]['muniCd'];
-						result[n]['muniNm']="";
-						if ( data.result[0].muniCd )
-						{
-							var muniNm= GSI.MUNI_ARRAY[data.result[0].muniCd ];
-							if ( muniNm )
-							{
-								muniNm = muniNm.split(',');
-								if( muniNm.length > 3 )
-								{
-									result[n]['muniNm'] = $.trim(muniNm[1].replace( '　', '' )) + $.trim(muniNm[3].replace( '　', '' ));
-								}
-							}
-						}
-					}
-				});
-			}
-		});
-
-		this.dialog.setStationResult( result );
-	},
-	getSisetuRusult : function( json )
-	{
-		var result = [];
-		if (json['result'].indexOf('{"result":[') != -1)
-		{
-			var txt = json['result'];
-			var n, pref;
-			var obj;
-			obj = eval("obj=" + txt);
-			for(var i=0; i<obj.result.length; i++)
-			{
-				n = result.length;
-				result[n] = {};
-				pref=obj.result[i].muniCd.substr(0, obj.result[i].muniCd.length-3);
-				result[n]['pref']=pref;
-				result[n]['muniCd']=obj.result[i].muniCd;
-				result[n]['muniNm']="";
-				if ( obj.result[i].muniCd )
-				{
-					var muniNm= GSI.MUNI_ARRAY[obj.result[i].muniCd ];
-					if ( muniNm )
-					{
-						 muniNm = muniNm.split(',');
-						 if( muniNm.length > 3 )
-						 {
-							result[n]['muniNm'] = $.trim(muniNm[1].replace( '　', '' )) + $.trim(muniNm[3].replace( '　', '' ));
-						}
-					}
-				}
-				result[n]['longitude'] = obj.result[i].longitude;
-				result[n]['latitude'] = obj.result[i].latitude;
-				result[n]['series'] = "FACILITY";
-				pref = parseInt(pref);
-				result[n]['value']=obj.result[i].shisetsuNm;
-			}
-		}
-		this.dialog.setSisetuResult( result );
-	},
-	getChimeiRusult : function(json)
-	{
-		var result = [];
-		if (json['result'].indexOf('{"result":[') != -1)
-		{
-			var txt = json['result'];
-			var n, pref;
-			var obj;
-			obj = eval("obj=" + txt);
-
-			for(var i=0; i<obj.result.length; i++)
-			{
-				n = result.length;
-				result[n] = {};
-				pref=obj.result[i].muniCd.substr(0, obj.result[i].muniCd.length-3);
-				result[n]['pref']=pref;
-				result[n]['muniCd']=obj.result[i].muniCd;
-				result[n]['longitude'] = obj.result[i].longitude;
-				result[n]['latitude'] = obj.result[i].latitude;
-				result[n]['series'] = "PLACE";
-				pref = parseInt(pref);
-				result[n]['value']=obj.result[i].chimeiNm;
-				result[n]['muniNm']="";
-				if ( obj.result[i].muniCd )
-				{
-					var muniNm= GSI.MUNI_ARRAY[obj.result[i].muniCd ];
-					if ( muniNm )
-					{
-						 muniNm = muniNm.split(',');
-						 if( muniNm.length > 3 )
-						 {
-							result[n]['muniNm'] = $.trim(muniNm[1].replace( '　', '' )) + $.trim(muniNm[3].replace( '　', '' ));
-						}
-					}
-				}
-			}
-		}
-
-		this.dialog.setChimeisResult( result );
-	},
-	searchAddress : function (q, pref, muni)
-	{
-		var constraint = '';
-		var url = CONFIG.SERVERAPI.SEARCH // "http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geocode.cgi"
-			+ '?addr=' + q
-			+ '&charset=UTF8'
-			+ '&geosys=world'
-			+ '&series=ADDRESS';
-
-		var constraint="";
-		var parameter = {};
-
-		parameter['request'] = url;
-		parameter['tl'] = "cs_address";
-		parameter['pref'] = ( pref ? pref : '' );
-		parameter['muni'] = ( muni ? muni : '' );
-
-		return $.ajax({
-			type: "GET",
-			url:CONFIG.SERVERAPI.INTERFACE,
-			data: parameter,
-			dataType: "jsonp",
-			timeout: 30000,
-			success: L.bind( this.getAddressRusult, this ),
-			error:function(){
-			}
-		});
-	},
-	searchStation : function (q, pref, muni)
-	{
-		var constraint = '';
-		var url = CONFIG.SERVERAPI.SEARCH //"http://geocode.csis.u-tokyo.ac.jp/cgi-bin/simple_geocode.cgi"
-			+ '?addr=' + q
-			+ '&charset=UTF8'
-			+ '&geosys=world'
-			+ '&series=STATION';
-
-		var parameter = {};
-
-		parameter['request'] = url;
-		parameter['tl'] = "cs_station";
-		parameter['muni'] = ( muni ? muni : '' );
-		parameter['pref'] = ( pref ? pref : '' );
-		return $.ajax({
-			type: "GET",
-			url:CONFIG.SERVERAPI.INTERFACE,
-			data: parameter,
-			dataType: "jsonp",
-			timeout: 30000,
-			success: L.bind( this.getStationRusult, this ),
-			error:function(){
-			}
-		});
-	},
-	searchSisetu : function (q, pref, muni)
-	{
-		var constraint="";
-		var url = CONFIG.SERVERAPI.SEARCH_SHISETU + '?searchWord=' + q + constraint;
-		var parameter = {};
-
-		parameter['request'] = url;
-		parameter['tl'] = "shisetsu";
-		parameter['muni'] = ( muni ? muni : '' );
-		parameter['pref'] = ( pref ? pref : '' );
-		parameter['query'] = q;
-
-		return $.ajax({
-			type: "GET",
-			url:CONFIG.SERVERAPI.INTERFACE,
-			data: parameter,
-			dataType: "jsonp",
-			timeout: 30000,
-			success: L.bind( this.getSisetuRusult, this ),
-			error:function(){
-			}
-		});
+		this.dialog.setChimeisResult( json );
 	},
 	searchChimei : function (q, pref, muni)
 	{
 		var constraint = '';
-		var url = CONFIG.SERVERAPI.SEARCH_CHIMEI +'?searchWord=' + q;
-		var parameter = {};
-
-		parameter['request'] = url;
-		parameter['tl'] = "chimei";
-		parameter['muni'] = ( muni ? muni : '' );
-		parameter['pref'] = ( pref ? pref : '' );
-		parameter['query'] = q;
+		var url = CONFIG.SERVERAPI.CHIMEI_SEARCH;
+		var parameter = { "q" : q };
 
 		return $.ajax({
 			type: "GET",
-			url:CONFIG.SERVERAPI.INTERFACE,
+			url:url,
 			data: parameter,
-			dataType: "jsonp",
+			dataType: "json",
 			timeout: 30000,
-			success: L.bind( this.getChimeiRusult, this ),
+			success: L.bind( this.setChimeiRusult, this ),
 			error:function(){
 			}
 		});
@@ -17559,10 +17258,17 @@ GSI.Edit.CircleMarker = L.Edit.Circle.extend( {
 	{
 		L.Edit.Circle.prototype._resize.call(this,latlng);
 
-		var result = GSI.Draw.convertRadius( GSI.Utils.ConverUnit(latlng.lat, this.map.getZoom(), this._shape.getRadius(), "m", "px"), latlng, "px" );
+		var result = GSI.Draw.convertRadius( GSI.Utils.ConverUnit(this.map, this._shape, this._shape.getRadius(), "m", "px"), latlng, "px" );
 
 		this.fire( "change", result );
 	},
+    _move : function(latlng)
+    {
+		L.Edit.Circle.prototype._move.call(this,latlng);
+
+        var vRadius = GSI.Utils.ConverUnit(this.map, this._shape, this._shape._radius_px, "px", "m");
+        this._shape.setRadius(vRadius);
+    },
     disable : function()
     {
         L.Edit.Circle.prototype.disable.call(this);
@@ -17570,18 +17276,20 @@ GSI.Edit.CircleMarker = L.Edit.Circle.extend( {
     },
 	onZoomEnd : function()
 	{
-        var vLatLng  = this._shape.getLatLng();
-        var vRadius  = this._shape._radius_px;
-
-        vRadius = GSI.Utils.ConverUnit(vLatLng.lat, this.map.getZoom(), vRadius, "px", "m");
+        var vRadius = GSI.Utils.ConverUnit(this.map, this._shape, this._shape._radius_px, "px", "m");
 
         this._shape.setRadius(vRadius);
         for(var i=0,l=this._resizeMarkers.length;i<l;i++){
             this._unbindMarker(this._resizeMarkers[i]);
             this._map.removeLayer(this._resizeMarkers[i]);
         }
-        this._resizeMarkers=null;
+        this._unbindMarker(this._moveMarker);
+        this._map.removeLayer(this._moveMarker);
 
+        this._moveMarker    = null;
+        this._resizeMarkers =null;
+
+        this._createMoveMarker();
         this._createResizeMarker();
 	}
 } );
