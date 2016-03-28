@@ -11414,7 +11414,7 @@ GSI.LayersJSON = L.Class.extend( {
 			type: "GET",
 			url: url,
 			dataType: "text",
-			cache:false,
+			cache:true,
 			success : L.bind(this._onLoad, this),
 			error : L.bind(this._onLoadError, this)
 		});
