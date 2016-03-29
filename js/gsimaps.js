@@ -430,6 +430,11 @@ CONFIG.FUNCMENU = {
 			title : '3D',
 			arrow : true,
 			href : 'gsi3d'//'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
+		},
+		{
+			title : 'Globe<span style="font-size: 12px;">(試験公開)</span>',
+			arrow : true,
+			href : 'gsiglobe'//'http://globe.gsi.go.jp/index_globe.html'
 		}
 	]
 };﻿
@@ -2926,6 +2931,14 @@ GSI.Links.getURL = function( id, center, z, bounds){
         args += "&"     + GSI.GLOBALS.pageStateManager.getLayersQueryString({visibleOnly:true})
 
         return "./index_3d.html" + args;
+	}
+	else if ( id == 'gsiglobe' )
+	{
+		if(GSI.Utils.Browser.ie && ( GSI.Utils.Browser.version <= 10 )){
+			alert( 'お使いのWebブラウザは地理院地図Globeに対応していません。\nChrome、Firefox、IE11　をご使用ください。' );
+			return null;
+		}
+		return 'http://globe.gsi.go.jp/index_globe.html';
 	}
 	else if ( id == 'mapion' )
 	{
