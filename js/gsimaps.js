@@ -11724,6 +11724,7 @@ GSI.MapLayerList = L.Class.extend( {
 			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
 			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
 			if ( info.attribution ) options.attribution =info.attribution;
+            if ( info.errorTileUrl ) options.errorTileUrl =info.errorTileUrl;
 			info._visibleInfo .layer = new GSI.KML(info.url, options);
 			info._visibleInfo .layer._noFinishMove = noFinishMove;
 			info._visibleInfo .layer.on("loadstart", L.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "KML"  ) );
@@ -18441,6 +18442,13 @@ GSI.BaseLayer = L.TileLayer.extend({
 		    if ( this.baseLayerList[idx].minZoom ){
 			    this.options.minZoom =  this.baseLayerList[idx].minZoom;
             }
+
+            var errorTileUrl = "image/map/no-data.png";
+            if(errorTileUrl){
+                errorTileUrl = this.baseLayerList[idx].errorTileUrl;
+            }
+            this.options.errorTileUrl = errorTileUrl;
+
 		    this.setUrl( this._url );
         }
         this.activeIndexPre = this.activeIndex;
