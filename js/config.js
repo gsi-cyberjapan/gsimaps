@@ -2,6 +2,8 @@ var userAgent = window.navigator.userAgent.toLowerCase();
 var msie = ( userAgent.match(/(msie|MSIE)/) || userAgent.match(/(T|t)rident/) ) ;
 
 var oFrame = new Array();
+var oFrameProcE  = null;
+var oFrameProcUL = null;
 
 /************************************************************************
  画面サイズ取得
@@ -621,6 +623,14 @@ $(function (){
 			if($('.top_menu'   ).is(':visible')){ $( '.top_menu'   ).fadeOut('fast'); }
 		},
 
+		selectClear : function(){
+			var selected = $(this).data('_selected');
+            if(selected){
+                $(selected).removeClass("selected");
+                $(this).data({'_selected' : null});
+            }
+        },
+
 		select : function(o, target){
 			var selected = $(this).data('_selected');
 			if(selected != target){
@@ -743,7 +753,7 @@ $(function (){
 				case "remove":
 					// 削除
 					if($(this).data("_selected") == target){
-						$('.edit div').hide();
+                        o.oEdit.find("div").hide();
 						$(this).data({"_selected" : null});
 					}
 					var ul         = $(target).parent('li').parent('ul');
@@ -844,12 +854,11 @@ $(function (){
                     , connectWith          : "." + o.vTreeClassWith
 					, update               :
                         function(event, ui){
-                            $('.edit div').hide();
-
                             var a = ui.item.children("a.folder, a.layer");
 						    var item = a.data("_data");
 						    if(item){
     							_removeFromArray = function(targetList, target){
+                                    var f = false;
 							    	if(!targetList){
                                         return;
                                     }
@@ -858,14 +867,15 @@ $(function (){
 								    for(var i = 0; i < targetList.length; i++){
     									if(targetList[i] == target){
     										targetList.splice(i, 1);
-
+                                            f = true;
 	    									break;
 									    }
 								    }
-
+                                    return f;
 							    };
 
 							    _insertAfterArray = function(targetList, target, prev){
+                                    var f = false;
     								if(!targetList){
                                         return;
                                     }
@@ -878,14 +888,38 @@ $(function (){
     								for(var i = 0; i < targetList.length; i++){
     									if(targetList[i] == prev){
     										targetList.splice(i + 1, 0, target);
+                                            f = true;
 										    break;
 									    }
 								    }
+                                    return f;
 							    };
 
 
                                 _insertAfterClickEvt = function(o, a){
                                     a.unbind();
+			                        a.on("contextmenu",
+                                        function(){
+                                            var data  = $(this).data("_data")._editedData;
+                                            var popup = $(this).data("_data").children ? '.folder_menu' : '.layer_menu';
+                                            if(data){
+                                                if( data.layersUrl != ""){
+                                                    popup = '.layer_menu';
+                                                }
+                                            }
+					                        $(popup).popupMenu(
+						                        {
+                                                      o          : o
+						                            , targetElem : this
+							                        , onClick    : function(o, methodName, target){
+                                                        o.oTree.tree('exec', o, methodName, target);
+							                        }
+						                        }
+                                            );
+					                        $this.tree("select", o, this);
+					                        return false;
+				                        }
+                                    );
 			                        a.click(
                                         function(){
                                             $this.tree("select", o, this);
@@ -912,8 +946,23 @@ $(function (){
                                         break;
                                     }
                                 }
+
+                                if(oFrameProcE && oFrameProcUL){
+                                    if(oFrameProcE.timeStamp == event.timeStamp){                                    
+                                        if(oFrameProcUL[0].className != ul[0].className){
+                                            for(var nFrame = 0; nFrame < oFrame.length; nFrame++){
+                                                oFrame[nFrame].oTree.tree("selectClear");
+                                                oFrame[nFrame].oEdit.find("div").hide();
+                                                oFrame[nFrame].oEdit.edit("clearEdit", o);
+                                            }
+                                        }
+                                    }
+                                }                                   
                                 var a = ui.item.find("a.folder, a.layer");
                                 _insertAfterClickEvt(o, a);
+
+                                oFrameProcE  = event;
+                                oFrameProcUL = ul;
 	    					}
 		    			}
 			    	}
@@ -997,6 +1046,7 @@ $(function (){
 					editingData._editedData.title         = f.find("input[name=title]"       ).val();
 					editingData._editedData.icon          = f.find("input[name=iconUrl]"     ).val();
 					editingData._editedData.url           = f.find("input[name=url]"         ).val();
+                    editingData._editedData.errorTileUrl  = f.find("input[name=errorTileUrl]").val();
 					if(f.find("input[name='cocotile']").length > 0){
 						editingData._editedData.cocotile = f.find("input[name='cocotile']").prop( 'checked' );
                     }
@@ -1137,6 +1187,7 @@ $(function (){
 				fEditLayerForm.find("input[name=url]"             ).val(_data.url           ? _data.url           : "").bind("blur"  , this, onBlur);
 				fEditLayerForm.find("input[name=subdomains]"      ).val(_data.subdomains    ? _data.subdomains    : "").bind("blur"  , this, onBlur);
 				fEditLayerForm.find("input[name=attribution]"     ).val(_data.attribution   ? _data.attribution   : "").bind("blur"  , this, onBlur);
+                fEditLayerForm.find("input[name=errorTileUrl]"    ).val(_data.errorTileUrl  ? _data.errorTileUrl  : "").bind("blur"  , this, onBlur);                
 				if(fEditLayerForm.find("input[name='cocotile']"   ).length > 0){
 					fEditLayerForm.find("input[name='cocotile']"  ).prop({"checked" : _data.cocotile ? true : false }).bind("click"  , this, onBlur);
                 }
@@ -1292,15 +1343,16 @@ $(function (){
                     }
 				}
 				else{
-					newItem.type        = "Layer";
-					newItem.id          = item.id;
-					newItem.title       = item.title;
-					newItem.iconUrl     = ( item.icon ? item.icon : '' );
-					newItem.url         = item.url;
-					newItem.subdomains  = ( item.subdomains ? item.subdomains : "" );
-					newItem.attribution = ( item.attribution ? item.attribution : "" );
-					newItem.cocotile    = ( item.cocotile ? item.cocotile : false );
-					if ( item.minZoom && item.minZoom != '' ){ newItem.minZoom = parseInt(item.minZoom); }
+					newItem.type         = "Layer";
+					newItem.id           = item.id;
+					newItem.title        = item.title;
+					newItem.iconUrl      = ( item.icon ? item.icon : '' );
+					newItem.url          = item.url;
+					newItem.subdomains   = ( item.subdomains  ? item.subdomains    : "" );
+					newItem.attribution  = ( item.attribution ? item.attribution   : "" );
+                    newItem.errorTileUrl = ( item.errorTileUrl ? item.errorTileUrl : "" );
+					newItem.cocotile     = ( item.cocotile ? item.cocotile : false );
+                    if ( item.minZoom && item.minZoom != '' ){ newItem.minZoom = parseInt(item.minZoom); }
 					if ( item.maxZoom && item.maxZoom != '' ){ newItem.maxZoom = parseInt(item.maxZoom); }
 					if ( item.maxNativeZoom && item.maxNativeZoom != '' ){
 						newItem.maxNativeZoom = parseInt(item.maxNativeZoom);
