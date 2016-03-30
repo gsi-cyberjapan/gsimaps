@@ -3146,8 +3146,8 @@ GSI.Utils.getTimeStampString = function() {
 	var msec = now.getMilliseconds(); // ミリ秒
 	var result =
 		year + '' +
-		( '00' + day ).slice(-2) +
 		( '00' + month ).slice(-2)  +
+		( '00' + day ).slice(-2) +
 		( '00' + hour ).slice(-2) +
 		( '00' + min ).slice(-2) +
 		( '00' + sec ).slice(-2) +
