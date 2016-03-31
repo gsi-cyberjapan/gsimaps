@@ -11671,9 +11671,21 @@ GSI.MapLayerList = L.Class.extend( {
 			this.append( infoList[i], true, isHide );
 		}
 	},
-	append : function( info, noFinishMove, isHide )
+	append : function( info, noFinishMove, isHide ,Confirm_FLAG)
 	{
 		if ( this.exists( info ) ) return;
+		if ( info.id=="kokuarea" )
+		{
+			if(Confirm_FLAG == null){
+				var KARI=this;
+				jConfirm("航空法第１３２条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第２３６条第１号に掲げる空域（空港等の周辺空域）の投影面下となる場所を表示します。<br>なお、この情報には誤差が含まれている場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。", '留意事項', function(r) {
+					if(r) {
+						KARI.append(info, noFinishMove, isHide ,1);
+					}
+				});
+				return;
+			}
+		}
 		info._visibleInfo = {};
 		info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
 		info.initialOpacity = null;
