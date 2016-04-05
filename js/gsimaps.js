@@ -434,7 +434,7 @@ CONFIG.FUNCMENU = {
 		{
 			title : 'Globe<span style="font-size: 12px;">(試験公開)</span>',
 			arrow : true,
-			href : 'gsiglobe'//'http://globe.gsi.go.jp/index_globe.html'
+			href : 'gsiglobe'//'http://maps.gsi.go.jp/globe/index_globe.html'
 		}
 	]
 };﻿
@@ -2939,7 +2939,7 @@ GSI.Links.getURL = function( id, center, z, bounds){
 			alert( 'お使いのWebブラウザは地理院地図Globeに対応していません。\nChrome、Firefox、IE11　をご使用ください。' );
 			return null;
 		}
-		return 'http://globe.gsi.go.jp/index_globe.html';
+		return 'http://maps.gsi.go.jp/globe/index_globe.html';
 	}
 	else if ( id == 'mapion' )
 	{
