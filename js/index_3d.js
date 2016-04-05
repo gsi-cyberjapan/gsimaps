@@ -530,6 +530,7 @@ var InitLoadLayersTxt_ProcSrc = function(){
                 }
                 var d = _Load_DataHash[args["ls"][n].id];
                 if(d){
+                    d.url = d.url.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
                     var dUrlType  = InitLoadLayersTxt_ProcSrc_URL2LayerType(d.url);
                     var dUrlStyle = false;
                     var fTileUrl  = true;
