@@ -540,6 +540,7 @@ GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCELBTN = '終　了';
 GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCELCONFIRMMSG = '編集を終了しますか？確定していない編集内容は破棄されます。';
 GSI.TEXT.SAKUZU.DIALOG_HIDECONFIRMMSG = '作図・ファイルパネルを閉じますか？確定していない編集内容は破棄されます。';
 GSI.TEXT.SAKUZU.DIALOG_EDIT_REMOVECONFIRMMSG = 'このオブジェクトを削除します。よろしいですか？';
+GSI.TEXT.SAKUZU.DIALOG_EDIT_REMOVELAYERCONFIRMMSG = 'このレイヤを削除します。よろしいですか？';
 GSI.TEXT.SAKUZU.DIALOG_EDIT_INFOFREE_BTN = '自由文入力に切替';
 GSI.TEXT.SAKUZU.DIALOG_EDIT_INFOTABLE_BTN = 'テーブル入力に切替';
 GSI.TEXT.SAKUZU.DIALOG_EDIT_POINTTEXT_MSG = '表示するHTMLを入力して下さい。';
@@ -6445,8 +6446,17 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			this._listTBody.append( tr );
 
 			editBtn.click( L.bind( this._onEditSakuzuItemClick, this, item ) );
-			clearBtn.click( L.bind( function( item ){ item.remove();}, this, item ) );
+			clearBtn.click( L.bind( this._clearLayer, this, item ) );
 		}, this ) );
+	},
+	_clearLayer : function( item )
+	{
+		if ( item.getLayerCount() > 0 )
+		{
+			if ( !confirm( GSI.TEXT.SAKUZU.DIALOG_EDIT_REMOVELAYERCONFIRMMSG ) ) return;
+		}
+		
+		item.remove();
 	},
 	_toolBtnClick : function( btnId )
 	{
