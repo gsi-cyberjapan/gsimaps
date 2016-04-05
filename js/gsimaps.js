@@ -4627,7 +4627,7 @@ GSI.COCOTileLayer = L.Class.extend({
 		    tile.src = this.getTileUrl(url[0], tilePoint);
 		    tile.ajax = $.ajax({
 			    url: tile.src,
-			    cache: false,
+			    cache: true,
 			    crossDomain : true,
 			    success : L.Util.bind( this._tileLoaded  , this, url, tile, tilePoint),
 			  //error   : L.Util.bind( this._tileLoaded_Error  , this, url, tile, tilePoint),
@@ -5261,7 +5261,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			    type     : "GET",
 			    url      : this._CurrentData_SRC[0].src,
 			    dataType : "text",
-			    cache    : false,
+			    cache    : true,
 			    success  : L.bind(this._initializeList_IDProc_DataSrc_Success, this),
 			    error    : L.bind(this._initializeList_IDProc_DataSrc_Error  , this)
 		    });
@@ -5682,7 +5682,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 					    type     : "GET",
 					    url      : item.src,
 					    dataType : "text",
-					    cache    : false,
+					    cache    : true,
 					    success  : L.bind(this._onFolderClickLoad     , this),
 					    error    : L.bind(this._onFolderClickLoadError, this)
 				    });
