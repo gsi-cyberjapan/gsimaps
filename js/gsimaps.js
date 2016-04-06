@@ -18717,7 +18717,7 @@ GSI.GeoJSON = L.Class.extend( {
 	},
 	onPointToLayer : function(feature, latlng )
 	{
-		if ( !feature.properties ) return L.marker( latlng );
+		if ( !feature.properties ) return L.marker( latlng ,{ icon : L.icon({iconUrl:'http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
 
 		var marker = null;
 		if ( feature.properties[ "_markerType" ] )
@@ -18775,6 +18775,7 @@ GSI.GeoJSON = L.Class.extend( {
 
 		if ( !marker )
 		{
+			if ( !feature.properties[ "_iconUrl" ] ) return L.marker( latlng ,{ icon : L.icon({iconUrl:'http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
 			var iconUrl = feature.properties[ "_iconUrl" ];
 			var iconSize = feature.properties[ "_iconSize" ];
 			var iconAnchor = feature.properties[ "_iconAnchor" ];
