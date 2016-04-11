@@ -1,5 +1,5 @@
 {
-  "layers": [
+  "layers": [ 
     {
       "type": "LayerGroup",
       "title": "基準点・測地観測",
