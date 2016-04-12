@@ -14745,7 +14745,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 			this._editingBoundsRects = L.featureGroup().addTo( this._owner._map );
 		}
 
-		var f_fitBounds = true;
+		var f_fitBounds = false;
 		var layers = [];
 		this._getLayers( this._layer, layers );
 
@@ -14791,7 +14791,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 
                     radius = GSI.Utils.ConverUnit(GSI.GLOBALS.map, layer, radius, "px", "m");
 
-                    f_fitBounds = false;
+                    //f_fitBounds = false;
                 }
                 else{
 				    var latRadius = ( radius / 40075017 * 360 );
