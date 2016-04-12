@@ -4895,7 +4895,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 
 		var height = this.container.outerHeight( false )
 			- this.headerFrame.outerHeight( true )
-			- this._controlFrame.outerHeight( true ) - 9;
+			- this._controlFrame.outerHeight( true ) - 11;
 
 		this.listFrame.css( { "max-height": 'none', height: height + 'px'} );
 	},
@@ -8769,7 +8769,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
 		var height = this.container.outerHeight( false )
 			- this.headerFrame.outerHeight( true )
-			- this._controlFrame.outerHeight( true ) - 8;
+			- this._controlFrame.outerHeight( true ) - 10;
 
 		this.listFrame.css( { "max-height": 'none', height: height + 'px'} );
 	},
