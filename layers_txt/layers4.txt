@@ -19,6 +19,20 @@
               "toggleall": false,
               "entries": [
         {
+          "type": "Layer",
+          "id": "20160414kumamoto_shingen",
+          "title": "震源",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_shingen/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+        },
+        {
           "type": "LayerGroup",
           "title": "都市圏活断層図",
           "iconUrl": "",
