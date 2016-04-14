@@ -14,6 +14,77 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "平成28年熊本県熊本地方を震源とする地震",
+              "iconUrl": "",
+              "toggleall": false,
+              "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "都市圏活断層図",
+          "iconUrl": "",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "_afm20160414",
+              "title": "都市圏活断層図",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">都市圏活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "_afm_spec20160414",
+              "title": "諸元情報",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+            }
+          ]
+        },
+        {
+          "type": "Layer",
+          "id": "_experimental_landformclassification20160414",
+          "title": "地形分類",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 14,
+          "html": "ズーム14～16で表示します。<br>数値地図25000（土地条件）及び脆弱地形データより作成したデータです。"
+        },
+        {
+          "type": "Layer",
+          "id": "_ort20160414",
+          "title": "最新の写真（2007年～）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "legendUrl": "",
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+              ]
+            },
+            {
+              "type": "LayerGroup",
               "title": "平成26年長野県北部を震源とする地震",
               "iconUrl": "",
               "toggleall": false,
