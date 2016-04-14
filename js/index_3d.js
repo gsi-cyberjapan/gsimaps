@@ -44,7 +44,8 @@ CONFIG.layers             = [
 var vDemType                            = "TXT"; // TXT, PNG
 var vDemUrl                             = "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
 //  vDemUrl                             = "./[@]/tile.gsi/{z}/{x}/{y}.png";
-var vDemUrl_Default                     = "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"
+var vDemUrl_Default                     = "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
+var vDemUrl_maxZoom                     =14;
 /*-----------------------------------------------------------------------------------------------*/
 var _Load_StyleZoom                     = false;
 var _Load_Data                          = null;
@@ -894,7 +895,6 @@ function GetScaleTileSize(z, zNative){ return GetScale(z) / GetScale(zNative) * 
 
 function GetTileX(z, lon){ var lng_rad = lon * Math.PI / 180; var R = 128 / Math.PI; var worldCoordX =   R * (lng_rad + Math.PI);                                                     var pixelCoordX = worldCoordX * Math.pow(2, z); var tileCoordX = Math.floor( pixelCoordX / 256); return {n:tileCoordX,px:Math.floor( pixelCoordX - tileCoordX * 256)}; }
 function GetTileY(z, lat){ var lat_rad = lat * Math.PI / 180; var R = 128 / Math.PI; var worldCoordY = - R / 2 * Math.log( (1 + Math.sin(lat_rad)) / (1 - Math.sin(lat_rad)) ) + 128; var pixelCoordY = worldCoordY * Math.pow(2, z); var tileCoordY = Math.floor( pixelCoordY / 256); return {n:tileCoordY,px:Math.floor( pixelCoordY - tileCoordY * 256)}; }
-function GetTile14(z    , x, y){ return GetTileN(z, 14, x, y); };
 function GetTileN (z, zN, x, y){ var nR = Math.pow(2, z - zN); var nX = Math.floor(x / nR); var nY = Math.floor(y / nR); return { x : nX, y : nY }; };
 function GetTile2Lng(x, z){                                          return (x/Math.pow(2,z)*360-180);                               };
 function GetTile2Lat(y, z){ var n=Math.PI-2*Math.PI*y/Math.pow(2,z); return (180/Math.PI*Math.atan(0.5*(Math.exp(n)-Math.exp(-n)))); };
@@ -930,9 +930,9 @@ function RequestLayers(url, z, x, y, nTilesOTS){
             var dem_z = z;  dem_d.z = dem_z;
             var dem_x = xx; dem_d.x = dem_x;                
             var dem_y = yy; dem_d.y = dem_y;
-            if(dem_z > 14){
-                var dem_n = GetTile14(z, xx, yy);
-                dem_z = 14;
+            if(dem_z > vDemUrl_maxZoom){
+                var dem_n = GetTileN(z, vDemUrl_maxZoom, xx, yy);
+                dem_z = vDemUrl_maxZoom;
                 dem_x = dem_n.x; dem_d.x14 = dem_x;
                 dem_y = dem_n.y; dem_d.y14 = dem_y;
             }
@@ -1838,12 +1838,12 @@ function RequestTileDemResult(o){
 };
 
 function RequestTileDemResultMake(data, z, x, y, x14, y14){
-    if(z >= 15){
+    if(z > vDemUrl_maxZoom){
         var vDem14 = data.split("\n");
         if(vDem14.length >= 256){
             var nPX = 256 / 16;
-            var nR  = Math.pow(2, z - 14);
-            var nRR = Math.pow(2, 18 - z);
+            var nR  = Math.pow(2, z - vDemUrl_maxZoom);
+            var nRR = Math.pow(2, 18 - z + vDemUrl_maxZoom -14);
             var nX = (x - (x14 * nR)) * nRR;
             var nY = (y - (y14 * nR)) * nRR;
             var nPXT  = nPX * nRR;
