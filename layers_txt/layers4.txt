@@ -117,6 +117,29 @@
                      },
                      {
                       "type": "LayerGroup",
+                      "title": "熊本南地区",
+                      "iconUrl": "",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "20160414kumamoto_0415suichokul2",
+                          "title": "熊本南地区垂直写真(4/15撮影)",
+                          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0415suichokul2/{z}/{x}/{y}.geojson",
+                          "subdomains": "",
+                          "attribution": "",
+                          "errorTileUrl": "",
+                          "cocotile": false,
+                          "minZoom": 2,
+                          "maxZoom": 18,
+                          "maxNativeZoom": 2,
+                          "html": ""
+                        }
+                       ]
+                     },
+                     {
+                      "type": "LayerGroup",
                       "title": "宇城地区",
                       "iconUrl": "",
                       "toggleall": false,
