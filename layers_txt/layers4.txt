@@ -1,4 +1,4 @@
-﻿{
+{
   "layers": [
     {
       "type": "LayerGroup",
@@ -32,6 +32,36 @@
                   "maxZoom": 18,
                   "maxNativeZoom": 2,
                   "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "20160414kumamoto_0415nanamel",
+                  "title": "益城地区斜め写真(4/15)",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0415nanamel/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "errorTileUrl": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_ort20160414",
+                  "title": "写真（2007年～）",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+                  "subdomains": "",
+                  "attribution": "",
+                  "errorTileUrl": "",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
                   "type": "LayerGroup",
@@ -71,6 +101,13 @@
                   ]
                 },
                 {
+                  "type": "LayerGroup",
+                  "title": "SAR解析結果",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201604kumamoto.txt"
+                },
+                {
                   "type": "Layer",
                   "id": "_experimental_landformclassification20160414",
                   "title": "地形分類",
@@ -84,36 +121,6 @@
                   "maxZoom": 16,
                   "maxNativeZoom": 14,
                   "html": "ズーム14～16で表示します。<br>数値地図25000（土地条件）及び脆弱地形データより作成したデータです。"
-                },
-                {
-                  "type": "Layer",
-                  "id": "20160414kumamoto_0415nanamel",
-                  "title": "益城地区斜め写真(4/15)",
-                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
-                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0415nanamel/{z}/{x}/{y}.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "errorTileUrl": "",
-                  "cocotile": false,
-                  "minZoom": 2,
-                  "maxZoom": 18,
-                  "maxNativeZoom": 2,
-                  "html": ""
-                },
-                {
-                  "type": "Layer",
-                  "id": "_ort20160414",
-                  "title": "写真（2007年～）",
-                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/670.png",
-                  "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
-                  "subdomains": "",
-                  "attribution": "",
-                  "errorTileUrl": "",
-                  "cocotile": true,
-                  "minZoom": 2,
-                  "maxZoom": 18,
-                  "legendUrl": "",
-                  "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"http://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
             },
