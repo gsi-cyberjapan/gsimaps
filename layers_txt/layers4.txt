@@ -305,6 +305,21 @@
                            "minZoom": 10,
                            "maxZoom": 18,
                            "html": ""
+                         },
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0416suichokul7",
+                           "title": "別府地区垂直写真(4/16撮影)",
+                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0416suichokul7/{z}/{x}/{y}.geojson",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 2,
+                           "maxZoom": 18,
+                           "maxNativeZoom": 2,
+                           "html": ""
                          }
                        ]
                      },
