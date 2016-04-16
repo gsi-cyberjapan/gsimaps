@@ -145,7 +145,7 @@
                            "attribution": "",
                            "errorTileUrl": "",
                            "cocotile": false,
-                           "minZoom": 14,
+                           "minZoom": 10,
                            "maxZoom": 18,
                            "html": ""
                          },
@@ -289,6 +289,29 @@
                             "title": "阿蘇地区垂直写真(4/16撮影)",
                             "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
                             "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0416suichokul5/{z}/{x}/{y}.geojson",
+                            "subdomains": "",
+                            "attribution": "",
+                            "errorTileUrl": "",
+                            "cocotile": false,
+                            "minZoom": 2,
+                            "maxZoom": 18,
+                            "maxNativeZoom": 2,
+                            "html": ""
+                          }
+                        ]
+                      },
+                      {
+                        "type": "LayerGroup",
+                        "title": "南阿蘇地区",
+                        "iconUrl": "",
+                        "toggleall": false,
+                        "entries": [
+                          {
+                            "type": "Layer",
+                            "id": "20160414kumamoto_0416suichokul6",
+                            "title": "南阿蘇地区垂直写真(4/16撮影)",
+                            "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                            "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0416suichokul6/{z}/{x}/{y}.geojson",
                             "subdomains": "",
                             "attribution": "",
                             "errorTileUrl": "",
