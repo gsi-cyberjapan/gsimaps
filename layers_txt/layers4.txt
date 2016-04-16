@@ -1,4 +1,4 @@
-﻿{
+{
   "layers": [
     {
       "type": "LayerGroup",
@@ -20,10 +20,10 @@
               "entries": [
                 {
                   "type": "Layer",
-                  "id": "20160414kumamoto_shingen",
-                  "title": "震源",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_shingen/{z}/{x}/{y}.geojson",
+                  "id": "20160414kumamoto_epicenter",
+                  "title": "震央",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_epicenter/{z}/{x}/{y}.geojson",
                   "subdomains": "",
                   "attribution": "",
                   "errorTileUrl": "",
@@ -135,6 +135,20 @@
                       "iconUrl": "",
                       "toggleall": false,
                       "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "20160414kumamoto_0415dol2",
+                          "title": "熊本南地区正射画像(4/15撮影)",
+                          "iconUrl": "",
+                          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
+                          "subdomains": "",
+                          "attribution": "",
+                          "errorTileUrl": "",
+                          "cocotile": false,
+                          "minZoom": 14,
+                          "maxZoom": 18,
+                          "html": ""
+                        },
                         {
                           "type": "Layer",
                           "id": "20160414kumamoto_0415suichokul2",
