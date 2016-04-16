@@ -1,4 +1,4 @@
-{
+﻿{
   "layers": [
     {
       "type": "LayerGroup",
@@ -45,6 +45,20 @@
                       "iconUrl": "",
                       "toggleall": false,
                       "entries": [
+                         {
+                          "type": "Layer",
+                          "id": "20160414kumamoto_0415dol1",
+                          "title": "益城地区正射画像(4/15撮影)",
+                          "iconUrl": "",
+                          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
+                          "subdomains": "",
+                          "attribution": "",
+                          "errorTileUrl": "",
+                          "cocotile": false,
+                          "minZoom": 14,
+                          "maxZoom": 18,
+                          "html": ""
+                        },
                         {
                           "type": "Layer",
                           "id": "20160414kumamoto_0415suichokul1",
