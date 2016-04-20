@@ -75,6 +75,20 @@
                       "entries": [
                          {
                            "type": "Layer",
+                           "id": "20160414kumamoto_0420dol01",
+                           "title": "西原2地区正射画像（4/20撮影）",
+                           "iconUrl": "",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 10,
+                           "maxZoom": 18,
+                           "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+                         },
+                         {
+                           "type": "Layer",
                            "id": "20160414kumamoto_0419dol2",
                            "title": "南阿蘇2地区A正射画像（4/19撮影）",
                            "iconUrl": "",
