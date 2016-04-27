@@ -23,10 +23,11 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
-	 './layers_txt/layers1.txt'
-	,'./layers_txt/layers2.txt'
+	 './layers_txt/layers_20160414kumamoto.txt?160426'
+	,'./layers_txt/layers1.txt'
+	,'./layers_txt/layers2.txt?160426'
 	,'./layers_txt/layers3.txt'
-	,'./layers_txt/layers4.txt'
+	,'./layers_txt/layers4.txt?160426'
 	,'./layers_txt/layers5.txt'
     ,'./layers_txt/layers_experimental.txt'
 ];
@@ -2532,7 +2533,8 @@ CONFIG.SAKUZU = {
 			'457.png', '458.png', '459.png', '460.png', '461.png', '462.png', '463.png', '464.png', '465.png', '466.png',
 			'476.png', '700.png',
 			'701.png', '702.png', '703.png', '704.png', '705.png', '706.png', '707.png', '708.png', '709.png', '710.png',
-			'dot.png'
+			'dot.png',
+			'1101.png', '1102.png', '1103.png', '1104.png', '1105.png', '1106.png', '1107.png', '1108.png'
 		],
 		ICONSIZE : [20,20],
 		ICONANCHOR : [10,10],
