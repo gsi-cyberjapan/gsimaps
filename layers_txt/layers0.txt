@@ -66,6 +66,19 @@
       "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
       "errorTileUrl": "./image/map/no-data-ort.png",
       "html": ""
+    },
+    {
+      "type": "Layer",
+      "id": "_airphoto",
+      "title": "簡易空中写真",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#airphoto",
+      "errorTileUrl": "./image/map/no-data-ort.png",
+      "html": "<div class=\"gsi_layerinfo_title\">簡易空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/Laser_HP/index.html\">航空レーザ測量</a>の点検用に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a><br>※この情報は、「空中写真・衛星画像」の「簡易空中写真（2004年～）」と同じものです。利便性を考えて一時的に「ベースマップ」に追加しています。</div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     }
   ]
 }
