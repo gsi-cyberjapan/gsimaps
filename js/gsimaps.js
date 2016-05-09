@@ -32,6 +32,11 @@ CONFIG.layers = [
     ,'./layers_txt/layers_experimental.txt'
 ];
 
+//キャッシュ（Layers.txt）
+CONFIG.LOADLAYERSTXTCACHE = true;
+
+//キャッシュ（ココタイル）
+CONFIG.LOADCOCOTILECACHE = true;
 
 // トップメッセージ
 CONFIG.TOPMESSAGE = null;
@@ -4629,7 +4634,7 @@ GSI.COCOTileLayer = L.Class.extend({
 		    tile.src = this.getTileUrl(url[0], tilePoint);
 		    tile.ajax = $.ajax({
 			    url: tile.src,
-			    cache: true,
+			    cache: CONFIG.LOADCOCOTILECACHE,
 			    crossDomain : true,
 			    success : L.Util.bind( this._tileLoaded  , this, url, tile, tilePoint),
 			  //error   : L.Util.bind( this._tileLoaded_Error  , this, url, tile, tilePoint),
@@ -11439,7 +11444,7 @@ GSI.LayersJSON = L.Class.extend( {
 			type: "GET",
 			url: url,
 			dataType: "text",
-			cache:true,
+			cache: CONFIG.LOADLAYERSTXTCACHE,
 			success : L.bind(this._onLoad, this),
 			error : L.bind(this._onLoadError, this)
 		});
