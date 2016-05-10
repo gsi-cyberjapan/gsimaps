@@ -370,6 +370,20 @@ input[type=checkbox].normalcheck + label {
 	height:32px;
 }
 
+#header .magnifyingglass
+{
+	position:absolute;
+	padding-left:7px;
+	padding-top:8px;
+	cursor:pointer;
+}
+
+#header .magnifyingglass #magnifyimage
+{
+	background-color:#fff;
+	background-repeat:no-repeat;
+}
+
 #header .help
 {
 	position:absolute;
@@ -518,7 +532,7 @@ form {
 }
 
 #header #query{
-	background: #fff url(../image/system/search.png) no-repeat 6px 50%;
+	/*background: #fff url(../image/system/search.png) no-repeat 6px 50%;*/
 	margin-top:1px;
 	
 	height:30px;

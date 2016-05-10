@@ -16768,6 +16768,7 @@ GSI.Searcher = L.Class.extend( {
 				likeApple : true
 			} );
 		$( this.formSelector ).submit( L.bind( this.onSubmit, this ) );
+		$( '#magnifyimage' ).click( L.bind( this.onSubmit, this ) );
 		L.setOptions(this, options);
 	},
 
