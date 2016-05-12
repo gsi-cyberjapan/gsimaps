@@ -1331,6 +1331,10 @@ $(function (){
 					newItem.iconUrl   = ( item.icon ? item.icon : '' );
 					newItem.toggleall = ( item.toggleall ? item.toggleall : false );
 
+                    if(item.src && item.src != ""){
+                        item.layersUrl = item.src;
+                    }
+
                     if(item.layersUrl && item.layersUrl != ""){
                         if(!newItem.entries){
                             o.fSaveMsg = true;
