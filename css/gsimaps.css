@@ -254,7 +254,10 @@ input[type=checkbox].normalcheck + label {
      
     cursor: pointer;
 }
- 
+input[type=search]{
+	-webkit-appearance: textfield;
+}
+
 @media (min-width: 1px) {
     input[type=radio].normalcheck,
     input[type=checkbox].normalcheck {
