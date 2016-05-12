@@ -5056,6 +5056,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		this.contentFrame.scrollTop( 0 );
 		this.listContainer.empty();
 
+		if ( this.options.currentPath )
+		{
+            this._initializeList_CurrentPath( this.options.currentPath );
+		}
+        else{
+            this._initializeListProc();
+        }
+
 		if ( this.current && this.current.toggleall )
 		{
 			this._showAllButton.show();
@@ -5066,14 +5074,6 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			this._showAllButton.hide();
 			this._hideAllButton.hide();
 		}
-
-		if ( this.options.currentPath )
-		{
-            this._initializeList_CurrentPath( this.options.currentPath );
-		}
-        else{
-            this._initializeListProc();
-        }
 	},
 	_initializeList : function( list, liRefresh )
 	{
@@ -5219,6 +5219,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             this.cocoTileLayer.setVisible( true );
             fInit = false;
         }
+
+        this._initializeList_ID_Mode = "";
 
         if(fInit){
             this._initializeListProc();
