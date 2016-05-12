@@ -97,6 +97,34 @@
                       "entries": [
                          {
                            "type": "Layer",
+                           "id": "20160414kumamoto_0429dol1",
+                           "title": "熊本断層地区A正射画像（4/29撮影）",
+                           "iconUrl": "",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 10,
+                           "maxZoom": 18,
+                           "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+                         },
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0429dol2",
+                           "title": "熊本断層地区B正射画像（4/29撮影）",
+                           "iconUrl": "",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 10,
+                           "maxZoom": 18,
+                           "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+                         },
+                         {
+                           "type": "Layer",
                            "id": "20160414kumamoto_0420dol01",
                            "title": "西原2地区正射画像（4/20撮影）",
                            "iconUrl": "",
@@ -425,6 +453,36 @@
                        "iconUrl": "",
                        "toggleall": false,
                        "entries": [
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0429suichokul1",
+                           "title": "熊本断層地区A垂直写真（4/29撮影）",
+                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0429suichokul1/{z}/{x}/{y}.geojson",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 2,
+                           "maxZoom": 18,
+                           "maxNativeZoom": 2,
+                           "html": ""
+                         },
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0429suichokul2",
+                           "title": "熊本断層地区B垂直写真（4/29撮影）",
+                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0429suichokul2/{z}/{x}/{y}.geojson",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 2,
+                           "maxZoom": 18,
+                           "maxNativeZoom": 2,
+                           "html": ""
+                         },
                          {
                            "type": "Layer",
                            "id": "20160414kumamoto_0420suichokul01",
