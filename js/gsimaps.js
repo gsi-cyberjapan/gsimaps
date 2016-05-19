@@ -8235,7 +8235,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 		var _location = ( GSI.ClientMode .location ? GSI.ClientMode .location : location );
 		if ( !this._htmlTemplate || this._htmlTemplate == '' )
 		{
-            var url = _location.pathname;
+            var url = _location.pathname.replace(/index.html/i, "");
             if(!_location.pathname.lastIndexOf("/") ==  _location.pathname.length -1){
                 url += "/";
             }
