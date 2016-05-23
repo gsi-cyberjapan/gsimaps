@@ -81,7 +81,7 @@ CONFIG.VISIBLELAYERTYPE  = false;
 CONFIG.USEIE10GRAYSCALE = false;
 CONFIG.USEIE11GRAYSCALE = true;
 
-// CORS強制(CONFIG.SERVERAPI.GETJSONPを使用するかどうか)
+// CORS強制(ブラウザ処理はtrue、CONFIG.SERVERAPI.GETJSONPはfalse)
 CONFIG.FORCECORS = true;
 
 // 検索結果クリック時のズームレベル
@@ -289,8 +289,8 @@ CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{
 CONFIG.SERVERAPI = {};
 CONFIG.SERVERAPI.HOSTNAME = 'cyberjapandata2.gsi.go.jp';
 CONFIG.SERVERAPI.BASE = 'http://cyberjapandata2.gsi.go.jp/';
-CONFIG.SERVERAPI.KML2JSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php';
-CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + 'site/mapuse4/kml2jsonp.php';
+CONFIG.SERVERAPI.KML2JSONP = CONFIG.SERVERAPI.BASE  + '';
+CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + '';
 
 // アクセスカウンター
 CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://mcounter.gsi.go.jp/CounterJson.php?id=001';
