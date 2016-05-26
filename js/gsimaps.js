@@ -18790,11 +18790,14 @@ GSI.GeoJSON = L.Class.extend( {
 			var iconSize = feature.properties[ "_iconSize" ];
 			var iconAnchor = feature.properties[ "_iconAnchor" ];
 			var className = feature.properties[ "_className" ];
+			var scale = iconSize[0] / CONFIG.SAKUZU.SYMBOL.ICONSIZE[0];
+					
 			var iconOptions = {};
 			if ( iconUrl ) iconOptions.iconUrl = iconUrl;
 			if ( iconSize ) iconOptions.iconSize = iconSize;
 			if ( iconAnchor ) iconOptions.iconAnchor = iconAnchor;
 			if ( className ) iconOptions.className = className;
+			if ( scale ) iconOptions._iconScale = scale;
 			marker = L.marker( latlng, { icon : L.icon(iconOptions) });
 		}
 
