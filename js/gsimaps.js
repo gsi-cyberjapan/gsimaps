@@ -23,11 +23,11 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
-	 './layers_txt/layers_20160414kumamoto.txt?160426'
+	 './layers_txt/layers_20160414kumamoto.txt'
 	,'./layers_txt/layers1.txt'
-	,'./layers_txt/layers2.txt?160426'
+	,'./layers_txt/layers2.txt'
 	,'./layers_txt/layers3.txt'
-	,'./layers_txt/layers4.txt?160426'
+	,'./layers_txt/layers4.txt'
 	,'./layers_txt/layers5.txt'
     ,'./layers_txt/layers_experimental.txt'
 ];
