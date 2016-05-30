@@ -26,12 +26,15 @@
           "id": "regmos",
           "title": "REGMOS",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
-          "url": "http://cyberjapandata.gsi.go.jp/overlay/regmos.kml",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/regmos/{z}/{x}/{y}.geojson",
           "subdomains": "",
           "attribution": "",
-          "cocotile": false,
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
           "legendUrl": "",
-          "html": "＜REGMOS（GNSS火山変動リモート観測装置）＞<br>活動的な火山における詳細な地殻変動を捉えるために、REGMOSを設置しています<br><br>詳しい情報：<a href=\"http://www.gsi.go.jp/kidou/regmos.html\">REGMOSの紹介</a>"
+          "html": "<div class=\"gsi_layerinfo_title\">REGMOS（GNSS火山変動リモート観測装置）</div>活動的な火山における詳細な地殻変動を捉えるために、REGMOSを設置しています。<br>詳しい情報：<a href=\"http://www.gsi.go.jp/kidou/regmos.html\">REGMOSの紹介</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
