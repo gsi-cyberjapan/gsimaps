@@ -14330,7 +14330,10 @@ GSI.SakuzuListItem = L.Class.extend( {
 				|| this._editingType == GSI.SakuzuListItem.MULTICIRCLE  )
 			{
 				if ( !style.fillColor ) style.fillColor = style.color;
-				if ( !style.fillOpacity ) style.fillOpacity = style.opacity;
+				if (( style.fillOpacity === null ) || ( style.fillOpacity === undefined ) || ( style.fillOpacity === "" ))
+				{
+					style.fillOpacity = style.opacity;
+				}
 			}
 		}
 		return style;
