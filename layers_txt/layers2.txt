@@ -2317,11 +2317,13 @@
               "id": "fgd_dem5a_area",
               "title": "5mメッシュDEM（航空レーザー測量）",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5a_area/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5a_area/{z}/{x}/{y}.geojson",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
-              "legendUrl": "",
+              "minZoom": 2,
+              "maxZoom": 14,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（航空レーザー測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した5mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
             },
             {
@@ -2329,11 +2331,13 @@
               "id": "fgd_dem5b_area",
               "title": "5mメッシュDEM（写真測量）",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5b_area/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5b_area/{z}/{x}/{y}.geojson",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
-              "legendUrl": "",
+              "minZoom": 2,
+              "maxZoom": 14,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
             },
             {
@@ -2368,6 +2372,18 @@
                   "iconUrl": "",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201604",
+                      "title": "4月更新",
+                      "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/jin201604/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
                     {
                       "type": "Layer",
                       "id": "jin201603",
@@ -2412,6 +2428,18 @@
                   "iconUrl": "",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201604",
+                      "title": "4月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/men201604/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
                     {
                       "type": "Layer",
                       "id": "men201603",
@@ -3292,7 +3320,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "基盤地図情報",
+              "title": "基盤地図情報基本項目",
               "iconUrl": "",
               "toggleall": false,
               "entries": [
@@ -3413,6 +3441,52 @@
                       "cocotile": true,
                       "minZoom": 4,
                       "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
+                   }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "基盤地図情報数値標高モデル",
+              "iconUrl": "",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年5月更新",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2016_05",
+                      "title": "5ｍメッシュDEM(航空レーザー測量）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5a_update_2016_05/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2016_05",
+                      "title": "5ｍメッシュDEM(写真測量）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_dem5b_update_2016_05/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2,
                       "legendUrl": "",
                       "html": ""
                     }
