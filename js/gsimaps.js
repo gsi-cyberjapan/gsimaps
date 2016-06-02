@@ -23,13 +23,13 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
-	 './layers_txt/layers_20160414kumamoto.txt'
-	,'./layers_txt/layers1.txt'
-	,'./layers_txt/layers2.txt'
-	,'./layers_txt/layers3.txt'
-	,'./layers_txt/layers4.txt'
-	,'./layers_txt/layers5.txt'
-    ,'./layers_txt/layers_experimental.txt'
+	'./layers_txt/layers_20160414kumamoto.txt',
+	'./layers_txt/layers1.txt',
+	'./layers_txt/layers2.txt',
+	'./layers_txt/layers3.txt',
+	'./layers_txt/layers4.txt',
+	'./layers_txt/layers5.txt',
+	'./layers_txt/layers_experimental.txt'
 ];
 
 //キャッシュ（Layers.txt）
@@ -310,7 +310,7 @@ CONFIG.SERVERAPI.MGRSXY = "";
  ************************************************************************/
 CONFIG.MAPMENU = {
 	title : '情報'
-};﻿
+};
 
 /************************************************************************
  設定：メニュー：機能
@@ -443,7 +443,7 @@ CONFIG.FUNCMENU = {
 			href : 'gsiglobe'//'http://maps.gsi.go.jp/globe/index_globe.html'
 		}
 	]
-};﻿
+};
 
 /************************************************************************
  設定：グリッド（ズームレベル対応）
@@ -487,7 +487,7 @@ CONFIG.UTMGRID = {
 		{ zoom : 18, grid : 100 },
 		{ zoom : 99, grid : 100 }
 	]
-};﻿
+};
 
 /************************************************************************
  設定：文言
@@ -568,7 +568,7 @@ GSI.TEXT.SHARE.DIALOG_TEMPLATELOADERROR = '大変申し訳ありません。し�
 
 GSI.TEXT.SHARE.DIALOG_DOWNLOADBTN = '上記のHTMLを保存';
 GSI.TEXT.SHARE.DIALOG_COPYBTN = 'クリップボードにコピー';
-GSI.TEXT.SHARE.DIALOG_NOCOPYMSG = 'URLをコピーしてご利用下さい';﻿
+GSI.TEXT.SHARE.DIALOG_NOCOPYMSG = 'URLをコピーしてご利用下さい';
 
 /************************************************************************
  設定：旧地理院地図より
@@ -2496,7 +2496,7 @@ GSI.MUNI_ARRAY["47361"] = '47,沖縄県,47361,久米島町,くめじまちょう
 GSI.MUNI_ARRAY["47362"] = '47,沖縄県,47362,八重瀬町,やえせちょう,127.7425,26.12166667';
 GSI.MUNI_ARRAY["47375"] = '47,沖縄県,47375,多良間村,たらまそん,124.7016667,24.66944444';
 GSI.MUNI_ARRAY["47381"] = '47,沖縄県,47381,竹富町,たけとみちょう,124.1544444,24.33972222';
-GSI.MUNI_ARRAY["47382"] = '47,沖縄県,47382,与那国町,よなぐにちょう,123.0047222,24.46805556';﻿
+GSI.MUNI_ARRAY["47382"] = '47,沖縄県,47382,与那国町,よなぐにちょう,123.0047222,24.46805556';
 
 /************************************************************************
  設定：作図
@@ -2549,7 +2549,7 @@ CONFIG.SAKUZU = {
 		INIT_ICON_SCALE : 1
 	}
 };
-﻿
+
 
 /************************************************************************
  jQuery
@@ -2627,7 +2627,7 @@ if ( window.ActiveXObject !== undefined && !window.XDomainRequest )
 			return new window.XMLHttpRequest();
 		} catch( e ) {}
 	};
-}﻿
+}
 
 /************************************************************************
  Proj4js
@@ -2638,7 +2638,7 @@ Proj4js.defs["EPSG:3099"] = "+proj=utm +zone=53 +ellps=GRS80 +towgs84=0,0,0,0,0,
 Proj4js.defs["EPSG:3100"] = "+proj=utm +zone=54 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";		    //UTM Zone54
 Proj4js.defs["EPSG:3101"] = "+proj=utm +zone=55 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";		    //UTM Zone55
 Proj4js.defs["SR-ORG:1235"] = "+proj=utm +zone=56 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";	    //UTM Zone56
-Proj4js.defs['EPSG:4301'] = "+proj=longlat +ellps=bessel +towgs84=-146.336,506.832,680.254,0,0,0,0 +no_defs";	//日本測地系（経緯度座標）﻿
+Proj4js.defs['EPSG:4301'] = "+proj=longlat +ellps=bessel +towgs84=-146.336,506.832,680.254,0,0,0,0 +no_defs";	//日本測地系（経緯度座標）
 
 /************************************************************************
  GSI.Draw
@@ -2917,7 +2917,7 @@ GSI.Draw.FreehandPolyline = L.Draw.SimpleShape.extend({
 		var plyline = new L.Polyline(this._shape.getLatLngs(), this.options.shapeOptions);
 		L.Draw.SimpleShape.prototype._fireCreatedEvent.call(this, plyline);
 	}
-} );﻿
+} );
 
 /************************************************************************
  GSI.Links
@@ -2987,7 +2987,7 @@ GSI.Links.getURL = function( id, center, z, bounds){
 		return id;
 	}
 };
-﻿
+
 
 /************************************************************************
  GSI.showTopMassage
@@ -2995,7 +2995,7 @@ GSI.Links.getURL = function( id, center, z, bounds){
 GSI.showTopMassage = function(){
     var message = ( CONFIG.TOPMESSAGE && CONFIG.TOPMESSAGE.DETAILS ? CONFIG.TOPMESSAGE.DETAILS : '現在情報はありません' );
 	GSI.Modal.Message.show( message, { className: "gsi_modal_topmessage", width:500, closeBtnVisible :true } );
-};﻿
+};
 
 /************************************************************************
  GSI.Utils
@@ -3356,7 +3356,7 @@ GSI.Utils.Cookie = L.Class.extend( {
 		this.set(key, '', $.extend({}, options, { expires: -1 }));
 		return !this.get(key);
 	}
-} );﻿
+} );
 
 /************************************************************************
  GSI.UTM
@@ -4265,7 +4265,7 @@ GSI.UTM.Grid = L.Class.extend( {
 			this.refresh();
 		}
 	}
-} );﻿
+} );
 
 GSI.CenterCross = L.Class.extend( {
 
@@ -4333,7 +4333,7 @@ GSI.CenterCross = L.Class.extend( {
 		return this.options.visible;
 	}
 } );
-﻿
+
 
 /************************************************************************
  L.Class
@@ -4709,7 +4709,7 @@ GSI.COCOTileLayer = L.Class.extend({
         , 100 );
 
     }
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -4865,7 +4865,7 @@ GSI.Dialog = L.Class.extend( {
 	{
 		GSI.Dialog._dialogManager.activate( this );
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -5769,7 +5769,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		this._initializeList( this.current ? this.current.entries : this.tree, true );
 		this._toolTipViewCounter = 0;
 	}
-});﻿
+});
 
 /************************************************************************
  L.Class
@@ -5945,7 +5945,7 @@ GSI.HelpDialog = GSI.Dialog.extend( {
 
 		return this.frame;
 	}
-});﻿
+});
 
 
 /************************************************************************
@@ -6274,9 +6274,9 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 
 		return this.frame;
 	}
-});﻿
+});
 
-﻿
+
 
 /************************************************************************
  L.Class
@@ -7744,7 +7744,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 
 		}, this ) );
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -8118,7 +8118,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 			}
 		}
 	}
-});﻿
+});
 
 /************************************************************************
  L.Class
@@ -8749,7 +8749,7 @@ GSI.ShareDialog.MODE = {
 	LINK : "link",
 	BUILTIN : "builtin",
 	FILE : "file"
-};﻿
+};
 
 /************************************************************************
  L.Class
@@ -9542,7 +9542,7 @@ GSI.OpacitySlider = L.Class.extend( {
 	getOpacity : function() {
 		return this.opacity;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -9737,7 +9737,7 @@ GSI.DialogManager = L.Class.extend( {
 			this.adjust( d,windowSize );
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -9771,9 +9771,9 @@ GSI.Edit.Marker = L.Class.extend( {
 		if ( !this.marker ) return;
 		this.marker.dragging.disable();
 	}
-} );﻿
+} );
 
-﻿/************************************************************************
+/************************************************************************
  L.Class
  - GSI.Footer
  ************************************************************************/
@@ -10179,9 +10179,9 @@ GSI.Footer = L.Class.extend( {
         this.vDemAltTypeN++;
         this.execRefreshAlt();
     }
-} );﻿
+} );
 
-﻿
+
 
 /************************************************************************
  L.Class
@@ -10226,9 +10226,9 @@ GSI.GeoLocation = L.Class.extend( {
 	}
 } );
 
-GSI.GeoLocation.can = ( navigator.geolocation && typeof navigator.geolocation.getCurrentPosition == 'function' ? true : false );﻿
+GSI.GeoLocation.can = ( navigator.geolocation && typeof navigator.geolocation.getCurrentPosition == 'function' ? true : false );
 
-﻿/************************************************************************
+/************************************************************************
  L.Class
  - GSI.HashOptions
  ************************************************************************/
@@ -10485,7 +10485,7 @@ GSI.HashOptions = L.Class.extend( {
 
         }
     }
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -10633,7 +10633,7 @@ GSI.Header = L.Class.extend( {
 			this.currentImageUrl = imageUrl;
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -10804,7 +10804,7 @@ GSI.IconSelector = L.Class.extend( {
 		this.hide();
 	}
 } );
-﻿
+
 
 /************************************************************************
  L.Class
@@ -10974,7 +10974,7 @@ GSI.JihokuLine = L.Class.extend( {
 	{
 		return this.options.visible;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -11213,7 +11213,7 @@ GSI.LatLngGrid = L.Class.extend( {
 	{
 		return this._visible;
 	}
-});﻿
+});
 
 /************************************************************************
  L.Class
@@ -11252,7 +11252,7 @@ GSI.LayerOpacitySetter = L.Class.extend({
 			layer.eachLayer( L.bind( this._setLayerOpacity, this) );
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -11658,9 +11658,9 @@ GSI.LayersJSON = L.Class.extend( {
 		this.reader.readAsText("./layer.txt");
 	},
 	_onLoadErrorExit : function() {}
-} );﻿
+} );
 
-﻿
+
 
 /************************************************************************
  L.Class
@@ -12090,7 +12090,7 @@ GSI.MapLayerList = L.Class.extend( {
 	{
 		return this.list;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -12436,7 +12436,7 @@ GSI.MapMenu = L.Class.extend( {
 			$(this.topSelector + ' ul').hide();
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -12615,7 +12615,7 @@ GSI.MapMouse = L.Class.extend( {
 		}
 		this.rightClickTime	=	null;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -12657,7 +12657,7 @@ GSI.MiniMap = L.Class.extend( {
 			this.miniMap = null;
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -12832,7 +12832,7 @@ GSI.Modal.BaseClass = L.Class.extend( {
 		GSI.Modal.blind = null;
 	}
 
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -12879,7 +12879,7 @@ GSI.Modal.Dialog = GSI.Modal.BaseClass.extend( {
 		this.hide();
 		this.fire( 'negative' );
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -13005,7 +13005,7 @@ GSI.Modal.FileSelectDialog = GSI.Modal.Dialog.extend( {
 		this.hide();
 		this.fire( 'negative' );
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -13040,7 +13040,7 @@ GSI.Modal.LoadingMessage.show = function(message,options) {
 
 GSI.Modal.LoadingMessage.hide = function() {
 	if ( GSI.Modal.LoadingMessage.instance )  GSI.Modal.LoadingMessage.instance.hide();
-};﻿
+};
 
 /************************************************************************
  L.Class
@@ -13073,7 +13073,7 @@ GSI.Modal.Message.show = function(message,options) {
 
 GSI.Modal.Message.hide = function() {
 	if ( GSI.Modal.Message.instance )  GSI.Modal.Message.instance.hide();
-};﻿
+};
 
 /************************************************************************
  L.Class
@@ -13188,7 +13188,7 @@ GSI.OnOffSwitch = L.Class.extend( {
 		
 		return this.input.is( ':checked' );
 	}
-});﻿
+});
 
 /************************************************************************
  L.Class
@@ -13506,7 +13506,7 @@ GSI.PagePrinter = L.Class.extend( {
 	{
 		window.print();
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -13765,7 +13765,7 @@ GSI.PageStateManager = L.Class.extend( {
 			return "";
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -14195,7 +14195,7 @@ GSI.QueryParams = L.Class.extend( {
 		}
 		return result;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -16747,7 +16747,7 @@ GSI.SakuzuList = L.Class.extend( {
 
         return result;
     }
-} );﻿
+} );
 
 /************************************************************************
  L.Class
@@ -17007,7 +17007,7 @@ GSI.Searcher = L.Class.extend( {
 			return null;
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Control
@@ -17160,7 +17160,7 @@ GSI.Control.AccessCounter = L.Control.extend({
 		}
 	}
 } );
-﻿
+
 
 /************************************************************************
  L.Control
@@ -17221,7 +17221,7 @@ GSI.Control.Button = L.Control.extend({
     return newButton;
 
   }
-});﻿
+});
 
 /************************************************************************
  L.Control
@@ -17249,7 +17249,7 @@ GSI.Control.Spacer = L.Control.extend({
 	},
 	onRemove: function (map) {
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.DivIcon
@@ -17271,7 +17271,7 @@ GSI.DivIcon = L.DivIcon.extend( {
 
 GSI.divIcon = function (options) {
 	return new GSI.DivIcon(options);
-};﻿
+};
 
 /************************************************************************
  L.Edit.Circle
@@ -17466,7 +17466,7 @@ GSI.Edit.Poly = L.Edit.Poly.extend( {
 		this._poly.redraw();
 		this.updateMarkers2();
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.FeatureGroup
@@ -18155,7 +18155,7 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 			opacitySetter.setOpacity( this.geojsonLayer, opacity  );
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.LayerGroup
@@ -18178,7 +18178,7 @@ L.LayerGroup.prototype._setMarkerZIndex = function( layer, offset )
 			this._setMarkerZIndex( layers[i], offset );
 		}
 	}
-};﻿
+};
 
 /************************************************************************
  L.Map
@@ -18214,7 +18214,7 @@ GSI.Map = L.Map.extend( {
 
 GSI.map = function (id, options) {
 	return new GSI.Map(id, options);
-};﻿
+};
 
 /************************************************************************
  L.Marker
@@ -18306,7 +18306,7 @@ GSI.CenterCrossMarker = L.Marker.extend( {
 		}
 		this._shadow = null;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.Path
@@ -18326,7 +18326,7 @@ L.Path.prototype.onRemove = function(map)
 		'viewreset': this.projectLatlngs,
 		'moveend': this._updatePath
 	}, this);
-};﻿
+};
 
 /************************************************************************
  L.Popup
@@ -18374,7 +18374,7 @@ L.Popup.prototype._updateLayout = function () {
 	}
 
 	this._containerWidth = this._container.offsetWidth;
-};﻿
+};
 
 /************************************************************************
  L.TileLayer
@@ -18582,7 +18582,7 @@ GSI.BaseLayer = L.TileLayer.extend({
 			this.redraw();
 		}
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.TileLayer
@@ -18621,7 +18621,7 @@ GSI.GSITMSLayer = L.TileLayer.extend({
 		var url = L.Util.template(this._url, {s: this._getSubdomain(tilePoint)});
 		return url + z + dir + "/" + x + y + this._ext;
 	}
-} );﻿
+} );
 
 /************************************************************************
  L.TileLayer
@@ -18680,9 +18680,9 @@ GSI.TileLayer = L.TileLayer.extend( {
 			this._removeOtherTiles(tileBounds);
 		}
 	}
-} );﻿
+} );
 
-﻿/************************************************************************
+/************************************************************************
  L.Class
  - GSI.GeoJSON
  ************************************************************************/
@@ -19075,9 +19075,9 @@ GSI.GeoJSON = L.Class.extend( {
 			this.layer.removeLayer( layer );
 		}
 	}
-} );﻿
+} );
 
-﻿/************************************************************************
+/************************************************************************
   postMessage
  ************************************************************************/
 window.addEventListener('message', function(event){
