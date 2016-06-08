@@ -98,29 +98,29 @@
           "entries": [
             {
               "type": "Layer",
-              "id": "ccm2",
-              "title": "平成元年以降",
-              "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
-              "subdomains": "",
-              "attribution": "",
-              "cocotile": true,
-              "maxZoom": 16,
-              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/CCM2_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/index2.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
               "id": "ccm1",
-              "title": "昭和63年以前",
+              "title": "平成元年以降",
               "iconUrl": "",
               "url": "http://cyberjapandata.gsi.go.jp/xyz/ccm1/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
               "maxZoom": 16,
+              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/CCM2_hanrei.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "ccm2",
+              "title": "昭和63年以前",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "maxZoom": 16,
               "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/CCM1_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/index2.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
