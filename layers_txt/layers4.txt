@@ -97,6 +97,34 @@
                       "entries": [
                          {
                            "type": "Layer",
+                           "id": "20160414kumamoto_0531dol",
+                           "title": "南阿蘇河陽地区正射画像（5/31撮影）",
+                           "iconUrl": "",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 10,
+                           "maxZoom": 18,
+                           "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+                         },
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0530dol",
+                           "title": "益城・西原地区正射画像（5/30撮影）",
+                           "iconUrl": "",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 10,
+                           "maxZoom": 18,
+                           "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+                         },
+                         {
+                           "type": "Layer",
                            "id": "20160414kumamoto_0429dol1",
                            "title": "熊本断層地区A正射画像（4/29撮影）",
                            "iconUrl": "",
@@ -453,6 +481,36 @@
                        "iconUrl": "",
                        "toggleall": false,
                        "entries": [
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0531suichokul",
+                           "title": "南阿蘇河陽地区垂直写真（5/31撮影）",
+                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0531suichokul/{z}/{x}/{y}.geojson",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 2,
+                           "maxZoom": 18,
+                           "maxNativeZoom": 2,
+                           "html": ""
+                         },
+                         {
+                           "type": "Layer",
+                           "id": "20160414kumamoto_0530suichokul",
+                           "title": "益城・西原地区垂直写真（5/30撮影）",
+                           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                           "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_0530suichokul/{z}/{x}/{y}.geojson",
+                           "subdomains": "",
+                           "attribution": "",
+                           "errorTileUrl": "",
+                           "cocotile": false,
+                           "minZoom": 2,
+                           "maxZoom": 18,
+                           "maxNativeZoom": 2,
+                           "html": ""
+                         },
                          {
                            "type": "Layer",
                            "id": "20160414kumamoto_0429suichokul1",
@@ -1046,6 +1104,21 @@
                   "maxZoom": 16,
                   "maxNativeZoom": 14,
                   "html": "ズーム14～16で表示します。<br>数値地図25000（土地条件）及び脆弱地形データより作成したデータです。"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20160414kumamoto_addinfo",
+                  "title": "平成25年の火山研究所西側付近の<br>建物・道路",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_addinfo/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "errorTileUrl": "",
+                  "cocotile": false,
+                  "minZoom": 14,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": ""
                 }
               ]
             },
