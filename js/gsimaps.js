@@ -7906,8 +7906,9 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 	makeItem : function( item, index, subTitle )
 	{
 		var a = $( '<a>' ).attr( { 'href' : 'javascript:void(0);' } );
-
-		var div = $( '<div>' ).html( item.properties.title ).addClass('title');
+		var title = item.properties.title;
+		
+		var div = $( '<div>' ).html( title ).addClass('title');
 		a.append( div );
 
 		if ( subTitle && subTitle != '' )
@@ -7942,11 +7943,11 @@ GSI.SearchResultDialog = GSI.Dialog.extend( {
 				}
 				item._isActive = false;
 				item._marker = L.marker([latitude,longitude],{
-						title : item.value,
+						title : title,
 						icon : this._resultIcon
 					});
 				item._marker.bindPopup(
-					item.value + "<br>" +
+					title + "<br>" +
 					( subTitle && subTitle != '' ? subTitle + '<br>' : '' ) +
 					latitude + "," + longitude,
 					{
