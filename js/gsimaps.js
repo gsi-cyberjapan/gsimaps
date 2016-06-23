@@ -306,6 +306,17 @@ CONFIG.SERVERAPI.MGRSXY = "";
 
 
 /************************************************************************
+ 設定：メニュー：ヘルプ
+ ************************************************************************/
+CONFIG.HELPMENU = [
+ {'Moji':'ヘルプ',                 'Img':'./image/help/help_icon.png',    'Link':'http://maps.gsi.go.jp/help/'},
+ {'Moji':'Twitter',                'Img':'./image/help/twitter.png',      'Link':'https://twitter.com/gsi_cyberjapan'},
+ {'Moji':'GitHub',                 'Img':'./image/help/github.png',       'Link':'https://github.com/gsi-cyberjapan'},
+ {'Moji':'パートナーネットワーク', 'Img':'./image/help/partner_icon.png', 'Link':'http://maps.gsi.go.jp/pn/'},
+ {'Moji':'国土地理院トップ',       'Img':'./image/help/gsi_top.png',      'Link':'http://www.gsi.go.jp/'}
+];
+
+/************************************************************************
  設定：メニュー：情報
  ************************************************************************/
 CONFIG.MAPMENU = {
@@ -5808,141 +5819,38 @@ GSI.HelpDialog = GSI.Dialog.extend( {
 			'style': 'padding:5px'
 		} );
 		
-		// リンク
-		this.LinkFrame = $( '<div>' ).attr( {
-			'style': 'height:20px; vertical-align:middle'
-		} );
-		this.LinkFrameHr = $( '<hr>' );
-		this.Link = $( '<a>' ).attr( {
-			'href'	: 'http://maps.gsi.go.jp/help/',
-			'target': '_blank',
-			'style'	: 'color:#000; text-decoration:none'
-		} );
-		
-		this.LinkImg = $( '<img>' ).attr( {
-			'src'	: './image/help/help_icon.png',
-			'border': '0',
-			'width'	: '20px',
-			'height': '20px',
-			'style'	: 'vertical-align:middle',
-			'alt'	: 'ヘルプ'
-		} );
-		
-		this.LinkMoji = $( '<span>' ).attr( {
-			'style': 'line-height:20px; position:relative; top:2px; left:5px'
-		} ).html( 'ヘルプ' );
-		this.LinkFrame.append( this.LinkImg).append( this.LinkMoji );
-		this.Link.append( this.LinkFrame );
-		this.frame.append( this.Link ).append( this.LinkFrameHr );
-
-		// リンク
-		this.LinkFrame = $( '<div>' ).attr( {
-			'style': 'height:20px; vertical-align:middle'
-		} );
-		this.LinkFrameHr = $( '<hr>' );
-		this.Link = $( '<a>' ).attr( {
-			'href'	: 'https://twitter.com/gsi_cyberjapan',
-			'target': '_blank',
-			'style'	: 'color:#000; text-decoration:none'
-		} );
-		
-		this.LinkImg = $( '<img>' ).attr( {
-			'src' 	:'./image/help/twitter.png',
-			'border': 0,
-			'width'	: '20px',
-			'height': '20px',
-			'style' : 'vertical-align:middle',
-			'alt'	: 'Twitter'
-		} );
-		
-		this.LinkMoji = $( '<span>' ).attr( {
-			'style': 'line-height:20px; position:relative; top:2px; left:5px'
-		} ).html( 'Twitter' );
-		this.LinkFrame.append( this.LinkImg ).append( this.LinkMoji );
-		this.Link.append( this.LinkFrame );
-		this.frame.append( this.Link ).append( this.LinkFrameHr );
-
-		// リンク
-		this.LinkFrame = $( '<div>' ).attr( {
-			'style': 'height:20px; vertical-align:middle;'
-		} );
-		this.LinkFrameHr = $( '<hr>' );
-		this.Link = $( '<a>' ).attr( {
-			'href'	: 'https://github.com/gsi-cyberjapan',
-			'target': '_blank',
-			'style'	: 'color:#000; text-decoration:none'
-		} );
-		
-		this.LinkImg = $( '<img>' ).attr( {
-			'src'	: './image/help/github.png',
-			'border': 0,
-			'width'	: '20px',
-			'height': '20px',
-			'style' : 'vertical-align:middle',
-			'alt'	: 'GitHub'
-		} );
-		
-		this.LinkMoji = $( '<span>' ).attr( {
-			'style': 'line-height:20px; position:relative; top:2px; left:5px'
-		} ).html( 'GitHub' );
-		this.LinkFrame.append( this.LinkImg ).append( this.LinkMoji );
-		this.Link.append( this.LinkFrame );
-		this.frame.append( this.Link ).append( this.LinkFrameHr );
-
-		// リンク
-		this.LinkFrame = $( '<div>' ).attr( {
-			'style': 'height:20px; vertical-align:middle;'
-		} );
-		this.LinkFrameHr = $( '<hr>' );
-		this.Link = $( '<a>' ).attr( {
-			'href'	: 'http://maps.gsi.go.jp/pn/',
-			'target': '_blank',
-			'style'	: 'color:#000; text-decoration:none'
-		} );
-		
-		this.LinkImg = $( '<img>' ).attr( {
-			'src'	: './image/help/partner_icon.png',
-			'border': 0,
-			'width'	: '20px',
-			'height': '20px',
-			'style'	: 'vertical-align:middle',
-			'alt'	: '地理院地図パートナーネットワーク'
-		} );
-		
-		this.LinkMoji = $( '<span>' ).attr( {
-			'style': 'line-height:20px; position:relative; top:2px; left:5px'
-		} ).html( 'パートナーネットワーク' );
-		this.LinkFrame.append( this.LinkImg ).append( this.LinkMoji );
-		this.Link.append( this.LinkFrame );
-		this.frame.append( this.Link ).append( this.LinkFrameHr );
-
-		// リンク
-		this.LinkFrame = $( '<div>' ).attr( {
-			'style': 'height:20px; vertical-align:middle'
-		} );
-		this.LinkFrameHr = $( '<hr>' );
-		this.Link = $( '<a>' ).attr( {
-			'href'	: 'http://www.gsi.go.jp/',
-			'target': '_blank',
-			'style'	: 'color:#000; text-decoration:none'
-		} );
-		
-		this.LinkImg = $( '<img>' ).attr( {
-			'src'	: './image/help/gsi_top.png',
-			'border': 0,
-			'width'	: '20px',
-			'height': '20px',
-			'style'	: 'vertical-align:middle',
-			'alt'	: '国土地理院トップ'
-		} );
-		
-		this.LinkMoji = $( '<span>' ).attr( {
-			'style' : 'line-height:20px; position:relative; top:2px; left:5px'
-		} ).html( '国土地理院トップ' );
-		this.LinkFrame.append( this.LinkImg ).append( this.LinkMoji );
-		this.Link.append( this.LinkFrame );
-		this.frame.append( this.Link );
-
+		for (var i = 0; i < CONFIG.HELPMENU.length; i++) {
+			// リンク
+			this.LinkFrame = $( '<div>' ).attr( {
+				'style': 'height:20px; vertical-align:middle'
+			} );
+			this.LinkFrameHr = $( '<hr>' );
+			this.Link = $( '<a>' ).attr( {
+				'href'	: CONFIG.HELPMENU[i].Link,
+				'target': '_blank',
+				'style'	: 'color:#000; text-decoration:none'
+			} );
+			
+			this.LinkImg = $( '<img>' ).attr( {
+				'src'	: CONFIG.HELPMENU[i].Img,
+				'border': '0',
+				'width'	: '20px',
+				'height': '20px',
+				'style'	: 'vertical-align:middle',
+				'alt'	: CONFIG.HELPMENU[i].Moji
+			} );
+			
+			this.LinkMoji = $( '<span>' ).attr( {
+				'style': 'line-height:20px; position:relative; top:2px; left:5px'
+			} ).html( CONFIG.HELPMENU[i].Moji );
+			this.LinkFrame.append( this.LinkImg).append( this.LinkMoji );
+			this.Link.append( this.LinkFrame );
+			if(i < CONFIG.HELPMENU.length -1 ){
+				this.frame.append( this.Link ).append( this.LinkFrameHr );
+			}else{
+				this.frame.append( this.Link );
+			}
+		}
 		return this.frame;
 	}
 });
