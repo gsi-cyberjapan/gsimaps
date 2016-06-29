@@ -704,7 +704,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_09",
+                  "id": "ndvi_250m_2012_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_09/{z}/{x}/{y}.png",
@@ -718,7 +718,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_08",
+                  "id": "ndvi_250m_2012_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_08/{z}/{x}/{y}.png",
@@ -732,7 +732,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_07",
+                  "id": "ndvi_250m_2012_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_07/{z}/{x}/{y}.png",
@@ -746,7 +746,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_06",
+                  "id": "ndvi_250m_2012_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_06/{z}/{x}/{y}.png",
@@ -760,7 +760,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_05",
+                  "id": "ndvi_250m_2012_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_05/{z}/{x}/{y}.png",
@@ -774,7 +774,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_04",
+                  "id": "ndvi_250m_2012_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_04/{z}/{x}/{y}.png",
@@ -788,7 +788,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_03",
+                  "id": "ndvi_250m_2012_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_03/{z}/{x}/{y}.png",
@@ -802,7 +802,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_02",
+                  "id": "ndvi_250m_2012_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_02/{z}/{x}/{y}.png",
@@ -816,7 +816,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2012_01",
+                  "id": "ndvi_250m_2012_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2012_01/{z}/{x}/{y}.png",
@@ -880,7 +880,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_09",
+                  "id": "ndvi_250m_2011_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_09/{z}/{x}/{y}.png",
@@ -894,7 +894,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_08",
+                  "id": "ndvi_250m_2011_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_08/{z}/{x}/{y}.png",
@@ -908,7 +908,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_07",
+                  "id": "ndvi_250m_2011_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_07/{z}/{x}/{y}.png",
@@ -922,7 +922,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_06",
+                  "id": "ndvi_250m_2011_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_06/{z}/{x}/{y}.png",
@@ -936,7 +936,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_05",
+                  "id": "ndvi_250m_2011_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_05/{z}/{x}/{y}.png",
@@ -950,7 +950,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_04",
+                  "id": "ndvi_250m_2011_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_04/{z}/{x}/{y}.png",
@@ -964,7 +964,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_03",
+                  "id": "ndvi_250m_2011_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_03/{z}/{x}/{y}.png",
@@ -978,7 +978,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_02",
+                  "id": "ndvi_250m_2011_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_02/{z}/{x}/{y}.png",
@@ -992,7 +992,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2011_01",
+                  "id": "ndvi_250m_2011_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2011_01/{z}/{x}/{y}.png",
@@ -1056,7 +1056,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_09",
+                  "id": "ndvi_250m_2010_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_09/{z}/{x}/{y}.png",
@@ -1070,7 +1070,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_08",
+                  "id": "ndvi_250m_2010_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_08/{z}/{x}/{y}.png",
@@ -1084,7 +1084,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_07",
+                  "id": "ndvi_250m_2010_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_07/{z}/{x}/{y}.png",
@@ -1098,7 +1098,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_06",
+                  "id": "ndvi_250m_2010_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_06/{z}/{x}/{y}.png",
@@ -1112,7 +1112,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_05",
+                  "id": "ndvi_250m_2010_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_05/{z}/{x}/{y}.png",
@@ -1126,7 +1126,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_04",
+                  "id": "ndvi_250m_2010_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_04/{z}/{x}/{y}.png",
@@ -1140,7 +1140,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_03",
+                  "id": "ndvi_250m_2010_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_03/{z}/{x}/{y}.png",
@@ -1154,7 +1154,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_02",
+                  "id": "ndvi_250m_2010_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_02/{z}/{x}/{y}.png",
@@ -1168,7 +1168,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2010_01",
+                  "id": "ndvi_250m_2010_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2010_01/{z}/{x}/{y}.png",
@@ -1232,7 +1232,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_09",
+                  "id": "ndvi_250m_2009_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_09/{z}/{x}/{y}.png",
@@ -1246,7 +1246,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_08",
+                  "id": "ndvi_250m_2009_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_08/{z}/{x}/{y}.png",
@@ -1260,7 +1260,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_07",
+                  "id": "ndvi_250m_2009_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_07/{z}/{x}/{y}.png",
@@ -1274,7 +1274,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_06",
+                  "id": "ndvi_250m_2009_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_06/{z}/{x}/{y}.png",
@@ -1288,7 +1288,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_05",
+                  "id": "ndvi_250m_2009_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_05/{z}/{x}/{y}.png",
@@ -1302,7 +1302,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_04",
+                  "id": "ndvi_250m_2009_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_04/{z}/{x}/{y}.png",
@@ -1316,7 +1316,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_03",
+                  "id": "ndvi_250m_2009_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_03/{z}/{x}/{y}.png",
@@ -1330,7 +1330,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_02",
+                  "id": "ndvi_250m_2009_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_02/{z}/{x}/{y}.png",
@@ -1344,7 +1344,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2009_01",
+                  "id": "ndvi_250m_2009_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2009_01/{z}/{x}/{y}.png",
@@ -1408,7 +1408,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_09",
+                  "id": "ndvi_250m_2008_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_09/{z}/{x}/{y}.png",
@@ -1422,7 +1422,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_08",
+                  "id": "ndvi_250m_2008_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_08/{z}/{x}/{y}.png",
@@ -1436,7 +1436,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_07",
+                  "id": "ndvi_250m_2008_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_07/{z}/{x}/{y}.png",
@@ -1450,7 +1450,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_06",
+                  "id": "ndvi_250m_2008_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_06/{z}/{x}/{y}.png",
@@ -1464,7 +1464,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_05",
+                  "id": "ndvi_250m_2008_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_05/{z}/{x}/{y}.png",
@@ -1478,7 +1478,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_04",
+                  "id": "ndvi_250m_2008_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_04/{z}/{x}/{y}.png",
@@ -1492,7 +1492,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_03",
+                  "id": "ndvi_250m_2008_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_03/{z}/{x}/{y}.png",
@@ -1506,7 +1506,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_02",
+                  "id": "ndvi_250m_2008_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_02/{z}/{x}/{y}.png",
@@ -1520,7 +1520,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2008_01",
+                  "id": "ndvi_250m_2008_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2008_01/{z}/{x}/{y}.png",
@@ -1584,7 +1584,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_09",
+                  "id": "ndvi_250m_2007_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_09/{z}/{x}/{y}.png",
@@ -1598,7 +1598,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_08",
+                  "id": "ndvi_250m_2007_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_08/{z}/{x}/{y}.png",
@@ -1612,7 +1612,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_07",
+                  "id": "ndvi_250m_2007_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_07/{z}/{x}/{y}.png",
@@ -1626,7 +1626,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_06",
+                  "id": "ndvi_250m_2007_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_06/{z}/{x}/{y}.png",
@@ -1640,7 +1640,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_05",
+                  "id": "ndvi_250m_2007_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_05/{z}/{x}/{y}.png",
@@ -1654,7 +1654,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_04",
+                  "id": "ndvi_250m_2007_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_04/{z}/{x}/{y}.png",
@@ -1668,7 +1668,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_03",
+                  "id": "ndvi_250m_2007_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_03/{z}/{x}/{y}.png",
@@ -1682,7 +1682,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_02",
+                  "id": "ndvi_250m_2007_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_02/{z}/{x}/{y}.png",
@@ -1696,7 +1696,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2007_01",
+                  "id": "ndvi_250m_2007_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2007_01/{z}/{x}/{y}.png",
@@ -1760,7 +1760,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_09",
+                  "id": "ndvi_250m_2006_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_09/{z}/{x}/{y}.png",
@@ -1774,7 +1774,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_08",
+                  "id": "ndvi_250m_2006_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_08/{z}/{x}/{y}.png",
@@ -1788,7 +1788,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_07",
+                  "id": "ndvi_250m_2006_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_07/{z}/{x}/{y}.png",
@@ -1802,7 +1802,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_06",
+                  "id": "ndvi_250m_2006_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_06/{z}/{x}/{y}.png",
@@ -1816,7 +1816,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_05",
+                  "id": "ndvi_250m_2006_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_05/{z}/{x}/{y}.png",
@@ -1830,7 +1830,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_04",
+                  "id": "ndvi_250m_2006_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_04/{z}/{x}/{y}.png",
@@ -1844,7 +1844,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_03",
+                  "id": "ndvi_250m_2006_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_03/{z}/{x}/{y}.png",
@@ -1858,7 +1858,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_02",
+                  "id": "ndvi_250m_2006_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_02/{z}/{x}/{y}.png",
@@ -1872,7 +1872,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2006_01",
+                  "id": "ndvi_250m_2006_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2006_01/{z}/{x}/{y}.png",
@@ -1936,7 +1936,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_09",
+                  "id": "ndvi_250m_2005_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_09/{z}/{x}/{y}.png",
@@ -1950,7 +1950,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_08",
+                  "id": "ndvi_250m_2005_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_08/{z}/{x}/{y}.png",
@@ -1964,7 +1964,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_07",
+                  "id": "ndvi_250m_2005_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_07/{z}/{x}/{y}.png",
@@ -1978,7 +1978,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_06",
+                  "id": "ndvi_250m_2005_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_06/{z}/{x}/{y}.png",
@@ -1992,7 +1992,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_05",
+                  "id": "ndvi_250m_2005_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_05/{z}/{x}/{y}.png",
@@ -2006,7 +2006,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_04",
+                  "id": "ndvi_250m_2005_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_04/{z}/{x}/{y}.png",
@@ -2020,7 +2020,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_03",
+                  "id": "ndvi_250m_2005_03",
                   "title": "3月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_03/{z}/{x}/{y}.png",
@@ -2034,7 +2034,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_02",
+                  "id": "ndvi_250m_2005_02",
                   "title": "2月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_02/{z}/{x}/{y}.png",
@@ -2048,7 +2048,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2005_01",
+                  "id": "ndvi_250m_2005_01",
                   "title": "1月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2005_01/{z}/{x}/{y}.png",
@@ -2112,7 +2112,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_09",
+                  "id": "ndvi_250m_2004_09",
                   "title": "9月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_09/{z}/{x}/{y}.png",
@@ -2126,7 +2126,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_08",
+                  "id": "ndvi_250m_2004_08",
                   "title": "8月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_08/{z}/{x}/{y}.png",
@@ -2140,7 +2140,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_07",
+                  "id": "ndvi_250m_2004_07",
                   "title": "7月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_07/{z}/{x}/{y}.png",
@@ -2154,7 +2154,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_06",
+                  "id": "ndvi_250m_2004_06",
                   "title": "6月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_06/{z}/{x}/{y}.png",
@@ -2168,7 +2168,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_05",
+                  "id": "ndvi_250m_2004_05",
                   "title": "5月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_05/{z}/{x}/{y}.png",
@@ -2182,7 +2182,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "NDVI250m_2004_04",
+                  "id": "ndvi_250m_2004_04",
                   "title": "4月",
                   "iconUrl": "",
                   "url": "http://cyberjapandata.gsi.go.jp/xyz/ndvi_250m_2004_04/{z}/{x}/{y}.png",
