@@ -6453,6 +6453,20 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "20160623lsi",
+                      "title": "2016/6/23",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160623lsi/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 13,
+                      "maxZoom": 16,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2016.6.23)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                    },
+                    {
+                      "type": "Layer",
                       "id": "20151214lsi",
                       "title": "2015/12/14",
                       "iconUrl": "",
