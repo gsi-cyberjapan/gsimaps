@@ -81,9 +81,6 @@ CONFIG.VISIBLELAYERTYPE  = false;
 CONFIG.USEIE10GRAYSCALE = false;
 CONFIG.USEIE11GRAYSCALE = true;
 
-// CORS強制(ブラウザ処理はtrue、CONFIG.SERVERAPI.GETJSONPはfalse)
-CONFIG.FORCECORS = true;
-
 // 検索結果クリック時のズームレベル
 CONFIG.SEARCHRESULTCLICKZOOM = 15;
 
@@ -287,22 +284,12 @@ CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{
 
 // サーバーサイドAPI
 CONFIG.SERVERAPI = {};
-CONFIG.SERVERAPI.HOSTNAME = 'cyberjapandata2.gsi.go.jp';
-CONFIG.SERVERAPI.BASE = 'http://cyberjapandata2.gsi.go.jp/';
-CONFIG.SERVERAPI.KML2JSONP = CONFIG.SERVERAPI.BASE  + '';
-CONFIG.SERVERAPI.GETJSONP = CONFIG.SERVERAPI.BASE  + '';
 
 // アクセスカウンター
 CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://mcounter.gsi.go.jp/CounterJson.php?id=001';
 
-CONFIG.SERVERAPI.INTERFACE = "http://cyberjapandata2.gsi.go.jp/GsiJsLibrary/interface.php";
-
 CONFIG.SERVERAPI.GETADDR = "http://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress";
-CONFIG.SERVERAPI.GETELEVATION = "";
 CONFIG.SERVERAPI.CHIMEI_SEARCH="http://msearch.gsi.go.jp/address-search/AddressSearch";
-
-// UTMポイント変換の処理 指定なしでJavascriptで変換
-CONFIG.SERVERAPI.MGRSXY = "";
 
 
 /************************************************************************
@@ -16719,22 +16706,15 @@ GSI.Searcher = L.Class.extend( {
 			}
 			else if ( qType == this.QUERY_UTMPOINT )
 			{
-				if ( CONFIG.SERVERAPI.MGRSXY  && CONFIG.SERVERAPI.MGRSXY  != '' )
+				var latLng = GSI.UTM.Utils.point2LatLng( query );
+
+				if ( latLng )
 				{
-					this._utmPoint( query );
+					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
 				}
 				else
 				{
-					var latLng = GSI.UTM.Utils.point2LatLng( query );
-
-					if ( latLng )
-					{
-						this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
-					}
-					else
-					{
-						alert( 'UTMポイントを正しく入力して下さい' );
-					}
+					alert( 'UTMポイントを正しく入力して下さい' );
 				}
 			}
 		}
@@ -16742,42 +16722,6 @@ GSI.Searcher = L.Class.extend( {
 		this.query = query;
 
 		return false;
-	},
-	_utmPoint : function(center)
-	{
-		var utmValue;
-        var mark;
-        var newMgrs;
-        var pointX;
-        var pointY;
-        mark = center.substring(2,3);
-        newMgrs = center.substring(3,5);
-        pointX = center.substring(5,9);
-        pointY = center.substring(9,13);
-        $.ajax({
-          url: CONFIG.SERVERAPI.MGRSXY + '?mgrs=' + newMgrs + '&mark=' + mark,
-          type: 'GET',
-          dataType: 'jsonp',
-          success: L.bind( function(data) {
-            var topX = data.topX;
-            var topY = data.topY;
-            var utmZone = data.utmZone;
-            pointX = (pointX * 10) + (topX * 100000);
-            pointY = (pointY * 10) + (topY * 100000);
-            var wsPoint = new Proj4js.Point(pointX,pointY ); //new OpenLayers.Geometry.Point(pointX, pointY);
-            var defName = GSI.UTM.Utils.getUTMDefName( utmZone );
-			if ( defName == '' )
-			{
-				alert( 'UTMポイントを正しく入力して下さい' );
-				return;
-			}
-
-			var projUTM = new Proj4js.Proj(defName);
-			var wsTrmPoint = Proj4js.transform(projUTM, GSI.UTM.Utils.PROJ_WORLD,wsPoint);
-
-			this.map.setView( [wsTrmPoint.y, wsTrmPoint.x], CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
-          }, this )
-        });
 	},
 	clearSearch : function()
 	{
@@ -16956,32 +16900,13 @@ GSI.Control.AccessCounter = L.Control.extend({
 	{
 		if( this.options.url == '' ) return;
 
-		if ( !CONFIG.FORCECORS && !GSI.Utils.isLocalUrl(this.options.url) )
-		{
-			var parameter = {
-				url : this.options.url,
-				lf: 0
-			};
-
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType: "jsonp",
-				data: parameter,
-				url: CONFIG.SERVERAPI.GETJSONP,
-				success:  L.Util.bind( this._onLoad, this ),
-				error:  L.Util.bind( this._onLoadError, this )
-			});
-		}
-		else
-		{
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType:"text",
-				url : this.options.url,
-				success:  L.Util.bind( this._onLoad, this ),
-				error:  L.Util.bind( this._onLoadError, this )
-			});
-		}
+		this.ajax = $.ajax({
+			type: "GET",
+			dataType:"text",
+			url : this.options.url,
+			success:  L.Util.bind( this._onLoad, this ),
+			error:  L.Util.bind( this._onLoadError, this )
+		});
 	},
 	_onLoad : function(result)
 	{
@@ -17410,37 +17335,16 @@ GSI.KML = L.FeatureGroup.extend({
 			url = url.replace( '{bottom}', bounds.getSouth() );
 		}
 		
-		if ( !CONFIG.FORCECORS && !GSI.Utils.isLocalUrl(url) )
-		{
-			var parameter = {
-				url : url,
-				lf: 0
-			};
+		$.support.cors = true;
+		this.ajax = $.ajax({
+			type: "GET",
+			dataType: "xml",
+			url: url,
+			success:  L.Util.bind( this._onKMLLoad, this ),
+			error:  L.Util.bind( this._onKMLLoadError, this ),
+			async : async
 
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType: "jsonp",
-				data: parameter,
-				url: CONFIG.SERVERAPI.GETJSONP,
-				success:  L.Util.bind( this._onKMLLoad, this ),
-				error:  L.Util.bind( this._onKMLLoadError, this ),
-				async : async
-
-			});
-		}
-		else
-		{
-			$.support.cors = true;
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType: "xml",
-				url: url,
-				success:  L.Util.bind( this._onKMLLoad, this ),
-				error:  L.Util.bind( this._onKMLLoadError, this ),
-				async : async
-
-			});
-		}
+		});
 	},
 	onAdd: function (map) {
 		this._map = map;
@@ -18025,34 +17929,15 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 	_loadStyle : function(url)
 	{
 		var styleUrl = url.replace(/\/\{z\}.*/,"") + '/style.js';
-		if ( !CONFIG.FORCECORS && !GSI.Utils.isLocalUrl(url) )
-		{
-			var parameter = {
-				url : styleUrl,
-				lf: 0
-			};
 
-			this._styleAjax = $.ajax({
-				type: "GET",
-				dataType: "jsonp",
-				data: parameter,
-				url: CONFIG.SERVERAPI.GETJSONP,
-				success:  L.Util.bind( this._onStyleLoad, this ),
-				async : true
+		this._styleAjax = $.ajax({
+			type: "GET",
+			dataType: "text",
+			url: styleUrl,
+			success:  L.Util.bind( this._onStyleLoad, this ),
+			async : true
 
-			});
-		}
-		else
-		{
-			this._styleAjax = $.ajax({
-				type: "GET",
-				dataType: "text",
-				url: styleUrl,
-				success:  L.Util.bind( this._onStyleLoad, this ),
-				async : true
-
-			});
-		}
+		});
 	},
 	setOpacity : function( opacity )
 	{
@@ -18880,32 +18765,13 @@ GSI.GeoJSON = L.Class.extend( {
 	_loadFromFile : function() {},
 	_load : function()
 	{
-		if ( !CONFIG.FORCECORS && !GSI.Utils.isLocalUrl(this.url) )// this.url.match(/(http|https):\/\/.+/) )
-		{
-			var parameter = {
-				url : this.url,
-				lf: 0
-			};
-
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType: "jsonp",
-				data: parameter,
-				url: CONFIG.SERVERAPI.GETJSONP,
-				success:  L.Util.bind( this.onLoad, this ),
-				error : L.Util.bind( this.onLoadError, this )
-			});
-		}
-		else
-		{
-			this.ajax = $.ajax({
-				type: "GET",
-				dataType:"text",
-				url : this.url,
-				success:  L.Util.bind( this.onLoad, this ),
-				error : L.Util.bind( this.onLoadError, this )
-			});
-		}
+		this.ajax = $.ajax({
+			type: "GET",
+			dataType:"text",
+			url : this.url,
+			success:  L.Util.bind( this.onLoad, this ),
+			error : L.Util.bind( this.onLoadError, this )
+		});
 	},
 	_onZoomChange : function()
 	{
