@@ -3356,6 +3356,15 @@ GSI.Utils.Cookie = L.Class.extend( {
 	}
 } );
 
+GSI.Utils.sendSelectedLayer = function(id){
+    $.ajax({
+        type : "GET",
+        data : id,
+        url : "./layers_txt/anchor.txt",
+        datatype : "text",
+        cache : false,
+    });
+};
 /************************************************************************
  GSI.UTM
  ************************************************************************/
@@ -5755,10 +5764,16 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             else{
                 GSI.GLOBALS.map.addLayer(GSI.GLOBALS.baseLayer);
                 this.mapLayerList.append(item);
+			    GSI.Utils.sendSelectedLayer(this._current_id);
             }
         }
         else{
-		    if(!this.mapLayerList.exists(item)){ this.mapLayerList.append(item); }
+		    if(!this.mapLayerList.exists(item))
+		    { 
+		    	this.mapLayerList.append(item);
+    		    GSI.Utils.sendSelectedLayer(this._current_id);
+
+		    }
 		    else                               { this.mapLayerList.remove(item); }
         }
 	},
@@ -10346,6 +10361,41 @@ GSI.HashOptions = L.Class.extend( {
                 // 選択中の情報設定
                 // disp=
                 var layers = GSI.GLOBALS.queryParams.getLayers();
+                var bfind = false;
+                var vl = GSI.GLOBALS.pageStateManager.getLayersQueryString();
+                var idx = vl.indexOf( "ls=" );
+                if ( idx >= 0 )
+                {
+                	vl = vl.substring( idx + 3 ).split( "%7C" );
+                }
+                if ( layers && ( vl && vl.length > 0 ) )
+                {
+                	
+	                for( var i =0; i < layers.length; i++ )
+	                {
+	                	for( var j=0; j < vl.length; j++ )
+	                	{
+	                		if ( layers[i].id == vl[j] )
+	                		{
+	                			bfind = true;
+	                			break;
+	                		}
+	                		
+	                	}
+	                	if ( bfind == false )
+	                	{
+		                    GSI.Utils.sendSelectedLayer( layers[i].id );
+		                }
+	                	bfind = false;
+	                }
+                }
+                else if ( layers )
+                {
+                    for( i = 0; i < layers.length; i++ )
+                    {
+                        GSI.Utils.sendSelectedLayer( layers[i].id );
+                    }
+                }
                 GSI.GLOBALS.layersJSON.initialize_layers_data(layers);
                 GSI.GLOBALS.viewListDialog.Refresh(GSI.GLOBALS.layersJSON.visibleLayers);
 
@@ -18994,6 +19044,11 @@ function initialize_proc()
             }
             GSI.GLOBALS.layersJSON.initialize_layers(GSI.GLOBALS.queryParams.getLayers());
 
+			for(var i=0; i<GSI.GLOBALS.layersJSON.visibleLayers.length; i++)
+			{
+				GSI.Utils.sendSelectedLayer(GSI.GLOBALS.layersJSON.visibleLayers[i].id);
+			}
+			
 		    GSI.GLOBALS.baseLayer = new GSI.BaseLayer(CONFIG.BASETILES, GSI.GLOBALS.queryParams.getBaseMap(), GSI.GLOBALS.queryParams.getBaseMapGrayScale());
 
             initialize_proc_map();
