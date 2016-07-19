@@ -17976,6 +17976,18 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 
 		this._update();
 	},
+	_defaultLoadStyle : function()
+	{
+		var styleUrl = './js/style.js';
+
+		this._styleAjax = $.ajax({
+			type: "GET",
+			dataType: "text",
+			url: styleUrl,
+			success:  L.Util.bind( this._onStyleLoad, this ),
+			async : true
+		});
+	},
 	_loadStyle : function(url)
 	{
 		var styleUrl = url.replace(/\/\{z\}.*/,"") + '/style.js';
@@ -17985,6 +17997,7 @@ GSI.GeoJSONTileLayer = L.TileLayer.GeoJSON.extend( {
 			dataType: "text",
 			url: styleUrl,
 			success:  L.Util.bind( this._onStyleLoad, this ),
+			error :  L.Util.bind( this._defaultLoadStyle, this ),
 			async : true
 
 		});

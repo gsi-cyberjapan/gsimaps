@@ -1046,6 +1046,34 @@ function RequestLayersVector(){
                     .fail(
                         function(data, status, error){
                             vLayersData_VectorAjax.data = null;
+		                    $.ajax({
+				                  type     : "GET"
+			                    , url      : "./js/style.js"
+			                    , dataType : "text"
+			                    , cache    : true
+		                    }
+		                    )
+		                    .done(
+		                        function(data, status, jqXHR){
+		                            if(data == null){
+		                                vLayersData_VectorAjax.data = "";
+		                            }
+		                            else{
+		                                try{
+		                                    vLayersData_VectorAjax.data =  eval( "(" + data + ")" );
+		                                    RequestLayersVectorStyle(vLayersData_VectorAjax, vLayersData_VectorAjax.data);
+		                                }
+		                                catch(e){
+		                                    InitProgressMsgError("VectorStyle[" + vLayersData_VectorAjax.src + "]...[" + e + "]");
+		                                }
+		                            }
+		                        }
+		                    )
+		                    .fail(
+		                        function(data, status, error){
+		                            vLayersData_VectorAjax.data = null;
+		                        }
+		                    )
                         }
                     )
                     .always(
