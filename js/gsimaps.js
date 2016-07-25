@@ -10402,11 +10402,11 @@ GSI.HashOptions = L.Class.extend( {
                 var viewSetting = GSI.GLOBALS.queryParams.getViewSetting();
                 // 表示設定：中心十字線           vs=c[0/1]
                 GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.CENTERCROSS].obj.setVisible(viewSetting.centerCross);
-                // 表示設定：緯度経度グリッド     vs=l[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.JIHOKULINE ].obj.setVisible(viewSetting.jihokuLine );
-                // 表示設定：UTMグリッド          vs=u[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.LATLNGGRID ].obj.setVisible(viewSetting.latLngGrid    );
                 // 表示設定：磁北線               vs=j[0/1]
+                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.JIHOKULINE ].obj.setVisible(viewSetting.jihokuLine );
+                // 表示設定：緯度経度グリッド     vs=l[0/1]
+                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.LATLNGGRID ].obj.setVisible(viewSetting.latLngGrid    );
+                // 表示設定：UTMグリッド          vs=u[0/1]
                 GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.UTMGRID    ].obj.setVisible(viewSetting.utmGrid );
                 // 表示設定：コンテキストメニュー vs=f[0/1]
                 GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.FOOTER     ].obj.setVisible(viewSetting.footer     );
