@@ -1117,7 +1117,7 @@
                 },
                 {
                   "type": "LayerGroup",
-                  "title": "土砂崩壊分布図",
+                  "title": "土砂崩壊地分布図",
                   "iconUrl": "",
                   "toggleall": false,
                   "entries": [
