@@ -6127,6 +6127,20 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "20160725dol",
+                      "title": "2016/7/25（無人航空機（UAV）撮影）",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160725dol/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">正射画像-2016.7.25</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
                       "id": "20160303dol",
                       "title": "2016/3/3（無人航空機（UAV）撮影）",
                       "iconUrl": "",
