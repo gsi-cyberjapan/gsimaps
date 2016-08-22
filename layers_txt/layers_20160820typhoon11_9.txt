@@ -1,0 +1,27 @@
+{
+  "layers": [
+    {
+              "type": "LayerGroup",
+              "title": "平成28年台風第11号及び第9号",
+              "iconUrl": "",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "20160820typhoon11_9_uav",
+                  "title": "UAV動画",
+                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/189.png",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20160820typhoon11_9_uav/{z}/{x}/{y}.geojson",
+                  "subdomains": "",
+                  "attribution": "",
+                  "errorTileUrl": "",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": "<div class=\"gsi_layerinfo_title\">UAV動画</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            }
+  ]
+}
