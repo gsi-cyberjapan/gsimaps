@@ -59,11 +59,12 @@ geojsonOptions:{
         }else if(name=="写真"){
           photoFlg = true;
           // 写真のURLを取り出す
-          var photoUrl = feature.properties[name].slice(9,-24);
+          var div = document.createElement("div");
+          div.innerHTML = feature.properties[name];
+          var photoUrl = div.querySelector("a").href;
           s += "<tr><td colspan='2'>"
                + "<a href='" + photoUrl + "' target='_blank'>"
                + "<img src='" + photoUrl +"' alt='写真' width=300px>"
-               //+ "<img src='" + photoUrl +"' alt='写真' style='max-width:300px; max-height:300px;'>"
                + "</a></td></tr>"
                + "<tr><td colspan='2'>↑写真クリックで拡大表示</td></tr>";
 
