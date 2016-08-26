@@ -13282,6 +13282,9 @@ GSI.PagePrinter = L.Class.extend( {
         if(fBase){
 		    this._baseLayer = new GSI.BaseLayer(CONFIG.BASETILES, this._originalBaseLayer.getActiveId());
 
+			this._baseLayer.isGrayScale = this._originalBaseLayer.isGrayScale
+			this._baseLayer.options.opacity = this._originalBaseLayer.options.opacity;
+			
 		    this._baseLayer.setHighQuality( hq );
 		    this._baseLayer.addTo(this._map);
         }
