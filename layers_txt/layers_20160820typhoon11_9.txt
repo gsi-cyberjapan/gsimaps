@@ -8,6 +8,35 @@
       "entries": [
         {
           "type": "Layer",
+          "id": "20160820typhoon11_9_0825dol",
+          "title": "常呂川_正射画像（8/25撮影）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160820typhoon11_9_0825dol/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_title\">常呂川_正射画像（8/25撮影）</div><div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160820typhoon11_9_0825suichokul",
+          "title": "常呂川_垂直写真（8/25撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160820typhoon11_9_0825suichokul/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">常呂川_垂直写真（8/25撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
           "id": "20160820typhoon11_9_0825nanamel",
           "title": "常呂川_斜め写真（8/25撮影）",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
