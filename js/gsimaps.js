@@ -23,6 +23,7 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
+	'./layers_txt/layers_20160830typhoon10.txt',
 	'./layers_txt/layers_20160820typhoon11_9.txt',
 	'./layers_txt/layers_20160414kumamoto.txt',
 	'./layers_txt/layers1.txt',
