@@ -8,6 +8,36 @@
       "entries": [
         {
           "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel4",
+          "title": "空知川（北海道南富良野町）<br>斜め写真（8/31撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160830typhoon10_0831nanamel4/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">空知川（北海道南富良野町）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel3",
+          "title": "芽室川・美生川（北海道芽室町）<br>斜め写真（8/31撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160830typhoon10_0831nanamel3/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">芽室川・美生川（北海道芽室町）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
           "id": "20160830typhoon10_0831nanamel2",
           "title": "久慈川・長内川（岩手県久慈市）<br>斜め写真（8/31撮影）",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/183.png",
@@ -38,6 +68,36 @@
         },
         {
           "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui4",
+          "title": "空知川（北海道南富良野町）<br>推定浸水範囲（8/31 15:00時点）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160830typhoon10_0831shinsui4/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日15:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui3",
+          "title": "芽室川・美生川（北海道芽室町）<br>推定浸水範囲（8/31 16:00時点）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160830typhoon10_0831shinsui3/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日16:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
           "id": "20160830typhoon10_0831shinsui2",
           "title": "久慈川・長内川（岩手県久慈市）<br>推定浸水範囲（8/31 14:00時点）",
           "iconUrl": "",
@@ -65,6 +125,71 @@
           "maxZoom": 16,
           "maxNativeZoom": 2,
           "html": "国土地理院撮影（8月31日14:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831uav1",
+          "title": "岩手県岩泉町_UAV動画（8/31撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/189.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20160830typhoon10_0831uav1/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">岩手県岩泉町_UAV動画（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_relief_20160830",
+          "title": "色別標高図",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/attension_relief.html",
+          "html": "<div class=\"gsi_layerinfo_title\">色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "治水地形分類図",
+          "iconUrl": "",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "_lcmfc2_20160830",
+              "title": "更新版(2007～2014年)",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/lcmfc2_legend.jpg",
+              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2014年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "_lcmfc1_20160830",
+              "title": "初版(1976～1978年)",
+              "iconUrl": "",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/lcmfc1_legend.gif",
+              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
         }
       ]
     }
