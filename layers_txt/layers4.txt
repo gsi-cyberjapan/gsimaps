@@ -85,6 +85,42 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "変動補正パラメータ",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20160414kumamoto_zahyo_param",
+                      "title": "座標変換パラメータ",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_zahyo_param/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "errorTileUrl": "",
+                      "cocotile": false,
+                      "minZoom": 9,
+                      "maxZoom": 14,
+                      "html": "緑色に塗られた領域が平成28年熊本地震に伴う座標補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/sokuchikijun40036.html\">「ダウンロードページ」</a>から入手できます。"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20160414kumamoto_hyoko_param",
+                      "title": "標高補正パラメータ",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_hyoko_param/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "errorTileUrl": "",
+                      "cocotile": false,
+                      "minZoom": 10,
+                      "maxZoom": 14,
+                      "html": "茶色に塗られた領域が平成28年熊本地震に伴う標高補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/patchjgd_h/download/index.html\">「ダウンロードページ」</a>から入手できます。"
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "写真",
                   "iconUrl": "",
                   "toggleall": false,
