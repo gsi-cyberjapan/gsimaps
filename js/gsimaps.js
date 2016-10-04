@@ -16727,6 +16727,8 @@ GSI.Searcher = L.Class.extend( {
 	QUERY_LATLNG2 : 3,
 	QUERY_UTMPOINT : 5,
 	QUERY_QUERY : 4,
+	QUERY_EXCHANGE : 7,
+	QUERY_LATLNGNE : 8,
 
 	options : {
 	},
@@ -16787,6 +16789,42 @@ GSI.Searcher = L.Class.extend( {
 				else
 				{
 					alert( 'UTMポイントを正しく入力して下さい' );
+				}
+			}
+			else if ( qType == this.QUERY_EXCHANGE )
+			{
+				var latLng = this.parseLatLngText3( query );
+				
+				if (!latLng)
+				{
+					alert( '緯度経度を正しく入力して下さい\n');
+				}
+				else if ( latLng[0] < 0 || latLng[0] > 90 || latLng[1] < 0 || latLng[1] > 180 )
+				{
+					alert( '緯度経度を正しく入力して下さい\n' +
+						'緯度:' + latLng[0] + ' 経度:' + latLng[1] );
+				}
+				else
+				{
+					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+				}
+			}
+			else if ( qType == this.QUERY_LATLNGNE )
+			{
+				var latLng = this.parseLatLngText4( query );
+
+				if (!latLng)
+				{
+					alert( '緯度経度を正しく入力して下さい\n');
+				}
+				else if ( latLng[0] < 0 || latLng[0] > 90 || latLng[1] < 0 || latLng[1] > 180 )
+				{
+					alert( '緯度経度を正しく入力して下さい\n' +
+						'緯度:' + latLng[0] + ' 経度:' + latLng[1] );
+				}
+				else
+				{
+					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
 				}
 			}
 		}
@@ -16864,7 +16902,24 @@ GSI.Searcher = L.Class.extend( {
 		}
 		else
 		{
-			return this.QUERY_QUERY;
+			if ( ( q.match(/^(?:N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)/) )
+				||
+				( q.match(/^(?:E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)/) ) )
+			{
+				//NE表記
+				return this.QUERY_LATLNGNE;
+			}
+			else if ( ( q.match(/^(?:N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) )
+			 		|| 
+			 		( q.match(/^(?:E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) ) )
+			{
+				//°′″表記
+				return this.QUERY_EXCHANGE;
+			}
+			else
+			{
+				return this.QUERY_QUERY;
+			}
 		}
 	},
 	parseLatLngText2 : function( s )
@@ -16908,7 +16963,94 @@ GSI.Searcher = L.Class.extend( {
 			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
 		}
 
+		matchArr = s.match(/^([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒[\s]+([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒$/);
+
+		if ( matchArr && matchArr.length > 0 )
+		{
+			var lat = parseInt( matchArr[1] ) + ( parseFloat( matchArr[2] ) / 60.0 ) + ( parseFloat( matchArr[3] ) / 3600.0 );
+			var lng = parseInt( matchArr[4] ) + ( parseFloat( matchArr[5] ) / 60.0 ) + ( parseFloat( matchArr[6] ) / 3600.0 );
+			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+		}
+
+
 		return null;
+	},
+	parseLatLngText3 : function( s )
+	{
+		s = $.trim(s);
+		s = s.replace( ',', ' ' );
+		
+		var matchArr =  s.match(/^(N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
+		var revflg = false;
+		
+		if (!matchArr)
+		{
+			matchArr =  s.match(/^(E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
+			revflg = true;
+		}
+		var lath,latm,lats,lonh,lonm,lons;
+		if (matchArr && matchArr.length == 9)
+		{
+			lath = parseInt(matchArr[2]);
+			lonh = parseInt(matchArr[6]);
+			
+			latm = matchArr[3] ? parseFloat(matchArr[3]) / 60 : 0;
+			lonm = matchArr[7] ? parseFloat(matchArr[7]) / 60 : 0;
+
+			lats = matchArr[4] ? parseFloat(matchArr[4]) / 3600 : 0;
+			lons = matchArr[8] ? parseFloat(matchArr[8]) / 3600 : 0;
+			
+			var la = lath + latm + lats;
+			var lo = lonh + lonm + lons;
+			
+			if ((revflg) || (!matchArr[1] && !matchArr[5] && ( la > lo )))
+			{
+				var t = la;
+				la = lo;
+				lo = t;
+			}
+			return [la, lo];
+		}
+		return null;
+		
+	},
+	parseLatLngText4 : function( s )
+	{
+		s = $.trim(s);
+
+		var matchArr = s.match(/^(N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)/)
+		var revflg = false;
+		
+		if (!matchArr)
+		{
+			matchArr = s.match(/^(E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)/)
+			revflg = true;
+		}
+
+		var lat, lon;
+		try{
+		
+			if (matchArr && matchArr.length == 5)
+			{
+				lat = parseFloat( matchArr[2] );
+				lon = parseFloat( matchArr[4] );
+				
+				if ( (revflg) || (!matchArr[1] && !matchArr[3] && lat > lon) )
+				{
+					var t = lat;
+					lat = lon;
+					lon = t;
+				}
+				return [lat, lon];
+			}
+			
+			return null;
+		}
+		catch( e )
+		{
+			return null;
+		}
+		
 	},
 	parseLatLngText : function( s )
 	{
