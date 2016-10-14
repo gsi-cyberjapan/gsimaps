@@ -478,7 +478,7 @@
             {
               "type": "Layer",
               "id": "20160830typhoon10_0907handokuhani",
-              "title": "穴沢・鼠入地区土砂崩壊・堆積地等判読範囲（9/7撮影時）",
+              "title": "安家・穴沢・鼠入地区土砂崩壊・堆積地等判読範囲（9/7撮影時）",
               "iconUrl": "",
               "url": "http://maps.gsi.go.jp/xyz/20160830typhoon10_0907handokuhani/{z}/{x}/{y}.geojson",
               "subdomains": "",
@@ -488,7 +488,7 @@
               "minZoom": 2,
               "maxZoom": 16,
               "maxNativeZoom": 2,
-              "html": "<div class=\"gsi_layerinfo_kaisetu\">「穴沢・鼠入地区土砂崩壊・堆積地等分布図（9/7撮影時）」の判読範囲を示しています。</div>"
+              "html": "<div class=\"gsi_layerinfo_kaisetu\">「安家・穴沢・鼠入地区土砂崩壊・堆積地等分布図（9/7撮影時）」の判読範囲を示しています。</div>"
             },
             {
               "type": "Layer",
