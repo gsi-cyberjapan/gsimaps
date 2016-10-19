@@ -63,20 +63,6 @@
           "entries": [
             {
               "type": "Layer",
-              "id": "lcm25k_2012",
-              "title": "数値地図25000(土地条件)",
-              "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
-              "subdomains": "",
-              "attribution": "",
-              "cocotile": true,
-              "minZoom": 4,
-              "maxZoom": 16,
-              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
               "id": "lcm25k",
               "title": "初期整備版",
               "iconUrl": "",
