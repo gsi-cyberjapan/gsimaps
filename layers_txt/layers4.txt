@@ -1280,21 +1280,6 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "_experimental_landformclassification20160414",
-                  "title": "地形分類",
-                  "iconUrl": "",
-                  "url": "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "errorTileUrl": "",
-                  "cocotile": false,
-                  "minZoom": 2,
-                  "maxZoom": 16,
-                  "maxNativeZoom": 14,
-                  "html": "ズーム14～16で表示します。<br>数値地図25000（土地条件）及び脆弱地形データより作成したデータです。"
-                },
-                {
-                  "type": "Layer",
                   "id": "20160414kumamoto_addinfo",
                   "title": "平成25年の火山研究所西側付近の<br>建物・道路",
                   "iconUrl": "",
