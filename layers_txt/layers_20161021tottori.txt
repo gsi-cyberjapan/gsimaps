@@ -1,27 +1,64 @@
 {
   "layers": [
     {
-              "type": "LayerGroup",
-              "title": "平成28年鳥取県中部地震",
-              "iconUrl": "",
-              "toggleall": false,
-              "entries": [
-                {
-                  "type": "Layer",
-                  "id": "20161021tottori_1022uav",
-                  "title": "UAV動画(10/22撮影)",
-                  "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/189.png",
-                  "url": "http://cyberjapandata.gsi.go.jp/xyz/20161021tottori_1022uav/{z}/{x}/{y}.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "errorTileUrl": "",
-                  "cocotile": false,
-                  "minZoom": 2,
-                  "maxZoom": 18,
-                  "maxNativeZoom": 2,
-                  "html": ""
-                }
-              ]
+      "type": "LayerGroup",
+      "title": "平成28年鳥取県中部の地震",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20161021tottori_epicenter",
+          "title": "震央",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20161021tottori_epicenter/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "20161021tottori_1022suichokul",
+          "title": "垂直写真（10/22撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20161021tottori_1022suichokul/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "20161021tottori_1022uav",
+          "title": "UAV動画（10/22撮影）",
+          "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/189.png",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20161021tottori_1022uav/{z}/{x}/{y}.geojson",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+        },
+        {
+          "type": "LayerGroup",
+          "title": "SAR解析結果",
+          "iconUrl": "",
+          "toggleall": false,
+          "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori.txt"
+        }
+      ]
     }
   ]
 }
