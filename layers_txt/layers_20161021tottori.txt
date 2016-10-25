@@ -23,6 +23,20 @@
         },
         {
           "type": "Layer",
+          "id": "20161021tottori_1022dol",
+          "title": "正射画像（10/22撮影）",
+          "iconUrl": "",
+          "url": "http://cyberjapandata.gsi.go.jp/xyz/20161021tottori_1022dol/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
           "id": "20161021tottori_1022suichokul",
           "title": "垂直写真（10/22撮影）",
           "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
