@@ -33,6 +33,10 @@ var CONFIG = {};
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
 CONFIG.layerBaseDefaultID = "std";
 CONFIG.layers             = [
+	'./layers_txt/layers_20161021tottori.txt',
+	'./layers_txt/layers_20160830typhoon10.txt',
+	'./layers_txt/layers_20160820typhoon11_9.txt',
+	'./layers_txt/layers_20160414kumamoto.txt',
 	 './layers_txt/layers1.txt'
 	,'./layers_txt/layers2.txt'
 	,'./layers_txt/layers3.txt'
@@ -42,9 +46,9 @@ CONFIG.layers             = [
 ];
 /*-----------------------------------------------------------------------------------------------*/
 var vDemType                            = "TXT"; // TXT, PNG
-var vDemUrl                             = "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
+var vDemUrl                             = "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
 //  vDemUrl                             = "./[@]/tile.gsi/{z}/{x}/{y}.png";
-var vDemUrl_Default                     = "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
+var vDemUrl_Default                     = "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
 var vDemUrl_maxZoom                     =14;
 /*-----------------------------------------------------------------------------------------------*/
 var _Load_StyleZoom                     = false;
