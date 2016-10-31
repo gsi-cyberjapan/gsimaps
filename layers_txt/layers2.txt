@@ -3438,6 +3438,20 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2016_10",
+                      "title": "10月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2016_10/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2016_07",
                       "title": "7月更新",
                       "iconUrl": "",
