@@ -161,8 +161,7 @@
           "attribution": "",
           "cocotile": true,
           "minZoom": 2,
-          "maxZoom": 18,
-          "maxNativeZoom": 12,
+          "maxZoom": 15,
           "legendUrl": "",
           "html": "<div class=\"gsi_layerinfo_title\">全国ランドサットモザイク画像</div><br>国土地理院と東海大学との共同研究による<br><br>データソース：<br>Landsat8画像（GSI,TSIC,GEO Grid/AIST）<br>海底地形（GEBCO）"
         },
