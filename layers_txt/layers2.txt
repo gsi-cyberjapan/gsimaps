@@ -2360,6 +2360,18 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "jin201610",
+                      "title": "10月更新",
+                      "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/jin201610/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "jin201609",
                       "title": "9月更新",
                       "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/101.png",
@@ -2474,6 +2486,18 @@
                   "iconUrl": "",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201610",
+                      "title": "10月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/men201610/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
                     {
                       "type": "Layer",
                       "id": "men201609",
