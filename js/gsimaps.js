@@ -285,6 +285,16 @@ CONFIG.DEM[0] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5
 CONFIG.DEM[1] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( 写真測量 ) " };
 CONFIG.DEM[2] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "10m"              };
 
+//for IE9
+var vs = window.navigator.appVersion.toLowerCase();
+var ua = window.navigator.userAgent.toLowerCase();
+if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
+{
+  CONFIG.DEM[0] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( レーザー ) " };
+  CONFIG.DEM[1] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( 写真測量 ) " };
+  CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "10m"              };
+}
+
 // サーバーサイドAPI
 CONFIG.SERVERAPI = {};
 
@@ -294,6 +304,14 @@ CONFIG.SERVERAPI.ACCESSCOUNTER = 'https://mcounter.gsi.go.jp/CounterJson.php?id=
 CONFIG.SERVERAPI.GETADDR = "https://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress";
 CONFIG.SERVERAPI.CHIMEI_SEARCH="https://msearch.gsi.go.jp/address-search/AddressSearch";
 
+//for IE9
+if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
+{
+  CONFIG.SERVERAPI.ACCESSCOUNTER = 'http://mcounter.gsi.go.jp/CounterJson.php?id=001';
+
+  CONFIG.SERVERAPI.GETADDR = "http://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress";
+  CONFIG.SERVERAPI.CHIMEI_SEARCH="http://msearch.gsi.go.jp/address-search/AddressSearch";
+}
 
 /************************************************************************
  設定：メニュー：ヘルプ
