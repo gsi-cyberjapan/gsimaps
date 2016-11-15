@@ -318,6 +318,7 @@ if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
  ************************************************************************/
 CONFIG.HELPMENU = [
  {'Moji':'ヘルプ',                 'Img':'./image/help/help_icon.png',    'Link':'http://maps.gsi.go.jp/help/'},
+ {'Moji':'データのご利用について', 'Img':'./image/help/use_icon.png',    'Link':'http://maps.gsi.go.jp/help/use.html'},
  {'Moji':'Twitter',                'Img':'./image/help/twitter.png',      'Link':'https://twitter.com/gsi_cyberjapan'},
  {'Moji':'GitHub',                 'Img':'./image/help/github.png',       'Link':'https://github.com/gsi-cyberjapan'},
  {'Moji':'パートナーネットワーク', 'Img':'./image/help/partner_icon.png', 'Link':'http://maps.gsi.go.jp/pn/'},
@@ -5857,8 +5858,8 @@ GSI.HelpDialog = GSI.Dialog.extend( {
 			this.LinkImg = $( '<img>' ).attr( {
 				'src'	: CONFIG.HELPMENU[i].Img,
 				'border': '0',
-				'width'	: '20px',
-				'height': '20px',
+				'width'	: '24px',
+				'height': '24px',
 				'style'	: 'vertical-align:middle',
 				'alt'	: CONFIG.HELPMENU[i].Moji
 			} );
