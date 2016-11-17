@@ -803,6 +803,11 @@ form {
 	margin-left:3em;
 }
 
+#footer span.mini_comment_elev {
+	font-size:7.5pt;
+	color: #ccc;
+}
+
 
 #footer .footer_description_btn
 {
