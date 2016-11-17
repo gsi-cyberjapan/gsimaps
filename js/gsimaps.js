@@ -281,18 +281,18 @@ CONFIG.DEM     = new Array(1);
 CONFIG.DEM[0] = { type : "PNG", url : "./[@]/tile.gsi/{z}/{x}/{y}.png"                   , z :  9, fixed : 1, src : "標高ＰＮＧ" };
 */
 CONFIG.DEM = new Array(3);
-CONFIG.DEM[0] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( レーザー ) " };
-CONFIG.DEM[1] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( 写真測量 ) " };
-CONFIG.DEM[2] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "10m"              };
+CONFIG.DEM[0] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5A" };
+CONFIG.DEM[1] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5B" };
+CONFIG.DEM[2] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "DEM10B"};
 
 //for IE9
 var vs = window.navigator.appVersion.toLowerCase();
 var ua = window.navigator.userAgent.toLowerCase();
 if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
 {
-  CONFIG.DEM[0] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( レーザー ) " };
-  CONFIG.DEM[1] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "5m ( 写真測量 ) " };
-  CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "10m"              };
+  CONFIG.DEM[0] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5A" };
+  CONFIG.DEM[1] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5B" };
+  CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "DEM10B"};
 }
 
 // サーバーサイドAPI
@@ -9928,6 +9928,7 @@ GSI.Footer = L.Class.extend( {
 		$("#address").append("---");
 		$("#elevation").empty();
 		$("#elevation").append("---");
+		$("#elevationSrc").empty();
 
 		this.refreshSize();
 		if ( this.ajaxAddress )
@@ -9976,9 +9977,11 @@ GSI.Footer = L.Class.extend( {
 	},
 	getElevationRusult : function (data, dataSrc)
 	{
-        var outPutHeight = data + "（" + this.vDemAltSRC + "）";
+		var outPutHeight = data;
+		var outPutHeightSrc = "（" + "データソース：" + this.vDemAltSRC + "）";
 
 		$( "#elevation" ).html( outPutHeight );
+		$( "#elevationSrc" ).html( outPutHeightSrc );
 		this.refreshSize();
 	},
 	execRefresh : function (lon, lat)
