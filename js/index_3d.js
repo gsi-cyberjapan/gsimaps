@@ -404,11 +404,8 @@ function InitGet(){
 
         ret["tiles"]  = ret["tile_n"] * ret["tile_n"];
 
-	    // 高さ方向の倍率計算の為、3Dモデル下辺の実距離を求める。
-	    var lng1 = GetTile2Lng(ret["lon_lt_x"]                , ret["z"]);
-	    var lng2 = GetTile2Lng(ret["lon_lt_x"] + ret["tile_n"], ret["z"]);
-	    var lat  = GetTile2Lat(ret["lat_lt_y"] + ret["tile_n"], ret["z"]);
-	    ret["distance"] = CalcLatitudinallyDistance(lng1, lng2, lat);
+	    // 高さ方向の倍率計算の為、3Dモデルの実距離を求める。
+        ret["distance"] = CalcLatitudinallyDistance(ret["lat"] , ret["z"] , ret["pxsize"] );
 
         // レイヤーチェック
         if(!(ret["ls"] && ret["ls"] != null)){
@@ -902,7 +899,7 @@ function GetTileY(z, lat){ var lat_rad = lat * Math.PI / 180; var R = 128 / Math
 function GetTileN (z, zN, x, y){ var nR = Math.pow(2, z - zN); var nX = Math.floor(x / nR); var nY = Math.floor(y / nR); return { x : nX, y : nY }; };
 function GetTile2Lng(x, z){                                          return (x/Math.pow(2,z)*360-180);                               };
 function GetTile2Lat(y, z){ var n=Math.PI-2*Math.PI*y/Math.pow(2,z); return (180/Math.PI*Math.atan(0.5*(Math.exp(n)-Math.exp(-n)))); };
-function CalcLatitudinallyDistance(lng1, lng2, lat){ R = 6378137.0; return 2*Math.PI*R * (Math.abs(lng1-lng2)/360.0) * Math.cos(lat/180.0*Math.PI); };
+function CalcLatitudinallyDistance(lat, z, pxsize){ R = 6378137.0; return 2*Math.PI* R * Math.cos(lat/180.0*Math.PI) / Math.pow(2,z) / 256 * pxsize; };
 function ConverUnit(lat, z, radius, unit_src, unit_to){
     if(unit_src == "m" || unit_src == "km"){ unit_src = "m"; }
     if(unit_to  == "m" || unit_to  == "km"){ unit_to  = "m"; }
