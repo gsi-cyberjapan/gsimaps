@@ -5047,6 +5047,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     },
 	show : function()
 	{
+        this.initializeList();
+
 		GSI.Dialog.prototype.show.call(this);
 	},
 	hide : function()
@@ -5196,11 +5198,45 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
     },
     _initializeList_VisibleLayers : function(id){
-        this._initializeList_ID_Mode    = "visible";
-        this._initializeList_ID_Mode_ID = id;
-        this._initializeList_ID(id);
+       var f = true;
+       if(!this._VisibleLayers){
+           this._VisibleLayers = new Array();
+        }
+        else{
+           for(var n = 0; n < this._VisibleLayers.length; n++){
+                if(this._VisibleLayers[n] == id){
+                    f = false;
+                    break;
+                }
+           }
+        }
+        if(f){
+            this._VisibleLayers.push(id);
+            this._initializeList_VisibleLayersReq(id);
+        }
     },
+    _initializeList_VisibleLayersReq : function(id){
+        if(!this._CurrentData_SRC || this._CurrentData_SRC.length == 0){
+            if(this._VisibleLayers.length > 0){
+                this._VisibleLayers.shift();
 
+                this.listContainer.empty();
+
+                this._initializeList_ID_Mode    = "visible";
+                this._initializeList_ID_Mode_ID = id;
+                this._initializeList_ID(id);
+            }
+        }
+
+        var that = this;
+        if(this._VisibleLayers.length != 0){
+            setTimeout(
+                function(){
+                    that._initializeList_VisibleLayersReq(that._VisibleLayers[0]);
+                }
+            , 100);
+        }
+    },
 	_initializeList_CurrentPath : function(id)
 	{
         this._initializeList_ID_Mode    = "current";
@@ -5209,6 +5245,10 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     },
 	_initializeList_ID : function(path)
 	{
+        if(!this.tree){
+            return null;
+        }
+
 		var current = null;
 		if ( !path || path == '' ) return null;
 
@@ -11320,8 +11360,10 @@ GSI.LayersJSON = L.Class.extend( {
 				hidden : layerData.hidden
 			};
 
-			this.visibleLayers.push( info );
-			this.visibleLayersHash[ layerData.id ] = info;
+            if(!(layerData.id in this.visibleLayersHash)){
+			    this.visibleLayers.push( info );
+			    this.visibleLayersHash[ layerData.id ] = info;
+            }
 		}
     },
     initialize_layers_data : function(layers)
