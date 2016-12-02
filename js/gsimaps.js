@@ -11760,6 +11760,18 @@ GSI.MapLayerList = L.Class.extend( {
 				return;
 			}
 		}
+		if (info.id=="temp_lcm25k_2012")
+		{
+			if(Confirm_FLAG == null){
+				var KARI=this;
+				jConfirm("「【修正中】数値地図25000（土地条件）」は、不具合箇所を修正する前のデータです。1回目の点検による「<a target='_blank' href='http://www.gsi.go.jp/common/000148402.pdf'>正誤表（PDF形式：440KB）</a>」や地理院地図の「【不具合箇所】数値地図25000（土地条件）」を用いて不具合箇所をご確認の上、ご利用いただけますようよろしくお願いいたします。<BR>　2回目の点検とデータの修正が完了し次第、修正済みのデータを公開いたします。", '留意事項', function(r) {
+					if(r) {
+						KARI.append(info, noFinishMove, isHide ,1);
+					}
+				});
+				return;
+			}
+		}
 		info._visibleInfo = {};
 		info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
 		info.initialOpacity = null;
