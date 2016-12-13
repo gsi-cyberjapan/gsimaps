@@ -543,8 +543,8 @@ GSI.TEXT.SAKUZU.DIALOG_TOOLTIP_ADDFREEHAND = 'フリーハンドで線を追加'
 GSI.TEXT.SAKUZU.DIALOG_LIST_EDITBTN = '編集';
 GSI.TEXT.SAKUZU.DIALOG_LIST_REMOVEBTN = '削除';
 
-GSI.TEXT.SAKUZU.DIALOG_LOAD_COMMENT = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルを選択してください';
-GSI.TEXT.SAKUZU.DIALOG_LOAD_COMMENT_IE8 = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルの内容を入力して下さい' ;
+GSI.TEXT.SAKUZU.DIALOG_LOAD_COMMENT = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルを選択してください<br><div style="font-size:85%">※ファイルを地図上にドラッグ＆ドロップすることでも読み込めます</div>';
+GSI.TEXT.SAKUZU.DIALOG_LOAD_COMMENT_IE8 = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルの内容を入力して下さい<br><div style="font-size:85%">※ファイルを地図上にドラッグ＆ドロップすることでも読み込めます</div>' ;
 GSI.TEXT.SAKUZU.DIALOG_LOAD_FILENAMECAPTION = 'パネル上の表示名' ;
 
 GSI.TEXT.SAKUZU.DIALOG_LOAD_OKBTN = '読込を開始';
