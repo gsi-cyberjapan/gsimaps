@@ -4207,3 +4207,24 @@ form {
 	
 }
 
+.leaflet-control-flatpanel{
+	padding-bottom:5px;
+}
+
+.leaflet-control-crpanel {
+    z-index: 99999;
+	text-decoration:none;
+	background-color:#fefefe;
+	opacity:0.75;
+	padding:0px 4px 0px 4px;
+}
+
+
+/* Old IE */
+
+.leaflet-oldie .leaflet-control-crpanel {
+
+	border: 1px solid #999;
+
+}
+

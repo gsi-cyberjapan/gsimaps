@@ -17400,6 +17400,69 @@ GSI.Control.Spacer = L.Control.extend({
 	onRemove: function (map) {
 	}
 } );
+/************************************************************************
+ L.Control
+ - GSI.Control.CrPanel
+ ************************************************************************/
+GSI.Control.CopyrightPanel = L.Control.extend({
+
+	options: {
+
+		position: 'bottomright',
+		title:'国土地理院',
+		linkurl:'http://maps.gsi.go.jp/development/ichiran.html',
+		width: 80,
+		height: 10,
+	},
+
+	
+
+	hideText: 'Hide CopyrightPanel',
+
+	showText: 'Show CopyrightPanel',
+
+
+	initialize: function (options) {
+		L.Util.setOptions(this, options);
+	},
+
+	onAdd: function (map) {
+		this._map = map;
+
+		//Creating the container and stopping events from spilling through to the main map.
+		this._container = L.DomUtil.create('div', 'leaflet-control-flatpanel');
+		this._container.style.width = this.options.width + 'px';
+		this._container.style.height = this.options.height + 'px';
+
+		var alink = L.DomUtil.create('a','leaflet-control-crpanel', this._container);
+
+		alink.innerHTML = this.options.title;
+		alink.href = this.options.linkurl;
+		alink.target = '_blank';
+		//alink.style.color='#000000';
+
+		this._urlPanel = alink;
+		
+		return this._container;
+	},
+
+	addTo: function (alink) {
+		L.Control.prototype.addTo.call(this, alink);
+		return this;
+	},
+
+	onRemove: function (map) {
+		this._miniMap.off( 'click', this._onMiniMapClick, this );
+		this._miniMap.off( 'touchend', this._onMiniMapClick, this );
+	},
+
+});
+
+L.Map.addInitHook(function () {
+	if (this.options.crPanel) {
+		this.crPanel = (new L.Control.CopyrightPanel()).addTo(this);
+	}
+});
 
 /************************************************************************
  L.DivIcon
@@ -19533,6 +19596,13 @@ function initialize_proc_map()
 
 	// ズームコントロール
 	GSI.GLOBALS.map.addControl(new L.Control.Zoom({position:"bottomleft"}));
+
+	//出典
+	var cs = GSI.GLOBALS.queryParams.getControlSetting();
+	if(cs.header.visible == false)
+	{
+		GSI.GLOBALS.map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
+	}
 
 	// 表示中レイヤーダイアログ
 	var left = 8;
