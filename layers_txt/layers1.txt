@@ -32,7 +32,7 @@
           "minZoom": 14,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "html": "<div class=\"gsi_layerinfo_title\">最新（2007年～）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">ズーム13～18で表示します。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">最新（2007年～）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">ズーム14～18で表示します。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
