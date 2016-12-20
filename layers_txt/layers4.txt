@@ -1575,7 +1575,7 @@
                   "cocotile": true,
                   "minZoom": 5,
                   "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/fukkokizu.pdf",
-                  "html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://cyberjapandata.gsi.go.jp/legend/fukkokizu_description.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                  "html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
                   "type": "LayerGroup",
