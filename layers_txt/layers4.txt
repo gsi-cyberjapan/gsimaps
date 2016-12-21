@@ -1148,6 +1148,22 @@
                       "maxNativeZoom": 16,
                       "legendUrl": "",
                       "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯・日奈久断層帯周辺標高差分段彩図</div><div style=\"text-align:center;\"><img src=\"http://cyberjapandata.gsi.go.jp/legend/20160414kumamoto_relief_d.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日と平成17年度・24年度（東端部）の航空レーザ測量から求めた標高から、差分を算出してカラーで表現しました。使用した航空レーザ測量のデータは、平成28年5月8日は国土地理院が、平成17年度・24年度（東端部）は九州地方整備局が整備したものです。</li></ul></div>（注意）<div class=\"gsi_layerinfo_kaisetu\"><ul><li>平成17年度・24年度との比較なので、ほ場整備、宅地造成、河川の土砂堆積等の地震以外の影響の上下変動も含まれています。</li><li>平成17～27年度の地殻変動の影響の可能性も含まれています。</li><li>水平方向にも1ｍ以上移動しているところもありますので、斜面等は水平方向に移動したことによる上下変動として表れることがあります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20160414kumamoto_relief_d2",
+                      "title": "布田川断層帯及び菊陽周辺標高差分段彩図",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160414kumamoto_relief_d2/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "errorTileUrl": "",
+                      "cocotile": false,
+                      "minZoom": 2,
+                      "maxZoom": 16,
+                      "maxNativeZoom": 16,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯及び菊陽周辺標高差分段彩図</div><div style=\"text-align:center;\"><img src=\"http://cyberjapandata.gsi.go.jp/legend/20160414kumamoto_relief_d2.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日・17日と平成17年度・22年度・24年度の航空レーザ測量から求めた標高から、差分を算出してカラーで表現しました。使用した航空レーザ測量のデータは、平成28年5月8日・17日は国土地理院が、平成17年度・22年度・24年度は九州地方整備局が整備したものです。</li></ul></div>（注意）<div class=\"gsi_layerinfo_kaisetu\"><ul><li>平成17年度・22年度・24年度との比較なので、ほ場整備、宅地造成、河川の土砂堆積等の地震以外の影響の上下変動も含まれています。</li><li>平成17～27年度の地殻変動の影響の可能性も含まれています。</li><li>水平方向にも1ｍ以上移動しているところもありますので、斜面等は水平方向に移動したことによる上下変動として表れることがあります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
                 },
