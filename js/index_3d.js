@@ -50,6 +50,10 @@ var vDemUrl                             = "https://cyberjapandata.gsi.go.jp/xyz/
 //  vDemUrl                             = "./[@]/tile.gsi/{z}/{x}/{y}.png";
 var vDemUrl_Default                     = "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt";
 var vDemUrl_maxZoom                     =14;
+var vDemGMType                            = "TXT"; // TXT, PNG
+var vDemGMUrl                             = "https://cyberjapandata.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt";
+var vDemGMUrl_Default                     = "https://cyberjapandata.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt";
+var vDemGMUrl_maxZoom                     =8;
 /*-----------------------------------------------------------------------------------------------*/
 var _Load_StyleZoom                     = false;
 var _Load_Data                          = null;
@@ -292,6 +296,12 @@ function InitGet(){
         if(!(vDemType == "PNG" || vDemType == "TXT")){
             vDemType = "TXT";
             vDemUrl  = vDemUrl_Default;
+        }
+        if(ret["z"]<=vDemGMUrl_maxZoom){
+            vDemType = vDemGMType;
+            vDemUrl = vDemGMUrl;
+            vDemUrl_Default = vDemGMUrl_Default;
+            vDemUrl_maxZoom = vDemGMUrl_maxZoom;
         }
 
         ret["tile_n"]    = nTextureTileN;
