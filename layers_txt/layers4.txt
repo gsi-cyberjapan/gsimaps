@@ -20,6 +20,21 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "fukkyukizu",
+                  "title": "応急復旧対策基図",
+                  "iconUrl": "",
+                  "url": "http://cyberjapandata.gsi.go.jp/xyz/fukkyukizu/{z}/{x}/{y}.png",
+                  "subdomains": "",
+                  "attribution": "",
+                  "errorTileUrl": "",
+                  "cocotile": false,
+                  "minZoom": 5,
+                  "maxZoom": 18,
+                  "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/fukkyukizu_legend.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">応急復旧対策基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kanri/kanri61002.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "20160414kumamoto_epicenter",
                   "title": "震央",
                   "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/092.png",
