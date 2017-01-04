@@ -23,6 +23,8 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
+	'./layers_txt/layers_20161228ibaraki.txt',
+	'./layers_txt/layers_20161222itoigawa.txt',
 	'./layers_txt/layers_20161021tottori.txt',
 	'./layers_txt/layers_20160830typhoon10.txt',
 	'./layers_txt/layers_20160820typhoon11_9.txt',
@@ -36,7 +38,7 @@ CONFIG.layers = [
 ];
 
 //キャッシュ（Layers.txt）
-CONFIG.LOADLAYERSTXTCACHE = true;
+CONFIG.LOADLAYERSTXTCACHE = false;
 
 //キャッシュ（ココタイル）
 CONFIG.LOADCOCOTILECACHE = true;
