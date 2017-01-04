@@ -38,7 +38,7 @@ CONFIG.layers = [
 ];
 
 //キャッシュ（Layers.txt）
-CONFIG.LOADLAYERSTXTCACHE = false;
+CONFIG.LOADLAYERSTXTCACHE = true;
 
 //キャッシュ（ココタイル）
 CONFIG.LOADCOCOTILECACHE = true;
