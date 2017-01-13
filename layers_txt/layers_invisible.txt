@@ -3,10 +3,18 @@
     {
       "type": "Layer",
       "id": "dem",
-      "title": "標高タイル",
+      "title": "標高タイル（基盤地図情報数値標高モデル）",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt",
       "minZoom": 0,
       "maxZoom": 14
+    },
+    {
+      "type": "Layer",
+      "id": "demgm",
+      "title": "標高タイル（地球地図全球版標高第2版）",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt",
+      "minZoom": 0,
+      "maxZoom": 8
     },
     {
       "type": "Layer",
