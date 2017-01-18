@@ -108,8 +108,16 @@
     {
       "type": "Layer",
       "id": "20160303dd5",
-      "title": "西之島付近噴火活動 標高タイル（2015年3月3日）",
+      "title": "西之島付近噴火活動 標高タイル（2016年3月3日）",
       "url": "http://cyberjapandata.gsi.go.jp/xyz/20160303dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20160725dd5",
+      "title": "西之島付近噴火活動 標高タイル（2016年7月25日）",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/20160725dd5/{z}/{x}/{y}.txt",
       "minZoom": 15,
       "maxZoom": 15
     }
