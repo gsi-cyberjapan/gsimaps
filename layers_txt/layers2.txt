@@ -63,23 +63,10 @@
           "entries": [
             {
               "type": "Layer",
-              "id": "lcm25k",
-              "title": "初期整備版",
+              "id": "lcm25k_2012",
+              "title": "数値地図25000（土地条件）",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
-              "subdomains": "",
-              "attribution": "",
-              "cocotile": true,
-              "maxZoom": 16,
-              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/LCM_hanrei.png",
-              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_index.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
-              "id": "temp_lcm25k_2012",
-              "title": "【修正中】数値地図25000（土地条件）",
-              "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/temp_lcm25k_2012/{z}/{x}/{y}.png",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
@@ -90,18 +77,16 @@
             },
             {
               "type": "Layer",
-              "id": "error_lcm25k_2012",
-              "title": "【不具合箇所】数値地図25000（土地条件）",
+              "id": "lcm25k",
+              "title": "初期整備版",
               "iconUrl": "",
-              "url": "http://cyberjapandata.gsi.go.jp/xyz/error_lcm25k_2012/{z}/{x}/{y}.geojson",
+              "url": "http://cyberjapandata.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
               "subdomains": "",
               "attribution": "",
               "cocotile": true,
-              "minZoom": 10,
               "maxZoom": 16,
-              "maxNativeZoom": 2,
-              "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_kaisetu\">【修正中】数値地図25000（土地条件）に含まれる不具合箇所（1回目点検終了時点）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "legendUrl": "http://cyberjapandata.gsi.go.jp/legend/LCM_hanrei.png",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_index.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
@@ -215,7 +200,7 @@
           "minZoom": 2,
           "maxZoom": 16,
           "legendUrl": "",
-          "html": "<div class=\"gsi_layerinfo_title\">火山土地条件図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('http://cyberjapandata.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">火山土地条件図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('http://cyberjapandata.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "LayerGroup",
@@ -3531,6 +3516,28 @@
               "iconUrl": "",
               "toggleall": false,
               "entries": [
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年更新情報",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_01",
+                      "title": "1月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/fgd_update_2017_01/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
+                    }
+                  ]
+                },
                 {
                   "type": "LayerGroup",
                   "title": "2016年更新情報",
