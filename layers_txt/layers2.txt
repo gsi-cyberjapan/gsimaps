@@ -2368,6 +2368,46 @@
               "entries": [
                 {
                   "type": "LayerGroup",
+                  "title": "2017年迅速更新情報",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201701",
+                      "title": "1月更新",
+                      "iconUrl": "http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/jin201701/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年面的更新情報",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201701",
+                      "title": "1月更新",
+                      "iconUrl": "",
+                      "url": "http://cyberjapandata.gsi.go.jp/xyz/men201701/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2016年迅速更新情報",
                   "iconUrl": "",
                   "toggleall": false,
