@@ -3518,6 +3518,22 @@ form {
 	
 }
 
+.gsi_modal_dialog_header
+{
+	color: #fff;
+	background:#333;
+	-moz-border-radius: 3px;/*for Firefox*/
+	-webkit-border-radius: 3px;/*for Safari and chrome*/
+	border-radius: 3px;
+	
+	behavior: url(border-radius.htc);/*for IE*/
+	font-size:150%;
+	text-align:center;
+	padding: 1px 20px 1px 4px;
+	/*border: 2px solid #555;*/
+	cursor:move;
+}
+
 .gsi_modal_dialog_content
 {
 	font-size:90%;
@@ -4264,5 +4280,30 @@ form {
 
 	border: 1px solid #999;
 
+}
+
+.evac_dialog
+{
+	background:#ffffff;
+	display:block;
+	padding: 2px 2px 2px 2px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+	position:relative;
+	margin-right:10px;
+	float:right;
+
+}
+.evac_dialog_content
+{
+	padding: 2px 2px 2px 2px;
+	color:#111100;
+	font-size:85%;
+}
+.evac_dialog_content a
+{
+	font-size:90%;
 }
 

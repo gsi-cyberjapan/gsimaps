@@ -33,9 +33,15 @@ CONFIG.layers = [
 	'./layers_txt/layers2.txt',
 	'./layers_txt/layers3.txt',
 	'./layers_txt/layers4.txt',
+	'./layers_txt/layers_skhb.txt',
 	'./layers_txt/layers5.txt',
 	'./layers_txt/layers_experimental.txt'
 ];
+
+CONFIG.layerEvacuationFolder = "指定緊急避難場所";
+CONFIG.layerEvacuationFolderSYS = "GSI.MAP.EVAC";
+CONFIG.layerEvacuationHeader = "skhb";
+CONFIG.layerEvacuationIsConfirmOK = false;
 
 //キャッシュ（Layers.txt）
 CONFIG.LOADLAYERSTXTCACHE = true;
@@ -597,6 +603,20 @@ GSI.TEXT.SHARE.DIALOG_TEMPLATELOADERROR = '大変申し訳ありません。し�
 GSI.TEXT.SHARE.DIALOG_DOWNLOADBTN = '上記のHTMLを保存';
 GSI.TEXT.SHARE.DIALOG_COPYBTN = 'クリップボードにコピー';
 GSI.TEXT.SHARE.DIALOG_NOCOPYMSG = 'URLをコピーしてご利用下さい';
+
+GSI.TEXT.EVAC = {};
+GSI.TEXT.EVAC.KIYAKU = '最新の状況などは当該市町村にご確認ください。';
+GSI.TEXT.EVAC.KIYAKULINK = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="http://disaportal.gsi.go.jp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>';
+GSI.TEXT.EVAC.CONFIRMTOP = '地理院地図に掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。';
+GSI.TEXT.EVAC.ATTENTION = '【ご利用上の注意】';
+GSI.TEXT.EVAC.CONFIRMITEM1 = '本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。最新の状況などは当該市町村にご確認ください。';
+GSI.TEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href="http://disaportal.gsi.go.jp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>）。';
+GSI.TEXT.EVAC.CONFIRMITEM3 = '指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。';
+GSI.TEXT.EVAC.ATTENTIONDATA = '【データについて】';
+GSI.TEXT.EVAC.DATAITEM1 = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>';
+GSI.TEXT.EVAC.DATAITEM2 = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">操作方法</a>';
+GSI.TEXT.EVAC.DATAITEM3 = '<a href="http://disaportal.gsi.go.jp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>';
+GSI.TEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
 
 /************************************************************************
  設定：旧地理院地図より
@@ -3410,6 +3430,27 @@ GSI.Utils.get2ndMesh = function( lat, lon ){
 
 	return "" + lat1 + lon1 + m2lat + m2lon; 
 };
+GSI.Utils.rpad = function(src, letter, num)
+{
+	var dst = src;
+	var len = num - src.length;
+	if (dst) dst="";
+	for(var i=0; i < len; i++)
+	{
+		dst+=letter;
+	}
+	return dst;
+};
+GSI.Utils.lpad = function(src, letter, num)
+{
+	var dst = "";
+	var len = num - src.length;
+	for(var i=0; i<len; i++)
+	{
+		dst+=letter;
+	}
+	return dst + src;
+};
 
 L.LatLng.prototype._originalDistanceTo = L.LatLng.prototype.distanceTo;
 L.LatLng.prototype.distanceTo = function (other) {
@@ -5095,6 +5136,10 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			this.current = null;
 			this.initializeList();
 		}
+		if ( this._checkEvacuationLayer() == false )
+		{
+			GSI.GLOBALS.evacDialog.hide();
+		}
 
 		GSI.Dialog.prototype.hide.call(this);
 	},
@@ -5777,10 +5822,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			}
 		}
 	},
-	onFolderClick : function( a )
+	_expandFolder : function( item )
 	{
-		var item = a.data( 'data' );
-
         var f = true;
         if(item){
             if(item.src){
@@ -5808,6 +5851,40 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 
         if(f){
             this.onFolderClick_Proc(item);
+        }
+	},
+	onConfirmOkClick : function ( item )
+	{
+		GSI.GLOBALS.confirmDlg.hide();
+		GSI.GLOBALS.evacDialog.show();
+
+		CONFIG.layerEvacuationIsConfirmOK = true;
+		this._expandFolder( item );
+	},
+	onFolderClick : function( a )
+	{
+		var item = a.data( 'data' );
+		
+		if (( item ) && ( item.title_evac && item.title_evac == CONFIG.layerEvacuationFolderSYS ))
+		{
+			if ( this._checkEvacuationLayer() == false )
+			{
+				GSI.GLOBALS.confirmDlg.onPositiveButtonClick = L.bind(this.onConfirmOkClick, this, item);
+				GSI.GLOBALS.confirmDlg.show();			
+			}
+			else
+			{
+				this._expandFolder( item );
+			}
+		}
+		else
+		{
+			this._expandFolder( item );
+			if (this._checkEvacuationLayer() == false)
+			{
+				CONFIG.layerEvacuationIsConfirmOK = false;
+				GSI.GLOBALS.evacDialog.hide();
+			}
         }
 	},
 	onFolderClick_Proc : function( item )
@@ -5865,6 +5942,22 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			    GSI.Utils.sendSelectedLayer(this._current_id);
             }
         }
+        else if ( target.title_evac && target.title_evac == CONFIG.layerEvacuationFolderSYS )
+        {		
+            var f = false;
+            if(this.mapLayerList.exists(item)){
+                f = true;
+            }
+
+            this._onHideAllClick();
+            if(f == false){
+                this.mapLayerList.append(item);
+				if (GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
+				{
+					GSI.GLOBALS.evacDialog.show();
+				}
+            }
+        }
         else{
 		    if(!this.mapLayerList.exists(item))
 		    { 
@@ -5879,6 +5972,30 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	{
 		this._initializeList( this.current ? this.current.entries : this.tree, true );
 		this._toolTipViewCounter = 0;
+	},
+	_checkEvacuationLayer : function()
+	{
+	    if ( this.mapLayerList )
+	    {
+	    	var l = this.mapLayerList.getList();
+	    	for(i = 0 ; i < l.length; i++ )
+	    	{
+	    		if ( l[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+	    		{
+	    			return true;
+	    		}
+	    	}
+	    	var tl = this.mapLayerList.getTileList();
+
+	    	for(i = 0 ; i < tl.length; i++ )
+	    	{
+	    		if ( tl[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+	    		{
+	    			return true;
+	    		}
+	    	}
+	    }
+	    return false;
 	}
 });
 
@@ -8883,6 +9000,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     _onResetClick : function()
     {
 		this._resetTiles();
+		this._checkEvacuationLayer();
     },
     onCocoTileCheckChange  : function(onOffSwitch)
 	{
@@ -9262,6 +9380,13 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
             a.addClass( 'view' );
 
+			if (item.id.indexOf(CONFIG.layerEvacuationHeader)>=0)
+			{
+				if ( GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false )
+				{
+					GSI.GLOBALS.evacDialog.show();
+				}
+			}
 		}
 		else
 		{
@@ -9270,6 +9395,11 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
             viewMark.removeClass( 'viewmark' ).html( ' ' );
             a.removeClass( 'view' );
+
+			if (item.id.indexOf(CONFIG.layerEvacuationHeader)>=0 )
+			{
+				GSI.GLOBALS.evacDialog.hide();
+			}
         }
 
 		var cocoVisible = this.cocoTileLayer.getVisible();
@@ -9293,6 +9423,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		li.fadeOut( 'fast', L.bind( function(li) {
 			this.mapLayerList.remove( item );
 			li.remove();
+			this._checkEvacuationLayer();
 			if ( this._userResized ) this._onResize();
 		}, this, li ) );
 	},
@@ -9528,6 +9659,41 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
             GSI.GLOBALS.baseLayer.setGrayScale(sw.checked());
         }
 	},
+	_checkEvacuationLayer : function()
+	{
+	    if ( this.mapLayerList )
+	    {
+	    	var l = this.mapLayerList.getList();
+	    	for(i = 0 ; i < l.length; i++ )
+	    	{				
+	    		if ( l[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+	    		{
+	    			return true;
+	    		}				
+	    	}
+	    	var tl = this.mapLayerList.getTileList();
+
+	    	for(i = 0 ; i < tl.length; i++ )
+	    	{				
+	    		if ( tl[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+	    		{
+	    			return true;
+	    		}			
+	    	}
+	    }
+		if( GSI.GLOBALS.layerTreeDialog.current )
+		{
+			if ( GSI.GLOBALS.layerTreeDialog.current.title_evac )
+			{
+				return true;
+			}
+		}
+		
+
+	    GSI.GLOBALS.evacDialog.hide();
+		CONFIG.layerEvacuationIsConfirmOK = false;
+	    return false;
+	}
 });
 
 GSI.OpacitySlider = L.Class.extend( {
@@ -9568,6 +9734,58 @@ GSI.OpacitySlider = L.Class.extend( {
 	getOpacity : function() {
 		return this.opacity;
 	}
+} );
+
+/************************************************************************
+ L.Class
+ - GSI.EvacDialog
+ ************************************************************************/
+GSI.EvacDialog = L.Control.extend( {
+	options : {
+		width: '310px',
+		position:'bottomright',
+	},
+	initialize : function()
+	{
+		this._map = GSI.GLOBALS.map;
+		L.Util.setOptions(this, this.options);
+		this._isShow = false;
+	},
+	show : function ()
+	{
+		if (this._isShow == false)
+		{
+			if (!this._map)
+			{
+				this._map = GSI.GLOBALS.map;
+			}
+			this.addTo(this._map);
+		}
+		this._isShow = true;
+	},
+	hide : function ()
+	{
+		if (this._isShow == true)
+		{
+			this.removeFrom(this._map);
+		}
+		this._isShow = false;
+	},
+	onAdd: function (map)
+	{
+		this._map = map;
+		this._container = L.DomUtil.create('div', 'evac_dialog');
+		//content
+		var frame =$('<div>').addClass('evac_dialog_content').html(this.createContent());
+		
+		$(this._container).css({'opacity':'0.7'}).append(frame);
+
+		return this._container
+	},
+	createContent : function()
+	{
+		return GSI.TEXT.EVAC.KIYAKU + "<br>" + GSI.TEXT.EVAC.KIYAKULINK;
+    }
 } );
 
 /************************************************************************
@@ -9639,7 +9857,10 @@ GSI.DialogManager = L.Class.extend( {
 		for ( var i=0; i<this.visibleList.length-1; i++ )
 		{
 			var opacity = 0.6 + ( 0.4 / this.visibleList.length * idx );
-			this.visibleList[i].css({'z-index':zIndex, opacity: opacity} );
+			if (this.visibleList[i].options.containerClass != "evac_dialog")
+			{
+				this.visibleList[i].css({'z-index':zIndex, opacity: opacity} );			
+			}
 			this.visibleList[i].addClass( "deactive");
 
 			zIndex++;
@@ -9648,7 +9869,14 @@ GSI.DialogManager = L.Class.extend( {
 
 		if ( this.visibleList.length > 0 )
 		{
-			this.visibleList[ this.visibleList.length - 1 ].css({'z-index':zIndex, opacity: 0.95} );
+			if (this.visibleList[ this.visibleList.length - 1].options.containerClass != "evac_dialog")
+			{
+				this.visibleList[ this.visibleList.length - 1 ].css({'z-index':zIndex, opacity: 0.95} );
+			}
+			else
+			{
+				this.visibleList[ this.visibleList.length - 1 ].css({'z-index':zIndex, opacity: 0.6} );				
+			}
 			this.visibleList[i].removeClass( "deactive");
 		}
 	},
@@ -9762,8 +9990,168 @@ GSI.DialogManager = L.Class.extend( {
 			var d = this.visibleList[i];
 			this.adjust( d,windowSize );
 		}
+	},
+	isVisibleDialog : function( dlg ){
+		for ( var i=0; i<this.visibleList.length; i++ )
+		{
+			var d = this.visibleList[i];
+			if ( d == dlg )
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 } );
+
+/************************************************************************
+ L.Class
+ - GSI.EvacuationManager
+ ************************************************************************/
+GSI.EvacuationManager = L.Class.extend({
+	initialize : function( queryParams )
+	{
+		this._isVisibleDialog = false;
+		if (queryParams)
+		{
+			this._queryparams = null;
+			this._queryParams = queryParams;
+		}
+	},
+	Reset : function( qp )
+	{
+		this.initialize( qp );
+	},
+	Out : function()
+	{
+		return this._queryParams;
+	},
+	accept : function()
+	{
+		var d;
+		
+		if (this._queryParams.params["disp"])
+		{
+			d = this._queryParams.params["disp"];
+		}
+
+		var ls, ly, lcd;
+		if(this._queryParams.params["ls"])
+		{
+			ls = this._queryParams.params["ls"].split("|");
+			GSI.Utils.rpad(d, "0", ls.length);
+		}
+		ly = this._queryParams._layers;
+		lcd = this._queryParams.params["lcd"];
+		if (ls)
+		{
+			if (d.charAt(ls.length-1) == "1")
+			{
+				this._isVisibleDialog = true;
+			}
+
+			if ( lcd && lcd.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+			{
+				for(var i = ls.length - 1; i >= 0; i--)
+				{
+					if ( (lcd != ls[i]) && ls[i].indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+					{
+						ls.splice(i,1);
+						this._isVisibleDialog = (this._isVisibleDialog || (d.charAt(i) == "1") )
+					}
+				}
+			}
+			else
+			{
+				var lsct = 0;
+				for(var i = ls.length - 1; i >= 0; i--)
+				{
+					if (ls[i].indexOf(CONFIG.layerEvacuationHeader)>=0)
+					{
+						if (lsct > 0)
+						{
+							ls.splice(i,1);
+						}
+						lsct++;
+					}
+				}
+			}
+			this._queryParams.params["ls"] = ls.join('|');
+		}
+
+		var dct = 0;
+		if (ly)
+		{
+			for(var i = ly.length - 1; i >= 0; i--)
+			{
+				if ( lcd && lcd.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+				{
+					if ((lcd != ly[i].id) && ly[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+					{
+						ly.splice(i,1);
+					}
+				}
+				else
+				{
+					if ( ly[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+					{
+						if (dct > 0)
+						{
+							ly.splice(i,1);
+						}
+						dct++;
+					}
+				}			
+			}
+		}
+	},
+	cancel : function()
+	{
+		var ls, ly, lcd;
+		if(this._queryParams.params["ls"])
+		{
+			ls = this._queryParams.params["ls"].split("|");
+		}
+		ly = this._queryParams._layers;
+		lcd = this._queryParams.params["lcd"];
+
+		if (ls)
+		{
+			for(var i = ls.length - 1; i >= 0; i--)
+			{
+				if (ls[i].indexOf(CONFIG.layerEvacuationHeader)>=0)
+				{
+					ls.splice(i,1);
+				}
+			}
+			this._queryParams.params["ls"] = ls.join('|');
+		}
+
+		if (lcd)
+		{
+			if (lcd.indexOf(CONFIG.layerEvacuationHeader)>=0)
+			{
+				this._queryParams.params["lcd"]=null;
+			}
+		}
+
+		if (ly)
+		{
+			for(var i = ly.length - 1; i >= 0; i--)
+			{
+				if (ly[i].id.indexOf(CONFIG.layerEvacuationHeader)>=0)
+				{
+					ly.splice(i,1);
+				}
+			}
+		}
+		this._isVisibleDialog = false;
+	},
+	isVisibleDialog : function()
+	{
+		return this._isVisibleDialog;
+	}
+});
 
 /************************************************************************
  L.Class
@@ -10285,6 +10673,7 @@ GSI.HashOptions = L.Class.extend( {
         this.eHashChange        = false;
         this.eHashChangeOptions = "";
 
+		this._wrongEvacuation = false;
         this.Init();
     },
     Init : function(){
@@ -10460,99 +10849,276 @@ GSI.HashOptions = L.Class.extend( {
 
         return hash;
     },
-    HashSetProc : function(hash){
+    HashSetProc : function( hash ){
         var n = hash.indexOf("/&");
         if(n >= 1){
             var options = hash.substr(n);
             if(this.vHashOptions != options){
                 this.eHashChange = true;
-                this.eHashChangeOptions = options;
-
-                GSI.GLOBALS.queryParams.initialize_proc(options);
-
-                // 基本設定：表示中の背景地図を共有
-                // base=
-                var base = GSI.GLOBALS.queryParams.getBaseMap();
-                GSI.GLOBALS.baseLayer.setActiveId(base);
-                // base_grayscale=
-                GSI.GLOBALS.baseLayer.setGrayScale(GSI.GLOBALS.queryParams.getBaseMapGrayScale());
-
-                // 基本設定：表示中のレイヤーを共有
-                // ls=
-                //  +
-                // 選択中の情報設定
-                // disp=
-                var layers = GSI.GLOBALS.queryParams.getLayers();
-                var bfind = false;
-                var vl = GSI.GLOBALS.pageStateManager.getLayersQueryString();
-                var idx = vl.indexOf( "ls=" );
-                if ( idx >= 0 )
-                {
-                	vl = vl.substring( idx + 3 ).split( "%7C" );
-                }
-                if ( layers && ( vl && vl.length > 0 ) )
-                {
-                	
-	                for( var i =0; i < layers.length; i++ )
-	                {
-	                	for( var j=0; j < vl.length; j++ )
-	                	{
-	                		if ( layers[i].id == vl[j] )
-	                		{
-	                			bfind = true;
-	                			break;
-	                		}
-	                		
-	                	}
-	                	if ( bfind == false )
-	                	{
-		                    GSI.Utils.sendSelectedLayer( layers[i].id );
-		                }
-	                	bfind = false;
-	                }
-                }
-                else if ( layers )
-                {
-                    for( i = 0; i < layers.length; i++ )
-                    {
-                        GSI.Utils.sendSelectedLayer( layers[i].id );
-                    }
-                }
-                GSI.GLOBALS.layersJSON.initialize_layers_data(layers);
-                GSI.GLOBALS.viewListDialog.Refresh(GSI.GLOBALS.layersJSON.visibleLayers);
-
-                var viewSetting = GSI.GLOBALS.queryParams.getViewSetting();
-                // 表示設定：中心十字線           vs=c[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.CENTERCROSS].obj.setVisible(viewSetting.centerCross);
-                // 表示設定：磁北線               vs=j[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.JIHOKULINE ].obj.setVisible(viewSetting.jihokuLine );
-                // 表示設定：緯度経度グリッド     vs=l[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.LATLNGGRID ].obj.setVisible(viewSetting.latLngGrid    );
-                // 表示設定：UTMグリッド          vs=u[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.UTMGRID    ].obj.setVisible(viewSetting.utmGrid );
-                // 表示設定：コンテキストメニュー vs=f[0/1]
-                GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.FOOTER     ].obj.setVisible(viewSetting.footer     );
-
-                // 情報リスト設定：選択中の情報   d=v
-                if(GSI.GLOBALS.queryParams.getViewListDialogVisible()){
-                    GSI.GLOBALS.viewListDialog.show();
-                }
-                else{
-                    GSI.GLOBALS.viewListDialog.hide();
-                }
-
-                // 情報リスト設定：情報リスト d=v
-                if(GSI.GLOBALS.queryParams.getLayerTreeDialogVisible()){
-                    GSI.GLOBALS.layerTreeDialog.show();
-                }
-                else{
-                    GSI.GLOBALS.layerTreeDialog.hide();
-                }
-
+				
+				if (options.indexOf(CONFIG.layerEvacuationHeader) >= 0)
+				{
+					this.forEvacuation(options);
+				}
+				else
+				{
+					this.HashSetProc_sub(options);
+				}
             }
-
         }
-    }
+    },
+    HashSetProc_sub : function( options ){
+		this.eHashChangeOptions = options;
+
+		GSI.GLOBALS.queryParams.initialize_proc(options);
+
+		// 基本設定：表示中の背景地図を共有
+		// base=
+		var base = GSI.GLOBALS.queryParams.getBaseMap();
+		GSI.GLOBALS.baseLayer.setActiveId(base);
+		// base_grayscale=
+		GSI.GLOBALS.baseLayer.setGrayScale(GSI.GLOBALS.queryParams.getBaseMapGrayScale());
+
+		// 基本設定：表示中のレイヤーを共有
+		// ls=
+		//  +
+		// 選択中の情報設定
+		// disp=
+		var layers = GSI.GLOBALS.queryParams.getLayers();
+		var bfind = false;
+		var vl = GSI.GLOBALS.pageStateManager.getLayersQueryString();
+		var idx = vl.indexOf( "ls=" );
+		if ( idx >= 0 )
+		{
+			vl = vl.substring( idx + 3 ).split( "%7C" );
+		}
+		if ( layers && ( vl && vl.length > 0 ) )
+		{
+			
+			for( var i =0; i < layers.length; i++ )
+			{
+				for( var j=0; j < vl.length; j++ )
+				{
+					if ( layers[i].id == vl[j] )
+					{
+						bfind = true;
+						break;
+					}
+					
+				}
+				if ( bfind == false )
+				{
+					GSI.Utils.sendSelectedLayer( layers[i].id );
+				}
+				bfind = false;
+			}
+		}
+		else if ( layers )
+		{
+			for( i = 0; i < layers.length; i++ )
+			{
+				GSI.Utils.sendSelectedLayer( layers[i].id );
+			}
+		}
+		GSI.GLOBALS.layersJSON.initialize_layers_data(layers);
+		GSI.GLOBALS.viewListDialog.Refresh(GSI.GLOBALS.layersJSON.visibleLayers);
+
+		var viewSetting = GSI.GLOBALS.queryParams.getViewSetting();
+		// 表示設定：中心十字線           vs=c[0/1]
+		GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.CENTERCROSS].obj.setVisible(viewSetting.centerCross);
+		// 表示設定：磁北線               vs=j[0/1]
+		GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.JIHOKULINE ].obj.setVisible(viewSetting.jihokuLine );
+		// 表示設定：緯度経度グリッド     vs=l[0/1]
+		GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.LATLNGGRID ].obj.setVisible(viewSetting.latLngGrid    );
+		// 表示設定：UTMグリッド          vs=u[0/1]
+		GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.UTMGRID    ].obj.setVisible(viewSetting.utmGrid );
+		// 表示設定：コンテキストメニュー vs=f[0/1]
+		GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.FOOTER     ].obj.setVisible(viewSetting.footer     );
+
+		// 情報リスト設定：選択中の情報   d=v
+		if(GSI.GLOBALS.queryParams.getViewListDialogVisible()){
+			GSI.GLOBALS.viewListDialog.show();
+		}
+		else{
+			GSI.GLOBALS.viewListDialog.hide();
+		}
+
+		// 情報リスト設定：情報リスト d=v
+		if(GSI.GLOBALS.queryParams.getLayerTreeDialogVisible()){
+			GSI.GLOBALS.layerTreeDialog.show();
+		}
+		else{
+			GSI.GLOBALS.layerTreeDialog.hide();
+		}
+
+	},
+	forEvacuation : function ( options )
+	{
+		
+		var disp = "";
+		var ops = {};
+		var op = options.split("&");
+		for( var i = 0; i < op.length; i++ )
+		{
+			var it = op[i].split("=");
+			ops[it[0]] = it[1];
+		}
+		
+		if (ops["disp"])
+		{
+			//逆順に並べておく
+			for( var i = ops["disp"].length - 1; i >= 0; i-- )
+			{
+				disp += ops["disp"].charAt(i);
+			}
+			ops["disp"] = "";
+		}
+		GSI.GLOBALS.confirmDlg.onPositiveButtonClick = L.bind(this.evacuationConfirmOK, this, ops, disp);
+		GSI.GLOBALS.confirmDlg.onNegativeButtonClick = L.bind(this.evacuationConfirmCancel, this, ops, disp);
+
+		if ( ops["ls"].indexOf(CONFIG.layerEvacuationHeader) < 0 )
+		{
+			GSI.GLOBALS.evacDialog.hide();
+			HashSetProc_sub(options);
+		}
+		else
+		{
+			var ls = ops["ls"].split("%7C");
+			if  (CONFIG.layerEvacuationIsConfirmOK == false )
+			{
+				GSI.GLOBALS.confirmDlg.show();
+			}
+			else
+			{
+				this.evacuationConfirmOK( ops, disp );
+			}
+		}
+	},
+	evacuationConfirmOK : function( ops, disp )
+	{
+		var wrongls = false;
+		if (ops["ls"])
+		{
+			var ls = ops["ls"].split("%7C");
+			if (ls)
+			{
+				if ( disp.length < ls.length ) GSI.Utils.rpad(disp, "0", ls.length);
+
+				if ( ops["lcd"] && ops["lcd"].indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+				{
+					var cc = 0;
+					//with lcd
+					for (var i = ls.length-1; i>=0; i--)
+					{
+						
+						if ((ops["lcd"] != ls[i]) && (ls[i].indexOf(CONFIG.layerEvacuationHeader)>=0))
+						{
+							ls.splice(i, 1);
+							wrongls = true;
+						}
+						else
+						{
+							ops["disp"]+=disp.charAt(i);
+						}
+					}
+				}
+				else
+				{
+					var dct;
+					for (var i = ls.length-1; i>=0; i--)
+					{
+						if (ls[i].indexOf(CONFIG.layerEvacuationHeader)>=0)
+						{
+							if (dct > 0)
+							{
+								ls.splice(i, 1);
+								wrongls = true;
+							}
+							else
+							{
+								ops["disp"] += disp.charAt(i);
+								dct++;
+							}
+						}
+						else
+						{
+							if ( disp.charAt(i) )
+							{
+								ops["disp"] += disp.charAt(i);
+							}
+						}
+					}
+				}
+				ops["ls"] = ls.join("%7C");
+			}		
+		}
+		var newop = "";
+		for( var key in ops )
+		{
+			if ( ops[key] )
+				newop += (key + "=" + ops[key] + "&");
+			else
+				newop += (key + "&");
+		}
+		if (wrongls == true)
+		{
+			location.hash = newop;
+		}
+		else
+		{
+			this.HashSetProc_sub(newop.substring(0, newop.length - 1));
+		}
+		GSI.GLOBALS.confirmDlg.hide();
+		if (GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
+		{
+			GSI.GLOBALS.evacDialog.show();
+		}
+
+	},
+	evacuationConfirmCancel : function( ops, disp )
+	{
+		if ( ops["ls"] )
+		{
+			var ls = ops["ls"].split("%7C");
+			if( ls )
+			{
+				if ( disp.length < ls.length ) GSI.Utils.rpad(disp, "0", ls.length);
+
+				for ( var i = ls.length - 1; i >= 0; i-- )
+				{
+					if ( ls[i].indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+					{
+						ls.splice(i, 1);
+					}
+					else
+					{
+						if ( disp.charAt(i) )
+						{
+							ops["disp"] += disp.charAt(i);
+						}
+					}
+				}
+				ops["ls"] = ls.join("%7C");
+			}
+			if ( ops["lcd"] )
+			{
+				if ( ops["lcd"].indexOf(CONFIG.layerEvacuationHeader) >= 0 )
+				{
+					ops["lcd"] = null;
+				}
+			}		
+		}
+		var newop = "";
+		for( var key in ops )
+		{
+			if ( ops[key] )
+				newop += (key + "=" + ops[key] + "&");
+			else
+				newop += (key + "&");
+		}
+		location.hash = newop;
+		GSI.GLOBALS.confirmDlg.hide();
+	}
 } );
 
 /************************************************************************
@@ -11540,6 +12106,15 @@ GSI.LayersJSON = L.Class.extend( {
                 json      = json_base;
         }
 
+        if (json.layers && json.layers[0].title)
+        {
+        	if ( json.layers[0].title == "指定緊急避難場所" )
+        	{
+        		var json_evac = JSON.parse("{ \"layers\": [ { \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.layerEvacuationFolder + "\", \"title_evac\": \"" + CONFIG.layerEvacuationFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] } ] }");
+        		json_evac.layers[0].entries = json.layers[0].entries.concat();
+        		json = json_evac;
+        	}
+        }
         if ( json.layers ){
             this._onLoad_SRC_URL(json.layers, this._loadingData[ this.currentFileIndex ].url);
         }
@@ -11685,6 +12260,10 @@ GSI.LayersJSON = L.Class.extend( {
 			if ( tree[i].type == "Layer" )
 			{
 				var info = tree[i];
+				if( info.url.indexOf('http://maps.gsi.go.jp/') != -1 || info.url.indexOf('http://cyberjapandata.gsi.go.jp/') != -1 )
+				{
+					info.url=info.url.replace('http://','//');
+				}
 				info.layerType = this._url2LayerType( info.url );
 				if ( info.cocotile  )
 				{
@@ -13079,6 +13658,79 @@ GSI.Modal.FileSelectDialog = GSI.Modal.Dialog.extend( {
 				alert( 'ソースが入力されていません' );
 			}
 		}
+	},
+	onNegativeButtonClick : function()
+	{
+		this.hide();
+		this.fire( 'negative' );
+	}
+} );
+
+/************************************************************************
+ L.Class
+ - GSI.Modal.BaseClass
+   - GSI.Modal.Dialog
+     - GSI.Modal.confirmDialog（免責事項選択ダイアログ）
+ ************************************************************************/
+GSI.Modal.confirmDialog = GSI.Modal.Dialog.extend( {
+	options : {
+		positiveButtonText : 'ＯＫ',
+		nagativeButtonText : 'キャンセル',
+		title : "免責事項・ご利用上の注意"
+		,message : ""
+		,width : 460
+	},
+	getContent : function()
+	{
+		var frame = $( '<div>' ).css({'height':'280px','overflow':'auto'}).addClass( 'gsi_modal_dialog_content' );
+		var inframe = $('<div>').css({'margin':'10px'});
+		var liframe1 = $('<div>').css({'margin':'5px 18px 0px 0px'});
+		var liframe2 = $('<div>').css({'margin':'0px 18px 0px 0px'});
+		var frmct = $( '<div>' ).html(GSI.TEXT.EVAC.CONFIRMTOP);
+		var uol = $('<ol>');
+		var li1 = $('<li>').attr({"value":"1"}).html(GSI.TEXT.EVAC.CONFIRMITEM1);
+		var li2 = $('<li>').attr({"value":"2"}).html(GSI.TEXT.EVAC.CONFIRMITEM2);
+		var li3 = $('<li>').attr({"value":"3"}).html(GSI.TEXT.EVAC.CONFIRMITEM3);
+		var atten = $( '<div>' ).html(GSI.TEXT.EVAC.ATTENTION);
+
+		var dol = $('<ol>');
+		var dli1 = $('<li>').attr({"value":"1"}).html(GSI.TEXT.EVAC.DATAITEM1);
+		var dli2 = $('<li>').attr({"value":"2"}).html(GSI.TEXT.EVAC.DATAITEM2);
+		var dli3 = $('<li>').attr({"value":"3"}).html(GSI.TEXT.EVAC.DATAITEM3);
+		var dli4 = $('<li>').attr({"value":"4"}).html(GSI.TEXT.EVAC.DATAITEM5);
+		var datten = $( '<div>' ).html(GSI.TEXT.EVAC.ATTENTIONDATA);
+
+		uol.append(li1);
+		uol.append(li2);
+		uol.append(li3);
+		liframe1.append(atten);
+		liframe1.append(uol);
+
+		dol.append(dli1);
+		dol.append(dli2);
+		dol.append(dli3);
+		dol.append(dli4);
+		liframe2.append(datten);
+		liframe2.append(dol);
+
+		inframe.append(frmct);
+		inframe.append(liframe1);
+		inframe.append(liframe2);
+
+		frame.append(inframe);
+		var titleFrame = $( '<div>' ).addClass('gsi_modal_dialog_header').html( this.options.title );
+
+		var dialogFrame = GSI.Modal.Dialog.prototype.getContent.call( this );
+
+		this.dialogContent.append( titleFrame );
+		this.dialogContent.append( frame );
+
+		return dialogFrame ;
+	},
+	onPositiveButtonClick : function()
+	{
+		this.hide();
+		this.fire('positive');
 	},
 	onNegativeButtonClick : function()
 	{
@@ -19337,6 +19989,24 @@ var startUpZoom   = "";
 
 function initialize_proc()
 {
+	GSI.GLOBALS.evacManager = new GSI.EvacuationManager(GSI.GLOBALS.queryParams);
+
+	if ((GSI.GLOBALS.queryParams.params["ls"] && GSI.GLOBALS.queryParams.params["ls"].indexOf(CONFIG.layerEvacuationHeader)>=0) || 
+	        (GSI.GLOBALS.queryParams.params["lcd"] && GSI.GLOBALS.queryParams.params["lcd"].indexOf(CONFIG.layerEvacuationHeader)>=0) ) 
+	{
+		var cfdlg = new GSI.Modal.confirmDialog();
+		cfdlg.onPositiveButtonClick = L.bind(confirmOKClick, this, cfdlg);
+		cfdlg.onNegativeButtonClick = L.bind(confirmCancelClick, this, cfdlg);
+		cfdlg.show();
+	}
+	else
+	{
+		this.initialize_proc_sub();
+	}
+};
+
+function initialize_proc_sub()
+{
 	ctrlSetting = GSI.GLOBALS.queryParams.getControlSetting();
 	viewSetting = GSI.GLOBALS.queryParams.getViewSetting();
 
@@ -19362,6 +20032,7 @@ function initialize_proc()
     var vBaseBrankLayer = L.tileLayer('', { minZoom: 2, maxZoom: 18 });
 	GSI.GLOBALS.map.addLayer(vBaseBrankLayer);
 
+	GSI.GLOBALS.evacDialog = new GSI.EvacDialog();
 	
 	// スクロール後に正しい位置へ移動
 	GSI.GLOBALS.map.on( 'moveend', function()
@@ -19610,6 +20281,9 @@ function initialize_proc_map()
 	// ズームコントロール
 	GSI.GLOBALS.map.addControl(new L.Control.Zoom({position:"bottomleft"}));
 
+	GSI.GLOBALS.confirmDlg
+	= new GSI.Modal.confirmDialog();
+
 	//出典
 	var cs = GSI.GLOBALS.queryParams.getControlSetting();
 	if(cs.header.visible == false)
@@ -19760,6 +20434,26 @@ function initialize_proc_map()
 
     GSI.GLOBALS.hash_options = new GSI.HashOptions(GSI.GLOBALS.map);
     GSI.GLOBALS.hash.bind(GSI.GLOBALS.hash_options, GSI.GLOBALS.hash_options.Callback);
+};
+function confirmOKClick( dlg )
+{
+	dlg.hide();
+	GSI.GLOBALS.evacManager.accept();
+	initialize_proc_sub();
+
+	if ( GSI.GLOBALS.evacManager.isVisibleDialog() == true)
+	{	
+		GSI.GLOBALS.evacDialog.show();
+	}
+	CONFIG.layerEvacuationIsConfirmOK = true;
+};
+
+function confirmCancelClick( dlg )
+{
+	dlg.hide();
+	GSI.GLOBALS.evacManager.cancel();
+	initialize_proc_sub();
+	CONFIG.layerEvacuationIsConfirmOK = false;
 };
 
 function Vectors(){
