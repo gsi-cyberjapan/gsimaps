@@ -256,6 +256,8 @@ function InitGet(){
                 var nItem = d[n].split(",");
                 var nItemID      = "";
                 var nItemOpacity = 1;
+                var nMultiply = 0;
+                
                 if(nItem.length >= 2){
                     nItemID      = nItem[0];
                     try{
@@ -266,11 +268,13 @@ function InitGet(){
                 else{
                     nItemID      = nItem[0];
                 }
+                nMultiply = mpflag(ret["blend"], n, nItemID);
 
                 var dItem = {
                       id        : nItemID
                     , opacity   : nItemOpacity
                     , grayscale : false
+                    , multiplytile : nMultiply
                 };
                 if(n == 0){
                     if(ret["base_grayscale"] && ret["base_grayscale"] == "1"){
@@ -287,6 +291,7 @@ function InitGet(){
                     id        : CONFIG.layerBaseDefaultID
                 , opacity   : 1
                 , grayscale : false
+                , mutiplytile : 0
             };
 
             ret["ls"].push(dItem);
@@ -604,6 +609,7 @@ var InitLoadLayersTxt_ProcSrc = function(){
                                 , zoom_native : d.maxNativeZoom ? d.maxNativeZoom : null
                                 , opacity     : args["ls"][n].opacity
                                 , grayscale   : args["ls"][n].grayscale
+                                , multiplytile : args["ls"][n].multiplytile
                             };
                             vLayers.push(dItem);
 
@@ -2317,7 +2323,16 @@ function LoadLayersCanvas(oTextureCanvas_2D, vUrl, vTile, nx, ny, wTileImg, hTil
             oTextureCanvas_2D.putImageData(oCanvasGrayScale, nx * wTileImg, ny * hTileImg, 0, 0, wTileImg, hTileImg);
         }
         else{
-            oTextureCanvas_2D.drawImage(vTile, 0, 0, 256 ,256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
+        	if (vUrl.multiplytile == 0)
+        	{
+              oTextureCanvas_2D.drawImage(vTile, 0, 0, 256 ,256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
+            }
+            else
+            {
+              oTextureCanvas_2D.globalCompositeOperation = "multiply";
+              oTextureCanvas_2D.drawImage(vTile, 0, 0, 256 ,256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
+              oTextureCanvas_2D.globalCompositeOperation = "source-over";
+            }
         }
         oTextureCanvas_2D.globalAlpha = 1.0;
 
@@ -3124,6 +3139,26 @@ function SceneRender(){
 	    oRenderer.render(oScene, oCamera);
     }
 };
+
+function mpflag(param, x, id){
+  if (!param)
+  {
+    if (id.indexOf("relief") >= 0)
+    {
+      return 1;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+  if (x < 1)
+  {
+    return 0;
+  }
+  return param.charAt(x - 1);
+};
+
 
 /*-----------------------------------------------------------------------------------------------*/
 // ダウンロード

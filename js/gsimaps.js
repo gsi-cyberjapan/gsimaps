@@ -2985,6 +2985,7 @@ GSI.Links.getURL = function( id, center, z, bounds){
         args += "&lon=" + center.lng;
         args += "&pxsize=2048";
         args += "&"     + GSI.GLOBALS.pageStateManager.getLayersQueryString({visibleOnly:true})
+        args += "&"     + GSI.GLOBALS.pageStateManager.getBlendSetting({visibleOnly:true})
 
         return "./index_3d.html" + args;
 	}
@@ -3462,6 +3463,45 @@ L.LatLng.prototype.distanceTo = function (other) {
 	else
 		return L.LatLng.prototype._originalDistanceTo.call( this,other );
 	
+};
+
+GSI.Utils.setMixBlendMode = function( item, flg )
+{
+	if ( item._visibleInfo.layer._container == null )
+	{
+		return;
+	}
+	if ( GSI.Utils.Browser.ie )
+	{
+		return;
+	}
+	if ( (flg === undefined) || (flg == null) )
+	{
+		//flg = false;
+		return;
+	}
+	if ( ( flg != true ) && ( flg != "1" ) )
+	{
+		flg = false;
+	}
+	if ( flg == "1" )
+	{
+		flg = true;
+	}
+	var el = item._visibleInfo.layer._container.getAttribute('style');
+	if ( el )
+	{
+	    el = el.replace("mix-blend-mode: multiply; ", "");
+	}
+	else
+	{
+	    el = "";
+	}
+	if ( flg == true )
+	{
+		el = "mix-blend-mode: multiply; " + el;
+	}
+    item._visibleInfo.layer._container.setAttribute('style', el);
 };
 
 /************************************************************************
@@ -5264,7 +5304,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		        for(var i = 0; i < this.visibleLayers.length; i++){
 			        var l = this.visibleLayers[i];
                     if(l.info != null){
-			            this.mapLayerList.append(l.info, true, l.hidden);
+			            this.mapLayerList.append(l.info, true, l.hidden,null,l.blend);
                     }
                 }
                 this.visibleLayers.length = 0;
@@ -5961,7 +6001,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         else{
 		    if(!this.mapLayerList.exists(item))
 		    { 
-		    	this.mapLayerList.append(item);
+		        if ( item.id.indexOf("relief") >= 0 )
+		        {
+		            this.mapLayerList.append(item, null, null, null, true);
+		        }
+		        else
+		        {
+		    	    this.mapLayerList.append(item);
+		        }
     		    GSI.Utils.sendSelectedLayer(this._current_id);
 
 		    }
@@ -8509,6 +8556,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 
 		var ls = this.pageStateManager.getLayersQueryString();
         var disp = this.pageStateManager.getTileViewSetting();
+        var bl = this.pageStateManager.getBlendSetting();
 		if ( this._layerpCheck.is( ':checked' ) )
 		{
 			if ( ls != '' )
@@ -8530,7 +8578,10 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 				    queryString += ( queryString != '' ? '&' : '#' ) + ls;
                 }
 			}
-			
+			if ( bl != '')
+			{
+				queryString += ( queryString != '' ? '&' : '#' ) + bl;
+			}
 			if ( disp != '' )
 			{
                 if(fBassLS_Trim){
@@ -9193,6 +9244,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         var vClass = 'item_frame';
         var vClassTitle = 'title';
         var fBaseMap = false;
+        var enablemt = false;
         if(item.parent && item.parent.title_sys && item.parent.title_sys == CONFIG.layerBaseFolderSYS){
             vClass   = 'item_frame_fixed';
             vClassTitle = 'title_base';
@@ -9200,6 +9252,17 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         }
         a.addClass( vClass );
 
+        if ( (!GSI.Utils.Browser.ie) && (item.url) && (!fBaseMap) )
+        {
+            var regext = /\.png$|\.jpg$|\.jpeg$/g;
+            var hit = regext.exec(item.url);
+            if ( (hit) && (hit.length > 0) )
+            {
+                vClassTitle = 'title_mt';
+                enablemt = true;
+            }
+        
+        }
 		var frame = $( '<div>' );
 		if ( isTile ) frame.addClass( 'tille' );
 		li.data( { 'data' : item } );
@@ -9260,6 +9323,29 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		        li.append( grayScaleElement);
             }
         }
+        else
+        {
+            //乗算
+            if (enablemt)
+            {
+            	//if (item.id.indexOf("relief") >= 0)
+            	//{
+            	//	item._visibleInfo.blend = true;
+            	//}
+            	
+                var mp = new GSI.ToggleSwitch( {className:'toggle', checked:(item._visibleInfo.blend)} );
+                //var mp = new GSI.OnOffSwitch( {className:'filetext', checked:(item._visibleInfo.blend)} );
+                var mpElement = mp.getElement();
+                mpElement.addClass("multiplytile");
+                mpElement.on( 'change', L.bind(this._onBlendSwitchChange, this, a, mp ) );
+ 
+                li.append( mpElement );
+                if (item._visibleInfo.blend == true)
+                {
+                	this._blendTile(a, item._visibleInfo.blend);
+                }
+            }
+        }
         // 透過
         var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
 		var opacityPercentage = Math.round( 100 - ( opacity * 100 ) );
@@ -9308,7 +9394,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		{
 			var l = visibleLayers[i];
 			if(l && l.info){
-				GSI.GLOBALS.mapLayerList.append(l.info, true,l.hidden);
+				GSI.GLOBALS.mapLayerList.append(l.info, true,l.hidden, null, l.blend);
 			}
 		}
 
@@ -9402,6 +9488,11 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 			}
         }
 
+        if ( item._visibleInfo.blend )
+        {
+            this._blendTile(a, item._visibleInfo.blend);
+        }
+
 		var cocoVisible = this.cocoTileLayer.getVisible();
 		if (cocoVisible && item.cocotile && !item.hasTile )
 		{
@@ -9440,6 +9531,19 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 	_onLayerMouseLeave : function( a, item )
 	{
 		this._hideItemTooltip( a, item );
+	},
+	_onBlendSwitchChange : function( a, mp )
+	{
+		/*
+       	if (GSI.Utils.Browser.ie)
+       	{
+       		alert('この機能はインターネットエクスプローラーではご利用いただけません。');
+       		return;
+       	}
+       	*/
+       	var item = a.data( 'data' );
+       	item._visibleInfo.blend = mp.checked();
+       	this._blendTile( a, mp.checked() );
 	},
 	_makeToolTip : function( item )
 	{
@@ -9693,7 +9797,36 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 	    GSI.GLOBALS.evacDialog.hide();
 		CONFIG.layerEvacuationIsConfirmOK = false;
 	    return false;
-	}
+	},
+	_blendTile : function ( a, flg )
+	{
+       	if (GSI.Utils.Browser.ie)
+       	{
+       		//alert('この機能はインターネットエクスプローラーではご利用いただけません。');
+       		return;
+       	}
+
+		var item = a.data('data');
+		GSI.Utils.setMixBlendMode( item, flg );
+		/*
+		var tileId = getblendTileSetting(item.id);
+
+		var el = item._visibleInfo.layer._container.getAttribute('style');
+		if ( el )
+		{
+		    el = el.replace("mix-blend-mode: multiply; ", "");
+		}
+		else
+		{
+		    el = "";
+		}
+		if ( flg == true)
+		{
+			el = "mix-blend-mode: multiply; " + el;
+		}
+	    item._visibleInfo.layer._container.setAttribute('style', el);
+		*/
+	},
 });
 
 GSI.OpacitySlider = L.Class.extend( {
@@ -10773,6 +10906,12 @@ GSI.HashOptions = L.Class.extend( {
             // 基本設定：表示中のレイヤーを共有
             // ls=
             v = GSI.GLOBALS.pageStateManager.getLayersQueryString();
+            if(v != ""){
+                hash += "&" + v;
+            }
+            
+            //基本設定：乗算の設定
+            v = GSI.GLOBALS.pageStateManager.getBlendSetting();
             if(v != ""){
                 hash += "&" + v;
             }
@@ -11973,7 +12112,8 @@ GSI.LayersJSON = L.Class.extend( {
 				id : layerData.id,
 				idx : this.visibleLayers.length,
 				initialOpacity : layerData.opacity,
-				hidden : layerData.hidden
+				hidden : layerData.hidden,
+				blend : layerData.blend
 			};
 
             if(!(layerData.id in this.visibleLayersHash)){
@@ -12349,7 +12489,7 @@ GSI.MapLayerList = L.Class.extend( {
 			this.append( infoList[i], true, isHide );
 		}
 	},
-	append : function( info, noFinishMove, isHide ,Confirm_FLAG)
+	append : function( info, noFinishMove, isHide ,Confirm_FLAG, blend)
 	{
 		if ( this.exists( info ) ) return;
 		if ( info.id=="kokuarea" )
@@ -12366,6 +12506,14 @@ GSI.MapLayerList = L.Class.extend( {
 		}
 		info._visibleInfo = {};
 		info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
+		if ( ( blend === undefined ) || ( blend == null ) )
+		{
+		    info._visibleInfo.blend = false;
+		}
+		else
+		{
+		    info._visibleInfo.blend = ( blend == "1" ? true : false );
+		}
 		info.initialOpacity = null;
 		
 		if ( info.layerType=="tile" )
@@ -12396,6 +12544,7 @@ GSI.MapLayerList = L.Class.extend( {
                 }
                 else{
 				    this.map.addLayer(info._visibleInfo.layer,true);
+				    GSI.Utils.setMixBlendMode( info, blend );
                 }
             }
 
@@ -13921,6 +14070,117 @@ GSI.OnOffSwitch = L.Class.extend( {
 		return this.input.is( ':checked' );
 	}
 });
+/************************************************************************
+ L.Class
+ - GSI.ToggleSwitch
+ ************************************************************************/
+GSI.ToggleSwitch = L.Class.extend( {
+	includes: L.Mixin.Events,
+	options : {
+		className : "toggle",
+		checked:true,
+		onText:"ON",
+		offText:"OFF"
+	},
+	classNames : {
+		"toggle":"gsi_onoffswitch_toggle",
+	},
+	initialize : function (options)
+	{
+		options = L.setOptions(this, options);
+
+		this._create();
+	},
+	getElement : function()
+	{
+		return this.frame;
+	},
+	getCheckBox : function()
+	{
+		return this.input;
+	},
+	getId : function()
+	{
+		return this.id;
+	},
+	_create : function()
+	{
+		var id = 'GSI_ToggleSwitch_' + GSI.Utils.getCurrentID();
+		this.id = id;
+
+		this.frame = $("<span>").addClass( this.classNames[ this.options.className ] );
+		this.input = $( '<input>' ).attr( {
+				'type' : 'checkbox',
+				'id' : id
+			} ).addClass( 'checkbox' );
+		this.frame.append(this.input);
+		if ( this.options.checked )
+		{
+			this.input.attr({"checked": true} );
+		}
+
+		var label = $( '<label>' ).addClass( 'label' ).attr( {
+				'for' : id
+			} );
+
+		var span = $( '<span>' ).addClass( 'inner' );
+		label.append( span );
+
+		span = $( '<span>' ).addClass( 'switch' );
+		label.append( span );
+
+		this.frame.append( label );
+
+		if ( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8 )
+		{
+			this._initCheckBoxIE8();
+			this.frame.click( L.bind( this.onFrameClick, this  ) );
+		}
+		else
+		{
+			this.input.click( L.bind( function(){this.fire( 'change' );}, this  ) );
+		}
+	},
+	_initCheckBoxIE8 : function()
+	{
+		if ( this.input.is( ":checked" ) )
+		{
+			this.frame.find( '.label,.inner' ).addClass("on_label_inner");
+			this.frame.find( '.label,.switch' ).addClass("on_label_switch");
+		}
+		else
+		{
+			this.frame.find( '.label,.inner' ).removeClass("on_label_inner");
+			this.frame.find( '.label,.switch' ).removeClass("on_label_switch");
+		}
+	},
+	onFrameClick : function()
+	{
+		this.input.attr({"checked": !this.input.is( ":checked" )} );
+		this._initCheckBoxIE8();
+		this.fire( 'change' );
+	},
+	checked : function( value)
+	{
+		if ( value == true )
+		{
+			this.input.attr( {"checked": true} );
+			this.input.prop( {"checked": true} );
+		}
+		else if ( value == false )
+		{
+			this.input.attr( {"checked": false} );
+			this.input.prop( {"checked": false} );
+		}
+		
+		if ( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8 )
+		{
+			this._initCheckBoxIE8();
+		}
+		
+		return this.input.is( ':checked' );
+	}
+});
 
 /************************************************************************
  L.Class
@@ -13971,7 +14231,8 @@ GSI.PagePrinter = L.Class.extend( {
 			{
 				this._map.removeLayer( tileList[i]._visibleInfo.layer );
                 if(tileList[i].parent && tileList[i].parent.title_sys != CONFIG.layerBaseFolderSYS){
-				    this._originalMap.addLayer ( tileList[i]._visibleInfo.layer );
+					this._originalMap.addLayer ( tileList[i]._visibleInfo.layer, null, tileList[i]._visibleInfo.blend) ;
+					GSI.Utils.setMixBlendMode( tileList[i], tileList[i]._visibleInfo.blend );
                 }
 			}
 			tileList[i]._printInfo = null;
@@ -14046,7 +14307,9 @@ GSI.PagePrinter = L.Class.extend( {
                     fBase = true;
                 }
                 else{
-    				this._map.addLayer( tileList[i]._visibleInfo.layer );
+    				this._map.addLayer( tileList[i]._visibleInfo.layer, null, tileList[i]._visibleInfo.blend );
+    				GSI.Utils.setMixBlendMode( tileList[i], tileList[i]._visibleInfo.blend );
+			
                 }
 			}
 		}
@@ -14499,6 +14762,46 @@ GSI.PageStateManager = L.Class.extend( {
 		{
 			return "";
 		}
+	},
+	getBlendSetting : function ( options ) {
+		if ( !options )options = {};
+
+        var result_blend     = '';
+		var tileIdList = [];
+		if ( !options.noTile )
+		{
+			var tileList = this._mapLayerList.getTileList();
+
+			for ( var i=0; i<tileList.length; i++ )
+				tileIdList.push( tileList[i] );
+		}
+
+		for ( var i=tileIdList.length-1; i>=0; i-- )
+		{
+            var fList = true;
+            if(options.visibleOnly){
+                fList = false;
+                if(tileIdList[i]._visibleInfo && !tileIdList[i]._visibleInfo._isHidden){
+                    fList = true;
+                }
+            }
+
+            if(fList){
+                flist = true;
+	            if(i != tileIdList.length-1){
+	              var l = tileIdList[i]._visibleInfo.blend? "1": "0";
+	              result_blend += l;
+	            }
+            }
+		}
+		if (result_blend != "")
+		{
+			return "blend=" + result_blend;
+		}
+		else
+		{
+		    return result_blend;
+		}
 	}
 } );
 
@@ -14731,12 +15034,30 @@ GSI.QueryParams = L.Class.extend( {
 			
 			var layers = this.params["ls"].split( '|' );
             
+            var blds = this.params["blend"];
+            
 			for ( var i=0; i<layers.length; i++ )
 			{
 				if ( $.trim( layers[i] ) == '' ) continue;
 				var parts  = layers[i].split( ',' );
 				var $hdn = false;
 
+                var bld = "0";
+                if (i > 0)
+                {
+                	if ( blds )
+                	{
+                		bld = blds.charAt( i - 1 );
+                	}
+                	else
+                	{
+                		if ( parts[ 0 ].indexOf("relief") >= 0 )
+                		{
+                			bld = "1"
+                		}
+                	}
+                }
+                
 				if ( disp && disp.length > i)
 				{
 					if ( disp.charAt(i) == '0' )
@@ -14780,7 +15101,8 @@ GSI.QueryParams = L.Class.extend( {
 				var layerData = {
 					id      :vID,
 					opacity : 1,
-					hidden  : $hdn
+					hidden  : $hdn,
+					blend   : bld
 				};
 
 				if ( parts.length >= 2 )

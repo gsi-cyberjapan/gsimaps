@@ -2293,6 +2293,15 @@ form {
     -webkit-user-select  :none;
 }
 
+.viewlistdialog_ul li a.item .title_mt
+{
+	padding-left: 32px;
+	padding-right: 140px;
+
+    -webkit-touch-callout:none;
+    -webkit-user-select  :none;
+}
+
 .viewlistdialog_ul li a.item .pankuzu
 {
 	padding-left: 32px;
@@ -2424,6 +2433,48 @@ form {
 .viewlistdialog_ul li .layerinfo .description *
 {
 	font-size:9pt;
+
+    -webkit-touch-callout:none;
+    -webkit-user-select  :none;
+}
+
+.viewlistdialog_ul li .multiplytile
+{
+	color:#900;
+	position: absolute;
+	right:105px;
+	top:18px;
+	font-size:10px;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	padding:0px;
+
+    white-space:nowrap;
+
+	z-index:10;
+
+    -webkit-touch-callout:none;
+    -webkit-user-select  :none;
+}
+
+.viewlistdialog_ul li .multiplytile_label
+{
+	color:#000;
+	position: absolute;
+	right:105px;
+	top:3px;
+	font-size:10px;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	padding:0px;
+
+    white-space:nowrap;
+
+	z-index:10;
 
     -webkit-touch-callout:none;
     -webkit-user-select  :none;
@@ -4273,6 +4324,95 @@ form {
 	padding:0px 4px 0px 4px;
 }
 
+.gsi_onoffswitch_toggle {
+    position: relative; width: 30px;
+    -webkit-user-select:none; 
+    -moz-user-select:none;
+     -ms-user-select: none;
+    
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align:bottom;
+}
+.gsi_onoffswitch_toggle .checkbox {
+    display: none;
+}
+.gsi_onoffswitch_toggle .label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 1px solid #333; 
+    
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(border-radius.htc);
+}
+.gsi_onoffswitch_toggle .inner {
+    display: block; 
+    #width: 100%; 
+    width: 200%; 
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.gsi_onoffswitch_toggle .inner:before, .gsi_onoffswitch_toggle .inner:after {
+    display: block; float: left; 
+    width: 50%; 
+    height: 20px; padding: 0; line-height: 20px;
+    font-size: 9px; color: white;  font-weight: normal;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.gsi_onoffswitch_toggle .inner:before {
+    content: "解除";
+    #padding-left: 3px;
+    #padding-left: 4px;
+    background-color: #2B7396; color: #EEE;
+    text-align: center;
+    #text-align: left;
+}
+.gsi_onoffswitch_toggle .inner:after {
+    content: "合成";
+    #padding-left:3px;
+    #padding-right:4px;
+    background-color: #EEEEEE; color: #AAA;
+    text-align: center;
+    #text-align: right;
+}
+.gsi_onoffswitch_toggle .switch {
+    display: none; width: 5px; margin: 0px;
+    #display: block; width: 5px; margin: 0px;
+    background: #333;
+    border: 1px solid #555; 
+    
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	behavior: url(border-radius.htc);
+	
+    position: absolute; top: 0; bottom: 0; right: 70px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.gsi_onoffswitch_toggle .checkbox:checked + .label  .inner  {
+    margin-left: 0;
+}
+
+.gsi_onoffswitch_toggle .checkbox:checked +  .label  .switch {
+    right: 0; 
+}
+
+.gsi_onoffswitch_toggle .on_label_inner  {
+    margin-left: 0;
+}
+
+.gsi_onoffswitch_toggle .on_label_switch {
+    right: 0; 
+}
 
 /* Old IE */
 
