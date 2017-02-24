@@ -5996,6 +5996,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				{
 					GSI.GLOBALS.evacDialog.show();
 				}
+    		    GSI.Utils.sendSelectedLayer(this._current_id);
             }
         }
         else{
