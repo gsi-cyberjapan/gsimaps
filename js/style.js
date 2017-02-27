@@ -63,7 +63,7 @@ geojsonOptions:{
           var div = document.createElement("div");
           div.innerHTML = feature.properties[name];
           var photoUrl = div.querySelector("a").href;
-          s['photoUrl']=s['photoUrl'].replace('http://saigai.gsi.go.jp/','https://saigai.gsi.go.jp/');
+          photoUrl=photoUrl.replace('http://saigai.gsi.go.jp/','https://saigai.gsi.go.jp/');
           s += "<tr><td colspan='2'>"
                + "<a href='" + photoUrl + "' target='_blank'>"
                + "<img src='" + photoUrl +"' alt='写真' width=300px>"
