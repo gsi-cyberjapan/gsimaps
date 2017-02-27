@@ -13,6 +13,7 @@ geojsonOptions:{
       }
     }
     if(feature.properties['_markerType']=='Icon'){
+      s['iconUrl']=s['iconUrl'].replace('http://cyberjapandata.gsi.go.jp/','//maps.gsi.go.jp/');
       var myIcon = L.icon(s);
       return L.marker(latlng, {icon: myIcon});
     }
