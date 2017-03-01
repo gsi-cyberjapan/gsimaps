@@ -614,7 +614,7 @@ GSI.TEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等�
 GSI.TEXT.EVAC.CONFIRMITEM3 = '指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。';
 GSI.TEXT.EVAC.ATTENTIONDATA = '【データについて】';
 GSI.TEXT.EVAC.DATAITEM1 = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>';
-GSI.TEXT.EVAC.DATAITEM2 = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">操作方法</a>';
+GSI.TEXT.EVAC.DATAITEM2 = '<a href="http://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">利用方法</a>';
 GSI.TEXT.EVAC.DATAITEM3 = '<a href="http://disaportal.gsi.go.jp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>';
 GSI.TEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
 
