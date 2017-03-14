@@ -4043,6 +4043,33 @@ function Draw3DGEOData()
 			mesh.position.set( point.x, point.y, point.z );
 			mesh.scale.set( iconSize.w,iconSize.h, 1.0 );
 			
+			var img = new Image();
+			img.style.width = iconSize.w;
+			img.style.height = iconSize.h;
+			img.width = iconSize.w;
+			img.height = iconSize.h;
+			img._iconNo = iconNo;
+			img.crossOrigin = "anonymous";
+			img.onload = function()
+			{
+				try
+				{
+					if ( !oIconTextureCanvas )
+					{
+						oIconTextureCanvas = document.createElement('canvas');
+						oIconTextureCanvas.width = 512;
+						oIconTextureCanvas.height = 512;
+					}
+					var destX = ( (this._iconNo % 16 ) * 32 );
+					var destY = ( Math.floor(this._iconNo / 16) * 32 );
+					var iconTexture = oIconTextureCanvas.getContext('2d');
+					iconTexture.drawImage( this, destX, destY, 32, 32 );
+				}
+				catch(e){
+				}
+			};
+			img.src = url;
+			
 			/*
 			var geometry = new THREE.PlaneGeometry(iconSize.w, iconSize.h,1,1);
 			

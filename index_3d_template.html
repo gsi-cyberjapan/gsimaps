@@ -307,32 +307,24 @@
 					var meshData = oSceneGEODataMeshArr[k];
 					var p = _latLngToPointData( 
 						viewBox, 
-						meshData.point.lng, 
 						meshData.point.lat, 
-						meshData.point.h);
-					meshData.mesh.geometry.vertices[0].x = p.x-(meshData.iconSize.w/2);
-					meshData.mesh.geometry.vertices[0].y = p.y+(meshData.iconSize.h/2);
-					meshData.mesh.geometry.vertices[0].z = p.z;
+						meshData.point.lng, 
+						meshData.point.h );
+					meshData.mesh.position.set( p.x, p.y, p.z );
 					
-					meshData.mesh.geometry.vertices[1].x = p.x+(meshData.iconSize.w/2);
-					meshData.mesh.geometry.vertices[1].y = p.y+(meshData.iconSize.h/2);
-					meshData.mesh.geometry.vertices[1].z = p.z;
-					
-					meshData.mesh.geometry.vertices[2].x = p.x-(meshData.iconSize.w/2);
-					meshData.mesh.geometry.vertices[2].y = p.y-(meshData.iconSize.h/2);
-					meshData.mesh.geometry.vertices[2].z = p.z;
-					
-					meshData.mesh.geometry.vertices[3].x = p.x+(meshData.iconSize.w/2);
-					meshData.mesh.geometry.vertices[3].y = p.y-(meshData.iconSize.h/2);
-					meshData.mesh.geometry.vertices[3].z = p.z;
-					
+					meshData.mesh.updateMatrix();
+					meshData.mesh.matrixWorldNeedsUpdate = true;
 					
 				//var material = new THREE.M
 				}
-				meshData.mesh.geometry.computeFaceNormals();
-				meshData.mesh.geometry.computeVertexNormals();
-				meshData.mesh.geometry.dynamic            = true;
-				meshData.mesh.geometry.verticesNeedUpdate = true;
+			
+				if ( meshData.mesh.geometry )
+				{
+					meshData.mesh.geometry.computeFaceNormals();
+					meshData.mesh.geometry.computeVertexNormals();
+					meshData.mesh.geometry.dynamic            = true;
+					meshData.mesh.geometry.verticesNeedUpdate = true;
+				}
 			}
 		}
     };
@@ -665,16 +657,19 @@
 			else if ( oGeo3DData[i].properties._markerType == "Icon" )
 			{
 				var latlngPoint = {
-					lat : oGeo3DData[i].geometry.coordinates[0],
-					lng : oGeo3DData[i].geometry.coordinates[1],
+					lat : oGeo3DData[i].geometry.coordinates[1],
+					lng : oGeo3DData[i].geometry.coordinates[0],
 					h : oGeo3DData[i].geometry.coordinates[2]
 				};
+				
+			//	latlngPoint.h = 0;
 				var point = _latLngToPointData( 
 					viewBox, 
-					latlngPoint.lng, 
 					latlngPoint.lat, 
+					latlngPoint.lng, 
 					latlngPoint.h);
 				
+				var texture = null;// THREE.ImageUtils.loadTexture( IconTexture );
 				var iconScale = oGeo3DData[i].properties._iconScale;
 				if (!iconScale ) iconScale = 1;
 				
@@ -685,92 +680,70 @@
 				var screenSize = ( nGeomSizeX > nGeomSizeY ? nGeomSizeY :nGeomSizeX );
 				iconSize.w *= (nGeomSizeX / vTextureSizeW);
 				iconSize.h *= (nGeomSizeX / vTextureSizeW);
-				var geometry = new THREE.PlaneGeometry(iconSize.w, iconSize.h,1,1);
-				
-				geometry.computeFaceNormals();
-				geometry.computeVertexNormals();
-				geometry.dynamic            = true;
-				geometry.verticesNeedUpdate = true;
-				
-				//var material = new THREE.MeshBasicMaterial(
-				//	{color:0xff0000, opacity: 0.8,  transparent: true});
-				var imagecanvas = document.createElement('canvas'),
-				imagecontext = imagecanvas.getContext('2d');
+				var material = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false,transparent:true, depthWrite:true } );
+				var img = new Image();
+				img.style.width = 512;
+				img.style.height = 512;
+				img.width = 512;
+				img.height = 512;
+				img._material = material;
+				img._iconNo = iconNo;
+				img._iconSize = iconSize;
+				img.onload = function()
+				{
+					
+					var imagecanvas = document.createElement('canvas');
 
-				imagecanvas.width = iconSize.w;
-				imagecanvas.height = iconSize.h;
-
-			
-				var texture = new THREE.Texture(imagecanvas);
-				texture.needsUpdate = true;
-				texture.minFilter = THREE.LinearFilter;
-				texture.magFilter = THREE.LinearFilter;
-				var material = new THREE.MeshBasicMaterial( {
-					map:texture, depthWrite:false
-				} );
-				material.side = THREE.DoubleSide;
-				var mesh = new THREE.Mesh( geometry, material );
+					imagecanvas.width = 512;
+					imagecanvas.height = 512;
+					var imagecontext = imagecanvas.getContext('2d');
+					
+					imagecontext.drawImage( this, 0, 0, 512, 512 );
+					
+					//for( var i=0; i<iconArr.length; i++ )
+					{
+						var material = this._material;
+						var iconNo = this._iconNo;
+						var iconSize = this._iconSize;
+						
+						var srcX = ( (iconNo % 16 ) * 32 );
+						var srcY = ( Math.floor(iconNo / 16) * 32 );
+						var img02 = imagecontext.getImageData(srcX, srcY, 32, 32);
+						
+						var imagecanvas2 = document.createElement('canvas');
+						imagecanvas2.width = 32;
+						imagecanvas2.height = 32;
+						var imagecontext2 = imagecanvas2.getContext('2d');
+						imagecontext2.putImageData(img02, 0, 0);
+						
+						material.map = new THREE.Texture(imagecanvas2);
+						material.map.needsUpdate = true;
+					}
+				};
+				img.src = IconTexture;
 				
-				iconArr.push( {
-					material :material,
-					canvas : imagecanvas,
-					iconNo : iconNo,
-					iconSize : iconSize
-				} );
+				
+				var mesh = new THREE.Sprite( material );
+				mesh.position.set( point.x, point.y, point.z );
+				mesh.scale.set( iconSize.w,iconSize.h, 1.0 );
+				
 				
 			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
 				oSceneGEODataMeshArr.push( {
 			    	type : "Icon",
 			    	point : latlngPoint,
 			    	mesh:mesh,
-			    	iconSize : iconSize
+			    	iconSize : iconSize,
+		    		iconNo : iconNo
 			    } );
 				oScene.add(mesh);
 				iconNo ++;
 				
+				
 			}
 			
 		}
-		if ( iconArr.length > 0 )
-		{
-			var img = new Image();
-			img.style.width = 256;
-			img.style.height = 256;
-			img.width = 256;
-			img.height = 256;
-			img.onload = function()
-			{
-				
-				var imagecanvas = document.createElement('canvas');
-
-				imagecanvas.width = 256;
-				imagecanvas.height = 256;
-				var imagecontext = imagecanvas.getContext('2d');
-				
-				imagecontext.drawImage( this, 0, 0, 256, 256 );
-				
-				for( var i=0; i<iconArr.length; i++ )
-				{
-					var material = iconArr[i].material;
-					var iconNo = iconArr[i].iconNo;
-					var iconSize = iconArr[i].iconSize;
-					
-					var srcX = ( (iconNo % 8 ) * 32 );
-					var srcY = ( Math.floor(iconNo / 8) * 32 );
-					var img02 = imagecontext.getImageData(srcX, srcY, 32, 32);
-					
-					var imagecanvas2 = document.createElement('canvas');
-					imagecanvas2.width = 32;
-					imagecanvas2.height = 32;
-					var imagecontext2 = imagecanvas2.getContext('2d');
-					imagecontext2.putImageData(img02, 0, 0);
-					
-					material.map.image = imagecanvas2;
-					material.map.needsUpdate = true;
-				}
-			};
-			img.src = IconTexture;
-		}
+		
 	}
 
 	function _draw3DGEODataIcon(geometry,viewBox, data )
