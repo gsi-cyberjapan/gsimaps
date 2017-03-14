@@ -1,0 +1,52 @@
+.leaflet-control-minimap {
+    border:solid 2px #333;
+    background: #333;
+    transition: all .2s;
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
+	-webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
+    z-index: 99999;
+    
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);
+}
+.leaflet-control-minimap .leaflet-map-pane
+{
+	margin:2px;
+}
+.leaflet-control-minimap a {
+    background-color:  #333;
+    background-repeat: no-repeat;
+    z-index: 99999;
+    transition: all .2s;
+}
+
+.leaflet-control-minimap a.minimized {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-radius: 0px;
+}
+
+.leaflet-control-minimap-toggle-display {
+    background-image: url("images/toggle.png");
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+}
+
+/* Old IE */
+.leaflet-oldie .leaflet-control-minimap {
+	border: 1px solid #999;
+}
+
+.leaflet-oldie .leaflet-control-minimap a {
+	background-color: #333;
+}
+
+.leaflet-oldie .leaflet-control-minimap a.minimized {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}

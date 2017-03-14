@@ -1,0 +1,141 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "dem",
+      "title": "標高タイル（基盤地図情報数値標高モデル）",
+      "url": "https://maps.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt",
+      "minZoom": 0,
+      "maxZoom": 14
+    },
+    {
+      "type": "Layer",
+      "id": "demgm",
+      "title": "標高タイル（地球地図全球版標高第2版）",
+      "url": "https://maps.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt",
+      "minZoom": 0,
+      "maxZoom": 8
+    },
+    {
+      "type": "Layer",
+      "id": "dem_png",
+      "title": "標高タイル（基盤地図情報数値標高モデル）PNG",
+      "url": "https://maps.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+      "minZoom": 0,
+      "maxZoom": 14
+    },
+    {
+      "type": "Layer",
+      "id": "demgm_png",
+      "title": "標高タイル（地球地図全球版標高第2版）PNG",
+      "url": "https://maps.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+      "minZoom": 0,
+      "maxZoom": 8
+    },
+    {
+      "type": "Layer",
+      "id": "experimental_dem5a",
+      "title": "基盤地図情報_数値標高モデル(5m)",
+      "url": "https://maps.gsi.go.jp/xyz/experimental_dem5a/{z}/{x}/{y}.geojson",
+      "minZoom": 18,
+      "maxZoom": 18,
+      "html": "<a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+    },
+    {
+      "type": "Layer",
+      "id": "dem5a",
+      "title": "標標高タイル5a",
+      "url": "https://maps.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "dem5b",
+      "title": "標高タイル5b",
+      "url": "https://maps.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20131217dd5",
+      "title": "西之島付近噴火活動 標高タイル（2013年12月17日）",
+      "url": "https://maps.gsi.go.jp/xyz/20131217dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20140216dd5",
+      "title": "西之島付近噴火活動 標高タイル（2014年2月16日）",
+      "url": "https://maps.gsi.go.jp/xyz/20140216dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20140322dd5",
+      "title": "西之島付近噴火活動 標高タイル（2014年3月22日、UAVを用いて作成）",
+      "url": "https://maps.gsi.go.jp/xyz/20140322dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20140704dd5",
+      "title": "西之島付近噴火活動 標高タイル（2014年7月4日、UAVを用いて作成）",
+      "url": "https://maps.gsi.go.jp/xyz/20140704dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20141204dd5",
+      "title": "西之島付近噴火活動 標高タイル（2014年12月4日）",
+      "url": "https://maps.gsi.go.jp/xyz/20141204dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20150301dd5",
+      "title": "西之島付近噴火活動 標高タイル（2015年3月1日、UAVを用いて作成）",
+      "url": "https://maps.gsi.go.jp/xyz/20150301dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20150728dd5",
+      "title": "西之島付近噴火活動 標高タイル（2015年7月28日、UAVを用いて作成）",
+      "url": "https://maps.gsi.go.jp/xyz/20150728dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20151209dd5",
+      "title": "西之島付近噴火活動 標高タイル（2015年12月9日）",
+      "url": "https://maps.gsi.go.jp/xyz/20151209dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20160303dd5",
+      "title": "西之島付近噴火活動 標高タイル（2016年3月3日）",
+      "url": "https://maps.gsi.go.jp/xyz/20160303dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "20160725dd5",
+      "title": "西之島付近噴火活動 標高タイル（2016年7月25日）",
+      "url": "https://maps.gsi.go.jp/xyz/20160725dd5/{z}/{x}/{y}.txt",
+      "minZoom": 15,
+      "maxZoom": 15
+    }
+  ]
+}
