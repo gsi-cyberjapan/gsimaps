@@ -12,7 +12,6 @@
           "id": "skhb01",
           "title": "洪水",
           "url": "https://maps.gsi.go.jp/xyz/skhb01/{z}/{x}/{y}.geojson",
-          "styleurl" : "http://163.42.60.180/dev_fy2016_gsimaps/testdata/style_sk.js",
           "subdomains": "",
           "attribution": "",
           "minZoom": 10,
