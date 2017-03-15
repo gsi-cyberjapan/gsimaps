@@ -2652,7 +2652,6 @@ function LoadLayersProcVectorDataKML_properties(data, data_style){
             data.properties._iconUrl = _icon;
             data.properties._iconScale      = data_style.find("IconStyle").find("scale").text();
             if ( !data.properties._iconScale ) data.properties._iconScale  =1;
-
             data.properties._iconSize      = new Array(2);
             data.properties._iconSize[0]   = 20;
             data.properties._iconSize[1]   = 20;
@@ -4802,7 +4801,8 @@ function DownloadProc(fname,a){
 										_markerType : "Icon",
 										_iconUrl : oGeo3DData[i].properties._iconUrl,
 										_iconSize : oGeo3DData[i].properties._iconSize,
-										_iconAnchor : oGeo3DData[i].properties._iconAnchor
+										_iconAnchor : oGeo3DData[i].properties._iconAnchor,
+										_iconScale : oGeo3DData[i].properties._iconScale
 									},
 									geometry :{
 										coordinates : oGeo3DData[i].geometry.coordinates
