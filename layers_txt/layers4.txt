@@ -17,21 +17,21 @@
               "title": "平成28年茨城県北部の地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "./layers_20161228ibaraki.txt"
+              "src": "//maps.gsi.go.jp/layers_txt/layers_20161228ibaraki.txt"
             },
             {
               "type": "LayerGroup",
               "title": "平成28年鳥取県中部の地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "./layers_20161021tottori.txt"
+              "src": "//maps.gsi.go.jp/layers_txt/layers_20161021tottori.txt"
             },
             {
               "type": "LayerGroup",
               "title": "平成28年熊本地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "./layers_20160414kumamoto.txt"
+              "src": "//maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt"
             },
             {
               "type": "LayerGroup",
@@ -1982,21 +1982,21 @@
              "title": "平成28年糸魚川市駅北大火",
              "iconUrl": "",
              "toggleall": false,
-             "src": "./layers_20161222itoigawa.txt"
+             "src": "//maps.gsi.go.jp/layers_txt/layers_20161222itoigawa.txt"
             },
             {
              "type": "LayerGroup",
              "title": "平成28年台風第10号",
              "iconUrl": "",
              "toggleall": false,
-             "src": "./layers_20160830typhoon10.txt"
+             "src": "//maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt"
             },
             {
              "type": "LayerGroup",
              "title": "平成28年台風第11号及び第9号",
              "iconUrl": "",
              "toggleall": false,
-             "src": "./layers_20160820typhoon11_9.txt"
+             "src": "//maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt"
             },
             {
               "type": "LayerGroup",
