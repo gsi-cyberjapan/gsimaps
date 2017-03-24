@@ -1963,6 +1963,7 @@ GSI.Utils.lpad = function(src, letter, num)
 	return dst + src;
 };
 
+
 L.LatLng.prototype._originalDistanceTo = L.LatLng.prototype.distanceTo;
 L.LatLng.prototype.distanceTo = function (other) {
 	other = L.latLng(other);
@@ -18858,16 +18859,18 @@ GSI.Searcher = L.Class.extend( {
 			if ( qType == this.QUERY_LATLNG  || qType == this.QUERY_LATLNG2)
 			{
 				var latLng = ( qType == this.QUERY_LATLNG ? this.parseLatLngText( query ) : this.parseLatLngText2( query ) );
-
-				if ( latLng[0] < 0 || latLng[0] > 90 || latLng[1] < 0 || latLng[1] > 180 )
+				
+				
+				if ( latLng[0] > 90 || latLng[0] < -90 || latLng[1] > 180 || latLng[1] < -180 )
 				{
 					alert( '緯度経度を正しく入力して下さい\n' +
 						'緯度:' + latLng[0] + ' 経度:' + latLng[1] );
 				}
 				else
 				{
-					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+					this.getDemPng(latLng);
 				}
+				
 			}
 			else if ( qType == this.QUERY_UTMPOINT )
 			{
@@ -18875,7 +18878,7 @@ GSI.Searcher = L.Class.extend( {
 
 				if ( latLng )
 				{
-					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+					this.getDemPng(latLng);
 				}
 				else
 				{
@@ -18890,14 +18893,14 @@ GSI.Searcher = L.Class.extend( {
 				{
 					alert( '緯度経度を正しく入力して下さい\n');
 				}
-				else if ( latLng[0] < 0 || latLng[0] > 90 || latLng[1] < 0 || latLng[1] > 180 )
+				else if ( latLng[0] > 90 || latLng[0] < -90 || latLng[1] > 180 || latLng[1] < -180 )
 				{
 					alert( '緯度経度を正しく入力して下さい\n' +
 						'緯度:' + latLng[0] + ' 経度:' + latLng[1] );
 				}
 				else
 				{
-					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+					this.getDemPng(latLng);
 				}
 			}
 			else if ( qType == this.QUERY_LATLNGNE )
@@ -18908,14 +18911,14 @@ GSI.Searcher = L.Class.extend( {
 				{
 					alert( '緯度経度を正しく入力して下さい\n');
 				}
-				else if ( latLng[0] < 0 || latLng[0] > 90 || latLng[1] < 0 || latLng[1] > 180 )
+				else if ( latLng[0] > 90 || latLng[0] < -90 || latLng[1] > 180 || latLng[1] < -180 )
 				{
 					alert( '緯度経度を正しく入力して下さい\n' +
 						'緯度:' + latLng[0] + ' 経度:' + latLng[1] );
 				}
 				else
 				{
-					this.map.setView( latLng, CONFIG.SEARCHRESULTCLICKZOOM, {reset:true} );
+					this.getDemPng(latLng);
 				}
 			}
 		}
@@ -18978,31 +18981,31 @@ GSI.Searcher = L.Class.extend( {
 		{
 			return this.QUERY_UTMPOINT;
 		}
-		else if( q.match(/^[0-9]+(\.[0-9]+)*[\s,]+[0-9]+(\.[0-9]+)*$/)  )
+		else if( q.match(/^(-|\+)*[0-9]+(\.[0-9]+)*\s+(-|\+)*[0-9]+(\.[0-9]+)*$/)  )
 		{
 			return this.QUERY_LATLNG;
 		}
-		else if ( q.match(/^[0-9]+度[\s]+[0-9]+度$/)
+		else if ( q.match(/^(-|\+)*[0-9]+度[\s]+(-|\+)*[0-9]+度$/)
 			||
-			 q.match(/^[0-9]+度[0-9]+分[\s]+[0-9]+度[0-9]+分$/)
+			 q.match(/^(-|\+)*[0-9]+度[0-9]+分[\s]+(-|\+)*[0-9]+度[0-9]+分$/)
 			||
-			 q.match(/^[0-9]+度[0-9]+分[0-9]+(\.[0-9]+)*秒[\s]+[0-9]+度[0-9]+分[0-9]+(\.[0-9]+)*秒$/)
+			 q.match(/^(-|\+)*[0-9]+度[0-9]+分[0-9]+(\.[0-9]+)*秒[\s]+(-|\+)*[0-9]+度[0-9]+分[0-9]+(\.[0-9]+)*秒$/)
 		)
 		{
 			return this.QUERY_LATLNG2;
 		}
 		else
 		{
-			if ( ( q.match(/^(?:N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)/) )
+			if ( ( q.match(/^(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/) )
 				||
-				( q.match(/^(?:E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)/) ) )
+				( q.match(/^(?:E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/) ) )
 			{
 				//NE表記
 				return this.QUERY_LATLNGNE;
 			}
-			else if ( ( q.match(/^(?:N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) )
+			else if ( ( q.match(/^(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) )
 			 		|| 
-			 		( q.match(/^(?:E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) ) )
+			 		( q.match(/^(?:E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) ) )
 			{
 				//°′″表記
 				return this.QUERY_EXCHANGE;
@@ -19017,50 +19020,71 @@ GSI.Searcher = L.Class.extend( {
 	{
 		s = $.trim(s);
 		s = s.replace( ',', ' ' );
-
-		var matchArr =  s.match( /^([0-9]+)度[\s]+([0-9]+)度$/ );
+		var latwSign;
+		var lngwSign;
+		var matchArr =  s.match( /^(-|\+)*([0-9]+)度[\s]+(-|\+)*([0-9]+)度$/ );
 
 		if ( matchArr && matchArr.length > 0 )
 		{
-			var lat = parseInt( matchArr[1] );
-			var lng = parseInt( matchArr[2] );
-			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			var lat = parseInt( (matchArr[1] ? matchArr[1] : "") + matchArr[2] );
+			var lng = parseInt( (matchArr[3] ? matchArr[3] : "") + matchArr[4] );
+			return [ lat, lng ];
 		}
 
-		matchArr = s.match(/^([0-9]+)度([0-9]+)分[\s]+([0-9]+)度([0-9]+)分$/);
+		matchArr = s.match(/^(-|\+)*([0-9]+)度([0-9]+)分[\s]+(-|\+)*([0-9]+)度([0-9]+)分$/);
 
 		if ( matchArr && matchArr.length > 0 )
 		{
-			var lat = parseInt( matchArr[1] ) + ( parseFloat( matchArr[2] ) / 60.0 );
-			var lng = parseInt( matchArr[3] ) + ( parseFloat( matchArr[4] ) / 60.0 );
-			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			latwSign = (matchArr[1] && matchArr[1] == "-"? -1 : 1);
+			lngwSign = (matchArr[4] && matchArr[4] == "-"? -1 : 1);
+			var lat = parseInt( matchArr[2] ) + ( parseFloat( matchArr[3] ) / 60.0 );
+			var lng = parseInt( matchArr[5] ) + ( parseFloat( matchArr[6] ) / 60.0 );
+
+			lat = lat * latwSign;
+			lng = lng * lngwSign;
+			return [ lat, lng ];
 		}
 
-		matchArr = s.match(/^([0-9]+)度([0-9]+)分([0-9]+)秒[\s]+([0-9]+)度([0-9]+)分([0-9]+)秒$/);
+		matchArr = s.match(/^(-|\+)*([0-9]+)度([0-9]+)分([0-9]+)秒[\s]+(-|\+)*([0-9]+)度([0-9]+)分([0-9]+)秒$/);
 
 		if ( matchArr && matchArr.length > 0 )
 		{
-			var lat = parseInt( matchArr[1] ) + ( parseFloat( matchArr[2] ) / 60.0 ) + ( parseFloat( matchArr[3] ) / 3600.0 );
-			var lng = parseInt( matchArr[4] ) + ( parseFloat( matchArr[5] ) / 60.0 ) + ( parseFloat( matchArr[6] ) / 3600.0 );
-			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			latwSign = (matchArr[1] && matchArr[1] == "-"? -1 : 1);
+			lngwSign = (matchArr[5] && matchArr[5] == "-"? -1 : 1);
+			var lat = parseInt( matchArr[2] ) + ( parseFloat( matchArr[3] ) / 60.0 ) + ( parseFloat( matchArr[4] ) / 3600.0 );
+			var lng = parseInt( matchArr[6] ) + ( parseFloat( matchArr[7] ) / 60.0 ) + ( parseFloat( matchArr[8] ) / 3600.0 );
+
+			lat = lat * latwSign;
+			lng = lng * lngwSign;
+			return [ lat, lng ];
 		}
 
-		matchArr = s.match(/^([0-9]+)度([0-9]+)分([0-9]+\.[0-9]+)秒[\s]+([0-9]+)度([0-9]+)分([0-9]+\.[0-9]+)秒$/);
+		matchArr = s.match(/^(-|\+)*([0-9]+)度([0-9]+)分([0-9]+\.[0-9]+)秒[\s]+(-|\+)*([0-9]+)度([0-9]+)分([0-9]+\.[0-9]+)秒$/);
 
 		if ( matchArr && matchArr.length > 0 )
 		{
-			var lat = parseInt( matchArr[1] ) + ( parseFloat( matchArr[2] ) / 60.0 ) + ( parseFloat( matchArr[3] ) / 3600.0 );
-			var lng = parseInt( matchArr[4] ) + ( parseFloat( matchArr[5] ) / 60.0 ) + ( parseFloat( matchArr[6] ) / 3600.0 );
-			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			latwSign = (matchArr[1] && matchArr[1] == "-"? -1 : 1);
+			lngwSign = (matchArr[5] && matchArr[5] == "-"? -1 : 1);
+			var lat = parseInt( matchArr[2] ) + ( parseFloat( matchArr[3] ) / 60.0 ) + ( parseFloat( matchArr[4] ) / 3600.0 );
+			var lng = parseInt( matchArr[6] ) + ( parseFloat( matchArr[7] ) / 60.0 ) + ( parseFloat( matchArr[8] ) / 3600.0 );
+
+			lat = lat * latwSign;
+			lng = lng * lngwSign;
+			return [ lat, lng ];
 		}
 
-		matchArr = s.match(/^([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒[\s]+([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒$/);
+		matchArr = s.match(/^(-|\+)*([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒[\s]+(-|\+)*([0-9]+)度([0-9]+)分([0-9]+(?:\.[0-9]+)*)秒$/);
 
 		if ( matchArr && matchArr.length > 0 )
 		{
-			var lat = parseInt( matchArr[1] ) + ( parseFloat( matchArr[2] ) / 60.0 ) + ( parseFloat( matchArr[3] ) / 3600.0 );
-			var lng = parseInt( matchArr[4] ) + ( parseFloat( matchArr[5] ) / 60.0 ) + ( parseFloat( matchArr[6] ) / 3600.0 );
-			return [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			latwSign = (matchArr[1] && matchArr[1] == "-"? -1 : 1);
+			lngwSign = (matchArr[5] && matchArr[5] == "-"? -1 : 1);
+			var lat = parseInt( matchArr[2] ) + ( parseFloat( matchArr[3] ) / 60.0 ) + ( parseFloat( matchArr[4] ) / 3600.0 );
+			var lng = parseInt( matchArr[6] ) + ( parseFloat( matchArr[7] ) / 60.0 ) + ( parseFloat( matchArr[8] ) / 3600.0 );
+
+			lat = lat * latwSign;
+			lng = lng * lngwSign;
+			return [ lat, lng ];
 		}
 
 
@@ -19071,12 +19095,12 @@ GSI.Searcher = L.Class.extend( {
 		s = $.trim(s);
 		s = s.replace( ',', ' ' );
 		
-		var matchArr =  s.match(/^(N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
+		var matchArr =  s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
 		var revflg = false;
 		
 		if (!matchArr)
 		{
-			matchArr =  s.match(/^(E|東経)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(N|北緯)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
+			matchArr =  s.match(/^(E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
 			revflg = true;
 		}
 		var lath,latm,lats,lonh,lonm,lons;
@@ -19093,13 +19117,22 @@ GSI.Searcher = L.Class.extend( {
 			
 			var la = lath + latm + lats;
 			var lo = lonh + lonm + lons;
-			
-			if ((revflg) || (!matchArr[1] && !matchArr[5] && ( la > lo )))
+
+			if ( matchArr[1] && (matchArr[1] == 'S' || matchArr[1] == 'W' || matchArr[1] == '南緯' || matchArr[1] == '西経' || matchArr[1] == '-') )
+			{
+				la = -1 * la;
+			}
+			if ( matchArr[5] && (matchArr[5] == 'S' || matchArr[5] == 'W' || matchArr[5] == '南緯' || matchArr[5] == '西経' || matchArr[5] == '-') )
+			{
+				lo = -1 * lo;
+			}
+			if (revflg)
 			{
 				var t = la;
 				la = lo;
 				lo = t;
 			}
+
 			return [la, lo];
 		}
 		return null;
@@ -19109,24 +19142,30 @@ GSI.Searcher = L.Class.extend( {
 	{
 		s = $.trim(s);
 
-		var matchArr = s.match(/^(N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)/)
+		var matchArr = s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/)
 		var revflg = false;
 		
 		if (!matchArr)
 		{
-			matchArr = s.match(/^(E|東経)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(N|北緯)*([0-9]{1,3}(?:\.[0-9]+)*)/)
+			matchArr = s.match(/^(E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/)
 			revflg = true;
 		}
 
 		var lat, lon;
 		try{
-		
 			if (matchArr && matchArr.length == 5)
 			{
 				lat = parseFloat( matchArr[2] );
 				lon = parseFloat( matchArr[4] );
-				
-				if ( (revflg) || (!matchArr[1] && !matchArr[3] && lat > lon) )
+				if ( matchArr[1] && (matchArr[1] == 'S' || matchArr[1] == 'W' || matchArr[1] == '南緯' || matchArr[1] == '西経' || matchArr[1] == '-') )
+				{
+					lat = -1 * lat;
+				}
+				if ( matchArr[3] && (matchArr[3] == 'S' || matchArr[3] == 'W' || matchArr[3] == '南緯' || matchArr[3] == '西経' || matchArr[3] == '-') )
+				{
+					lon = -1 * lon;
+				}
+				if (revflg)
 				{
 					var t = lat;
 					lat = lon;
@@ -19156,7 +19195,7 @@ GSI.Searcher = L.Class.extend( {
 		{
 			var lat = parseFloat( latLng[0] );
 			var lng = parseFloat( latLng[1] );
-			result = [ lat< lng ? lat: lng, lat< lng ? lng: lat ];
+			result =  [ lat, lng ];
 			
 			return result;
 		}
@@ -19164,6 +19203,33 @@ GSI.Searcher = L.Class.extend( {
 		{
 			return null;
 		}
+	},
+	getDemPng : function ( latlng )
+	{
+        var lon = latlng[1] * .017453292519943295; // DEG → RAD : lon = (lon / 180) * Math.PI;
+        var lat = latlng[0] * .017453292519943295; // DEG → RAD : lat = (lat / 180) * Math.PI;
+	    var R	= 128 / Math.PI;
+	    var x = R * (lon + Math.PI);
+	    var y = (-1) * R / 2 * Math.log((1 + Math.sin(lat)) / (1 - Math.sin(lat))) + 128;
+	    var z = 14;
+        var vX_px     = x * Math.pow(2, z);
+        var vY_px     = y * Math.pow(2, z);
+        var vX_Tile   = Math.floor(vX_px / 256);
+        var vY_Tile	  = Math.floor(vY_px / 256);
+		var demUrl = "http://maps.gsi.go.jp/xyz/dem_png/" + z + "/" + vX_Tile + "/" + vY_Tile + ".png";
+	    
+		if ( latlng )
+		{
+			var aj =$.ajax ({
+				type : "GET",
+				url : demUrl,
+				success: L.Util.bind(this.jumpToPoint, this, latlng, CONFIG.SEARCHRESULTCLICKZOOM),
+				error: L.Util.bind(this.jumpToPoint, this, latlng, 5),
+			});
+		}
+	},
+	jumpToPoint : function (latlng, zoom) {
+		this.map.setView(latlng, zoom, {reset : true});
 	}
 } );
 
