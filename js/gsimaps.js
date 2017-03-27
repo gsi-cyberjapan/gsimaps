@@ -18878,7 +18878,7 @@ GSI.Searcher = L.Class.extend( {
 
 				if ( latLng )
 				{
-					this.getDemPng(latLng);
+					this.getDemPng([latLng.lat, latLng.lng], CONFIG.SEARCHRESULTCLICKZOOM);
 				}
 				else
 				{
@@ -19204,7 +19204,7 @@ GSI.Searcher = L.Class.extend( {
 			return null;
 		}
 	},
-	getDemPng : function ( latlng )
+	getDemPng : function ( latlng , errorZoom)
 	{
         var lon = latlng[1] * .017453292519943295; // DEG → RAD : lon = (lon / 180) * Math.PI;
         var lat = latlng[0] * .017453292519943295; // DEG → RAD : lat = (lat / 180) * Math.PI;
@@ -19220,11 +19220,13 @@ GSI.Searcher = L.Class.extend( {
 	    
 		if ( latlng )
 		{
+			var errZoom = errorZoom ? errorZoom : 5;
+			
 			var aj =$.ajax ({
 				type : "GET",
 				url : demUrl,
 				success: L.Util.bind(this.jumpToPoint, this, latlng, CONFIG.SEARCHRESULTCLICKZOOM),
-				error: L.Util.bind(this.jumpToPoint, this, latlng, 5),
+				error: L.Util.bind(this.jumpToPoint, this, latlng, errZoom),
 			});
 		}
 	},
