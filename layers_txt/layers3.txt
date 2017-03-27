@@ -138,7 +138,7 @@
             {
               "type": "Layer",
               "id": "jikizu_chijiki_d",
-              "title": "偏角図/偏角一覧図",
+              "title": "磁気図（偏角）／偏角一覧図",
               "iconUrl": "",
               "url": "https://maps.gsi.go.jp/xyz/jikizu_chijikid/{z}/{x}/{y}.png",
               "subdomains": "",
@@ -147,12 +147,12 @@
               "minZoom": 4,
               "maxZoom": 13,
               "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 偏角図/偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、偏角の分布を図に表したものです。<br/>拡大すると2次メッシュに対応した偏角値（偏角一覧図）が確認できます。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">磁気図（偏角）2010.0年値／偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、偏角の分布を図に表したものです。<br/>拡大すると2次メッシュに対応した偏角値（偏角一覧図）が確認できます。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
               "id": "jikizu_chijiki_i",
-              "title": "伏角図",
+              "title": "磁気図（伏角）",
               "iconUrl": "",
               "url": "https://maps.gsi.go.jp/xyz/jikizu_chijikii/{z}/{x}/{y}.png",
               "subdomains": "",
@@ -161,12 +161,12 @@
               "minZoom": 4,
               "maxZoom": 7,
               "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 伏角図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">磁気図（伏角）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
               "id": "jikizu_chijiki_f",
-              "title": "全磁力図",
+              "title": "磁気図（全磁力）",
               "iconUrl": "",
               "url": "https://maps.gsi.go.jp/xyz/jikizu_chijikif/{z}/{x}/{y}.png",
               "subdomains": "",
@@ -175,12 +175,12 @@
               "minZoom": 4,
               "maxZoom": 7,
               "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 全磁力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、全磁力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">磁気図（全磁力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、全磁力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
               "id": "jikizu_chijiki_h",
-              "title": "水平分力図",
+              "title": "磁気図（水平分力）",
               "iconUrl": "",
               "url": "https://maps.gsi.go.jp/xyz/jikizu_chijikih/{z}/{x}/{y}.png",
               "subdomains": "",
@@ -189,12 +189,12 @@
               "minZoom": 4,
               "maxZoom": 7,
               "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 水平分力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、水平分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">磁気図（水平分力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、水平分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
               "id": "jikizu_chijiki_z",
-              "title": "鉛直分力図",
+              "title": "磁気図（鉛直分力）",
               "iconUrl": "",
               "url": "https://maps.gsi.go.jp/xyz/jikizu_chijikiz/{z}/{x}/{y}.png",
               "subdomains": "",
@@ -203,7 +203,7 @@
               "minZoom": 4,
               "maxZoom": 7,
               "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">磁気図2010.0年値 - 鉛直分力図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、鉛直分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">磁気図（鉛直分力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、鉛直分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
