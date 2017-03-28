@@ -1979,6 +1979,13 @@
           "entries": [
             {
              "type": "LayerGroup",
+             "title": "平成29年栃木県那須町の雪崩",
+             "iconUrl": "",
+             "toggleall": false,
+             "src": "//maps.gsi.go.jp/layers_txt/layers_20170327nasu.txt"
+            },
+            {
+             "type": "LayerGroup",
              "title": "平成28年糸魚川市駅北大火",
              "iconUrl": "",
              "toggleall": false,
