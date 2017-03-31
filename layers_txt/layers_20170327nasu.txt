@@ -12,7 +12,7 @@
       "cocotile": false,
       "minZoom": 15,
       "maxZoom": 18,
-      "html": "平成2年刊行の火山基本図に、現在のスキーリフト位置を表示しました。"
+      "html": "平成2年刊行の火山基本図を基に、現在のスキーリフトの位置等を表示しました。<br>ＰＤＦ版は<a href='http://www1.gsi.go.jp/geowww/Volcano/download/other/vdm20-a-201703.pdf' target='_blank'>こちら</a>。"
     }
   ]
 }
