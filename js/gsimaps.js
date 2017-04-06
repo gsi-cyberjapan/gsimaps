@@ -2429,6 +2429,11 @@ GSI.UTM.Grid = L.Class.extend( {
 	_zoneLabels : [],
 	initialize : function (map, options )
 	{
+		this._lines = [];
+		this._labels = [];
+		this._zoneLines = [];
+		this._zoneLabels = [];
+		
 		this._map = map;
 		this._onMoveEnd = L.bind( this.onMoveEnd, this );
 
