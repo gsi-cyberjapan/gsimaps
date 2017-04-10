@@ -19339,9 +19339,9 @@ GSI.Control.CopyrightPanel = L.Control.extend({
 	options: {
 
 		position: 'bottomright',
-		title:'国土地理院',
+		title:'地理院タイル',
 		linkurl:'http://maps.gsi.go.jp/development/ichiran.html',
-		width: 80,
+		width: 110,
 		height: 10,
 	},
 
@@ -22758,7 +22758,7 @@ function initialize_proc_map()
 	= new GSI.Modal.confirmDialog();
 	
 	var cs = GSI.GLOBALS.queryParams.getControlSetting();
-	if(cs.header.visible == false)
+	if(cs.header.visible == false || GSI.GLOBALS.isCreditShow)
 	{
 		GSI.GLOBALS.map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
 	}
