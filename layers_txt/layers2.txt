@@ -263,6 +263,21 @@
           "html": "<div class=\"gsi_layerinfo_title\">傾斜量図</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
+          "type": "Layer",
+          "id": "slopezone1map",
+          "title": "全国傾斜量区分図（雪崩関連）",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/slopezone1map/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "minZoom": 3,
+          "maxZoom": 18,
+          "maxNativeZoom": 14,
+          "legendUrl": "",
+          "html": "<div class=\"gsi_layerinfo_title\">全国傾斜量区分図（雪崩関連）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
           "type": "LayerGroup",
           "title": "日本の典型地形",
           "iconUrl": "",
