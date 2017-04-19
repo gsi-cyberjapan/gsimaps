@@ -2476,6 +2476,18 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "jin201703",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201703/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "jin201702",
                       "title": "2月更新",
                       "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
@@ -2506,6 +2518,18 @@
                   "iconUrl": "",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201703",
+                      "title": "3月更新",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/men201703/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "legendUrl": "",
+                      "html": ""
+                    },
                     {
                       "type": "Layer",
                       "id": "men201702",
