@@ -3937,10 +3937,9 @@
                  {
                   "type": "Layer",
                   "id": "fgd_dem5a_area_dtil_5",
-                  "title": "┗5ｍメッシュDEM（航空レーザ測量）<br>　提供範囲と作業年度",
+                  "title": "提供範囲",
                   "iconUrl": "",
                    "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/{z}/{x}/{y}.geojson",
-                   "styleurl" : "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/style_canvas.js",
                    "subdomains": "",
                    "attribution": "",
                    "cocotile": true,
@@ -3952,7 +3951,7 @@
                  {
                   "type": "Layer",
                   "id": "fgd_dem5a_area_dtil_12",
-                  "title": "┗5ｍメッシュDEM（航空レーザ測量）<br>　提供範囲と作業年度",
+                  "title": "提供範囲と作業年度",
                   "iconUrl": "",
                    "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/{z}/{x}/{y}.geojson",
                    "styleurl" : "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/style_canvas.js",
