@@ -167,6 +167,21 @@
         },
         {
           "type": "Layer",
+          "id": "ort_riku10",
+          "title": "1936年頃",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort_riku10/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "legendUrl": "",
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1936年頃)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
           "id": "pp",
           "title": "単写真",
           "iconUrl": "",
