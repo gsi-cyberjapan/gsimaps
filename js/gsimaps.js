@@ -19221,7 +19221,7 @@ GSI.Searcher = L.Class.extend( {
         var vY_px     = y * Math.pow(2, z);
         var vX_Tile   = Math.floor(vX_px / 256);
         var vY_Tile	  = Math.floor(vY_px / 256);
-		var demUrl = "http://maps.gsi.go.jp/xyz/dem_png/" + z + "/" + vX_Tile + "/" + vY_Tile + ".png";
+		var demUrl = "https://maps.gsi.go.jp/xyz/dem_png/" + z + "/" + vX_Tile + "/" + vY_Tile + ".png";
 	    
 		if ( latlng )
 		{
