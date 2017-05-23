@@ -386,8 +386,21 @@
         },
         {
           "type": "Layer",
+          "id": "did2015",
+          "title": "人口集中地区 平成27年（総務省統計局）",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/did2015/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 8,
+          "maxZoom": 18,
+          "html": "総務省統計局が提供する、平成27年国勢調査 人口集中地区（DID）境界データです（ズームレベル8～18で表示されます）。ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+        },
+        {
+          "type": "Layer",
           "id": "did2010",
-          "title": "人口集中地区Ｈ２２年（総務省統計局）",
+          "title": "人口集中地区 平成22年（総務省統計局）",
           "iconUrl": "",
           "url": "https://maps.gsi.go.jp/xyz/did2010/{z}/{x}/{y}.png",
           "subdomains": "",
@@ -395,7 +408,7 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 18,
-          "html": "総務省統計局が提供する　平成２２年国勢調査　人口集中地区（ＤＩＤ）境界データです（ズームレベル8～18で表示されます）。ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+          "html": "総務省統計局が提供する、平成22年国勢調査 人口集中地区（DID）境界データです（ズームレベル8～18で表示されます）。ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
         },
         {
           "type": "Layer",
