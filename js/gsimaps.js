@@ -6527,7 +6527,9 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		
 		if ( style != '' )
 			text = '<div style="' + style + '">' + text.replace(/\n/g, '<br>') + '</div>';
-		
+		else
+		    text = text.replace(/\n/g, '<br>');
+		    
 		return text;
 	},
 	
@@ -7006,7 +7008,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			var color = "";
 			var bordering = "";
 			var backgroundColor = "";
-			
 			if ( !text || text == "" )
 			{
 				
@@ -7040,6 +7041,10 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 					
 					this._pointEditTextArea.val(a.text());
 				}
+				else
+				{
+					this._pointEditTextArea.val(text);
+                }
 			}
 			
 			this._pointEditTextFontSizeSelect.val(fontSize );
@@ -23672,7 +23677,6 @@ GSI.VectorTileLayer = L.TileLayer.Canvas.extend( {
 		L.TileLayer.prototype.initialize.call(this, url, options);
 		//L.TileLayer.Ajax.prototype.initialize.call(this, url, options);
         this.geojsonLayer = new L.GeoJSON(null, this.geojsonOptions);
-		
 		if ( options.skipLoadStyle ){
 			
 			//this._defaultLoadStyle();
@@ -23769,16 +23773,18 @@ GSI.VectorTileLayer = L.TileLayer.Canvas.extend( {
 			else data = result;
 			data = eval( "(" + data + ")" );
 			if ( data.geojsonOptions ) this.geojsonOptions =  data.geojsonOptions;
-			for ( var i=0; i<this._tiles.length; i++ ) 
+			if ( this._tiles )
 			{
-				var tile = this._tiles[i];
-				if ( !tile.geoJSON ) continue;
-				for( var j=0; j<tile.geoJSON.length; j++ )
-				{
-					tile.geoJSON[i].options = this.geojsonOptions;
-				}
+    			for ( var i=0; i<this._tiles.length; i++ ) 
+    			{
+    				var tile = this._tiles[i];
+    				if ( !tile.geoJSON ) continue;
+    				for( var j=0; j<tile.geoJSON.length; j++ )
+    				{
+    					tile.geoJSON[i].options = this.geojsonOptions;
+    				}
+    			}
 			}
-			
 			if ( data.options )
 			{
 				if ( this.options._minZoom )
@@ -23799,14 +23805,14 @@ GSI.VectorTileLayer = L.TileLayer.Canvas.extend( {
 				L.setOptions(this, data.options);
 			}
 		}
-		catch( e ){}
+		catch( e ){
+        }
 		
 		if ( this.geojsonLayer )
 		{
 			this.geojsonLayer.options = $.extend( {}, this.geojsonOptions );
 			//this.geojsonLayer.setStyle( this.geojsonOptions.style );
 		}
-		
 		
 		this._styleLoading = false;
 		//this._updateTileStyles();
