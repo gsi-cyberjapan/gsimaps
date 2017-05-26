@@ -258,9 +258,9 @@
           "subdomains": "",
           "attribution": "",
           "cocotile": true,
-          "minZoom": 2,
+          "minZoom": 3,
           "maxZoom": 18,
-          "maxNativeZoom": 16,
+          "maxNativeZoom": 15,
           "legendUrl": "",
           "html": "<div class=\"gsi_layerinfo_title\">傾斜量図</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
