@@ -1,6 +1,7 @@
 /************************************************************************
  設定
  ************************************************************************/
+
 var GSI = {
 	 ClientMode  : {}
 	,Modal       : {}
@@ -7035,11 +7036,11 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 						underline = true;
 					color =  $(children[0]).css( "color" );
 					backgroundColor =  $(children[0]).css( "background-color" );
-					
+					if ( color == "transparent" ) color = "";
+					if ( backgroundColor == "transparent" ) backgroundColor = "";
 					//text-shadow
 					bordering = "";
-					
-					this._pointEditTextArea.val(a.text());
+					this._pointEditTextArea.val(a.html(a.html().replace(/<br>/ig, "\n" )).text());
 				}
 				else
 				{
@@ -18678,6 +18679,7 @@ GSI.SakuzuList = L.Class.extend( {
 	},
 	_loadKML : function(fileName, text )
 	{
+		text =  text ? text : this._fileReader.result;
 		var xmlDoc = null;
 		if (window.ActiveXObject)
 		{
@@ -23216,10 +23218,10 @@ GSI.Canvas.PathProcs =	{
 		}
 		var i, j, len, len2, point, drawMethod;
 		
-		this._ctx.beginPath();
 		
 		if (!offset ) offset = {x:0,y:0};
 		for (i = 0, len = this._parts.length; i < len; i++) {
+			this._ctx.beginPath();
 			for (j = 0, len2 = this._parts[i].length; j < len2; j++) {
 				point = this._parts[i][j];
 				//drawMethod = (j === 0 ? 'move' : 'line') + 'To';

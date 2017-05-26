@@ -423,15 +423,49 @@
 	var oGEODataTriangles = [];
 	function _latLngToPointData(viewBox,lat, lng, h)
 	{
-		var x=( ( lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
-		var y=( ( lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
+		var latLngToPoint = function( latlng, zoom )
+		{
+		
+	        var DEG_TO_RAD = Math.PI / 180;
+	    	var RAD_TO_DEG = 180 / Math.PI;
+	    	var MAX_LATITUDE = 85.0511287798;
+	    	var _a = 0.5 / Math.PI;
+	    	var _b = 0.5;
+	    	var _c = -0.5 / Math.PI;
+	    	var _d = 0.5;
+			var d = DEG_TO_RAD;
+			var max = MAX_LATITUDE;
+			var lat = Math.max(Math.min(max, latlng.lat), -max);
+			var x = latlng.lng * d;
+			var y = lat * d;
+			y = Math.log(Math.tan((Math.PI / 4) + (y / 2)));
+
+			var projectedPoint = {x:x,y:y};
+			var scale = 256 * Math.pow(2, zoom);
+			
+			scale = scale || 1;
+			var point = {x:0, y:0 };
+			point.x = scale * (_a * projectedPoint.x + _b);
+			point.y = scale * (_c * projectedPoint.y + _d);
+			return point;
+		};
+		var ltPoint = latLngToPoint( viewBox.lt, parseInt( args["z"] ) );
+		var rbPoint = latLngToPoint( viewBox.rb, parseInt( args["z"] ) );
+		var targetPoint = latLngToPoint( {lat:lat,lng:lng}, parseInt( args["z"] ) );
+		
+		var x=( ( targetPoint.x - ltPoint.x ) / ( rbPoint.x - ltPoint.x ) );
+		var y=( ( targetPoint.y - ltPoint.y) / Math.abs( ltPoint.y - rbPoint.y ) );
+		//var x=( ( lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
+		//var y=( ( lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
 		
 		//var y=(viewBox.lt.lat - lat ) * (( ( viewBox.lt.lng - viewBox.rb.lng ) / viewBox.h ));
 		//var z=(h - vSceneMesh_ZMin) * vSceneMeshDistanceRate * vSceneMeshZRate;
 		var z=h * vSceneMeshDistanceRate * vSceneMeshZRate;
 		
-		x = ( x / viewBox.w ) * nGeomSizeX - (nGeomSizeX/2);
-		y = ( y / viewBox.h ) * nGeomSizeY - (nGeomSizeY/2);
+		//x = ( x / viewBox.w ) * nGeomSizeX - (nGeomSizeX/2);
+		//y = ( y / viewBox.h ) * nGeomSizeY - (nGeomSizeY/2);
+		x = ( x * nGeomSizeX  )- (nGeomSizeX/2);
+		y = ( (1-y) * nGeomSizeY  )- (nGeomSizeY/2);
 		
 		return {x:x, y:y,z:z};
 	}
