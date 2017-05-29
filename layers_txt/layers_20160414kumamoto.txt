@@ -1772,7 +1772,7 @@
       "title": "SAR解析結果",
       "iconUrl": "",
       "toggleall": false,
-      "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201604kumamoto.txt"
+      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201604kumamoto.txt"
     },
     {
       "type": "Layer",

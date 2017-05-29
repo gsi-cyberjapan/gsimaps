@@ -77,14 +77,14 @@
       "title": "干渉SAR 3次元解析結果",
       "iconUrl": "",
       "toggleall": false,
-      "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori_3d.txt"
+      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori_3d.txt"
     },
     {
       "type": "LayerGroup",
       "title": "干渉SAR 解析結果",
       "iconUrl": "",
       "toggleall": false,
-      "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori.txt"
+      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori.txt"
     }
   ]
 }

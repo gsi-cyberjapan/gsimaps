@@ -17,21 +17,21 @@
               "title": "平成28年茨城県北部の地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "//maps.gsi.go.jp/layers_txt/layers_20161228ibaraki.txt"
+              "src": "https://maps.gsi.go.jp/layers_txt/layers_20161228ibaraki.txt"
             },
             {
               "type": "LayerGroup",
               "title": "平成28年鳥取県中部の地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "//maps.gsi.go.jp/layers_txt/layers_20161021tottori.txt"
+              "src": "https://maps.gsi.go.jp/layers_txt/layers_20161021tottori.txt"
             },
             {
               "type": "LayerGroup",
               "title": "平成28年熊本地震",
               "iconUrl": "",
               "toggleall": false,
-              "src": "//maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt"
+              "src": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt"
             },
             {
               "type": "LayerGroup",
@@ -44,7 +44,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201411nagano.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201411nagano.txt"
                 },
                 {
                   "type": "Layer",
@@ -1982,28 +1982,28 @@
              "title": "平成29年栃木県那須町の雪崩",
              "iconUrl": "",
              "toggleall": false,
-             "src": "//maps.gsi.go.jp/layers_txt/layers_20170327nasu.txt"
+             "src": "https://maps.gsi.go.jp/layers_txt/layers_20170327nasu.txt"
             },
             {
              "type": "LayerGroup",
              "title": "平成28年糸魚川市駅北大火",
              "iconUrl": "",
              "toggleall": false,
-             "src": "//maps.gsi.go.jp/layers_txt/layers_20161222itoigawa.txt"
+             "src": "https://maps.gsi.go.jp/layers_txt/layers_20161222itoigawa.txt"
             },
             {
              "type": "LayerGroup",
              "title": "平成28年台風第10号",
              "iconUrl": "",
              "toggleall": false,
-             "src": "//maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt"
+             "src": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt"
             },
             {
              "type": "LayerGroup",
              "title": "平成28年台風第11号及び第9号",
              "iconUrl": "",
              "toggleall": false,
-             "src": "//maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt"
+             "src": "https://maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt"
             },
             {
               "type": "LayerGroup",
@@ -4156,7 +4156,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_tokachidake.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_tokachidake.txt"
                 }
               ]
             },
@@ -4171,7 +4171,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_azumayama.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_azumayama.txt"
                 }
               ]
             },
@@ -4186,7 +4186,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asamayama.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asamayama.txt"
                 }
               ]
             },
@@ -4201,7 +4201,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_hakoneyama.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_hakoneyama.txt"
                 },
                 {
                   "type": "Layer",
@@ -4244,7 +4244,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_ontakesan.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_ontakesan.txt"
                 },
                 {
                   "type": "LayerGroup",
@@ -4443,7 +4443,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asosan.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asosan.txt"
                 },
                 {
                   "type": "Layer",
@@ -4470,7 +4470,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kirishimayama.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kirishimayama.txt"
                 }
               ]
             },
@@ -4485,7 +4485,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_sakurajima.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_sakurajima.txt"
                 },
                 {
                   "type": "Layer",
@@ -4580,7 +4580,7 @@
                   "title": "SAR解析結果",
                   "iconUrl": "",
                   "toggleall": false,
-                  "src": "http://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
                 },
                 {
                   "type": "LayerGroup",
