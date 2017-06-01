@@ -3740,6 +3740,20 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2017_04",
+                      "title": "4月更新",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_04/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2017_01",
                       "title": "1月更新",
                       "iconUrl": "",
