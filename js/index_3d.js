@@ -1147,11 +1147,14 @@ function RequestLayers(url, z, x, y, nTilesOTS_X, nTilesOTS_Y){
     var oTilesDem = [];
     var n_y = 0; var xx = 0;
     var n_x = 0; var yy = 0;
+    var nz = Math.pow(2, 0 + z);
 	for(n_y = 0; n_y < nTilesOTS_Y; n_y++){
 		for(n_x = 0; n_x < nTilesOTS_X; n_x++){
             xx = x + n_x;
             yy = y + n_y;
 
+            xx = checkTileCoord( xx, nz );
+            yy = checkTileCoord( yy, nz );
             var dem_d = { data : null, z : 0, x : 0, y : 0, x14 :0, y14 : 0 };
             var dem_z = z;  dem_d.z = dem_z;
             var dem_x = xx; dem_d.x = dem_x;                
@@ -1215,6 +1218,8 @@ function RequestLayers(url, z, x, y, nTilesOTS_X, nTilesOTS_Y){
                         xx = x + n_x;
                         yy = y + n_y;
 
+                        xx = checkTileCoord( xx, nz );
+                        yy = checkTileCoord( yy, nz );
                         var src = vURLI[0] + z + "/" + xx + "/" + yy + vURLI[1];
                         if(vURLExt == "img"){
 							var isDraw = checkBounds( xx, yy, z, bounds );
@@ -2365,6 +2370,11 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg){
 
 		            var nx = xx - x0;
 		            var ny = yy - y0;
+
+                    var nz = Math.pow( 2, zz );
+                    nx = checkTileCoord( nx, nz );
+                    ny = checkTileCoord( ny, nz );
+                    
                     if(vZoom > 0){
                         var zTo = zz + vZoom;
                         var pTo = GetTileN(zz, zTo, xx, yy);
@@ -5331,3 +5341,20 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance){
 /*-----------------------------------------------------------------------------------------------*/
 function round    (v, precision){ var digit = Math.pow(10, precision); return Math.round(v * digit) / digit; };
 function transpose(a           ){ return Object.keys(a[0]).map(function(c){ return a.map(function(r){ return r[c]; }); }); };
+
+/*-----------------------------------------------------------------------------------------------*/
+// タイル座標：ループチェック
+// zmb2: 2^zoom-value
+/*-----------------------------------------------------------------------------------------------*/
+function checkTileCoord( xory, zmb2 ){
+    if ( xory >= zmb2 ){
+        return (xory -= zmb2);
+    }
+    else if ( xory < 0 )
+    {
+        return (xory += zmb2);
+    }
+    else{
+        return xory;
+    }
+};
