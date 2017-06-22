@@ -378,10 +378,13 @@
           "id": "active_volcanoes",
           "title": "活火山分布（気象庁）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
-          "url": "https://maps.gsi.go.jp/overlay/active_volcanoes.kml",
+          "url": "https://maps.gsi.go.jp/xyz/active_volcanoes/{z}/{x}/{y}.geojson",
           "subdomains": "",
           "attribution": "",
           "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
           "html": ""
         },
         {
