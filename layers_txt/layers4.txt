@@ -5363,6 +5363,48 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "20170610lsi",
+                      "title": "2017/6/10",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/20170610lsi/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 13,
+                      "maxZoom": 16,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2017.6.10)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20170525lsi",
+                      "title": "2017/5/25",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/20170525lsi/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 13,
+                      "maxZoom": 16,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2017.5.25)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20170509lsi",
+                      "title": "2017/5/9",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/20170509lsi/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": false,
+                      "minZoom": 13,
+                      "maxZoom": 16,
+                      "legendUrl": "",
+                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2017.5.9)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                    },
+                    {
+                      "type": "Layer",
                       "id": "20160623lsi",
                       "title": "2016/6/23",
                       "iconUrl": "",
