@@ -1,0 +1,291 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "【New!】西之島特集",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "std_old_nishi",
+          "title": "更新前の標準地図",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/std_old_nishi/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": false,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "legendUrl": "",
+          "html": "<div class=\"gsi_layerinfo_title\">更新前の標準地図</div><div>平成3年測量時点の西之島の地図です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "火山基本図データ",
+          "iconUrl": "",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "vbmd_bm",
+              "title": "火山基本図データ（基図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（基図）　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\" target=\"_blank\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><form name=\"vbmd_bm_legend\"><select name=\"vbmd_bm_select\" ><option value=\"l_vbmd_bm_esan\">恵山</option><option value=\"l_vbmd_bm_kurikoma\">栗駒山</option><option value=\"l_vbmd_bm_hakone\">箱根山</option><option value=\"l_vbmd_bm_nishinoshima\">西之島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_bm_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_colorrel",
+              "title": "火山基本図データ（陰影段彩図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（陰影段彩図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><form name=\"vbmd_relieaf_legend\"><select name=\"vbmd_relief_select\" ><option value=\"l_vbmd_relief_nishinoshima\">西之島</option></select><input type=\"button\" value=\"標高表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_relief_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_pm",
+              "title": "火山基本図データ（写真地図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（写真地図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "正射画像",
+          "iconUrl": "",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20161220dol",
+              "title": "2016/12/20",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20161220dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2016.12.20</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20160725dol",
+              "title": "2016/7/25（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20160725dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2016.7.25</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20160303dol",
+              "title": "2016/3/3（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20160303dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2016.3.3</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20151209dol",
+              "title": "2015/12/9",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20151209dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "minZoom": 13,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.12.9</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20150728dol",
+              "title": "2015/7/28（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20150728dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 14,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.7.28（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20150301dol",
+              "title": "2015/3/1（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20150301dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 17,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2015.3.1（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20141210doh",
+              "title": "2014/12/10",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20141210doh/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.12.10</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20141204doh",
+              "title": "2014/12/4",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20141204doh/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.12.4</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" id=\"plugin_library_legend2\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20140704dol",
+              "title": "2014/7/4（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20140704dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 8,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.7.4（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20140322dol",
+              "title": "2014/3/22（無人航空機（UAV）撮影）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20140322dol/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 10,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.3.22（無人航空機（UAV）撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20140216doh",
+              "title": "2014/2/16",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20140216doh/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 10,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2014.2.16</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20131217doh",
+              "title": "2013/12/17",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20131217doh/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 10,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2013.12.17</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20131204doh",
+              "title": "2013/12/4",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/20131204doh/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 10,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">正射画像 - 2013.12.4</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "立体図",
+          "iconUrl": "",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "3d1311nishinoshima2",
+              "title": "2015/3/1～",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+              "url": "https://maps.gsi.go.jp/xyz/3d1311nishinoshima2/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">立体図 - 2015.3.1～</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "3d1311nishinoshima1",
+              "title": "2013/12～2014/12",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+              "url": "https://maps.gsi.go.jp/xyz/3d1311nishinoshima1/{z}/{x}/{y}.geojson",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": false,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">立体図 - 2013.12～2014.12</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

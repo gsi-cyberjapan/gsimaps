@@ -175,19 +175,69 @@
           "html": "<div class=\"gsi_layerinfo_title\">明治期の低湿地</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
-          "type": "Layer",
-          "id": "vbm",
+          "type": "LayerGroup",
           "title": "火山基本図・火山基本図データ",
           "iconUrl": "",
-          "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
-          "subdomains": "",
-          "attribution": "",
-          "cocotile": true,
-          "minZoom": 2,
-          "maxZoom": 18,
-          "maxNativeZoom": 17,
-          "legendUrl": "",
-          "html": "<div class=\"gsi_layerinfo_title\">火山基本図／火山基本図データ　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_meakan\">雌阿寒岳</option><option value=\"l_vbm_tokachi\">十勝岳</option><option value=\"l_vbm_tarumae\">樽前山</option><option value=\"l_vbm_usu\">有珠山</option><option value=\"l_vbm_hokkaidokoma\">北海道駒ヶ岳</option><option value=\"l_vbm_esan\">恵山（データ）</option><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_iwate\">岩手山</option><option value=\"l_vbm_kurikoma\">栗駒山（データ）</option><option value=\"l_vbm_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbm_chokai\">鳥海山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_azuma\">吾妻山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_kusatsushirane\">草津白根山</option><option value=\"l_vbm_asama\">浅間山</option><option value=\"l_vbm_hakone\">箱根山（データ）</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_izuoshima\">伊豆大島</option><option value=\"l_vbm_miyake\">三宅島</option><option value=\"l_vbm_yakedake\">焼岳</option><option value=\"l_vbm_ontake\">御岳山</option><option value=\"l_vbm_tsurumi\">鶴見岳</option><option value=\"l_vbm_kujyu\">くじゅう連山</option><option value=\"l_vbm_aso\">阿蘇山</option><option value=\"l_vbm_unzen\">雲仙岳</option><option value=\"l_vbm_kirishima\">霧島山</option><option value=\"l_vbm_sakurajima\">桜島</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option><option value=\"l_vbm_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "vbmd_bm",
+              "title": "火山基本図データ（基図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（基図）　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\" target=\"_blank\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><form name=\"vbmd_bm_legend\"><select name=\"vbmd_bm_select\" ><option value=\"l_vbmd_bm_esan\">恵山</option><option value=\"l_vbmd_bm_kurikoma\">栗駒山</option><option value=\"l_vbmd_bm_hakone\">箱根山</option><option value=\"l_vbmd_bm_nishinoshima\">西之島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_bm_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_colorrel",
+              "title": "火山基本図データ（陰影段彩図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（陰影段彩図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><form name=\"vbmd_relieaf_legend\"><select name=\"vbmd_relief_select\" ><option value=\"l_vbmd_relief_nishinoshima\">西之島</option></select><input type=\"button\" value=\"標高表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_relief_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_pm",
+              "title": "火山基本図データ（写真地図）",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（写真地図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbm",
+              "title": "火山基本図",
+              "iconUrl": "",
+              "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+              "subdomains": "",
+              "attribution": "",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 17,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_meakan\">雌阿寒岳</option><option value=\"l_vbm_tokachi\">十勝岳</option><option value=\"l_vbm_tarumae\">樽前山</option><option value=\"l_vbm_usu\">有珠山</option><option value=\"l_vbm_hokkaidokoma\">北海道駒ヶ岳</option><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_iwate\">岩手山</option><option value=\"l_vbm_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbm_chokai\">鳥海山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_azuma\">吾妻山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_kusatsushirane\">草津白根山</option><option value=\"l_vbm_asama\">浅間山</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_izuoshima\">伊豆大島</option><option value=\"l_vbm_miyake\">三宅島</option><option value=\"l_vbm_yakedake\">焼岳</option><option value=\"l_vbm_ontake\">御岳山</option><option value=\"l_vbm_tsurumi\">鶴見岳</option><option value=\"l_vbm_kujyu\">くじゅう連山</option><option value=\"l_vbm_aso\">阿蘇山</option><option value=\"l_vbm_unzen\">雲仙岳</option><option value=\"l_vbm_kirishima\">霧島山</option><option value=\"l_vbm_sakurajima\">桜島</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option><option value=\"l_vbm_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
         },
         {
           "type": "Layer",
