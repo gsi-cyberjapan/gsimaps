@@ -6141,22 +6141,6 @@
                       "html": "<div class=\"gsi_layerinfo_title\">簡易動画 - 2015.3.1(無人航空機(UAV))</div><div class=\"gsi_layerinfo_copy\">赤色のアイコン:一部、噴煙で見にくいところがあります。<br>(c)国土地理院</div>"
                     }
                   ]
-				},
-                {
-                  "type": "Layer",
-                  "id": "170604_nishinoshima_photo",
-                  "title": "船上写真（2017/6/4）",
-                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
-                  "url": "https://maps.gsi.go.jp/xyz/170604_nishinoshima_photo/{z}/{x}/{y}.geojson",
-                  "subdomains": "",
-                  "attribution": "",
-                  "cocotile": false,
-                  "minZoom": 4,
-                  "maxNativeZoom": 2,
-                  "maxZoom": 18,
-                  "legendUrl": "",
-                  "html": "<div class=\"gsi_layerinfo_title\">西之島火山活動－船上写真（2017/6/4）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-
                 },
                 {
                   "type": "Layer",
