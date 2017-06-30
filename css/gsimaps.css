@@ -1766,6 +1766,33 @@ form {
 
     color: #fff;
 }
+.layertreedialog_ul li .flddescription_btn {
+    font-family: 'ヒラギノ丸ゴ Pro W4','ヒラギノ丸ゴ Pro','Hiragino Maru Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';
+
+	position:absolute;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	
+    padding: 1px 1px 1px 1px;
+	right : 6px;
+	bottom : 10px;
+	font-size: 10pt;
+	z-index:10;
+
+    text-align: center;
+    font-size: 10px;
+    line-height:16px;
+    cursor:pointer;
+    border-radius: 50%;
+
+    border:1px solid #fff;
+    background-color:#1D417A;
+    height: 16px;
+    width : 16px;
+
+    color: #fff;
+}
 
 .layertreedialog_ul li a.folder .num {
 	position:absolute;

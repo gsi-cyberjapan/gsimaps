@@ -4535,6 +4535,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			a.removeClass( 'nococotile' );
 			li.removeClass( 'nococotile' );
 		}
+		if (item.html)
+		{
+			var flddescriptionBtn = $( '<a>' ).attr( { 'href':'javascript:void(0);'} ).addClass( 'flddescription_btn' ).html("ｉ");
+			li.append( flddescriptionBtn );
+			flddescriptionBtn.unbind( 'click' ).bind( 'click', L.bind( this._onLayerMouseEnter, this, a, item ) );
+		}
 	},
 	_onLayerMouseEnter : function( a, item )
 	{
