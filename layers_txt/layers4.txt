@@ -5377,17 +5377,17 @@
                   "entries": [
                     {
                       "type": "Layer",
-                      "id": "20170629lsi",
-                      "title": "2017/6/29",
+                      "id": "20170626lsi",
+                      "title": "2017/6/26",
                       "iconUrl": "",
-                      "url": "https://maps.gsi.go.jp/xyz/20170629lsi/{z}/{x}/{y}.png",
+                      "url": "https://maps.gsi.go.jp/xyz/20170626lsi/{z}/{x}/{y}.png",
                       "subdomains": "",
                       "attribution": "",
                       "cocotile": false,
                       "minZoom": 13,
                       "maxZoom": 16,
                       "legendUrl": "",
-                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2017.6.29)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
+                      "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2017.6.26)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>"
                     },
                     {
                       "type": "Layer",
