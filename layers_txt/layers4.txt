@@ -1979,6 +1979,13 @@
           "entries": [
             {
              "type": "LayerGroup",
+             "title": "平成29年梅雨前線及び台風3号",
+             "iconUrl": "",
+             "toggleall": false,
+             "src": "./layers_20170705typhoon3.txt"
+            },
+            {
+             "type": "LayerGroup",
              "title": "平成29年栃木県那須町の雪崩",
              "iconUrl": "",
              "toggleall": false,

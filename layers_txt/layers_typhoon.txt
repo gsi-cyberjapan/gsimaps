@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "【New】平成29年梅雨前線及び台風3号",
+      "iconUrl": "",
+      "toggleall": false,
+      "src": "./layers_20170705typhoon3.txt"
+    }
+  ]
+}
