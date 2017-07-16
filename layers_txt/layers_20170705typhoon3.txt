@@ -8,6 +8,18 @@
       "entries": [
         {
           "type": "Layer",
+          "id": "20170705typhoon3_0713dol2",
+          "title": "空中写真（東峰地区）（7/13撮影）",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol2/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月13日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
           "id": "20170705typhoon3_0713dol1",
           "title": "空中写真（朝倉地区）（7/13撮影）",
           "iconUrl": "",
