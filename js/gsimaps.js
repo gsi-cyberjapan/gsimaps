@@ -7282,7 +7282,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			var key = $( keyList[i] ).val();
 			var value = $( valueList[i] ).val();
 
-			if ( key != '' && value != '' )
+			if ( key != '' )
 			{
 				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key) + '</td><td>' + GSI.Utils.encodeHTML(value) + '</td></tr>' + '\n';
 			}
@@ -17586,6 +17586,11 @@ GSI.SakuzuListItem = L.Class.extend( {
 
 					var value = layer.feature.properties[ key];
 
+					if (value == null)
+					{
+						value = "";
+					}
+
 					if ( (typeof value != "string" ) && ( typeof value != "number"  ) ) continue;
 
 					if ( key == 'name' )
@@ -21233,14 +21238,14 @@ GSI.GeoJSON = L.Class.extend( {
 			var table = '';
 			for( var key in feature.properties )
 			{
-				if ( !feature.properties[key] ) continue;
+				var featureValue = feature.properties[key] ? feature.properties[key] : "";
 
 				if ( key != "" && key != 'name' && !CONFIG.GEOJSONSPECIALKEYS[key] )
 				{
 					table +=
 						"<tr>" +
 						"<td>" + key + "</td>" +
-						"<td>" + feature.properties[key] + "</td>" +
+						"<td>" + featureValue + "</td>" +
 						"</tr>";
 				}
 			}
@@ -24580,6 +24585,21 @@ GSI.VectorTileLayer = L.TileLayer.Canvas.extend( {
             for (i = 0, len = features.length; i < len; i++) {
                 // Only add this if geometry or geometries are set and not null
                 feature = features[i];
+
+                // Exchange Null data to empty string
+				if ( feature.properties ){
+					for(name in feature.properties)
+					{
+						if (name == "name" || name == "iframe" || name == "description" || name =="写真"){
+							continue;
+						}
+						else{
+							if (feature.properties[name] == null){
+							    feature.properties[name] = "";
+						    }
+						}
+					}
+				}
                 if (feature.geometries || feature.geometry || feature.features || feature.coordinates) {
                     this.addTileData(result, tile, features[i], tilePoint);
                     
