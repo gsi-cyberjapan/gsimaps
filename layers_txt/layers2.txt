@@ -3838,6 +3838,20 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2017_07",
+                      "title": "7月更新",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_07/{z}/{x}/{y}.png",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2017_04",
                       "title": "4月更新",
                       "iconUrl": "",
@@ -4024,6 +4038,44 @@
               "iconUrl": "",
               "toggleall": false,
               "entries": [
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年7月更新",
+                  "iconUrl": "",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2017_07",
+                      "title": "5ｍメッシュDEM（航空レーザー測量）",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2017_07/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2,
+                      "legendUrl": "",
+                      "html": ""
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2017_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "iconUrl": "",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2017_07/{z}/{x}/{y}.geojson",
+                      "subdomains": "",
+                      "attribution": "",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2,
+                      "legendUrl": "",
+                      "html": ""
+                    }
+                  ]
+                },
                 {
                   "type": "LayerGroup",
                   "title": "2016年5月更新",
