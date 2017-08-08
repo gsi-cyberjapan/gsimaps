@@ -3916,45 +3916,6 @@ function Draw3DGEOData()
 			oScene.add(mesh);
 			
 			
-			// line
-			
-			if ( oGeo3DData[i].properties._weight )
-			{
-				var lineGeometry = new THREE.Geometry();
-				var points = _draw3DGEODataLineString( lineGeometry, viewBox, oGeo3DData[i] );
-				
-				if ( points[0].h != points[points.length-1].h
-					|| points[0].lat != points[points.length-1].lat
-					|| points[0].lng != points[points.length-1].lng
-					)
-					points.push( {
-						h : points[0].h,
-						lat : points[0].lat,
-						lng : points[0].lng
-					});
-				
-				oGeo3DData[i].properties._opacity = ( oGeo3DData[i].properties._opacity || oGeo3DData[i].properties._opacity == 0 ? oGeo3DData[i].properties._opacity : 0.5 );
-				var color = ( oGeo3DData[i].properties._color ? oGeo3DData[i].properties._color : 0x0033ff );
-				var weight = ( oGeo3DData[i].properties._weight ? oGeo3DData[i].properties._weight : 5 );
-				
-				lineGeometry.computeFaceNormals();
-				lineGeometry.computeVertexNormals();
-				
-				var lineMesh = new THREE.Line( lineGeometry, new THREE.LineBasicMaterial( { 
-					color: color,linewidth:parseInt(weight),
-					opacity: oGeo3DData[i].properties._opacity, depthWrite:true,  transparent: true
-					} ) );
-				//mesh.material.linewidth = 10;
-			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
-				oSceneGEODataMeshArr.push( {
-			    	type : "LineString",
-			    	"points" : points,
-			    	"mesh":lineMesh
-			    } );
-				oScene.add(lineMesh);
-				
-			}
-			
 		}
 		else if ( oGeo3DData[i].properties._markerType == "LineString" )
 		{
