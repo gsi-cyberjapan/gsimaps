@@ -17907,7 +17907,6 @@ GSI.SakuzuListItem = L.Class.extend( {
 					if ( layerData )
 					{
 						result.data += layerData.data;
-						result.data = '<Folder>\n'  + data + '</Folder>\n';
 					}
 					break;
 			}
@@ -18286,7 +18285,7 @@ GSI.SakuzuListItem = L.Class.extend( {
 						if ( geoJSONData ) features.push( geoJSONData );
 						break;
 					case GSI.SakuzuListItem.FEATURES:
-						this._makeGeoJSONFeatures( layer, features );
+						this._makeGeoJSONFeatures( layer2, features );
 						break;
 				}
 			}
