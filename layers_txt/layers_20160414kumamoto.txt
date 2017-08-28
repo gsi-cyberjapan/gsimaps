@@ -1705,7 +1705,7 @@
       "id": "20160414kumamoto_jiware",
       "title": "布田川断層帯周辺の地表の亀裂分布図",
       "iconUrl": "",
-      "url": "http://maps.gsi.go.jp/xyz/20160414kumamoto_jiware/{z}/{x}/{y}.geojson",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_jiware/{z}/{x}/{y}.geojson",
       "subdomains": "",
       "attribution": "",
       "errorTileUrl": "",
