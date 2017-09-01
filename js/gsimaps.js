@@ -6159,6 +6159,11 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			{
 				this._editingTarget = null;
 			}
+			
+			if ( this._editingTarget._layer )
+			{
+				this._editingTarget._layer._edited = true;
+			}
 		}
 
 		if ( editMode != GSI.SakuzuListItem.EDIT )
@@ -18822,17 +18827,27 @@ GSI.SakuzuList = L.Class.extend( {
 			{
 				if ( item._layer && item._layer._kmlText && item._layer._kmlText != "" )
 				{
-                this._styleId = 1;
+	                this._styleId = 1;
 
-		var styleList = {};
-                var kml = item.toKML(styleList);
-				kml =
-					'<?xml version="1.0" encoding="UTF-8"?>' + "\n" +
-					'<kml xmlns="http://www.opengis.net/kml/2.2">' + "\n" +
-					'<Document>\n' +
-					kml +
-					'</Document>\n' +
-					'</kml>';
+					var styleList = {};
+					
+					
+					var kml = '';
+					
+					if ( item._layer._edited )
+					{
+						kml =
+							'<?xml version="1.0" encoding="UTF-8"?>' + "\n" +
+							'<kml xmlns="http://www.opengis.net/kml/2.2">' + "\n" +
+							'<Document>\n' +
+							item.toKML(styleList) +
+							'</Document>\n' +
+							'</kml>';
+					}
+					else
+					{
+						kml = item._layer._kmlText;
+					}
 					result.push( {
 						"kmltext" : kml //item._layer._kmlText
 					} );
