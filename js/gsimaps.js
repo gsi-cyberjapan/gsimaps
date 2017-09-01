@@ -18822,8 +18822,20 @@ GSI.SakuzuList = L.Class.extend( {
 			{
 				if ( item._layer && item._layer._kmlText && item._layer._kmlText != "" )
 				{
+                this._styleId = 1;
+
+		var styleList = {};
+                var kml = item.toKML(styleList);
+				kml =
+					'<?xml version="1.0" encoding="UTF-8"?>' + "\n" +
+					'<kml xmlns="http://www.opengis.net/kml/2.2">' + "\n" +
+					'<Document>\n' +
+					kml +
+					'</Document>\n' +
+					'</kml>';
+					console.log( kml );
 					result.push( {
-						"kmltext" : item._layer._kmlText
+						"kmltext" : kml //item._layer._kmlText
 					} );
 					continue;
 				}
@@ -22717,7 +22729,7 @@ function initialize_proc_map()
 				}
 				
 				
-				for( var i=0; i<multiTileList.length; i++ )list.push(multiTileList[i]);
+				for( var i=multiTileList.length-1; i>=0; i-- )list.push(multiTileList[i]);
 				
 				for( var i=0; i<tileList.length; i++ )
 				{
@@ -22743,6 +22755,8 @@ function initialize_proc_map()
 				}
 				else
 					GSI.GLOBALS.mapToImage.setList( list );
+				
+				
 				GSI.GLOBALS.mapToImageWindow.show(L.bind(function(){
 					GSI.GLOBALS.mapToImage.start();
 				
@@ -25070,6 +25084,7 @@ GSI.MapToImage = L.Class.extend( {
 			}
 			else if ( item.type == "tile" )
 			{
+                
 				item.drawLayer = new GSI.MapToImage.TileLayer( this._map, layer, {
 					opacity: item.opacity, 
 					grayscale: item.grayscale,
@@ -25157,7 +25172,9 @@ GSI.MapToImage = L.Class.extend( {
 				if ( this._list[i].type=="system" )
 					this._list[i].drawLayer.drawPath( this._mapTexture );
 				else
-					this._list[i].drawLayer.draw( this._mapTexture );
+				{
+				    this._list[i].drawLayer.draw( this._mapTexture );
+			    }
 			}
 		}
 		this._markerPaneToCanvas();
@@ -26524,7 +26541,7 @@ GSI.MapToImage.VectorTileLayer = L.Class.extend( {
 		{
 			var layers = layer.getLayers();
 			
-				
+			
 			for( var i=0; i<layers.length; i++ )
 			{
 				this._drawLayer( texture,layers[i], tilePoint, layerOptions );
@@ -26551,6 +26568,7 @@ GSI.MapToImage.VectorTileLayer = L.Class.extend( {
 			}
 			else
 				texture.lineCap = "butt";
+			texture.lineJoin = 'round';
 		}
 		if (options.fill) {
 			texture.fillStyle = options.fillColor || options.color;
@@ -26593,7 +26611,6 @@ GSI.MapToImage.VectorTileLayer = L.Class.extend( {
 		}
 		
 		
-		
 		if ( options.dashArray )
 		{
 			if ( options.dashArray instanceof Array )
@@ -26630,13 +26647,20 @@ GSI.MapToImage.VectorTileLayer = L.Class.extend( {
 			
 			var isPolygon = (layer instanceof L.Polygon || layer instanceof L.Circle);
 			
-			
+			texture.beginPath();
 			var parts = layer._parts;
 			for (i = 0, len = parts.length; i < len; i++) {
 				
-				texture.beginPath();
+			
 				var fromPoint = null;
 				var firstPoint = null;
+				var lastPoint = null;
+				
+				if ( parts[i].length > 2 &&
+					(parts[i][0].x != parts[i][parts[i].length-1].x || parts[i][0].y != parts[i][parts[i].length-1].y ) )
+				{
+					lastPoint =parts[i][0];
+				}
 				for (j = 0, len2 = parts[i].length; j < len2; j++) {
 					
 					point = parts[i][j];
@@ -26668,11 +26692,26 @@ GSI.MapToImage.VectorTileLayer = L.Class.extend( {
 					
 					fromPoint = toPoint;
 				}
-				if (isPolygon) {
-					texture.closePath();
+				
+				if ( lastPoint && isPolygon )
+				{
+					
+					var toPoint = {
+						x : ( scale * lastPoint.x ) + offset.x,
+						y : ( scale * lastPoint.y ) + offset.y
+					};
+					if ( texture.setLineDash !== undefined )
+						texture.setLineDash([]);
+					else if ( texture.mozDash !== undefined )
+						texture.mozDash = [];
+					texture.lineTo(toPoint.x, toPoint.y);
 				}
+				
 			}
 			
+			if (isPolygon) {
+				texture.closePath();
+			}
 		}
 		
 		
