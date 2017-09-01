@@ -18833,7 +18833,6 @@ GSI.SakuzuList = L.Class.extend( {
 					kml +
 					'</Document>\n' +
 					'</kml>';
-					console.log( kml );
 					result.push( {
 						"kmltext" : kml //item._layer._kmlText
 					} );
