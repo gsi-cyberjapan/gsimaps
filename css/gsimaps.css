@@ -1749,20 +1749,19 @@ form {
 	
     padding: 1px 1px 1px 1px;
 	right : 6px;
-	bottom : 10px;
-	font-size: 10pt;
+	bottom : 8px; /*10px;*/
 	z-index:10;
 
     text-align: center;
-    font-size: 10px;
-    line-height:16px;
+    font-size: 12px; /*10px;*/
+    line-height: 20px; /*16px;*/
     cursor:pointer;
     border-radius: 50%;
 
     border:1px solid #fff;
     background-color:#1D417A;
-    height: 16px;
-    width : 16px;
+    height: 20px; /*16px;*/
+    width : 32px; /*16px;*/
 
     color: #fff;
 }
@@ -2332,7 +2331,7 @@ form {
 {
 	color:#000;
 	position: absolute;
-	right:105px;
+	right:109px; /*105px;*/
 	top:18px;
 	font-size:10px;
 	display:inline-block;
@@ -2353,7 +2352,7 @@ form {
 {
 	color:#000;
 	position: absolute;
-	right:98px;
+	right: 98px;
 	top:3px;
 	font-size:10px;
 	display:inline-block;
@@ -2485,7 +2484,7 @@ form {
 	*display: inline;
 	*zoom: 1;
 	padding: 0 2px 0 2px;
-	right : 58px;
+	right : 68px; /*58px;*/
 	top:18px;
 	font-size:10px;
 	z-index:10;
@@ -2566,21 +2565,20 @@ form {
 	*display: inline;
 	*zoom: 1;
 	
-	right : 36px;
-	top:20px;
-	font-size:10px;
-	z-index:10;
+	right : 31px; /*36px;*/
+	top: 17px; /*20px;*/
+	z-index: 10;
 
     text-align: center;
-    font-size: 10px;
-    line-height:16px;
+    font-size: 12px; /*10px;*/
+    line-height: 22px; /*16px;*/
     cursor:pointer;
     border-radius: 50%;
 
     border:1px solid #fff;
     background-color:#1D417A;
-    height: 16px;
-    width : 16px;
+    height: 22px; /*16px;*/
+    width : 32px; /*16px;*/
 
     color: #fff;
 
@@ -2620,7 +2618,7 @@ form {
 	*display: inline;
 	*zoom: 1;
 	
-	right :21px;
+	right :17px; /*21px;*/
 	top:24px;
 	z-index:10;
 
@@ -2901,7 +2899,7 @@ form {
 {
 	color:#900;
 	position: absolute;
-	right:105px;
+	right:109px; /*105px;*/
 	top:18px;
 	font-size:10px;
 	display:inline-block;
