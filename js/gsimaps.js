@@ -21614,21 +21614,16 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend( {
 		args += "?z="   + this._map.getZoom();
 		args += "&lat=" + center.lat;
 		args += "&lon=" + center.lng;
-		if ( this._layer.options.width == this._layer.options.height )
-		{
-			args += "&pxsize=" + this._layer.options.width;
-		}
-		else
-		{
-			var w =parseInt(this._layer.options.width);
-			var h =parseInt(this._layer.options.height);
-			
-			if (w % 2 != 0) w++;
-			if (h % 2 != 0) h++;
-			
-			args += "&w=" + w;
-			args += "&h=" + h;
-		}
+
+		var w =parseInt(this._layer.options.width);
+		var h =parseInt(this._layer.options.height);
+		
+		if (w % 2 != 0) w++;
+		if (h % 2 != 0) h++;
+		
+		args += "&w=" + w;
+		args += "&h=" + h;
+
 		args += "&"     + GSI.GLOBALS.pageStateManager.getLayersQueryString({visibleOnly:true})
 
 		this.hide();
