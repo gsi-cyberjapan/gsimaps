@@ -6160,7 +6160,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				this._editingTarget = null;
 			}
 			
-			if ( this._editingTarget._layer )
+			if ( this._editingTarget && this._editingTarget._layer )
 			{
 				this._editingTarget._layer._edited = true;
 			}
