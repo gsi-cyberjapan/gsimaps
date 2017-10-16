@@ -4369,7 +4369,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			    type     : "GET",
 			    url      : this._CurrentData_SRC[0].src,
 			    dataType : "text",
-			    cache    : true,
+				cache    : true,
+				async    : false,
 			    success  : L.bind(this._initializeList_IDProc_DataSrc_Success, this),
 			    error    : L.bind(this._initializeList_IDProc_DataSrc_Error  , this)
 		    });
