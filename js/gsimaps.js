@@ -32,12 +32,6 @@ CONFIG.layersTab = [
 		]
 	},
 	{
-		'caption' : '台風・豪雨等',
-		'layers' : [
-			'./layers_txt/layers_typhoon.txt'
-		]
-	},
-	{
 		'caption' : 'ベースマップ',
 		'layers' : [
 			'./layers_txt/layers0.txt'

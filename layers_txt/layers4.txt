@@ -3276,6 +3276,53 @@
               "entries": [
                 {
                   "type": "LayerGroup",
+                  "title": "航空機SAR（新燃岳）",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20171011kirishima_apsar171012we",
+                      "title": "2017/10/12観測（西から東) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar171012we/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2017/10/12)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は西から東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20171011kirishima_apsar171012ew",
+                      "title": "2017/10/12観測（東から西) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar171012ew/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2017/10/12)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は東から西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20171011kirishima_apsar141105we",
+                      "title": "2014/11/5観測（西から東）",
+                      "url": "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar141105we/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2014/11/5)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は西から東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20171011kirishima_apsar141105ew",
+                      "title": "2014/11/5観測（東から西）",
+                      "url": "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar141105ew/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2014/11/5)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は東から西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "SAR解析結果",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kirishimayama.txt"
