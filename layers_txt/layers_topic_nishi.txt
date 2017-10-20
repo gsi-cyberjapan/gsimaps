@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "【New!】西之島特集",
+      "title": "西之島特集",
       "toggleall": false,
       "entries": [
         {
