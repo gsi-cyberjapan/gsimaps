@@ -18,18 +18,18 @@
         },
         {
           "type": "LayerGroup",
-          "title": "都市圏活断層図",
+          "title": "活断層図",
           "toggleall": false,
           "entries": [
             {
               "type": "Layer",
               "id": "afm",
-              "title": "都市圏活断層図",
+              "title": "活断層図（都市圏活断層図）",
               "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
               "cocotile": true,
               "maxZoom": 16,
               "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">都市圏活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000153506.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000153506.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
@@ -2871,6 +2871,15 @@
                   "title": "2017年更新情報",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
                     {
                       "type": "Layer",
                       "id": "fgd_update_2017_08",
