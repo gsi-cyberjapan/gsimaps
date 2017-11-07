@@ -98,6 +98,15 @@
         },
         {
           "type": "Layer",
+          "id": "experimental_jhj_index",
+          "title": "┗住居表示住所の提供範囲",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_jhj_area/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "ズーム5～18で表示します。<br>ピンク色で塗りつぶされた部分以外には住居表示住所データはございません。<br>なお、この住居表示住所データの範囲は目安であり厳密なデータ範囲とは一致しませんのでご留意ください。"
+        },
+        {
+          "type": "Layer",
           "id": "experimental_fgd",
           "title": "基盤地図情報_基本項目",
           "url": "https://maps.gsi.go.jp/xyz/experimental_fgd/{z}/{x}/{y}.geojson",
