@@ -66,8 +66,18 @@
               "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
               "cocotile": true,
               "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/LCM_hanrei.png",
-              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_index.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcm25k_spec",
+              "title": "初期整備版 諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
