@@ -6,10 +6,10 @@ options:{
 geojsonOptions:{
   pointToLayer: function (feature, latlng) {
     var s = {};
-    for(name in feature.properties) {
-      if(name.match(/^_/) && !name.match(/_markerType/)){
-        if( feature.properties['_markerType']=='Circle' && name =='_radius'){continue;}
-        s[name.substr(1)]=feature.properties[name];
+    for(var n in feature.properties) {
+      if(n.match(/^_/) && !n.match(/_markerType/)){
+        if( feature.properties['_markerType']=='Circle' && n =='_radius'){continue;}
+        s[n.substr(1)]=feature.properties[n];
       }
     }
     if(feature.properties['_markerType']=='Icon'){
@@ -32,10 +32,10 @@ geojsonOptions:{
   style: function (feature) {
     if(!feature.properties['_markerType']){
       var s = {};
-      for(name in feature.properties) {
-        if(name.match(/^_/) && !name.match(/_markerType/)){
-          if( feature.properties['_markerType']=='Circle' && name =='_radius'){continue;}
-          s[name.substr(1)]=feature.properties[name];
+      for(var n in feature.properties) {
+        if(n.match(/^_/) && !n.match(/_markerType/)){
+          if( feature.properties['_markerType']=='Circle' && n =='_radius'){continue;}
+          s[n.substr(1)]=feature.properties[n];
         }
       }
       return s;
@@ -45,23 +45,23 @@ geojsonOptions:{
     var s = "<table>";
     var photoFlg = false;
 
-    for(name in feature.properties) {
-      if(!name.match(/^_/)){
-        if(name=="name"){
-          s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>" + feature.properties[name] + "</th></tr>";
-        }else if(name=="description"){
-          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
+    for(var n in feature.properties) {
+      if(!n.match(/^_/)){
+        if(n=="name"){
+          s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>" + feature.properties[n] + "</th></tr>";
+        }else if(n=="description"){
+          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[n] + "</td></tr>";
 
         // (UAV)動画
-        }else if(name=="iframe"){
-          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
+        }else if(n=="iframe"){
+          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[n] + "</td></tr>";
 
         // 斜め写真・垂直写真
-        }else if(name=="写真"){
+        }else if(n=="写真"){
           photoFlg = true;
           // 写真のURLを取り出す
           var div = document.createElement("div");
-          div.innerHTML = feature.properties[name];
+          div.innerHTML = feature.properties[n];
           var photoUrl = div.querySelector("a").href;
           photoUrl=photoUrl.replace('http://saigai.gsi.go.jp/','https://saigai.gsi.go.jp/');
           s += "<tr><td colspan='2'>"
@@ -71,8 +71,8 @@ geojsonOptions:{
                + "<tr><td colspan='2'>↑写真クリックで拡大表示</td></tr>";
 
         }else{
-          s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + name + "</td>"
-               + "<td style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
+          s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + n + "</td>"
+               + "<td style='font-size:14px; color:#000000;'>" + feature.properties[n] + "</td></tr>";
         }
       }
     }

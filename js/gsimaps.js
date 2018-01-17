@@ -24625,14 +24625,14 @@ GSI.VectorTileLayer = L.TileLayer.Canvas.extend( {
 
                 // Exchange Null data to empty string
 				if ( feature.properties ){
-					for(name in feature.properties)
+					for(var n in feature.properties)
 					{
-						if (name == "name" || name == "iframe" || name == "description" || name =="写真"){
+						if (n == "name" || n == "iframe" || n == "description" || n =="写真"){
 							continue;
 						}
 						else{
-							if (feature.properties[name] == null){
-							    feature.properties[name] = "";
+							if (feature.properties[n] == null){
+							    feature.properties[n] = "";
 						    }
 						}
 					}
