@@ -3049,6 +3049,49 @@
                   "maxZoom": 16,
                   "legendUrl": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kusatsushirane.jpg",
                   "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図<br>基盤地図情報の数値標高モデルを使用して作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                 {
+                  "type": "Layer",
+                  "id": "2018_kazantaisaku_kagamiike",
+                  "title": "火山災害対策用図（鏡池周辺）",
+                  "url": "https://maps.gsi.go.jp/xyz/2018_kazantaisaku_kagamiike/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 18,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kagamiike.jpg"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "SAR強度画像",
+                  "toggleall": false,
+                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kusatsushiranesan.txt"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "航空機SAR画像（速報）",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20180127kusatsushirane_apsar180127sn",
+                      "title": "2018/1/27観測（南から北）",
+                      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127sn/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">草津白根山噴火活動-航空機SAR画像(2018/1/27)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は南から北方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20180127kusatsushirane_apsar180127nesw",
+                      "title": "2018/1/27観測（北東から南西) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127nesw/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">草津白根山噴火活動-航空機SAR画像(2018/1/27)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
                 }
               ]
             },
