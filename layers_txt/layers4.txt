@@ -3092,6 +3092,17 @@
                       "html": "<div class=\"gsi_layerinfo_title\">草津白根山噴火活動-航空機SAR画像(2018/1/27)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
+                },
+                {
+                  "type": "Layer",
+                  "id": "20180130_kusatsushiranesan_sekishokurittai",
+                  "title": "赤色立体地図",
+                  "url": "https://maps.gsi.go.jp/xyz/20180130_kusatsushiranesan_sekishokurittai/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 18,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">航空レーザ計測日：平成27年7月11日～平成27年10月27日<br>本図はアジア航測株式会社の赤色立体地図作成手法（特許3670274、特許4272146）を使用し、国土地理院が作成したものである。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
             },
