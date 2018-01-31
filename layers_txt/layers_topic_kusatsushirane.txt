@@ -1,0 +1,10 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "草津白根山の火山活動",
+     "toggleall": false,
+     "src": "./layers_20180124kusatsushirane.txt"
+     }
+            ]
+}
