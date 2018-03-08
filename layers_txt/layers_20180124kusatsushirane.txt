@@ -1,0 +1,97 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "2018_kazantaisaku_kusatsushirane",
+      "title": "火山災害対策用図",
+      "url": "https://maps.gsi.go.jp/xyz/2018_kazantaisaku_kusatsushirane/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 16,
+      "legendUrl": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kusatsushirane.jpg",
+      "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図<br>基盤地図情報の数値標高モデルを使用して作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "2018_kazantaisaku_kagamiike",
+      "title": "火山災害対策用図（鏡池周辺）",
+      "url": "https://maps.gsi.go.jp/xyz/2018_kazantaisaku_kagamiike/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 18,
+      "legendUrl": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kagamiike.jpg"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR強度画像",
+      "toggleall": false,
+      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kusatsushiranesan.txt"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "航空機SAR画像（速報）",
+      "toggleall": false,
+      "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20180127kusatsushirane_apsar180127sn",
+                      "title": "2018/1/27観測（南から北）",
+                      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127sn/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">草津白根山噴火活動-航空機SAR画像(2018/1/27)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は南から北方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20180127kusatsushirane_apsar180127nesw",
+                      "title": "2018/1/27観測（北東から南西) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127nesw/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">草津白根山噴火活動-航空機SAR画像(2018/1/27)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
+    },
+    {
+      "type": "Layer",
+      "id": "20180130_kusatsushiranesan_sekishokurittai",
+      "title": "赤色立体地図",
+      "url": "https://maps.gsi.go.jp/xyz/20180130_kusatsushiranesan_sekishokurittai/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 18,
+      "legendUrl": "",
+      "html": "<div class=\"gsi_layerinfo_title\">航空レーザ計測日：平成27年7月11日～平成27年10月27日<br>本図はアジア航測株式会社の赤色立体地図作成手法（特許3670274、特許4272146）を使用し、国土地理院が作成したものである。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20180226_kusatsushiranesan_suiteikakouichi",
+      "title": "推定火口位置（平成30年1月23日噴火）及び推定小火口位置（過去の噴火）",
+      "url": "https://maps.gsi.go.jp/xyz/20180226_kusatsushiranesan_suiteikakouichi/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 18,
+      "legendUrl": "https://maps.gsi.go.jp/legend/20180226_kusatsushiranesan_suiteikakouichi.PNG",
+      "html": "<div class=\"gsi_layerinfo_title\">国土地理院が、航空機SAR画像、空中写真及び赤色立体地図を判読し作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+     },
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20180124kusatsushirane_0216uav",
+                      "title": "2018/2/16･27（無人航空機（UAV)撮影）",
+                      "url": "https://maps.gsi.go.jp/xyz/20180124kusatsushirane_0216uav/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">正射画像-2018.2.16･27</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
+    }
+  ]          
+}
