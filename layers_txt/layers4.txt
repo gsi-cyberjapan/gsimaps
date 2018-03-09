@@ -3282,6 +3282,17 @@
               "toggleall": false,
               "entries": [
                 {
+                  "type": "Layer",
+                  "id": "20180309_kazantaisaku_kirishima",
+                  "title": "火山災害対策用図（新燃岳周辺）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180309_kazantaisaku_kirishima/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/20180309_kazantaisaku_kirishima.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図<br>基盤地図情報の数値標高モデルを使用して作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
                   "type": "LayerGroup",
                   "title": "航空機SAR（新燃岳）",
                   "toggleall": false,
