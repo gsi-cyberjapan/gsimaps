@@ -19509,13 +19509,14 @@ GSI.QueryParams = L.Class.extend( {
 	{
 		this._baseMap     = "";
 		this._baseMapDisp = true;
+		/*
 		if ( !queryStrings || queryStrings == "" )
 		{
 			var ua = navigator.userAgent;
 			if(ua.indexOf('iPhone') <= 0 && ua.indexOf('iPod') <= 0 && ua.indexOf('iPad') <= 0 && ua.indexOf('Android') <=0)
 				queryStrings="d=vl";
 		}
-		
+		*/
 		this.params = this._parse(queryStrings);
 		try{ this._initPosition(); }catch(e){}
 		try{ this._initBaseMap(); }catch(e){}
