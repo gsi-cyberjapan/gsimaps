@@ -8197,7 +8197,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 			visibleDialogs : visibleDialogs,
 			visibleDialogs2 : visibleDialogs2
 		} );
-
+		
         var queryArgs = "";
 		for ( var key in queryParams )
 		{
@@ -8219,6 +8219,83 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 					center.lat.toFixed(6) + ',' + center.lng.toFixed(6) + ',' + this._gsimaps._subMap._map.getZoom()
 				);
 			}
+			
+			var ls = this.pageStateManager.getLayersQueryString2();
+	        var disp = this.pageStateManager.getTileViewSetting2();
+			if ( this._layerpCheck.is( ':checked' ) )
+			{
+				if ( ls != '' )
+				{
+	                if(fBassLS_Trim){
+	                    var ls_ary = ls.split("%7C");
+	                    ls = "";
+	                    for(var n_ls_ary = 1; n_ls_ary < ls_ary.length; n_ls_ary++){
+	                        if(ls != ""){
+	                            ls += "%7C";
+	                        }
+	                        ls += ls_ary[n_ls_ary];
+	                    }
+	                    if(ls != ""){
+	                        ls = "ls2=" + ls;
+	                    }
+	                }
+	                if ( ls != '' ){
+					    queryString += ( queryString != '' ? '&' : '#' ) + ls;
+	                }
+				}
+				
+				if ( disp != '' )
+				{
+	                if(fBassLS_Trim){
+	                    var disp_trim = "";
+	                    for(var n_disp = 6; n_disp < disp.length; n_disp++){
+	                        disp_trim += disp.charAt(n_disp);
+	                    }
+	                    disp = "";
+	                    if(disp_trim != ""){
+	                        disp = "disp2=" + disp_trim;
+	                    }
+	                }
+	                if ( disp != '' ){
+					    queryString += ( queryString != '' ? '&' : '#' ) + disp;
+	                }
+				}
+			}
+	        else{
+	            if ( this._basemapCheck.is( ':checked' ) ){
+	                if( base != '' ){
+				        if ( ls != '' )
+				        {
+	                        var ls_ary = ls.split("%7C");
+	                        ls = "";
+	                        if(ls_ary.length > 1){
+	                            ls += ls_ary[0];
+	                        }
+	                        if(ls != ""){
+	                            ls = "ls2=" + ls;
+	                        }
+	                    }
+	                    if ( ls != '' ){
+					        queryString += ( queryString != '' ? '&' : '#' ) + ls;
+	                    }
+				
+				        if ( disp != '' )
+				        {
+	                        var disp_trim = "";
+	                        if(disp.length >= 6){
+	                            disp_trim = disp.charAt(5);
+	                        }
+	                        disp = "";
+	                        if(disp_trim != ""){
+	                            disp = "disp2=" + disp_trim;
+	                        }
+	                    }
+	                    if ( disp != '' ){
+					        queryString += ( queryString != '' ? '&' : '#' ) + disp;
+	                    }
+	                }
+	            }
+	        }
 		}
 			
 		
@@ -8233,6 +8310,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
 	{
 		var url         = GSI.Utils.getCurrentPath();
         var queryString = this._makeQueryString();
+        
         return url + queryString;
 	},
 	afterShow : function()
@@ -11376,18 +11454,22 @@ GSI.Footer = L.Class.extend( {
 				}
 			}
 			
-			if ( this._seamlessPhotoVisible )
+			if ( this.map )
 			{
-				var center = this.map.getCenter().wrap();
-				this.refreshSeamlessInfo(center.lng, center.lat);
-				
-				this.footerSelector.find(".seamlessinfo").parent().show();
+				if ( this._seamlessPhotoVisible )
+				{
+					var center = this.map.getCenter().wrap();
+					this.refreshSeamlessInfo(center.lng, center.lat);
+					
+					if ( this.footerSelector )
+					this.footerSelector.find(".seamlessinfo").parent().show();
+				}
+				else
+				{
+					if ( this.footerSelector )
+					this.footerSelector.find(".seamlessinfo").parent().hide();
+				}
 			}
-			else
-			{
-				this.footerSelector.find(".seamlessinfo").parent().hide();
-			}
-			
 			this.refreshSize();
 			
 		},this ) );
@@ -19382,7 +19464,10 @@ GSI.PageStateManager = L.Class.extend( {
 		{
 			result += ( idList[i]._visibleInfo && idList[i]._visibleInfo._isHidden ? '0' : '1' );
 		}
-
+		
+		
+		
+		
 		if ( result != '' )
 		{
 			return "disp=" + result;
@@ -19425,7 +19510,8 @@ GSI.PageStateManager = L.Class.extend( {
 		{
 			result += ( idList[i]._visibleInfo && idList[i]._visibleInfo._isHidden ? '0' : '1' );
 		}
-
+		
+		
 		if ( result != '' )
 		{
 			return "disp2=" + result;
@@ -19517,6 +19603,7 @@ GSI.QueryParams = L.Class.extend( {
 				queryStrings="d=vl";
 		}
 		*/
+		
 		this.params = this._parse(queryStrings);
 		try{ this._initPosition(); }catch(e){}
 		try{ this._initBaseMap(); }catch(e){}
@@ -24323,10 +24410,13 @@ window.addEventListener('message', function(event){
 
         GSI.ClientMode.queryString += location.hash;
 
-        GSI.GLOBALS.queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
-        initialize_proc();
+        var queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
+        GSI.GLOBALS.gsimaps = new GSI.GSIMaps(queryParams);
+        
+        //initialize_proc();
     }
     catch(e){
+		console.log(e);
    }
 }, false);
 
@@ -29327,13 +29417,23 @@ GSI.MapManager = L.Class.extend( {
 } );
 
 GSI.GSIMaps = L.Class.extend( {
-	initialize : function()
+	initialize : function(queryParams)
 	{
-		
-		this._queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
-		this._syncSplitMap = this._queryParams.getSyncSplitedMap();
-		if(this._queryParams.getInit()){
+		if ( queryParams )
+		{
+			this._queryParams = queryParams;
+			this._syncSplitMap = this._queryParams.getSyncSplitedMap();
 			this._initializeProc();
+		}
+		else
+		
+		{
+			this._queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
+			if ( this._queryParams.getInit() )
+			{
+				this._syncSplitMap = this._queryParams.getSyncSplitedMap();
+				this._initializeProc();
+			}
 		}
 		
 	},
