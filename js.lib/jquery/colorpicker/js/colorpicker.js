@@ -246,7 +246,7 @@
 				var pos = $(this).offset();
 				var viewPort = getViewport();
 				var top = pos.top + this.offsetHeight;
-				var left = pos.left;
+				var left = pos.left + 20;
 				if (top + 176 > viewPort.t + viewPort.h) {
 					top -= this.offsetHeight + 176;
 				}

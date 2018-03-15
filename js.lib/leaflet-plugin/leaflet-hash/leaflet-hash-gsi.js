@@ -154,6 +154,7 @@
                 catch(e){
                 }
             }
+            this.lastHash = hash;
         },
 
         // defer hash change updates every 100ms

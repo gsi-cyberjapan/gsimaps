@@ -2108,6 +2108,7 @@ GSI.Draw.Polyline = L.Draw.Polyline.extend( {
 		this.type = L.Draw.Polyline.TYPE;
 
 		L.Draw.Feature.prototype.initialize.call(this, map, options);
+		
 	},
 	_updateFinishHandler: function () {
 		var markerCount = this._markers.length;
@@ -2149,7 +2150,7 @@ GSI.Draw.Polygon = L.Draw.Polygon.extend( {
 	
 	
 	options: {
-		allowIntersection: true,
+		allowIntersection: false,
 		repeatMode: false,
 		drawError: {
 			color: '#b00b00',
@@ -2202,6 +2203,30 @@ GSI.Draw.Polygon = L.Draw.Polygon.extend( {
 		
 		
 	},
+	addVertex: function (latlng) {
+		
+		this._poly._originalPoints = [];
+		
+		for( var i=0; i<this._poly._latlngs.length; i++ )
+		{
+			this._poly._originalPoints.push( this._map.latLngToLayerPoint(this._poly._latlngs[i]) );
+		}
+		
+		L.Draw.Polygon.prototype.addVertex.call(this, latlng);
+		
+	},
+	_finishShape: function () {
+		
+		this._poly._originalPoints = [];
+		
+		for( var i=0; i<this._poly._latlngs.length; i++ )
+		{
+			this._poly._originalPoints.push( this._map.latLngToLayerPoint(this._poly._latlngs[i]) );
+		}
+		L.Draw.Polygon.prototype._finishShape.call(this);
+	},
+
+
 	_vertexChanged : function(latlng, added)
 	{
 		L.Draw.Polygon.prototype._vertexChanged.call(this,latlng,added);
@@ -3855,42 +3880,6 @@ GSI.UTM.Grid = L.Class.extend( {
 
 	},
 	
-	
-	/*
-		if ( !this._lines ) return;
-		texture.beginPath();
-		for( var i=0; i< this._lines.length; i++ )
-		{
-			var from = null;
-			
-			for( var j=0; j<this._lines[i]._latlngs.length; j ++ )
-			{
-				var point = this._map.latLngToContainerPoint(this._lines[i]._latlngs[j]);
-				
-				if( j == 0 ) texture.moveTo( point.x, point.y );
-				else {
-					GSI.Utils.dotLineTo( texture, from.x, from.y, point.x, point.y, [3,3] );
-				}
-				
-				from = point;
-			}
-			//this._drawPath( texture, this._lines[i] );
-		}
-		
-		texture.save();
-		
-		texture.lineWidth = this.options.lineStyle.weight;
-		texture.strokeStyle = this.options.lineStyle.color;
-			
-		
-		var opacity = 1;
-		texture.globalAlpha = opacity;
-		texture.stroke();
-
-		texture.restore();
-		
-	},
-	*/
 	_lineToDot : function (texture, p1x, p1y, p2x, p2y)
 	{
 		var d = Math.sqrt(Math.pow(p2x - p1x, 2) + Math.pow(p2y - p1y, 2));
@@ -5111,11 +5100,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		
 		this._searchResultTextFrame.find("span").html("検索中");
 		this._searchResultTextFrame.css( {"background-image":"url(./image/system/loading003.gif)"} );
-		/*
-		this._searchResult.find(".layertreedialog_searchresult_header")
-			.css( {"background-image":"url(./image/system/loading003.gif)"} )
-			.html("検索中");
-		*/
+		
 		this._showSearchResult();
 	},
 	
@@ -5291,12 +5276,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 			
 			if ( item.type == "LayerGroup" && item.entries )
 			{
-				/*
-				for ( var j=0; j<item.entries.length; j++ )
-				{
-					if ( item.entries[j].type != "LayerGroup" ) result ++;
-				}
-				*/
+			
 				result += this._getInnerGroupLayerCount(item);
 				
 			}
@@ -5356,13 +5336,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		for( var i=0; i<this.layersTab.length; i++ )
 		{
 			var  tabInfo = this.layersTab[i];
-			/*
-			var a = $("<a>").css({"font-size":"90%"})
-			.attr( {"href":"javascript:void(0);"} )
-			.html(tabInfo.caption)
-			.data ({"tabInfo":tabInfo, "idx" : i})
-			.click(L.bind(this._onTabClick, this ) );//function(){alert("");});
-			*/
+			
 			
 			var a = $("<a>").css({"font-size":"90%"})
 			.attr( {"href":"javascript:void(0);"} )
@@ -6213,15 +6187,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		}
 		if ( num > 0 )
 		{
-			/*
-			var span = $( '<span>' ).html( "&nbsp;&gt;&nbsp;" );
-			this._titleTextFrame.prepend( span );
-			var a = $( '<a>' ).html( this.options.title ).attr( { 'href' : 'javascript:void(0);' } );
-			a.click(
-				L.bind( this.onFolderClick, this, a )
-			).data( { 'data' : null } );
-			this._titleTextFrame.prepend( a );
-			*/
+			
 		}
 		else
 		
@@ -6828,75 +6794,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
  - GSI.Dialog
    - GSI.HelpDialog (ヘルプダイアログ管理)
  ************************************************************************/
-/*
-GSI.HelpDialog = GSI.Dialog.extend( {
-	options : {
-		title: '<span id="title_help_dialog">？</span>メニュー（リンク）',
-		width: '200px'
-	},
-	initialize : function(map,mapMouse, options)
-	{
-		this.map = map;
-		this.mapMouse = mapMouse;
 
-		GSI.Dialog.prototype.initialize.call(this, options);
-	},
-	show : function ()
-	{
-		GSI.Dialog.prototype.show.call(this);
-	},
-	hide : function ()
-	{
-		GSI.Dialog.prototype.hide.call(this);
-	},
-	createHeader : function()
-	{
-		this.title = $( '<div>' ).html( this.options.title );
-
-		return $( '<div>' ).append( this.title );
-	},
-	createContent : function()
-	{
-		this.frame = $( '<div>' ).attr( {
-			'style': 'padding:5px'
-		} );
-		
-		for (var i = 0; i < CONFIG.HELPMENU.length; i++) {
-			// リンク
-			this.LinkFrame = $( '<div>' ).attr( {
-				'style': 'height:20px; vertical-align:middle'
-			} );
-			this.LinkFrameHr = $( '<hr>' );
-			this.Link = $( '<a>' ).attr( {
-				'href'	: CONFIG.HELPMENU[i].Link,
-				'target': '_blank',
-				'style'	: 'color:#000; text-decoration:none'
-			} );
-			
-			this.LinkImg = $( '<img>' ).attr( {
-				'src'	: CONFIG.HELPMENU[i].Img,
-				'border': '0',
-				'width'	: '20px',
-				'height': '20px',
-				'style'	: 'vertical-align:middle',
-				'alt'	: CONFIG.HELPMENU[i].Moji
-			} );
-			
-			this.LinkMoji = $( '<span>' ).attr( {
-				'style': 'line-height:20px; position:relative; top:2px; left:5px'
-			} ).html( CONFIG.HELPMENU[i].Moji );
-			this.LinkFrame.append( this.LinkImg).append( this.LinkMoji );
-			this.Link.append( this.LinkFrame );
-			if(i < CONFIG.HELPMENU.length -1 ){
-				this.frame.append( this.Link ).append( this.LinkFrameHr );
-			}else{
-				this.frame.append( this.Link );
-			}
-		}
-		return this.frame;
-	}
-});
-*/
 
 GSI.HelpDialog = L.Class.extend( {
 	options : {
@@ -7229,7 +7127,7 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 			isPolygon = ( geometryType == "Polygon" );
 		}
 		catch( e ) {}
-
+		
 		if ( geometryType == "MultiPolygon" ) return;
 
 		if ( isPolygon )
@@ -7276,20 +7174,21 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 
 		this.map.eachLayer(
 			L.bind( function(layer){
-
-				// ポリゴン、ライン(layer._layersはマルチポリゴン判定)以外は無視
-				if ( !layer.getBounds || !layer.getLatLngs || layer._layers || layer._noMeasure ) return;
-
-				if ( layer._measureClickHandler )
+				if ( !layer._noMeasure )
 				{
-					layer.off( 'click', layer._measureClickHandler );
-					layer.off( 'touchend', layer._measureClickHandler );
+					// ポリゴン、ライン(layer._layersはマルチポリゴン判定)以外は無視
+					if ( !layer.getBounds || !layer.getLatLngs || layer._layers || layer._noMeasure ) return;
+
+					if ( layer._measureClickHandler )
+					{
+						layer.off( 'click', layer._measureClickHandler );
+						layer.off( 'touchend', layer._measureClickHandler );
+					}
+					layer._measureClickHandler = L.bind( this.onLayerClick, this, layer );
+
+					layer.on( 'click', layer._measureClickHandler );
+					this.measureLayer.addLayer( L.rectangle(layer.getBounds(), this.rectStyle) );
 				}
-				layer._measureClickHandler = L.bind( this.onLayerClick, this, layer );
-
-				layer.on( 'click', layer._measureClickHandler );
-				this.measureLayer.addLayer( L.rectangle(layer.getBounds(), this.rectStyle) );
-
 			}, this )
 		);
 		//drawingItems;
@@ -9520,19 +9419,7 @@ GSI.QRCodeDialog = GSI.Dialog.extend( {
 		
 		
 		
-		
-/*
-		this._messageFrame = $( '<div>' ).addClass( 'messageframe' );
-		this._textareaFrame = $( '<div>' ).addClass( 'textareaframe' );
-
-		this._contentFrame = $( '<div>' );
-		this._settingFrame = $( '<div>' ).addClass( 'settingframe' );
-
-		this._frame.append( this._messageFrame );
-		this._frame.append( this._textareaFrame );
-		this._frame.append( this._contentFrame );
-		this._frame.append( this._settingFrame );
-*/
+	
 		return this._frame;
 	}
 	
@@ -9616,42 +9503,20 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		 this._saveOutsideTileBtn = $("<a>").css({"font-size":"9px","line-height":"20px","position":"absolute",'right':'4px','bottom':'5px','cursor':'pointer'}).addClass('view_list_dialog_button').html("外部タイル設定保存").hide();
 		 
 		var frameRange            = $( '<div>' ).css({ 'position':'absolute','right':'5px','bottom':'5px','opacity':'1'});
-        /*
-        this._ButtonRangeSwitch   = new GSI.OnOffSwitch( {className:'onoff', checked:this.cocoTileLayer.getVisible(), title: ""} );
-		var frameRangeSwitchLabel = $( '<label>' ).css({"padding-left":"5px"}).attr({'for':this._ButtonRangeSwitch.getId()}).html( '表示範囲に絞込み' );
-		this._ButtonRangeSwitch.on( 'change' , L.bind( this._onCocoTileCheckChange, this, this._ButtonRangeSwitch ) );
-
-		frameRange.append( this._ButtonRangeSwitch.getElement() );
-		frameRange.append( frameRangeSwitchLabel );
-        */
-
-        /*
-		this._showAllButton   = $( '<a>' ).attr( { href:'javascript:void(0);'} ).html( '全表示'   ).addClass( 'normalbutton showallbutton' );
-		this._hideAllButton   = $( '<a>' ).attr( { href:'javascript:void(0);'} ).html( '全非表示' ).addClass( 'normalbutton showallbutton' );
-		this._removeAllButton = $( '<a>' ).attr( { href:'javascript:void(0);'} ).html( '全削除'   ).addClass( 'normalbutton showallbutton' );
-        */
-
+        
         //frame.append( this._ButtonTxtAdd );
         frame.append( this._saveOutsideTileBtn );
         frame.append( this._RbtnTxtAdd );
 
 		frame.append( frameRange );
-        /*
-		frame.append( this._removeAllButton );
-		frame.append( this._hideAllButton   );
-		frame.append( this._showAllButton   );
-        */
+        
 		var dummy = $('<div>').html( '&nbsp;' ).css( { "font-size": '9.5pt' } );
 		frame.append(dummy );
 
 		//this._ButtonTxtAdd.click( L.bind( this._onAddClick, this ) );
 		this._RbtnTxtAdd.click( L.bind( this._onResetClick, this ) );
 		this._saveOutsideTileBtn.click( L.bind( this._sasveOutsideTileBtnClick, this ) );
-        /*
-		this._showAllButton  .click( L.bind( this._onShowAllClick  , this ) );
-		this._hideAllButton  .click( L.bind( this._onHideAllClick  , this ) );
-		this._removeAllButton.click( L.bind( this._onRemoveAllClick, this ) );
-        */
+        
 
 		return frame;
 	},
@@ -10064,34 +9929,6 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		opacityBtn.click( L.bind(function(){ this._onOpacityBtnClick(li); }, this ));
 		li.append( opacityBtn );
 		
-		/*
-        var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
-		var opacityPercentage = Math.round( 100 - ( opacity * 100 ) );
-        var opacity = $( '<span>' ).addClass( 'opacity' ).html( '透過'+opacityPercentage+'%' );
-		li.append( opacity );
-
-		var opacityUpBtn = $( '<span>' ).addClass( 'opacity_up_btn' ).html( "<img src='./image/system/opacityUp.png' class=\"btn\" oncontextmenu=\"return false;\" />");
-		li.append( opacityUpBtn );
-        if(GSI.Utils.Browser.TouchDevice()){
-		    opacityUpBtn.unbind( 'mousedown' ).bind( 'touchstart', L.bind( this._opacity_start, this, a, opacity, '+' ) );
-		    opacityUpBtn.unbind( 'mouseup'   ).bind( 'touchend ' , L.bind( this._opacity_stop , this, a, opacity, '+' ) );
-        }
-        else{
-		    opacityUpBtn.unbind( 'mousedown' ).bind( 'mousedown' , L.bind( this._opacity_start, this, a, opacity, '+' ) );
-		    opacityUpBtn.unbind( 'mouseup'   ).bind( 'mouseup'   , L.bind( this._opacity_stop , this, a, opacity, '+' ) );
-        }
-
-		var opacityDnBtn = $( '<span>' ).addClass( 'opacity_dn_btn' ).html( "<img src='./image/system/opacityDn.png' class=\"btn\" oncontextmenu=\"return false;\" />");
-		li.append( opacityDnBtn );
-        if(GSI.Utils.Browser.TouchDevice()){
-		    opacityDnBtn.unbind( 'mousedown' ).bind( 'touchstart', L.bind( this._opacity_start, this, a, opacity, '-' ) );
-		    opacityDnBtn.unbind( 'mouseup'   ).bind( 'touchend ' , L.bind( this._opacity_stop , this, a, opacity, '-' ) );
-        }
-        else{
-		    opacityDnBtn.unbind( 'mousedown' ).bind( 'mousedown' , L.bind( this._opacity_start, this, a, opacity, '-' ) );
-		    opacityDnBtn.unbind( 'mouseup'   ).bind( 'mouseup'   , L.bind( this._opacity_stop , this, a, opacity, '-' ) );
-        }
-		*/
 
         // 詳細
 		
@@ -10490,13 +10327,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 	},
 	_onBlendSwitchChange : function( a, mp )
 	{
-		/*
-       	if (GSI.Utils.Browser.ie)
-       	{
-       		alert('この機能はインターネットエクスプローラーではご利用いただけません。');
-       		return;
-       	}
-       	*/
+		
        	var item = a.data( 'data' );
        	item._visibleInfo.blend = mp.checked();
        	this._blendTile( a, mp.checked() );
@@ -10797,24 +10628,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
 		var item = a.data('data');
 		GSI.Utils.setMixBlendMode( item, flg );
-		/*
-		var tileId = getblendTileSetting(item.id);
-
-		var el = item._visibleInfo.layer._container.getAttribute('style');
-		if ( el )
-		{
-		    el = el.replace("mix-blend-mode: multiply; ", "");
-		}
-		else
-		{
-		    el = "";
-		}
-		if ( flg == true)
-		{
-			el = "mix-blend-mode: multiply; " + el;
-		}
-	    item._visibleInfo.layer._container.setAttribute('style', el);
-		*/
+		
 	}
 });
 
@@ -11398,11 +11212,6 @@ GSI.Footer = L.Class.extend( {
 		this.map = map;
 		this.mapSelector = $(mapSelector);
 		
-		/*
-		this.footerSelector = $(btnSelector).clone().removeAttr("id");
-		$(btnSelector).remove();
-		$( "body" ).append( this.footerSelector );
-		*/
 		var templateName = footerSelector + "_template";
 		
 		this.footerSelector = $(templateName).clone().show();
@@ -11529,13 +11338,6 @@ GSI.Footer = L.Class.extend( {
 		var btn = $( this.btnSelector);
 		var footerHeight =(  $(this.footerSelector).is(':visible') ? $( this.footerSelector ).outerHeight( true ) : 0 );
 		
-		/*
-		btn.css( {
-				left : Math.round( ( windowSize.w/2 ) - ( btn.outerWidth(true) / 2 ) ) + 'px',
-				bottom : footerHeight + 'px'
-			}
-		);
-		*/
 		if (  !this.overlap  || !$(this.footerSelector).is(':visible') || this._dispMode == 0 )
 		{
 			
@@ -12272,7 +12074,7 @@ GSI.HashOptions = L.Class.extend( {
 		if(this.oTM != null){
 			clearInterval(this.oTM);
 		}
-
+		
 		this.oTM   = null;
 		this.Hash();
 	},
@@ -12286,7 +12088,6 @@ GSI.HashOptions = L.Class.extend( {
 		{
 			o.HashSetProc(hash);
 		}
-
 		return hash;
 	},
 	Hash : function()
@@ -12594,7 +12395,12 @@ GSI.HashOptions = L.Class.extend( {
 			console.log(e);
 		}
 		
-		// 310
+		this._gsimaps._mainMap._mapLayerList.setElevationData(this._gsimaps._queryParams.getReliefData());
+		if ( this._gsimaps._mainMap._mapLayerList._editReliefDialog )
+		{
+			this._gsimaps._mainMap._mapLayerList._editReliefDialog.refresh();
+		}
+		
 		if ( viewSetting.splitWindow )
 		{
 			var sync = this._gsimaps._queryParams._syncSplitedMap;
@@ -13406,6 +13212,11 @@ GSI.HouiLine = L.Class.extend( {
 			
 			
 		}
+		
+		this._layers.eachLayer(function (layer) {
+			layer._noMeasure = true;
+		});
+		
 	},
 	
 	// 北端、南端切る
@@ -13543,7 +13354,15 @@ GSI.HouiLine = L.Class.extend( {
 				L.polyline(latLngs, lineStyle) .addTo(result);
 				
 			});
+			
+				
+			
+			result.eachLayer(function (layer) {
+				layer._noMeasure = true;
+			});
+		
 		}
+		
 		return result;
 	},
 	
@@ -13956,25 +13775,7 @@ GSI.Toukyoken = L.Class.extend( {
 	// 等距圏ライン削除
 	_clearLines : function()
 	{
-		/*
-		var map = this._map;
-		if ( this._lines )
-		{
-			for( var i=0; i<this._lines.length; i++ )
-			{
-				this._lines[i].remove();
-			}
-			this._lines = null;
-		}
-		if ( this._labels )
-		{
-			for( var i=0; i<this._labels.length; i++ )
-			{
-				map.removeLayer( this._labels[i] );
-			}
-			this._labels = null;
-		}
-		*/
+		
 		if ( this._layers )
 			this._layers.remove();
 		this._layers = null;
@@ -14067,6 +13868,11 @@ GSI.Toukyoken = L.Class.extend( {
 				this._layers.addLayer(label);
 			}
 			
+			this._layers.eachLayer(function (layer) {
+				layer._noMeasure = true;
+			} );
+			
+			
 		}
 	},
 	
@@ -14106,6 +13912,12 @@ GSI.Toukyoken = L.Class.extend( {
 					result.addLayer( label );
 				}
 			});
+			
+			result.eachLayer(function (layer) {
+				layer._noMeasure = true;
+			} );
+			
+			
 		}
 		return result;
 	},
@@ -14487,31 +14299,6 @@ GSI.JihokuLine = L.Class.extend( {
 //GSI.TileGridLayer = L.TileLayer.Canvas.extend( {
 GSI.TileGridLayer = L.GridLayer.extend( {
 	
-	/*
-	_initContainer: function ()
-	{
-		var tilePane = this._map._panes.overlayPane;
-		
-		if (!this._container) {
-			this._container = L.DomUtil.create('div', 'leaflet-layer');
-
-			this._updateZIndex();
-
-			if (this._animated) {
-				var className = 'leaflet-tile-container';
-				this._bgBuffer = L.DomUtil.create('div', className, this._container);
-				this._tileContainer = L.DomUtil.create('div', className, this._container);
-
-			} else {
-				this._tileContainer = this._container;
-			}
-			
-			tilePane.insertBefore(this._container,tilePane.firstChild);
-			//tilePane.appendChild(this._container);
-
-		}
-	},
-	*/
 	_initContainer: function () {
 		if (this._container) { return; }
 		var tilePane = this._map._panes.overlayPane;
@@ -14741,40 +14528,7 @@ GSI.T25000Grid = L.Class.extend( {
 			this._map.removeLayer(this._layer);
 		if ( this._visible )
 		{
-			/*
-			var style = {
-				options:
-				{
-				  attribution: '図郭',minZoom: 10,maxNativeZoom: 8, maxZoom: 18
-				},
-				geojsonOptions:
-				{
-						 pointToLayer: function(feature, latlng) {
-						   var idstyle = "\""
-							   +"font-size: 16px;"
-							   +"color:#f00;"
-							   +"white-space: nowrap;"
-							   +"\"";
-						   var idAnchor = feature.properties['図名'].length /2 * 16;
-						   var myIcon= L.divIcon({
-										   iconAnchor: [idAnchor,10],
-										   className: "gsi-div-icon", 
-										   html: "<div style="+idstyle+">"+feature.properties['図名']+"</div>"});
-						   var s = '<div class="popup">';
-						   for(var k in feature.properties) {
-							 if(k == "図郭座標"){continue;}
-							 var v = feature.properties[k];
-							 s += k + ': ' + v + '<br>';
-						   }
-						   s += '</div>';
-						   var zdiv = L.marker(latlng, {icon: myIcon}).bindPopup(s);
-						   var zkaklb = [[feature.properties['図郭座標'][0][1],feature.properties['図郭座標'][0][0]],[feature.properties['図郭座標'][1][1],feature.properties['図郭座標'][1][0]]];
-						   var zkak = L.rectangle(zkaklb, {color: '#f00', weight: 1, opacity: 1,'fillColor': '#f00', 'fillOpacity': 0});
-						   return L.featureGroup([zdiv,zkak]);
-						 }
-				}
-			};
-			*/
+			
 			if ( !this._style )
 			{
 				$.ajax( {
@@ -14883,39 +14637,7 @@ GSI.ChiikiMesh = L.Class.extend( {
 			this._map.removeLayer(this._layer);
 		if ( this._visible )
 		{
-			/*
-			var style = {
-				options:
-				{
-				  attribution: '地域メッシュ',minZoom: 6,maxNativeZoom: 14, maxZoom: 18
-				},
-				geojsonOptions:
-				{
-						 pointToLayer: function(feature, latlng) {
-						   var idstyle = "\""
-							   +"font-size: 16px;"
-							   +"color:#f00;"
-							   +"white-space: nowrap;"
-							   +"\"";
-						   var idAnchor = (feature.properties['mesh_code'].length - 0.5) /3 * 16;
-						   var myIcon= L.divIcon({
-										   iconAnchor: [idAnchor,10],
-										   className: "gsi-div-icon", 
-										   html: "<div style="+idstyle+">"+feature.properties['mesh_code']+"</div>"});
-
-						   var zdiv = L.marker(latlng, {icon: myIcon});
-						   var zkaklb = [[feature.properties['rectangle_lb'][0][1],feature.properties['rectangle_lb'][0][0]],[feature.properties['rectangle_lb'][1][1],feature.properties['rectangle_lb'][1][0]]];
-						   var zkak = L.rectangle(zkaklb, {color: '#f00', weight: 1, opacity: 1,'fillColor': '#f00', 'fillOpacity': 0});
-						   return L.featureGroup([zdiv,zkak]);
-						 }
-				}
-			};
-			this._layer = new L.TileLayer.GeoJSON(
-				'https://cyberjapandata.gsi.go.jp/xyz/chiikimesh/{z}/{x}/{y}.geojson',
-				style.options,style.geojsonOptions);
 			
-			this._map.addLayer(this._layer);
-			*/
 			if ( !this._style )
 			{
 				$.ajax( {
@@ -15131,13 +14853,6 @@ GSI.LatLngGrid = L.Class.extend( {
 				texture.fillText(latText, pText.x+8, pText.y-24);
 				texture.fillText(lngText, pText.x+8, pText.y-6);
 			}
-			
-			/*
-			var content =
-					'<div unselectable = "on">' + (lat < 0 ? '-' : '') + dms.lat.d + '°' +  dms.lat.m + ' ′' + Math.round( dms.lat.s) + ' ″' + '</div>'
-					+
-					'<div unselectable = "on">' + (lng < 0 ? '-' : '') + dms.lng.d + '°' + dms.lng.m + '′' + Math.round( dms.lng.s )  + ' ″' + '</div>';
-			*/
 			
 		}
 		
@@ -15741,38 +15456,7 @@ GSI.LayersJSON = L.Evented.extend( {
 	_onLoad : function( url, data )
 	{
 		var json = JSON.parse(data);
-		/*
-		var originalLayers = $.extend( true, [], json.layers );
-		if(!this._load_base)
-		{
-			json_base = { 
-				"layers": [ 
-					{ 
-						"type": "LayerGroup", 
-						"title": CONFIG.layerBaseFolder, 
-						"title_sys": CONFIG.layerBaseFolderSYS, 
-						"iconUrl": "", 
-						"open": false, 
-						"toggleall": false, 
-						"entries": [] 
-					} 
-				] 
-			};
-			
-			
-			json_base.layers[0].entries = json.layers.concat();
-			
-			
-			if ( this._urlData )
-			{
-				this._urlData[ url ].req = null;
-				this._urlData[ url ].loaded = true;
-				this._urlData[ url ].layers = $.extend( true, [], json.layers );
-			}
-			json      = json_base;
-			
-        }
-        */
+		
 		if ( (json.layers) && (json.layers[0].title) && (!json.layers[0].title_sys) )
 		{
 			var hybridjson = JSON.parse("{ \"layers\":[] }");
@@ -16300,7 +15984,7 @@ GSI.MapLayerList = L.Evented.extend( {
 			this._elevationData = data;
 		else
 			this._elevationData = $.extend(true, {}, data );
-			
+		
 		for( var i=0; i<this.tileList.length; i++ )
 		{
 			var info = this.tileList[i];
@@ -16557,242 +16241,7 @@ GSI.MapLayerList = L.Evented.extend( {
 				this.onLayerLoad( info._visibleInfo.layer );
 			}
 		}
-		/*
-		if ( info.layerType=="tile" )
-		{
-            var fBaseMap = false;
-            if(info.parent && info.parent != null && info.parent.title_sys == CONFIG.layerBaseFolderSYS){
-                fBaseMap = true;
-            }
-
-			var options = {
-				errorTileUrl : '',
-			};
-			if ( info.subdomains &&info.subdomains!="" )
-			{
-				options.subdomains= info.subdomains;
-			}
-			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
-			if ( info.maxNativeZoom && info.maxNativeZoom!="" ) options.maxNativeZoom =info.maxNativeZoom;
-			if ( info.attribution ) options.attribution =info.attribution;
-			if ( info.bounds && info.bounds!="" ) options.bounds =info.bounds;
-			
-			info._visibleInfo.layer = new GSI.TileLayer(info.url,options);
-			if ( isHide)
-				info._visibleInfo._isHidden = true;
-			else{
-                if(fBaseMap){
-                    GSI.GLOBALS.baseLayer.setActiveId(info.id);
-                }
-                else{
-				    this.map.addLayer(info._visibleInfo.layer,true);
-                }
-            }
-
-            if(fBaseMap){
-                this.tileList.push( info );
-            }
-            else{
-			    this.tileList.unshift( info );
-            }
-			this._initZIndex( this.tileList );
-		}
-		else if ( info.layerType=="kml" )
-		{
-			var options = {async: true, "_map": this.map};
-
-			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
-			if ( info.attribution ) options.attribution =info.attribution;
-            if ( info.errorTileUrl ) options.errorTileUrl =info.errorTileUrl;
-			if ( info.bounds && info.bounds!="" ) options.bounds =info.bounds;
-			info._visibleInfo .layer = new GSI.KML(info.url, options);
-			info._visibleInfo .layer._noFinishMove = noFinishMove;
-			info._visibleInfo .layer.on("loadstart", L.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "KML"  ) );
-			info._visibleInfo .layer.on("loaded", L.bind( this.onLayerLoad, this, info._visibleInfo.layer  ) );
-			info._visibleInfo .layer .load();
-
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer,true);
-
-			this.list.unshift( info );
-			this._initZIndexOffset( this.list, 10000 );
-		}
-		else if ( info.layerType=="geojson" )
-		{
-		// GeoJSON
-			var options = {};
-
-			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
-			if ( info.attribution ) options.attribution =info.attribution;
-			if ( info.bounds && info.bounds!="" ) options.bounds =info.bounds;
-
-			info._visibleInfo .layer = new GSI.GeoJSON(info.url,options);
-			info._visibleInfo .layer._noFinishMove = noFinishMove;
-			info._visibleInfo .layer.on("loadstart", L.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "GeoJSON"  ) );
-			info._visibleInfo .layer.on( "load", L.bind( function(e){ this.onLayerLoad(e.src) },this));
-			info._visibleInfo .layer .load();
-			
-			if ( isHide)
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer);
-			
-			this.list.unshift( info );
-			this._initZIndexOffset( this.list, 10000 );
-
-		}
-		else if ( info.layerType=="geojson_tile" )
-		{
-		// タイルGeoJSON
-			var options = { clipTiles : true};
-			var options2 = {};
-
-			if ( info.subdomains &&info.subdomains!="" )
-			{
-				options.subdomains= info.subdomains;
-			}
-			if ( ( info.minZoom == 0 || info.minZoom) && info.minZoom!="" )
-			{
-				options.minZoom= info.minZoom;
-				options._minZoom= info.minZoom;
-			}
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom!="" )
-			{
-				options.maxZoom =info.maxZoom;
-				options._maxZoom =info.maxZoom;
-			}
-
-			if ( info.maxNativeZoom  && info.maxNativeZoom!="" )
-			{
-				options.maxNativeZoom =info.maxNativeZoom;
-				options._maxNativeZoom =info.maxNativeZoom;
-			}
-
-			if ( info.attribution )
-			{
-				options.attribution =info.attribution;
-				options._attribution =info.attribution;
-			}
-			if ( info.bounds && info.bounds!="" )
-			{
-				options.bounds =info.bounds;
-				options._bounds =info.bounds;
-			}
-			info._visibleInfo.layer = new GSI.VectorTileLayer(info.url,options, options2);
-
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer,true);
-
-			this.list.unshift( info );
-			this._initZIndexOffset( this.list, 10000 );
-		}
-		else if ( info.layerType=="topojson_tile" )
-		{
-		// タイルTopoJSON
-			var options = { clipTiles : true, isTopoJSON: true};
-			var options2 = {};
-
-			if ( info.subdomains &&info.subdomains!="" )
-			{
-				options.subdomains= info.subdomains;
-			}
-			if ( ( info.minZoom == 0 || info.minZoom) && info.minZoom!="" )
-			{
-				options.minZoom= info.minZoom;
-				options._minZoom= info.minZoom;
-			}
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom!="" )
-			{
-				options.maxZoom =info.maxZoom;
-				options._maxZoom =info.maxZoom;
-			}
-
-			if ( ( info.maxNativeZoom ) && info.maxNativeZoom!="" )
-			{
-				options.maxNativeZoom =info.maxNativeZoom;
-				options._maxNativeZoom =info.maxNativeZoom;
-			}
-
-			if ( info.attribution )
-			{
-				options.attribution =info.attribution;
-				options._attribution =info.attribution;
-			}
-			if ( info.bounds && info.bounds!="" )
-			{
-				options.bounds =info.bounds;
-				options._bounds =info.bounds;
-			}
-
-			info._visibleInfo.layer = new GSI.VectorTileLayer(info.url,options, options2);
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer,true);
-			this.list.unshift( info );
-			this._initZIndexOffset( this.list, 10000 );
-		}
-		else if ( info.layerType=="topojson" )
-		{
-		// TopoJSON
-			var options = {layerType:'topojson'};
-
-			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
-			if ( info.attribution ) options.attribution =info.attribution;
-			if ( info.bounds && info.bounds!="" ) ptions.bounds =info.bounds;
-
-			info._visibleInfo .layer = new GSI.GeoJSON(info.url,options);
-			info._visibleInfo .layer._noFinishMove = noFinishMove;
-			info._visibleInfo .layer.on("loadstart", L.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "TopoJSON"  ) );
-			info._visibleInfo .layer.on( "load", L.bind( function(e){ this.onLayerLoad(e.src) },this));
-			info._visibleInfo .layer .load();
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer);
-
-			this.list.unshift( info );
-			this._initZIndexOffset( this.list, 10000 );
-		}
-		else if ( info.layerType=="tms" )
-		{
-		// TMS
-			var options = {};
-
-			if ( ( info.minZoom == 0 || info.minZoom ) && info.minZoom != "" ) options.minZoom= info.minZoom;
-			if ( ( info.maxZoom == 0 || info.maxZoom ) && info.maxZoom != "" ) options.maxZoom =info.maxZoom;
-			if ( info.maxNativeZoom && info.maxNativeZoom!="" ) options.maxNativeZoom =info.maxNativeZoom;
-			if ( info.attribution ) options.attribution =info.attribution;
-			if ( info.bounds && info.bounds!="" ) ptions.bounds =info.bounds;
-
-			info._visibleInfo.layer = new GSI.GSITMSLayer(info.url,options);
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer,true);
-			this.tileList.unshift( info );
-			this._initZIndex( this.tileList );
-		}
-		else if ( info.layerType=="multiLayer" )
-		{
-			// 複数レイヤ
-			info._visibleInfo.layer = new GSI.MultiLayer(info.entries);
-			if ( isHide )
-				info._visibleInfo._isHidden = true;
-			else
-				this.map.addLayer(info._visibleInfo.layer);
-
-			
-		}
-		*/
+		
 		if( info._visibleInfo.layer )
 		{
 			if(info.parent && info.parent != null && info.parent.title_sys == CONFIG.layerBaseFolderSYS){
@@ -21315,19 +20764,6 @@ GSI.Edit.Poly = L.Edit.Poly.extend( {
 		this._initMarkers();
 	},
 	
-	/*
-	spliceLatLngs: function () { // (Number index, Number howMany)
-	
-		var latlngs = this._latlngs;
-		
-		var flat = L.LineUtil.isFlat( latlngs );
-		if ( !flat ) latlngs = latlngs[0];
-		var removed = [].splice.apply(latlngs, arguments);
-		this._convertLatLngs(latlngs, true);
-		this.redraw();
-		return removed;
-	},
-	*/
 	
 	_initMarkers: function ()
 	{
@@ -22000,20 +21436,6 @@ L.Util.extend(GSI.KML, {
 
 GSI.KMLIcon = L.Icon.extend({
 	
-	/*					 
-	createIcon: function (oldIcon) {
-		var img = L.Icon.prototype.createIcon.call(this,oldIcon);
-		$(img).css( {'margin':0} );
-		var div = $( (oldIcon && oldIcon.tagName === 'DIV') ? oldIcon : document.createElement('div') );
-		div.append( img );
-		this._setIconStyles(div[0], 'icon');
-		
-		this._createLabel(div);
-		this._div = div;
-		return div[0];
-	},
-	
-	*/
 	
 	createIcon: function (oldIcon) {
 		var img = this._createIcon('icon');
@@ -22499,27 +21921,6 @@ GSI.CenterCrossMarker = L.Marker.extend( {
 
 
 /************************************************************************
- L.Path
- ************************************************************************/
-/*
-L.Path.prototype.onRemove = function(map)
-{
-	map._pathRoot.removeChild(this._container);
-
-	// Need to fire remove event before we set _map to null as the event hooks might need the object
-	this.fire('remove');
-	this._map = null;
-	this._container = null;
-	this._stroke = null;
-	this._fill = null;
-
-	map.off({
-		'viewreset': this.projectLatlngs,
-		'moveend': this._updatePath
-	}, this);
-};
-*/
-/************************************************************************
  L.Popup
  ・_updateLayout上書き
  ・tableのwidth指定時修正
@@ -22699,13 +22100,7 @@ GSI.BaseLayer = L.TileLayer.extend({
 		}
 		this.activeIndexPre = this.activeIndex;
 	},
-	/*
-	_createTile: function () {
-		var tile = L.TileLayer.prototype._createTile.call(this);
-
-		return tile;
-	},
-	*/
+	
 	_tileOnLoad: function (done, tile) {
 		var layer = this;
 		var img = tile;
@@ -23359,18 +22754,6 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend( {
 		var infoTableTBody = $( '<tbody>' );
 		var tr = null;
 		
-		/*
-		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("中心緯度:"));
-		this._latFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( '' );
-		tr.append( this._latFrame );
-		infoTableTBody.append( tr );
-		
-		
-		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("中心経度:"));
-		this._lngFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( ''  );
-		tr.append( this._lngFrame );
-		infoTableTBody.append( tr );
-		*/
 		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("左上緯度:"));
 		this._latLtFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( '' );
 		this._latLtInput = $( "<input>" ).attr({"type":"text"} )
@@ -23474,13 +22857,7 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend( {
 			.attr( {"href":"javascript:void(0);"} )
 			.html(GSI.TEXT.THREEDAREA.DIALOG_OKBTN)
 			.click( L.bind( this._onOkClick, this ) );
-		/*
-		this._cancelButton = $( '<a>' )
-			.addClass("normalbutton threedareadialog_button")
-			.attr( {"href":"javascript:void(0);"} )
-			.html(GSI.TEXT.THREEDAREA.DIALOG_CANCELBTN)
-			.click( L.bind( function(){ this.hide(); }, this ) );
-		*/
+		
 		this._buttonFrame
 			.append( this._errorMessage )
 			.append( this._okButton );
@@ -23658,16 +23035,6 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend( {
 				 L.latLng( parseFloat(this._latLtInput.val() ),parseFloat(this._lngRbInput.val() ) )
 			);
 			
-			/*
-			if ( !this._layer.checkBounds( result ) )
-			{
-				result = null;
-				latLtErr = true;
-				lngLtErr = true;
-				latRbErr = true;
-				lngRbErr = true;
-			}
-			*/
 		}
 		
 		
@@ -24153,12 +23520,6 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
 				var newW = parseInt(this._div.css("width") ) + ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) + ( point.y - newPoint.y  );
 				
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
 				var northWest = this._map.containerPointToLatLng(
 						L.point( point.x - ( newW - this.options.width ), point.y-(newH - this.options.height )) );
 				var southEast = this._latLngBounds.getSouthEast();
@@ -24190,12 +23551,6 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
 				var newW = parseInt(this._div.css("width") ) - ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) + ( point.y - newPoint.y  );
 				
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
 				var northEast = this._map.containerPointToLatLng(
 						L.point( point.x + ( newW - this.options.width ), point.y-(newH - this.options.height )) );
 				
@@ -24225,18 +23580,7 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
 				
 				var newW = parseInt(this._div.css("width") ) + ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) - ( point.y - newPoint.y  );
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
 				
-				
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
 				
 				var southWest = this._map.containerPointToLatLng(
 						L.point( point.x - ( newW - this.options.width ), point.y+(newH - this.options.height )) );
@@ -24266,12 +23610,6 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
 				var newW = parseInt(this._div.css("width") ) - ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) - ( point.y - newPoint.y  );
 				
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
 				var southEast = this._map.containerPointToLatLng(
 						L.point( point.x + ( newW - this.options.width ), point.y+(newH - this.options.height )) );
 				var northWest = this._latLngBounds.getNorthWest();
@@ -24286,14 +23624,6 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
 				this.options.height = newH;
 			}
 			
-			//if (this.options.width % 2 != 0) this.options.width++;
-			//if (this.options.height % 2 != 0) this.options.height++;
-			/*
-			if ( this.options.width < 256 ) this.options.width = 256;
-			if ( this.options.width > 2048 ) this.options.width = 2048;
-			if ( this.options.height < 256 ) this.options.height = 256;
-			if ( this.options.height > 2048 ) this.options.height = 2048;
-			*/
 		}
 		
 		this.update();
@@ -25648,7 +24978,7 @@ GSI.MapToImage = L.Evented.extend( {
 		
 		var mapSize = this._map.getSize();
 		//var size = ( this.options.pixelBounds  ? this.options.pixelBounds.getSize() : this._map.getSize() );
-		var scaleBar = $( ".leaflet-control-scale" );
+		var scaleBar = $($( ".leaflet-control-scale" )[0]);
 		
 		var size = {
 			w : scaleBar.outerWidth(),
@@ -25697,33 +25027,7 @@ GSI.MapToImage = L.Evented.extend( {
 		this._mapTexture.restore();
 		
 		this._finish();
-		/*
-		scaleBar = scaleBar.clone();
-		var dummy = $( "<div>" ).addClass("maptoimage-dummy").css({"z-index" : 0, "width": "1px", "height": "1px", "position": "absolute"});
-		$( "body" ).append(dummy);
-		
-		//mapPane.append( popupPane );
-		dummy.append( scaleBar );
-		html2canvas(scaleBar[0], {
-			onrendered: L.bind( function(canvas) {
-				
-				$( ".maptoimage-dummy" ).remove();
-				var scaleBar = $( ".leaflet-control-scale" );
-				var offset = $(this._map.getContainer() ).offset();
-				var pos = scaleBar.offset();
-				if ( $( "#footer" ).is(":visible") )
-					pos.top += $( "#footer" ).outerHeight();
-				//if ( pos.left - 280 > 0 ) pos.left-=280;
-				this._mapTexture.drawImage(canvas, pos.left - offset.left, pos.top - offset.top );
-				this._finish();
-			}, this ),
-			logging:false,
-			userCORS:true,
-			allowTaint:false,
-			width: size.x,
-			height: size.y
-		});
-		*/
+	
 		
 	},
 	
@@ -26724,12 +26028,7 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 				
 				var newW = parseInt(this._div.css("width") ) + ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) + ( point.y - newPoint.y  );
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
+				
 				var northWest = this._map.containerPointToLatLng(
 						L.point( point.x - ( newW - this.options.width ), point.y-(newH - this.options.height )) );
 				var southEast = this._latLngBounds.getSouthEast();
@@ -26760,12 +26059,7 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 				
 				var newW = parseInt(this._div.css("width") ) - ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) + ( point.y - newPoint.y  );
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
+			
 				var northEast = this._map.containerPointToLatLng(
 						L.point( point.x + ( newW - this.options.width ), point.y-(newH - this.options.height )) );
 				
@@ -26795,18 +26089,7 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 				
 				var newW = parseInt(this._div.css("width") ) + ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) - ( point.y - newPoint.y  );
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				
-				
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
+			
 				var southWest = this._map.containerPointToLatLng(
 						L.point( point.x - ( newW - this.options.width ), point.y+(newH - this.options.height )) );
 				
@@ -26835,12 +26118,6 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 				var newW = parseInt(this._div.css("width") ) - ( point.x - newPoint.x  );
 				var newH = parseInt(this._div.css("height") ) - ( point.y - newPoint.y  );
 				
-				/*
-				if ( newW < 256 ) newW = 256;
-				if ( newW > 2048 ) newW = 2048;
-				if ( newH < 256 ) newH = 256;
-				if ( newH > 2048 ) newH = 2048;
-				*/
 				var southEast = this._map.containerPointToLatLng(
 						L.point( point.x + ( newW - this.options.width ), point.y+(newH - this.options.height )) );
 				var northWest = this._latLngBounds.getNorthWest();
@@ -26855,14 +26132,6 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 				this.options.height = newH;
 			}
 			
-			//if (this.options.width % 2 != 0) this.options.width++;
-			//if (this.options.height % 2 != 0) this.options.height++;
-			/*
-			if ( this.options.width < 256 ) this.options.width = 256;
-			if ( this.options.width > 2048 ) this.options.width = 2048;
-			if ( this.options.height < 256 ) this.options.height = 256;
-			if ( this.options.height > 2048 ) this.options.height = 2048;
-			*/
 		}
 		
 		this.update();
@@ -27030,18 +26299,6 @@ GSI.MapTpImageAreaSelectDialog = GSI.Dialog.extend( {
 		var infoTableTBody = $( '<tbody>' );
 		var tr = null;
 		
-		/*
-		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("中心緯度:"));
-		this._latFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( '' );
-		tr.append( this._latFrame );
-		infoTableTBody.append( tr );
-		
-		
-		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("中心経度:"));
-		this._lngFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( ''  );
-		tr.append( this._lngFrame );
-		infoTableTBody.append( tr );
-		*/
 		tr = $( "<tr>" ).append( $("<td>").css({"white-space":"nowrap"}).html("左上緯度:"));
 		this._latLtFrame = $( '<td>' ).css({"white-space":"nowrap"}).html( '' );
 		this._latLtInput = $( "<input>" ).attr({"type":"text"} )
@@ -27382,16 +26639,6 @@ GSI.MapTpImageAreaSelectDialog = GSI.Dialog.extend( {
 				 L.latLng( parseFloat(this._latLtInput.val() ),parseFloat(this._lngRbInput.val() ) )
 			);
 			
-			/*
-			if ( !this._layer.checkBounds( result ) )
-			{
-				result = null;
-				latLtErr = true;
-				lngLtErr = true;
-				latRbErr = true;
-				lngRbErr = true;
-			}
-			*/
 		}
 		
 		
@@ -27922,38 +27169,7 @@ GSI.MapToImageWindow = L.Evented.extend( {
 			
 			}, this ) );
 			this._dlWorldButton = $( "<a>" ).attr({"href":"javascript:void(0);"}).html(GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEPGWBTN).click(L.bind( function(){
-				/*
-				var size = this._map.getSize();
-				var bounds = this._map.getBounds();
-						
-				var northWest = L.Projection.SphericalMercator.project(
-						bounds.getNorthWest()
-					);
-				var southEast = L.Projection.SphericalMercator.project(
-						bounds.getSouthEast()
-					);
-					
-					
-				var lt = {
-					lng : northWest.x * 6378137.0,
-					lat :northWest.y * 6378137.0
-				};
-				var rb = {
-					lng : southEast.x * 6378137.0,
-					lat : southEast.y * 6378137.0
-				};
-
-				//var lt = bounds.getNorthWest();
-				//var rb = bounds.getSouthEast();
-				
-				var txt = "";
-				txt += ( ( rb.lng - lt.lng ) / size.x ) + "\n";
-				txt += "0\n";
-				txt += "0\n";
-				txt += -( ( rb.lng - lt.lng ) / size.x ) + "\n";
-				txt += lt.lng + "\n";
-				txt += lt.lat;
-				*/
+			
 				var blob = new Blob([this._worldFileText], { "type" : "text/plain"})
 					
 				if(window.navigator.msSaveBlob)
@@ -29193,6 +28409,7 @@ GSI.MapManager = L.Class.extend( {
 		this._zoomControl = new L.Control.Zoom({position:"bottomleft"});
 		this._map.addControl(this._zoomControl);
 		
+		
 		this._mapLayerList = new GSI.MapLayerList(this._gsimaps, this, this._map);
 		
 		
@@ -29209,6 +28426,14 @@ GSI.MapManager = L.Class.extend( {
 	// 地図初期化
 	initializeMap : function(ctrlSetting)
 	{
+		
+		if(ctrlSetting.header.visible == false || GSI.GLOBALS.isCreditShow)
+		{
+			this._map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
+		}
+
+
+
 		// ココタイル
 		this._cocoTileLayer = new GSI.COCOTileLayer(
 			this._map
@@ -29238,7 +28463,7 @@ GSI.MapManager = L.Class.extend( {
 				}, this )
 			}
 		);
-
+		
 	},
 	
 	// フッター等初期化
@@ -29660,44 +28885,7 @@ GSI.GSIMaps = L.Class.extend( {
 		
 		$("#map" ).css( { top : this._header.getHeight() + 'px' });
 		
-		//this._initializeProcMap();
-		//this._mainMap.initializeLayers();
 		
-		//return;
-		/*
-		this._map = GSI.map('map',
-			{
-				  doubleClickZoom    : false
-				, zoomsliderControl  : false
-				, zoomControl        : false
-				, attributionControl : false
-			  //,maxBounds           : L.latLngBounds(L.latLng(-3600, -3600), L.latLng(3600, 3600))
-				, worldCopyJump      : false
-				, inertiaMaxSpeed    : 1000
-				, center             : startUpCenter
-			    , zoom               : startUpZoom
-			}
-	    );
-	    
-		this._evacDialog = new GSI.EvacDialog();
-
-		// スクロール後に正しい位置へ移動
-		this._map.on( 'moveend', L.bind(function()
-	    {
-			var center = this._map.getCenter();
-			if(center.lat < -88 || center.lat > 88 || center.lng < -180 || center.lng > 180){
-				this._map.panTo(center.wrap(), {animate: false});
-	        }
-		}, this ) );
-
-		// スペース用
-		this._bottomRightSpacer = ( new GSI.Control.Spacer({position:"bottomright"})).addTo(this._map);
-		this._bottomLeftSpacer  = ( new GSI.Control.Spacer()                        ).addTo(this._map);
-
-		L.control.scale({imperial:false}).addTo(this._map);
-		
-		this._mapLayerList = new GSI.MapLayerList(this, this._map);
-		*/
 		
 		
 	    // Layers.txt を読み込み
@@ -29786,23 +28974,6 @@ GSI.GSIMaps = L.Class.extend( {
 					
 					this._subMap._baseLayer.addTo(this._subMap._map);
 					
-					//this._subMap._baseLayer.setActiveIndex(0);
-					/*
-					var baseId = this._queryParams.getBaseMap2();
-					if ( !baseId || baseId == "" ) baseId = "std";
-					for( var i=0; i<this._subMap._baseLayer.baseLayerList.length; i++ )
-					{
-						if ( this._subMap._baseLayer.baseLayerList[i].id == baseId )
-						
-							this._subMap._mapLayerList.append( this._subMap._baseLayer.baseLayerList[i] );
-							break;
-						}
-					}
-					*/
-					//var std = this._subMap._baseLayer.baseLayerList[0];
-					
-					//this._subMap._mapLayerList.append( std );
-					
 					this._subMap._mapMouse.setClickMoveVisible( this._mainMap._mapMouse.getClickMoveVisible() );
 					this._subMap._centerCross.setVisible( this._mainMap._centerCross.getVisible() );
 					
@@ -29826,24 +28997,6 @@ GSI.GSIMaps = L.Class.extend( {
 					this._refreshSync(this._syncSplitMap);
 				}
 				
-				//this._mainMap._map.panTo( this._startUpCenter, {animate:false,noMoveStart:true});
-				/*
-				var logA = localStorage.getItem("loglist");
-				var logCnt = localStorage.getItem("logcnt");
-				if ( !logA ) logA = "";
-				if ( !logCnt ) logCnt = 0;
-				logA +=  ((+new Date()) - this._layersJSONStartTime ) + "\n";
-				logCnt++;
-				localStorage.setItem("loglist", logA);
-				localStorage.setItem("logcnt", logCnt);
-				
-				if ( logCnt > 101 )
-				{
-					console.log( logA );
-				}
-				else
-					location.reload();
-				*/
 			}
 	 	}, this ) );
 	 	
@@ -29888,21 +29041,6 @@ GSI.GSIMaps = L.Class.extend( {
 		// ミニマップ
 		this._onoffObjects[CONFIG.PARAMETERNAMES.MINIMAP    ] = { obj : new GSI.MiniMap    (map, { visible: viewSetting.miniMap                                                                                                                               } ), setter : 'setVisible', getter : 'getVisible' };
 
-		//this._mainMap.initializeMap(ctrlSetting);
-		/*
-		
-		// ココタイル
-		this._cocoTileLayer
-	    = new GSI.COCOTileLayer(
-	      this._map
-	    , CONFIG.COCOTILEURL
-	    , {
-	          visible : CONFIG.COCOTILEVISIBLE
-	        , onLoad  : L.bind( function(tileIdList){ this._layersJSON.setHasTileList( tileIdList ); }, this )
-	      }
-	    );
-	    */
-		//this._onoffObjects[CONFIG.PARAMETERNAMES.COCOTILE   ] = { obj : this._cocoTileLayer, setter : 'setVisible'        , getter : 'getVisible'           };
 
 		// クリックで移動
 		this._mapMouse = this._mainMap._mapMouse;
@@ -29944,34 +29082,7 @@ GSI.GSIMaps = L.Class.extend( {
 			return this._mainMap._map._footer.getVisible();
 		},this );
 		this._onoffObjects[ CONFIG.PARAMETERNAMES.FOOTER ] = { obj : this._footerManager    , setter : 'setVisible', getter  : 'getVisible' };
-	    /*
-		this._footer = new GSI.Footer( this, map, "#map", "#footerbtn", "#footer", "image/system/footer_up.png", "image/system/footer_down.png",
-			{ visible : ctrlSetting.contextMenu.visible, overlap:true } );
-	    if(viewSetting.footer){
-	        this._footer.setVisible(viewSetting.footer, viewSetting.footer);
-	    }
-	    */
-	    //this._mainMap.initializeFooter(ctrlSetting.contextMenu.visible,viewSetting.footer );
-		//this._onoffObjects[CONFIG.PARAMETERNAMES.FOOTER     ] = { obj : this._mainMap._footer};
-
-		// 地図メニュー
-		/*
-		new GSI.MapMenu(
-		this._map
-		, CONFIG.MAPMENU
-		, {
-			  visible         : ctrlSetting.infoMenu.visible
-			, rootEffect      : CONFIG.EFFECTS.MENU.ROOT
-			, otherEffect     : CONFIG.EFFECTS.MENU.OTHER
-			, onMenuItemClick : L.bind(function(id)
-			{
-				
-				this._viewListDialog.show();
-				this._layerTreeDialog.show();
-			}, this )
-		}
-		);
-		*/
+	   
 		// 機能メニュー
 		this._funcMenu = new GSI.MapMenu(this, map, CONFIG.FUNCMENU, {
 			visible : ctrlSetting.funcMenu.visible,
@@ -30251,69 +29362,6 @@ GSI.GSIMaps = L.Class.extend( {
 		this._onoffObjects[CONFIG.PARAMETERNAMES.HOUILINE ] = { obj : new GSI.HouiLine (map, dialogManager, this._funcMenu,{} ), setter : 'setVisible', getter : 'getVisible' };
 		
 		
-		
-		// ズームコントロール
-		/*
-		this._zoomControl = new L.Control.Zoom({position:"bottomleft"});
-		this._map.addControl(this._zoomControl);
-		*/
-
-		/*
-		var left = 8;
-		//var top  = this._header.getHeight() + 8;
-		var top  = this._header.getHeight() + 400;
-		var dlgVisible = this._queryParams.getViewListDialogVisible();
-		if(dlgVisible){
-			left = 8;
-			top  = this._header.getHeight() + 400;
-		}
-		
-		
-		top = GSI.Utils.getScreenSize().h-240;
-		
-		this._viewListDialog
-	    = new GSI.ViewListDialog(
-	      this,
-	      this._map
-	    , this._layersJSON
-	    , this._mapLayerList
-	    , this._cocoTileLayer
-	    , {
-	          left     : left
-	        , top      : top
-	        , width    : 320
-	        , visible  : dlgVisible
-	        , effect    : CONFIG.EFFECTS.DIALOG
-	        , resizable : ( GSI.Utils.Browser.isSmartMobile ? false : "all" )
-	      }
-	    );
-		
-		// 表示可能レイヤーダイアログ
-		left = 8;
-		//top  = this._header.getHeight() + 136;
-		top  = this._header.getHeight() + 8;
-		
-		dlgVisible = this._queryParams.getLayerTreeDialogVisible();
-		if(dlgVisible){
-	        left = 8;
-			top  = this._header.getHeight() + 8;
-		}
-		this._layerTreeDialog
-			= new GSI.LayerTreeDialog(      
-			this._mapLayerList, 
-			this._cocoTileLayer, 
-			CONFIG.layersTab, 
-			{
-			left        : left
-			, top         : top
-			, width       : 320
-			, visible     : dlgVisible
-			, effect      : CONFIG.EFFECTS.DIALOG
-			, resizable   : ( GSI.Utils.Browser.isSmartMobile ? false : "all" ) //"all" ,
-			, currentPath : this._queryParams.getCurrentPath()
-			}
-	    );
-		*/
 		// 検索ダイアログ
 		if( ctrlSetting.header.visible)
 		{
@@ -30623,7 +29671,7 @@ GSI.PathFrameRectangle = L.Polygon.extend( {
 	// 削除アイコンクリック
 	_removeBtnClick : function()
 	{
-		if ( !confirm("削除しますか？") ) return;
+		if ( !confirm("このオブジェクトを削除します。よろしいですか？") ) return;
 		
 		
 		this.fire( "requestremove" );
@@ -31391,117 +30439,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 		this._owner._map.addLayer( this._reservedFrameFreatureGroup );
 		
 		return;
-		/*
-		var f_fitBounds = false;
-		var layers = [];
-		this._getLayers( this._layer, layers );
-
-		for ( var i=0; i<layers.length; i++ )
-		{
-			var layer = layers[i];
-            layer.id = (i + 1);
-
-			// ポップアップストップ
-			if ( layer.closePopup )layer.closePopup();
-			if ( layer.unbindPopup )layer.unbindPopup();
-
-			// 編集
-			if ( layer._clickEditHandler )
-			{
-				layer.off('click', layer._clickEditHandler);
-				delete layer._clickEditHandler;
-				layer._clickEditHandler = null;
-			}
-
-			layer._clickEditHandler = L.bind( this._onLayerClick, this, layer );
-
-			layer.on( 'click', layer._clickEditHandler );
-
-			var rect = null;
-			var rectStyle = {color: "#ff3333", weight: 2, fill:false, opacity:1,dashArray : [3,3]};
-
-			if ( layer instanceof L.CircleMarker && !(layer instanceof L.Circle) )
-			{
-				var latlng = layer._latlng;
-				var radius = layer.getRadius();
-			    rect = new GSI.PixelRectangle( layer.getLatLng(), radius * 2, radius * 2, radius, radius, rectStyle );
-
-			    radius = GSI.Utils.ConverUnit(this._owner._map, layer, radius, "px", "m");
-
-				    //f_fitBounds = false;
-				
-			}
-			else if ( layer instanceof L.Circle )
-			{
-				var latlng = layer._latlng;
-				var radius = layer.getRadius();
-				var latRadius = ( radius / 40075017 * 360 );
-			    var lngRadius = ( latRadius / Math.cos(L.LatLng.DEG_TO_RAD * latlng.lat) );
-
-			    rect = L.rectangle(
-				    new L.LatLngBounds(
-					    [latlng.lat - latRadius, latlng.lng - lngRadius],
-					    [latlng.lat + latRadius, latlng.lng + lngRadius]),
-				    rectStyle );
-			}
-			else if ( layer.getBounds )
-			{
-				rect = L.rectangle(layer.getBounds(), rectStyle);
-			}
-			else
-			{
-				if ( layer.getLatLng )
-				{
-					var w = 50;
-					var h = 50;
-					var anchorX = 25;
-					var anchorY = 25;
-					if ( layer.options.icon && layer.options.icon.options.iconUrl && layer.options.icon.options.iconSize )
-					{
-						w = layer.options.icon.options.iconSize[0] + 8;
-						h = layer.options.icon.options.iconSize[1] + 8;
-					}
-					else if ( layer._icon )
-					{
-						w = $( layer._icon ).outerWidth( false ) + 8;
-						h = $( layer._icon ).outerHeight( false ) + 8;
-					}
-
-					if ( layer.options.icon && layer.options.icon.options.iconAnchor )
-					{
-						anchorX = layer.options.icon.options.iconAnchor[0] + 4;
-						anchorY = layer.options.icon.options.iconAnchor[1] + 4;
-					}
-					else if ( layer.options.icon && ( layer.options.icon.options.html || layer.options.icon.options.html !='' ) )
-					{
-						anchorX = 4;
-						anchorY = 4;
-					}
-					else
-					{
-						anchorX = Math.round( w / 2 );
-						anchorY = Math.round( h / 2 );
-					}
-					rect = new GSI.PixelRectangle( layer.getLatLng(), w, h, anchorX, anchorY, rectStyle );
-				}
-			}
-
-			layer._boundRect = rect;
-			if ( rect ){
-				rect.id = layer.id;                
-				this._editingBoundsRects.addLayer( rect );
-			}
-		}
-		if ( this._editingBoundsRects.getBounds )
-		{
-			try
-			{
-				if(f_fitBounds)
-					this._owner._map.fitBounds( this._editingBoundsRects.getBounds() );
-			}
-			catch( e ) {}
-		}
-		*/
+	
 	},
 	
 	_addReservedFeature : function( layer )
@@ -31955,18 +30893,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 					showLength : true
 				});
 				
-				/*
-				path._measureChangeHandler = function(layerType, path,e) {
-					path.off("start" );
-					this._nextStartCreate(layerType,path);
-					
-				};
 				
-				this._nextPath = path;
-				
-				
-				path.on("start", L.bind( path._measureChangeHandler, this, layerType, path) );
-				*/
 				this._nextPath = path;
 				path.enable();
 
@@ -32007,17 +30934,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 					showLength : true
 				});
 				this._nextPath = path;
-				/*
-				path._measureChangeHandler = function(layerType, path,e) {
-					path.off("measurechange" );
-					this._nextStartCreate(layerType,path);
-					
-				};
 				
-				this._nextPath = path;
-				
-				path.on("measurechange", L.bind( path._measureChangeHandler, this, layerType, path) );
-				*/
 				path.enable();
 			}
 			
@@ -32060,17 +30977,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 				allowIntersection : false
 			});
 			
-			/*
-			path._measureChangeHandler = function(layerType, path,e) {
-				path.off("measurechange" );
-				this._nextStartCreate(layerType,path);
-				
-			};
 			
-			this._nextPath = path;
-			
-			path.on("measurechange", L.bind( path._measureChangeHandler, this, layerType, path) );
-			*/
 			
 			this._nextPath = path;
 				
@@ -32115,18 +31022,6 @@ GSI.SakuzuListItem = L.Evented.extend( {
 			
 			this._nextPath = path;
 			
-			/*
-			path._measureChangeHandler = function(layerType, path,e) {
-				path.off("start" );
-				
-				this._nextStartCreate(layerType,path);
-				
-			};
-			
-			this._nextPath = path;
-			
-			path.on("start", L.bind( path._measureChangeHandler, this, layerType, path) );
-			*/
 			path.on( 'change', L.bind( this._onCircleChange, this ) );
 			path.enable();
 			
@@ -32169,17 +31064,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 			});
 			
 			this._nextPath = path;
-			/*
-			path._measureChangeHandler = function(layerType, path,e) {
-				path.off("start" );
-				this._nextStartCreate(layerType,path);
-				
-			};
 			
-			this._nextPath = path;
-			
-			path.on("start", L.bind( path._measureChangeHandler, this, layerType, path) );
-			*/
 			path.on( 'change', L.bind( this._onCircleChange, this ) );
 			path.enable();
 
@@ -32339,12 +31224,6 @@ GSI.SakuzuListItem = L.Evented.extend( {
 		}
 		else
 		{
-			/*
-			if ( this._nextPath && this._nextPath._layerType )
-			{
-				this._nextStartCreate(this._nextPath._layerType,this._nextPath);
-			}
-			*/
 			
 			
 			this._editingEditingLayer = event.layer;
@@ -32352,14 +31231,62 @@ GSI.SakuzuListItem = L.Evented.extend( {
 
 			this._destroyEditPathList();
 			this.nextCreate(this._editingType);
-			//this.nextCircleCreate();
-			/*
-			this._startPathEdit();
-			this.nextCreate();
-			*/
+			
 		}
 		
 		this._owner.fire( 'ready' );
+	},
+	
+	removeEditingLayer : function()
+	{
+		if ( !this._reservedFreatureGroup )
+		{
+			this._reservedFreatureGroup = L.featureGroup();
+ 			this._owner._map.addLayer( this._reservedFreatureGroup );
+ 		}
+ 		
+ 		
+ 		var oldEditingLayer = this._editingEditingLayer;
+ 		if ( this._editingPathList )
+ 		{
+	 		for( var i=0; i<this._editingPathList.length; i++ )
+	 		{
+				this._editingPathList[i].disable();
+			}
+		}
+		
+ 		
+		this._editingPathList = [];
+		
+		if ( oldEditingLayer )
+		{
+		 	this._editingFreatureGroup.removeLayer( oldEditingLayer);
+	 		this._editingEditingLayer = null;
+	 		
+	 		if ( !oldEditingLayer._layerInfo )
+	 		{
+				oldEditingLayer._layerInfo = {};
+			}
+			
+			this._addReservedFeature( oldEditingLayer );
+			
+		}
+		
+ 		this._editingEditingLayer = null;
+ 		
+		
+		if ( oldEditingLayer )
+		{
+			oldEditingLayer._cloneLayer._layerInfo = oldEditingLayer._layerInfo;
+ 			this._addReservedFrameRectangle( oldEditingLayer._cloneLayer );
+ 		}
+ 		this._reservedFrameFreatureGroup.addTo( this._owner._map );
+		
+		
+		this._reservedFreatureGroup.removeLayer( oldEditingLayer._cloneLayer );
+		this._reservedFrameFreatureGroup.removeLayer( oldEditingLayer._cloneLayer._reservedFrameRectangle );
+		this._owner.fire("createchange" );
+		
 	},
 	
 	_editReservedPath : function( rect, layer )
@@ -32771,40 +31698,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 			delete this._originalLayers;
 			this._originalLayers = null;
 		}
-		/*
-		if ( this._editingEditingLayer && this._editingEditingLayer._originalLayer )
-		{
-			var originalLayer = this._editingEditingLayer._originalLayer;
-			( originalLayer._parent ? originalLayer._parent : this._layer )
-				.addLayer( originalLayer );
-			
-			this._bindPopup(originalLayer);
-			this._editingEditingLayer._originalLayer = null;
-		}
-		if ( this._reservedFreatureGroup )
- 		{
-			var layers = this._reservedFreatureGroup.getLayers();
-			for( var i=0; i<layers.length; i++ )
-			{
-				var layer = layers[i];
-				var originalLayer = layer._originalLayer;
-				
-				if ( !originalLayer ) continue;
-				( originalLayer._parent ? originalLayer._parent : this._layer )
-					.addLayer( originalLayer );
-				this._bindPopup(originalLayer);
-				layer._originalLayer = null;
-			}
-		}
-		*/
-		/*
-		if ( this._editingOriginalLayer )
- 		{
-			( this._editingOriginalLayer._parent ? this._editingOriginalLayer._parent : this._layer )
-				.addLayer( this._editingOriginalLayer );
-			this._editingOriginalLayer = null;
-		}
-		*/
+	
 		this._bindPopup();
  		this._destroyEditObjects();
 
@@ -34912,21 +33806,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		{
 			if ( !this._editingTarget ) return;
 			
-			/*
-			if ( !this._editingTarget.isReady() ) 
-			{
-				if ( this._editingTarget._editingPathList )
-				{
-					for( var i= 0; i<this._editingTarget._editingPathList.length; i++ )
-					{
-						if ( this._editingTarget._editingPathList[i].completeShape )
-							this._editingTarget._editingPathList[i].completeShape();
-					}
-				}
-				
-				return;
-			}
-			*/
+			
 			if ( this._editingTarget._editingPathList && this._editingTarget._editingPathList.length > 0  )
 			{
 				var execCompleteShapte = false;
@@ -34995,51 +33875,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		this._sakuzuList._defaultIcon._iconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
 		this._showTopPanel( this._editPanel );
 		
-		//if ( this._mode == GSI.SakuzuListItem.CREATE )
-		/*
-		{
-			switch ( this._currentCreateId )
-			{
-			case GSI.SakuzuListItem.POINT:
-			case GSI.SakuzuListItem.POINT_TEXT:
-			case GSI.SakuzuListItem.POLYGON:
-			case GSI.SakuzuListItem.MULTIPOLYGON:
-			case GSI.SakuzuListItem.LINESTRING:
-			case GSI.SakuzuListItem.MULTILINESTRING:
-			case GSI.SakuzuListItem.CIRCLE:
-			case GSI.SakuzuListItem.POINT_CIRCLE:
-			case GSI.SakuzuListItem.FREEHAND:
-				var editMode = GSI.SakuzuListItem.NONE;
-				if ( this._editingTarget )
-				{
-					editMode = this._editingTarget.editMode;
-					this._editingTarget.editCancel();
-					if ( editMode != GSI.SakuzuListItem.EDIT )
-					{
-						this._editingTarget = null;
-					}
-				}
-				this._sakuzuList._defaultIcon.url = CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
-				this._sakuzuList._defaultIcon._iconScale = CONFIG.SAKUZU.SYMBOL.ICON_SCALE;
-				this._showTopPanel( this._editPanel );
-				break;
-			default:
-				this._editPanel.fadeOut( 'normal',
-					L.bind(
-					function()
-					{
-						this._startCreate( this._currentCreateId );
-						this._editPanel.fadeIn( 'normal' );
-					},
-					this )
-				);
-			}
-		}
-		*/
-		//else
-		//{
-		//	this._showSelectEditTargetPanel( this._editingTarget, this._editPanel );
-		//}
 	},
 	onEditCancelClick :function() {
 		
@@ -35111,8 +33946,10 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			{
 				if ( !confirm( GSI.TEXT.SAKUZU.DIALOG_EDIT_REMOVECONFIRMMSG ) ) return;
 
-				this._editingTarget.removeEditObject();
+				this._editingTarget.removeEditingLayer();
 				this._showSelectEditTargetPanel( null, this._editPanel );
+				//this._selectEditTargetPanel.fadeIn( 'normal' );
+			
 			}
 		}
 	},
@@ -35195,32 +34032,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		
 		this._pointEditTextStyleFrame = $( '<div>' ).addClass( 'gsi_sakuzu_dialog_pointedit_text_style_frame' );
 		
-		// font-family
-		/*
-		var fontFamilyFrame = $( '<div>' ).addClass('font_family_select_frame');
-		this._pointEditTextFontFamilySelect = $( '<select>' ).addClass( 'font_family_select' );
-		fontFamilyFrame.append( this._pointEditTextFontFamilySelect );
-		this._pointEditTextStyleFrame.append( fontFamilyFrame );
-		
-		this._pointEditTextFontFamilySelect
-				.append($('<option>')
-				.html("フォントを選択")
-				.val(""));
-		
-		for ( var i=0; i<CONFIG.SAKUZU.FONTFAMILYLIST.length; i++ )
-		{
-			this._pointEditTextFontFamilySelect
-				.append($('<option>')
-				.html(CONFIG.SAKUZU.FONTFAMILYLIST[i])
-				.val(CONFIG.SAKUZU.FONTFAMILYLIST[i]));
-		}
-		
-		this._pointEditTextFontFamilySelect
-			.on( 'change', L.bind( function(){
-				this._onPointIconHTMLChange();
-			}, this ) );
-			
-		*/
 		// font-size
 		this._pointEditTextFontSizeSelect = $( '<select>' ).addClass( 'font_size_select' );
 		this._pointEditTextStyleFrame.append( this._pointEditTextFontSizeSelect );
@@ -35942,6 +34753,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 	},
 	_onStartEdit : function( event )
 	{
+		
+		this._editRemoveBtnFrame.show(); //removeClass('disabled' );
 		if ( this._editingTarget )
 		{
 			this._createEditPanel();
@@ -36075,16 +34888,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 			if ( !style.icon.options.iconUrl && ( style.icon.options.html || style.icon.options.html == '' ) )
 			{
 				var text = style.icon.options.html ;
-				/*
-				if ( !style.icon.options.html || style.icon.options.html == '' )
-				{
-					this._setPointTextMode( true, text );
-				}
-				else
-				{
-					this._setPointTextMode( false,text );
-				}
-				*/
+				
 				this._setPointTextMode( true, text );
 				
 				this._pointEditMarkerFrame.hide();
@@ -36307,10 +35111,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 	_onSakuzuItemReady : function()
 	{
 		this._refreshBtns();
-		/*
-		this._editOkBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_OKBTN ).removeClass('disabled' );
-		this._editCancelBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCEL2BTN );
-		*/
 	},
 	
 	
@@ -36341,29 +35141,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				this._editOkBtn.addClass('disabled' );
 				return;
 			}
-			/*
-			else if ( this._editingTarget.isReady() )
-			{
-				
-				console.log("test");
-				var layerCount = 
-					( this._editingTarget._reservedFreatureGroup ? this._editingTarget._reservedFreatureGroup.getLayers().length : 0 );
-					
-					
-				if ( this._editingTarget._editingEditingLayer != null )
-				{
-					this._editOkBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_OK2BTN );
-					this._editOkBtn.removeClass('disabled' );
-				}
-				else
-				{
-					this._editOkBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_FINISHBTN + '<span class="num">' + layerCount + '</span>' );
-					this._editOkBtn.removeClass('disabled' );
-				}
-				this._editCancelBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCELBTN );
-				return;
-			}
-			*/
+		
 			if ( this._editingTarget._editingPathList && this._editingTarget._editingPathList.length > 0 )
 			{
 				
@@ -36529,23 +35307,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 				this._editOkBtn.addClass('disabled' );
 				this._editCancelBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCELBTN );
 			}
-			/*
-			else if ( this._editingTarget.isReady() )
-			{
-				this._editOkBtn.removeClass('disabled' );
-				var layerCount = 
-					( this._editingTarget._reservedFreatureGroup ? this._editingTarget._reservedFreatureGroup.getLayers().length : 0 );
-				if( this._editingTarget._editingEditingLayer  ) layerCount ++;
-				
-				this._editOkBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_FINISHBTN + '<span class="num">' + layerCount + '</span>' );
-			}
-			else
-			{
-				
-				this._editOkBtn.addClass('disabled' );
-				this._editCancelBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_CANCELBTN );
-			}
-			*/
+		
 		}
 		else if ( this._currentCreateId == GSI.SakuzuListItem.POINT )
 		{
@@ -36695,7 +35457,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 	
 	_startEdit : function(itemType, layer)
 	{
-		
 		this._map.getContainer().click();
 		this._editRemoveBtnFrame.show(); //removeClass('disabled' );
 		this._editOkBtn.html( GSI.TEXT.SAKUZU.DIALOG_EDIT_OKBTN ).removeClass('disabled' );
@@ -37483,6 +36244,8 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
 		loader.on( "load", L.bind( function(e) {
 				
 				var obj = e.target;
+				
+				
 				this._drawer.draw( obj._params.tile, obj.getData(), obj.getHillshademapImage() );
 				obj._params.done(null, obj._params.tile);
 				
@@ -37797,6 +36560,8 @@ GSI.ReliefTileLayer.TileDrawer = L.Class.extend( {
 		{
 			var hillshadeCanvas = GSI.ReliefTileLayer.TileDrawer.getCanvas();
 			var hillshadeCtx = hillshadeCanvas.getContext( '2d' );
+			hillshadeCtx.clearRect(0,0,256,256 );
+			hillshadeCtx.beginPath();
 			hillshadeCtx.drawImage( hillshadeMapImage, 0, 0 );
 			hillshadeData = hillshadeCtx.getImageData( 0, 0, 256, 256 ).data;
 		}
@@ -37813,18 +36578,28 @@ GSI.ReliefTileLayer.TileDrawer = L.Class.extend( {
 				{
 					if ( hillshadeData )
 					{
-						
 						hillshadeColor.r =  hillshadeData[destIdx];
 						hillshadeColor.g =  hillshadeData[destIdx+1];
 						hillshadeColor.b =  hillshadeData[destIdx+2];
 						hillshadeColor.a =  hillshadeData[destIdx+3];
-						destData.data[destIdx] = Math.round(color.r *  ( hillshadeColor.r /255 ));
-						destData.data[destIdx+1] = Math.round(color.g *  ( hillshadeColor.g /255 ));
-						destData.data[destIdx+2] = Math.round(color.b *  (hillshadeColor.b /255 ));
-						destData.data[destIdx+3] = Math.round(color.a *  (hillshadeColor.a /255 ));
+						if ( hillshadeColor.a > 0 )
+						{
+							destData.data[destIdx] = Math.round(color.r *  ( hillshadeColor.r /255 ));
+							destData.data[destIdx+1] = Math.round(color.g *  ( hillshadeColor.g /255 ));
+							destData.data[destIdx+2] = Math.round(color.b *  (hillshadeColor.b /255 ));
+							destData.data[destIdx+3] = Math.round(color.a *  (hillshadeColor.a /255 ));
+						}
+						else
+						{
+							destData.data[destIdx] = color.r;
+							destData.data[destIdx+1] = color.g;
+							destData.data[destIdx+2] = color.b;
+							destData.data[destIdx+3] = color.a;
+						}
 					}
 					else
 					{
+						
 						destData.data[destIdx] = color.r;
 						destData.data[destIdx+1] = color.g;
 						destData.data[destIdx+2] = color.b;
@@ -38018,15 +36793,7 @@ GSI.ReliefTileLayer.MapToImageLayer = L.Evented.extend( {
 				var key = point.x + ":" + point.y + ":" + zoom;
 				
 				var tile = this._layer._tiles[key];
-				/*
-				if ( tile ) {
-					this._tiles[ key  ] = {
-						coords : coords,
-						el : null
-					};
-					continue;
-				}
-				*/
+			
 				
 				this._queue.push(coords);
 				
@@ -38084,6 +36851,26 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 		GSI.Dialog.prototype.show.call(this);
 		
 	},
+	
+	refresh : function()
+	{
+		GSI.Dialog.prototype.hide.call(this);
+	
+		if ( this._newDataView ) this._newDataView.hide();
+		if ( this._loadDataView ) this._loadDataView.hide();
+		
+		var data = this._mapLayerList.getElevationData();
+		if (data && !data["default"] )
+		{
+			this._refreshReriefEdit(data, true);
+		}
+		else
+			this._showNewDataView();
+		
+		GSI.Dialog.prototype.show.call(this);
+		
+	},
+	
 	afterShow : function()
 	{
 		this._refreshGradationBar();
@@ -38163,19 +36950,6 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 		
 		var a = null;
 		var img = null;
-		/*
-		// 新規ボタン
-		a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
-		img = $( "<img>" ).css({"width":"24px","height":"24px"})
-			.attr( {
-				"src":"image/sakuzu/icon_new.png",
-				"title":"スタイルを新規作成"
-			} );
-		a.click( L.bind( this._showNewDataView, this ) );
-		
-		a.append( img );
-		frame.append( a );
-		*/
 		
 		
 		// 読込ボタン
@@ -38385,38 +37159,6 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 			dl.append( dd );
 			
 			
-			
-			
-			// ファイル読込
-			/*
-			dt = $( "<dt>" );
-			this._newLoadFileRadio = $( "<input>" ).addClass("normalcheck")
-				.attr({"id":"gsi_editreliefdialog_newmode_radio_load", "name":"gsi_editreliefdialog_newmode_radi", "type":"radio"});
-			
-			label = $( "<label>" ).attr({"for":"gsi_editreliefdialog_newmode_radio_load"}).html("ファイルから読み込む")
-			dt.append( this._newLoadFileRadio ).append(label);
-			dl.append( dt );
-			
-			
-			dd = $( "<dd>" );
-			
-			this._newFileLoadInput = $( "<input>" ).attr({"type":"file"}).css({"width":"100%"}); 
-			dd.append( this._newFileLoadInput );
-			
-			dl.append(dd);
-			
-			
-			
-			// デフォルトから作成
-			
-			dt = $( "<dt>" );
-			this._newDefaultRadio = $( "<input>" ).addClass("normalcheck")
-				.attr({"id":"gsi_editreliefdialog_newmode_radio_default", "name":"gsi_editreliefdialog_newmode_radi", "type":"radio"});
-			
-			label = $( "<label>" ).attr({"for":"gsi_editreliefdialog_newmode_radio_default"}).html("初期データを元に作成")
-			dt.append( this._newDefaultRadio ).append(label);
-			dl.append( dt );
-			*/
 			
 			this._newDataView.append(dl);
 			
@@ -39472,13 +38214,7 @@ GSI.GeoTIFFImageOverlay = L.ImageOverlay.extend( {
 		var latScale = meta.ModelPixelScale[1];
 		var imgW = meta.ImageWidth;
 		var imgH = meta.ImageLength;
-		/*
-	    var x_min = meta.ModelTiepoint[3];
-	    var x_max = x_min + meta.ModelPixelScale[0]*meta.ImageWidth;
-	    var y_min = meta.ModelTiepoint[4];
-	    var y_max = y_min - meta.ModelPixelScale[1]*meta.ImageLength;
-	    this._bounds = L.latLngBounds([[y_min,x_min],[y_max,x_max]]);
-		*/
+	
 		this._bounds = L.latLngBounds( [ [lat,lng], [lat-(latScale*imgH),lng+(lngScale*imgW)] ] );
 		image.readRGB(L.bind( function(raster) {
 			var canvas = this._image;
@@ -39873,16 +38609,7 @@ GSI.CrossSectionViewDisplayDialog = GSI.Dialog.extend( {
 		a = $( "<a>" ).attr({"href":"javascript:void(0);"}).html("CSV形式で保存");
 		a.on("click", L.bind( this._onSaveCSVDataButtonClick, this ) );
 		this._saveGraphTypeSelect.append ( a );
-		/*
-		a = $( "<a>" ).attr({"href":"javascript:void(0);"}).html("CSV形式で保存");
-		a.on("click", L.bind( this._onSaveCSVDataButtonClick, this ) );
-		*/
-		
-		/*
-		this._saveDataButton = $( "<a>" ).addClass("normalbutton").attr({"href":"javascript:void(0);"}).html("データ保存");
-		td.append( this._saveDataButton );
-		tr.append( td );
-		*/
+	
 		td = $( "<td>" );
 		this._saveVectorDataButton = $( "<a>" ).addClass("normalbutton").attr({"href":"javascript:void(0);"}).html("経路を保存");
 		td.append( this._saveVectorDataButton );
@@ -40287,14 +39014,7 @@ GSI.CrossSectionView = L.Evented.extend({
 		//var graphParams = this._graph.createGraphParams(this._data);
 		var minScale = 1;
 		var maxScale = 10;
-		/*
-		if ( graphParams.height < 50 )
-		{
-			this._graph.options.scale = Math.round(50 / graphParams.height);
-			maxScale = Math.round( (500 / graphParams.height) );
-			if ( maxScale <10 ) maxScale = 10;
-		}
-		*/
+	
 		this._graph.create( this._data );
 		this.fire( "graphcreated", {
 			graph : this._graph,
@@ -41213,7 +39933,7 @@ GSI.CrossSectionView.Polyline =L.Polyline.extend({
 
 GSI.CrossSectionView.Draw.Polyline = L.Draw.Polyline.extend({
 	options: {
-		allowIntersection: true,
+		allowIntersection: false,
 		repeatMode: false,
 		drawError: {
 			color: '#b00b00',
@@ -41398,12 +40118,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 				$( this._displayCanvas ).on( "mousemove", L.bind( this._onCanvasMouseMove,this ) );
 				$( this._displayCanvas ).on( "mouseout", L.bind( this._onCanvasMouseOut,this ) );
 			}
-			/*
-			this._canvasFrame = $( "<div>" ).css({"position":"relative", "overflow":"visible"});
-			this._canvasFrame.append( this._displayCanvas );
-			$("body").append( $("<div>").css({"position":"absolute","z-index":"10000", left:"30px"}).append(this._canvasFrame) );
-			*/
-			
+		
 		}
 		
 		this._mouseOverPoint = null;
@@ -41599,20 +40314,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 				} );
 			}
 			
-			/*
-			if ( !this._balloon )
-			{
-				this._balloon = $("<div>").css({"z-index":1000}).addClass("danmen_balloon").append( $("<div>").addClass("danmen_balloon_box") ).hide();
-				this._canvasFrame.append( this._balloon );
-			}
-			
-			this._balloon.find(".danmen_balloon_box").html( Math.floor( this._data.points[ near.idx ].h ) + "m" );
-			
-			this._balloon.css({
-				"left" : near.point.x-10 + "px",
-				"top" : near.point.y-40 + "px"
-			} ).stop().fadeIn(200 );
-			*/
+	
 		}
 		else
 		{
@@ -41772,54 +40474,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 		var stepY = this._graph.stepY;
 		var max = this._graph.max;
 		var min = this._graph.min;
-		/*
-		if ( this._graph.h < 1000 )
-			stepY = 200;
-		else if ( this._graph.h < 2000 )
-			stepY = 100;
-		else
-		{
-			stepY = Math.floor( ( this._graph.h / 2 ) / 100 ) *100;
-			stepY = Math.floor( ( this._graph.h / 5 ) / 100 ) *100;
-		
-		}
-		*/
-		/*
-		var splitNum = Math.round( this._graph.height / 32 );
-		var max = this._graph.max;
-		var min = this._graph.min;
-		if ( splitNum <= 1 )
-		{
-			stepY = this._graph.max/2;
-			if ( stepY < 0 ) stepY = 1000;
-		}
-		else
-		{
-			stepY = Math.round( this._graph.h / splitNum );
-		
-			
-			if ( stepY <= 100 )
-			{
-				stepY = Math.floor( stepY / 10 ) * 10;
-				
-			}
-			else if ( stepY <1000 ) stepY = Math.floor(stepY /100)*100;
-			
-			
-				
-			if ( stepY <= 50 )
-			{
-				if ( this._graph.h <= 10 )
-					stepY = 1;
-				else if ( this._graph.h <= 50 )
-					stepY = 5;
-				
-			}
-			
-			
-			if ( stepY == 0 ) stepY = 50;
-		}
-		*/
+	
 		
 		// ～0m
 		
@@ -41897,7 +40552,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 		
 		// 0m～
 		stepY = this._graph.stepY;
-		for( var h=0; h<max; h+=stepY )
+		for( var h=0; h<max+stepY; h+=stepY )
 		{
 			
 			
@@ -41967,7 +40622,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 				 
 		}
 		
-		ctx.textBaseline = "middle";
+		ctx.textBaseline = "bottom";
 		ctx.textAlign = 'right';
 		ctx.font = 'normal 11px sans-serif';
 		ctx.fillStyle = '#000000';
@@ -42006,7 +40661,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 			cp.y += this._graph.margin.top;
 			
 			
-			if ( cp.x > this._graph.margin.left + this._graph.width-20 ) continue;
+			//if ( cp.x > this._graph.margin.left + this._graph.width-20 ) continue;
 			ctx.strokeStyle = "#000000";
 			ctx.beginPath();
 			if ( ctx.setLineDash ) ctx.setLineDash([]);
@@ -42050,8 +40705,8 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 				, cp.x, cp.y+this._graph.height + this._graph.padding.top +1 );
 		}
 		
-		ctx.textBaseline = "top";
-		ctx.textAlign = 'center';
+		ctx.textBaseline = "bottom";
+		ctx.textAlign = 'left';
 		ctx.font = 'normal 11px sans-serif';
 		ctx.fillStyle = '#000000';
 		ctx.fillText("(" + unit + ")",
@@ -42100,8 +40755,8 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 		var result = {
 			margin : {
 				left : 40,
-				top : 8,
-				right : 20,
+				top : 14,
+				right : 40,
 				bottom : 20
 			},
 			padding : {
@@ -42120,25 +40775,6 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 		var graphMin = data.min > 0 ? 0 : data.min;
 		
 		if ( graphMin == graphMax ) graphMax += 100;
-		
-		/*
-		if ( graphMax > 0 )
-		{
-			if ( graphMax <= 50 )
-				graphMax = Math.ceil( graphMax/5 ) * 5;
-			else if ( graphMax <= 100 )
-				graphMax = Math.ceil( graphMax/10 ) * 10;
-			else
-				graphMax = Math.ceil( graphMax/100 ) * 100;
-		}
-		else
-			graphMax = -(Math.ceil( graphMax/100 ) * 100);
-		
-		
-		if ( graphMin > 0 )
-			graphMin = Math.floor( graphMin/100 ) * 100;
-		*/
-		
 		
 		result.max = graphMax;
 		result.min = graphMin;
@@ -42203,66 +40839,6 @@ GSI.CrossSectionView.Graph = L.Evented.extend( {
 		this._graph = result;
 	}
 	
-	/*
-	initializeParams : function()
-	{
-		this._graph = this.createGraphParams(this._data);
-		
-	},
-	
-	createGraphParams : function(data )
-	{
-		var result = {
-			margin : {
-				left : 40,
-				top : 20,
-				right : 20,
-				bottom : 20
-			},
-			scale : this.options.scale,
-			width : this.options.width,
-			min : 0,
-			max : 0,
-			h : 0
-		};
-		
-		var heightDistance = data.max - data.min;
-		
-		var graphMax = data.max *1.2; ////this._data.max + heightDistance / 2;
-		var graphMin = 0;
-		
-		if ( graphMin == graphMax ) graphMax += 100;
-		
-		
-		if ( graphMax > 0 )
-			graphMax = Math.ceil( graphMax/100 ) * 100;
-		else
-			graphMax = -(Math.ceil( graphMax/100 ) * 100);
-		
-		
-		if ( graphMin > 0 )
-			graphMin = Math.floor( graphMin/100 ) * 100;
-		else
-			graphMin = -(Math.ceil( Math.abs(graphMin)/100 ) * 100 );
-		//if ( graphMin < -200 ) graphMin = -200;
-		
-		
-		result.max = graphMax;
-		result.min = graphMin;
-		result.h = graphMax - graphMin;
-		result.height = Math.round(result.h * ( result.width / data.totalDistance ) * result.scale );
-		
-		
-		if ( result.height < 30 )
-		{
-			result.margin.top = 50 - result.height;
-		}
-		else
-			result.margin.top = 20;
-			
-		return result;
-	}
-	*/
 } );
 
 
@@ -42595,28 +41171,7 @@ GSI.LayerTreeSearcher = L.Evented.extend( {
 			var item = this._layerList[i];
 			this._convertSearchItem( item );
 			item._forSearch.hit = false;
-			/*
-			if ( item.parent && item.parent._forSearch && item.parent._forSearch.hit )
-			{
-				if (item["type"] == "LayerGroup" )
-				{
-					item._forSearch.hit = true;
-				}
-				else
-				{
-					hitList.push( item );
-					if ( !this._state.result ) this._state.result = [];
-					this._state.result.push( item );
-				}
-				this._searchIndex++;
-				continue;
-			}
-			else
-			{
-				item._forSearch.hit = false;
-			}
-			
-			*/
+		
 			
 			if ( item.src && item.src!="" && !item.entries )
 			{
@@ -42632,13 +41187,7 @@ GSI.LayerTreeSearcher = L.Evented.extend( {
 			
 			if ( this._hitCheck( item ) )
 			{
-				/*
-				if (item["type"] == "LayerGroup" )
-				{
-					item._forSearch.hit = true;
-				}
-				else
-				*/
+			
 				
 				if ( !this._state.result )
 				{
@@ -43339,15 +41888,7 @@ GSI.Canvas.PathProcs =	{
 				}
 				
 				fromPoint = toPoint;
-				/*
-				if ( this._canvasOffset )
-				{
-					x -= this._canvasOffset.x;
-					y -= this._canvasOffset.y;
-					
-				}
-				this._ctx[drawMethod](x, y);
-				*/
+			
 			}
 			// TODO refactor ugly hack
 			if (isPolygon) {
@@ -43366,17 +41907,7 @@ GSI.Canvas.PathProcs =	{
 	
 	//_latLngToPoint : function(tilePoint,zoom,dz,canvas_dx,canvas_dy,tlng,tlat){
 	_latLngTileToPoint : function(tilePoint,canvasDx,canvasDy,zoom,tileSize, resolution, originShift,latLng){
-		/*
-		var tileSize_default = 256;
-		var tileSize=tileSize_default;
-		var tz = zoom;
-		if(dz!=0){tileSize = tileSize_default*Math.pow(2, dz);tz = tz -dz;}
-		var initialResolution = 2 * Math.PI / tileSize;
-		var resolution = initialResolution / (Math.pow(2, tz));
-		var originShift = 2 * Math.PI / 2.0;
-		*/
-		
-		
+	
 		var X = latLng.lng * (Math.PI / 180) ;
 		var Y=Math.log(Math.tan(Math.PI/4 + latLng.lat * (Math.PI / 180) / 2) );
 		var tx=(X + originShift)/(tileSize * resolution);
@@ -44619,25 +43150,9 @@ GSI.VectorTileLayer = L.Layer.extend( {
 		}
 		
 		this._adjustTilePoint(tilePoint);
-		/*
+	
 		var layer = this;
-		var req = new XMLHttpRequest();
-		this._requests.push(req);
-		req.onreadystatechange = this._xhrHandler(req, layer, tile, tilePoint);
-		req.open('GET', this.getTileUrl(tilePoint), true);
-		
-		//req.open('GET','http://cyberjapandata.gsi.go.jp/xyz/experimental_rdcl/16/58242/25798.geojson', true);
-		req.send();
-		*/
-		//this._adjustTilePoint(tilePoint);
-		var layer = this;
-		/*
-		var req = new XMLHttpRequest();
-		this._requests.push(req);
-		req.onreadystatechange = this._xhrHandler(req, layer, tile, tilePoint);
-		req.open('GET', this.getTileUrl(tilePoint), true);
-		req.send();
-		*/
+	
 		var zoom = this._map.getZoom();
 		var dz = zoom  - this.options.maxNativeZoom;
 		if ( this._useCanvas)
@@ -44985,20 +43500,7 @@ GSI.VectorTileLayer = L.Layer.extend( {
 		
 		this._styleLoading = false;
 		this._updateTileStyles();
-		/*
-		if ( !this._useCanvas )
-		{
-			try
-			{
-				if(this._tileContainer)
-					this._reset();
-			}catch(e){}
-			try
-			{
-				this._update();
-			}catch(e){}
-		}
-		*/
+	
 	
 	},
 	
