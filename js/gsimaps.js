@@ -20535,7 +20535,6 @@ L.icon = function (options) {
 
 GSI.Edit.DragMarker = L.Marker.Touch.extend( {
 	_initInteraction: function () {
-
 		if (!this.options.interactive) { return; }
 
 		L.DomUtil.addClass(this._icon, 'leaflet-interactive');
@@ -21373,6 +21372,7 @@ L.Util.extend(GSI.KML, {
 			options.icon = new GSI.KMLIcon(options.icon);
 		}
 		var ll = el[0].childNodes[0].nodeValue.split(',');
+		
 		return new GSI.KMLMarker(new L.LatLng(ll[1], ll[0], ll.length >= 3 ? parseInt(ll[2]) : null ), options);
 	},
 	parsePolygon: function (line, xml, options) {
@@ -21439,15 +21439,18 @@ GSI.KMLIcon = L.Icon.extend({
 	
 	createIcon: function (oldIcon) {
 		var img = this._createIcon('icon');
-
+		
 		$(img).css( {'margin':0} );
 		var div = $( (oldIcon && oldIcon.tagName === 'DIV') ? oldIcon : document.createElement('div') );
 		this._div = div;
 		div.append( $(img) );
 		this._setIconStyles(div[0], 'icon');
+		
+		div.addClass("leaflet-clickable");
 		if ( img.width && img.width > 0 )
 		{
 			this._onIconImageLoaded( img );
+			
 		}
 		else
 		{
@@ -21487,11 +21490,41 @@ GSI.KMLIcon = L.Icon.extend({
 		
 		img.style.width = w + 'px';
 		img.style.height = h + 'px';
+		
+		
+		
 		this._setIconStyles(this._div[0], "icon");
+		
 		L.DomUtil.addClass(this._div[0], 'leaflet-clickable');
 		img.style.visibility= 'visible';
 		this._createLabel(this._div);
 	},
+	
+	_setIconStyles: function (img, name) {
+		var options = this.options;
+		var sizeOption = options[name + 'Size'];
+
+		if (typeof sizeOption === 'number') {
+			sizeOption = [sizeOption, sizeOption];
+		}
+
+		var size = L.point(sizeOption),
+		    anchor = L.point(name === 'shadow' && options.shadowAnchor || options.iconAnchor ||
+		            size && size.divideBy(2, true));
+		
+		$(img).addClass( 'leaflet-marker-' + name + ' ' + (options.className || '') );
+
+		if (anchor) {
+			img.style.marginLeft = (-anchor.x) + 'px';
+			img.style.marginTop  = (-anchor.y) + 'px';
+		}
+
+		if (size) {
+			img.style.width  = size.x + 'px';
+			img.style.height = size.y + 'px';
+		}
+	},
+	
 	_createLabel : function( div )
 	{
 		if ( this.options._name == null || this.options._name == '' )
@@ -33053,6 +33086,7 @@ GSI.SakuzuList = L.Evented.extend( {
 			  "application/xml"
 			  );
 		}
+		
 		var layer = new GSI.KML(null, {async: true, geodesic:true});
 		
 		layer._kmlText = text;
@@ -34753,8 +34787,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 	},
 	_onStartEdit : function( event )
 	{
-		
-		this._editRemoveBtnFrame.show(); //removeClass('disabled' );
+		if ( this._editRemoveBtnFrame  )
+			this._editRemoveBtnFrame.show(); //removeClass('disabled' );
 		if ( this._editingTarget )
 		{
 			this._createEditPanel();
