@@ -24475,14 +24475,20 @@ GSI.MapToImage = L.Evented.extend( {
 		var markerPane = $(".leaflet-marker-pane" ).clone();
 		
 		var images = markerPane.find( "img" );
+		
 		images.each(function() {
 			this.crossOrigin = "anonymous";
+			
 			var url = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
+		/*
 			if(url.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				url=url.replace('https://','//');
 				url=url.replace('http://','//');
 			}
+			
+			this.src = "../test/proxy.aspx?url=http:"+url;
+			
 			if ( !CONFIG.ISPREVIEWSITE )
 			{
 				this.src = "../test/proxy.aspx?url=http:"+url;
@@ -24495,7 +24501,7 @@ GSI.MapToImage = L.Evented.extend( {
 					this.src = proxy.replace( "{url}",  url.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp") );
 				}
 			}
-			
+			*/
 		} );
 		
 		
@@ -25484,7 +25490,6 @@ GSI.MapToImage.VectorTileLayer = L.Evented.extend( {
 		if ( layer.getLayers ) 
 		{
 			var layers = layer.getLayers();
-			
 			
 			for( var i=0; i<layers.length; i++ )
 			{
