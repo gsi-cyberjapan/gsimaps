@@ -28537,7 +28537,7 @@ GSI.MapManager = L.Class.extend( {
 		var cs = queryParams.getControlSetting();
 		if(cs.header.visible == false || window._isCreditShow)
 		{
-			this._map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
+			//this._map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
 		}
 		
 		this._centerCross = new GSI.CenterCross(this._map, { visible: viewSetting.centerCross } );
