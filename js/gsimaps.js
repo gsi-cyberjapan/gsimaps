@@ -24598,6 +24598,7 @@ GSI.MapToImage = L.Evented.extend( {
 		images.each(function() {
 			this.crossOrigin = "anonymous";
 			var url = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
+			/*
 			if(url.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				url=url.replace('https://','//');
@@ -24615,7 +24616,7 @@ GSI.MapToImage = L.Evented.extend( {
 					this.src = proxy.replace( "{url}",  url.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp") );
 				}
 			}
-			
+			*/
 		} );
 		
 		
@@ -24662,6 +24663,7 @@ GSI.MapToImage = L.Evented.extend( {
 						
 						var point = new L.Point(left+( origin.x-pixelBounds.min.x ), top+( origin.y-pixelBounds.min.y ) );
 						el.style[L.DomUtil.TRANSFORM] =  L.DomUtil.getTranslateString(point);
+						
 					}
 				} else {
 					left = parseFloat(el.style.left);
@@ -24735,6 +24737,7 @@ GSI.MapToImage = L.Evented.extend( {
 		images.each(function() {
 			this.crossOrigin = "anonymous";
 			var src = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
+			/*
 			if(src.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				src=src.replace('https://','//');
@@ -24752,7 +24755,7 @@ GSI.MapToImage = L.Evented.extend( {
 					this.src = proxy.replace( "{url}",  src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp") );
 				}
 			}
-			
+			*/
 		} );
 		
 		
@@ -24760,6 +24763,14 @@ GSI.MapToImage = L.Evented.extend( {
 		
 		this._baloons = [];
 		var containerPos = $(this._map.getContainer() ).offset();
+		
+		if ( this.options.pixelBounds )
+		{
+			var mapBounds = this._map.getPixelBounds();
+			var pixelBounds = this.options.pixelBounds;
+			containerPos.top += ( pixelBounds.min.y - mapBounds.min.y);
+			containerPos.left += ( pixelBounds.min.x - mapBounds.min.x);
+		}
 		for( var i=0; i<baloons.length; i++ )
 		{
 			var pos = $(baloonsOrig[i]).offset();
