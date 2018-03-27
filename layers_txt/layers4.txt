@@ -35,7 +35,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201411nagano.txt"
                 },
@@ -3048,7 +3048,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_tokachidake.txt"
                 }
@@ -3061,7 +3061,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_azumayama.txt"
                 }
@@ -3074,7 +3074,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asamayama.txt"
                 }
@@ -3087,7 +3087,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_hakoneyama.txt"
                 },
@@ -3121,7 +3121,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_ontakesan.txt"
                 },
@@ -3263,7 +3263,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asosan.txt"
                 },
@@ -3351,7 +3351,7 @@
                 },
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kirishimayama.txt"
                 }
@@ -3364,7 +3364,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_sakurajima.txt"
                 },
@@ -3434,7 +3434,7 @@
               "entries": [
                 {
                   "type": "LayerGroup",
-                  "title": "SAR解析結果",
+                  "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
                   "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
                 },

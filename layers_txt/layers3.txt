@@ -245,7 +245,20 @@
           "type": "LayerGroup",
           "title": "干渉SAR",
           "toggleall": false,
-          "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos.txt"
+          "entries": [
+                    {
+                      "type": "LayerGroup",
+                      "title": "だいち2号（ALOS-2） ",
+                      "toggleall": false,
+                      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_pub_alos2.txt"
+                    },
+                    {
+                      "type": "LayerGroup",
+                       "title": "だいち（ALOS） ",
+                      "toggleall": false,
+                      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_pub_alos.txt"
+                    }
+                    ]
         }
       ]
     }

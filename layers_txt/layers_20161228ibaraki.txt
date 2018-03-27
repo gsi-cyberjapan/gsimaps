@@ -43,7 +43,7 @@
     },
     {
       "type": "LayerGroup",
-      "title": "干渉SAR 解析結果",
+      "title": "SAR解析結果(ALOS-2)",
       "toggleall": false,
       "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201612ibaraki.txt"
     }

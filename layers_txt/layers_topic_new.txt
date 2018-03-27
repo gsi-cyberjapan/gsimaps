@@ -1069,6 +1069,12 @@
           ]
         },
         {
+              "type": "LayerGroup",
+              "title": "だいち2号（ALOS-2）のSAR解析結果 ",
+              "toggleall": false,
+              "src": "https://insarmap.gsi.go.jp/layers_txt/layers_pub_alos2.txt"
+        },
+        {
          "type": "LayerGroup",
          "title": "西之島特集",
          "toggleall": false,

@@ -54,13 +54,7 @@
     },
     {
       "type": "LayerGroup",
-      "title": "干渉SAR 3次元解析結果",
-      "toggleall": false,
-      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori_3d.txt"
-    },
-    {
-      "type": "LayerGroup",
-      "title": "干渉SAR 解析結果",
+      "title": "SAR解析結果(ALOS-2)",
       "toggleall": false,
       "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201610tottori.txt"
     }
