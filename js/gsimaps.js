@@ -24480,13 +24480,13 @@ GSI.MapToImage = L.Evented.extend( {
 			this.crossOrigin = "anonymous";
 			
 			var url = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
-		/*
+		
 			if(url.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				url=url.replace('https://','//');
 				url=url.replace('http://','//');
 			}
-			
+			/*
 			this.src = "../test/proxy.aspx?url=http:"+url;
 			
 			if ( !CONFIG.ISPREVIEWSITE )
@@ -24598,12 +24598,13 @@ GSI.MapToImage = L.Evented.extend( {
 		images.each(function() {
 			this.crossOrigin = "anonymous";
 			var url = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
-			/*
+			
 			if(url.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				url=url.replace('https://','//');
 				url=url.replace('http://','//');
 			}
+			/*
 			if ( !CONFIG.ISPREVIEWSITE )
 			{
 				this.src = url;
@@ -29730,6 +29731,7 @@ GSI.PathFrameRectangle = L.Polygon.extend( {
 	// 編集アイコンクリック
 	_editBtnClick : function(e)
 	{
+		
 		this.fire( "requestedit" );
 		try
 		{
@@ -30497,7 +30499,10 @@ GSI.SakuzuListItem = L.Evented.extend( {
 			if ( layer.closePopup )layer.closePopup();
 			if ( layer.unbindPopup )layer.unbindPopup();
 
-			
+			if ( ! layer._information )
+			{
+				layer._information = this._getLayerInfo( layer );
+			}
 			layer._layerInfo = $.extend( true, {}, layer._information );
 			( layer._parent ? layer._parent : this._layer ).removeLayer( layer );
 			layer._originalLayer = null;
@@ -35512,7 +35517,6 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		{
 			this._onStartEdit( {target:e.target, itemType: e.itemType, layer:e.currentLayer} );
 		}
-		
 		
 		if ( e.oldLayer )
 		{
