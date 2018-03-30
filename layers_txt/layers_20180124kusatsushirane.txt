@@ -92,6 +92,27 @@
                       "html": "<div class=\"gsi_layerinfo_title\">正射画像-2018.2.16･27</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                     }
                   ]
-    }
+    },
+    {
+                  "type": "Layer",
+                  "id": "_vbm_2018-3",
+                  "title": "火山基本図「草津白根山」",
+                  "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 8,
+                  "maxZoom": 17,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/l_vbm_kusatsushirane.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山基本図「草津白根山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "_vlcd_2018-3",
+                  "title": "火山土地条件図「草津白根山」",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/l_vlcd_3ksrn.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山土地条件図「草津白根山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vlcm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
   ]          
 }
