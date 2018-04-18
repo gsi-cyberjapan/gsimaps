@@ -33,7 +33,8 @@ var CONFIG = {};
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
 CONFIG.layerBaseDefaultID = "std";
 CONFIG.layers             = [
-	'./layers_txt/layers_topic.txt',
+	'./layers_txt/layers_topic_kusatsushirane.txt',
+	'./layers_txt/layers_topic_new.txt',
 	'./layers_txt/layers1.txt',
 	'./layers_txt/layers2.txt',
 	'./layers_txt/layers3.txt',
@@ -861,7 +862,6 @@ var InitLoadLayersTxt_ProcSrc = function(){
                     vLayers = new Array();
                 }
                 var d = _Load_DataHash[args["ls"][n].id];
-                
                 if (!d ) continue;
                 var isMulti = false;
                 var isMinNative = false;
@@ -896,9 +896,10 @@ var InitLoadLayersTxt_ProcSrc = function(){
 	                    }
 
 	                    if(!dUrlStyle || !_Load_StyleZoom){
-	                        if(d.minZoom){ if(args["z"] < d.minZoom){ fTileUrl = false; } }
-	                        if(d.maxZoom){ if(args["z"] > d.maxZoom){ fTileUrl = false; } }
+	                        if(d.minZoom){ if(parseInt(args["z"]) < parseInt(d.minZoom)){ fTileUrl = false; } }
+	                        if(d.maxZoom){ if(parseInt(args["z"]) > parseInt(d.maxZoom)){ fTileUrl = false; } }
 	                    }
+	                    
 	                    if(fTileUrl){
 	                        var vTileZ     = args["z"];
 	                        var vTileX     = args["lon_lt_x"];
@@ -7119,7 +7120,7 @@ GSI3D.LayersJSONLoader.prototype._load = function(url) {
 };
 
 
-// LayersJSO読み込み
+// LayersJSON読み込み
 GSI3D.LayersJSONLoader.prototype.load = function() {
 	
 	this._requests = {};
@@ -7181,6 +7182,7 @@ GSI3D.LayersJSONLoader.prototype._initLayersJSON = function(result,url,list)
 					var path = layer.src_url.substring(0, layer.src_url.lastIndexOf('/'));
 					layer.src  = path + "/" + layer.src.substr(2);
 				}
+				
 				this._load(layer.src);
 			}
 			else if ( layer.entries )

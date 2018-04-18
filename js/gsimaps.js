@@ -21345,7 +21345,9 @@ L.Util.extend(GSI.KML, {
 					if ( td.length == 2 )
 					{
 						if ( !layer._information.table ) layer._information.table = [];
-						layer._information.table.push( { key : $(td[0]).html(), value: $(td[1]).html() } );
+						var value = $(td[1]).html();
+						value = value.replace(/\<br\>/ig, "\n" );
+						layer._information.table.push( { key : $(td[0]).html().replace(/\<br\>/ig, "\n" ), value: value } );
 					}
 					else
 					{
@@ -22483,14 +22485,14 @@ GSI.GeoJSON = L.Layer.extend( {
 	onEachFeature : function(feature, layer)
 	{
 		if ( !feature.properties ) return;
-
+	
 		var popupContent = '';
 
 		if ( feature.properties['name' ] )
 		{
 			popupContent += '<h2>' + GSI.Utils.encodeHTML(feature.properties['name' ] ) + '</h2>';
 		}
-
+		
 		if ( feature.properties['description' ] )
 		{
 			popupContent += feature.properties['description' ];
@@ -22501,9 +22503,16 @@ GSI.GeoJSON = L.Layer.extend( {
 			for( var key in feature.properties )
 			{
 				var featureValue = feature.properties[key] ? feature.properties[key] : "";
-
+				
+				
 				if ( key != "" && key != 'name' && !CONFIG.GEOJSONSPECIALKEYS[key] )
 				{
+					
+					if ( key && key.replace )
+						key = key.replace(/\n/g,"<br>" );
+					if ( featureValue && featureValue.replace )
+						featureValue = featureValue.replace(/\n/g,"<br>" );
+					
 					table +=
 						"<tr>" +
 						"<td>" + key + "</td>" +
@@ -31605,7 +31614,10 @@ GSI.SakuzuListItem = L.Evented.extend( {
 	editFinish : function(force)
 	{
         //this.editFinish_CircleMarker();
-
+		
+		delete this._originalLayers;
+		this._originalLayers = null;
+		
 		if (!force && this.editMode == GSI.SakuzuListItem.NONE ) return;
 		
 		if ( this._editingEditingLayer )
@@ -31711,10 +31723,10 @@ GSI.SakuzuListItem = L.Evented.extend( {
 			{
 				layer._information = this._getLayerInfo( layer );
 			}
-		
+			
  			var title = layer._information.title;
  			var description = layer._information.description;
-
+			
  			if ( !description || description == '' )
  				description = this._infoTable2Description( layer._information.table );
 
@@ -31931,6 +31943,7 @@ GSI.SakuzuListItem = L.Evented.extend( {
 	
 	_infoTable2Description : function( table )
 	{
+		
 		if ( !table ) return '';
 
 		var trHtml = '';
@@ -31946,7 +31959,9 @@ GSI.SakuzuListItem = L.Evented.extend( {
 					value= '';
 				}
 				
-				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key) + '</td><td>' + value + '</td></tr>' + '\n';
+				value = value.replace( /\n/g, "<br>" );
+				
+				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key).replace( /\n/g,"<br>" ) + '</td><td>' + value + '</td></tr>' + '\n';
 			}
 		}
 
@@ -33992,6 +34007,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 		}
 		
 		var editMode = GSI.SakuzuListItem.NONE;
+		
 		if ( this._editingTarget )
 		{
 			editMode = this._editingTarget.editMode;
@@ -34550,7 +34566,25 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
         var vLatLng = event.latlng;
         var vRadius = event.radius;
         var vUnit   = event.unit;
-
+		/*
+		if ( vUnit == "m" )
+		{
+			if ( this._circleRadiusUnitSelect.val() == "km" )
+			{
+				vRadius /=1000;
+				vRadius = vRadius.toFixed(4);
+			}
+		}
+		else if ( vUnit == 'km' )
+		{
+			
+			if ( this._circleRadiusUnitSelect.val() == "m" )
+			{
+				vRadius *=1000;
+				vRadius = vRadius.toFixed(1);
+			}
+		}
+		*/
         if(this.id == GSI.SakuzuListItem.POINT_CIRCLE){
 			if ( vRadius )
             	this._circleRadiusInput.val(parseInt(vRadius, 10));
@@ -35122,7 +35156,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend( {
 
 			if ( key != '' )
 			{
-				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key) + '</td><td>' + GSI.Utils.encodeHTML(value) + '</td></tr>' + '\n';
+				trHtml += '<tr><td>' + GSI.Utils.encodeHTML(key).replace(/\n/g, "<br>" ) + '</td><td>' + GSI.Utils.encodeHTML(value).replace(/\n/g, "<br>" ) + '</td></tr>' + '\n';
 			}
 		}
 
@@ -44165,8 +44199,6 @@ GSI.VectorTileLayer._onGeoJSONClick = function( e )
 		layer._map.openPopup( layer._popup );
 	}
 };
-
-
 
 
 
