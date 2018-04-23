@@ -3348,6 +3348,64 @@
               "title": "霧島山",
               "toggleall": false,
               "entries": [
+               {
+                  "type": "LayerGroup",
+                  "title": "航空機SAR（えびの高原（硫黄山））",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20180419kirishima_apsar180420nesw",
+                      "title": "2018/4/20観測（北東から観測した画像) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180419kirishima_apsar180420nesw/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（えびの高原（硫黄山））噴火活動-航空機SAR画像(2018/4/20)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20180419kirishima_apsar180420swne",
+                      "title": "2018/4/20観測（南西から観測した画像) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180419kirishima_apsar180420swne/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（えびの高原（硫黄山））噴火活動-航空機SAR画像(2018/4/20)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は南西から北東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20180419kirishima_apsar180226nesw",
+                      "title": "2018/2/26観測（北東から観測した画像) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180419kirishima_apsar180226nesw/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（えびの高原（硫黄山））噴火活動-航空機SAR画像(2018/2/26)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "20180419kirishima_apsar180226swne",
+                      "title": "2018/2/26観測（南西から観測した画像) ",
+                      "url": "https://maps.gsi.go.jp/xyz/20180419kirishima_apsar180226swne/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 10,
+                      "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">霧島山（えびの高原（硫黄山））噴火活動-航空機SAR画像(2018/2/26)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は南西から北東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
+                },
+		{
+                  "type": "Layer",
+                  "id": "20180419kirishima_0420naname",
+                  "title": "斜め写真（えびの高原（硫黄山））",
+                  "url": "https://maps.gsi.go.jp/xyz/20180419kirishima_0420naname/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": "<div class=\"gsi_layerinfo_title\">斜め写真-2018.4.20</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
                 {
                   "type": "Layer",
                   "id": "20180309_kazantaisaku_kirishima",
