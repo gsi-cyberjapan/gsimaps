@@ -2078,6 +2078,7 @@ L.Draw.Polyline.prototype._onMouseUp = function (e)
 	this._mouseDownOrigin = null;
 };
 
+
 GSI.Draw.Polyline = L.Draw.Polyline.extend( {
 	
 	options: {
@@ -10720,7 +10721,7 @@ GSI.EvacDialog = L.Control.extend( {
 	{
 		if (this._isShow == true)
 		{
-			this.removeFrom(this._map);
+			this.remove();//(this._mapF);
 		}
 		this._isShow = false;
 	},
@@ -12609,9 +12610,9 @@ GSI.HashOptions = L.Class.extend( {
 			this.HashSetProc_sub(newop.substring(0, newop.length - 1));
 		}
 		this._gsimaps._mainMap._confirmDlg.hide();
-		if (GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
+		if (this._gsimaps._mainMap._dialogManager.isVisibleDialog(this._gsimaps._mainMap._evacDialog) == false)
 		{
-			GSI.GLOBALS.evacDialog.show();
+			this._gsimaps._mainMap._evacDialog.show();
 		}
 
 	},
@@ -20852,17 +20853,34 @@ GSI.Edit.Poly = L.Edit.Poly.extend( {
 		L.DomEvent.preventDefault(e);
 
 		if ( e.target._isMiddleMarker ) return;
-
 		var latlngs = this._poly._latlngs;
-		if (
-			( this.options.isPolygon && latlngs.length <= 3 )
-			||
-			( !this.options.isPolygon && latlngs.length <= 2 )
-		) return;
-
-		latlngs.splice(e.target._index, 1);
-
-		this._poly.setLatLngs(latlngs);
+		if (L.LineUtil.isFlat(latlngs) )
+		{
+			if (
+				( this.options.isPolygon && latlngs.length <= 3 )
+				||
+				( !this.options.isPolygon && latlngs.length <= 2 )
+			) return;
+		}
+		else
+		{
+			if (
+				( this.options.isPolygon && latlngs[0].length <= 3 )
+				||
+				( !this.options.isPolygon && latlngs[0].length <= 2 )
+			) return;
+		}
+		
+		if (L.LineUtil.isFlat(latlngs) )
+		{
+			latlngs.splice(e.target._index, 1);
+			this._poly.setLatLngs(latlngs);
+		}
+		else
+		{
+			latlngs[0].splice(e.target._index, 1);
+			this._poly.setLatLngs(latlngs[0]);
+		}
 		this.updateMarkers();
 	},
 	_createMarker: function (latlng, index) {
