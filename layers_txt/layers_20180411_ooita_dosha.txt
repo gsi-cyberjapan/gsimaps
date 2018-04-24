@@ -1,0 +1,21 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+       {
+         "type": "Layer",
+         "id": "20180411_ooita_dosha",
+         "title": "ヘリ撮影画像（4/11撮影）",
+         "url": "https://cyberjapandata.gsi.go.jp/xyz/20180411_ooita_dosha/{z}/{x}/{y}.png",
+         "cocotile": false,
+         "minZoom": 10,
+         "maxZoom": 18,
+         "html": "この正射画像は平成30年4月11日に九州地方整備局ヘリ（はるかぜ号）で撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        }
+      ]
+    }
+   ]
+}
