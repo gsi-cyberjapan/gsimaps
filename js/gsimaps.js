@@ -65,7 +65,7 @@ CONFIG.layerBaseDefaultID = "std";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
-        {
+	{
 		"top":true,
 		"url":'./layers_txt/layers_topic_kirishima.txt'
 	},
@@ -6739,7 +6739,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             this._onHideAllClick();
             if(f == false){
                 this.mapLayerList.append(item);
-				if (GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
+				if (this._mapManager._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
 				{
 					GSI.GLOBALS.evacDialog.show();
 				}
@@ -10259,9 +10259,9 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
 			if (item.id.indexOf(CONFIG.layerEvacuationHeader)>=0)
 			{
-				if ( GSI.Dialog._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false )
+				if ( this._mapManager._dialogManager.isVisibleDialog(this._mapManager._evacDialog) == false )
 				{
-					GSI.GLOBALS.evacDialog.show();
+					this._mapManager._evacDialog.show();
 				}
 			}
 		}
@@ -41163,7 +41163,7 @@ GSI.LayerTreeSearcher = L.Evented.extend( {
 			return String.fromCharCode(s.charCodeAt(0) - 65248);
 		}).replace(/[‐－―]/g, '-');
 		
-		src = src.replace(/[～?]/g, '~');
+		src = src.replace(/[～〜]/g, '~');
 		src = src.replace(/　/g, ' ');
 		
 		reg = new RegExp('(' + Object.keys(GSI.LayerTreeSearcher.hanKanaMap).join('|') + ')', 'g');
@@ -41460,7 +41460,7 @@ GSI.LayerTreeSearcher.hanKanaMap ={
 'ﾀﾞ': 'ダ', 'ﾁﾞ': 'ヂ', 'ﾂﾞ': 'ヅ', 'ﾃﾞ': 'デ', 'ﾄﾞ': 'ド',
 'ﾊﾞ': 'バ', 'ﾋﾞ': 'ビ', 'ﾌﾞ': 'ブ', 'ﾍﾞ': 'ベ', 'ﾎﾞ': 'ボ',
 'ﾊﾟ': 'パ', 'ﾋﾟ': 'ピ', 'ﾌﾟ': 'プ', 'ﾍﾟ': 'ペ', 'ﾎﾟ': 'ポ',
-'ｳﾞ': 'ヴ', 'ﾜﾞ': '?', 'ｦﾞ': '?',
+'ｳﾞ': 'ヴ', 'ﾜﾞ': 'ヷ', 'ｦﾞ': 'ヺ',
 'ｱ': 'ア', 'ｲ': 'イ', 'ｳ': 'ウ', 'ｴ': 'エ', 'ｵ': 'オ',
 'ｶ': 'カ', 'ｷ': 'キ', 'ｸ': 'ク', 'ｹ': 'ケ', 'ｺ': 'コ',
 'ｻ': 'サ', 'ｼ': 'シ', 'ｽ': 'ス', 'ｾ': 'セ', 'ｿ': 'ソ',
