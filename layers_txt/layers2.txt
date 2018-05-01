@@ -2971,7 +2971,7 @@
                       "type": "Layer",
                       "id": "jin201803",
                       "title": "3月更新",
-                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
                       "url": "https://maps.gsi.go.jp/xyz/jin201803/{z}/{x}/{y}.geojson",
                       "cocotile": false
                     },
@@ -2979,7 +2979,7 @@
                       "type": "Layer",
                       "id": "jin201802",
                       "title": "2月更新",
-                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
                       "url": "https://maps.gsi.go.jp/xyz/jin201802/{z}/{x}/{y}.geojson",
                       "cocotile": false
                     },
