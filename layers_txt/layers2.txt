@@ -2969,6 +2969,14 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "jin201804",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201804/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
                       "id": "jin201803",
                       "title": "3月更新",
                       "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
@@ -2998,6 +3006,13 @@
                   "title": "2018年面的更新情報",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201804",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201804/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
                     {
                       "type": "Layer",
                       "id": "men201803",
