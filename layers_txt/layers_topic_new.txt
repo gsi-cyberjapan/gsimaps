@@ -1070,6 +1070,12 @@
         },
         {
               "type": "LayerGroup",
+              "title": "地理教育の道具箱",
+              "toggleall": false,
+              "src": "./layers_chirikyoiku.txt"
+        },
+        {
+              "type": "LayerGroup",
               "title": "だいち2号（ALOS-2）のSAR解析結果 ",
               "toggleall": false,
               "src": "https://insarmap.gsi.go.jp/layers_txt/layers_pub_alos2.txt"

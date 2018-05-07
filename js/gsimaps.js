@@ -93,6 +93,9 @@ CONFIG.layers = [
 		"url":'./layers_txt/layers_skhb.txt'
 	},
 	{
+		"url":'./layers_txt/layers_topic_chirikyoiku.txt'
+	},
+	{
 		"url":'./layers_txt/layers5.txt'
 	},
 	{

@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "地理教育の道具箱",
+     "iconUrl": "./image/system/folder.png",
+     "toggleall": false,
+     "src": "./layers_chirikyoiku.txt"
+     }
+            ]
+}
