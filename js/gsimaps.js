@@ -6738,13 +6738,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
                 added = false;
                 
             }
-
+			
             this._onHideAllClick();
             if(f == false){
                 this.mapLayerList.append(item);
 				if (this._mapManager._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false)
 				{
-					GSI.GLOBALS.evacDialog.show();
+					//GSI.GLOBALS.evacDialog.show();
+					this._mapManager._evacDialog.show();
 				}
     		    GSI.Utils.sendSelectedLayer(this._current_id);
             }
