@@ -122,7 +122,7 @@ CONFIG.LOADCOCOTILECACHE = true;
 CONFIG.TOPMESSAGE = null;
 // 閉じた時のID != 現在のID または EXPIRES時間過ぎた場合にお知らせ復活
 /*CONFIG.TOPMESSAGE = {
-	MESSAGE : '<a href="http://maps.gsi.go.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
+	MESSAGE : '<a href="https://maps.gsi.go.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
 	DETAILS : '',
 	ID : '20150216', // 文字列を指定この値に変更あった場合はお知らせが復活
 	EXPIRES : -1 //-1  // クッキーの有効期限( hour )
@@ -416,10 +416,10 @@ var vs = window.navigator.appVersion.toLowerCase();
 var ua = window.navigator.userAgent.toLowerCase();
 if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
 {
-  CONFIG.DEM[0] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5A" };
-  CONFIG.DEM[1] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5B" };
-  CONFIG.DEM[2] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "DEM10B"};
-  CONFIG.DEM[3] = { type : "TXT", url : "http://cyberjapandata.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt"  , z : 8, fixed : 0, src : "DEMGM"};
+  CONFIG.DEM[0] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5A" };
+  CONFIG.DEM[1] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem5b/{z}/{x}/{y}.txt", z : 15, fixed : 1, src : "DEM5B" };
+  CONFIG.DEM[2] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/dem/{z}/{x}/{y}.txt"  , z : 14, fixed : 0, src : "DEM10B"};
+  CONFIG.DEM[3] = { type : "TXT", url : "https://cyberjapandata.gsi.go.jp/xyz/demgm/{z}/{x}/{y}.txt"  , z : 8, fixed : 0, src : "DEMGM"};
 
 }
 
@@ -440,10 +440,10 @@ if((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0))
  設定：メニュー：ヘルプ
  ************************************************************************/
 CONFIG.HELPMENU = [
- {'Moji':'ヘルプ',                 'Img':'./image/help/help_icon.png',    'Link':'http://maps.gsi.go.jp/help/'},
+ {'Moji':'ヘルプ',                 'Img':'./image/help/help_icon.png',    'Link':'https://maps.gsi.go.jp/help/'},
  {'Moji':'Twitter',                'Img':'./image/help/twitter.png',      'Link':'https://twitter.com/gsi_cyberjapan'},
  {'Moji':'GitHub',                 'Img':'./image/help/github.png',       'Link':'https://github.com/gsi-cyberjapan'},
- {'Moji':'パートナーネットワーク', 'Img':'./image/help/partner_icon.png', 'Link':'http://maps.gsi.go.jp/pn/'},
+ {'Moji':'パートナーネットワーク', 'Img':'./image/help/partner_icon.png', 'Link':'https://maps.gsi.go.jp/pn/'},
  {'Moji':'国土地理院トップ',       'Img':'./image/help/gsi_top.png',      'Link':'http://www.gsi.go.jp/'}
 ];
 
@@ -665,14 +665,14 @@ CONFIG.FUNCMENU = {
 					id : 'gsi3d_l',
 					title : '大(2048×2048)',
 					//arrow : true,
-					href : 'gsi3d_l'//'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
+					href : 'gsi3d_l'//'https://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
 				},
 				
 				{
 					id : 'gsi3d_s',
 					title : '小(1024×1024)',
 					//arrow : true,
-					href : 'gsi3d_s'//'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
+					href : 'gsi3d_s'//'https://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
 				},
 				
 				{
@@ -683,14 +683,14 @@ CONFIG.FUNCMENU = {
 					id : 'gsi3d_view',
 					title : '表示領域(最大2048×2048)',
 					//arrow : true,
-					href : 'gsi3d_view'//'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
+					href : 'gsi3d_view'//'https://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
 				}*/
 			]
 		},
 		{
 			title : 'Globe',
 			arrow : true,
-			href : 'gsiglobe'//'http://maps.gsi.go.jp/globe/index_globe.html'
+			href : 'gsiglobe'//'https://maps.gsi.go.jp/globe/index_globe.html'
 		}
 	]
 };
@@ -862,8 +862,8 @@ GSI.TEXT.MAPTOIMAGE.WINDOW_MSG ="ファイルを保存する準備が整いま�
 GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEIMGBTN = '画像を保存';
 GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEPGWBTN = 'ワールドファイルを保存';
 GSI.TEXT.MAPTOIMAGE.WINDOW_MSG2 ='※保存したファイルは、国土地理院コンテンツ利用規約に従ってご利用ください。<br>' + 
-'<a href="http://maps.gsi.go.jp/help/use.html" target="_blank">地理院タイルのご利用について</a><br>' +
-'<a href="http://maps.gsi.go.jp/help/howtouse.html" target="_blank">ワールドファイルについて</a>' ;
+'<a href="https://maps.gsi.go.jp/help/use.html" target="_blank">地理院タイルのご利用について</a><br>' +
+'<a href="https://maps.gsi.go.jp/help/howtouse.html" target="_blank">ワールドファイルについて</a>' ;
 
 GSI.TEXT.EVAC = {};
 GSI.TEXT.EVAC.KIYAKU = '最新の状況などは当該市町村にご確認ください。';
@@ -2458,7 +2458,7 @@ GSI.Links.getURL = function( pageStateManager,id, center, z, bounds){
 		url += queryString;
 		
 		
-		return url; //'http://maps.gsi.go.jp/globe/index_globe.html';
+		return url; //'https://maps.gsi.go.jp/globe/index_globe.html';
 	}
 	else if ( id == 'mapion' )
 	{
@@ -7333,7 +7333,7 @@ GSI.MeasureDialog = GSI.Dialog.extend( {
 		this.frame.append( this.radioFrame ).append( this.distance );
 
 		//計測値の説明
-        this.infoBtn = $("<a>").attr({"href":"http://maps.gsi.go.jp/help/howtouse.html","target":"_blank"}).addClass('gsi_measuredialog_infobtn').html("計測値の説明");
+        this.infoBtn = $("<a>").attr({"href":"https://maps.gsi.go.jp/help/howtouse.html","target":"_blank"}).addClass('gsi_measuredialog_infobtn').html("計測値の説明");
         this.frame.append(this.infoBtn);
         
 		return this.frame;
@@ -17384,7 +17384,7 @@ GSI.MiniMap = L.Class.extend( {
 	{
 		if ( !this.miniMap )
 		{
-			var baseLayer = L.tileLayer('http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' );
+			var baseLayer = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' );
 			this.miniMap = new L.Control.MiniMap(baseLayer, { toggleDisplay: false }).addTo(this.map);
 		}
 	},
@@ -20411,7 +20411,7 @@ GSI.Control.CopyrightPanel = L.Control.extend({
 
 		position: 'bottomright',
 		title:'地理院タイル',
-		linkurl:'http://maps.gsi.go.jp/development/ichiran.html',
+		linkurl:'https://maps.gsi.go.jp/development/ichiran.html',
 		width: 110,
 		height: 10,
 	},
@@ -22394,7 +22394,7 @@ GSI.GeoJSON = L.Layer.extend( {
 	},
 	onPointToLayer : function(feature, latlng )
 	{
-		if ( !feature.properties ) return L.marker( latlng ,{ icon : L.icon({iconUrl:'http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
+		if ( !feature.properties ) return L.marker( latlng ,{ icon : L.icon({iconUrl:'https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
 
 		var marker = null;
 		if ( feature.properties[ "_markerType" ] )
@@ -22453,7 +22453,7 @@ GSI.GeoJSON = L.Layer.extend( {
 		if ( !marker )
 		{
 			if ( !feature.properties[ "_iconUrl" ] ) 
-				return L.marker( latlng ,{ icon : L.icon({iconUrl:'http://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
+				return L.marker( latlng ,{ icon : L.icon({iconUrl:'https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png',iconSize:[20,20],iconAnchor:[10,10]}) });
 			var iconUrl = feature.properties[ "_iconUrl" ];
 			var iconSize = feature.properties[ "_iconSize" ];
 			var iconAnchor = feature.properties[ "_iconAnchor" ];

@@ -3920,7 +3920,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 5,
-                  "html": "<a href=\"http://maps.gsi.go.jp/development/ichiran.html#airphoto\" target=\"_blank\">簡易空中写真</a><br>\n口永良部島は2012年4月撮影\n<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                  "html": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html#airphoto\" target=\"_blank\">簡易空中写真</a><br>\n口永良部島は2012年4月撮影\n<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
           "type": "LayerGroup",

@@ -1071,7 +1071,7 @@
           "minZoom": 3,
           "maxZoom": 18,
           "maxNativeZoom": 15,
-          "html": "<div class=\"gsi_layerinfo_title\">全国傾斜量区分図（雪崩関連）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">全国傾斜量区分図（雪崩関連）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -4182,7 +4182,7 @@
               "title": "5ｍメッシュDEM（航空レーザ測量）の<br>提供地域と作業年度",
               "id": "fgd_dem5a_area_dtil",
               "toggleall": false,
-              "html": "<div class=\"gsi_layerinfo_title\">5ｍメッシュDEM（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_subtitle\">（基盤地図情報数値標高モデル）</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した5mメッシュDEMの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>5mメッシュDEMの提供範囲（概略）</li><li>ズーム：12～14<br>5mメッシュDEMの提供範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"http://cyberjapandata.gsi.go.jp/legend/attension_dem5a_area.html\">解説</a></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
+              "html": "<div class=\"gsi_layerinfo_title\">5ｍメッシュDEM（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_subtitle\">（基盤地図情報数値標高モデル）</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した5mメッシュDEMの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>5mメッシュDEMの提供範囲（概略）</li><li>ズーム：12～14<br>5mメッシュDEMの提供範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/attension_dem5a_area.html\">解説</a></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
               "entries": [
                  {
                   "type": "Layer",
