@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "大阪府北部を震源とする地震",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers_20180618osaka.txt"
+     }
+            ]
+}

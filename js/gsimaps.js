@@ -67,6 +67,10 @@ CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
 	{
 		"top":true,
+		"url":'./layers_txt/layers_topic_osaka.txt'
+	},
+	{
+		"top":true,
 		"url":'./layers_txt/layers_topic_kirishima.txt'
 	},
 	{
@@ -11402,6 +11406,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().hide();
 			this.footerSelector.find( '.latlng_10' ).parent().hide();
 			this.footerSelector.find( '.utm_point' ).parent().hide();
+			this.footerSelector.find( '.address' ).parent().hide();
 			
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			this.onMapMove();
@@ -11436,6 +11441,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().show();
 			this.footerSelector.find( '.latlng_10' ).parent().show();
 			this.footerSelector.find( '.utm_point' ).parent().show();
+			this.footerSelector.find( '.address' ).parent().show();
 			var oldFooterHeight = footerHeight;
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			
@@ -11547,6 +11553,7 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().hide();
 				this.footerSelector.find( '.latlng_10' ).parent().hide();
 				this.footerSelector.find( '.utm_point' ).parent().hide();
+				this.footerSelector.find( '.address' ).parent().hide();
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
 				this.onMapMove();
@@ -11582,6 +11589,7 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().show();
 				this.footerSelector.find( '.latlng_10' ).parent().show();
 				this.footerSelector.find( '.utm_point' ).parent().show();
+				this.footerSelector.find( '.address' ).parent().show();
 				var oldFooterHeight = footerHeight;
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
@@ -41167,7 +41175,7 @@ GSI.LayerTreeSearcher = L.Evented.extend( {
 			return String.fromCharCode(s.charCodeAt(0) - 65248);
 		}).replace(/[‐－―]/g, '-');
 		
-		src = src.replace(/[～〜]/g, '~');
+		src = src.replace(/[～?]/g, '~');
 		src = src.replace(/　/g, ' ');
 		
 		reg = new RegExp('(' + Object.keys(GSI.LayerTreeSearcher.hanKanaMap).join('|') + ')', 'g');
@@ -41464,7 +41472,7 @@ GSI.LayerTreeSearcher.hanKanaMap ={
 'ﾀﾞ': 'ダ', 'ﾁﾞ': 'ヂ', 'ﾂﾞ': 'ヅ', 'ﾃﾞ': 'デ', 'ﾄﾞ': 'ド',
 'ﾊﾞ': 'バ', 'ﾋﾞ': 'ビ', 'ﾌﾞ': 'ブ', 'ﾍﾞ': 'ベ', 'ﾎﾞ': 'ボ',
 'ﾊﾟ': 'パ', 'ﾋﾟ': 'ピ', 'ﾌﾟ': 'プ', 'ﾍﾟ': 'ペ', 'ﾎﾟ': 'ポ',
-'ｳﾞ': 'ヴ', 'ﾜﾞ': 'ヷ', 'ｦﾞ': 'ヺ',
+'ｳﾞ': 'ヴ', 'ﾜﾞ': '?', 'ｦﾞ': '?',
 'ｱ': 'ア', 'ｲ': 'イ', 'ｳ': 'ウ', 'ｴ': 'エ', 'ｵ': 'オ',
 'ｶ': 'カ', 'ｷ': 'キ', 'ｸ': 'ク', 'ｹ': 'ケ', 'ｺ': 'コ',
 'ｻ': 'サ', 'ｼ': 'シ', 'ｽ': 'ス', 'ｾ': 'セ', 'ｿ': 'ソ',
