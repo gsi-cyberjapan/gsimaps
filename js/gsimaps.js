@@ -11406,7 +11406,6 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().hide();
 			this.footerSelector.find( '.latlng_10' ).parent().hide();
 			this.footerSelector.find( '.utm_point' ).parent().hide();
-			this.footerSelector.find( '.address' ).parent().hide();
 			
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			this.onMapMove();
@@ -11441,7 +11440,6 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().show();
 			this.footerSelector.find( '.latlng_10' ).parent().show();
 			this.footerSelector.find( '.utm_point' ).parent().show();
-			this.footerSelector.find( '.address' ).parent().show();
 			var oldFooterHeight = footerHeight;
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			
@@ -11553,7 +11551,6 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().hide();
 				this.footerSelector.find( '.latlng_10' ).parent().hide();
 				this.footerSelector.find( '.utm_point' ).parent().hide();
-				this.footerSelector.find( '.address' ).parent().hide();
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
 				this.onMapMove();
@@ -11589,7 +11586,6 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().show();
 				this.footerSelector.find( '.latlng_10' ).parent().show();
 				this.footerSelector.find( '.utm_point' ).parent().show();
-				this.footerSelector.find( '.address' ).parent().show();
 				var oldFooterHeight = footerHeight;
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
@@ -19052,10 +19048,10 @@ GSI.QueryParams = L.Class.extend( {
 		chiikiMesh : false,
 		jihokuLine : false,
 		miniMap : false,
-		footer : 1
+		footer : 0
 	},
 	_viewSetting2 : {
-		footer : 1
+		footer : 0
 	},
 	_layers : [],
 	_viewListDialogVisible : false,
