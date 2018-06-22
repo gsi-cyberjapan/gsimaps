@@ -11406,6 +11406,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().hide();
 			this.footerSelector.find( '.latlng_10' ).parent().hide();
 			this.footerSelector.find( '.utm_point' ).parent().hide();
+			this.footerSelector.find( '.address' ).parent().hide();
 			
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			this.onMapMove();
@@ -11440,6 +11441,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().show();
 			this.footerSelector.find( '.latlng_10' ).parent().show();
 			this.footerSelector.find( '.utm_point' ).parent().show();
+			this.footerSelector.find( '.address' ).parent().show();
 			var oldFooterHeight = footerHeight;
 			footerHeight = $( this.footerSelector ).outerHeight( true );
 			
@@ -11551,10 +11553,11 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().hide();
 				this.footerSelector.find( '.latlng_10' ).parent().hide();
 				this.footerSelector.find( '.utm_point' ).parent().hide();
+				this.footerSelector.find( '.address' ).parent().hide();
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
-				this.onMapMove();
-				this.onMapMoveEnd();
+				// this.onMapMove();
+				// this.onMapMoveEnd();
 				$( this.btnSelector).css( { 'background-image' : 'url("' +this.upImage+'")' } );
 				if ( this.overlap )
 				{
@@ -11586,10 +11589,12 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().show();
 				this.footerSelector.find( '.latlng_10' ).parent().show();
 				this.footerSelector.find( '.utm_point' ).parent().show();
+				this.footerSelector.find( '.address' ).parent().show();
 				var oldFooterHeight = footerHeight;
 				
 				footerHeight = $( this.footerSelector ).outerHeight( true );
-				
+				this.onMapMove();
+				this.onMapMoveEnd();				
 				$( this.btnSelector).css( { 'background-image' : 'url("' +this.downImage+'")' } );
 				if ( this.overlap )
 				{
@@ -11850,6 +11855,7 @@ GSI.Footer = L.Class.extend( {
 	},
 	execRefresh : function (lon, lat)
 	{
+		if (this._dispMode == 2){
 		this.ajaxAddress = $.ajax({
 			type: "GET",
 			url:CONFIG.SERVERAPI.GETADDR,
@@ -11862,6 +11868,7 @@ GSI.Footer = L.Class.extend( {
 			success: L.Util.bind( this.getAddressResult, this ),
 			error : function(){}
 		});
+		}
 		
 		this.refreshSeamlessInfo(lon, lat);
 		if(this.vDemAltReq)
@@ -16137,6 +16144,18 @@ GSI.MapLayerList = L.Evented.extend( {
 				return;
 			}
 		}
+		if ( info.id=="red" )
+		{
+			if(Confirm_FLAG == null){
+				var KARI=this;
+				jConfirm("赤色立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。赤色立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。", 'ご利用上の注意', function(r) {
+					if(r) {
+						KARI.append(info, noFinishMove, isHide ,1);
+					}
+				});
+				return;
+			}
+		}
 		info._visibleInfo = {};
 		info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
 		if ( isHide ) info._visibleInfo._isHidden = true;
@@ -19048,10 +19067,10 @@ GSI.QueryParams = L.Class.extend( {
 		chiikiMesh : false,
 		jihokuLine : false,
 		miniMap : false,
-		footer : 0
+		footer : 1
 	},
 	_viewSetting2 : {
-		footer : 0
+		footer : 1
 	},
 	_layers : [],
 	_viewListDialogVisible : false,
