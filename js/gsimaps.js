@@ -71,14 +71,6 @@ CONFIG.layers = [
 	},
 	{
 		"top":true,
-		"url":'./layers_txt/layers_topic_kirishima.txt'
-	},
-	{
-		"top":true,
-		"url":'./layers_txt/layers_topic_kusatsushirane.txt'
-	},
-	{
-		"top":true,
 		"url":'./layers_txt/layers_topic_new.txt'
 	},
 	{
