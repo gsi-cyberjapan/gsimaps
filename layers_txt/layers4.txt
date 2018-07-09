@@ -12,6 +12,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "大阪府北部を震源とする地震",
+              "toggleall": false,
+              "src": "./layers_20180618osaka.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "平成28年茨城県北部の地震",
               "toggleall": false,
               "src": "./layers_20161228ibaraki.txt"
@@ -1425,6 +1431,12 @@
           "title": "台風・豪雨等",
           "toggleall": false,
           "entries": [
+            {
+             "type": "LayerGroup",
+             "title": "平成30年台風７号及び前線等による大雨",
+             "toggleall": false,
+             "src": "./layers_20180709typhoon7.txt"
+            },
             {
              "type": "LayerGroup",
              "title": "平成30年大分県中津市土砂災害",

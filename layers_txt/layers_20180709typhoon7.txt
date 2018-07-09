@@ -1,0 +1,71 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "治水地形分類図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "_lcmfc2",
+         "title": "更新版(2007～2016年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 5,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2016年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+         "type": "Layer",
+         "id": "_lcmfc1",
+         "title": "初版(1976～1978年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+         }
+       ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "土地条件図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "_lcm25k_2012",
+         "title": "数値地図25000（土地条件）",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 4,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
+         "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+       },
+       {
+         "type": "Layer",
+         "id": "_lcm25k",
+         "title": "初期整備版",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "maxZoom": 16,
+         "legendUrl": "",
+         "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+      },
+      {
+         "type": "Layer",
+         "id": "_lcm25k_spec",
+         "title": "初期整備版 諸元情報",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
+         "cocotile": true,
+         "maxZoom": 16,
+         "legendUrl": "",
+         "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+       }
+       ]
+     }
+  ]
+}
