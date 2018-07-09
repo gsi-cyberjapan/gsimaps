@@ -2,7 +2,7 @@
   "layers": [
     {
      "type": "LayerGroup",
-     "title": "平成30年台風７号及び前線等による大雨",
+     "title": "平成30年7月豪雨",
      "iconUrl": "./image/system/folder_new.png",
      "toggleall": false,
      "src": "./layers_20180709typhoon7.txt"
