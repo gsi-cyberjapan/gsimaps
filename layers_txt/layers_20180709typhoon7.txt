@@ -1,6 +1,24 @@
 {
   "layers": [
     {
+      "type": "LayerGroup",
+      "title": "垂直写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0709suichoku",
+          "title": "高梁川地区（岡山県倉敷市・総社市）（7/9撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+        }
+      ]
+    },
+    {
      "type": "LayerGroup",
      "title": "治水地形分類図",
      "toggleall": false,
