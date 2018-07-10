@@ -19,6 +19,24 @@
       ]
     },
     {
+      "type": "LayerGroup",
+      "title": "浸水推定段彩図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kurashiki_0707dansaizu",
+          "title": "岡山県倉敷市（7/7時点）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0707dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+          "html": "浸水推定段彩図<br>この地図は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定し、浸水面から水深を算出し深さごとに色別に表現しています。実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。<br>(c)国土地理院"
+        }
+      ]
+    },
+    {
      "type": "LayerGroup",
      "title": "治水地形分類図",
      "toggleall": false,
@@ -83,7 +101,7 @@
          "legendUrl": "",
          "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
        }
-       ]
-     }
+      ]
+    }
   ]
 }
