@@ -2,6 +2,23 @@
   "layers": [
     {
       "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0709do",
+          "title": "高梁川地区（岡山県倉敷市・総社市）（7/9撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
       "title": "垂直写真",
       "toggleall": false,
       "entries": [
