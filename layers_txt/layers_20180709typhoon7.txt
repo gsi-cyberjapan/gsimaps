@@ -31,7 +31,18 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "html": ""
+          "html": "雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_sakachou_0709suichoku",
+          "title": "広島坂町地区（広島県広島市・坂町）（7/9撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0709suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲が多く写っている写真は掲載しておりません。"
         }
       ]
     },
@@ -50,6 +61,35 @@
           "maxZoom": 16,
           "legendUrl": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
           "html": "浸水推定段彩図<br>この地図は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定し、浸水面から水深を算出し深さごとに色別に表現しています。実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。<br>(c)国土地理院"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_ozu_0707dansaizu",
+          "title": "愛媛県大洲市（7/7時点）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0707dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+          "html": "浸水推定段彩図<br>この地図は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定し、浸水面から水深を算出し深さごとに色別に表現しています。実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。<br>(c)国土地理院"
+        }
+      ]
+    },
+        {
+      "type": "LayerGroup",
+      "title": "デジタル標高地形図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kurashiki_digital",
+          "title": "岡山県倉敷市",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_digital/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/201807H3007gouu_kurashiki_digital.png",
+          "html": "基盤地図情報の数値標高モデルを使用して作成"
         }
       ]
     },
