@@ -23798,8 +23798,18 @@ GSI.ThreeDAreaSelectLayer = L.Layer.extend( {
   postMessage
  ************************************************************************/
 window.addEventListener('message', function(event){
-    var d = event.data;
-    try{
+	var d = event.data;
+	
+	if ((typeof d.sakuzuList === 'undefined') || 
+		(typeof d.queryString === 'undefined') ||
+		(typeof d.LayerJS === 'undefined') ||
+		(typeof d.baseUrl === 'undefined') || 
+		(typeof d.location === 'undefined'))
+	{
+		return;
+	}
+
+	try{
         GSI.ClientMode.queryString = "";
 
         if(d.sakuzuList  != null){ GSI.ClientMode.sakuzuList  = d.sakuzuList;  }
