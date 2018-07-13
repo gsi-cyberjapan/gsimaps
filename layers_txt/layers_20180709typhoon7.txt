@@ -8,12 +8,22 @@
         {
           "type": "Layer",
           "id": "201807H3007gouu_takahashigawa_0709do",
-          "title": "高梁川地区（岡山県倉敷市・総社市）（7/9撮影）",
+          "title": "高梁川地区（岡山県倉敷市・総社市など）（7/9撮影）",
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
           "maxZoom": 18,
-          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0711do",
+          "title": "高梁川地区（岡山県倉敷市・総社市など）（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }
       ]
     },
@@ -233,6 +243,18 @@
             "maxNativeZoom": 2,
             "legendUrl": "",
             "html": "推定浸水範囲<br>この情報は、国土交通省災害対策用ヘリコプターが7月10日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0711suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/11 12:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0711suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土地理院が7月11日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
           }
         ]
       },
