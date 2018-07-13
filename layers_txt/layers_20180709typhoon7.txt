@@ -25,7 +25,7 @@
         {
           "type": "Layer",
           "id": "201807H3007gouu_takahashigawa_0709suichoku",
-          "title": "高梁川地区（岡山県倉敷市・総社市）（7/9撮影）",
+          "title": "高梁川地区（岡山県倉敷市・総社市など）（7/9撮影）",
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709suichoku/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
@@ -47,8 +47,19 @@
         {
           "type": "Layer",
           "id": "201807H3007gouu_sakachou_0709suichoku",
-          "title": "広島坂町地区（広島県広島市・坂町）（7/9撮影）",
+          "title": "広島坂町地区（広島県広島市・坂町など）（7/9撮影）",
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0709suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_sakachou_0711suichoku",
+          "title": "広島坂町地区（広島県広島市・坂町など）（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711suichoku/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
