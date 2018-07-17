@@ -24,6 +24,56 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_uwajima_0711do",
+          "title": "宇和島地区（宇和島市など）（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_ozu_0711do",
+          "title": "大洲地区（愛媛県大洲市・西予市など）（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_sakachou_0711do",
+          "title": "広島坂町地区（広島県広島市・坂町など）（7/9,11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "7月9日及び7月11日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takeharamihara_0712do",
+          "title": "竹原三原地区（広島県竹原市・三原市など）（7/10,11,12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "7月10日～12日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharaonomichi_0713do",
+          "title": "三原尾道地区（広島県三原市・尾道市など）（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }
       ]
     },
@@ -53,6 +103,17 @@
             "id": "201807H3007gouu_takahashigawa_0711suichoku",
             "title": "7/11撮影",
             "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takahashigawa_0712suichoku",
+            "title": "7/12撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712suichoku/{z}/{x}/{y}.geojson",
             "cocotile": true,
             "minZoom": 2,
             "maxZoom": 18,
@@ -116,6 +177,17 @@
             "maxZoom": 18,
             "maxNativeZoom": 2,
             "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takeharamihara_0712suichoku",
+            "title": "7/12撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
           }
         ]
       },
@@ -140,6 +212,17 @@
             "id": "201807H3007gouu_higashihiroshima_0711suichoku",
             "title": "7/11撮影",
             "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_higashihiroshima_0714suichoku",
+            "title": "7/14撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0714suichoku/{z}/{x}/{y}.geojson",
             "cocotile": true,
             "minZoom": 2,
             "maxZoom": 18,
@@ -176,6 +259,60 @@
             "id": "201807H3007gouu_ozu_0711suichoku",
             "title": "7/11撮影",
             "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "三原尾道地区（広島県三原市・尾道市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharaonomichi_0713suichoku",
+            "title": "7/13撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "呉東部地区（広島県呉市・東広島市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kuretoubu_0713suichoku",
+            "title": "7/13撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "福山地区（広島県福山市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_fukuyama_0713suichoku",
+            "title": "7/13撮影",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713suichoku/{z}/{x}/{y}.geojson",
             "cocotile": true,
             "minZoom": 2,
             "maxZoom": 18,
