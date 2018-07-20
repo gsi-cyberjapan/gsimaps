@@ -159,6 +159,21 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "三原北部地区（広島県三原市・府中市など）",
+        "toggleall": false,
+        "entries": [
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharahokubu_0715do",
+          "title": "三原北部地区（7/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。"
          }]}
       ]
     },
@@ -367,6 +382,17 @@
             "maxZoom": 18,
             "maxNativeZoom": 2,
             "html": "雲の影響により地上が見えにくい場合があります。"
+           },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharaonomichi_0716suichoku",
+            "title": "三原尾道地区（7/16撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0716suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
            }
         ]
       },
@@ -421,6 +447,24 @@
             "maxZoom": 18,
             "maxNativeZoom": 2,
             "html": ""
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "三原北部地区（広島県三原市・府中市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharahokubu_0715suichoku",
+            "title": "三原北部地区（7/15撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
            }
         ]
       }
