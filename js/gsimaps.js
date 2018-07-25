@@ -16140,7 +16140,8 @@ GSI.MapLayerList = L.Evented.extend( {
 				return;
 			}
 		}
-		if ( info.id=="red" )
+		//if ( info.id=="red" )
+		if (( info.id=="red" ) || ( info.id=="tarumaered" ) || ( info.id=="20180130_kusatsushiranesan_sekishokurittai" ) || ( info.id=="20180309_sekisyokurittai_kirishima" ))
 		{
 			if(Confirm_FLAG == null){
 				var KARI=this;

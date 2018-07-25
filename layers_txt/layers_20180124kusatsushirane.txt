@@ -57,14 +57,13 @@
     {
       "type": "Layer",
       "id": "20180130_kusatsushiranesan_sekishokurittai",
-      "title": "赤色立体地図",
+      "title": "赤色立体地図（本白根山周辺）",
       "url": "https://maps.gsi.go.jp/xyz/20180130_kusatsushiranesan_sekishokurittai/{z}/{x}/{y}.png",
       "cocotile": true,
       "minZoom": 3,
       "maxZoom": 18,
       "legendUrl": "",
-      "html": "<div class=\"gsi_layerinfo_title\">航空レーザ計測日：平成27年7月11日～平成27年10月27日<br>本図はアジア航測株式会社の赤色立体地図作成手法（特許3670274、特許4272146）を使用し、国土地理院が作成したものである。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-    },
+      "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"    },
     {
       "type": "Layer",
       "id": "20180226_kusatsushiranesan_suiteikakouichi",
