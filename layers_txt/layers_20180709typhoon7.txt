@@ -520,6 +520,24 @@
             "html": "雲の影響により地上が見えにくい場合があります。"
            }
         ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "肱川地区（愛媛県大洲市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_hijikawa_0718suichoku",
+            "title": "肱川地区（7/18撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
       }
       ]
     },
