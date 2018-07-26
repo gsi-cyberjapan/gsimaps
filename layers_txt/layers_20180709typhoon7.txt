@@ -197,6 +197,21 @@
         }]},
       {
         "type": "LayerGroup",
+        "title": "肱川地区（愛媛県大洲市）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_hijikawa_0718do",
+          "title": "肱川地区（7/18撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         }]},
+      {
+        "type": "LayerGroup",
         "title": "宇和島地区（愛媛県宇和島市など）",
         "toggleall": false,
         "entries": [
@@ -515,6 +530,24 @@
             "maxZoom": 18,
             "maxNativeZoom": 2,
             "html": ""
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "岩国地区（山口県岩国市・周南市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_iwakuni_0719suichoku",
+            "title": "岩国地区（7/19撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
            }
         ]
       },
