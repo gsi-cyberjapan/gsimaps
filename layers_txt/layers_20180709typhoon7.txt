@@ -17,7 +17,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         },
         {
@@ -27,7 +27,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         },
         {
@@ -37,7 +37,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]},
        {
@@ -52,7 +52,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyamahokubu_0718do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
          }
        ]
@@ -69,7 +69,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "7月13日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
          }]},
       {
@@ -84,7 +84,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "雲の影響により地上が見えにくい場合があります。"
          }]},
       {
@@ -99,7 +99,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         },
         {
@@ -109,7 +109,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0715do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "7月15日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]},
       {
@@ -124,7 +124,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "7月10日～12日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
         }]},
       {
@@ -139,7 +139,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0710do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "7月10日・11日・14日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
         }]},
       {
@@ -154,7 +154,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
         },
         {
@@ -164,7 +164,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0715do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]},
       {
@@ -179,7 +179,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "7月9日及び7月11日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]},
       {
@@ -194,7 +194,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_etajima_0716do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
          }]},
       {
@@ -209,7 +209,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
          }]},
       {
@@ -224,7 +224,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]},
       {
@@ -239,7 +239,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
          }]},
       {
@@ -254,7 +254,7 @@
           "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711do/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 10,
-          "maxZoom": 18,
+          "maxNativeZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
         }]}
       ]
