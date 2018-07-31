@@ -4283,6 +4283,15 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2018_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                     },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2018_04",
                       "title": "4月更新",
                       "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_04/{z}/{x}/{y}.png",
@@ -4501,7 +4510,7 @@
               "minZoom": 2,
               "maxZoom": 14,
               "maxNativeZoom": 2,
-              "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+              "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲<br><ul><li>地上画素寸法20cmの数値写真を用いて作成した範囲については、桃色で表示</li><li>地上画素寸法40cmの数値写真を用いて作成した範囲については、水色で表示</li></ul></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
             },
             {
               "type": "Layer",
@@ -4511,6 +4520,33 @@
               "cocotile": true,
               "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(10mメッシュDEM（火山基本図）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>火山基本図の等高線データを基に作成した10mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
             },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2018_07",
+                      "title": "5ｍメッシュDEM（航空レーザー測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2018_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2018_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2018_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 12,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
                 {
                   "type": "LayerGroup",
                   "title": "2017年7月更新",
