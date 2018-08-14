@@ -20785,12 +20785,14 @@ GSI.Edit.Poly = L.Edit.Poly.extend( {
 			p2 = map.project(latLng2);
 		var alt = null;
 		
-		if ( latLng1.alt  && latLng2.alt )
+		if ( (latLng1.alt || latLng1.alt == 0 )  && ( latLng2.alt || latLng2.alt == 0 )  )
 			alt = ( latLng1.alt + latLng2.alt ) / 2;
+			
 		
 		var result= map.unproject(p1._add(p2)._divideBy(2));
 		
-		result.alt = alt;
+		if ( alt || alt == 0 )
+			result.alt = alt;
 		
 		return result;
 		
@@ -32797,8 +32799,55 @@ GSI.SakuzuListItem = L.Evented.extend( {
 	
 	_makeGeoJSONLine : function( layer )
 	{
+		/*
+		if ( L.LineUtil.isFlat(layer._latlngs ) )
+		{
+			for( var i=0; i<layer._latlngs.length; i++ )
+			{
+				if ( !layer._latlngs[i].alt )
+				{
+					layer._latlngs[i].alt = 0;
+				}
+			}
+		}
+		else
+		{
+			for( var i=0; i<layer._latlngs.length; i++ )
+			{
+				for( var j=0; j<layer._latlngs[i].length; j++ )
+				{
+					if ( !layer._latlngs[i][j].alt )
+					{
+						layer._latlngs[i][j].alt = 0;
+					}
+				}
+			}
+		}
+		*/
 		var result = layer.toGeoJSON();
-
+		/*
+		if ( result.geometry && result.geometry.coordinates )
+		{
+			if ( L.LineUtil.isFlat(  ) )
+			{
+				for( var i=0; i<result.geometry.coordinates.length; i++ )
+				{
+					if ( result.geometry.coordinates[i].length < 3 )
+					{
+						result.geometry.coordinates[i].push(0);
+					}
+				}
+			
+			}
+			else
+			{
+				for( var i=0; i<result.geometry.coordinates.length; i++ )
+				{
+					
+				}
+			}
+		}
+		*/
 		result.properties = this._layerInfo2Properties( this._getLayerInfo( layer ) );
 
 		var options = layer.options;
@@ -32939,6 +32988,31 @@ GSI.SakuzuListItem = L.Evented.extend( {
 	
 	_makeGeoJSONPolygon : function( layer )
 	{
+		/*
+		if ( L.LineUtil.isFlat(layer._latlngs ) )
+		{
+			for( var i=0; i<layer._latlngs.length; i++ )
+			{
+				if ( !layer._latlngs[i].alt )
+				{
+					layer._latlngs[i].alt = 0;
+				}
+			}
+		}
+		else
+		{
+			for( var i=0; i<layer._latlngs.length; i++ )
+			{
+				for( var j=0; j<layer._latlngs[i].length; j++ )
+				{
+					if ( !layer._latlngs[i][j].alt )
+					{
+						layer._latlngs[i][j].alt = 0;
+					}
+				}
+			}
+		}
+		*/
 		var result = layer.toGeoJSON();
 
 		result.properties = this._layerInfo2Properties( this._getLayerInfo( layer ) );
