@@ -4838,7 +4838,14 @@ function Draw3DGEOData()
 				oGeo3DData[i].geometry.coordinates[2] = latlngPoint.h;
 			}
 			
-			var div = $( oGeo3DData[i].properties._html );
+			var div = null;
+			
+			if ( oGeo3DData[i].properties._html.indexOf( '<' ) < 0 )
+				div = $( "<div>" + oGeo3DData[i].properties._html + "</div>" );
+			else
+				div = $( oGeo3DData[i].properties._html );
+				
+				
 			
 			var cssText = ( div.prop("style") ? div.prop("style").cssText : "" );
 			
