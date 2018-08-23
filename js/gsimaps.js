@@ -739,6 +739,7 @@ CONFIG.UTMGRID = {
 	]
 };
 
+CONFIG.USEATTRPANEL = true;
 /************************************************************************
  設定：文言
  ************************************************************************/
@@ -10316,7 +10317,10 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 		else
 			this._saveOutsideTileBtn.hide();
 		
-		
+		if (CONFIG.USEATTRPANEL == true){
+			this._mapManager._attrpanel.updateContent(this.mapLayerList);
+		}
+			
 		this.initializeList();
 		
 		this.fire( "change" );
@@ -18382,6 +18386,11 @@ GSI.PagePrinter = L.Evented.extend( {
 			cloneLayer.addTo( this._map );
 		}
 		
+		if (CONFIG.USEATTRPANEL == true){
+			var x = new GSI.Control.AttrPanel({position:"bottomright"});
+			this._map.addControl(x);
+			x.updateContent(this._mapLayerList);
+		}
 
 		this._container.fadeIn('fast', L.bind( function(){
 			
@@ -20452,8 +20461,6 @@ GSI.Control.CopyrightPanel = L.Control.extend({
 
 		//Creating the container and stopping events from spilling through to the main map.
 		this._container = L.DomUtil.create('div', 'leaflet-control-flatpanel');
-		this._container.style.width = this.options.width + 'px';
-		this._container.style.height = this.options.height + 'px';
 
 		var alink = L.DomUtil.create('a','leaflet-control-crpanel', this._container);
 
@@ -20479,9 +20486,115 @@ GSI.Control.CopyrightPanel = L.Control.extend({
 
 });
 
-L.Map.addInitHook(function () {
-	if (this.options.crPanel) {
-		this.crPanel = (new L.Control.CopyrightPanel()).addTo(this);
+/************************************************************************
+ L.Control
+ - GSI.Control.AttrPanel
+ ************************************************************************/
+GSI.Control.AttrPanel = L.Control.extend({
+
+	options: {
+
+		position: 'bottomright',
+		width: 110,
+		height: 10,
+	},
+
+	hideText: 'Hide AttrPanel',
+	showText: 'Show AttrPanel',
+
+
+	initialize: function (options) {
+		L.Util.setOptions(this, options);
+		this._elements = [];
+	},
+
+	onAdd: function (map) {
+		this._map = map;
+
+		//Creating the container and stopping events from spilling through to the main map.
+		this._container = L.DomUtil.create('div', 'leaflet-control-flatpanel');
+
+		var spanel = L.DomUtil.create("span", 'leaflet-control-attrpanel',this._container);
+		spanel.innerHTML = "";
+
+		this._Panel = spanel;
+		
+		return this._container;
+	},
+
+	addTo: function (attr) {
+		L.Control.prototype.addTo.call(this, attr);
+		return this;
+	},
+	clearElement: function(){
+		this._elements=[];
+	},
+	updateContent: function(mapLayerList){
+		var updateCount = 0;
+		this.clearElement();
+		if (!mapLayerList){
+			this._container.style.display='none';
+		}
+		else{
+			var tl = mapLayerList.getTileList();
+			var ll = mapLayerList.getList();
+
+			for(var i = 0; i < tl.length; i++){
+				if (tl[i].attribution){
+					this.addElement(tl[i].attribution);
+					updateCount++;
+				}
+			}
+			for(var i = 0; i < ll.length; i++){
+				if (ll[i].attribution){
+					this.addElement(ll[i].attribution);
+					updateCount++;
+				}
+			}
+			if (updateCount < 1){
+				this._container.style.display='none';
+			}
+			else{
+				this._container.style.display='block';
+			}
+		}
+	},
+	addElement: function(el){
+		if ((!el) || (el == "")){
+			return;
+		}
+		for(var i = 0; i < this._elements.length; i++){
+			if (this._elements[i] == el){
+				return;
+			}
+		}
+		this._elements.push(el);
+		var newel = this._elements.join("|");
+		this._Panel.innerHTML = newel;
+	},
+
+	removeElement : function(el){
+		if ((!el) || (el == "")){
+			return;
+		}
+
+		for(var i = 0; i < this._elements.length; i++){
+			if (this._elements[i] == el){
+				this._elements.splice(i, 1);
+				break;
+			}
+		}
+
+		var newel = this._elements.join("|");
+		this._Panel.innerHTML = newel;
+	},
+	setElement: function(el){
+		if ((!el) || (el == "")){
+			this._Panel.innerHTML = "";
+		}
+		else{
+			this._Panel.innerHTML = el;
+		}
 	}
 });
 
@@ -22157,7 +22270,12 @@ GSI.BaseLayer = L.TileLayer.extend({
 		return zoom + zoomOffset;
 	},
 	
-	
+	getAttribution: function(){
+		if (this.baseLayerList[this.activeIndex].attribution){
+			return this.baseLayerList[this.activeIndex].attribution;
+		}
+		return "";
+	},
 	getActiveId : function()
 	{
 		return this.baseLayerList[ this.activeIndex ].id;
@@ -28565,6 +28683,11 @@ GSI.MapManager = L.Class.extend( {
 	initializeMap : function(ctrlSetting)
 	{
 		
+		if (CONFIG.USEATTRPANEL == true){
+			this._attrpanel = new GSI.Control.AttrPanel({position:"bottomright"});
+			this._map.addControl(this._attrpanel);
+		}
+
 		if(ctrlSetting.header.visible == false || GSI.GLOBALS.isCreditShow)
 		{
 			this._map.addControl(new GSI.Control.CopyrightPanel({position:"bottomright"}));
