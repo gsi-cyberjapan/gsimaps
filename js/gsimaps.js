@@ -25963,6 +25963,7 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 		
 		
 		map.on('viewreset', this.update, this);
+		map.on('zoomend', this._onZoomEnd, this);
 	
 		this.update();
 		this.fire('add');
@@ -25974,6 +25975,13 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 		});
 		
 	},
+	
+	_onZoomEnd : function()
+	{
+		this._refreshLatLngBounds();
+		this.update();
+	},
+	
 	
 	_refreshLatLngBounds : function()
 	{
@@ -26008,6 +26016,8 @@ GSI.MapToImageAreaSelectLayer = L.Layer.extend( {
 		L.DomEvent.off(this._leftTopMark[0], "mousedown", this._onDown, this);
 		map.off('viewreset', this.update, this);
 
+		map.off('zoomend', this._onZoomEnd, this);
+	
 		this._map = null;
 		
 		
