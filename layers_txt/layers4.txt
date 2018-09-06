@@ -14,7 +14,7 @@
               "type": "LayerGroup",
               "title": "平成30年北海道胆振東部地震",
               "toggleall": false,
-              "src": "./layers_20180618osaka.txt"
+              "src": "./layers_20180906hokkaido.txt"
             },
             {
               "type": "LayerGroup",
