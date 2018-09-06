@@ -67,6 +67,10 @@ CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
 	{
 		"top":true,
+		"url":'./layers_txt/layers_topic_hokkaido.txt'
+	},
+	{
+		"top":true,
 		"url":'./layers_txt/layers_topic_typhoon7.txt'
 	},
 	{
@@ -16145,7 +16149,7 @@ GSI.MapLayerList = L.Evented.extend( {
 			}
 		}
 		//if ( info.id=="red" )
-		if (( info.id=="red" ) || ( info.id=="tarumaered" ) || ( info.id=="20180130_kusatsushiranesan_sekishokurittai" ) || ( info.id=="20180309_sekisyokurittai_kirishima" )|| ( info.id=="kuchinoerabured" ))
+		if (( info.id=="red" )|| ( info.id=="20180906hokkaido_atsuma_sekishoku" ) || ( info.id=="tarumaered" ) || ( info.id=="20180130_kusatsushiranesan_sekishokurittai" ) || ( info.id=="20180309_sekisyokurittai_kirishima" )|| ( info.id=="kuchinoerabured" ))
 		{
 			if(Confirm_FLAG == null){
 				var KARI=this;
