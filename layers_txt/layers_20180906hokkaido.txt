@@ -2,6 +2,89 @@
   "layers": [
     {
      "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "厚真川地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0906do",
+          "title": "厚真川地区（9/6撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。<br>簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          }
+         ]
+        }
+       ]
+     },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "厚真川地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0906suichoku",
+          "title": "厚真川地区（9/6撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumachiku_0906suichoku",
+          "title": "厚真地区（9/6撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+       ]
+     },
+     {
+      "type": "Layer",
+      "id": "seamlessphoto1",
+      "title": "被災前最新写真",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数年代の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+     },
+    {
+     "type": "LayerGroup",
      "title": "デジタル標高地形図",
      "iconUrl": "",
      "toggleall": false,
