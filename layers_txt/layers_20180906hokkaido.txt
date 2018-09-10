@@ -23,6 +23,24 @@
           "html": "雲の影響により地上が見えにくい場合があります。<br>簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
           }
          ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumachiku_0906do",
+          "title": "厚真地区（9/6,8撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。"
+          }
+         ]
         }
        ]
      },
