@@ -78,13 +78,13 @@
          {
           "type": "Layer",
           "id": "20180906hokkaido_atsumachiku_0906suichoku",
-          "title": "厚真地区（9/6撮影）",
+          "title": "厚真地区（9/6,8撮影）",
           "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906suichoku/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "html": "雲の影響により地上が見えにくい場合があります。"
+          "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。<br>青丸は9/6・緑丸は9/8撮影"
           }
          ]
         }
