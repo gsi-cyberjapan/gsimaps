@@ -106,6 +106,25 @@
           "html": ""
           }
          ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "安平地区（北海道勇払郡安平町・厚真町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_abira_0911suichoku",
+          "title": "安平地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
         }
        ]
      },
