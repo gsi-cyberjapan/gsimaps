@@ -41,6 +41,42 @@
           "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。"
           }
          ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "安平・厚真西部地区（北海道千歳市・苫小牧市など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumaseibu_0911do",
+          "title": "安平・厚真西部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真東部地区（北海道勇払郡厚真町・むかわ町、沙流郡平取町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumtoubu_0911do",
+          "title": "厚真東部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
+          }
+         ]
         }
        ]
      },
