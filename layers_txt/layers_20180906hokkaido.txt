@@ -87,6 +87,25 @@
           "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。<br>青丸は9/6・緑丸は9/8撮影"
           }
          ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真東部地区（北海道勇払郡厚真町・むかわ町、沙流郡平取町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumatoubu_0911suichoku",
+          "title": "厚真東部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
         }
        ]
      },
