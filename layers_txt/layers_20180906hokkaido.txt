@@ -21,6 +21,16 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "雲の影響により地上が見えにくい場合があります。<br>簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0911do",
+          "title": "厚真川地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
           }
          ]
         },
@@ -93,6 +103,24 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "雲の影響により地上が見えにくい場合があります。また、簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          }
+         ]
+        },
+        {
+       "type": "LayerGroup",
+       "title": "安平地区（北海道勇払郡安平町・厚真町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_abira_0911do",
+          "title": "安平地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
           }
          ]
         }
