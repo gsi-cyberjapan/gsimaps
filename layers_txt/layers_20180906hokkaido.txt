@@ -8,7 +8,7 @@
      "entries": [
        {
        "type": "LayerGroup",
-       "title": "厚真川地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "title": "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）",
        "iconUrl": "",
        "toggleall": false,
        "entries": [
@@ -103,6 +103,16 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "雲の影響により地上が見えにくい場合があります。また、簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0913do",
+          "title": "札幌市清田地区（9/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
           }
          ]
         },
@@ -134,7 +144,7 @@
      "entries": [
        {
        "type": "LayerGroup",
-       "title": "厚真川地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "title": "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）",
        "iconUrl": "",
        "toggleall": false,
        "entries": [
@@ -148,6 +158,17 @@
           "maxZoom": 18,
           "maxNativeZoom": 2,
           "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0911suichoku",
+          "title": "厚真川地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
           }
          ]
         },
@@ -208,6 +229,25 @@
           }
          ]
         },
+        {
+       "type": "LayerGroup",
+       "title": "札幌市清田地区（北海道札幌市清田区・厚別区、北広島市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0913suichoku",
+          "title": "札幌市清田地区（9/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        },
        {
        "type": "LayerGroup",
        "title": "安平地区（北海道勇払郡安平町・厚真町など）",
@@ -249,7 +289,7 @@
       "minZoom": 6,
       "maxNativeZoom": 16,
       "maxZoom": 17,
-      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20180906hokkaido_iburi_hokaichi_legend.PNG\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が9月6日および8日に撮影した空中写真（撮影範囲：黒枠内）から、平成30年北海道胆振東部地震によって生じたと考えられる斜面崩壊・堆積範囲を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、平成30年北海道胆振東部地震による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>2.斜面崩壊・堆積範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>3.斜面崩壊・堆積した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20180906hokkaido_iburi_hokaichi_legend.PNG\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が9月6日から11日にかけて撮影した空中写真から、平成30年北海道胆振東部地震によって生じたと考えられる斜面崩壊・堆積範囲を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、平成30年北海道胆振東部地震による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>2.斜面崩壊・堆積範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>3.斜面崩壊・堆積した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。<br>4.道路、河川上の土砂は撤去されている可能性があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
      },
     {
      "type": "LayerGroup",
