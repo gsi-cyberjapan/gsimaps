@@ -38681,11 +38681,15 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend( {
 	{
 		this.frame = $( '<div>' ).addClass("gsi_crosssectionviewdialog_content").css({"position":"relative","padding":"8px"});
 		
+		var titleFrame = $( "<div>" ).addClass("titleframe");
+		titleFrame.append( $( "<div>" ).addClass("message").html("操作方法") );
+		this.frame.append(titleFrame);
+
 		// 経路指定
 		var pointFrame = $( "<div>" ).addClass("pointframe");
-		pointFrame.append( $("<img>").attr({"src":"image/system/info.png"}) ).append( $( "<div>" ).addClass("message").html("地図上をクリックして経路を指定してください。") );
+		pointFrame.append( $( "<div>" ).addClass("message").html("地図上をクリック(タップ)して経路を指定") );
 		
-		var clearButton = $("<a>").addClass("normalbutton").attr({"href":"javascript:void(0);"}).html("指定をクリア")
+		var clearButton = $("<a>").addClass("normalbutton-alt").attr({"href":"javascript:void(0);"}).html("指定をクリア")
 			.on("click", L.bind(function(){
 				
 				if ( this._displayDialog ) this._displayDialog.hide();
@@ -38698,7 +38702,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend( {
 		// ファイル読み込み
 		var fileFrame = $( "<div>" ).addClass("fileframe");
 		
-		fileFrame.append( $("<img>").attr({"src":"image/system/info.png"}) ).append( $( "<div>" ).addClass("message").html("経路が含まれているGeoJSON,KML形式のファイルを指定してください。") );
+		fileFrame.append( $( "<div>" ).addClass("message").html("又は既存のGeoJSON,KMLファイルを選択") );
 		
 		
 		
