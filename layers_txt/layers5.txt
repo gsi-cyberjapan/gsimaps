@@ -854,6 +854,16 @@
         },
         {
           "type": "Layer",
+          "id": "rinya",
+          "title": "森林（国有林）の空中写真（林野庁）",
+          "url": "https://maps.gsi.go.jp/xyz/rinya/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "html": "林野庁が2011年～2015年に整備した森林（国有林）の空中写真をウェブ上で閲覧できるように加工したものです（ズームレベル14～18で表示されます）。"
+        },
+        {
+          "type": "Layer",
           "id": "did2015",
           "title": "人口集中地区 平成27年（総務省統計局）",
           "url": "https://maps.gsi.go.jp/xyz/did2015/{z}/{x}/{y}.png",
