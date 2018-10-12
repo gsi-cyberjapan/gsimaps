@@ -36405,6 +36405,11 @@ GSI.DEMLoader.getURLList = function(x,y,z)
 					},
 					*/
 					{
+						url:"https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+						minZoom :15,
+						maxZoom : 15
+					},
+					{
 						url:"https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
 						minZoom : 0,
 						maxZoom : 14
