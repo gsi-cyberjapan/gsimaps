@@ -7,7 +7,7 @@
      "toggleall": false,
      "entries": [
        {
-          "type": "LayerGroup",
+       "type": "LayerGroup",
           "title": "統合版",
           "iconUrl": "",
           "toggleall": true,
@@ -391,6 +391,51 @@
       "maxNativeZoom": 16,
       "maxZoom": 17,
       "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20180906hokkaido_iburi_hokaichi_legend.PNG\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が9月6日から11日にかけて撮影した空中写真から、平成30年北海道胆振東部地震によって生じたと考えられる斜面崩壊・堆積範囲を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、平成30年北海道胆振東部地震による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>2.斜面崩壊・堆積範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>3.斜面崩壊・堆積した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。<br>4.道路、河川上の土砂は撤去されている可能性があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+     },
+     {
+       "type": "LayerGroup",
+       "title": "震源断層モデル・震源",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+     {
+      "type": "Layer",
+      "id": "20180906hokkaido_epicenter",
+      "title": "震央",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_epicenter/Iburi2018EQepi.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "発生日時：　2018年9月6日3時7分<br>マグニチュード：　M6.7"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_hypo",
+      "title": "震源分布データ",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_hypo/Iburi2018EQhypo.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "このデータは、気象庁が大学や国立研究開発法人防災科学技術研究所等の関係機関から地震観測データの提供を受け、文部科学省と協力して整理したものです。<br>(平成30年9月6日に北海道で発生した地震後、同年9月11日までに起きたマグニチュード２以上の地震の震源分布データ)"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_faultmodel",
+      "title": "震源断層モデル",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_faultmodel/IburiEQ_FaultModel.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "平成30年9月6日に北海道で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<a target=\"_blank\" href=\"http://www.gsi.go.jp/cais/topic180912-index.html\">詳しい解説</a>"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_scale_line",
+      "title": "深さ（３Ｄ表示用）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_scale_line/scale.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": ""
+     }
+     ]
      },
     {
      "type": "LayerGroup",
