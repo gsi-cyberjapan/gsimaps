@@ -14,7 +14,7 @@
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
-          "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数年代の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -25,7 +25,7 @@
           "minZoom": 14,
           "maxZoom": 18,
           "maxNativeZoom": 11,
-          "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18で表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　2007年～</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#ffd045\">■</span>　2004年～（簡易空中写真）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>　国土画像情報<br>　　（第四期：1988年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18でおおよその範囲を表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　電子国土基本図（オルソ画像）<br>　　（2007年～）</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#800000\">■</span>　森林（国有林）の空中写真（林野庁）<br>　　（2011年4月～2015年11月）</li><li><span style=\"font-size:x-large; color:#ff7f00\">■</span>　簡易空中写真<br>　　（2004年～）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>国土画像情報<br>　　（第四期：1988年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
