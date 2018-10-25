@@ -57,7 +57,7 @@
           "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 5,
-          "html": "<div class=\"gsi_layerinfo_title\">2004年～（簡易空中写真）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_index.html\">航空レーザ測量</a>の点検用に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">2004年～（簡易空中写真）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_index.html\">航空レーザ測量</a>等の点検用に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
