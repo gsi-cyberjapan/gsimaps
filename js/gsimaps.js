@@ -36262,9 +36262,34 @@ GSI.DEMLoader = L.Evented.extend( {
 			}
 			
 		}
-		
-		if ( this._demData ) hasErrorPixel = false;
-		
+		if ( this._demData ) {
+            hasErrorPixel = false;
+            
+            for( var i=0; i<demData.length; i++ ) {
+                if ( demData[i] == null ) {
+                    hasErrorPixel = true;
+                    break;
+                }
+            }
+            if ( hasErrorPixel ) {
+                hasErrorPixel = false;
+                var complementList = $.extend( true,[], this._urlList );
+                
+                for ( var i=0; i<complementList.length; i++ ) {
+                    if ( complementList[i].url == targetUrl.url &&
+                            complementList[i].minZoom == targetUrl.minZoom &&
+                            complementList[i].maxZoom == targetUrl.maxZoom ) {
+                        complementList.splice( i, 1 );
+                        if ( complementList.length > 0 ) {
+                            targetUrl.complementList = complementList;
+                            hasErrorPixel = true;
+                        }
+                        break;
+                    }
+                        
+                }
+            }
+		}
 		this._demData = demData;
 		
 		
