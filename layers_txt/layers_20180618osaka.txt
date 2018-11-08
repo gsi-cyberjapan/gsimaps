@@ -1,6 +1,17 @@
 {
   "layers": [
     {
+      "type": "Layer",
+      "id": "20180618osaka_epicenter",
+      "title": "震央",
+      "url": "https://maps.gsi.go.jp/xyz/20180618osaka_epicenter/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "平成30年(2018年)6月18日7時58分に発生した、大阪府北部を震源とする地震の震央<br>(平成30年6月18日10時00分　気象庁発表)"
+    },
+    {
       "type": "LayerGroup",
       "title": "活断層図",
       "toggleall": false,
@@ -8,12 +19,12 @@
         {
           "type": "Layer",
           "id": "_afm20160414",
-          "title": "活断層図",
+          "title": "活断層図（都市圏活断層図）",
           "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
           "cocotile": true,
           "maxZoom": 16,
           "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
-          "html": "<div class=\"gsi_layerinfo_title\">活断層図</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
