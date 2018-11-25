@@ -924,6 +924,13 @@
 					latlngPoint.lat, 
 					latlngPoint.lng, 
 					latlngPoint.h);
+
+				//length of vertical				
+				var imageHeight = Math.floor(oGeo3DData.length / 16);
+				if ((oGeo3DData.length % 16) > 0){
+					imageHeight += 1;
+				}
+				imageHeight *= 32;
 				
 				var texture = null;// THREE.ImageUtils.loadTexture( IconTexture );
 				var iconScale = oGeo3DData[i].properties._iconScale;
@@ -939,9 +946,9 @@
 				var material = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false,transparent:true, depthWrite:true } );
 				var img = new Image();
 				img.style.width = 512;
-				img.style.height = 512;
+				img.style.height = imageHeight;
 				img.width = 512;
-				img.height = 512;
+				img.height = imageHeight;
 				img._material = material;
 				img._iconNo = iconNo;
 				img._iconSize = iconSize;
@@ -951,10 +958,10 @@
 					var imagecanvas = document.createElement('canvas');
 
 					imagecanvas.width = 512;
-					imagecanvas.height = 512;
+					imagecanvas.height = imageHeight;
 					var imagecontext = imagecanvas.getContext('2d');
 					
-					imagecontext.drawImage( this, 0, 0, 512, 512 );
+					imagecontext.drawImage( this, 0, 0, 512, imageHeight );
 					
 					//for( var i=0; i<iconArr.length; i++ )
 					{

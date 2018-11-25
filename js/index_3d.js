@@ -5015,7 +5015,13 @@ function Draw3DGEOData()
 					{
 						oIconTextureCanvas = document.createElement('canvas');
 						oIconTextureCanvas.width = 512;
-						oIconTextureCanvas.height = 512;
+						var cHeight = Math.floor(oGeo3DData.length / 16);
+						if ((oGeo3DData.length % 16) > 0){
+							cHeight += 1;
+						}
+						cHeight *= 32;
+						oIconTextureCanvas.height = cHeight;
+						//oIconTextureCanvas.height = 512;
 					}
 					var destX = ( (this._iconNo % 16 ) * 32 );
 					var destY = ( Math.floor(this._iconNo / 16) * 32 );
