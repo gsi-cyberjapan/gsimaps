@@ -438,6 +438,19 @@ function InitGet(){
 		bFaceTransparent = ( ret["b"] == 1 ? true : false );
 		bDisplayInfo = ( ret["dd"] == 1 ? true : false );
 		
+		if ( ret["w"] != "" ) {
+			ret["w"] = parseInt( ret["w"] );
+			if ( ret["w"] % 2 != 0 ) {
+				ret["w"] --;
+			}
+		}
+		if ( ret["h"] != "" ) {
+			ret["h"] = parseInt( ret["h"] );
+			if ( ret["h"] % 2 != 0 ) {
+				ret["h"] --;
+			}
+		}
+		
 		var reliefData = (  ret["relief"]  ?GSI3D.ReliefTileLayer.decodeElevationDataText( ret["relief"] ) : "" );
 		freeReliefTileDrawer.setElevationData( reliefData );
 		if ( freeReliefTileDrawer.getElevationData().useHillshademap )
