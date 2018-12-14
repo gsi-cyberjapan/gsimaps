@@ -6326,7 +6326,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	},
 	_makeToolTip : function( item )
 	{
-		var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} ).attr({"id":"layerinfodiv"});
+		var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} ).attr({"id":"layerInfoDivLt"});
 
 		var legend = null;
 		var description = null;
@@ -6438,8 +6438,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				var tp = this.offsetTop;
 				var newlf = lf;
 				var newtp = tp;
-				var descel = $("#layerinfodiv > .description")[0];
-				var th = $("#layerinfodiv > #toolTipTitle")[0];
+				var descel = $("#layerInfoDivLt > .description")[0];
+				var th = $("#layerInfoDivLt > #toolTipTitle")[0];
 				var em = 5;
 
 				if (ss.w < (lf + ww)){
@@ -10402,11 +10402,14 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 	},
 	_makeToolTip : function( item )
 	{
-		var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} );
+		var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} ).attr({"id":"layerInfoDivVl"});
 
 		var legend = null;
 		var description = null;
 
+		if (item.title){
+			infoFrame.append( $( '<div>' ).css( {"font-weight":"bold"} ).html( item.title ).attr({"id":"toolTipTitle"}) );
+		}
 		if ( item.legendUrl && item.legendUrl != '')
 		{
 			legend =$( '<a>' ).html( '凡例を表示' ).addClass( 'legend' ).attr( { 'href' : item.legendUrl, 'target' : '_blank' } );
@@ -10511,8 +10514,8 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 				var tp = this.offsetTop;
 				var newlf = lf;
 				var newtp = tp;
-				var descel = $("#layerinfodiv > .description")[0];
-				var th = $("#layerinfodiv > #toolTipTitle")[0];
+				var descel = $("#layerInfoDivVl > .description")[0];
+				var th = $("#layerInfoDivVl > #toolTipTitle")[0];
 				var em = 5;
 
 				if (ss.w < (lf + ww)){
