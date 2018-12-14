@@ -6327,7 +6327,6 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 	_makeToolTip : function( item )
 	{
 		var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} ).attr({"id":"layerinfodiv"});
-		//var infoFrame = $( '<div>' ).addClass( 'layerinfo' ).css({"max-width":"350px"} );
 
 		var legend = null;
 		var description = null;
@@ -6441,7 +6440,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 				var newtp = tp;
 				var descel = $("#layerinfodiv > .description")[0];
 				var th = $("#layerinfodiv > #toolTipTitle")[0];
-				var em = 5;//margin of edge
+				var em = 5;
 
 				if (ss.w < (lf + ww)){
 					newlf = lf + (ss.w - (lf + ww)) - em;
@@ -6498,16 +6497,6 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 		else
 		{
 			this._hideItemTooltip();
-		}
-	},
-	_fadeInCallback : function(offset, anchor, element){
-		var mtw = element.outerWidth(true);
-		var mth = element.outerHeight(true);
-
-		if (this._itemTooltip){
-			//this._itemTooltip.css({left:mtw-(mtw/2) + "px"});
-			this._itemTooltip.stop().hide();
-			//alert("hoge");
 		}
 	},
 	_hideItemTooltip : function( a, item )
@@ -10524,7 +10513,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 				var newtp = tp;
 				var descel = $("#layerinfodiv > .description")[0];
 				var th = $("#layerinfodiv > #toolTipTitle")[0];
-				var em = 5;//margin of edge
+				var em = 5;
 
 				if (ss.w < (lf + ww)){
 					newlf = lf + (ss.w - (lf + ww)) - em;
