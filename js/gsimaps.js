@@ -24733,14 +24733,18 @@ GSI.MapToImage = L.Evented.extend( {
 			
 			var url = this.src.replace(/cyberjapandata.gsi.go.jp/, "maps.gsi.go.jp");
 		
+			
 			if(url.indexOf('//maps.gsi.go.jp/') != -1)
 			{
 				url=url.replace('https://','//');
 				url=url.replace('http://','//');
+				//this.src = url;
 			}
-			/*
-			this.src = "../test/proxy.aspx?url=http:"+url;
 			
+			
+			this.src = url; //"../test/proxy.aspx?url=http:"+url;
+			//console.log( url );
+			/*
 			if ( !CONFIG.ISPREVIEWSITE )
 			{
 				this.src = "../test/proxy.aspx?url=http:"+url;
@@ -25841,7 +25845,6 @@ GSI.MapToImage.VectorTileLayer = L.Evented.extend( {
 		
 		if ( !layer._parts ) 
 		{
-				
 			if ( layer._radius && layer._point )
 			{
 				var p = layer._point;
@@ -27195,8 +27198,11 @@ GSI.MapTpImageAreaSelectDialog = GSI.Dialog.extend( {
 		}
 		
 		
-		for( var i=0; i<this._gsimaps._sakuzuList.getLength(); i++ )
+		//for( var i=0; i<this._gsimaps._sakuzuList.getLength(); i++ )
+		for( var i=this._gsimaps._sakuzuList.getLength()-1; i>=0; i-- )
 		{
+			if( this._gsimaps._sakuzuList.get(i)._visible == false ) continue;
+			
 			list.push( {
 					type : "geojson",
 					layer : this._gsimaps._sakuzuList.get(i)._layer,
