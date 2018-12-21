@@ -16218,7 +16218,7 @@ GSI.MapLayerList = L.Evented.extend( {
 				var KARI=this;
 				jConfirm("赤色立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。赤色立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。", 'ご利用上の注意', function(r) {
 					if(r) {
-						KARI.append(info, noFinishMove, isHide ,1);
+						KARI.append(info, noFinishMove, isHide ,1, blend);
 					}
 				});
 				return;
