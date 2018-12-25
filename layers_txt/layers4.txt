@@ -49,7 +49,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_eq_201411nagano.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_201411nagano.txt"
                 },
                 {
                   "type": "Layer",
@@ -3074,7 +3074,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_tokachidake.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_tokachidake.txt"
                 },
                 {
                   "type": "Layer",
@@ -3108,7 +3108,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_azumayama.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_azumayama.txt"
                 },
                 {
                   "type": "Layer",
@@ -3179,7 +3179,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asamayama.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_asamayama.txt"
                 },
                 {
                   "type": "Layer",
@@ -3203,7 +3203,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_hakoneyama.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_hakoneyama.txt"
                 },
                 {
               "type": "Layer",
@@ -3229,6 +3229,96 @@
             },
             {
               "type": "LayerGroup",
+              "title": "伊豆大島",
+              "toggleall": false,
+              "entries": [
+            {
+              "type": "Layer",
+              "id": "vbm",
+              "title": "火山基本図",
+              "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 17,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_meakan\">雌阿寒岳</option><option value=\"l_vbm_tokachi\">十勝岳</option><option value=\"l_vbm_tarumae\">樽前山</option><option value=\"l_vbm_usu\">有珠山</option><option value=\"l_vbm_hokkaidokoma\">北海道駒ヶ岳</option><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_iwate\">岩手山</option><option value=\"l_vbm_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbm_chokai\">鳥海山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_azuma\">吾妻山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_kusatsushirane\">草津白根山</option><option value=\"l_vbm_asama\">浅間山</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_izuoshima\">伊豆大島</option><option value=\"l_vbm_miyake\">三宅島</option><option value=\"l_vbm_ontake\">御獄山</option><option value=\"l_vbm_tsurumi\">鶴見岳</option><option value=\"l_vbm_kujyu\">くじゅう連山</option><option value=\"l_vbm_aso\">阿蘇山</option><option value=\"l_vbm_unzen\">雲仙岳</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option><option value=\"l_vbm_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+        {
+          "type": "Layer",
+          "id": "vlcd",
+          "title": "火山土地条件図",
+          "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">火山土地条件図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+                {
+                  "type": "Layer",
+                  "id": "oosima_taisakuzu",
+                  "title": "火山災害対策用図「伊豆大島」",
+                  "url": "https://maps.gsi.go.jp/xyz/kazantaisaku_ooshima/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/kazantaisaku_ooshima.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図「伊豆大島」</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">火山災害対策用図<br>航空レーザ測量データを基に作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "oosimared",
+                  "title": "赤色立体地図（伊豆大島）",
+                  "url": "https://maps.gsi.go.jp/xyz/ooshimared/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "三宅島",
+              "toggleall": false,
+              "entries": [
+            {
+              "type": "Layer",
+              "id": "vbm",
+              "title": "火山基本図",
+              "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 17,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_meakan\">雌阿寒岳</option><option value=\"l_vbm_tokachi\">十勝岳</option><option value=\"l_vbm_tarumae\">樽前山</option><option value=\"l_vbm_usu\">有珠山</option><option value=\"l_vbm_hokkaidokoma\">北海道駒ヶ岳</option><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_iwate\">岩手山</option><option value=\"l_vbm_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbm_chokai\">鳥海山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_azuma\">吾妻山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_kusatsushirane\">草津白根山</option><option value=\"l_vbm_asama\">浅間山</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_izuoshima\">伊豆大島</option><option value=\"l_vbm_miyake\">三宅島</option><option value=\"l_vbm_ontake\">御獄山</option><option value=\"l_vbm_tsurumi\">鶴見岳</option><option value=\"l_vbm_kujyu\">くじゅう連山</option><option value=\"l_vbm_aso\">阿蘇山</option><option value=\"l_vbm_unzen\">雲仙岳</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option><option value=\"l_vbm_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+                {
+                  "type": "Layer",
+                  "id": "miyakejima_taisakuzu",
+                  "title": "火山災害対策用図「三宅島」",
+                  "url": "https://maps.gsi.go.jp/xyz/kazantaisaku_miyakejima/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/kazantaisaku_miyakejima.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図「三宅島」</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">火山災害対策用図<br>航空レーザ測量データを基に作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "miyakejimared",
+                  "title": "赤色立体地図（三宅島）",
+                  "url": "https://maps.gsi.go.jp/xyz/sekisyokurittai_miyakejima/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+
+            {
+              "type": "LayerGroup",
               "title": "御嶽山",
               "toggleall": false,
               "entries": [
@@ -3236,7 +3326,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_ontakesan.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_ontakesan.txt"
                 },
                 {
                   "type": "LayerGroup",
@@ -3382,7 +3472,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_asosan.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_asosan.txt"
                 },
                 {
                   "type": "Layer",
@@ -3569,7 +3659,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kirishimayama.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_kirishimayama.txt"
                 },
                 {
           "type": "LayerGroup",
@@ -3629,7 +3719,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_sakurajima.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_sakurajima.txt"
                 },
                 {
                   "type": "Layer",
@@ -3736,7 +3826,7 @@
                   "type": "LayerGroup",
                   "title": "SAR解析結果(ALOS-2)",
                   "toggleall": false,
-                  "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
                 },
                 {
                   "type": "LayerGroup",
