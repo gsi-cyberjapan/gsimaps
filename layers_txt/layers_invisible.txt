@@ -26,6 +26,22 @@
     },
     {
       "type": "Layer",
+      "id": "dem5a_png",
+      "title": "標高タイル（基盤地図情報数値標高モデル）PNG（DEM5A）",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
+      "id": "dem5b_png",
+      "title": "標高タイル（基盤地図情報数値標高モデル）PNG（DEM5B）",
+      "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+      "minZoom": 15,
+      "maxZoom": 15
+    },
+    {
+      "type": "Layer",
       "id": "demgm_png",
       "title": "標高タイル（地球地図全球版標高第2版）PNG",
       "url": "https://maps.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
@@ -44,7 +60,7 @@
     {
       "type": "Layer",
       "id": "dem5a",
-      "title": "標標高タイル5a",
+      "title": "標高タイル5a",
       "url": "https://maps.gsi.go.jp/xyz/dem5a/{z}/{x}/{y}.txt",
       "minZoom": 15,
       "maxZoom": 15
