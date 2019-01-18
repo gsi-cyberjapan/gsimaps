@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "平成31年口永良部島火山活動",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers_20190117kuchinoerabu.txt"
+     }
+            ]
+}
