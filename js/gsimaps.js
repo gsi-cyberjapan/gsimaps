@@ -12365,6 +12365,12 @@ GSI.HashOptions = L.Class.extend( {
 				    hash += "&" + v;
 				}
 				
+				// 情報リスト設定：表示階層を共有
+				// lcd2=
+				v = this._gsimaps._pageStateManager.getCurrentPathQueryString2();
+				if(v != ""){
+					hash += "&" + v;
+				}
 				
 			}
 			
@@ -18621,6 +18627,13 @@ GSI.PageStateManager = L.Class.extend( {
 	{
 		var path = this._layerTreeDialog.getCurrentPath();
 		return ( path && path != '' ? 'lcd=' + encodeURIComponent( path ) : '' );
+	},
+	getCurrentPathQueryString2 : function()
+	{
+		if ( !this._gsimaps._subMap ) return "";
+
+		var path = this._gsimaps._subMap._layerTreeDialog.getCurrentPath();
+		return ( path && path != '' ? 'lcd2=' + encodeURIComponent( path ) : '' );
 	},
 	getBaseLayerQueryString : function()
 	{
