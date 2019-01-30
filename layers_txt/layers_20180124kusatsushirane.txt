@@ -56,14 +56,37 @@
     },
     {
       "type": "Layer",
+      "id": "20190121_olsorittai_kusatsushiranesan",
+      "title": "平成30年1月23日噴火後のオルソ立体地図（本白根山周辺および白根山北西部）",
+      "url": "https://maps.gsi.go.jp/xyz/20190121_olsorittai_kusatsushiranesan/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "legendUrl": "",
+      "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>オルソ立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20190121_sekisyokurittai_kusatsushiranesan",
+      "title": "平成30年1月23日噴火後の赤色立体地図（本白根山周辺および白根山北西部）",
+      "url": "https://maps.gsi.go.jp/xyz/20190121_sekisyokurittai_kusatsushiranesan/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "legendUrl": "",
+      "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
       "id": "20180130_kusatsushiranesan_sekishokurittai",
-      "title": "赤色立体地図（本白根山周辺）",
+      "title": "平成30年1月23日噴火前の赤色立体地図（本白根山周辺）",
       "url": "https://maps.gsi.go.jp/xyz/20180130_kusatsushiranesan_sekishokurittai/{z}/{x}/{y}.png",
       "cocotile": true,
       "minZoom": 3,
       "maxZoom": 18,
       "legendUrl": "",
-      "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"    },
+      "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
     {
       "type": "Layer",
       "id": "20180226_kusatsushiranesan_suiteikakouichi",
