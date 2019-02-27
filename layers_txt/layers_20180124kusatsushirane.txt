@@ -56,6 +56,17 @@
     },
     {
       "type": "Layer",
+      "id": "H30-H27_tikeihenka_kusatsushiranesan",
+      "title": "平成30年1月23日噴火前後の地形変化量図（本白根山周辺）",
+      "url": "https://maps.gsi.go.jp/xyz/H30-H27_tikeihenka_kusatsushiranesan/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "legendUrl": "https://maps.gsi.go.jp/legend/H30-H27_tikeihenka_kusatsushiranesan.JPG",
+      "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は平成30年1月23日噴火前後の航空レーザ測量データを基に算出した地形変化量です。<br>噴火前：平成27年計測<br>噴火後：平成30年計測</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
       "id": "20190121_olsorittai_kusatsushiranesan",
       "title": "平成30年1月23日噴火後のオルソ立体地図（本白根山周辺および白根山北西部）",
       "url": "https://maps.gsi.go.jp/xyz/20190121_olsorittai_kusatsushiranesan/{z}/{x}/{y}.png",
