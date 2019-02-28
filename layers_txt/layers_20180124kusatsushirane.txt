@@ -62,8 +62,7 @@
       "cocotile": true,
       "minZoom": 2,
       "maxZoom": 18,
-      "legendUrl": "https://maps.gsi.go.jp/legend/H30-H27_tikeihenka_kusatsushiranesan.JPG",
-      "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は平成30年1月23日噴火前後の航空レーザ測量データを基に算出した地形変化量です。<br>噴火前：平成27年計測<br>噴火後：平成30年計測</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+      "html": "<table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は平成30年1月23日噴火前後の航空レーザ測量データを基に算出した地形変化量です。<br>噴火前：平成27年計測<br>噴火後：平成30年計測</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/H30-H27_tikeihenka_kusatsushiranesan.JPG\" alt=\"凡例\"></td></tr></table>"
     },
     {
       "type": "Layer",
