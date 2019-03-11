@@ -27,6 +27,18 @@
                  "maxNativeZoom": 2
                 },
                 {
+                 "type": "Layer",
+                 "id": "southpole_cp",
+                 "title": "南極の基準点",
+                 "url": "https://maps.gsi.go.jp/xyz/southpole_cp/{z}/{x}/{y}.geojson",
+                 "cocotile": false,
+                 "styleurl": "https://maps.gsi.go.jp/xyz/southpole_cp/style.js",
+                 "html": "雪や氷に覆われていない岩場に金属標等を設置し、緯度・経度・高さなどの位置情報を測量で求めた点です。地図をはじめとする南極の地理空間情報の位置の基準になっています。より詳細な情報は、<a href=\"http://www.gsi.go.jp/antarctic/07.html\" target=\"_blank\">国土地理院の「南極の地理空間情報」ページ</a>をご覧ください。",
+                 "minZoom": 2,
+                 "maxZoom": 18,
+                 "maxNativeZoom": 2
+                },
+                {
                  "type": "LayerGroup",
                  "title": "1:2,500　東オングル島地形図",
                  "id": "southpole_2500",
