@@ -40,24 +40,24 @@
                 },
                 {
                  "type": "LayerGroup",
-                 "title": "1:2,500　東オングル島地形図",
-                 "id": "southpole_2500",
+                 "title": "1:2,500　南極地形図",
+                 "id": "southpole_2500_2",
                  "toggleall": true,
                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
                   "entries": [
                    {
                     "type": "Layer",
-                    "id": "_southpole_2500",
-                    "title": "1:2,500　東オングル島地形図",
-                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500/{z}/{x}/{y}.png",
+                    "id": "_southpole_2500_2",
+                    "title": "1:2,500　南極地形図",
+                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_2/{z}/{x}/{y}.png",
                     "cocotile": false,
                     "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
                     },
                     {
                     "type": "Layer",
-                    "id": "_southpole_2500_spec",
-                    "title": "1:2,500　東オングル島地形図整備範囲",
-                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec/{z}/{x}/{y}.geojson",
+                    "id": "_southpole_2500_spec_2",
+                    "title": "1:2,500　南極地形図整備範囲",
+                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
                     "cocotile": false,
                     "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
                     "maxNativeZoom": 2,
@@ -67,78 +67,24 @@
                 },
                 {
                  "type": "LayerGroup",
-                 "title": "1:2,500　西オングル島北東地形図",
-                 "id": "westongul_2500",
-                 "toggleall": true,
-                 "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
-                  "entries": [
-                   {
-                   "type": "Layer",
-                   "id": "_westongul_2500",
-                   "title": "1:2,500　西オングル島北東地形図",
-                   "url": "https://maps.gsi.go.jp/xyz/westongul_2500/{z}/{x}/{y}.png",
-                   "cocotile": false,
-                   "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
-                   },
-                   {
-                  "type": "Layer",
-                  "id": "_westongul_2500_spec",
-                  "title": "1:2,500　西オングル島北東地形図整備範囲",
-                  "url": "https://maps.gsi.go.jp/xyz/westongul_2500_spec/{z}/{x}/{y}.geojson",
-                  "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
-                    "maxNativeZoom": 2,
-                    "maxZoom": 13
-                   }
-                   ]
-                },
-                {
-                 "type": "LayerGroup",
-                 "title": "1:2,500　東オングル島写真図",
-                 "id": "southpole_2500_ort",
+                 "title": "1:2,500　南極写真図",
+                 "id": "southpole_2500_ort_2",
                  "toggleall": true,
                  "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
                   "entries": [
                     {
                     "type": "Layer",
-                    "id": "_southpole_2500_ort",
-                    "title": "1:2,500　東オングル島写真図",
-                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_ort/{z}/{x}/{y}.png",
+                    "id": "_southpole_2500_ort_2",
+                    "title": "1:2,500　南極写真図",
+                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_ort_2/{z}/{x}/{y}.png",
                     "cocotile": false,
                     "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
                     },
                     {
                     "type": "Layer",
-                    "id": "_southpole_2500_spec",
-                    "title": "1:2,500　東オングル島写真図整備範囲",
-                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec/{z}/{x}/{y}.geojson",
-                    "cocotile": false,
-                    "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
-                    "maxNativeZoom": 2,
-                    "maxZoom": 13
-                    }
-                    ]
-                    },
-                {
-                 "type": "LayerGroup",
-                 "title": "1:2,500　西オングル島北東写真図",
-                 "id": "westongul_2500_ort",
-                 "toggleall": true,
-                 "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
-                  "entries": [
-                   {
-                    "type": "Layer",
-                    "id": "_westongul_2500_ort",
-                    "title": "1:2,500　西オングル島北東写真図",
-                    "url": "https://maps.gsi.go.jp/xyz/westongul_2500_ort/{z}/{x}/{y}.png",
-                    "cocotile": false,
-                    "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
-                   },
-                   {
-                    "type": "Layer",
-                    "id": "_westongul_2500_spec",
-                    "title": "1:2,500　西オングル島北東写真図整備範囲",
-                    "url": "https://maps.gsi.go.jp/xyz/westongul_2500_spec/{z}/{x}/{y}.geojson",
+                    "id": "_southpole_2500_spec_2",
+                    "title": "1:2,500　南極写真図整備範囲",
+                    "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
                     "cocotile": false,
                     "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
                     "maxNativeZoom": 2,
