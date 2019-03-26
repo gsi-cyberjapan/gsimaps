@@ -1,0 +1,153 @@
+{
+  "layers": [
+     {
+      "type": "LayerGroup",
+      "title": "地形等を活用した地理教育ネタ帳",
+      "toggleall": false,
+      "entries": [
+            {
+              "type": "Layer",
+              "id": "history",
+              "title": "歴史と地理地形",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/807.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/history/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">歴史と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+            {
+              "type": "Layer",
+              "id": "river",
+              "title": "川と地理地形",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/river/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">川と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+            {
+              "type": "Layer",
+              "id": "volcano",
+              "title": "火山と地理地形",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/volcano/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+              {
+              "type": "Layer",
+              "id": "literary",
+              "title": "文学と地理地形",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/808.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/literary/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">文学と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+              {
+              "type": "Layer",
+              "id": "geo",
+              "title": "いろいろな地理地形",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/geo/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">いろいろな地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+              {
+              "type": "Layer",
+              "id": "map-symbol",
+              "title": "地図記号を読む",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/520.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/map-symbol/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 15,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">地図記号を読む</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              }
+      ]
+     },
+     {
+      "type": "LayerGroup",
+      "title": "【地理教育支援】被災状況の空中写真・UAVによる動画",
+      "toggleall": false,
+      "entries": [
+            {
+              "type": "Layer",
+              "id": "movie-earthquake",
+              "title": "地震",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/300.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-earthquake/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">地震</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+            {
+              "type": "Layer",
+              "id": "movie-flood",
+              "title": "台風・豪雨等",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/435.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-flood/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">台風・豪雨等</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              },
+            {
+              "type": "Layer",
+              "id": "movie-volcano",
+              "title": "火山活動",
+              "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/447.png",
+              "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-volcano/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "subdmains":"",
+              "attribution":"",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">火山活動</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              }
+      ]
+     }
+ ]
+}

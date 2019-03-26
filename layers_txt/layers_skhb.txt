@@ -1,0 +1,92 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "指定緊急避難場所",
+      "open": false,
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "skhb01",
+          "title": "洪水",
+          "url": "https://maps.gsi.go.jp/xyz/skhb01/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した洪水に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb02",
+          "title": "崖崩れ、土石流及び地滑り",
+          "url": "https://maps.gsi.go.jp/xyz/skhb02/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した崖崩れ、土石流及び地滑りに対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb03",
+          "title": "高潮",
+          "url": "https://maps.gsi.go.jp/xyz/skhb03/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した高潮に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb04",
+          "title": "地震",
+          "url": "https://maps.gsi.go.jp/xyz/skhb04/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した地震に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb05",
+          "title": "津波",
+          "url": "https://maps.gsi.go.jp/xyz/skhb05/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した津波に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb06",
+          "title": "大規模な火事",
+          "url": "https://maps.gsi.go.jp/xyz/skhb06/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した大規模な火事に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div><span style='font-weight:bold'>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span style='font-weight:bold'>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span style='font-weight:bold'>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb07",
+          "title": "内水氾濫",
+          "url": "https://maps.gsi.go.jp/xyz/skhb07/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した内水氾濫に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb08",
+          "title": "火山現象",
+          "url": "https://maps.gsi.go.jp/xyz/skhb08/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した火山現象に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        }
+      ]
+    }
+  ]
+}

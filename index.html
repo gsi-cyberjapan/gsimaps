@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
+
+  <title>地理院地図</title>
+
+  <link rel="stylesheet" href="js.lib/leaflet-1.2.0/leaflet.css" />
+  <script type="text/javascript" src="js.lib/leaflet-1.2.0/leaflet.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css" />
+  <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.qrcode/jquery.qrcode.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.csv/jquery.csv.min.js"></script>
+
+  <link rel="stylesheet" href="./js.lib/jquery/jquery.alerts.css" type="text/css" media="all" />
+  <script type="text/javascript" src="./js.lib/jquery/jquery.alerts.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/jquery.simple-color-picker.css" />
+  <script type="text/javascript" src="./js.lib/jquery/colorpicker/jquery.simple-color-picker.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/colorpicker/js/colorpicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/css/colorpicker.css" />
+  <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
+  <script type="text/javascript" src="js.lib/OSGeo/proj4js-combined.js"></script>
+
+
+  <script type="text/javascript" src="js.lib/geotiff.browserify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.label/leaflet.label-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.label/leaflet.label.js"></script>
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Sync/L.Map.Sync.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Geodesic/Leaflet.Geodesic.js"></script>
+
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/html2canvas.js"></script>
+  <script type="text/javascript" src="js.lib/encoding/encoding.js"></script>
+  <script type="text/javascript" src="js.lib/NoSleep/NoSleep.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="./css/gsimaps.css" />
+  <script type="text/javascript" src="js/gsimaps.js"></script>
+
+  
+  <script type="text/javascript" src="js/muni.js"></script>
+  <script type="text/javascript" src="js/jiki.js"></script>
+  <script type="text/javascript">
+    GSI.GLOBALS.isCreditShow = true;
+  </script>
+
+  <noscript>
+    <div class="noscript">
+      JavaScriptを有効にしてご覧ください。
+    </div>
+  </noscript>
+</head>
+
+<body>
+  <div id="header" class="logo_s">
+    <div class="logoarea">
+    </div>
+
+    <div class="magnifyingglass">
+      <img name="magnifyimage" id="magnifyimage" src="./image/system/search.png" />
+    </div>
+    <form name="search_f" id="search_f" autocomplete="off">
+      <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
+    </form>
+
+    <div class="help">
+      <a id="title_twitter" href="javascript:void(0);"></a>
+      <a id="title_facebook" href="javascript:void(0);"></a>
+      <a id="title_bookmark" href="javascript:void(0);"></a>
+      <a id="title_help" onclick="HelpButton()">?</a>
+    </div>
+  </div>
+
+  <div id="topmessage"></div>
+  <div id="map"></div>
+
+  <div class="gsi_footer gsi_footer_template">
+    <a class="btn" href="javascript:void(0);"></a>
+    <div class="item_frame item_start"><span class="heading">住所:</span><span class="address">----</span><span class="mini_comment">（付近の住所。正確な所属を示すとは限らない。）</span></div>
+    <div class="item_frame latlng"><span class="latlng_60">----</span></div>
+    <div class="item_frame latlng"><span class="latlng_10">----</span>&nbsp;&nbsp;<span class="heading">ズーム:</span><span
+        class="current_zoom"></span></div>
+    <div class="item_frame"><span class="heading">UTMポイント：</span><span class="utm_point">----</span></div>
+    <div class="item_frame"><span class="heading">標高：</span><span class="elevation">----</span><span class="elevationSrc mini_comment_elev"></span></div>
+    <div class="item_frame" style="display:none;"><span class="heading">全国最新写真(シームレス)撮影期間：</span><span class="seamlessinfo">----</span></div>
+
+    <a href="https://maps.gsi.go.jp/help/howtouse.html#h2-3" class="normalbutton footer_description_btn" target="_blank">表示値の説明</a>
+  </div>
+
+
+  <div id="help">
+
+    <div class="help_content" style="text-align:center" title="地理院地図とは">
+      <h1 style="font-size:120%;line-height: 130%;">地形図、写真、標高、地形分類、災害情報など、日本の国土の様子を発信しているウェブ地図です。</h1>
+      <img src="./image/help/help_0.jpg" style="width:100%;max-width:700px">
+      <hr>
+      <div style="text-align:left;">
+        <p>関連リンク集</p>
+        <div title="地理院地図ヘルプ" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="https://maps.gsi.go.jp/help/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/help_icon.png" style="width:20px;vertical-align:middle;margin:3px">地理院地図ヘルプ</a>
+        </div>
+        <div title="データのご利用について" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="https://maps.gsi.go.jp/help/use.html" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/use_icon.png" style="width:20px;vertical-align:middle;margin:3px">データのご利用について</a>
+        </div>
+        <div title="地理院地図Twitter" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="https://twitter.com/gsi_cyberjapan" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/twitter.png" style="width:20px;vertical-align:middle;margin:3px">地理院地図Twitter</a>
+        </div>
+        <div title="情報普及課GitHub" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="https://github.com/gsi-cyberjapan" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/github.png" style="width:20px;vertical-align:middle;margin:3px">情報普及課GitHub</a>
+        </div>
+        <div title="パートナーネットワーク" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="https://maps.gsi.go.jp/pn/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/partner_icon.png" style="width:20px;vertical-align:middle;margin:3px">パートナーネットワーク</a>
+        </div>
+        <div title="国土地理院トップページ" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="http://www.gsi.go.jp/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img
+              src="./image/help/gsi_top.png" style="width:20px;vertical-align:middle;margin:3px">国土地理院トップページ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="help_content" style="text-align:center" title="最新の道路や鉄道が載っている！">
+      <h1 style="font-size:120%;line-height: 130%;">主要な道路や鉄道は、供用開始日に地図に反映しています。</h1>
+      <img src="./image/help/help_chizu.jpg" style="width:65%;max-width:400px">
+    </div>
+
+    <div class="help_content" style="text-align:center" title="様々な情報が見られる！">
+      <h1 style="font-size:120%;line-height: 130%;">地形図、写真、地形分類、災害情報など、多数のレイヤが収録されています。</h1>
+      <img src="./image/help/help_data.jpg" style="width:90%;max-width:600px">
+    </div>
+
+    <div class="help_content" style="text-align:center" title="昔の写真が見られる！">
+      <h1 style="font-size:120%;line-height: 130%;">年代別の写真をご覧いただけます。</h1>
+      <img src="./image/help/help_photo.jpg" style="width:100%;max-width:700px">
+      <hr>
+      <div style="text-align:left">
+        <p>写真を見る</p>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#7/35.371135/138.713379/&base=std&ls=std%7C_ort&disp=11&lcd=_ort&vs=c1j0l0u0f0&d=vl" onclick="GSI.HelpDialog.hide();">2007年～</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#7/35.371135/138.713379/&base=std&ls=std%7Cairphoto&disp=11&lcd=airphoto&vs=c1j0l0u0f0&d=vl"
+            onclick="GSI.HelpDialog.hide();">2004年～（簡易空中写真）</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#10/35.703032/139.820251/&base=std&ls=std%7Cgazo4&disp=11&lcd=gazo4&vs=c1j0l0u0f0&d=vl" onclick="GSI.HelpDialog.hide();">1988年～1990年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#10/35.703032/139.820251/&base=std&ls=std%7Cgazo3&disp=11&lcd=gazo3&vs=c1j0l0u0f0&d=vl" onclick="GSI.HelpDialog.hide();">1984年～1987年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#10/35.703032/139.820251/&base=std&ls=std%7Cgazo2&disp=11&lcd=gazo2&vs=c1j0l0u0f0&d=vl" onclick="GSI.HelpDialog.hide();">1979年～1983年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#10/35.703032/139.820251/&base=std&ls=std%7Cgazo1&disp=11&lcd=gazo2&vs=c1j0l0u0f0&d=vl" onclick="GSI.HelpDialog.hide();">1974年～1978年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#7/35.703032/139.820251/&base=std&ls=std%7Cort_old10&disp=11&lcd=ort_old10&vs=c1j0l0u0f0&d=vl"
+            onclick="GSI.HelpDialog.hide();">1961年～1969年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#7/35.703032/139.820251/&base=std&ls=std%7Cort_USA10&disp=11&lcd=ort_USA10&vs=c1j0l0u0f0&d=vl"
+            onclick="GSI.HelpDialog.hide();">1945年～1950年</a>
+        </div>
+        <div title="写真を見る" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+          <a href="./#7/35.703032/139.820251/&base=std&ls=std|ort_riku10&blend=0&disp=11&lcd=ort_riku10&vs=c1j0l0u0t0z0r0f0&d=vl"
+            onclick="GSI.HelpDialog.hide();">1936年頃</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="help_content" style="text-align:center" title="標高を表示">
+      <h1 style="font-size:120%;line-height: 130%;">知りたい場所の標高を確認することができます。</h1>
+      <img src="./image/help/help_elev.jpg" style="width:100%;max-width:400px">
+    </div>
+
+    <div class="help_content" style="text-align:center" title="３Ｄでも見られる！">
+      <h1 style="font-size:120%;line-height: 130%;">様々な情報を３Ｄにして見ることができます。</h1>
+      <img src="./image/help/help_3d.jpg" style="width:100%;max-width:600px">
+    </div>
+
+    <div class="help_content" style="text-align:center" title="スマホでワンタッちず！">
+      <h1 style="font-size:120%;line-height: 130%;">スマホの待受画面に地理院地図のアイコンを登録できます。</h1>
+      <img src="./image/help/help_smp.jpg" style="width:100%;max-width:400px">
+      <a href="http://www.gsi.go.jp/johofukyu/johofukyu40004.html" target="_blank"><img src="./image/help/help_smp_b.jpg"
+          style="width:100%;max-width:400px"></a>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

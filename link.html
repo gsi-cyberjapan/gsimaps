@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
+
+  <title>外部サイトにリンクしています。</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  #headerArea {
+    width: 100%;
+    position: relative;
+    margin-bottom: 7px;
+    overflow: hidden;
+    border-bottom: 2px solid #ddd;
+  	height:85px;
+  }
+  #headerArea .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  div#container {
+    padding: 0px 30px 0px;
+  }
+  .h1_titleBox {
+    border-bottom: solid 4px #3b7097;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+  }
+  h1.h1_normal {
+    background: url(https://maps.gsi.go.jp/help/css/css_image/h1_right.gif) repeat-y right 0px;
+    border-top: solid 1px #d7d7d7;
+    border-bottom: solid 1px #d7d7d7;
+    padding: 0 10px;
+    font-size: 130%;
+    color: #002647;
+  }
+  h1.h1_normal span {
+    background: url(https://maps.gsi.go.jp/help/css/css_image/h1_left.gif) no-repeat 0 5px;
+    display: block;
+    padding: 8px 0 2px 20px;
+  }
+  .h2_titleBox {
+    background: #f7fafc url(https://maps.gsi.go.jp/help/css/css_image/h2.gif) repeat-x 0 0;
+    border: 1px solid#d7d7d7;
+    margin: 0 0 10px;
+    padding: 5px;
+  }
+  h2.h2_normal {
+    border-left: solid 3px #3b7097;
+    padding: 3px 3px 2px 6px;
+    color: #002647;
+    font-size: 110%;
+  }
+  .base_txt {
+    line-height: 175%;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  </style>
+</head>
+
+<body>
+<div id="headerArea">
+	<div class="logo" id="top">
+		<a href="http://www.gsi.go.jp/"><img src="https://maps.gsi.go.jp/help/css/css_image/gsi_logo.gif" alt="国土交通省 国土地理院" width="530" height="85"></a>
+	</div>
+</div>
+<div id="container">
+  <div class="h1_titleBox">
+  <h1 class="h1_normal"><span>ご確認</span></h1>
+  </div>
+  
+  <div class ="base_txt">
+    5秒後に外部のウェブサイトに移動します。
+    自動的に移動しない場合は下記URLをクリックしてください。
+  </div>
+
+  <div class ="base_txt">
+    <script type="text/javascript">
+
+    var sites = {
+      "mapion" : {
+        "url" : 'http://www.mapion.co.jp/m2/{lat},{lng},{z}'
+      },
+      "itsumonavi" : {
+        "url" : "http://www.its-mo.com/z-{lat}-{lng}-{z}.htm"
+      }
+    };
+
+
+    var url = window.location.href;
+
+    var m= url.match( /site=([^&]+)/i );
+
+    if ( m ) {
+      var site = sites[m[1]];
+      var lat= url.match( /lat=([0-9.]+)/i );
+      var lng= url.match( /lng=([0-9.]+)/i );
+      var z= url.match( /z=([0-9.]+)/i );
+      if (site && lat && lng && z ) {
+        var siteUrl = site.url;
+
+        siteUrl = siteUrl.replace("{lat}", lat[1]);
+        siteUrl = siteUrl.replace("{lng}", lng[1]);
+        siteUrl = siteUrl.replace("{z}", z[1]);
+        document.write( '<a class="link" href="' + siteUrl + '">' + siteUrl + '</a>');
+        setTimeout( function(){
+          location.href = siteUrl;
+        }, 5000);
+      }
+    }
+
+
+    </script>
+  </div>
+
+  <div>
+    <div class="h2_titleBox">
+    <h2 class="h2_normal">ご注意</h2>
+    </div>
+    <div class ="base_txt">
+    リンク先のウェブサイトは、国土地理院のウェブサイトではなく、国土地理院の管理下にはないものです。<br>
+    リンク先のウェブサイトについては、リンク先の組織・団体等にご確認ください。
+    </div>
+  </div>
+
+
+</div>
+</body>
+
+</html>

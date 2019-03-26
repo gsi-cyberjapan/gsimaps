@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="shortcut icon" href="https://cyberjapandata.gsi.go.jp/favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="地形図、写真、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。">
+
+    <title>地理院地図</title>
+
+    <script type="text/javascript">
+        var vURL      = "/*url*/";
+        var vURL_Site = "/*url_site*/";
+        var oMap      = null;        
+        function Init(){
+            oMap = document.createElement("iframe");
+            oMap.style.display = "none";
+            oMap.src = vURL + vURL_Site;
+            oMap.onload = function(){
+                var oContent   = oMap.contentWindow;
+                var ClientMode = {
+                  baseUrl     : null
+                , location    : null
+                , LayerJS     : null
+                , sakuzuList  : null
+                , queryString : null
+                };
+
+                /*INSERT-SCRIPT*/
+
+                oContent.postMessage(ClientMode, vURL);
+  
+                EvtResize();
+            };
+
+            document.body.appendChild(oMap);
+        };
+
+        function EvtResize(){
+	        var w = window.innerWidth;
+	        var h = window.innerHeight;
+            if(oMap != null){
+                oMap.style.width   = w + "px";
+                oMap.style.height  = h + "px";
+                if(oMap.style.display == "none"){
+                    oMap.style.display = "block";
+                }
+            }
+        };
+
+        window.onload   = function(){
+            document.body.style.margin   = "0px";
+            document.body.style.padding  = "0px";
+            document.body.style.overflow = "hidden";
+
+            Init();
+        }
+        window.onresize = EvtResize;
+    </script>
+</head>
+<body></body>
+</html>

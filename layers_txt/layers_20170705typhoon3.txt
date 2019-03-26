@@ -1,0 +1,436 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0802dol",
+          "title": "空中写真（東峰地区）（7/30,31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0802dol/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月30日、31日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "LayerGroup",
+          "id": "20170705typhoon3_dol_all",
+          "title": "統合版",
+          "toggleall": false,
+          "html": "この統合版は空中写真（7/13撮影）から作成した正射画像上に、地方整備局ヘリ画像（7/7,8,10）から作成した正射画像と地図情報（注記）を重ねたものです。<br>自動処理で作成した各正射画像を単純に重ねたものであり、構造物等の歪み、不連続等が発生している箇所があります。",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0713dol2",
+              "title": "空中写真（東峰地区）（7/13撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "html": "この正射画像は7月13日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0713dol1",
+              "title": "空中写真（朝倉地区）（7/13撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "html": "この正射画像は7月13日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0707dol",
+              "title": "ヘリ撮影画像（7/7撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0707dol/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "html": "この正射画像は7月7日に九州地方整備局ヘリ（はるかぜ号）で撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0708dol1",
+              "title": "ヘリ撮影画像（7/8撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0708dol1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "html": "この正射画像は7月8日に地方整備局ヘリ（はるかぜ号、愛らんど号）が撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0710dol",
+              "title": "ヘリ撮影画像（7/10撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0710dol/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "html": "この正射画像は7月10日に四国地方整備局ヘリ（愛らんど号）が撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_anno",
+              "title": "地図情報（注記）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+            }
+          ]
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0713dol2",
+          "title": "空中写真（東峰地区）（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol2/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月13日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0713dol1",
+          "title": "空中写真（朝倉地区）（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月13日に撮影した空中写真を用いています。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0710dol",
+          "title": "ヘリ撮影画像（7/10撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0710dol/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月10日に四国地方整備局ヘリ（愛らんど号）が撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0708dol1",
+          "title": "ヘリ撮影画像（7/8撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0708dol1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月8日に地方整備局ヘリ（はるかぜ号、愛らんど号）が撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0707dol3",
+          "title": "UAV撮影画像（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0707dol3/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月7日に国土地理院ランドバードが撮影したUAV画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0707dol",
+          "title": "ヘリ撮影画像（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0707dol/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "html": "この正射画像は7月7日に九州地方整備局ヘリ（はるかぜ号）で撮影した画像を用いています。<br>画像から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "垂直写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0801suichoku2",
+          "title": "ヘリ撮影画像（8/1 16-18時撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0801suichoku2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "この垂直写真は8月1日に九州地方整備局ヘリ（はるかぜ号）で撮影した画像を用いています。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0801suichoku1",
+          "title": "ヘリ撮影画像（8/1 12-15時撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0801suichoku1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "この垂直写真は8月1日に九州地方整備局ヘリ（はるかぜ号）で撮影した画像を用いています。"
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0731suichoku",
+          "title": "東峰地区（7/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0731suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0730suichoku",
+          "title": "東峰地区（7/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0730suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0713suichoku",
+          "title": "朝倉地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0713suichoku2",
+          "title": "東峰地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713suichoku2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0713naname",
+          "title": "7/13撮影",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713naname/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0712naname",
+          "title": "7/12撮影",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0712naname/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0711naname",
+          "title": "7/11撮影",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0711naname/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20170705typhoon3_0707uav",
+      "title": "UAV動画",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0707uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "LayerGroup",
+      "title": "正射画像判読図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20170705typhoon3_0810handoku",
+          "title": "正射画像判読図（朝倉・東峰地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0810handoku/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">国土地理院が撮影した空中写真を用いて土砂崩壊地・道路損壊・鉄道損壊・洪水流到達範囲を判読</div><ol><li>この情報は、国土地理院が7月13,30,31日に撮影した空中写真から作成した正射画像及び国土交通省災害対策用ヘリコプターで7月8日に撮影した画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地・道路損壊・鉄道損壊・洪水流到達範囲を判読したものです。</li><li>現地踏査は実施していないことから、実際の崩壊、損壊又は到達箇所との相違がある場合があります。また雲やその影で判読できない箇所を範囲（黒色）で表しています。加えて、正射画像作成及び判読とも緊急的に実施したことから位置は正確でない場合もあります。</li><li>土砂崩壊地は、長さ又は幅がおおむね50m以上の急傾斜地の土砂崩壊の範囲(赤色)を表しています。崩壊地と堆積地を1つの項目にまとめて表現しています。また、保全対象との関係などから土砂災害ではないものも含まれる場合もあります。</li><li>道路の損壊は、区間（ピンク色線）であらわしています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>鉄道の損壊は、区間（紫色線）であらわしています。損壊ではなく鉄道上に土砂等が堆積している場合も含みます。</li><li>洪水流の到達は、範囲(青色)で表しています。</li><li>表示内容を予告なく修正する場合があります。また、今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年8月10日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "正射画像判読図（ヘリ画像・UAV画像）",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0710handoku",
+              "title": "日田市小野地区正射画像判読図",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0710handoku/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">国土交通省災害対策用ヘリコプターで7月7・10日に撮影した画像を用いて土砂崩壊地・道路損壊・洪水流到達範囲を判読</div><ol><li>この情報は、国土交通省災害対策用ヘリコプターで7月7・10日に撮影画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地、道路損壊及び洪水流到達範囲を判読したものです。</li><li>正射画像の作成範囲内の判読であり、また、現地踏査は実施していないことから、実際に崩壊、損壊又は到達のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、長さ又は幅がおおむね50m以上の急傾斜地の土砂崩壊の範囲(赤色)を表しています。土砂崩壊地は、保全対象との関係などから土砂災害ではないものも含まれる場合もあります。</li><li>道路の損壊は、区間（ピンク色線）であらわしています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>洪水流の到達範囲(青色)で表しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月13日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0711handoku1",
+              "title": "赤谷川・大肥川地区正射画像判読図",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0711handoku1/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">国土交通省災害対策用ヘリコプターで7月8日に撮影した画像を用いて土砂崩壊地・道路損壊・鉄道損壊・洪水流到達範囲を判読</div><ol><li>この情報は、国土交通省災害対策用ヘリコプターで7月8日に撮影画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地・道路損壊・鉄道損壊・洪水流到達範囲を判読したものです。</li><li>正射画像の作成範囲内の判読であり、また、現地踏査は実施していないことから、実際に崩壊、損壊又は到達のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、長さ又は幅がおおむね50m以上の急傾斜地の土砂崩壊の範囲(赤色)を表しています。土砂崩壊地は、保全対象との関係などから土砂災害ではないものも含まれる場合もあります。</li><li>道路の損壊は、区間（ピンク色線）であらわしています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>鉄道の損壊は、区間（紫色線）であらわしています。損壊ではなく鉄道上に土砂等が堆積している場合も含みます。</li><li>洪水流の到達範囲(青色)で表しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月13日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0711handoku2",
+              "title": "朝倉市黒川馬場地区正射画像判読図",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0711handoku2/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">国土交通省災害対策用ヘリコプターで7月8日に撮影した画像を用いて土砂崩壊地・道路損壊・洪水流到達範囲を判読</div><ol><li>この情報は、国土交通省災害対策用ヘリコプターで7月8日に撮影画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地、道路損壊及び洪水流到達範囲を判読したものです。</li><li>正射画像の作成範囲内の判読であり、また、現地踏査は実施していないことから、実際に崩壊、損壊又は到達のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、長さ又は幅がおおむね50m以上の急傾斜地の土砂崩壊の範囲(赤色)を表しています。土砂崩壊地は、保全対象との関係などから土砂災害ではないものも含まれる場合もあります。</li><li>道路の損壊は、区間（ピンク色線）であらわしています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>洪水流の到達範囲(青色)で表しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月13日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20170705typhoon3_0712handoku",
+              "title": "朝倉市須川地区正射画像判読図",
+              "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0712handoku/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">国土交通省災害対策用ヘリコプター及び国土地理院UAV（ドローン）で7月7～8日に撮影した画像を用いて土砂崩壊地・道路損壊・洪水流到達範囲を判読</div><ol><li>この情報は、国土交通省災害対策用ヘリコプター及び国土地理院UAV（ドローン）で7月7～8日に撮影画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地、道路損壊及び洪水流到達範囲を判読したものです。</li><li>正射画像の作成範囲内の判読であり、また、現地踏査は実施していないことから、実際に崩壊、損壊又は到達のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、長さ又は幅がおおむね50m以上の急傾斜地の土砂崩壊の範囲(赤色)を表しています。土砂崩壊地は、保全対象との関係などから土砂災害ではないものも含まれる場合もあります。</li><li>道路の損壊は、区間（ピンク色線）であらわしています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>洪水流の到達範囲(青色)で表しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月13日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "流木堆積箇所判読図",
+      "toggleall": false,
+      "entries": [
+        {
+         "type": "Layer",
+         "id": "20170705typhoon3_handoku_r2",
+         "title": "流木堆積箇所判読図（朝倉・東峰地区）",
+         "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_handoku_r2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 18,
+         "maxNativeZoom": 2,
+         "html": "<div class=\"gsi_layerinfo_title\">7月13日に撮影した空中写真を用いて流木堆積箇所を判読</div><ol><li>この情報は、7月13日に撮影した空中写真から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる流木堆積箇所を判読したものです。</li><li>現地踏査は実施していないことから、実際に流木堆積のあった箇所でも把握できていない部分があります。また、水面に集積している流木についても取得しています。</li><li>流木堆積箇所は、おおむね20m四方以上を占める範囲（橙色）を示しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月21日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+         "type": "Layer",
+         "id": "20170705typhoon3_handoku_r",
+         "title": "流木堆積箇所（ヘリ画像・UAV画像）",
+         "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_handoku_r/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 18,
+         "maxNativeZoom": 2,
+         "html": "<div class=\"gsi_layerinfo_title\">国土交通省災害対策用ヘリコプター及び国土地理院UAV（ドローン）で7月7日～10日に撮影した画像を用いて流木堆積箇所を判読</div><ol><li>この情報は、国土交通省災害対策用ヘリコプター及び国土地理院UAV（ドローン）で7月7日～10日に撮影画像から作成した正射画像に基づき、平成29年7月九州北部豪雨により生じたと考えられる流木堆積箇所を判読したものです。</li><li>正射画像の作成範囲内の判読であり、また、現地踏査は実施していないことから、実際に流木堆積のあった箇所でも把握できていない部分があります。</li><li>流木堆積箇所は、おおむね20m四方以上を占めるものを黄丸で示しています。流木堆積箇所の形状を表現しているわけではありません。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月11日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20170705typhoon3_handoku",
+      "title": "UAV動画判読図",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_handoku/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">UAV動画(7/7-8撮影)を用いた土砂崩壊地及び道路損壊の判読</div><ol><li>この情報は国土地理院が7月7－8日に撮影したUAV動画から、平成29年7月九州北部豪雨により生じたと考えられる土砂崩壊地及び道路の損壊を判読したものです。</li><li>UAV動画で撮影されている範囲内の判読であり、また現地踏査は実施していないことから、実際に崩壊・損壊のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は長さ、幅ともにおおむね10m以上の急傾斜地の土砂崩壊を赤丸で表しています。土砂崩壊地の形状を表現しているわけではありません。</li><li>土砂崩壊地は、保全対象との関係などから土砂災害ではないものも含まれる場合があります。</li><li>道路の損壊は、区間(ピンク線)で表しています。損壊ではなく道路上に土砂等が堆積している場合も含みます。</li><li>今後の降雨等により状況が変化する可能性があります。</li></ol><div>平成29年7月9日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20170705typhoon3_digiele",
+      "title": "デジタル標高地形図<br>【東峰村及び久大本線橋脚流出箇所周辺】",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_digiele/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 16,
+      "legendUrl": "https://maps.gsi.go.jp/legend/saigai_0707_legend.png",
+      "html": "基盤地図情報の数値標高モデルを使用して作成"
+    },
+    {
+      "type": "Layer",
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "cocotile": true,
+      "minZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数年代の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "seamlessphoto_spec",
+      "title": "┗全国最新写真（シームレス）撮影期間",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 14,
+      "maxNativeZoom": 11,
+      "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18で表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　2007年～</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#ffd045\">■</span>　2004年～（簡易空中写真）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>　国土画像情報<br>　　（第四期：1988年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "experimental_anno",
+      "title": "地図情報（注記）",
+      "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 15,
+      "maxZoom": 18,
+      "maxNativeZoom": 15,
+      "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "治水地形分類図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "lcmfc2",
+          "title": "更新版(2007～2014年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2014年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "lcmfc1",
+          "title": "初版(1976～1978年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

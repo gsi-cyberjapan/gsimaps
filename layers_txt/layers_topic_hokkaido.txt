@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "平成30年北海道胆振東部地震",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers_20180906hokkaido.txt"
+     }
+            ]
+}

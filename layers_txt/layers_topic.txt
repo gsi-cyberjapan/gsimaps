@@ -1,0 +1,156 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "relief",
+      "title": "色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "maxZoom": 18,
+      "maxNativeZoom": 15,
+      "legendUrl": "https://maps.gsi.go.jp/legend/attension_relief.html",
+      "html": "<div class=\"gsi_layerinfo_title\">色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "活断層図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "afm",
+          "title": "活断層図（都市圏活断層図）",
+          "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "maxZoom": 16,
+          "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+          "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000153506.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "afm_spec",
+          "title": "諸元情報",
+          "url": "https://maps.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "地下の断層モデル<br>(表示後、[機能]→[3D]で断層の3D表示)",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20161228ibaraki_faultmodel",
+          "title": "平成28年茨城県北部の地震の<br>震源断層モデル",
+          "url": "https://maps.gsi.go.jp/overlay/161228ibaraki/20161228ibaraki_faultmodel.kml",
+          "minZoom": 2,
+          "maxZoom": 16,
+          "html": "平成28年12月28日、茨城県北部で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000150905.pdf\">解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "20161021tottori_faultmodel",
+          "title": "平成28年鳥取県中部の地震の<br>震源断層モデル",
+          "url": "https://maps.gsi.go.jp/overlay/161021tottori/20161021tottori_faultmodel.kml",
+          "minZoom": 2,
+          "maxZoom": 16,
+          "html": "平成28年10月21日、鳥取県中部で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000147191.pdf\">解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_faultmodel",
+          "title": "平成28年熊本地震の震源断層モデル",
+          "url": "https://maps.gsi.go.jp/overlay/160414kumamoto/20160414kumamoto_faultmodel.kml",
+          "minZoom": 3,
+          "maxZoom": 12,
+          "html": "平成28年4月14日・16日、熊本県で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000140781.pdf\">解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_shinou_all",
+          "title": "平成28年熊本地震の震源分布データ",
+          "url": "https://maps.gsi.go.jp/overlay/160414kumamoto/20160414kumamoto_shinou_all.kml",
+          "minZoom": 2,
+          "maxZoom": 12,
+          "html": "このデータは、気象庁が大学や国立研究開発法人防災科学技術研究所等の関係機関から地震観測データの提供を受け、文部科学省と協力して整理したものです。<br><br><div class=\"gsi_layerinfo_title\">平成28年4月14日に熊本県で発生した地震において、発生後１週間以内に起きたマグニチュード４以上の震源分布データ</div><br><table border=\"1\" cellspacing=\"0\" bordercolor=\"#000000\"><tr><td>大きさ</td><td>マグニチュード</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\" width=\"20\" height=\"20\"></td><td>４以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"30\" height=\"30\"></td><td>５以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"40\" height=\"40\"></td><td>６以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"50\" height=\"50\"></td><td>７以上</td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "201508sakurajima_faultmodel",
+          "title": "平成27年桜島の火山活動に伴う地殻変動",
+          "url": "https://maps.gsi.go.jp/overlay/1508sakurajima/201508sakurajima_faultmodel.kml",
+          "minZoom": 2,
+          "maxZoom": 16,
+          "html": "平成27年8月15日の桜島の火山活動において、SAR（だいち2号）、国土地理院及び気象庁のGNSSで観測された地殻変動から推定した変動源モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/cais/topic150818-index.html\">解説</a>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "アナグリフ・陰影起伏図・傾斜量図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "anaglyphmap_color",
+          "title": "アナグリフ（カラー）",
+          "url": "https://maps.gsi.go.jp/xyz/anaglyphmap_color/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">アナグリフ（カラー）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/anaglyphmap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "anaglyphmap_gray",
+          "title": "アナグリフ（グレー）",
+          "url": "https://maps.gsi.go.jp/xyz/anaglyphmap_gray/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">アナグリフ（グレー）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/anaglyphmap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "hillshademap",
+          "title": "陰影起伏図",
+          "url": "https://maps.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">陰影起伏図</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/hillshademap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "slopemap",
+          "title": "傾斜量図",
+          "url": "https://maps.gsi.go.jp/xyz/slopemap/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 3,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">傾斜量図</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "slopezone1map",
+          "title": "全国傾斜量区分図（雪崩関連）",
+          "url": "https://maps.gsi.go.jp/xyz/slopezone1map/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 3,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">全国傾斜量区分図（雪崩関連）</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

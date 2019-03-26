@@ -1,0 +1,29 @@
+[
+	{
+		"url":"./layers1.txt"
+	},
+	{
+		"url":"./layers2.txt"
+	},
+	{
+		"url":"./layers3.txt"
+	},
+	{
+		"url":"./layers4.txt"
+	},
+	{
+		"url":"./layers_skhb.txt"
+	},
+	{
+		"url":"./layers_antarctic.txt"
+	},	
+	{
+		"url":"./layers_topic_chirikyoiku.txt"
+	},
+	{
+		"url":"./layers5.txt"
+	},
+	{
+		"url":"./layers_experimental.txt"
+	}
+]

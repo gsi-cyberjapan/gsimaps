@@ -1,0 +1,156 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "ベクトルタイル提供実験",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "experimental_rdcl",
+          "title": "地図情報（道路中心線）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_rdcl/{z}/{x}/{y}.geojson",
+          "styleurl" : "https://maps.gsi.go.jp/xyz/experimental_rdcl/style_canvas.js",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_railcl",
+          "title": "地図情報（鉄道中心線）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_railcl/{z}/{x}/{y}.geojson",
+          "styleurl" : "https://maps.gsi.go.jp/xyz/experimental_railcl/style_canvas.js",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_rvrcl",
+          "title": "地図情報（河川中心線）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_rvrcl/{z}/{x}/{y}.geojson",
+          "styleurl" : "https://maps.gsi.go.jp/xyz/experimental_rvrcl/style_canvas.js",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 16,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_anno",
+          "title": "地図情報（注記）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_nrpt",
+          "title": "地名情報（居住地名）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_nrpt/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_nnfpt",
+          "title": "地名情報（自然地名）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_nnfpt/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_pfpt",
+          "title": "地名情報（公共施設）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_pfpt/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_jhj",
+          "title": "地名情報（住居表示住所）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_jhj/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 18,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "html": "ズーム18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_jhj_index",
+          "title": "┗住居表示住所の提供範囲",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_jhj_area/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "ズーム5～18で表示します。<br>ピンク色で塗りつぶされた部分以外には住居表示住所データはございません。<br>なお、この住居表示住所データの範囲は目安であり厳密なデータ範囲とは一致しませんのでご留意ください。"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_fgd",
+          "title": "基盤地図情報_基本項目",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_fgd/{z}/{x}/{y}.geojson",
+          "styleurl" : "https://maps.gsi.go.jp/xyz/experimental_fgd/style_canvas.js",
+          "cocotile": true,
+          "minZoom": 17,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "html": "ズーム17～18で表示します。現在のところ、点及び線のデータ（測量の基準点,標高点,街区の代表点,町字の代表点,行政区画代表点,海岸線,等高線,水部構造物線,水涯線,道路縁,道路構成線,軌道の中心線,建築物の外周線,街区線,町字界線,行政区画界）を提供実験しています。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_dem10b",
+          "title": "基盤地図情報_数値標高モデル(10m)",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_dem10b/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 18,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "html": "ズーム18で表示します。基盤地図情報数値標高モデル10mメッシュDEMです。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_landformclassification1",
+          "title": "地形分類（自然地形）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_landformclassification2",
+          "title": "地形分類（人工地形）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+        }
+      ]
+    }
+  ]
+}

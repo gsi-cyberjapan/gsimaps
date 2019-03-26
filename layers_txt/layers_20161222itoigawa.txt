@@ -1,0 +1,15 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "20161222itoigawa_area",
+      "title": "大火被災エリア",
+      "url": "https://maps.gsi.go.jp/xyz/20161222itoigawa_area/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "糸魚川市の地図情報サービス（<a href='http://itoigawa.geogeo.jp/maps?mode=theme&lid=6&mid=22' target='_blank'>eマップいといがわ</a>)の掲載にされている情報を参考に国土地理院が作成したものです。この情報は、概ねの位置を表示しており、正確な位置、範囲、境界などを保証するものではありません。"
+    }
+  ]
+}

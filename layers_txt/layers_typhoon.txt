@@ -1,0 +1,16 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "平成29年7月22日からの梅雨前線に伴う大雨",
+      "toggleall": false,
+      "src": "./layers_20170722akita.txt"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "平成29年7月九州北部豪雨",
+      "toggleall": false,
+      "src": "./layers_20170705typhoon3.txt"
+    }
+  ]
+}

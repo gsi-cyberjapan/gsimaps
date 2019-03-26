@@ -1,0 +1,1161 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+      {
+      "type": "LayerGroup",
+      "title": "統合版",
+      "id": "201807H3007gouu_ort",
+      "toggleall": true,
+      "html": "この統合版は空中写真（7/9～7/19撮影）から作成した正射画像上に地図情報（注記）を重ねたものです。<br>自動処理で作成した各正射画像を単純に重ねたものであり、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。",
+      "entries": [
+          {
+          "type": "Layer",
+          "id": "experimental_anno",
+          "title": "地図情報（注記）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 15,
+          "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_iwakuni_0719do",
+          "title": "岩国地区（7/19撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0709do",
+          "title": "高梁川地区（7/9撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0711do",
+          "title": "高梁川地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0712do",
+          "title": "高梁川地区（7/12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_fukuyamahokubu_0718do",
+          "title": "福山北部地区（7/18撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyamahokubu_0718do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_fukuyama_0713do",
+          "title": "福山地区（7/13,16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月13日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharahokubu_0715do",
+          "title": "三原北部地区（7/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharaonomichi_0713do",
+          "title": "三原尾道地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharaonomichi_0715do",
+          "title": "三原尾道地区（7/15,16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月15日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_takeharamihara_0712do",
+          "title": "竹原三原地区（7/10,11,12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月10日～12日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_higashihiroshima_0710do",
+          "title": "東広島地区（7/10,11,14撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0710do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月10日・11日・14日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_kuretoubu_0713do",
+          "title": "呉東部地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_kuretoubu_0715do",
+          "title": "呉東部地区（7/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+         {
+          "type": "Layer",
+          "id": "201807H3007gouu_sakachou_0711do",
+          "title": "広島坂町地区（7/9,11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月9日及び7月11日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+         {
+          "type": "Layer",
+          "id": "201807H3007gouu_etajima_0716do",
+          "title": "江田島地区（7/16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_etajima_0716do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+         },
+         {
+          "type": "Layer",
+          "id": "201807H3007gouu_ozu_0711do",
+          "title": "大洲地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_hijikawa_0718do",
+          "title": "肱川地区（7/18撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_uwajima_0711do",
+          "title": "宇和島地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }
+          ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "高梁川地区（岡山県倉敷市・総社市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0709do",
+          "title": "高梁川地区（7/9撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0711do",
+          "title": "高梁川地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_0712do",
+          "title": "高梁川地区（7/12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]},
+       {
+        "type": "LayerGroup",
+        "title": "福山北部地区（広島県福山市・岡山県井原市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_fukuyamahokubu_0718do",
+          "title": "福山北部地区（7/18撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyamahokubu_0718do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         }
+       ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "福山地区（広島県福山市）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_fukuyama_0713do",
+          "title": "福山地区（7/13,16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月13日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "三原北部地区（広島県三原市・府中市など）",
+        "toggleall": false,
+        "entries": [
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharahokubu_0715do",
+          "title": "三原北部地区（7/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "三原尾道地区（広島県三原市・尾道市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharaonomichi_0713do",
+          "title": "三原尾道地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_miharaonomichi_0715do",
+          "title": "三原尾道地区（7/15,16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月15日及び7月16日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "竹原三原地区（広島県竹原市・三原市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takeharamihara_0712do",
+          "title": "竹原三原地区（7/10,11,12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月10日～12日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "東広島地区（広島県広島市安芸区・東広島市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_higashihiroshima_0710do",
+          "title": "東広島地区（7/10,11,14撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0710do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月10日・11日・14日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "呉東部地区（広島県呉市・東広島市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kuretoubu_0713do",
+          "title": "呉東部地区（7/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により正射画像が作成できない箇所や地上が見えにくい場合があります。"
+        },
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kuretoubu_0715do",
+          "title": "呉東部地区（7/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0715do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "広島坂町地区（広島県広島市・坂町など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_sakachou_0711do",
+          "title": "広島坂町地区（7/9,11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "7月9日及び7月11日に撮影した写真を使用して作成した正射画像です。<br>写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "江田島地区（広島県江田島市）",
+        "toggleall": false,
+        "entries": [
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_etajima_0716do",
+          "title": "江田島地区（7/16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_etajima_0716do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "岩国地区（山口県岩国市・周南市など）",
+        "toggleall": false,
+        "entries": [
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_iwakuni_0719do",
+          "title": "岩国地区（7/19撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "大洲地区（愛媛県大洲市・西予市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_ozu_0711do",
+          "title": "大洲地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]},
+      {
+        "type": "LayerGroup",
+        "title": "肱川地区（愛媛県大洲市）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_hijikawa_0718do",
+          "title": "肱川地区（7/18撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+         }]},
+      {
+        "type": "LayerGroup",
+        "title": "宇和島地区（愛媛県宇和島市など）",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_uwajima_0711do",
+          "title": "宇和島地区（7/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。"
+        }]}
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "垂直写真",
+      "toggleall": false,
+      "entries": [
+      {
+        "type": "LayerGroup",
+        "title": "高梁川地区（岡山県倉敷市・総社市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takahashigawa_0709suichoku",
+            "title": "高梁川地区（7/9撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takahashigawa_0711suichoku",
+            "title": "高梁川地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takahashigawa_0712suichoku",
+            "title": "高梁川地区（7/12撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "福山北部地区（広島県福山市・岡山県井原市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_fukuyamahokubu_0718suichoku",
+            "title": "福山北部地区（7/18撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyamahokubu_0718suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "福山地区（広島県福山市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_fukuyama_0713suichoku",
+            "title": "福山地区（7/13撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_fukuyama_0716suichoku",
+            "title": "福山地区（7/16撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0716suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "三原北部地区（広島県三原市・府中市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharahokubu_0715suichoku",
+            "title": "三原北部地区（7/15撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "三原尾道地区（広島県三原市・尾道市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharaonomichi_0713suichoku",
+            "title": "三原尾道地区（7/13撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharaonomichi_0715suichoku",
+            "title": "三原尾道地区（7/15撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0715suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_miharaonomichi_0716suichoku",
+            "title": "三原尾道地区（7/16撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0716suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "竹原三原地区（広島県竹原市・三原市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takeharamihara_0710suichoku",
+            "title": "竹原三原地区（7/10撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0710suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takeharamihara_0711suichoku",
+            "title": "竹原三原地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_takeharamihara_0712suichoku",
+            "title": "竹原三原地区（7/12撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "東広島地区（広島県広島市安芸区・東広島市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_higashihiroshima_0710suichoku",
+            "title": "東広島地区（7/10撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0710suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_higashihiroshima_0711suichoku",
+            "title": "東広島地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_higashihiroshima_0714suichoku",
+            "title": "東広島地区（7/14撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0714suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "呉東部地区（広島県呉市・東広島市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kuretoubu_0713suichoku",
+            "title": "呉東部地区（7/13撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kuretoubu_0715suichoku",
+            "title": "呉東部地区（7/15撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0715suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "広島坂町地区（広島県広島市・坂町など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_sakachou_0709suichoku",
+            "title": "広島坂町地区（7/9撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0709suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_sakachou_0711suichoku",
+            "title": "広島坂町地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲が写っている写真は掲載しておりません。また、雲の影響により地上が見えにくい場合があります。"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "江田島地区（広島県江田島市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_etajima_0716suichoku",
+            "title": "江田島地区（7/16撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_etajima_0716suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": ""
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "岩国地区（山口県岩国市・周南市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_iwakuni_0719suichoku",
+            "title": "岩国地区（7/19撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "大洲地区（愛媛県大洲市・西予市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_ozu_0711suichoku",
+            "title": "大洲地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "肱川地区（愛媛県大洲市）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_hijikawa_0718suichoku",
+            "title": "肱川地区（7/18撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+           }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "宇和島地区（愛媛県宇和島市など）",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_uwajima_0711suichoku",
+            "title": "宇和島地区（7/11撮影）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711suichoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 18,
+            "maxNativeZoom": 2,
+            "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "崩壊地等分布図",
+      "toggleall": false,
+      "entries": [
+      {
+            "type": "Layer",
+            "id": "201807H3007gouu_hiroshima_hokaihandoku",
+            "title": "広島 崩壊地等",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hiroshima_hokaihandoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichipoint_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月9日から16日にかけて撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でもプロットできていない場合や、平成30年7月豪雨による崩壊地以外の箇所をプロットしている場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所を1つの項目にまとめて表現しています。崩壊地等は、長さ又は幅がおおむね50m以上のものを表しています。地形変化発生箇所の中心付近を丸で表しており、地形変化範囲を表現しているわけではありません。崩壊地上に樹冠が重なり複数箇所に分かれて視認される場合は複数プロットしている場合があります。<br>3.崩壊地の位置を把握するための資料で、人家等に被害の無い箇所もプロットしています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      },
+      {
+            "type": "Layer",
+            "id": "201807H3007gouu_hiroshimatobu_hokaihandoku",
+            "title": "広島東部 崩壊地等",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hiroshimatobu_hokaihandoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichipoint_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月13日から18日にかけて撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でもプロットできていない場合や、平成30年7月豪雨による崩壊地以外の箇所をプロットしている場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所を1つの項目にまとめて表現しています。崩壊地等は、長さ又は幅がおおむね50m以上のものを表しています。地形変化発生箇所の中心付近を丸で表しており、地形変化範囲を表現しているわけではありません。崩壊地上に樹冠が重なり複数箇所に分かれて視認される場合は複数プロットしている場合があります。<br>3.崩壊地の位置を把握するための資料で、人家等に被害の無い箇所もプロットしています</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      },
+      {
+            "type": "Layer",
+            "id": "201807H3007gouu_iwakuni_hokaihandoku",
+            "title": "岩国 崩壊地等",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_hokaihandoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichipoint_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月19日に撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でもプロットできていない場合や、平成30年7月豪雨による崩壊地以外の箇所をプロットしている場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所を1つの項目にまとめて表現しています。崩壊地等は、長さ又は幅がおおむね50m以上のものを表しています。地形変化発生箇所の中心付近を丸で表しており、地形変化範囲を表現しているわけではありません。崩壊地上に樹冠が重なり複数箇所に分かれて視認される場合は複数プロットしている場合があります。<br>3.崩壊地の位置を把握するための資料で、人家等に被害の無い箇所もプロットしています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      },
+      {
+            "type": "Layer",
+            "id": "201807H3007gouu_ozuuwajima_hokaihandoku",
+            "title": "大洲・宇和島 崩壊地等",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozuuwajima_hokaihandoku/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichipoint_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月11日に撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でもプロットできていない場合や、平成30年7月豪雨による崩壊地以外の箇所をプロットしている場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所を1つの項目にまとめて表現しています。崩壊地等は、長さ又は幅がおおむね50m以上のものを表しています。地形変化発生箇所の中心付近を丸で表しており、地形変化範囲を表現しているわけではありません。崩壊地上に樹冠が重なり複数箇所に分かれて視認される場合は複数プロットしている場合があります。<br>3.崩壊地の位置を把握するための資料で、人家等に被害の無い箇所もプロットしています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      },
+      {
+            "type": "Layer",
+            "id": "201807H3007gouu_hokaichiline_1",
+            "title": "崩壊地等分布図（ライン）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hokaichiline_1/{z}/{x}/{y}.png",
+            "cocotile": true,
+            "minZoom": 2,
+            "maxZoom": 17,
+            "maxNativeZoom": 16,
+            "legendUrl": "",
+            "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichiline_legend/201807H3007gouu_hokaichiline_legend_v2.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月9日から19日にかけて撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない場合や、平成30年7月豪雨による崩壊地以外の箇所を表示している場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所の始点から到達地点を表現しています。崩壊地等は、長さがおおむね50m以上のものを表しています。確認できた地形変化発生箇所の始点付近を丸で表しており、地形変化範囲を線で表現しています<br>3.崩壊地等の位置を把握するための資料で、人家等に被害の無い箇所も表示しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+      }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "推定浸水範囲",
+      "toggleall": false,
+      "entries": [
+      {
+        "type": "LayerGroup",
+        "title": "岡山県倉敷市",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0707suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/7日中）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0707suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定したものです。実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0708suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/8 14:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0708suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土交通省災害対策用ヘリコプターが7月8日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0709suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/9 12:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0709suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土地理院が7月9日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0710suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/10 14:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0710suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土交通省災害対策用ヘリコプターが7月10日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_kurashiki_0711suiteishinsuihani",
+            "title": "岡山県倉敷市（2018/7/11 12:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0711suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土地理院が7月11日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "愛媛県大洲市",
+        "toggleall": false,
+        "entries": [
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_ozu_0707suiteishinsuihani",
+            "title": "愛媛県大洲市（2018/7/7日中）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0707suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定したものです。実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。<br>(c)国土地理院"
+          },
+          {
+            "type": "Layer",
+            "id": "201807H3007gouu_ozu_0708suiteishinsuihani",
+            "title": "愛媛県大洲市（2018/7/8 12:00時点）",
+            "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0708suiteishinsuihani/{z}/{x}/{y}.geojson",
+            "cocotile": true,
+            "minZoom": 6,
+            "maxZoom": 16,
+            "maxNativeZoom": 2,
+            "legendUrl": "",
+            "html": "推定浸水範囲<br>この情報は、国土交通省災害対策用ヘリコプターが7月8日に撮影した画像を用いて浸水範囲を判読したものです。画像の撮影範囲内の判読であること、現地踏査は実施していないことから、実際の浸水範囲との相違がある場合が有ります。<br>(c)国土地理院"
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定段彩図",
+      "toggleall": false,
+      "entries": [
+      {
+        "type": "LayerGroup",
+        "title": "速報版",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kurashiki_0707dansaizu",
+          "title": "岡山県倉敷市（7/7時点）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_0707dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定し、浸水面から水深を算出し深さごとに色別に表現しています。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_ozu_0707dansaizu",
+          "title": "愛媛県大洲市（7/7時点）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0707dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水面を推定し、浸水面から水深を算出し深さごとに色別に表現しています。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+          }
+        ]
+      },
+      {
+        "type": "LayerGroup",
+        "title": "空中写真判読版",
+        "toggleall": false,
+        "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_takahashigawa_dansaizu",
+          "title": "高梁川（岡山県倉敷市など）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月9日から18日にかけて撮影した空中写真を使用し、土砂等の痕跡から浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>空中写真の撮影範囲外は7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水範囲を推定し、同様に深さごとに色別に表現しています。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+          },
+          {
+          "type": "Layer",
+          "id": "201807H3007gouu_hijikawa_dansaizu",
+          "title": "肱川（愛媛県大洲市など）",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月11日及び18日に撮影した空中写真を使用し、土砂等の痕跡から浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"          
+          }
+         ]
+        }
+      ]
+    },
+        {
+      "type": "LayerGroup",
+      "title": "デジタル標高地形図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "201807H3007gouu_kurashiki_digital",
+          "title": "岡山県倉敷市",
+          "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kurashiki_digital/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 6,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/201807H3007gouu_kurashiki_digital.png",
+          "html": "基盤地図情報の数値標高モデルを使用して作成"
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "治水地形分類図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "_lcmfc2",
+         "title": "更新版(2007～2016年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 5,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2016年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+         "type": "Layer",
+         "id": "_lcmfc1",
+         "title": "初版(1976～1978年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+         }
+       ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "土地条件図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "_lcm25k_2012",
+         "title": "数値地図25000（土地条件）",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 4,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
+         "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+       },
+       {
+         "type": "Layer",
+         "id": "_lcm25k",
+         "title": "初期整備版",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "maxZoom": 16,
+         "legendUrl": "",
+         "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+      },
+      {
+         "type": "Layer",
+         "id": "_lcm25k_spec",
+         "title": "初期整備版 諸元情報",
+         "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
+         "cocotile": true,
+         "maxZoom": 16,
+         "legendUrl": "",
+         "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+       }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "空中写真・衛星画像",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "seamlessphoto",
+          "title": "全国最新写真（シームレス）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "seamlessphoto_spec",
+          "title": "┗全国最新写真（シームレス）撮影期間",
+          "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 14,
+          "maxZoom": 18,
+          "maxNativeZoom": 11,
+          "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18でおおよその範囲を表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　電子国土基本図（オルソ画像）<br>　　（2007年～）</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#800000\">■</span>　森林（国有林）の空中写真（林野庁）<br>　　（2011年4月～2015年11月）</li><li><span style=\"font-size:x-large; color:#ff7f00\">■</span>　簡易空中写真<br>　　（2004年～）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>国土画像情報<br>　　（第四期：1988年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_ort",
+          "title": "2007年～",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">2007年～</div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "ort_spec",
+          "title": "┗2007年～撮影期間",
+          "url": "https://maps.gsi.go.jp/xyz/ort_spec/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 14,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">2007年～撮影期間</div><div class=\"gsi_layerinfo_subtitle\">ズーム14～18で表示します。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "airphoto",
+          "title": "2004年～（簡易空中写真）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "<div class=\"gsi_layerinfo_title\">2004年～（簡易空中写真）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_index.html\">航空レーザ測量</a>の点検用等に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gazo4",
+          "title": "1988年～1990年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1988年～1990年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gazo3",
+          "title": "1984年～1987年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1984年～1987年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gazo2",
+          "title": "1979年～1983年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1979年～1983年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gazo1",
+          "title": "1974年～1978年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1974年～1978年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "ort_old10",
+          "title": "1961年～1969年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1969年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "ort_USA10",
+          "title": "1945年～1950年",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "ort_riku10",
+          "title": "1936年頃",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort_riku10/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1936年頃)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "東日本大震災後正射画像",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "toho4",
+              "title": "2013年9月～2013年12月",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+              "cocotile": true,
+              "minZoom": 5,
+              "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "toho3",
+              "title": "2012年10月～2013年5月",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+              "cocotile": true,
+              "minZoom": 5,
+              "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "toho2",
+              "title": "2011年5月～2012年4月",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+              "cocotile": true,
+              "minZoom": 5,
+              "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "toho1",
+              "title": "2011年3月～2011年4月",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+              "cocotile": true,
+              "minZoom": 5,
+              "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "Layer",
+          "id": "pp",
+          "title": "単写真",
+          "url": "https://maps.gsi.go.jp/xyz/pp/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 15,
+          "maxZoom": 18,
+          "maxNativeZoom": 14,
+          "html": "単写真（毎月更新、ズーム15～18で表示）<br>絞込み<script>var pparray = [\"pp2010\",\"pp2000\",\"pp1990\",\"pp1980\",\"pp1970\",\"pp1960\",\"pp1950\",\"pp1940\",\"pp1930\",\"pp1110\"];function ppstylein(Obj){var stylesheet = document.styleSheets.item(0);for (var i = 0; i < pparray.length; i++) {if(pparray[i]==Obj.options[Obj.selectedIndex].value || Obj.options[Obj.selectedIndex].value == \"ppall\"){if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:inline; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:inline\");}continue;}if(stylesheet.cssRules){stylesheet.insertRule(\".\"+pparray[i]+\"{ display:none; }\", stylesheet.cssRules.length);}else{stylesheet.addRule(\".\"+pparray[i],\"display:none\");}}}</script><form name=\"ppstyle\"><select name=\"ppselect\" onchange=\"ppstylein(this)\"><option value=\"ppall\">全年代</option><option value=\"pp2010\">2010年代</option><option value=\"pp2000\">2000年代</option><option value=\"pp1990\">1990年代</option><option value=\"pp1980\">1980年代</option><option value=\"pp1970\">1970年代</option><option value=\"pp1960\">1960年代</option><option value=\"pp1950\">1950年代</option><option value=\"pp1940\">1940年代</option><option value=\"pp1930\">1930年代</option><option value=\"pp1110\">不明</option></select></form><br>詳しい情報:<a href=\"http://mapps.gsi.go.jp/\" target='_blank'>地図・空中写真閲覧サービス</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "lndst",
+          "title": "全国ランドサットモザイク画像",
+          "url": "https://maps.gsi.go.jp/xyz/lndst/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">全国ランドサットモザイク画像</div><br>一部、国土地理院と東海大学との共同研究による<br><br>データソース：<br>Landsat8画像（GSI,TSIC,GEO Grid/AIST）<br>Landsat8画像（courtesy of the U.S. Geological Survey）<br>海底地形（GEBCO）"
+        },
+        {
+          "type": "Layer",
+          "id": "modis",
+          "title": "世界衛星モザイク画像",
+          "url": "https://maps.gsi.go.jp/xyz/modis/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 10,
+          "maxNativeZoom": 8,
+          "html": "<div class=\"gsi_layerinfo_title\">世界衛星モザイク画像</div><br>データソース：<br>MODIS8日間コンポジット画像<br>※MODISデータ欠損域は灰色で示しています"
+        }
+      ]
+    }
+  ]
+}
