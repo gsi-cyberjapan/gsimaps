@@ -10808,7 +10808,16 @@ GSI.DialogManager = L.Class.extend({
 
       this._container.append(this._minimizeContainer);
     }
-
+    
+    
+    //var screenWidth = this._container.outerWidth();
+    
+    if (this._marginRight) {
+      this._minimizeContainer.css( { "right": ( this._container.outerWidth() - this._marginRight ) + "px" } );
+    } else {
+      this._minimizeContainer.css( { "right": "0px" } );
+    }
+    
     this._minimizeContainer.empty();
     if (this.minimizeList.length <= 0) {
 
@@ -10933,6 +10942,7 @@ GSI.DialogManager = L.Class.extend({
       var d = this.visibleList[i];
       this.adjust(d, windowSize);
     }
+    this._refreshMinimizeButtons();
   },
 
   setMarginRight: function (right) {
@@ -10943,6 +10953,9 @@ GSI.DialogManager = L.Class.extend({
       var d = this.visibleList[i];
       this.adjust(d, windowSize);
     }
+    
+    this._refreshMinimizeButtons();
+    
   },
 
   getScreenSize: function () {
@@ -25459,7 +25472,7 @@ GSI.SakuzuListItem = L.Evented.extend({
     for (var key in styleList) {
       var styleData = styleList[key];
 
-      if (styleData.type = itemType) {
+      if (styleData.type == itemType) {
         var hit = true;
         for (var key2 in style) {
           if (styleData.style[key2] != style[key2]) {
@@ -29568,7 +29581,7 @@ GSI.ReliefTileLayer.encodeElevationData = function (data) {
   //parseInt(suji2,2);
 
 
-  var flags = (data.gradate ? "1" : "0") + (data.useHillshademap ? "1" : "0") + (data.desc ? "1" : "0");
+  var flags = (data.desc ? "1" : "0") + (data.gradate ? "1" : "0") + (data.useHillshademap ? "1" : "0");
   result = parseInt(flags, 2) + result;
   return result.toUpperCase();
 };
@@ -29581,9 +29594,9 @@ GSI.ReliefTileLayer.decodeElevationDataText = function (txt) {
     var flags = parseInt(txt.charAt(0)).toString(2);
     flags = ('000' + flags).slice(-3);
 
-    result.gradate = (flags.charAt(0) == "1" ? true : false);
-    result.useHillshademap = (flags.charAt(1) == "1" ? true : false);
-    result.desc = (flags.charAt(2) == "1" ? true : false);
+    result.desc = (flags.charAt(0) == "1" ? true : false);
+    result.gradate = (flags.charAt(1) == "1" ? true : false);
+    result.useHillshademap = (flags.charAt(2) == "1" ? true : false);
 
     txt = txt.slice(1);
 
