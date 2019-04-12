@@ -8725,7 +8725,7 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
 
 
 
-    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=40'>こちら</a>");
+    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=44'>こちら</a>");
     dd.append(div);
 
     div = $("<div>");
@@ -20937,7 +20937,7 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
 
       var url = this.getTileUrl(tilePoint2);
 
-      if (CONFIG.ISPREVIEWSITE && url.match(/^\//i)) {
+      if (CONFIG.ISPREVIEWSITE && url.match(/^\/maps.gsi.go.jp/i)) {
         url = "https:" + url;
       }
 
@@ -26269,6 +26269,7 @@ GSI.SakuzuList = L.Evented.extend({
     } else if (fileName.match(/\.csv$/i) ) {
 
       var arr = Encoding.convert(new Uint8Array(this._fileReader.result), "UNICODE", "AUTO");
+      if ( arr[0] == 65279 ) arr.splice(0,1);
       var txt = Encoding.codeToString(arr);
       this.loadFromCSV( txt, fileName );
       this.fire('load', { error: false });
@@ -26277,6 +26278,7 @@ GSI.SakuzuList = L.Evented.extend({
     try {
 
       var arr = Encoding.convert(new Uint8Array(this._fileReader.result), "UNICODE", "AUTO");
+      if ( arr[0] == 65279 ) arr.splice(0,1);
       var txt = Encoding.codeToString(arr);
       //var json = JSON.parse( this._fileReader.result);
       var json = JSON.parse(txt);
@@ -28919,9 +28921,29 @@ GSI.DEMLoader = L.Evented.extend({
     this._hillshademapImage = document.createElement('img');
     $(this._hillshademapImage)
       .on('load', L.bind(
-        function () {
+        function (coords) {
+          
+          var scale = 1, lt, rb, point;
+          if (this._coords.z != coords.z) {
+            scale = Math.pow(2, this._coords.z - coords.z);
+
+            lt = L.point(coords.x * 256 * scale, coords.y * 256 * scale);
+            rb = L.point((coords.x + 1) * 256 * scale, (coords.y + 1) * 256 * scale);
+
+            point = L.point(this._coords.x * 256, this._coords.y * 256);
+
+            point.x -= lt.x;
+            point.y -= lt.y;
+          }
+          else {
+            point = L.point(0, 0);
+          }
+          
+          this._hillshademapImage._point = point;
+          this._hillshademapImage._scale = scale;
+          
           this._hillshademapLoadSuccess();
-        }, this)
+        }, this, coords)
       )
       .on('error', L.bind(
         function (e) {
@@ -29041,7 +29063,6 @@ GSI.DEMLoader = L.Evented.extend({
   // 読み込み完了後解析
   _demLoadSuccess: function (urlList, coords, targetUrl) {
     var scale = 1, lt, rb, point, idx = 0, destIdx = 0;
-
     if (this._coords.z != coords.z) {
       scale = Math.pow(2, this._coords.z - coords.z);
 
@@ -29757,7 +29778,9 @@ GSI.ReliefTileLayer.TileDrawer = L.Class.extend({
     var destCtx = dstCanvas.getContext('2d');
     var destData = destCtx.createImageData(256, 256);
     var hillshadeData = null;
-
+    var hillshadeScale = 1;
+    var hillshadePoint = null;
+    
     if (hillshadeMapImage) {
       var hillshadeCanvas = GSI.ReliefTileLayer.TileDrawer.getCanvas();
       var hillshadeCtx = hillshadeCanvas.getContext('2d');
@@ -29765,20 +29788,30 @@ GSI.ReliefTileLayer.TileDrawer = L.Class.extend({
       hillshadeCtx.beginPath();
       hillshadeCtx.drawImage(hillshadeMapImage, 0, 0);
       hillshadeData = hillshadeCtx.getImageData(0, 0, 256, 256).data;
+      hillshadeScale = hillshadeMapImage._scale;
+      hillshadePoint = hillshadeMapImage._point;
+      
     }
 
 
-    var idx = 0, destIdx = 0, color, hillshadeColor = { r: 0, g: 0, b: 0, a: 0 };
+    var idx = 0, destIdx = 0,hillshadeIdx =0, color, hillshadeColor = { r: 0, g: 0, b: 0, a: 0 };
     for (var y = 0; y < 256; ++y) {
       for (var x = 0; x < 256; ++x) {
         color = this._hToColor(demData[idx]);
 
         if (color) {
           if (hillshadeData) {
-            hillshadeColor.r = hillshadeData[destIdx];
-            hillshadeColor.g = hillshadeData[destIdx + 1];
-            hillshadeColor.b = hillshadeData[destIdx + 2];
-            hillshadeColor.a = hillshadeData[destIdx + 3];
+            if (hillshadeScale != 1) {
+              var x2 = Math.floor((hillshadePoint.x + x) / hillshadeScale);
+              var y2 = Math.floor((hillshadePoint.y + y) / hillshadeScale);
+              hillshadeIdx = (y2 * 256 * 4) + (x2 * 4);
+            }
+            else
+              hillshadeIdx = (y * 256 * 4) + (x * 4);
+            hillshadeColor.r = hillshadeData[hillshadeIdx];
+            hillshadeColor.g = hillshadeData[hillshadeIdx + 1];
+            hillshadeColor.b = hillshadeData[hillshadeIdx + 2];
+            hillshadeColor.a = hillshadeData[hillshadeIdx + 3];
             if (hillshadeColor.a > 0) {
               destData.data[destIdx] = Math.round(color.r * (hillshadeColor.r / 255));
               destData.data[destIdx + 1] = Math.round(color.g * (hillshadeColor.g / 255));
@@ -29867,7 +29900,7 @@ GSI.ReliefTileLayer.MapToImageLayer = L.Evented.extend({
       texture.globalCompositeOperation = (this.options.blend ? "multiply" : "source-over");
 
       texture.globalAlpha = (this.options.opacity || this.options.opacity == 0.0 ? this.options.opacity : 1);
-
+      
       var pos = tile.coords;
       texture.drawImage(tile.el, pos.x * 256 - bounds.min.x, pos.y * 256 - bounds.min.y, 256, 256);
 
@@ -29929,8 +29962,9 @@ GSI.ReliefTileLayer.MapToImageLayer = L.Evented.extend({
           tile.width = 256;
           tile.height = 256;
           this._tiles[key].el = tile;
-
           this._drawer.draw(tile, req.loader.getData(), req.loader.getHillshademapImage());
+          
+          
         }
       }
       else
@@ -34305,16 +34339,24 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     var editFrame = $("<div>").css({ "margin": "4px" });
 
     var orderFrame = $("<div>"); //.css({ "padding": "4px" });
-
+    
+    if ( !GSI.EditReliefDialog._labelIdInc ) GSI.EditReliefDialog._labelIdInc = 0;
+    
+    
+    
     // 降順チェック
-    this._orderDescCheck = $("<input>").attr({ "id": "gsi-editreliefdialog-ordercheck", "type": "checkbox" }).addClass("normalcheck");
+    
+    GSI.EditReliefDialog._labelIdInc++;
+    var id = "gsi_editreliefdialog_ordercheck" + GSI.EditReliefDialog._labelIdInc;
+    
+    this._orderDescCheck = $("<input>").attr({ "id": id, "type": "checkbox" }).addClass("normalcheck");
 
     this._orderDescCheck.click(L.bind(function () {
       var data = this._makeElevationData(!this._orderDescCheck.is(":checked"));
       data.desc = this._orderDescCheck.is(":checked");
       this._refreshReriefEdit(data);
     }, this))
-    var orderLabel = $("<label>").attr({ "for": "gsi-editreliefdialog-ordercheck" }).html("降順に並べる");
+    var orderLabel = $("<label>").attr({ "for": id }).html("降順に並べる");
     orderFrame.append(this._orderDescCheck).append(orderLabel);
 
     
@@ -34334,19 +34376,26 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     var div = null;
 
     div = $("<div>").addClass("gsi_editreliefdialog_options");
+    
+    GSI.EditReliefDialog._labelIdInc++;
+    id = "gsi_editreliefdialog_gradate" + GSI.EditReliefDialog._labelIdInc;
+    
     this._gradateInput = $("<input>")
       .click(L.bind(function () {
         this._refreshGradationBar();
       }, this))
-      .addClass("normalcheck").attr({ "id": "gsi_editreliefdialog_gradate", "type": "checkbox" });
+      .addClass("normalcheck").attr({ "id": id, "type": "checkbox" });
 
-    label = $("<label>").attr({ "for": "gsi_editreliefdialog_gradate" }).html("グラデーション").css({ "font-size": "9pt" });
+    label = $("<label>").attr({ "for": id }).html("グラデーション").css({ "font-size": "9pt" });
     div.append(this._gradateInput).append(label);
     optionFrame.append(div);
 
+    GSI.EditReliefDialog._labelIdInc++;
+    id = "gsi_editreliefdialog_usehillshademap" + GSI.EditReliefDialog._labelIdInc;
+
     this._useHillshademapInput = $("<input>").addClass("normalcheck")
-      .attr({ "id": "gsi_editreliefdialog_usehillshademap", "type": "checkbox" });
-    label = $("<label>").attr({ "for": "gsi_editreliefdialog_usehillshademap" }).html("陰影(日本周辺)").css({ "font-size": "9pt" });
+      .attr({ "id": id, "type": "checkbox" });
+    label = $("<label>").attr({ "for": id }).html("陰影(日本周辺)").css({ "font-size": "9pt" });
     div.append(this._useHillshademapInput).append(label);
     optionFrame.append(div);
 
@@ -45584,10 +45633,12 @@ GSI.GSIMaps = L.Evented.extend({
               this._sakuzuList.loadFromImage(e.target.result, fname);
             } else if (fname.match(/\.csv$/i) ) {
               var arr = Encoding.convert(new Uint8Array(e.target.result), "UNICODE", "AUTO");
+              if ( arr[0] == 65279 ) arr.splice(0,1);
               txt = Encoding.codeToString(arr);
               this._sakuzuList.loadFromCSV(txt, fname);
             } else {
               var arr = Encoding.convert(new Uint8Array(e.target.result), "UNICODE", "AUTO");
+              if ( arr[0] == 65279 ) arr.splice(0,1);
               txt = Encoding.codeToString(arr);
               this._sakuzuList.loadFromText(txt, fname);
             }
