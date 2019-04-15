@@ -40143,7 +40143,7 @@ GSI.ElevationLoader = L.Evented.extend({
         "fixed": 1
       },
       {
-        "title": "DEM5B",
+        "title": "DEM5B又は5C",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
         "minzoom": 15,
         "maxzoom": 15,
