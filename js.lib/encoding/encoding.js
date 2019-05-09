@@ -580,8 +580,15 @@ function SJISToUTF8(data) {
       results[results.length] = u2 & 0xFF;
       results[results.length] = u3 & 0xFF;
     } else if (b >= 0x80) {
+      
+
       b1 = b << 1;
       b2 = data[++i];
+
+      // 外字エリアを無視
+      if ( b >= 0xF0 && b <= 0xF9  ) {
+        if ( ( b2 >= 0x40 && b2 <= 0x7E ) || ( b2 >= 0x80 && b2 <= 0xFC) ) continue;
+      }
 
       if (b2 < 0x9F) {
         if (b1 < 0x13F) {
@@ -1961,7 +1968,13 @@ function isSJIS(data) {
     //IBM拡張文字に対応
     //if (b === 0xA0 || b > 0xEF || i + 1 >= len) {
     if (b === 0xA0 || ( b > 0xEF && b < 0xFA ) || (b > 0xFC) || i + 1 >= len) {
+      
+      if ( b >= 0xF0 && b <= 0xF9  ) {
+        b2 = data[++i];
+        if ( ( b2 >= 0x40 && b2 <= 0x7E  ) || ( b2 >= 0x80 && b2 <= 0xFC) ) continue;
+      }
       return false;
+      
     }
 
     b = data[++i];
