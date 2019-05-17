@@ -853,6 +853,17 @@
           "maxNativeZoom": 2
         },
         {
+         "type": "Layer",
+         "id": "active_fault_jishinhonbu",
+         "title": "全国の主要活断層帯（地震調査研究推進本部）",
+         "url": "https://maps.gsi.go.jp/xyz/190507_active_fault/{z}/{x}/{y}.geojson",
+         "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 11,
+         "maxNativeZoom": 2,
+         "html": "地震調査研究推進本部で公表している主要活断層帯のトレースです（ズームレベル2～11で表示されます）。ご利用にあたっては、地震調査研究推進本部の<a target='_blank' href='https://www.jishin.go.jp/agreement/'>ウェブサイト</a>をご確認ください。"
+        },
+        {
           "type": "Layer",
           "id": "rinya",
           "title": "森林（国有林）の空中写真（林野庁）",
