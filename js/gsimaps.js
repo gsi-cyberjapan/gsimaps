@@ -36895,6 +36895,7 @@ GSI.Footer = L.Class.extend({
     if (!this.map) return;
     this.onMapMove();
     var center = this.map.getCenter().wrap();
+    var zoom = this.map.getZoom();
     this.refresh(center.lng, center.lat);
 
   },
@@ -37032,9 +37033,10 @@ GSI.Footer = L.Class.extend({
     }
   },
   refresh: function (lon, lat) {
-
+    
+    var zoom = this.map.getZoom();
     this.clear();
-    this.refreshTimerId = setTimeout(L.Util.bind(this.execRefresh, this, lon, lat), 800);
+    this.refreshTimerId = setTimeout(L.Util.bind(this.execRefresh, this, lon, lat, zoom), 800);
 
   },
 
@@ -37053,7 +37055,7 @@ GSI.Footer = L.Class.extend({
     this.footerSelector.find(".elevationSrc").html(outPutHeightSrc);
     this.refreshSize();
   },
-  execRefresh: function (lon, lat) {
+  execRefresh: function (lon, lat, zoom) {
     if (this._dispMode == 2) {
       if (!this._addrLoader) {
         this._addrLoader = new GSI.AddrLoader();
@@ -37065,7 +37067,7 @@ GSI.Footer = L.Class.extend({
         }, this));
       }
 
-      this._addrLoader.load({ lat: lat, lng: lon });
+      this._addrLoader.load({ lat: lat, lng: lon, zoom: zoom });
     }
 
     this.refreshSeamlessInfo(lon, lat);
@@ -37080,7 +37082,7 @@ GSI.Footer = L.Class.extend({
       }, this));
     }
 
-    this._elevationLoader.load({ lat: lat, lng: lon });
+    this._elevationLoader.load({ lat: lat, lng: lon, zoom: zoom });
 
 
   }
@@ -40133,7 +40135,7 @@ GSI.ElevationLoader = L.Evented.extend({
 
 
   initialize: function (map, options) {
-
+    this._map = map;
     this._demUrlList = [
       {
         "title": "DEM5A",
@@ -40152,7 +40154,7 @@ GSI.ElevationLoader = L.Evented.extend({
       {
         "title": "DEM10B",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
-        "minzoom": 1,
+        "minzoom": 14,
         "maxzoom": 14,
         "fixed": 0
       },
@@ -40160,7 +40162,7 @@ GSI.ElevationLoader = L.Evented.extend({
         "title": "DEMGM",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
         "minzoom": 8,
-        "maxzoom": 14,
+        "maxzoom": 8,
         "fixed": 0
       }
     ];
@@ -40177,14 +40179,14 @@ GSI.ElevationLoader = L.Evented.extend({
     this._destroyImage();
     this._current = {
       pos: pos,
-      urlList: this._makeUrlList()
+      urlList: this._makeUrlList(pos)
     }
 
     this._load(this._current);
   },
 
 
-  _makeUrlList: function () {
+  _makeUrlList: function (pos) {
     var list = [];
     for (var i = 0; i < this._demUrlList.length; i++) {
       var demUrl = this._demUrlList[i];
@@ -40193,7 +40195,15 @@ GSI.ElevationLoader = L.Evented.extend({
         demUrl.maxzoom = demUrl.minzoom;
         demUrl.minzoom = buff;
       }
-      for (var z = demUrl.maxzoom; z >= demUrl.minzoom; z--) {
+      
+      var minzoom = demUrl.minzoom;
+      /*
+      if ( pos && demUrl.title == "DEM10B" ) {
+        minzoom = pos.zoom;
+        if ( minzoom > 10 ) minzoom = 10;
+      }
+      */
+      for (var z = demUrl.maxzoom; z >= minzoom; z--) {
         list.push({
           "title": demUrl.title,
           "zoom": z,
@@ -40242,7 +40252,6 @@ GSI.ElevationLoader = L.Evented.extend({
     var url = this._current.urlList.shift();
 
     var tileInfo = this._getTileInfo(this._current.pos.lat, this._current.pos.lng, url.zoom);
-
     this._img = document.createElement("img");
     this._img.setAttribute("crossorigin", "anonymous");
 
@@ -40251,7 +40260,7 @@ GSI.ElevationLoader = L.Evented.extend({
 
     this._img.addEventListener("load", this._imgLoadHandler);
     this._img.addEventListener("error", this._imgLoadErrorHandler);
-
+    
     function makeUrl(url, tileInfo) {
       var result = url.url.replace("{x}", tileInfo.x);
       result = result.replace("{y}", tileInfo.y);
