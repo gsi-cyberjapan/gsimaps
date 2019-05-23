@@ -888,7 +888,7 @@
          "type": "Layer",
          "id": "active_fault_jishinhonbu",
          "title": "全国の主要活断層帯（地震調査研究推進本部）",
-         "url": "https://maps.gsi.go.jp/xyz/190507_active_fault/{z}/{x}/{y}.geojson",
+         "url": "https://maps.gsi.go.jp/xyz/active_fault/{z}/{x}/{y}.geojson",
          "cocotile": true,
          "minZoom": 2,
          "maxZoom": 11,
