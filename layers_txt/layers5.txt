@@ -935,6 +935,40 @@
           "maxZoom": 18,
           "maxNativeZoom": 8,
           "html": "航空法第１３２条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第２３６条第１号に掲げる空域（空港等の周辺空域）の投影面下となる場所を表示します。（ズームレベル8～18で表示されます）<br>なお、この情報には誤差が含まれている場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。"
+        },
+        {
+     "type": "LayerGroup",
+     "title": "みなとオアシス（港湾局)",
+     "iconUrl": "",
+     "toggleall": true,
+     "id": "minato",
+     "html": "港湾局が登録した「みなとオアシス」を表示します。（ズームレベル5～9で位置アイコン、ズームレベル10～18で詳細施設が表示されます）<br>なお、最新の登録情報については、<a target='_blank' href='http://www.mlit.go.jp/kowan/kowan_tk1_000001.html'>国土交通省ホームページ</a>で確認して下さい。<br>※みなとオアシスとは、みなとを核としたまちづくりを推進するため、住民参加による地域振興の取組が継続的に行われる施設を国土交通省港湾局長が登録するものです。",
+     "entries": [
+            {
+             "type": "Layer",
+             "id": "minato_icon",
+             "title": "みなとオアシス（港湾局）",
+             "url": "https://maps.gsi.go.jp/xyz/minato_icon/{z}/{x}/{y}.geojson",
+             "styleurl": "https://maps.gsi.go.jp/xyz/minato_icon/style.js",
+             "cocotile": false,
+             "minZoom": 5,
+             "maxZoom": 9,
+             "maxNativeZoom": 2,
+             "html": "解説"
+            },
+            {
+             "type": "Layer",
+             "id": "minato_polygon",
+             "title": "みなとオアシス（港湾局）",
+             "url": "https://maps.gsi.go.jp/xyz/minato_polygon/{z}/{x}/{y}.geojson",
+             "styleurl": "https://maps.gsi.go.jp/xyz/minato_polygon/style.js",
+             "cocotile": false,
+             "minZoom": 10,
+             "maxZoom": 18,
+             "maxNativeZoom": 2,
+             "html": "解説"
+            }
+          ]
         }
       ]
     }
