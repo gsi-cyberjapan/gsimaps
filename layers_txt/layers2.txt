@@ -1,4 +1,4 @@
-{
+﻿{
   "layers": [
     {
       "type": "LayerGroup",
@@ -3268,6 +3268,20 @@
               "title": "2019年登山道更新情報",
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "toz201905",
+                  "title": "5月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz201905/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "toz201904",
+                  "title": "4月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz201904/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
                 {
                   "type": "Layer",
                   "id": "toz201903",
