@@ -2595,9 +2595,9 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg){
         var vLayer   = vLayersData[vID];
         if(vURLType == "tile"){
             var strRgx = null;
- 	        strRgx = vURL.replace("{z}", "(\\d\+)").replace("{x}", "\\d\+"  ).replace("{y}", "\\d\+"  ); var rgxZfromURL = new RegExp(strRgx); 
-	        strRgx = vURL.replace("{z}", "\\d\+"  ).replace("{x}", "(\\d\+)").replace("{y}", "\\d\+"  ); var rgxXfromURL = new RegExp(strRgx);
-	        strRgx = vURL.replace("{z}", "\\d\+"  ).replace("{x}", "\\d\+"  ).replace("{y}", "(\\d\+)"); var rgxYfromURL = new RegExp(strRgx);
+ 	        strRgx = vURL.split("?")[0].replace("{z}", "(\\d\+)").replace("{x}", "\\d\+"  ).replace("{y}", "\\d\+"  ); var rgxZfromURL = new RegExp(strRgx);//190529
+	        strRgx = vURL.split("?")[0].replace("{z}", "\\d\+"  ).replace("{x}", "(\\d\+)").replace("{y}", "\\d\+"  ); var rgxXfromURL = new RegExp(strRgx);//190529
+	        strRgx = vURL.split("?")[0].replace("{z}", "\\d\+"  ).replace("{x}", "\\d\+"  ).replace("{y}", "(\\d\+)"); var rgxYfromURL = new RegExp(strRgx);//190529
 
             var nx_tile = 0;
             var ny_tile = 0;
@@ -7118,6 +7118,7 @@ GSI3D.LayersJSONLoader.prototype._load = function(url) {
 	var req = $.ajax( {
 		type: "GET",
 		dataType:"text",
+		cache : false, //190529
 		url : url,
 		_url : url
 	} )
