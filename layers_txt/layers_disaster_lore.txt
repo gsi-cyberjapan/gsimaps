@@ -1,0 +1,107 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "自然災害伝承碑",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "disaster_lore_all",
+          "title": "すべて",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_all/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">全ての災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_0",
+          "title": "洪水",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_flood/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">洪水の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_1",
+          "title": "土砂災害",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_sediment/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">土砂災害の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_2",
+          "title": "高潮",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_hightide/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">高潮の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_3",
+          "title": "地震",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_earthquake/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">地震の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_4",
+          "title": "津波",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_tsunami/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">津波の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_5",
+          "title": "火山災害",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_volcano/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">火山災害の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_6",
+          "title": "その他",
+          "iconUrl": "https://maps.gsi.go.jp/image/map/disaster_lore.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_other/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">その他の災害伝承碑を表示します。</div>"
+        }
+      ]
+    }
+  ]
+}

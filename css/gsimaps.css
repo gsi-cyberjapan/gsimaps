@@ -8442,3 +8442,35 @@ layertreedialog_search_taglist *
 .gsi_kihonzukaku_gridinfo table tr.active td{
 	color: red;
 }
+
+.gsi_dsloreinfodialog_div{
+	margin: 0.2em;
+}
+.gsi_dsloreinfodialog_div_table_th{
+	background-color:rgba(32,32,32,0.8);
+	color:#fff;
+	font-size:14px;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+}
+
+.gsi_dsloreinfodialog_inner_div{
+	margin: 0.2em;
+}
+.gsi_dsloreinfodialog_inner_div table{
+	border-collapse: collapse;
+}
+.gsi_dsloreinfodialog_inner_div table th{
+	background-color:rgba(32,32,32,0.8);
+	background-color:#f4f4f4;
+	color:#222;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	border: 1px solid #442;
+}
+.gsi_dsloreinfodialog_inner_div table td{
+	padding: 0.2em 0.6em 0.2em 0.6em;
+	border: 1px solid #442;
+}
+.gsi_dsloreinfodialog_inner_div img{
+	border: 1px solid #442;
+	margin: 0px;
+}

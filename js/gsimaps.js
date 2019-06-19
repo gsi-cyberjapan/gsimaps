@@ -115,6 +115,11 @@ CONFIG.layerEvacuationFolderSYS = "GSI.MAP.EVAC";
 CONFIG.layerEvacuationHeader = "skhb";
 CONFIG.layerEvacuationIsConfirmOK = false;
 
+CONFIG.DisasterLoreFolder = "自然災害伝承碑";
+CONFIG.DisasterLoreFolderSYS = "GSI.MAP.DISASTER.LORE";
+CONFIG.DisasterLoreHeader = "disaster_lore";
+CONFIG.DisasterLoreAll = "disaster_lore_all";
+
 
 // 確認表示が必要なレイヤー
 CONFIG.CONFIRM_LAYERS = {
@@ -1387,6 +1392,12 @@ Proj4js.defs["EPSG:2459"] = "+proj=tmerc +lat_0=26 +lon_0=131 +k=0.9999 +x_0=0 +
 Proj4js.defs["EPSG:2460"] = "+proj=tmerc +lat_0=20 +lon_0=136 +k=0.9999 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
 Proj4js.defs["EPSG:2461"] = "+proj=tmerc +lat_0=26 +lon_0=154 +k=0.9999 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
 
+dslorethumbnail_click = function(elements){
+  var x = new GSI.Modal.dsloreDialog(elements);
+  x.show();  
+
+  return false;
+};
 /************************************************************************
  GSI.Draw
  L.FeatureGroup
@@ -6735,6 +6746,48 @@ GSI.LayerTreeDialog = GSI.Dialog.extend({
           this._mapManager._evacDialog.show();
         }
         GSI.Utils.sendSelectedLayer(this._current_id);
+      }
+    }
+    else if (target && target.title_disasterlore && target.title_disasterlore == CONFIG.DisasterLoreFolderSYS) {
+      var f = false;
+
+      if (item.id == CONFIG.DisasterLoreAll){
+        if (this.mapLayerList.exists(item)) {
+          f = true;
+          added = false;
+          //this.mapLayerList.remove(item);
+        }
+        else{
+          this._onHideAllClick();
+        }
+      }
+      else{
+        if (this.mapLayerList.exists(item)){
+          f = true;
+          added = false;
+        }
+        else{
+          for(var x = 0; x < this.mapLayerList.list.length; x++){
+            if (this.mapLayerList.list[x].id == CONFIG.DisasterLoreAll){
+              this.mapLayerList.remove(this.mapLayerList.list[x]);
+              break;
+            }
+          }
+        }
+      }
+      // if (this.mapLayerList.exists(item)) {
+      //   f = true;
+      //   added = false;
+
+      // }
+
+      //this._onHideAllClick();
+      if (f == false) {
+        this.mapLayerList.append(item);
+        GSI.Utils.sendSelectedLayer(this._current_id);
+      }
+      else{
+        this.mapLayerList.remove(item);
       }
     }
     else {
@@ -13508,6 +13561,11 @@ GSI.LayersJSON = L.Evented.extend({
           json_evac2.entries = json.layers[ll].entries.concat();
           hybridjson.layers.push(json_evac2);
         }
+        else if (json.layers[ll].title == "自然災害伝承碑"){
+          var json_dh = JSON.parse("{ \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.DisasterLoreFolder + "\", \"title_disasterlore\": \"" + CONFIG.DisasterLoreFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] }");
+          json_dh.entries = json.layers[ll].entries.concat();
+          hybridjson.layers.push(json_dh);
+        }
         else {
           hybridjson.layers.push(json.layers[ll]);
         }
@@ -15095,6 +15153,185 @@ GSI.Modal.confirmDialog = GSI.Modal.Dialog.extend({
   onNegativeButtonClick: function () {
     this.hide();
     this.fire('negative');
+  }
+});
+
+/************************************************************************
+ L.Class
+ - GSI.Modal.BaseClass
+   - GSI.Modal.Dialog
+     - GSI.Modal.dsloreDialog
+ ************************************************************************/
+GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
+  options: {
+    title:'自然災害伝承碑',
+    blindClose: false,
+    closeBtnVisible: true
+  },
+  initialize: function(uri){
+    this.options.uri = uri;
+    GSI.Modal.BaseClass.prototype.initialize.call(this.options);
+  },
+  getContent: function () {
+    var frame = $('<div>').addClass('gsi_modal_dialog_content');
+    var content = this._createContent(this.options.uri);
+
+    frame.append(content);
+
+    return frame;
+  },
+  show: function(){
+    GSI.Modal.BaseClass.prototype.show.call(this, this.options);
+
+    GSI.Modal.blind.on('mousedown', L.bind(function () { this.hide(); }, this));
+    $(GSI.Modal.blind).on('touchstart', L.bind(function () { this.hide(); }, this));
+
+    $(window).resize(L.bind(function () { this.hide(true); }, this));
+
+    this.closeButton.css({"color":"#fff","padding-top":"0.3em","padding-right":"0.3em"});
+  },
+  createBlind: function () {
+    if (GSI.Modal.blind) return;
+
+    GSI.Modal.blind = $('<div>')
+      .css({
+        opacity: 0.4,
+        background: "#111",
+        position: "absolute",
+        left: '0px',
+        top: '0px',
+        width: '100%',
+        height: '100%',
+        "z-index": GSI.Modal.zIndexOffset,
+        display: "none",
+        cursor: "pointer"
+      })
+      .click(function () {
+      });
+
+    $(document.body).append(GSI.Modal.blind);
+  },
+  _createContent: function(){
+    var ws = GSI.Utils.getScreenSize();
+    var ary = this.options.uri.split("\\");   
+    var imgy = ws.h * 0.6;//0.7は極端に横長にすると縦が不足する
+    var imgx = ws.w * 0.7;
+
+    var names={};
+    names["LoreName"] = "碑名";
+    names["DisasterName"]="災害名";
+    names["DisasterKind"] = "災害種別";
+    names["LoreYear"] = "建立年";
+    names["Address"]="所在地";
+    names["DisasterInfo"] = "伝承内容";
+    names["Image"]="概要";
+
+    var title = "";
+    var id = "";
+    for(var e = 0; e < ary.length; e+=2){
+      if (ary[e] == "LoreName"){
+        title = ary[e + 1];
+      }
+      if (ary[e] == "ID"){
+        id = ary[e + 1];
+      }
+    }
+
+    var tbl = $("<table>").css({"min-width":"240px","max-width":"280px"});
+    var outertbl = $("<table>").css({"border": "none"});
+
+    var tr;
+    var outertr = $("<tr>").css({"vertical-align":"top"});
+    var titletr = $("<tr>");
+    var lefttd = $("<td>").attr({"align":"center"});
+    var righttd = $("<td>").attr({"align":"center"});
+    var titleth = $("<th>").addClass("gsi_dsloreinfodialog_div_table_th");
+  
+    var ldiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
+    var rdiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
+    var titletbl = $("<table>").css({"border":"none","width":"100%"});
+    var contdiv = $("<div>").addClass('gsi_dsloreinfodialog_div').css({"overflow-y":"auto"});
+    var iddiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
+    var outerdiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
+  
+    titletbl.append(titletr.append(titleth.html(title)));
+    outerdiv.append(titletbl);
+
+    tr=$("<tr>").append($("<th>").html("概要").attr({"colspan":2}));
+    tbl.append(tr);
+
+    for(h in names){
+      for(var j = 0; j < ary.length; j+=2){
+        if (h == ary[j]){
+          if (ary[j] == "Image"){
+
+            var img = $("<img>");
+
+            img.on("load", L.bind(function(){
+              if (img[0].clientHeight > imgy){
+                img.css({"width":"auto","height":imgy + "px"})
+              }
+              this.adjustWindow();
+            },this));
+
+            $(rdiv).append(img.attr({"src" : ary[j + 1]}).css({"width": imgx, "height": "auto"}));
+
+          }
+          else{
+            if ( (ary[j] != "") && (ary[j + 1] != "") ){
+              var c1w, c2w;
+              c1w = "80px";
+              c2w = "180px";
+              //name
+              tr=$("<tr>").append($("<td>").css({"width":c1w}).html(names[ary[j]]));
+              //value
+              $(tr).append( $("<td>").html(ary[j + 1]) );
+
+              $(tbl).append(tr);
+            }
+          }
+    
+        }
+      }
+    }
+
+    ldiv.append(tbl);
+    lefttd.append(ldiv);
+
+    iddiv.html("ID:" + id);
+
+    if (ws.h < ws.w){
+      righttd.append(rdiv);
+      outertr.append(lefttd);
+      outertr.append(righttd);
+      outertbl.append(outertr);
+      iddiv.css({"text-align":"left","bottom":"0.4em","left":"0.4em"})
+      ldiv.css({"height":(imgy - 30) + "px"});
+      ldiv.append(iddiv);
+    }
+    else{
+      iddiv.css({"text-align":"left"});
+      ldiv.append(iddiv);
+
+      $(ldiv).css({"height":"100px"});
+      righttd.append(rdiv);
+      outertr.append(righttd);
+      outertbl.append(outertr);
+      outertr = $("<tr>").append(lefttd);
+      outertbl.append(outertr);
+    }
+
+    contdiv.append(outertbl);
+    outerdiv.append(contdiv);
+
+    return outerdiv;
+  
+  },
+  onPositiveButtonClick: function () {
+    this.hide();
+  },
+  onNegativeButtonClick: function () {
+    this.hide();
   }
 });
 

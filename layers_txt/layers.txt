@@ -15,6 +15,9 @@
 		"url":"./layers_skhb.txt"
 	},
 	{
+		"url":"./layers_disaster_lore.txt"
+	},
+	{
 		"url":"./layers_antarctic.txt"
 	},	
 	{
