@@ -12,6 +12,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和元年山形県沖の地震",
+              "toggleall": false,
+              "src": "./layers_20190618yamagatakenoki.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "平成30年北海道胆振東部地震",
               "toggleall": false,
               "src": "./layers_20180906hokkaido.txt"
