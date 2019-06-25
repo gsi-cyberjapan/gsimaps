@@ -1,5 +1,31 @@
 {
   "layers": [
+      {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "鶴岡村上地区（山形県鶴岡市、新潟県村上市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0620do",
+          "title": "鶴岡村上地区（6/20撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0620do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          }
+         ]
+        }
+       ]
+      },
     {
      "type": "LayerGroup",
      "title": "垂直写真",
