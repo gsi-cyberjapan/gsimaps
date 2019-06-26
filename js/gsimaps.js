@@ -15249,7 +15249,7 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
   
     var ldiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
     var rdiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
-    var titletbl = $("<table>").css({"border":"none","width":"100%"});
+	  var titletbl = $("<table>").attr({"id": "dsloredialog_title"}).css({"border":"none","width":"100%"});
     var contdiv = $("<div>").addClass('gsi_dsloreinfodialog_div').css({"overflow-y":"auto"});
     var iddiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
     var outerdiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
@@ -15270,6 +15270,8 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
             img.on("load", L.bind(function(){
               if (img[0].clientHeight > imgy){
                 img.css({"width":"auto","height":imgy + "px"})
+                var limith = document.getElementById("dsloredialog_title").clientHeight;
+                contdiv.css({"max-height":(ws.h - 50 - limith) + "px"})
               }
               this.adjustWindow();
             },this));
