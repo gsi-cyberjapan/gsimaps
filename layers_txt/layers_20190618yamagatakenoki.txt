@@ -21,6 +21,16 @@
           "minZoom": 10,
           "maxZoom": 18,
           "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          },
+           {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626do",
+          "title": "鶴岡村上地区（6/26撮影②）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
           }
          ]
         }
@@ -62,6 +72,28 @@
           "id": "20190618yamagata_tsuruokamurakami_0620suichoku",
           "title": "鶴岡村上地区（6/20撮影）",
           "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0620suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626suichoku1",
+          "title": "鶴岡村上地区（6/26撮影①）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626suichoku1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626suichoku2",
+          "title": "鶴岡村上地区（6/26撮影②）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626suichoku2/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
