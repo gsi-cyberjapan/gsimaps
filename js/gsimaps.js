@@ -19748,6 +19748,16 @@ GSI.GeoJSON = L.Layer.extend({
 window.addEventListener('message', function (event) {
   var d = event.data;
 
+// 20190703
+  setTimeout(function() {
+    if ( GSI.GLOBALS.gsimaps._mainMap && GSI.GLOBALS.gsimaps._mainMap._map)
+      GSI.GLOBALS.gsimaps._mainMap._map.invalidateSize();
+    if ( GSI.GLOBALS.gsimaps._subMap && GSI.GLOBALS.gsimaps._subMap._map )
+      GSI.GLOBALS.gsimaps._subMap._map.invalidateSize();
+    
+  },1 );
+// 20190703
+
   if ((typeof d.sakuzuList === 'undefined') ||
     (typeof d.queryString === 'undefined') ||
     (typeof d.LayerJS === 'undefined') ||
