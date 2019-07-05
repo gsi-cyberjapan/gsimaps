@@ -1,6 +1,10 @@
 [
 	{
-                "top":true,
+        "top":true,
+		"url":"./layers_topic_20190704kagoshima.txt"
+	},
+	{
+        "top":true,
 		"url":"./layers_topic_20190618yamagatakenoki.txt"
 	},
 	{

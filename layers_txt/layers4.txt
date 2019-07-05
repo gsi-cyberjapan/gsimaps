@@ -1443,6 +1443,12 @@
           "title": "台風・豪雨等",
           "toggleall": false,
           "entries": [
+           {
+             "type": "LayerGroup",
+             "title": "令和元年６月下旬からの大雨",
+             "toggleall": false,
+             "src": "./layers_20190704kagoshima.txt"
+            },
             {
              "type": "LayerGroup",
              "title": "平成30年7月豪雨",

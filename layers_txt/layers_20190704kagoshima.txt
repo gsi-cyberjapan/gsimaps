@@ -1,0 +1,31 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真（速報用）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "鹿児島中央地区（鹿児島県鹿児島市、日置市、南九州市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_chuou_0704suichoku",
+          "title": "鹿児島中央地区（7/4撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_chuou_0704suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    }
+  ]
+}
