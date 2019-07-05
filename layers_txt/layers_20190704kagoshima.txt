@@ -29,7 +29,7 @@
     },
     {
      "type": "LayerGroup",
-     "title": "垂直写真（速報用）",
+     "title": "垂直写真（速報版）",
      "iconUrl": "",
      "toggleall": false,
      "entries": [
