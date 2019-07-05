@@ -13,7 +13,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.00246,
@@ -34,7 +33,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.83579,
@@ -55,7 +53,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.66913,
@@ -76,7 +73,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.66914,
@@ -97,7 +93,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.50246,
@@ -118,7 +113,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.50247,
@@ -146,7 +140,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.33581,
@@ -167,7 +160,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.33586,
@@ -188,7 +180,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.16918,
@@ -209,7 +200,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.1692,
@@ -230,7 +220,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.83586,
@@ -251,7 +240,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.83589,
@@ -272,7 +260,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.83594,
@@ -293,7 +280,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.66924,
@@ -314,7 +300,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.66921,
@@ -335,7 +320,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.50255,
@@ -356,7 +340,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.33596,
@@ -377,7 +360,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.16928,
@@ -398,7 +380,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00261,
@@ -419,7 +400,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00265,
@@ -440,7 +420,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00263,
@@ -461,7 +440,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.83597,
@@ -489,7 +467,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               45.00224,
@@ -510,7 +487,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.83559,
@@ -531,7 +507,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.66892,
@@ -552,7 +527,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.50227,
@@ -573,7 +547,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.33563,
@@ -594,7 +567,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.33566,
@@ -615,7 +587,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.16897,
@@ -636,7 +607,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.16901,
@@ -657,7 +627,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.00232,
@@ -678,7 +647,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.00236,
@@ -699,7 +667,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               44.00235,
@@ -720,7 +687,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.83571,
@@ -741,7 +707,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.83568,
@@ -762,7 +727,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.66901,
@@ -783,7 +747,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.66905,
@@ -804,7 +767,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.66905,
@@ -825,7 +787,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.50238,
@@ -846,7 +807,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.50242,
@@ -874,7 +834,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.33572,
@@ -895,7 +854,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.33574,
@@ -916,7 +874,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.33575,
@@ -937,7 +894,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.16912,
@@ -958,7 +914,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               43.16908,
@@ -979,7 +934,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.83577,
@@ -1000,7 +954,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.66916,
@@ -1021,7 +974,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.5025,
@@ -1042,7 +994,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.50251,
@@ -1063,7 +1014,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.5025,
@@ -1084,7 +1034,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.50253,
@@ -1105,7 +1054,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.33585,
@@ -1126,7 +1074,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.3359,
@@ -1147,7 +1094,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00243,
@@ -1168,7 +1114,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.16919,
@@ -1189,7 +1134,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.1692,
@@ -1210,7 +1154,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.16918,
@@ -1231,7 +1174,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.16926,
@@ -1252,7 +1194,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00253,
@@ -1273,7 +1214,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               42.00252,
@@ -1294,7 +1234,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.8359,
@@ -1315,7 +1254,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.66926,
@@ -1336,7 +1274,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.4911,
@@ -1357,7 +1294,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.50259,
@@ -1378,7 +1314,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33594,
@@ -1399,7 +1334,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33596,
@@ -1420,7 +1354,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33595,
@@ -1448,7 +1381,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.5026,
@@ -1469,7 +1401,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33599,
@@ -1490,7 +1421,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33597,
@@ -1511,7 +1441,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.33601,
@@ -1532,7 +1461,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.1693,
@@ -1553,7 +1481,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.16931,
@@ -1574,7 +1501,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.16934,
@@ -1595,7 +1521,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.16935,
@@ -1616,7 +1541,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.00267,
@@ -1637,7 +1561,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.0027,
@@ -1658,7 +1581,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               41.00268,
@@ -1679,7 +1601,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.83601,
@@ -1700,7 +1621,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.83604,
@@ -1721,7 +1641,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.83603,
@@ -1742,7 +1661,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.66937,
@@ -1763,7 +1681,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.66936,
@@ -1784,7 +1701,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.66933,
@@ -1805,7 +1721,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.50273,
@@ -1826,7 +1741,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.5027,
@@ -1847,7 +1761,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.50274,
@@ -1868,7 +1781,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.50274,
@@ -1889,7 +1801,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.50273,
@@ -1910,7 +1821,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.33608,
@@ -1931,7 +1841,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.33608,
@@ -1952,7 +1861,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.33606,
@@ -1973,7 +1881,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.16943,
@@ -1994,7 +1901,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.16941,
@@ -2015,7 +1921,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.16946,
@@ -2036,7 +1941,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.00276,
@@ -2057,7 +1961,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.0028,
@@ -2078,7 +1981,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.00279,
@@ -2099,7 +2001,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               40.00283,
@@ -2127,7 +2028,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.83608,
@@ -2148,7 +2048,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.83612,
@@ -2169,7 +2068,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.83608,
@@ -2190,7 +2088,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.83615,
@@ -2211,7 +2108,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.83614,
@@ -2232,7 +2128,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.16967,
@@ -2253,7 +2148,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.003,
@@ -2274,7 +2168,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.66946,
@@ -2295,7 +2188,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.66948,
@@ -2316,7 +2208,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.75284,
@@ -2337,7 +2228,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.66951,
@@ -2358,7 +2248,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.66954,
@@ -2379,7 +2268,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.50285,
@@ -2400,7 +2288,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.50284,
@@ -2421,7 +2308,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.50282,
@@ -2442,7 +2328,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.50287,
@@ -2463,7 +2348,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.33616,
@@ -2484,7 +2368,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.33622,
@@ -2505,7 +2388,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.33625,
@@ -2526,7 +2408,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.33622,
@@ -2547,7 +2428,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.33623,
@@ -2568,7 +2448,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16954,
@@ -2589,7 +2468,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16956,
@@ -2610,7 +2488,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16955,
@@ -2631,7 +2508,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16955,
@@ -2652,7 +2528,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16958,
@@ -2673,7 +2548,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.16961,
@@ -2694,7 +2568,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.00288,
@@ -2715,7 +2588,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.0029,
@@ -2736,7 +2608,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.00294,
@@ -2757,7 +2628,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               39.00294,
@@ -2778,7 +2648,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.83626,
@@ -2799,7 +2668,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.83626,
@@ -2820,7 +2688,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.83627,
@@ -2841,7 +2708,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.83629,
@@ -2862,7 +2728,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.83626,
@@ -2883,7 +2748,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.66961,
@@ -2904,7 +2768,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.6696,
@@ -2925,7 +2788,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.66963,
@@ -2946,7 +2808,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.66961,
@@ -2967,7 +2828,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.66962,
@@ -2988,7 +2848,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.66966,
@@ -3009,7 +2868,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.50297,
@@ -3030,7 +2888,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.50299,
@@ -3051,7 +2908,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.503,
@@ -3072,7 +2928,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.503,
@@ -3093,7 +2948,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.50302,
@@ -3114,7 +2968,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.33626,
@@ -3135,7 +2988,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.33635,
@@ -3156,7 +3008,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.33635,
@@ -3177,7 +3028,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.33636,
@@ -3198,7 +3048,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.33637,
@@ -3219,7 +3068,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.16968,
@@ -3240,7 +3088,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               38.16968,
@@ -3268,7 +3115,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.83637,
@@ -3289,7 +3135,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.8363,
@@ -3310,7 +3155,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.83637,
@@ -3331,7 +3175,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.83637,
@@ -3352,7 +3195,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.66973,
@@ -3373,7 +3215,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50301,
@@ -3394,7 +3235,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50305,
@@ -3415,7 +3255,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50301,
@@ -3436,7 +3275,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50307,
@@ -3457,7 +3295,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50306,
@@ -3478,7 +3315,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.50306,
@@ -3499,7 +3335,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.5031,
@@ -3520,7 +3355,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33637,
@@ -3541,7 +3375,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33637,
@@ -3562,7 +3395,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33639,
@@ -3583,7 +3415,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33642,
@@ -3604,7 +3435,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33641,
@@ -3625,7 +3455,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.1697,
@@ -3646,7 +3475,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.16974,
@@ -3667,7 +3495,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.16973,
@@ -3688,7 +3515,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.16973,
@@ -3709,7 +3535,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.16974,
@@ -3730,7 +3555,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.16981,
@@ -3751,7 +3575,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00308,
@@ -3772,7 +3595,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00311,
@@ -3793,7 +3615,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.0031,
@@ -3814,7 +3635,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00308,
@@ -3835,7 +3655,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00312,
@@ -3856,7 +3675,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00314,
@@ -3877,7 +3695,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00314,
@@ -3898,7 +3715,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83643,
@@ -3919,7 +3735,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83645,
@@ -3940,7 +3755,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83646,
@@ -3961,7 +3775,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83645,
@@ -3982,7 +3795,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66977,
@@ -4003,7 +3815,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.6698,
@@ -4024,7 +3835,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.6698,
@@ -4045,7 +3855,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50315,
@@ -4066,7 +3875,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50316,
@@ -4087,7 +3895,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50313,
@@ -4108,7 +3915,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50317,
@@ -4129,7 +3935,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50314,
@@ -4150,7 +3955,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50315,
@@ -4178,7 +3982,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33649,
@@ -4199,7 +4002,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33646,
@@ -4220,7 +4022,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33654,
@@ -4241,7 +4042,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50324,
@@ -4262,7 +4062,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33654,
@@ -4283,7 +4082,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16983,
@@ -4304,7 +4102,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16991,
@@ -4325,7 +4122,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16989,
@@ -4346,7 +4142,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16987,
@@ -4367,7 +4162,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00319,
@@ -4388,7 +4182,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00317,
@@ -4409,7 +4202,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00323,
@@ -4430,7 +4222,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00323,
@@ -4451,7 +4242,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00319,
@@ -4472,7 +4262,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83655,
@@ -4493,7 +4282,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83656,
@@ -4514,7 +4302,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83652,
@@ -4535,7 +4322,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83655,
@@ -4556,7 +4342,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83655,
@@ -4577,7 +4362,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66987,
@@ -4598,7 +4382,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66987,
@@ -4619,7 +4402,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66993,
@@ -4640,7 +4422,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66986,
@@ -4661,7 +4442,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50326,
@@ -4682,7 +4462,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50328,
@@ -4703,7 +4482,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33662,
@@ -4724,7 +4502,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33669,
@@ -4745,7 +4522,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33664,
@@ -4766,7 +4542,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33664,
@@ -4787,7 +4562,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33654,
@@ -4808,7 +4582,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16992,
@@ -4829,7 +4602,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16994,
@@ -4850,7 +4622,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16998,
@@ -4871,7 +4642,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00321,
@@ -4892,7 +4662,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00326,
@@ -4913,7 +4682,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00345,
@@ -4934,7 +4702,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00332,
@@ -4955,7 +4722,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00318,
@@ -4976,7 +4742,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83679,
@@ -4997,7 +4762,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83669,
@@ -5018,7 +4782,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83665,
@@ -5039,7 +4802,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.85323,
@@ -5060,7 +4822,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66998,
@@ -5081,7 +4842,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66993,
@@ -5102,7 +4862,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66997,
@@ -5123,7 +4882,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50334,
@@ -5144,7 +4902,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50351,
@@ -5165,7 +4922,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50471,
@@ -5193,7 +4949,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.31308,
@@ -5214,7 +4969,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.17009,
@@ -5235,7 +4989,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.00416,
@@ -5256,7 +5009,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.63673,
@@ -5277,7 +5029,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00427,
@@ -5305,7 +5056,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.33634,
@@ -5326,7 +5076,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               37.00283,
@@ -5347,7 +5096,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83626,
@@ -5368,7 +5116,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.8364,
@@ -5389,7 +5136,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83634,
@@ -5410,7 +5156,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.83638,
@@ -5431,7 +5176,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66953,
@@ -5452,7 +5196,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66975,
@@ -5473,7 +5216,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66971,
@@ -5494,7 +5236,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66973,
@@ -5515,7 +5256,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.66969,
@@ -5536,7 +5276,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50303,
@@ -5557,7 +5296,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50305,
@@ -5578,7 +5316,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50306,
@@ -5599,7 +5336,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50296,
@@ -5620,7 +5356,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50312,
@@ -5641,7 +5376,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.50309,
@@ -5662,7 +5396,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33628,
@@ -5683,7 +5416,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33637,
@@ -5704,7 +5436,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33643,
@@ -5725,7 +5456,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.33641,
@@ -5746,7 +5476,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16981,
@@ -5767,7 +5496,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16956,
@@ -5788,7 +5516,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16978,
@@ -5809,7 +5536,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.16977,
@@ -5830,7 +5556,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00311,
@@ -5851,7 +5576,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00307,
@@ -5872,7 +5596,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00307,
@@ -5893,7 +5616,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.003,
@@ -5914,7 +5636,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.00314,
@@ -5935,7 +5656,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83648,
@@ -5956,7 +5676,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83645,
@@ -5977,7 +5696,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83644,
@@ -5998,7 +5716,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83645,
@@ -6019,7 +5736,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.83652,
@@ -6040,7 +5756,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66973,
@@ -6061,7 +5776,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.6684,
@@ -6082,7 +5796,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66981,
@@ -6103,7 +5816,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66965,
@@ -6124,7 +5836,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66984,
@@ -6145,7 +5856,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66985,
@@ -6166,7 +5876,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.6698,
@@ -6187,7 +5896,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66978,
@@ -6208,7 +5916,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.66975,
@@ -6229,7 +5936,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50311,
@@ -6250,7 +5956,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50318,
@@ -6271,7 +5976,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50317,
@@ -6292,7 +5996,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50312,
@@ -6313,7 +6016,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50311,
@@ -6334,7 +6036,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50313,
@@ -6355,7 +6056,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50319,
@@ -6376,7 +6076,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50314,
@@ -6397,7 +6096,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50313,
@@ -6418,7 +6116,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50305,
@@ -6439,7 +6136,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50317,
@@ -6460,7 +6156,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50324,
@@ -6488,7 +6183,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33651,
@@ -6509,7 +6203,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33645,
@@ -6530,7 +6223,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33645,
@@ -6551,7 +6243,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33648,
@@ -6572,7 +6263,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33635,
@@ -6593,7 +6283,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33651,
@@ -6614,7 +6303,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.3365,
@@ -6635,7 +6323,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33622,
@@ -6656,7 +6343,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16966,
@@ -6677,7 +6363,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16983,
@@ -6698,7 +6383,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16987,
@@ -6719,7 +6403,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16987,
@@ -6740,7 +6423,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16984,
@@ -6761,7 +6443,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.1699,
@@ -6782,7 +6463,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16991,
@@ -6803,7 +6483,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16981,
@@ -6824,7 +6503,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.0032,
@@ -6845,7 +6523,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00315,
@@ -6866,7 +6543,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00313,
@@ -6887,7 +6563,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00318,
@@ -6908,7 +6583,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00324,
@@ -6929,7 +6603,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00318,
@@ -6950,7 +6623,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00319,
@@ -6971,7 +6643,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00324,
@@ -6992,7 +6663,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00324,
@@ -7013,7 +6683,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83655,
@@ -7034,7 +6703,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83636,
@@ -7055,7 +6723,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83656,
@@ -7076,7 +6743,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83525,
@@ -7097,7 +6763,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83659,
@@ -7118,7 +6783,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.8366,
@@ -7139,7 +6803,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83664,
@@ -7160,7 +6823,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83652,
@@ -7181,7 +6843,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83662,
@@ -7202,7 +6863,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83663,
@@ -7223,7 +6883,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83666,
@@ -7244,7 +6903,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66978,
@@ -7265,7 +6923,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66985,
@@ -7286,7 +6943,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66989,
@@ -7307,7 +6963,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66991,
@@ -7328,7 +6983,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66993,
@@ -7349,7 +7003,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66995,
@@ -7370,7 +7023,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66992,
@@ -7391,7 +7043,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66993,
@@ -7412,7 +7063,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.61989,
@@ -7433,7 +7083,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.65397,
@@ -7454,7 +7103,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66994,
@@ -7475,7 +7123,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.5033,
@@ -7496,7 +7143,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.5033,
@@ -7517,7 +7163,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50316,
@@ -7538,7 +7183,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.5032,
@@ -7559,7 +7203,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50331,
@@ -7580,7 +7223,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.54494,
@@ -7601,7 +7243,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50338,
@@ -7622,7 +7263,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16994,
@@ -7643,7 +7283,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33657,
@@ -7664,7 +7303,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33662,
@@ -7685,7 +7323,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16996,
@@ -7706,7 +7343,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16994,
@@ -7727,7 +7363,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.17006,
@@ -7748,7 +7383,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.00322,
@@ -7769,7 +7403,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.0033,
@@ -7790,7 +7423,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83658,
@@ -7811,7 +7443,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.66988,
@@ -7832,7 +7463,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.67001,
@@ -7853,7 +7483,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.67001,
@@ -7874,7 +7503,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.50331,
@@ -7895,7 +7523,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.50337,
@@ -7916,7 +7543,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.3367,
@@ -7937,7 +7563,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.33655,
@@ -7965,7 +7590,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66991,
@@ -7986,7 +7610,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               36.14943,
@@ -8007,7 +7630,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.98746,
@@ -8028,7 +7650,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50303,
@@ -8049,7 +7670,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50305,
@@ -8070,7 +7690,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50276,
@@ -8091,7 +7710,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50312,
@@ -8112,7 +7730,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50312,
@@ -8133,7 +7750,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.50313,
@@ -8154,7 +7770,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33638,
@@ -8175,7 +7790,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33638,
@@ -8196,7 +7810,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33636,
@@ -8217,7 +7830,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33579,
@@ -8238,7 +7850,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33647,
@@ -8259,7 +7870,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33644,
@@ -8280,7 +7890,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33652,
@@ -8301,7 +7910,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.33641,
@@ -8322,7 +7930,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16978,
@@ -8343,7 +7950,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16981,
@@ -8364,7 +7970,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16955,
@@ -8385,7 +7990,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16973,
@@ -8406,7 +8010,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16978,
@@ -8427,7 +8030,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16981,
@@ -8448,7 +8050,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16975,
@@ -8469,7 +8070,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16965,
@@ -8490,7 +8090,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.16987,
@@ -8511,7 +8110,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00314,
@@ -8532,7 +8130,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00309,
@@ -8553,7 +8150,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00312,
@@ -8574,7 +8170,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00313,
@@ -8595,7 +8190,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00313,
@@ -8616,7 +8210,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00309,
@@ -8637,7 +8230,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00316,
@@ -8658,7 +8250,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               35.00318,
@@ -8679,7 +8270,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83648,
@@ -8700,7 +8290,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83644,
@@ -8721,7 +8310,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83648,
@@ -8742,7 +8330,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83621,
@@ -8763,7 +8350,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.83657,
@@ -8784,7 +8370,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.66986,
@@ -8805,7 +8390,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.50325,
@@ -8833,7 +8417,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33642,
@@ -8854,7 +8437,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33594,
@@ -8875,7 +8457,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33651,
@@ -8896,7 +8477,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33659,
@@ -8917,7 +8497,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16988,
@@ -8938,7 +8517,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16985,
@@ -8959,7 +8537,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16783,
@@ -8980,7 +8557,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.16984,
@@ -9001,7 +8577,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.00328,
@@ -9022,7 +8597,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.0032,
@@ -9043,7 +8617,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.00317,
@@ -9064,7 +8637,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.8352,
@@ -9085,7 +8657,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83657,
@@ -9106,7 +8677,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83652,
@@ -9127,7 +8697,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.66995,
@@ -9148,7 +8717,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.67001,
@@ -9169,7 +8737,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.50331,
@@ -9190,7 +8757,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.50332,
@@ -9211,7 +8777,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.3366,
@@ -9232,7 +8797,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.33663,
@@ -9253,7 +8817,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.17005,
@@ -9274,7 +8837,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.16999,
@@ -9295,7 +8857,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83638,
@@ -9316,7 +8877,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83675,
@@ -9337,7 +8897,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83667,
@@ -9365,7 +8924,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33645,
@@ -9386,7 +8944,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               34.33653,
@@ -9407,7 +8964,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83651,
@@ -9428,7 +8984,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83675,
@@ -9449,7 +9004,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83653,
@@ -9470,7 +9024,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83661,
@@ -9491,7 +9044,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.83666,
@@ -9512,7 +9064,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.58653,
@@ -9533,7 +9084,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.66991,
@@ -9554,7 +9104,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.66999,
@@ -9575,7 +9124,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.50323,
@@ -9596,7 +9144,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.5032,
@@ -9617,7 +9164,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.33656,
@@ -9638,7 +9184,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.3366,
@@ -9659,7 +9204,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.33658,
@@ -9680,7 +9224,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.33667,
@@ -9701,7 +9244,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.16991,
@@ -9722,7 +9264,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.16992,
@@ -9743,7 +9284,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.16995,
@@ -9764,7 +9304,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.1699,
@@ -9785,7 +9324,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.16971,
@@ -9806,7 +9344,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.17001,
@@ -9827,7 +9364,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.92,
@@ -9848,7 +9384,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00329,
@@ -9869,7 +9404,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00332,
@@ -9890,7 +9424,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00331,
@@ -9911,7 +9444,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00335,
@@ -9932,7 +9464,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00332,
@@ -9953,7 +9484,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00317,
@@ -9974,7 +9504,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.00335,
@@ -10002,7 +9531,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.08663,
@@ -10023,7 +9551,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               33.15325,
@@ -10044,7 +9571,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.66991,
@@ -10065,7 +9591,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.50334,
@@ -10086,7 +9611,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.93674,
@@ -10107,7 +9631,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83663,
@@ -10128,7 +9651,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83657,
@@ -10149,7 +9671,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.8367,
@@ -10170,7 +9691,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83671,
@@ -10191,7 +9711,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.83666,
@@ -10212,7 +9731,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.66992,
@@ -10233,7 +9751,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.67006,
@@ -10254,7 +9771,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.67014,
@@ -10275,7 +9791,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.50335,
@@ -10296,7 +9811,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.50337,
@@ -10317,7 +9831,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.5034,
@@ -10338,7 +9851,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.50336,
@@ -10359,7 +9871,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.50337,
@@ -10380,7 +9891,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.33671,
@@ -10401,7 +9911,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.33673,
@@ -10422,7 +9931,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.33672,
@@ -10443,7 +9951,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.3366,
@@ -10464,7 +9971,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.13672,
@@ -10485,7 +9991,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.17011,
@@ -10506,7 +10011,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.17002,
@@ -10527,7 +10031,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.17002,
@@ -10548,7 +10051,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               32.00345,
@@ -10569,7 +10071,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.83674,
@@ -10590,7 +10091,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.83671,
@@ -10611,7 +10111,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.83676,
@@ -10632,7 +10131,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.83679,
@@ -10653,7 +10151,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.7534,
@@ -10674,7 +10171,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67014,
@@ -10695,7 +10191,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67014,
@@ -10716,7 +10211,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67012,
@@ -10737,7 +10231,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67012,
@@ -10758,7 +10251,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67012,
@@ -10779,7 +10271,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.67016,
@@ -10800,7 +10291,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.50328,
@@ -10821,7 +10311,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.50351,
@@ -10842,7 +10331,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.33684,
@@ -10863,7 +10351,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.33677,
@@ -10884,7 +10371,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.33684,
@@ -10905,7 +10391,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.33686,
@@ -10926,7 +10411,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.15076,
@@ -10947,7 +10431,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               31.17011,
@@ -10975,7 +10458,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               30.67024,
@@ -10996,7 +10478,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               30.17028,
@@ -11024,7 +10505,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               28.17051,
@@ -11045,7 +10525,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               26.87065,
@@ -11073,7 +10552,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               26.17069,
@@ -11094,7 +10572,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               26.00401,
@@ -11122,7 +10599,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.75415,
@@ -11143,7 +10619,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.83745,
@@ -11164,7 +10639,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.67084,
@@ -11185,7 +10659,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.53747,
@@ -11206,7 +10679,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.47076,
@@ -11227,7 +10699,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               24.3375,
@@ -11255,7 +10726,6 @@
           "cocotile": false,
           "minZoom": 2,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               26.52928,
@@ -11276,7 +10746,6 @@
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 14,
-          "maxNativeZoom": 14,
           "bounds": [
             [
               27.02494,
