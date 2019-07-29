@@ -19917,6 +19917,24 @@ GSI.BookmarkPanel = L.Class.extend({
 
     msg = $("<div>").addClass("message").html("ブラウザのお気に入りに登録したい場合は、上記のURLをコピーして登録して下さい。");
     this._container.append(msg);
+    
+    //twitter, Facebookへのリンクをクリップボタン内に格納
+    gsi_bookmark_panel_twitter = $("<img>").attr('src', './image/system/twitter.png' );
+    gsi_bookmark_panel_twitter = gsi_bookmark_panel_twitter.attr('id', 'bookmark_title_twitter');
+    gsi_bookmark_panel_twitter = gsi_bookmark_panel_twitter.css('cursor', 'pointer' );
+    gsi_bookmark_panel_twitter = gsi_bookmark_panel_twitter.on('click', function () {
+      GSI.SHARE.showTwitter();
+    });
+    this._container.append(gsi_bookmark_panel_twitter);
+    
+    gsi_bookmark_panel_facebook = $("<img>").attr('src', './image/system/facebook.png' );
+//    gsi_bookmark_panel_facebook = gsi_bookmark_panel_facebook.attr('id', 'title_facebook');
+    gsi_bookmark_panel_facebook = gsi_bookmark_panel_facebook.css('cursor', 'pointer' );
+    gsi_bookmark_panel_facebook = gsi_bookmark_panel_facebook.on('click', function () {
+      GSI.SHARE.showFacebook();
+    });
+    this._container.append(gsi_bookmark_panel_facebook);
+    
 
     $("body").append(this._container);
 
