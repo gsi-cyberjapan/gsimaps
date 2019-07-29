@@ -443,7 +443,7 @@ input[type=search]{
 	background-repeat:no-repeat;
 	*/
 	padding-left:100px;
-    padding-right:130px;
+    padding-right:170px;
 }
 #header.logo_s {
 	/*
@@ -452,7 +452,7 @@ input[type=search]{
 	background-repeat:no-repeat;
 	*/
 	padding-left:100px;
-    padding-right:130px;
+    padding-right:170px;
 }
 
 form {
@@ -5838,7 +5838,45 @@ layertreedialog_search_taglist *
 	text-decoration:none;
 }
 
+#title_vectorlogo {
+	top:3px;
+	right:68px;
+	position:absolute;
+	display:block;
+	font-weight: bold;
+    font-family: 'ヒラギノ丸ゴ Pro W4','ヒラギノ丸ゴ Pro','Hiragino Maru Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    line-height:26px;
+    cursor:pointer;
+	/*
+    border-radius: 50%;
 
+    border:1px solid #fff;
+    background-color:#1D417A;
+    */
+    /*border: 2px solid #666;
+	-moz-border-radius: 32px;
+	-webkit-border-radius: 32px;
+	border-radius: 32px;
+	behavior: url(border-radius.htc);*/
+	
+	height: 30px;
+    width:98px;
+	/*background-color:#4086cd;*/
+	background-image: url(../image/system/vectorlogo.png);  
+	background-position:50% 50% ;
+	background-size:contain ;
+	background-repeat:no-repeat;
+	
+	/*
+	background-image: url(../image/help/help.png);  
+	background-position:50% 50% ;
+	background-repeat:no-repeat;
+	*/
+	text-decoration:none;
+}
 #title_twitter {
 	top:5px;
 	right:96px;
@@ -5876,6 +5914,8 @@ layertreedialog_search_taglist *
 	background-repeat:no-repeat;
 	*/
 	text-decoration:none;
+	padding-left:20px;
+    padding-right:20px;
 }
 #title_facebook {
 	top:5px;
@@ -5908,6 +5948,14 @@ layertreedialog_search_taglist *
 	background-repeat:no-repeat;
 	*/
 	text-decoration:none;
+}
+
+#bookmark_title_twitter {
+	padding-right:5px;
+}
+
+#help2 {
+	line-height: 1.2;
 }
 
 #title_help {
