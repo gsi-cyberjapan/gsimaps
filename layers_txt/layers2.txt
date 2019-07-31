@@ -4546,9 +4546,9 @@
               "entries": [
                {
                   "type": "Layer",
-                  "id": "fgd_update_2019_06",
-                  "title": "6月更新",
-                  "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_06/{z}/{x}/{y}.png",
+                  "id": "fgd_update_2019_07",
+                  "title": "7月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_07/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 4,
                   "maxZoom": 12
