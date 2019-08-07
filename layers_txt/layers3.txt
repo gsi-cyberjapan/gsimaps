@@ -31,7 +31,7 @@
         {
           "type": "Layer",
           "id": "kenchou",
-          "title": "験潮場",
+          "title": "験潮場（海岸昇降検知センター登録）",
           "url": "https://maps.gsi.go.jp/xyz/kenchou/{z}/{x}/{y}.geojson",
           "cocotile": false,
           "minZoom": 2,
