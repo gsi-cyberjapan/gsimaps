@@ -1,0 +1,216 @@
+{
+  "layers": [
+             {
+                  "type": "LayerGroup",
+                  "title": "航空機SAR画像",
+                  "toggleall": false,
+                 "entries": [
+               {
+                  "type": "LayerGroup",
+                  "title": "2019/8/8観測",
+                  "toggleall": false,
+                 "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20190808_asama_c1",
+                      "title": "2019/8/8観測（東から観測した画像）",
+                      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c1/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br> レーダー照射方向は東から西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                {
+                  "type": "Layer",
+                  "id": "20190808_asama_c2",
+                  "title": "2019/8/8観測（北から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c2/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は北から南方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20190808_asama_c3",
+                  "title": "2019/8/8観測（西から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c3/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は西から東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20190808_asama_c4",
+                  "title": "2019/8/8観測（南から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c4/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は南から北方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                                {
+                  "type": "Layer",
+                  "id": "20190808_asama_c5",
+                  "title": "2019/8/8観測（北東から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c5/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+               {
+                  "type": "Layer",
+                  "id": "20190808_asama_c6",
+                  "title": "2019/8/8観測（北西から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c6/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は北西から南東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                               {
+                  "type": "Layer",
+                  "id": "20190808_asama_c7",
+                  "title": "2019/8/8観測（南西から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c7/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は南西から北東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                               {
+                  "type": "Layer",
+                  "id": "20190808_asama_c8",
+                  "title": "2019/8/8観測（南東から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c8/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2019/8/8)<br>レーダー照射方向は南東から北西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }                
+                ]
+                },
+                               {
+                  "type": "LayerGroup",
+                  "title": "2018/6/22観測",
+                  "toggleall": false,
+                 "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "20180622_asama_c1",
+                      "title": "2018/6/22観測（東から観測した画像）",
+                      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c1/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                      "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は東から西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                {
+                  "type": "Layer",
+                  "id": "20180622_asama_c2",
+                  "title": "2018/6/22観測（北から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c2/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22))<br>レーダー照射方向は北から南方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20180622_asama_c4",
+                  "title": "2018/6/22観測（南から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c4/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は南から北方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "20180622_asama_c5",
+                  "title": "2018/6/22観測（北東から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c5/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は北東から南西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                                {
+                  "type": "Layer",
+                  "id": "20180622_asama_c6",
+                  "title": "2018/6/22観測（北西から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c6/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は北西から南東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+               {
+                  "type": "Layer",
+                  "id": "20180622_asama_c7",
+                  "title": "2018/6/22観測（南西から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c7/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は南西から北東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                               {
+                  "type": "Layer",
+                  "id": "20180622_asama_c8",
+                  "title": "2018/6/22観測（南東から観測した画像）",
+                  "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c8/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22)<br>レーダー照射方向は南東から北西方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+            ]
+                }                
+              ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "SAR解析結果(ALOS-2)",
+                  "toggleall": false,
+                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_asamayama.txt"
+                },
+                                {
+                  "type": "Layer",
+                  "id": "20190807asama_kazantaisaku",
+                  "title": "火山災害対策用図（浅間山）",
+                  "url": "https://maps.gsi.go.jp/xyz/20190807asama_kazantaisaku/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山災害対策用図「浅間山」</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">火山災害対策用図<br>航空レーザ測量データを基に作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20190807asama_kazantaisaku.PNG\"width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "_vbm_2018-5",
+                  "title": "火山基本図「浅間山」",
+                  "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 8,
+                  "maxZoom": 17,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/l_vbm_asama.jpg",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山基本図「浅間山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+               {
+              "type": "Layer",
+              "id": "20190807asama_sekisyoku",
+              "title": "赤色立体地図（浅間山）",
+              "url": "https://maps.gsi.go.jp/xyz/20190807asama_sekisyoku/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 17,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+             }
+            ]
+}

@@ -148,6 +148,436 @@
               "html": "<div class=\"gsi_layerinfo_title\">火山活動</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
               }
       ]
+     },
+     {
+      "type": "LayerGroup",
+      "title": "都道府県の地形（デジタル標高地形図）",
+      "toggleall": false,
+      "entries": [
+            {
+                  "type": "Layer",
+                  "id": "d1-no943",
+                  "title": "北海道_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no943/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(北海道_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no944",
+                  "title": "青森県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no944/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(青森県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no945",
+                  "title": "岩手県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no945/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岩手県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no946",
+                  "title": "宮城県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no946/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(宮城県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no947",
+                  "title": "秋田県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no947/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(秋田県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no948",
+                  "title": "山形県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no948/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山形県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no949",
+                  "title": "福島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no949/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no950",
+                  "title": "茨城県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no950/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(茨城県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no951",
+                  "title": "栃木県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no951/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(栃木県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no952",
+                  "title": "群馬県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no952/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(群馬県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no953",
+                  "title": "埼玉県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no953/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(埼玉県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no954",
+                  "title": "千葉県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no954/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(千葉県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no955",
+                  "title": "東京都_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no955/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(東京都_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no956",
+                  "title": "神奈川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no956/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(神奈川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no957",
+                  "title": "新潟県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no957/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(新潟県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no958",
+                  "title": "富山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no958/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(富山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no959",
+                  "title": "石川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no959/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(石川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no960",
+                  "title": "福井県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no960/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福井県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no961",
+                  "title": "山梨県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no961/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山梨県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no962",
+                  "title": "長野県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no962/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(長野県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no963",
+                  "title": "岐阜県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no963/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岐阜県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no964",
+                  "title": "静岡県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no964/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(静岡県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no965",
+                  "title": "愛知県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no965/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(愛知県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no966",
+                  "title": "三重県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no966/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(三重県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no967",
+                  "title": "滋賀県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no967/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(滋賀県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no968",
+                  "title": "京都府_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no968/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(京都府_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no969",
+                  "title": "大阪府_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no969/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(大阪府_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no970",
+                  "title": "兵庫県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no970/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(兵庫県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no971",
+                  "title": "奈良県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no971/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(奈良県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no972",
+                  "title": "和歌山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no972/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(和歌山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no973",
+                  "title": "鳥取県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no973/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(鳥取県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no974",
+                  "title": "島根県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no974/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(島根県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no975",
+                  "title": "岡山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no975/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岡山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no976",
+                  "title": "広島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no976/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(広島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no977",
+                  "title": "山口県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no977/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山口県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no978",
+                  "title": "徳島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no978/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(徳島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no979",
+                  "title": "香川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no979/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(香川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no980",
+                  "title": "愛媛県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no980/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(愛媛県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no981",
+                  "title": "高知県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no981/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(高知県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no982",
+                  "title": "福岡県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no982/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福岡県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no983",
+                  "title": "佐賀県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no983/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(佐賀県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no984",
+                  "title": "長崎県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no984/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(長崎県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no985",
+                  "title": "熊本県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no985/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(熊本県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no986",
+                  "title": "大分県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no986/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(大分県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no987",
+                  "title": "宮崎県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no987/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(宮崎県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no988",
+                  "title": "鹿児島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no988/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(鹿児島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no989",
+                  "title": "沖縄県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no989/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(沖縄県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+      ]
      }
  ]
 }
