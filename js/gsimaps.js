@@ -29075,7 +29075,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
 /*******************************************************
  GSI.DEMLoader
     標高タイル読込
-    自分で作る標高図・断面図などで利用
+    自分で作る色別標高図などで利用
     3D版は別ファイル（leafletの機能を使わない）
 *******************************************************/
 
@@ -29472,6 +29472,329 @@ GSI.DEMLoader = L.Evented.extend({
 
 });
 
+
+/*******************************************************
+ GSI.CrossSectionDEMLoader
+    標高タイル読込
+    断面図で利用
+    3D版は別ファイル（leafletの機能を使わない）
+*******************************************************/
+GSI.CrossSectionDEMLoader = L.Evented.extend({
+
+  options: {
+    minZoom: 8,
+    overZooming: true,
+    tms: false
+  },
+
+  // 初期化
+  initialize: function (map, x, y, z, urlList, options) {
+
+    if (!GSI.DEMLoader.pow2_8) {
+      // 利用するべき乗キャッシュ
+      GSI.CrossSectionDEMLoader.pow2_8 = Math.pow(2, 8);
+      GSI.CrossSectionDEMLoader.pow2_16 = Math.pow(2, 16);
+      GSI.CrossSectionDEMLoader.pow2_23 = Math.pow(2, 23);
+      GSI.CrossSectionDEMLoader.pow2_24 = Math.pow(2, 24);
+    }
+
+    this._map = map;
+
+    this._coords = {
+      x: x,
+      y: y,
+      z: z
+    };
+
+    L.setOptions(this, options);
+
+    this._urlList = urlList;
+  },
+
+  // 表示に必要な範囲
+  _pxBoundsToTileRange: function (bounds) {
+    var tileSize = 256;
+    return new L.Bounds(
+      bounds.min.unscaleBy(tileSize).floor(),
+      bounds.max.unscaleBy(tileSize).ceil().subtract([1, 1]));
+  },
+
+  // 後始末、破棄
+  destroy: function () {
+    if (this._demImage) {
+      this._demImage.onload = null;
+      this._demImage.onerror = null;
+      $(this._demImage).off("load").off("error");
+      delete this._demImage;
+      this._demImage = null;
+    }
+
+    if (this._demData) {
+      delete this._demData;
+      this._demData = null;
+    }
+  },
+
+  // 読み込んだデータ
+  getData: function () {
+    return this._demData;
+  },
+
+  // 読み込み開始
+  load: function () {
+
+    if (!this._globalTileRange) {
+      var bounds = this._map.getPixelWorldBounds(this._tileZoom);
+      if (bounds) {
+        this._globalTileRange = this._pxBoundsToTileRange(bounds);
+      }
+    }
+
+    this._demData = null;
+    this._demLoaded = false;
+    this._currentCoords = $.extend(true, {}, this._coords);
+
+
+    this._urlList = GSI.CrossSectionDEMLoader.getURLList(this._coords.x, this._coords.y, this._coords.z);
+
+    this._startLoadDEM(this._currentCoords);
+
+  },
+
+  // URL生成
+  getDEMTileUrl: function (url, coords) {
+    var data = {
+      r: L.Browserretina ? '@2x' : '',
+      s: this.options.subdomains,
+      x: coords.x,
+      y: coords.y,
+      z: coords.z
+    };
+    if (this._map && !this._map.options.crs.infinite) {
+      var invertedY = this._globalTileRange.max.y - coords.y;
+      if (this.options.tms) {
+        data['y'] = invertedY;
+      }
+      data['-y'] = invertedY;
+    }
+
+    return L.Util.template(url, L.extend(data, this.options));
+  },
+
+  // 指定のタイルが無い場合一つ上のズーム
+  _nextZoom: function () {
+
+    var nextZoom = this._currentCoords.z - 1;
+
+
+
+    if (nextZoom < this.options.minZoom) {
+      this._demLoadError();
+      return;
+    }
+
+    var scale = Math.pow(2, this._coords.z - nextZoom);
+    var point = L.point(this._coords.x * 256 / scale, this._coords.y * 256 / scale)
+      .divideBy(256)._floor();
+
+    this._currentCoords = {
+      x: point.x,
+      y: point.y,
+      z: nextZoom
+    };
+
+    this._startLoadDEM(this._currentCoords);
+
+
+  },
+
+  // 読み込み開始
+  _startLoadDEM: function (coords) {
+
+    var urlList = $.extend(true, [], this._urlList);
+    this._loadDEM(urlList, coords);
+
+
+  },
+
+  // 標高データ取得
+  _loadDEM: function (urlList, coords) {
+    var targetUrl = null;
+    var z = coords.z;
+
+    while (urlList.length > 0) {
+      var urlInfo = urlList.shift();
+      if (urlInfo.minZoom <= z && z <= urlInfo.maxZoom) {
+        targetUrl = $.extend(true, {}, urlInfo);
+        break;
+      }
+    }
+
+    if (!targetUrl) {
+      //err
+      if (z > 0 && this.options.overZooming) {
+        this._nextZoom();
+      }
+      else {
+        this._demLoadError();
+      }
+      return;
+    }
+
+    var url = this.getDEMTileUrl(targetUrl.url, coords);
+
+    this._demImage = document.createElement('img');
+
+    $(this._demImage)
+      .on('load', L.bind(
+        function (urlList, coords, targetUrl) {
+          this._demLoadSuccess(urlList, coords, targetUrl);
+        }, this, urlList, coords, targetUrl)
+      )
+      .on('error', L.bind(
+        function (urlList, coords, e) {
+          this._loadDEM(urlList, coords);
+        }, this, urlList, coords)
+      );
+
+    this._demImage.setAttribute('crossOrigin', 'anonymous');
+    this._demImage.setAttribute('role', 'presentation');
+
+    this._demImage.src = url;
+
+  },
+
+  // 読み込み完了後解析
+  _demLoadSuccess: function (urlList, coords, targetUrl) {
+    var scale = 1, lt, rb, point, idx = 0, destIdx = 0;
+    if (this._coords.z != coords.z) {
+      scale = Math.pow(2, this._coords.z - coords.z);
+
+      lt = L.point(coords.x * 256 * scale, coords.y * 256 * scale);
+      rb = L.point((coords.x + 1) * 256 * scale, (coords.y + 1) * 256 * scale);
+
+      point = L.point(this._coords.x * 256, this._coords.y * 256);
+
+      point.x -= lt.x;
+      point.y -= lt.y;
+    }
+    else {
+      point = L.point(0, 0);
+    }
+
+
+
+    var pow2_8 = GSI.CrossSectionDEMLoader.pow2_8;
+    var pow2_16 = GSI.CrossSectionDEMLoader.pow2_16;
+    var pow2_23 = GSI.CrossSectionDEMLoader.pow2_23;
+    var pow2_24 = GSI.CrossSectionDEMLoader.pow2_24;
+
+    var demData = (this._demData ? this._demData : []);
+
+    var canvas = GSI.CrossSectionDEMLoader.getCanvas();
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(this._demImage, 0, 0, 256, 256);
+    var data = ctx.getImageData(0, 0, 256, 256).data;
+    var hasErrorPixel = false;
+
+
+    for (var y = 0; y < 256; ++y) {
+      for (var x = 0; x < 256; ++x) {
+
+        if (!this._demData || this._demData[destIdx] == null) {
+
+          if (scale != 1) {
+            var x2 = Math.floor((point.x + x) / scale);
+            var y2 = Math.floor((point.y + y) / scale);
+            idx = (y2 * 256 * 4) + (x2 * 4);
+          }
+          else
+            idx = (y * 256 * 4) + (x * 4);
+
+
+          var r = data[idx + 0];
+          var g = data[idx + 1];
+          var b = data[idx + 2];
+          var h = 0;
+          if (r != 128 || g != 0 || b != 0) {
+            var d = r * pow2_16 + g * pow2_8 + b;
+            h = (d < pow2_23) ? d : d - pow2_24;
+            if (h == -pow2_23) h = 0;
+            else h *= 0.01;
+            demData[destIdx] = h;
+          }
+          else {
+            hasErrorPixel = true;
+            demData[destIdx] = null;
+          }
+
+        }
+
+        destIdx++;
+      }
+
+    }
+    if (this._demData) {
+      hasErrorPixel = false;
+
+      for (var i = 0; i < demData.length; i++) {
+        if (demData[i] == null) {
+          hasErrorPixel = true;
+          break;
+        }
+      }
+      if (hasErrorPixel) {
+        hasErrorPixel = false;
+        var complementList = $.extend(true, [], this._urlList);
+
+        for (var i = 0; i < complementList.length; i++) {
+          if (complementList[i].url == targetUrl.url &&
+            complementList[i].minZoom == targetUrl.minZoom &&
+            complementList[i].maxZoom == targetUrl.maxZoom) {
+            complementList.splice(i, 1);
+            if (complementList.length > 0) {
+              targetUrl.complementList = complementList;
+              hasErrorPixel = true;
+            }
+            break;
+          }
+
+        }
+      }
+    }
+    this._demData = demData;
+
+
+    if (hasErrorPixel && targetUrl.complementList) {
+      // DEM5aなどの境目補完
+      // urlリストを補完用に変更
+      this._urlList = $.extend(true, [], targetUrl.complementList);
+      this._startLoadDEM(this._currentCoords);
+
+    }
+    else {
+
+      this._demLoaded = true;
+      this._checkLoaded();
+    }
+
+  },
+
+  _demLoadError: function () {
+    this._demLoaded = true;
+    this._checkLoaded();
+  },
+
+  // 読み込み完了チェック
+  _checkLoaded: function () {
+    if (this._demLoaded &&
+      (!this.options.useHillshademap || this._hillshademapLoaded)) {
+      this.fire("load");
+    }
+  }
+
+});
+
 // 標高png読み取り用Canvas
 GSI.DEMLoader.getCanvas = function () {
   if (!GSI.DEMLoader._canvas) {
@@ -29480,6 +29803,16 @@ GSI.DEMLoader.getCanvas = function () {
     GSI.DEMLoader._canvas.height = 256;
   }
   return GSI.DEMLoader._canvas;
+}
+
+// 標高png読み取り用Canvas
+GSI.CrossSectionDEMLoader.getCanvas = function () {
+  if (!GSI.CrossSectionDEMLoader._canvas) {
+    GSI.CrossSectionDEMLoader._canvas = document.createElement('canvas');
+    GSI.CrossSectionDEMLoader._canvas.width = 256;
+    GSI.CrossSectionDEMLoader._canvas.height = 256;
+  }
+  return GSI.CrossSectionDEMLoader._canvas;
 }
 
 /*******************************************************
@@ -29500,6 +29833,160 @@ delete CONFIG.DEMAREA3; CONFIG.DEMAREA3 = null;
 
 // タイル座標から標高タイルURLを決定
 GSI.DEMLoader.getURLList = function (x, y, z) {
+
+  //-------------------------------------------------------------------------------
+  var getCoords = function (x, y, z, targetZoom) {
+    var scale = Math.pow(2, z - targetZoom);
+    var point = L.point(x * 256 / scale, y * 256 / scale).divideBy(256)._floor();
+
+    return {
+      x: point.x,
+      y: point.y,
+      z: targetZoom
+    };
+  };
+  var coordsToKey = function (coords) { return coords.z + "/" + coords.x + "/" + coords.y; };
+  //-------------------------------------------------------------------------------
+
+
+  // ZL8以下はdem_gm
+  if (z <= 8) return [{
+    url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+    minZoom: 0,
+    maxZoom: 14
+  }];
+
+
+  // ZL9以上
+  var key;
+
+  // DEMAREAになけれdem_gm
+  key = coordsToKey(getCoords(x, y, z, 8));
+  if (!GSI.DEMLoader.DEMAREA[key]) return [{
+    url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+    minZoom: 0,
+    maxZoom: 14
+  }];
+
+
+
+  // DEMAREA2になければdem
+  key = coordsToKey(getCoords(x, y, z, 9));
+  if (!GSI.DEMLoader.DEMAREA2[key])
+    return [
+      {
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 15,
+        complementList: [
+          /*
+          {
+            url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
+            minZoom : 0,
+            maxZoom : 14
+          },
+          */
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 0,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 15,
+        complementList: [
+          /*
+          {
+            url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
+            minZoom : 0,
+            maxZoom : 14
+          },
+          */
+        //  {
+        //     url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+        //     minZoom: 0,
+        //     maxZoom: 14
+        //   },
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 0,
+            maxZoom: 14
+          }
+        ]
+      },
+      // {
+      //   url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+      //   minZoom: 0,
+      //   maxZoom: 14,
+      //   complementList: [
+      //     {
+      //       url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+      //       minZoom: 0,
+      //       maxZoom: 14
+      //     }
+      //   ]
+      // },
+      /*
+      {
+        url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
+        minZoom : 0,
+        maxZoom : 14,
+        complementList : [
+          {
+            url : "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom : 0,
+            maxZoom : 14
+          }
+        ]
+      },
+      */
+      {
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+        minZoom: 0,
+        maxZoom: 14
+      }
+    ];
+
+
+
+  key = coordsToKey(getCoords(x, y, z, 10));
+  if (!GSI.DEMLoader.DEMAREA3[key] == -1) {
+    // DEMAREA2にあって、DEMAREA3になければdemgm
+    return [{
+      url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 8
+    }];
+  }
+  else {
+    // DEMAREA2にあって、DEMAREA3にあればdem
+    return [{
+      url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 14,
+      complementList: [
+        {
+          url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+          minZoom: 0,
+          maxZoom: 8
+        }
+      ]
+    }
+    ];
+  }
+
+
+};
+
+GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
 
   //-------------------------------------------------------------------------------
   var getCoords = function (x, y, z, targetZoom) {
@@ -29635,7 +30122,6 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
 
 
 };
-
 
 
 
@@ -31147,13 +31633,13 @@ GSI.CrossSectionView = L.Evented.extend({
     {
       "id": "dem5a",
       url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
-      minZoom: 15,
+      minZoom: 0,
       maxZoom: 15
     },
     {
       "id": "dem5b",
       url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
-      minZoom: 15,
+      minZoom: 0,
       maxZoom: 15
     },/*
     {
@@ -31688,9 +32174,12 @@ GSI.CrossSectionView = L.Evented.extend({
           x: tilePoint.x,
           y: tilePoint.y,
           z: zoom,
-          loader: new GSI.DEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
+          loader: new GSI.CrossSectionDEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
             overZooming: true,
           })
+          // loader: new GSI.DEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
+          //   overZooming: true,
+          // })
         };
 
         this._requestTileList[data.points[i].key].loader.on("load", L.bind(this._demLoaded, this, data.points[i].key));
@@ -31727,9 +32216,12 @@ GSI.CrossSectionView = L.Evented.extend({
           x: tilePoint.x,
           y: tilePoint.y,
           z: zoom,
-          loader: new GSI.DEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
+          loader: new GSI.CrossSectionDEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
             overZooming: true,
           })
+          // loader: new GSI.DEMLoader(this._map, tilePoint.x, tilePoint.y, zoom, null, {
+          //   overZooming: true,
+          // })
         };
 
         this._requestTileList[pointData.key].loader.on("load", L.bind(this._demLoaded, this, pointData.key));
