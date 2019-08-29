@@ -3616,6 +3616,14 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "jin201908",
+                  "title": "8月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin201908/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "jin201907",
                   "title": "7月更新",
                   "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
