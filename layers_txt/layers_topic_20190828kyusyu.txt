@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "令和元年８月の前線に伴う大雨",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers_20190828kyusyu.txt"
+     }
+            ]
+}

@@ -1,11 +1,7 @@
 [
 	{
         "top":true,
-		"url":"./layers_topic_20190704kagoshima.txt"
-	},
-	{
-        "top":true,
-		"url":"./layers_topic_20190618yamagatakenoki.txt"
+		"url":"./layers_topic_20190828kyusyu.txt"
 	},
 	{
 		"url":"./layers1.txt"
