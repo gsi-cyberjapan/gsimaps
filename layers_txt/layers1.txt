@@ -19,7 +19,7 @@
         {
           "type": "Layer",
           "id": "seamlessphoto_spec",
-          "title": "┗全国最新写真（シームレス）撮影期間",
+          "title": "┗撮影期間",
           "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 14,
@@ -41,7 +41,7 @@
         {
           "type": "Layer",
           "id": "ort_spec",
-          "title": "┗2007年～撮影期間",
+          "title": "┗撮影期間",
           "url": "https://maps.gsi.go.jp/xyz/ort_spec/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 14,
