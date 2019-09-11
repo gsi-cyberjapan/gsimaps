@@ -152,7 +152,8 @@ CONFIG.CONFIRM_LAYERS = {
       "20180130_kusatsushiranesan_sekishokurittai",
       "20180309_sekisyokurittai_kirishima",
       "kuchinoerabured",
-      "2018_sekisyokurittai_azumayama"
+      "2018_sekisyokurittai_azumayama",
+      "20190807asama_sekisyoku"
     ]
   }
 };
@@ -29500,7 +29501,9 @@ GSI.CrossSectionDEMLoader = L.Evented.extend({
   // 初期化
   initialize: function (map, x, y, z, urlList, options) {
 
-    if (!GSI.DEMLoader.pow2_8) {
+    // 20190904
+    //if (!GSI.DEMLoader.pow2_8) {
+    if (!GSI.CrossSectionDEMLoader.pow2_8) {
       // 利用するべき乗キャッシュ
       GSI.CrossSectionDEMLoader.pow2_8 = Math.pow(2, 8);
       GSI.CrossSectionDEMLoader.pow2_16 = Math.pow(2, 16);
@@ -29552,7 +29555,6 @@ GSI.CrossSectionDEMLoader = L.Evented.extend({
 
   // 読み込み開始
   load: function () {
-
     if (!this._globalTileRange) {
       var bounds = this._map.getPixelWorldBounds(this._tileZoom);
       if (bounds) {
