@@ -127,8 +127,8 @@ CONFIG.CONFIRM_LAYERS = {
     "title" : "留意事項", // 確認ダイアログに表示するタイトル
 
     // 表示するメッセージ
-    "message" : "航空法第１３２条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第２３６条第１号に掲げる空域（空港等の周辺空域）の投影面下となる場所を表示します。<br>" +
-                "なお、この情報には誤差が含まれている場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>" +
+    "message" : "航空法第132条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第236条第1号から第3号までに掲げる空域（空港等の周辺空域）を表示します。緑色の面は、上空での飛行が禁止される制限表面を表します。紫色の面は、上空及びその下の空域での飛行が禁止される進入表面及び転移表面並びに上空の空域で飛行が禁止される空港等の敷地を表します。<br>" +
+                "なお、この情報には誤差が含まれている場合があります。また空港等の敷地については工事等により変更がある場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>" +
                   "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
     "withBlend" : false, // 合成するかどうか
     "layers" : [ // レイヤーのIDを配列で指定
@@ -152,7 +152,8 @@ CONFIG.CONFIRM_LAYERS = {
       "20180130_kusatsushiranesan_sekishokurittai",
       "20180309_sekisyokurittai_kirishima",
       "kuchinoerabured",
-      "2018_sekisyokurittai_azumayama"
+      "2018_sekisyokurittai_azumayama",
+      "20190807asama_sekisyoku"
     ]
   }
 };
@@ -29500,7 +29501,9 @@ GSI.CrossSectionDEMLoader = L.Evented.extend({
   // 初期化
   initialize: function (map, x, y, z, urlList, options) {
 
-    if (!GSI.DEMLoader.pow2_8) {
+    // 20190904
+    //if (!GSI.DEMLoader.pow2_8) {
+    if (!GSI.CrossSectionDEMLoader.pow2_8) {
       // 利用するべき乗キャッシュ
       GSI.CrossSectionDEMLoader.pow2_8 = Math.pow(2, 8);
       GSI.CrossSectionDEMLoader.pow2_16 = Math.pow(2, 16);
@@ -29552,7 +29555,6 @@ GSI.CrossSectionDEMLoader = L.Evented.extend({
 
   // 読み込み開始
   load: function () {
-
     if (!this._globalTileRange) {
       var bounds = this._map.getPixelWorldBounds(this._tileZoom);
       if (bounds) {
