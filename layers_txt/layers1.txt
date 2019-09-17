@@ -19,7 +19,7 @@
         {
           "type": "Layer",
           "id": "seamlessphoto_spec",
-          "title": "┗全国最新写真（シームレス）撮影期間",
+          "title": "┗撮影期間",
           "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 14,
@@ -36,12 +36,12 @@
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">2007年～</div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">2007年～</div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
           "id": "ort_spec",
-          "title": "┗2007年～撮影期間",
+          "title": "┗撮影期間",
           "url": "https://maps.gsi.go.jp/xyz/ort_spec/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 14,
@@ -69,7 +69,7 @@
           "minZoom": 10,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1988年～1990年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1988年～1990年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -81,7 +81,7 @@
           "minZoom": 10,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1984年～1987年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1984年～1987年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -93,7 +93,7 @@
           "minZoom": 10,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1979年～1983年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1979年～1983年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -105,7 +105,7 @@
           "minZoom": 10,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1974年～1978年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1974年～1978年)</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -117,7 +117,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1969年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1961年～1969年)</div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -129,7 +129,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1945年～1950年)</div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -141,7 +141,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 18,
-          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1936年頃)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(1936年頃)</div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "LayerGroup",
