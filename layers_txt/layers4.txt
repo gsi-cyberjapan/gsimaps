@@ -1445,6 +1445,18 @@
           "entries": [
            {
              "type": "LayerGroup",
+             "title": "令和元年9月22日宮崎県延岡市で発生した竜巻",
+             "toggleall": false,
+             "src": "./layers_20190922typhoon17.txt"
+            },
+           {
+             "type": "LayerGroup",
+             "title": "令和元年８月の前線に伴う大雨",
+             "toggleall": false,
+             "src": "./layers_20190828kyusyu.txt"
+            },
+           {
+             "type": "LayerGroup",
              "title": "令和元年６月下旬からの大雨",
              "toggleall": false,
              "src": "./layers_20190704kagoshima.txt"
@@ -3221,30 +3233,12 @@
              "toggleall": false,
              "src": "./layers_20180124kusatsushirane.txt"
             },
-            {
-              "type": "LayerGroup",
-              "title": "浅間山",
-              "toggleall": false,
-              "entries": [
-                {
-                  "type": "LayerGroup",
-                  "title": "SAR解析結果(ALOS-2)",
-                  "toggleall": false,
-                  "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_asamayama.txt"
-                },
-                {
-                  "type": "Layer",
-                  "id": "_vbm_2018-5",
-                  "title": "火山基本図「浅間山」",
-                  "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
-                  "cocotile": true,
-                  "minZoom": 8,
-                  "maxZoom": 17,
-                  "legendUrl": "https://maps.gsi.go.jp/legend/l_vbm_asama.jpg",
-                  "html": "<div class=\"gsi_layerinfo_title\">火山基本図「浅間山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-                }
-              ]
-            },
+    		{
+    		 "type": "LayerGroup",
+    		 "title": "浅間山",
+    		 "toggleall": false,
+    		 "src": "./layers_topic_20190807asamayama.txt"
+    		 },
              {
               "type": "LayerGroup",
               "title": "御嶽山",
