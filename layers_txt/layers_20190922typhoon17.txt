@@ -36,6 +36,17 @@
           "html": "雲の影響により地上が見えにくい場合があります。"
           }
          ]
+    },
+    {
+      "type": "Layer",
+      "id": "20190922typhoon17_nobeokachiku_0924uav",
+      "title": "UAV動画",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20190922typhoon17_nobeokachiku_0924uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
     }
   ]
 }
