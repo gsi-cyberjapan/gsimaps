@@ -3614,6 +3614,14 @@
               "title": "2019年迅速更新情報",
               "toggleall": false,
               "entries": [
+               {
+                  "type": "Layer",
+                  "id": "jin201909",
+                  "title": "9月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin201909/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
                 {
                   "type": "Layer",
                   "id": "jin201908",
