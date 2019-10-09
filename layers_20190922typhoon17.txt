@@ -1,0 +1,52 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+          {
+          "type": "Layer",
+          "id": "20190922typhoon17_nobeokachiku_0924do",
+          "title": "延岡地区（9/24撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190922typhoon17_nobeokachiku_0924do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]  
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+         {
+          "type": "Layer",
+          "id": "20190922typhoon17_nobeokachiku_0924suichoku",
+          "title": "延岡地区（9/24撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190922typhoon17_nobeokachiku_0924suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+    },
+    {
+      "type": "Layer",
+      "id": "20190922typhoon17_nobeokachiku_0924uav",
+      "title": "UAV動画",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20190922typhoon17_nobeokachiku_0924uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    }
+  ]
+}
