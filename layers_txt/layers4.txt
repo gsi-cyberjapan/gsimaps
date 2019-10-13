@@ -1445,6 +1445,12 @@
           "entries": [
            {
              "type": "LayerGroup",
+             "title": "令和元年台風第１９号",
+             "toggleall": false,
+             "src": "./layers_20191012typhoon19.txt"
+            },
+           {
+             "type": "LayerGroup",
              "title": "令和元年9月22日宮崎県延岡市で発生した竜巻",
              "toggleall": false,
              "src": "./layers_20190922typhoon17.txt"

@@ -1,0 +1,172 @@
+{
+"layers": [
+	{
+	"type": "LayerGroup",
+	"title": "垂直写真（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "千曲川地区（長野県長野市、須坂市、中野市、千曲市、小布施町、山ノ内町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1013suichoku",
+			"title": "千曲川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "多摩川地区（東京都大田区、世田谷区、八王子市、立川市、府中市、昭島市、調布市、日野市、国立市、福生市、狛江市、多摩市、稲城市、あきる野市、神奈川県川崎市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tamagawa_1013suichoku",
+			"title": "多摩川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tamagawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "都幾川地区（埼玉県川越市、東松山市、坂戸市、嵐山町、川島町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tokigawa_1013suichoku",
+			"title": "都幾川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tokigawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+					]
+		}
+				]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "斜め写真",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "吉田川地区（宮城県大崎市、富谷市、松島町、大和町、大郷町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_yoshidagawa_1013naname",
+			"title": "吉田川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_yoshidagawa_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": ""
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川（丸森）地区（宮城県角田市、丸森町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma-marumori_1013naname",
+			"title": "阿武隈川（丸森）地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma-marumori_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": ""
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川地区（福島県郡山市、須賀川市、本宮市、鏡石町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma_1013naname",
+			"title": "阿武隈川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": ""
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "長野地区（長野県長野市、須坂市、中野市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nagano_1013naname",
+			"title": "長野地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nagano_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "埼玉地区（埼玉県さいたま市、川越市、東松山市、狭山市、入間市、富士見市、ふじみ野市、川島町、鳩山町、ときがわ町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_saitama_1013naname",
+			"title": "埼玉地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_saitama_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": ""
+			}
+					]
+		}
+				]
+	}
+			]
+}
