@@ -2,6 +2,32 @@
 "layers": [
 	{
 	"type": "LayerGroup",
+	"title": "正射画像（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "千曲川地区（長野県長野市、須坂市、中野市、千曲市、小布施町、山ノ内町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1016do_sokuho",
+			"title": "千曲川地区（10/16撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1016do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		}
+				]
+	},
+	{
+	"type": "LayerGroup",
 	"title": "垂直写真（速報）",
 	"iconUrl": "",
 	"toggleall": false,
@@ -17,6 +43,17 @@
 			"id": "20191012typhoon19_chikumagawa_1013suichoku",
 			"title": "千曲川地区（10/13撮影）",
 			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			},
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1016suichoku",
+			"title": "千曲川地区（10/16撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1016suichoku/{z}/{x}/{y}.geojson",
 			"cocotile": true,
 			"minZoom": 2,
 			"maxZoom": 18,
@@ -61,9 +98,66 @@
 			"maxNativeZoom": 2,
 			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
 			}
-					]
+			]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "那珂川地区（茨城県水戸市、ひたちなか市、常陸大宮市、那珂市、城里町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nakagawa_1017suichoku",
+			"title": "那珂川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nakagawa_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		  ]
+		},		
+{
+		"type": "LayerGroup",
+		"title": "久慈川地区（茨城県日立市、常陸太田市、常陸大宮市、那珂市、東海村）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_1017suichoku",
+			"title": "久慈川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		  ]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "久慈川（大子）地区（茨城県大子町）（10/17撮影）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_daigo_1017suichoku",
+			"title": "久慈川（大子）地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_daigo_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+		  ]
 		}
-				]
+	  ]
 	},
 	{
 	"type": "LayerGroup",
@@ -86,7 +180,7 @@
 			"minZoom": 2,        
 			"maxZoom": 18,
 			"maxNativeZoom": 2, 
-			"html": ""
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
 			}
 					]
 		},
@@ -105,7 +199,26 @@
 			"minZoom": 2,        
 			"maxZoom": 18,
 			"maxNativeZoom": 2, 
-			"html": ""
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川（伊達）地区（福島県伊達市、桑折町、国見町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma-date_1013naname",
+			"title": "阿武隈川（伊達）地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma-date_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
 			}
 					]
 		},
@@ -124,7 +237,7 @@
 			"minZoom": 2,        
 			"maxZoom": 18,
 			"maxNativeZoom": 2, 
-			"html": ""
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
 			}
 					]
 		},
@@ -143,7 +256,7 @@
 			"minZoom": 2,        
 			"maxZoom": 18,
 			"maxNativeZoom": 2, 
-			"html": "雲の影響により地上が見えにくい場合があります。"
+			"html": "雲の影響により地上が見えにくい場合があります。斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
 			}
 					]
 		},
@@ -162,7 +275,7 @@
 			"minZoom": 2,        
 			"maxZoom": 18,
 			"maxNativeZoom": 2, 
-			"html": ""
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
 			}
 					]
 		}
