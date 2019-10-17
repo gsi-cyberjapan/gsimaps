@@ -140,7 +140,7 @@
 		},
 		{
 		"type": "LayerGroup",
-		"title": "久慈川（大子）地区（茨城県大子町）（10/17撮影）",
+		"title": "久慈川（大子）地区（茨城県大子町）",
 		"iconUrl": "",
 		"toggleall": false,
 		"entries": [
