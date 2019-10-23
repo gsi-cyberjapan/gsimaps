@@ -2,6 +2,50 @@
 "layers": [
 	{
 	"type": "LayerGroup",
+	"title": "正射画像",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "那珂川地区（茨城県水戸市、ひたちなか市、常陸大宮市、那珂市、城里町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nakagawa_1017do",
+			"title": "那珂川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nakagawa_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "久慈川（大子）地区（茨城県大子町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_daigo_1017do",
+			"title": "久慈川（大子）地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_daigo_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+			}
+		]
+		}
+	]
+	},
+	{
+	"type": "LayerGroup",
 	"title": "正射画像（速報）",
 	"iconUrl": "",
 	"toggleall": false,
@@ -17,6 +61,34 @@
 			"id": "20191012typhoon19_chikumagawa_1016do_sokuho",
 			"title": "千曲川地区（10/16撮影）",
 			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1016do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "丸森地区（宮城県白石市、角田市、丸森町、福島県相馬市、伊達市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1020do_sokuho",
+			"title": "丸森地区（10/20撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1020do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			},
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1021do_sokuho",
+			"title": "丸森地区（10/21撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1021do_sokuho/{z}/{x}/{y}.png",
 			"cocotile": true,
 			"minZoom": 10,
 			"maxZoom": 18,
@@ -156,6 +228,36 @@
 			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
 			}
 		  ]
+		},
+				{
+		"type": "LayerGroup",
+		"title": "丸森地区（宮城県白石市、角田市、丸森町、福島県相馬市、伊達市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1020suichoku",
+			"title": "丸森地区（10/20撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1020suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			},
+						{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1021suichoku",
+			"title": "丸森地区（10/21撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1021suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります"
+			}
+		  ]
 		}
 	  ]
 	},
@@ -291,6 +393,79 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2
-    }
+    },
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定段彩図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_naruse_1014dansaizu",
+          "title": "鳴瀬川水系（吉田川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_naruse_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日17時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_naruse_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_abukuma_1014dansaizu",
+          "title": "阿武隈川水系（阿武隈川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日18時までの情報と国土地理院が10月13日に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_abukuma_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_shinano_1013dansaizu",
+          "title": "信濃川水系（千曲川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_shinano_1013dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月13日13時までの情報と国土地理院が10月13日に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_shinano_1013dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_kuji_1014dansaizu",
+          "title": "久慈川水系（久慈川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kuji_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_kuji_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_naka_1014dansaizu",
+          "title": "那珂川水系（那珂川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_naka_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_naka_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_arakawa_1014dansaizu",
+          "title": "荒川水系（入間川・越辺川・都幾川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_arakawa_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日16時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_arakawa_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        }
+    ]
+   }
  ]
 }
