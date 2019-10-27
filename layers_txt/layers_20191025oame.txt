@@ -8,7 +8,7 @@
 	"entries": [
 		{
 		"type": "LayerGroup",
-		"title": "佐倉地区（千葉県佐倉市、四街道市）",
+		"title": "佐倉地区（千葉県千葉市、佐倉市、四街道市、印西市）",
 		"iconUrl": "",
 		"toggleall": false,
 		"entries": [
@@ -26,7 +26,7 @@
 		},
 		{
 		"type": "LayerGroup",
-		"title": "茂原地区（千葉県茂原市）",
+		"title": "茂原地区（千葉県茂原市、睦沢町、長生村、長南町）",
 		"iconUrl": "",
 		"toggleall": false,
 		"entries": [
@@ -52,7 +52,7 @@
 	"entries": [
 		{
 		"type": "LayerGroup",
-		"title": "佐倉地区（千葉県佐倉市、四街道市）",
+		"title": "佐倉地区（千葉県千葉市、佐倉市、四街道市、印西市）",
 		"iconUrl": "",
 		"toggleall": false,
 		"entries": [
@@ -71,7 +71,7 @@
 		},
 		{
 		"type": "LayerGroup",
-		"title": "茂原地区（千葉県茂原市）",
+		"title": "茂原地区（千葉県茂原市、睦沢町、長生村、長南町）",
 		"iconUrl": "",
 		"toggleall": false,
 		"entries": [
