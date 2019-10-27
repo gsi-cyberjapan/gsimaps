@@ -1445,6 +1445,12 @@
           "entries": [
            {
              "type": "LayerGroup",
+             "title": "令和元年10月の低気圧に伴う大雨",
+             "toggleall": false,
+             "src": "./layers_20191025oame.txt"
+            },
+           {
+             "type": "LayerGroup",
              "title": "令和元年台風第１９号",
              "toggleall": false,
              "src": "./layers_20191012typhoon19.txt"
