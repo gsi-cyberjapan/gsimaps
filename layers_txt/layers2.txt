@@ -1964,6 +1964,35 @@
             }
           ]
         },
+    {
+      "type": "LayerGroup",
+      "title": "地形分類（ベクトルタイル提供実験）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "experimental_landformclassification1",
+          "title": "地形分類（自然地形）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "experimental_landformclassification2",
+          "title": "地形分類（人工地形）",
+          "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+        }
+      ]
+    },
         {
           "type": "Layer",
           "id": "swale",
