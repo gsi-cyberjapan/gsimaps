@@ -117,6 +117,60 @@
 		}
 		
 				]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "浸水推定段彩図",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "速報版",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_sakura_1026dansaizu_sokuho",
+			"title": "千葉県佐倉市周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_sakura_1026dansaizu_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日7時30分前後に国土交通省災害対策用ヘリコプターが撮影した画像と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+			},
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1026dansaizu_sokuho",
+			"title": "千葉県茂原市・大網白里市周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1026dansaizu_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日8時30分前後に国土交通省災害対策用ヘリコプターが撮影した画像と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+			}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "空中写真判読版",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1028dansaizu_handoku",
+			"title": "一宮川水系（一宮川・豊田川・阿久川）茂原駅周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1028dansaizu_handoku/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日14時30分前後に国土地理院が撮影した速報用空中写真を使用し、土砂等の痕跡から今回の大雨で浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_mobara_1028dansaizu.PNG\" width=100 alt=\"凡例\"></td></tr></table>"
+			}
+		]
+		}
+	]
 	}
 	
  ]
