@@ -3785,6 +3785,20 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "toz201910",
+                  "title": "10月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz201910/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "toz201909",
+                  "title": "9月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz201909/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "toz201907",
                   "title": "7月更新",
                   "url": "https://maps.gsi.go.jp/xyz/toz201907/{z}/{x}/{y}.geojson",
