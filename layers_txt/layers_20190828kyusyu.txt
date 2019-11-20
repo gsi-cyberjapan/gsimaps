@@ -1,5 +1,79 @@
 {
   "layers": [
+       {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830do",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831do",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+       {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830suichoku",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831suichoku",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
    {
      "type": "LayerGroup",
      "title": "正射画像（速報）",
