@@ -8,6 +8,42 @@
 	"entries": [
 		{
 		"type": "LayerGroup",
+		"title": "多摩川地区（東京都大田区、世田谷区、八王子市、立川市、府中市、昭島市、調布市、日野市、国立市、福生市、狛江市、多摩市、稲城市、あきる野市、神奈川県川崎市",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tamagawa_1013do",
+			"title": "多摩川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tamagawa_1013do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+			}
+		]
+		},	
+		{
+		"type": "LayerGroup",
+		"title": "都幾川地区（埼玉県川越市、東松山市、坂戸市、嵐山町、川島町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tokigawa_1013do",
+			"title": "都幾川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tokigawa_1013do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},		
+		{
+		"type": "LayerGroup",
 		"title": "那珂川地区（茨城県水戸市、ひたちなか市、常陸大宮市、那珂市、城里町）",
 		"iconUrl": "",
 		"toggleall": false,
@@ -24,6 +60,24 @@
 			}
 		]
 		},
+		{
+		"type": "LayerGroup",
+		"title": "久慈川地区（茨城県日立市、常陸太田市、常陸大宮市、那珂市、東海村）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_1017do",
+			"title": "久慈川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},		
 		{
 		"type": "LayerGroup",
 		"title": "久慈川（大子）地区（茨城県大子町）",
@@ -393,6 +447,17 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2
+    },
+    {
+      "type": "Layer",
+      "id": "20191012typhoon19_syamenhoukai_taiseki",
+      "title": "斜面崩壊・堆積分布図",
+      "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_syamenhoukai_taiseki/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 6,
+      "maxZoom": 17,
+      "maxNativeZoom": 2,
+      "html": "</div>解説：<br>１．この情報は国土地理院が10月20日および21日に撮影した速報用空中写真から、令和元年台風19号の豪雨により生じたと考えられる斜面崩壊等によりできた地形変化を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、令和元年台風19号による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>２．地形変化の範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>３．地形が変化した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。<br>４．道路、河川上の土砂は撤去されている可能性があります。<br></div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_syamenhoukai_taiseki.PNG\" width=200 alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"></li></ul></div><div class=\"gsi_layerinfo_copy\">"
     },
     {
       "type": "LayerGroup",
