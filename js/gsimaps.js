@@ -21215,6 +21215,9 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
 
       var url = this.getTileUrl(tilePoint2);
 
+      if (url.match(/^\/\/maps.gsi.go.jp/i)) {
+        url = "https:" + url;
+      }
       if (CONFIG.ISPREVIEWSITE && url.match(/^\/maps.gsi.go.jp/i)) {
         url = "https:" + url;
       }
@@ -21520,14 +21523,66 @@ GSI.MapToImage.VectorTileLayer = L.Evented.extend({
       var len = parts.length;
       var buffTexture = null;
       var canvas = null;
-      if (len > 1) {
-        buffTexture = texture;
-        canvas = document.createElement("canvas");
-        canvas.width = texture.canvas.width;
-        canvas.height = texture.canvas.height;
+      var isMultiPolygon = false;
 
-        texture = canvas.getContext("2d");
+      if ( isPolygon ) {
+        if ( layer.feature && layer.feature.geometry.type =="MultiPolygon") {
+          isMultiPolygon = true;
+        }
       }
+
+      if ( isMultiPolygon ) {
+
+        for( i=0; i<len; i++) {
+          
+          if (L.LineUtil.isFlat(parts[i])) {
+            this._drawPolygonPath(texture, layer, isPolygon, [parts[i]], offset, scale, dashArray);
+          } else {
+            
+            if (parts[i].length > 1) {
+              buffTexture = texture;
+              canvas = document.createElement("canvas");
+              canvas.width = texture.canvas.width;
+              canvas.height = texture.canvas.height;
+
+              texture = canvas.getContext("2d");
+            }
+            this._drawPolygonPath(texture, layer, isPolygon, parts[i], offset, scale, dashArray);
+            
+            if (buffTexture) {
+
+              buffTexture.drawImage(canvas, 0, 0, canvas.width, canvas.height);
+      
+              delete texture;
+              texture = buffTexture;
+      
+      
+            }
+          }
+        }
+      } else {
+        
+        if (len > 1) {
+          buffTexture = texture;
+          canvas = document.createElement("canvas");
+          canvas.width = texture.canvas.width;
+          canvas.height = texture.canvas.height;
+
+          texture = canvas.getContext("2d");
+        }
+        this._drawPolygonPath(texture, layer, isPolygon, parts, offset, scale, dashArray);
+        if (buffTexture) {
+
+          buffTexture.drawImage(canvas, 0, 0, canvas.width, canvas.height);
+  
+          delete texture;
+          texture = buffTexture;
+  
+  
+        }
+      }
+
+      /*
       for (i = 0; i < len; i++) {
 
 
@@ -21610,23 +21665,112 @@ GSI.MapToImage.VectorTileLayer = L.Evented.extend({
         texture.restore();
 
       }
+      */
 
-
-      if (buffTexture) {
-
-        buffTexture.drawImage(canvas, 0, 0, canvas.width, canvas.height);
-
-        delete texture;
-        texture = buffTexture;
-
-
-      }
 
     }
 
+    
 
 
+
+  },
+
+
+  
+  _drawPolygonPath : function(texture, layer, isPolygon, parts, offset, scale, dashArray) {
+    
+    var len2 = 0;
+    var i=0;
+    var j=0;
+    var len = parts.length;
+    var point = null;
+
+    for (i = 0; i < len; i++) {
+
+
+      var fromPoint = null;
+      var firstPoint = null;
+      var lastPoint = null;
+
+      if (parts[i].length > 2 &&
+        (parts[i][0].x != parts[i][parts[i].length - 1].x || parts[i][0].y != parts[i][parts[i].length - 1].y)) {
+        lastPoint = parts[i][0];
+      }
+
+      texture.beginPath();
+
+      for (j = 0, len2 = parts[i].length; j < len2; j++) {
+
+        point = parts[i][j];
+
+        var toPoint = {
+          x: (scale * point.x) + offset.x,
+          y: (scale * point.y) + offset.y
+        };
+
+        if (j == 0) {
+          firstPoint = toPoint;
+          texture.moveTo(toPoint.x, toPoint.y);
+        }
+        else {
+          if (dashArray && !isPolygon)
+            GSI.Utils.dotLineTo(texture, fromPoint.x, fromPoint.y,
+              toPoint.x, toPoint.y, dashArray);
+          else {
+            if (texture.setLineDash !== undefined)
+              texture.setLineDash([]);
+            else if (texture.mozDash !== undefined)
+              texture.mozDash = [];
+            texture.lineTo(toPoint.x, toPoint.y);
+          }
+        }
+
+        fromPoint = toPoint;
+      }
+
+      if (lastPoint && isPolygon) {
+
+        var toPoint = {
+          x: (scale * lastPoint.x) + offset.x,
+          y: (scale * lastPoint.y) + offset.y
+        };
+        if (texture.setLineDash !== undefined)
+          texture.setLineDash([]);
+        else if (texture.mozDash !== undefined)
+          texture.mozDash = [];
+        texture.lineTo(toPoint.x, toPoint.y);
+      }
+      if (isPolygon) {
+        texture.closePath();
+      }
+
+      texture.save();
+
+      if (isPolygon && i > 0) {
+        texture.globalCompositeOperation = 'destination-out';
+        texture.globalAlpha = 1;
+        texture.fill();
+        texture.globalCompositeOperation = 'source-over';
+      }
+
+      this._updateStyle(texture, layer);
+      var opacity = (this.options.opacity ? this.options.opacity : 1);
+
+      if (i == 0 && layer.options.fill) {
+        texture.globalAlpha = (layer.options.fillOpacity || layer.options.fillOpacity == 0 ? layer.options.fillOpacity : 0) * opacity;
+        texture.fill();
+      }
+      if (layer.options.stroke) {
+        texture.globalAlpha = (layer.options.opacity || layer.options.opacity == 0 ? layer.options.opacity : 1);
+        texture.stroke();
+      }
+      texture.restore();
+
+    }
   }
+
+
 
 
 
