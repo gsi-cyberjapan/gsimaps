@@ -30041,6 +30041,11 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
             maxZoom: 15
           },
           {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
             url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
             minZoom: 0,
             maxZoom: 14
@@ -30052,11 +30057,11 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
         minZoom: 9,
         maxZoom: 15,
         complementList: [
-        //  {
-        //     url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
-        //     minZoom: 0,
-        //     maxZoom: 14
-        //   },
+         {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
           {
             url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
             minZoom: 0,
@@ -30064,18 +30069,18 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
           }
         ]
       },
-      // {
-      //   url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
-      //   minZoom: 0,
-      //   maxZoom: 14,
-      //   complementList: [
-      //     {
-      //       url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
-      //       minZoom: 0,
-      //       maxZoom: 14
-      //     }
-      //   ]
-      // },
+      {
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 15,
+        complementList: [
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 0,
+            maxZoom: 14
+          }
+        ]
+      },
       {
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
         minZoom: 0,
@@ -30167,6 +30172,11 @@ GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
             maxZoom: 15
           },
           {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 15,
+            maxZoom: 15
+          },
+          {
             url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
             minZoom: 0,
             maxZoom: 14
@@ -30175,6 +30185,23 @@ GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
       },
       {
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+        minZoom: 15,
+        maxZoom: 15,
+        complementList: [
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 15,
+            maxZoom: 15
+          },
+          {
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 0,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
         minZoom: 15,
         maxZoom: 15,
         complementList: [
@@ -31739,6 +31766,12 @@ GSI.CrossSectionView = L.Evented.extend({
     {
       "id": "dem5b",
       url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 15
+    },
+    {
+      "id": "dem5c",
+      url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
       minZoom: 0,
       maxZoom: 15
     },
@@ -40998,8 +41031,15 @@ GSI.ElevationLoader = L.Evented.extend({
         "fixed": 1
       },
       {
-        "title": "DEM5B又は5C",
+        "title": "DEM5B",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+        "minzoom": 15,
+        "maxzoom": 15,
+        "fixed": 1
+      },
+      {
+        "title": "DEM5C",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
         "minzoom": 15,
         "maxzoom": 15,
         "fixed": 1
