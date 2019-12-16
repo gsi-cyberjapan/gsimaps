@@ -512,7 +512,8 @@ CONFIG.SERVERAPI.CHIMEI_SEARCH = "https://msearch.gsi.go.jp/address-search/Addre
 CONFIG.SERVERAPI.CHIMEI_SEARCH_ADDITIONALPARAMS = {
   "lang": "ja,en",
   "zl": "T",
-  "ilvl": "T"
+  "ilvl": "T",
+  "sort_il": "1"
 };
 
 //for IE9
@@ -7906,7 +7907,10 @@ GSI.SearchResultDialog = GSI.Dialog.extend({
     if (longitude && resultItem) {
       var zoom = CONFIG.SEARCHRESULTCLICKZOOM;
       if (resultItem.properties.ilvl) {
-        zoom = resultItem.properties.ilvl;
+        zoom = 6 + 2 * resultItem.properties.ilvl;
+        if(zoom > 17){
+          zoom = 17;
+        }
       }
 
       if (resultItem.properties.zl) {
