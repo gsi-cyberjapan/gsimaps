@@ -20357,24 +20357,107 @@ GSI.MapToImage = L.Evented.extend({
         this._mapTexture.restore();
       }
       else {
-
+        var text = div.html();
+        text = text.replace(/\<br[\s]*[\/]*\>/ig, "\n");
+        text = text.replace(/\<.*\>/ig, "");
         this._mapTexture.save();
         this._mapTexture.rotate(0);
-        this._mapTexture.translate(left + margin.left, top + margin.top);
-        if (textShadow && textShadow != '') {
-          this._mapTexture.lineWidth = 4;
-          this._mapTexture.strokeStyle = textShadow;
-          this._mapTexture.strokeText(text, 0, 0);
+
+        
+        var bgColor = undefined;
+        if (div.css("background-color")) bgColor = div.css("background-color");
+        else if (div.css("background")) bgColor = div.css("background");
+        var textHeight = this._getTextHeight(text, this._mapTexture) ;
+        //this._mapTexture.measureText("あ").width;
+        
+        var lines = text.split(/\n/g);
+        var lineCount = 0;
+        lineWidth = 0;
+        for( var i=0; i<lines.length; i++ ) {
+          var line = lines[i];
+          if ( line == "" ) continue;
+          var w = this._mapTexture.measureText(line).width;
+          if ( w > lineWidth ) lineWidth= w;
+          lineCount++; 
         }
-        this._mapTexture.fillStyle = color;
-        this._mapTexture.fillText(text, 0, 0);
-        this._mapTexture.restore();
+        if ( bgColor ) {
+          var textPadding = Math.floor( textHeight / 4 );
+          this._mapTexture.restore();
+          this._mapTexture.fillStyle = bgColor;
+          this._mapTexture.fillRect(
+            left + margin.left, 
+            top + margin.top-(textPadding), 
+            lineWidth, 
+            textHeight * (lineCount)+(textPadding*2));
+          this._mapTexture.save();
+        }
+
+        var lineIndex = 0;
+        for( var i=0; i<lines.length; i++ ) {
+          if ( lines[i] == "") continue;
+          this._mapTexture.translate(left + margin.left, top + margin.top +(lineIndex*textHeight));
+          this._mapTexture.textBaseline = textBaseline;
+          if (textShadow && textShadow != '') {
+            this._mapTexture.lineWidth = 4;
+            this._mapTexture.strokeStyle = textShadow;
+            this._mapTexture.strokeText(lines[i], 0, 0);
+          }
+          this._mapTexture.fillStyle = color;
+          this._mapTexture.fillText(lines[i], 0, 0);
+          this._mapTexture.restore();
+          lineIndex++;
+        }
       }
       result = true;
 
     }
     return result;
   },
+
+
+  _getTextHeight : function( text, texture ) {
+    var canvas = $("<canvas>")[0];
+    canvas.height = 256;
+
+    var ctx = canvas.getContext("2d");
+    
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.font = texture.font;
+
+    var width = ctx.measureText( text ).width+2;
+    canvas.width = width;
+    canvas.height = 256;
+    ctx = canvas.getContext("2d");
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.font = texture.font;
+    var textHeight =  this._getTextHeight2( text, ctx, canvas.width, canvas.height)+4;
+    return textHeight;
+  },
+
+  _getTextHeight2 : function( text, ctx,width, height) {
+    ctx.fillText(text, 0, 0);
+    
+    var pixels = ctx.getImageData(0, 0, width, height);
+    var data = pixels.data;
+    var textHeight = 0;
+    var maxRow = -1;
+    var minRow = height;
+    for (var i = 0, len = data.length; i < len; i += 4) {
+      var r = data[i], g = data[i+1], b = data[i+2], alpha = data[i+3];
+      if (alpha > 0) {
+        var row = Math.floor((i / 4) / width);
+        if (row > maxRow) {
+          maxRow = row;
+        }
+        if ( row <minRow) minRow = row;
+      }
+    }
+
+    return maxRow;
+  },
+
 
   _drawDIVMarkerTategaki: function (left, top, margin, text, color, textShadow, textAlign, textBaseline, rotate, lineHeight) {
     var texture = this._mapTexture;
