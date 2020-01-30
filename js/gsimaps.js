@@ -37954,7 +37954,7 @@ GSI.Footer = L.Class.extend({
       var coords = feature.geometry.coordinates[0];
 
       if (this._inPolygon(center, coords)) {
-        this.footerSelector.find(".seamlessinfo").html(feature.properties[" "]);
+        this.footerSelector.find(".seamlessinfo").html(feature.properties["撮影年月"]);
         break;
       }
 
