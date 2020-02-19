@@ -1451,7 +1451,7 @@
             },
            {
              "type": "LayerGroup",
-             "title": "令和元年台風第１９号",
+             "title": "令和元年台風第19号",
              "toggleall": false,
              "src": "./layers_20191012typhoon19.txt"
             },
