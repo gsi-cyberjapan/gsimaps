@@ -2,7 +2,7 @@
   "layers": [
     {
      "type": "LayerGroup",
-     "title": "令和元年台風第１９号",
+     "title": "令和元年台風第19号",
      "iconUrl": "./image/system/folder_new.png",
      "toggleall": false,
      "src": "./layers_20191012typhoon19.txt"
