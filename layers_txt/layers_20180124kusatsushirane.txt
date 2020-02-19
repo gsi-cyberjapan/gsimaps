@@ -25,7 +25,7 @@
       "type": "LayerGroup",
       "title": "SAR解析結果(ALOS-2)",
       "toggleall": false,
-      "src": "https://insarmap.gsi.go.jp/layers_txt/layers_alos2_vol_kusatsushiranesan.txt"
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_kusatsushiranesan.txt"
     },
     {
       "type": "LayerGroup",
