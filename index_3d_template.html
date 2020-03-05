@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+    <title>WebGL 3D</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
+
+    <script src="https://cyberjapandata.gsi.go.jp/3d/three.min.js"></script>
+    <script src="https://cyberjapandata.gsi.go.jp/3d/TrackballControls.js"></script> 
+    <script>
+    //<!--
+    /****************************************************/
+    // 高さの強調度を変える場合は、
+    // vSceneMeshZRate = 数値を変更する
+    /****************************************************/
+    var vSceneMeshZRate        = 1;
+    /****************************************************/
+    // 枠の表示変える場合は、
+    // vFrameMode = 透過'trans' | 表示しない'none'
+    /****************************************************/
+    var vFrameMode             = 'trans';
+    /****************************************************/
+    var Dem                    = "./dem.csv";
+    var DemTextue              = "./texture.png";
+    var IconTexture            = "./icon.png";
+    /****************************************************/
+    var oRenderer              = null;
+    var oScene                 = null;
+    var oSceneLight            = null;
+    var oSceneMesh             = null;
+    var oSceneMeshBase         = null;
+    var oCamera                = null;
+    var oCameraCtrl            = null;
+    /****************************************************/
+    var vSceneMesh             = null;
+    var vSceneMeshDistanceRate = 0.1;
+    /****************************************************/
+    var vWinSizeW              = 0;
+    var vWinSizeH              = 0;
+    /****************************************************/
+    var vTextureSizeW              = /*[[texture_width]]*/;
+    var vTextureSizeH              = /*[[texture_height]]*/;
+    /****************************************************/
+    var vMeshSizeW              = /*[[mesh_width]]*/;
+    var vMeshSizeH              = /*[[mesh_height]]*/;
+    /****************************************************/
+    var vGeomSizeW              = /*[[geom_width]]*/;
+    var vGeomSizeH              = /*[[geom_height]]*/;
+    var nGeomSizeX              = vGeomSizeW;
+    var nGeomSizeY              = vGeomSizeH;
+    /****************************************************/
+    var oSceneGEODataMeshArr                = null;
+    var oGeo3DData = null;
+    var oTextureCanvas = null;
+    
+    /*[[insertgeo3ddata]]*/
+    
+    
+    function Init(){
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function(evt){
+            vSceneMesh = (evt.target.response || evt.target.responseText).replace(/\n/g, ",").split(",");
+            LoadScene();
+        }, false);
+        xhr.open('GET', Dem, true);
+        xhr.send(null);
+
+        EvtResize();
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // LoadScene
+    /*-----------------------------------------------------------------------------------------------*/
+    function LoadScene(){
+        oRenderer = new THREE.WebGLRenderer({ antialias: true });
+        oRenderer.setSize(vWinSizeW, vWinSizeH);
+        oRenderer.setClearColor(0xe6e6fa, 1.0);
+        document.getElementById('webgl').appendChild(oRenderer.domElement);
+            
+        oScene = new THREE.Scene();
+        //oScene.add(new THREE.AmbientLight(0xffffff));
+		oScene.add(new THREE.AmbientLight(0x111111));
+
+		// 平行光源の設置
+		oSceneLight = new THREE.DirectionalLight(0xFFFFFF, 1.0, 0);
+		oSceneLight.position.set(100, -200, 200);
+		oScene.add(oSceneLight);
+
+        oCamera = new THREE.PerspectiveCamera(45, vWinSizeW / vWinSizeH, 1, 10000);
+        oCamera.position.set(0, -100, 100);
+		oCamera.up.set(0, 0, 1);
+		oCamera.lookAt( {x:0, y:0, z:0 } );
+
+        oCameraCtrl = new THREE.TrackballControls(oCamera);
+
+        var geometry = new THREE.PlaneGeometry( vGeomSizeW, vGeomSizeH, vMeshSizeW, vMeshSizeH );
+	    oTextureCanvas = document.createElement("canvas");
+	    oTextureCanvas.width  = vTextureSizeW;
+	    oTextureCanvas.height = vTextureSizeH;
+	    var texture = new THREE.Texture(oTextureCanvas);
+	    texture.needsUpdate = true;
+        texture.minFilter = THREE.LinearFilter;
+        texture.magFilter = THREE.LinearFilter;
+        var material = new THREE.MeshBasicMaterial({ map: texture });
+		material.side = THREE.DoubleSide;
+		
+		material.opacity = 1;
+		material.transparent = true;
+		material.depthTest = true;
+		material.depthWrite = true;
+		
+		var img = new Image();
+		img.style.width = vTextureSizeW;
+		img.style.height = vTextureSizeH;
+		img._material = material;
+		//img.crossOrigin = "anonymous";
+		img.onload = function()
+		{
+			try
+			{
+				var texture = oTextureCanvas.getContext("2d");
+				texture.drawImage( this, 0, 0 );
+				this._material.map.needsUpdate = true;
+			}
+			catch(e){
+				console.log( e );
+			}
+		};
+		img.src = DemTextue;
+        oSceneMesh = new THREE.Mesh(geometry, material);
+        oScene.add(oSceneMesh);
+
+        LoadSceneMeshBase();
+        Draw3DGEOData();
+        SceneGeometryZ();
+
+        SceneRender();
+        SceneRender();
+    };
+
+    function LoadSceneMeshBase(){
+        oSceneMeshBase = new Array(5);
+		var h = -1 * vSceneMeshDistanceRate * 100;
+        var i = 0;
+	    //var material = new THREE.MeshBasicMaterial({color: 0x444444});
+	    var material = new THREE.MeshPhongMaterial({color: 0xffffff, depthWrite:false, ambient: 0xffffff, specular: 0xcccccc, shininess:50, metal:true});
+		
+		//var material = new THREE.MeshBasicMaterial( {color:0xffffff, transparent:true,wireframe: true, opacity: 0.5} );
+		
+		if ( vFrameMode == "trans" )
+		{
+			material.transparent = true;
+			material.opacity = 0.5;
+		}
+		if ( vFrameMode != "none" )
+    	{
+		    var geometry = new THREE.PlaneGeometry(100, 100, 1, 1);
+		    for(i = 0; i < geometry.vertices.length; i++){
+			    geometry.vertices[i].z = h;
+		    }
+			geometry.vertices[0].y = -(nGeomSizeY/2);
+			geometry.vertices[1].y = -(nGeomSizeY/2);
+			geometry.vertices[2].y =  (nGeomSizeY/2);
+			geometry.vertices[3].y =  (nGeomSizeY/2);
+		    geometry.computeFaceNormals();
+		    geometry.computeVertexNormals();
+		    geometry.dynamic            = true;
+		    geometry.verticesNeedUpdate = true;
+
+	        oSceneMeshBase[0] = new THREE.Mesh(geometry, material);
+		    oScene.add(oSceneMeshBase[0]);
+
+	        var nz = 0;
+	        var x  = null;
+	        var y  = null;
+	        for(n = 1; n < 5; n++){
+	            if     (n == 1)geometry = new THREE.PlaneGeometry(nGeomSizeX, 1,vMeshSizeW, 1);
+			    else if(n == 2)geometry = new THREE.PlaneGeometry(nGeomSizeY, 1,vMeshSizeH, 1);
+			    else if(n == 3)geometry = new THREE.PlaneGeometry(nGeomSizeY, 1,vMeshSizeH, 1);
+			    else if(n == 4)geometry = new THREE.PlaneGeometry(nGeomSizeX, 1,vMeshSizeW, 1);
+		        for(i = 0; i < geometry.vertices.length; i++){
+		    
+			        geometry.vertices[i].z = h;
+
+	                x = null;
+		            y = null;
+		            if     (n == 1){ x = null;       y = -(nGeomSizeY/2);                 }
+		            else if(n == 2){ x =  -(nGeomSizeX/2);      y =  (nGeomSizeY/2)-nGeomSizeY/vMeshSizeH*(i%(vMeshSizeH+1)); }
+		            else if(n == 3){ x =   (nGeomSizeX/2);      y = -(nGeomSizeY/2)+nGeomSizeY/vMeshSizeH*(i%(vMeshSizeH+1)); }
+		            else if(n == 4){ x =   (nGeomSizeX/2)-nGeomSizeX/vMeshSizeW*(i%(vMeshSizeW+1)); y =  (nGeomSizeY/2);                 }
+
+		            if(x != null){ geometry.vertices[i].x = x; }
+		            if(y != null){ geometry.vertices[i].y = y; }
+		        }
+
+	            oSceneMeshBase[n] = new THREE.Mesh(geometry, material);
+	            oScene.add(oSceneMeshBase[n]);
+	        }
+	     }
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // Scene
+    /*-----------------------------------------------------------------------------------------------*/
+    function SceneGeometryZ(){
+        var n  = 0;
+        var nz = 0;
+        for(ny = 0; ny <= vMeshSizeH; ny++){
+	        for(nx = 0; nx <= vMeshSizeW; nx++){
+                nz = ny * (vMeshSizeW+1) + nx;
+			    oSceneMesh.geometry.vertices[nz].z = vSceneMesh[nz] * vSceneMeshZRate;
+		    }
+	    }
+
+	    oSceneMesh.geometry.computeFaceNormals();
+	    oSceneMesh.geometry.computeVertexNormals();
+	    oSceneMesh.geometry.dynamic            = true;
+	    oSceneMesh.geometry.verticesNeedUpdate = true;
+
+        if(oSceneMeshBase != null){
+	        for(n = 1; n < 5; n++){
+				switch( n )
+				{
+					case 1:
+					//下
+						for(i = 0; i < (vMeshSizeW+1); i++){
+							nz = (vMeshSizeH) * (vMeshSizeW+1) + i;
+							try{
+								oSceneMeshBase[n].geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+							}catch(e){
+							}
+						}
+						break;
+						
+					case 2:
+					//左
+						for(i = 0; i < (vMeshSizeH+1); i++){
+							nz = (vMeshSizeW+1) * i;
+							oSceneMeshBase[n].geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+						}
+						
+						break;
+					case 3:
+					//右
+						for(i = 0; i < (vMeshSizeH+1); i++){
+							nz = (vMeshSizeW+1) * (vMeshSizeH - i) + vMeshSizeW;
+							oSceneMeshBase[n].geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+						}
+						break;
+					case 4:
+					//上
+						for(i = 0; i < (vMeshSizeW+1); i++){
+							nz = vMeshSizeW - i;
+							oSceneMeshBase[n].geometry.vertices[i].z = oSceneMesh.geometry.vertices[nz].z;
+						}
+						break;
+				}
+		       
+		        oSceneMeshBase[n].geometry.computeFaceNormals();
+		        oSceneMeshBase[n].geometry.computeVertexNormals();
+		        oSceneMeshBase[n].geometry.dynamic            = true;
+		        oSceneMeshBase[n].geometry.verticesNeedUpdate = true;
+	        }
+	    }
+        
+        if ( oSceneGEODataMeshArr != null )
+	    {
+			
+			for( var k=0; k<oSceneGEODataMeshArr.length; k++ )
+			{
+				var meshData = oSceneGEODataMeshArr[k];
+				var viewBox =getBoxLatLngBounds( { 
+					lat: parseFloat(args["lat"]), 
+					lng:parseFloat(args["lon"])}, 
+					parseInt(args["z"]), 
+					parseInt(args["tile_n_px_w"]), 
+					parseInt(args["tile_n_px_h"]) );
+				
+				if ( meshData.points )
+				{
+					for( var i=0; i<meshData.points.length; i++ )
+					{
+						var p1 = _latLngToPointData( viewBox, meshData.points[i].lat, meshData.points[i].lng, meshData.points[i].h );
+						meshData.mesh.geometry.vertices[i].z = p1.z;
+					
+					}
+				}
+				
+				else if ( meshData.triangles )
+				{
+					for( var i=0, idx=0; i<meshData.triangles.length; i++, idx+=3 )
+					{
+						var p1 = _latLngToPointData( viewBox, meshData.triangles[i][0].lat, meshData.triangles[i][0].lng, meshData.triangles[i][0].h );//{x:triangles[0], y:triangles[1], z:vertexes[2]};
+						var p2 = _latLngToPointData( viewBox, meshData.triangles[i][1].lat, meshData.triangles[i][1].lng, meshData.triangles[i][1].h );//{x:vertexes[3], y:vertexes[4], z:vertexes[5]};
+						var p3 = _latLngToPointData( viewBox, meshData.triangles[i][2].lat, meshData.triangles[i][2].lng, meshData.triangles[i][2].h );//{x:vertexes[6], y:vertexes[7], z:vertexes[8]};
+						meshData.mesh.geometry.vertices[idx].z = p1.z;
+						meshData.mesh.geometry.vertices[idx+1].z = p2.z;
+						meshData.mesh.geometry.vertices[idx+2].z = p3.z;
+					
+					}
+				}
+				else if (meshData.point)
+				{
+					var meshData = oSceneGEODataMeshArr[k];
+					var p = _latLngToPointData( 
+						viewBox, 
+						meshData.point.lat, 
+						meshData.point.lng, 
+						meshData.point.h );
+					if( meshData["type"] == "Text" )
+						meshData.mesh.position.set( p.x+(meshData.iconSize.w/2), p.y-(meshData.iconSize.h/2), p.z );
+					else
+						meshData.mesh.position.set( p.x, p.y, p.z );
+					
+					meshData.mesh.updateMatrix();
+					meshData.mesh.matrixWorldNeedsUpdate = true;
+					
+				//var material = new THREE.M
+				}
+			
+				if ( meshData.mesh.geometry )
+				{
+					meshData.mesh.geometry.computeFaceNormals();
+					meshData.mesh.geometry.computeVertexNormals();
+					meshData.mesh.geometry.dynamic            = true;
+					meshData.mesh.geometry.verticesNeedUpdate = true;
+				}
+			}
+		}
+    };
+
+    function SceneRender(){
+        if(oRenderer != null && oScene != null && oCamera != null && oCameraCtrl != null){
+            oCameraCtrl.update();
+            requestAnimationFrame(SceneRender);
+            oRenderer.render(oScene, oCamera);
+        }
+    };
+
+    /*-----------------------------------------------------------------------------------------------*/
+    // イベント
+    /*-----------------------------------------------------------------------------------------------*/
+    function EvtResize(){
+	    vWinSizeW = window.innerWidth;
+	    vWinSizeH = window.innerHeight;
+
+        if(oCamera != null && oRenderer != null){
+            oRenderer.setSize(vWinSizeW, vWinSizeH);
+            oCamera.aspect = vWinSizeW / vWinSizeH;
+            oCamera.updateProjectionMatrix();
+
+    	    SceneRender();
+        }
+    };
+	function getBoxLatLngBounds(center, zoom, w, h)
+	{
+		// latLngToPoint
+		
+		var DEG_TO_RAD = Math.PI / 180;
+		var RAD_TO_DEG = 180 / Math.PI;
+		var MAX_LATITUDE = 85.0511287798;
+		var _a = 0.5 / Math.PI;
+		var _b = 0.5;
+		var _c = -0.5 / Math.PI;
+		var _d = 0.5;
+		
+		var latLngToPoint = function( latlng, zoom )
+		{
+		
+			var d = DEG_TO_RAD;
+			var max = MAX_LATITUDE;
+			var lat = Math.max(Math.min(max, latlng.lat), -max);
+			var x = latlng.lng * d;
+			var y = lat * d;
+			y = Math.log(Math.tan((Math.PI / 4) + (y / 2)));
+
+			var projectedPoint = {x:x,y:y};
+			var scale = 256 * Math.pow(2, zoom);
+			
+			scale = scale || 1;
+			var point = {x:0, y:0 };
+			point.x = scale * (_a * projectedPoint.x + _b);
+			point.y = scale * (_c * projectedPoint.y + _d);
+			return point;
+		};
+		
+		
+		
+		var pointToLatLng = function( point,zoom )
+		{
+			var scale = 256 * Math.pow(2, zoom);
+			scale = scale || 1;
+			var untransformedPoint =  {
+				x: (point.x / scale - _b) / _a,
+				y: (point.y / scale - _d) / _c
+			};
+			        
+			//var untransformedPoint = this.transformation.untransform(point, scale);
+			var d = RAD_TO_DEG;
+			var lng = untransformedPoint.x * d;
+			var lat = (2 * Math.atan(Math.exp(untransformedPoint.y)) - (Math.PI / 2)) * d;
+
+
+			return { lat : lat, lng : lng };
+		};
+		
+		var centerPoint = latLngToPoint( center, zoom );
+		
+		var ltLatLng = pointToLatLng( {
+			x : centerPoint.x - (w/2),
+			y : centerPoint.y - (h/2),
+		}, zoom );
+		var rbLatLng = pointToLatLng( {
+			x : centerPoint.x + (w/2),
+			y : centerPoint.y + (h/2),
+		}, zoom );
+		
+		
+		
+			
+		return { lt : ltLatLng, rb : rbLatLng, w:w, h:h };
+	}
+	var oGEODataTriangles = [];
+	function _latLngToPointData(viewBox,lat, lng, h)
+	{
+		var latLngToPoint = function( latlng, zoom )
+		{
+		
+	        var DEG_TO_RAD = Math.PI / 180;
+	    	var RAD_TO_DEG = 180 / Math.PI;
+	    	var MAX_LATITUDE = 85.0511287798;
+	    	var _a = 0.5 / Math.PI;
+	    	var _b = 0.5;
+	    	var _c = -0.5 / Math.PI;
+	    	var _d = 0.5;
+			var d = DEG_TO_RAD;
+			var max = MAX_LATITUDE;
+			var lat = Math.max(Math.min(max, latlng.lat), -max);
+			var x = latlng.lng * d;
+			var y = lat * d;
+			y = Math.log(Math.tan((Math.PI / 4) + (y / 2)));
+
+			var projectedPoint = {x:x,y:y};
+			var scale = 256 * Math.pow(2, zoom);
+			
+			scale = scale || 1;
+			var point = {x:0, y:0 };
+			point.x = scale * (_a * projectedPoint.x + _b);
+			point.y = scale * (_c * projectedPoint.y + _d);
+			return point;
+		};
+		var ltPoint = latLngToPoint( viewBox.lt, parseInt( args["z"] ) );
+		var rbPoint = latLngToPoint( viewBox.rb, parseInt( args["z"] ) );
+		var targetPoint = latLngToPoint( {lat:lat,lng:lng}, parseInt( args["z"] ) );
+		
+		var x=( ( targetPoint.x - ltPoint.x ) / ( rbPoint.x - ltPoint.x ) );
+		var y=( ( targetPoint.y - ltPoint.y) / Math.abs( ltPoint.y - rbPoint.y ) );
+		//var x=( ( lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
+		//var y=( ( lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
+		
+		//var y=(viewBox.lt.lat - lat ) * (( ( viewBox.lt.lng - viewBox.rb.lng ) / viewBox.h ));
+		//var z=(h - vSceneMesh_ZMin) * vSceneMeshDistanceRate * vSceneMeshZRate;
+		var z=h * vSceneMeshDistanceRate * vSceneMeshZRate;
+		
+		//x = ( x / viewBox.w ) * nGeomSizeX - (nGeomSizeX/2);
+		//y = ( y / viewBox.h ) * nGeomSizeY - (nGeomSizeY/2);
+		x = ( x * nGeomSizeX  )- (nGeomSizeX/2);
+		y = ( (1-y) * nGeomSizeY  )- (nGeomSizeY/2);
+		
+		return {x:x, y:y,z:z};
+	}
+
+
+
+	function polyToriangles(pointArr)
+	{
+		var ret = [];
+		var p0 = {lng:0,lat:0};
+		var counter = 0;
+		var points = [];
+		for( var i=0; i<pointArr.length; i++ )
+		{
+			points.push( {
+				lat : pointArr[i].lat,
+				lng : pointArr[i].lng,
+				h : pointArr[i].h
+			} );
+		}
+		if ( points.length >= 3 && points[0].lng == points[points.length-1].lng && points[0].lat == points[points.length-1].lat )
+			points.splice(points.length-1,1);
+		
+		var idx = _getFarPoint(p0,points);
+		while( points.length > 3 )
+		{
+			counter++;
+			var l = points.length;
+			var triangle = [
+				{lng:points[idx-1>=0?idx-1:l-1].lng,lat:points[idx-1>=0?idx-1:l-1].lat,h:points[idx-1>=0?idx-1:l-1].h},
+				{lng:points[idx].lng,lat:points[idx].lat,h:points[idx].h},
+				{lng:points[idx+1<l?idx+1:0].lng,lat:points[idx+1<l?idx+1:0].lat,h:points[idx+1<l?idx+1:0].h}
+			];
+			
+			if ( _isTriangleInPoint(triangle,points ) )
+			{
+				idx --;
+				if ( idx < 0 ) idx =points.length - 1;
+			}
+			else
+			{
+				ret.push( triangle );
+				points.splice(idx,1);
+				idx = _getFarPoint(p0,points);
+			}
+			
+			if ( counter > 10000 ) break;
+		}
+		
+		if ( points.length == 3 )
+		{
+			ret.push( [
+				{lng:points[0].lng,lat:points[0].lat,h:points[0].h},
+				{lng:points[1].lng,lat:points[1].lat,h:points[1].h},
+				{lng:points[2].lng,lat:points[2].lat,h:points[2].h}
+			] );
+			return ret;
+		}
+		
+		return null;
+	}
+
+
+	function _isTriangleInPoint( tri, points )
+	{
+		var subVector = function( a, b )
+		{
+			var ret = {};
+			ret.lng = a.lng - b.lng;
+			ret.lat = a.lat - b.lat;
+			return ret;
+		};
+		
+		for( var i=0; i<points.length; i++ )
+		{
+			var p = points[i];
+			var AB = subVector(tri[1], tri[0]);
+			var BP = subVector(p, tri[1]);
+
+			var BC = subVector(tri[2], tri[1]);
+			var CP = subVector(p, tri[2]);
+
+			var CA = subVector(tri[0], tri[2]);
+			var AP = subVector(p, tri[0]);
+
+			var c1 = AB.x * BP.y - AB.y * BP.x;
+			var c2 = BC.x * CP.y - BC.y * CP.x;
+			var c3 = CA.x * AP.y - CA.y * AP.x;
+
+			if( ( c1 > 0 && c2 > 0 && c3 > 0 ) || ( c1 < 0 && c2 < 0 && c3 < 0 ) ) {
+			    return true;
+			}
+		}
+		return false;
+	}
+
+	function _getFarPoint(p0,points)
+	{
+		var maxDistance = null;
+		var idx =0;
+		
+		for( var i=0; i<points.length; i++ )
+		{
+			var p = points[i];
+			var distance = Math.sqrt(Math.pow(p0.lng-p.lng,2) + Math.pow(p0.lat-p.lat,2));
+			if ( maxDistance == null || maxDistance<distance )
+			{
+				maxDistance = distance;
+				idx=i;
+			}
+		}
+		
+		return idx;
+	}
+
+
+
+	function Draw3DGEOData()
+	{
+		if (!oGeo3DData) return; 
+		
+		
+		//var geometry = new THREE.Geometry();
+		var viewBox =getBoxLatLngBounds( { 
+			lat: parseFloat(args["lat"]), 
+			lng:parseFloat(args["lon"])}, 
+			parseInt(args["z"]), 
+			parseInt(args["tile_n_px_w"]), 
+			parseInt(args["tile_n_px_h"]) );
+		
+		var iconNo = 0;
+		var iconArr = [];
+		
+		for( var i=0; i<oGeo3DData.length; i++ )
+		{
+			if ( oGeo3DData[i].properties._markerType == "Polygon" )
+			{
+				var  geometry = new THREE.Geometry();
+				var triangles = _draw3DGEODataPolygon( geometry, oGeo3DData[i].triangles, viewBox, oGeo3DData[i] );
+				oGeo3DData[i].properties._fillOpacity = ( oGeo3DData[i].properties._fillOpacity || oGeo3DData[i].properties._fillOpacity == 0 ? oGeo3DData[i].properties._fillOpacity : 0.2 );
+				var fillColor = oGeo3DData[i].properties._fillColor;
+				fillColor = ( fillColor ? fillColor : 0x0033ff );
+				var material = new THREE.MeshBasicMaterial(
+					{color: fillColor, 
+						opacity: oGeo3DData[i].properties._fillOpacity, depthWrite:false,  transparent: true});
+				material.side = THREE.DoubleSide;
+			
+				geometry.computeFaceNormals();
+				geometry.computeVertexNormals();
+				
+			    var mesh = new THREE.Mesh(geometry, material);
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+			    oSceneGEODataMeshArr.push( {
+			    	type : "Polygon",
+			    	triangles : triangles,
+			    	mesh:mesh
+			    } );
+				oScene.add(mesh);
+				
+			}
+			else if ( oGeo3DData[i].properties._markerType == "LineString" )
+			{
+				var geometry = new THREE.Geometry();
+				var points = _draw3DGEODataLineString( geometry, viewBox, oGeo3DData[i] );
+				oGeo3DData[i].properties._opacity = ( oGeo3DData[i].properties._opacity || oGeo3DData[i].properties._opacity == 0 ? oGeo3DData[i].properties._opacity : 0.5 );
+				var color = ( oGeo3DData[i].properties._color ? oGeo3DData[i].properties._color : 0x0033ff );
+				var weight = ( oGeo3DData[i].properties._weight ? oGeo3DData[i].properties._weight : 5 );
+				
+				
+				geometry.computeFaceNormals();
+				geometry.computeVertexNormals();
+				
+				var mesh = new THREE.Line( geometry, new THREE.LineBasicMaterial( { 
+					color: color,linewidth:parseInt(weight), depthWrite:false,
+					opacity: oGeo3DData[i].properties._opacity,  transparent: true
+					} ) );
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+				oSceneGEODataMeshArr.push( {
+			    	type : "LineString",
+			    	points : points,
+			    	mesh:mesh
+			    } );
+				oScene.add(mesh);
+				
+				
+			}
+			else if ( oGeo3DData[i].properties._markerType == "CircleMarker" )
+			{
+				var latlngPoint = {
+					lat : oGeo3DData[i].geometry.coordinates[1],
+					lng : oGeo3DData[i].geometry.coordinates[0],
+					h : oGeo3DData[i].geometry.coordinates[2]
+				};
+				
+				if (oGeo3DData[i].properties._altitudeMode == "relativeToGround")
+				{
+					var x=( ( latlngPoint.lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
+					var y=( ( latlngPoint.lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
+					
+				    y = viewBox.h - y;
+					latlngPoint.h = parseFloat(latlngPoint.h) + getDEMValue( x, y, viewBox );
+					oGeo3DData[i].geometry.coordinates[2] = latlngPoint.h;
+				}
+				
+				
+				oGeo3DData[i].properties._fillOpacity = ( oGeo3DData[i].properties._fillOpacity || oGeo3DData[i].properties._fillOpacity == 0 ? oGeo3DData[i].properties._fillOpacity : 0.2 );
+				var fillColor = oGeo3DData[i].properties._fillColor;
+				fillColor = ( fillColor ? fillColor : 0x0033ff );
+				var fillOpacity = oGeo3DData[i].properties._fillOpacity;
+				
+				
+				oGeo3DData[i].properties._opacity = ( oGeo3DData[i].properties._opacity || oGeo3DData[i].properties._opacity == 0 ? oGeo3DData[i].properties._opacity : 0.5 );
+				var color = ( oGeo3DData[i].properties._color ? oGeo3DData[i].properties._color : 0x0033ff );
+				var weight = ( oGeo3DData[i].properties._weight ? oGeo3DData[i].properties._weight : 5 );
+				var opacity = oGeo3DData[i].properties._opacity;
+				
+				
+				var w =  oGeo3DData[i].properties._radius * 2 +(weight*2);
+				var iconSize ={
+					w:w * 1,
+					h:w * 1
+				};
+				
+				
+				var textCanvas = document.createElement("canvas");
+				textCanvas.width= w;
+				textCanvas.height= w;
+				
+				var textTexture = textCanvas.getContext("2d");
+				textTexture.globalAlpha=fillOpacity;
+				textTexture.beginPath();
+				textTexture.arc(
+					oGeo3DData[i].properties._radius + weight, 
+					oGeo3DData[i].properties._radius + weight,
+					oGeo3DData[i].properties._radius,
+					0, Math.PI*2, false );
+				textTexture.globalAlpha=fillOpacity;
+				textTexture.fillStyle = fillColor;
+				textTexture.fill();
+				
+				textTexture.globalAlpha=opacity;
+				textTexture.lineWidth = weight;
+				textTexture.strokeStyle = color;
+				textTexture.stroke();
+				
+				
+				
+				textTexture.fillText(text, 0, 0 );
+				
+				var point = _latLngToPointData( 
+					viewBox, 
+					latlngPoint.lat, 
+					latlngPoint.lng, 
+					latlngPoint.h);
+				
+				var screenSize = ( nGeomSizeX > nGeomSizeY ? nGeomSizeY :nGeomSizeX );
+				iconSize.w *= (nGeomSizeX / vTextureSizeW);
+				iconSize.h *= (nGeomSizeX / vTextureSizeW);
+				
+				var texture = new THREE.Texture(textCanvas);
+				texture.needsUpdate = true; 
+	  
+				var material = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false,transparent:true, depthWrite:true } );
+				var mesh = new THREE.Sprite( material );
+				mesh.position.set( point.x, point.y, point.z );
+				mesh.scale.set( iconSize.w,iconSize.h, 1.0 );
+				
+				
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+				oSceneGEODataMeshArr.push( {
+			    	type : "Icon",
+			    	point : latlngPoint,
+			    	mesh:mesh,
+			    	iconSize : iconSize
+			    } );
+				oScene.add(mesh);
+			}
+			else if ( oGeo3DData[i].properties._markerType == "Circle" )
+			{
+				
+				
+				
+				var latlngPoint = {
+					lat : oGeo3DData[i].geometry.coordinates[1],
+					lng : oGeo3DData[i].geometry.coordinates[0],
+					h : oGeo3DData[i].geometry.coordinates[2]
+				};
+				
+				if (oGeo3DData[i].properties._altitudeMode == "relativeToGround")
+				{
+					var x=( ( latlngPoint.lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
+					var y=( ( latlngPoint.lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
+					
+				    y = viewBox.h - y;
+					latlngPoint.h = parseFloat(latlngPoint.h) + getDEMValue( x, y, viewBox );
+					oGeo3DData[i].geometry.coordinates[2] = latlngPoint.h;
+				}
+				
+				
+				oGeo3DData[i].properties._fillOpacity = ( oGeo3DData[i].properties._fillOpacity || oGeo3DData[i].properties._fillOpacity == 0 ? oGeo3DData[i].properties._fillOpacity : 0.2 );
+				var fillColor = oGeo3DData[i].properties._fillColor;
+				fillColor = ( fillColor ? fillColor : 0x0033ff );
+				var fillOpacity = oGeo3DData[i].properties._fillOpacity;
+				
+				
+				oGeo3DData[i].properties._opacity = ( oGeo3DData[i].properties._opacity || oGeo3DData[i].properties._opacity == 0 ? oGeo3DData[i].properties._opacity : 0.5 );
+				var color = ( oGeo3DData[i].properties._color ? oGeo3DData[i].properties._color : 0x0033ff );
+				var weight = ( oGeo3DData[i].properties._weight ? oGeo3DData[i].properties._weight : 5 );
+				var opacity = oGeo3DData[i].properties._opacity;
+				
+				
+				var vR = ConverUnit(parseFloat(args["lat"]), parseInt(args["z"]), parseFloat(oGeo3DData[i].properties._radius), "m", "px");
+				
+				vR *= (nGeomSizeX / args["w"]);
+				
+				var material = new THREE.MeshBasicMaterial( { 
+					color: fillColor,
+					opacity: fillOpacity, depthWrite:true,  transparent: true } );
+						
+				var geometry = new THREE.CircleGeometry( vR, 100 );
+				var mesh = new THREE.Mesh( geometry, material );
+				mesh.position.set( point.x, point.y, point.z );
+
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+				oSceneGEODataMeshArr.push( {
+			    	type : "Icon",
+			    	point : latlngPoint,
+			    	mesh:mesh,
+			    	iconSize : iconSize
+			    } );
+				
+				oScene.add(mesh);
+				/*
+				var material2 = new THREE.LineBasicMaterial( { 
+					color: color,linewidth:parseInt(weight),
+					opacity: opacity, depthWrite:true,  transparent: true
+				} );
+				
+				var geometry2 = new THREE.CircleGeometry( vR, 500 );
+				var mesh2 = new THREE.Mesh( geometry2, material2 );
+				mesh2.position.set( point.x, point.y, point.z );
+				oSceneGEODataMeshArr.push( {
+			    	type : "Icon",
+			    	point : latlngPoint,
+			    	mesh:mesh2,
+			    	iconSize : iconSize
+			    } );
+				oScene.add(mesh2);
+				*/
+				
+			}
+			else if ( oGeo3DData[i].properties._markerType == "DivIcon" )
+			{
+				var latlngPoint = {
+					lat : oGeo3DData[i].geometry.coordinates[1],
+					lng : oGeo3DData[i].geometry.coordinates[0],
+					h : oGeo3DData[i].geometry.coordinates[2]
+				};
+				
+				if (oGeo3DData[i].properties._altitudeMode == "relativeToGround")
+				{
+					var x=( ( latlngPoint.lng - viewBox.lt.lng ) / ( viewBox.rb.lng - viewBox.lt.lng ) )  * viewBox.w;
+					var y=( ( latlngPoint.lat - viewBox.rb.lat ) / Math.abs( viewBox.rb.lat - viewBox.lt.lat ) )  * viewBox.h;
+					
+				    y = viewBox.h - y;
+					latlngPoint.h = parseFloat(latlngPoint.h) + getDEMValue( x, y, viewBox );
+					oGeo3DData[i].geometry.coordinates[2] = latlngPoint.h;
+				}
+				
+				
+				var textShadow = oGeo3DData[i].properties._div.textShadow;
+				var color = oGeo3DData[i].properties._div.color;
+				var text = oGeo3DData[i].properties._div.text;
+				var font = oGeo3DData[i].properties._div.font;
+				
+				var opacity = oGeo3DData[i].properties._div.opacity;
+				
+				
+				var textCanvas = document.createElement("canvas");
+				
+				var textTexture = textCanvas.getContext("2d");
+				textTexture.font = font;
+				textTexture.globalAlpha=opacity;
+				
+				textTexture.textAlign = "left";
+				textTexture.textBaseline = "top";
+				textTexture.fillStyle = color;			
+				var metric = textTexture.measureText("あ" );
+				var h = metric.width+2;
+				metric = textTexture.measureText(text );
+				var w = metric.width;
+				
+				var iconSize ={
+					w:w * 1,
+					h:h * 1
+				};
+				
+				textCanvas.width=w;
+				textCanvas.height=h;
+				
+				var textTexture = textCanvas.getContext("2d");
+				textTexture.font = font;
+				textTexture.globalAlpha=opacity;
+				
+				textTexture.textAlign = "left";
+				textTexture.textBaseline = "top";
+				textTexture.fillStyle = color;
+				
+				var point = _latLngToPointData( 
+					viewBox, 
+					latlngPoint.lat, 
+					latlngPoint.lng, 
+					latlngPoint.h);
+				
+				var screenSize = ( nGeomSizeX > nGeomSizeY ? nGeomSizeY :nGeomSizeX );
+				iconSize.w *= (nGeomSizeX / vTextureSizeW);
+				iconSize.h *= (nGeomSizeX / vTextureSizeW);
+				
+				
+				textTexture.fillText(text, 0, 0 );
+					
+				
+				var texture = new THREE.Texture(textCanvas);
+				texture.needsUpdate = true; 
+	  
+				var material = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false,transparent:true, depthWrite:true } );
+				var mesh = new THREE.Sprite( material );
+				mesh.position.set( point.x, point.y, point.z );
+				mesh.scale.set( iconSize.w,iconSize.h, 1.0 );
+				
+				
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+				oSceneGEODataMeshArr.push( {
+			    	type : "Text",
+			    	point : latlngPoint,
+			    	mesh:mesh,
+			    	iconSize : iconSize
+			    } );
+				oScene.add(mesh);
+			}
+			else if ( oGeo3DData[i].properties._markerType == "Icon" )
+			{
+				var latlngPoint = {
+					lat : oGeo3DData[i].geometry.coordinates[1],
+					lng : oGeo3DData[i].geometry.coordinates[0],
+					h : oGeo3DData[i].geometry.coordinates[2]
+				};
+				
+			//	latlngPoint.h = 0;
+				var point = _latLngToPointData( 
+					viewBox, 
+					latlngPoint.lat, 
+					latlngPoint.lng, 
+					latlngPoint.h);
+
+				//length of vertical				
+				var imageHeight = Math.floor(oGeo3DData.length / 16);
+				if ((oGeo3DData.length % 16) > 0){
+					imageHeight += 1;
+				}
+				imageHeight *= 32;
+				
+				var texture = null;// THREE.ImageUtils.loadTexture( IconTexture );
+				var iconScale = oGeo3DData[i].properties._iconScale;
+				if (!iconScale ) iconScale = 1;
+				
+				var iconSize ={
+					w:oGeo3DData[i].properties._iconSize[0] * iconScale,
+					h:oGeo3DData[i].properties._iconSize[1] * iconScale
+				};
+				var screenSize = ( nGeomSizeX > nGeomSizeY ? nGeomSizeY :nGeomSizeX );
+				iconSize.w *= (nGeomSizeX / vTextureSizeW);
+				iconSize.h *= (nGeomSizeX / vTextureSizeW);
+				var material = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false,transparent:true, depthWrite:true } );
+				var img = new Image();
+				img.style.width = 512;
+				img.style.height = imageHeight;
+				img.width = 512;
+				img.height = imageHeight;
+				img._material = material;
+				img._iconNo = iconNo;
+				img._iconSize = iconSize;
+				img.onload = function()
+				{
+					
+					var imagecanvas = document.createElement('canvas');
+
+					imagecanvas.width = 512;
+					imagecanvas.height = imageHeight;
+					var imagecontext = imagecanvas.getContext('2d');
+					
+					imagecontext.drawImage( this, 0, 0, 512, imageHeight );
+					
+					//for( var i=0; i<iconArr.length; i++ )
+					{
+						var material = this._material;
+						var iconNo = this._iconNo;
+						var iconSize = this._iconSize;
+						
+						var srcX = ( (iconNo % 16 ) * 32 );
+						var srcY = ( Math.floor(iconNo / 16) * 32 );
+						var img02 = imagecontext.getImageData(srcX, srcY, 32, 32);
+						
+						var imagecanvas2 = document.createElement('canvas');
+						imagecanvas2.width = 32;
+						imagecanvas2.height = 32;
+						var imagecontext2 = imagecanvas2.getContext('2d');
+						imagecontext2.putImageData(img02, 0, 0);
+						
+						material.map = new THREE.Texture(imagecanvas2);
+						material.map.needsUpdate = true;
+					}
+				};
+				img.src = IconTexture;
+				
+				
+				var mesh = new THREE.Sprite( material );
+				mesh.position.set( point.x, point.y, point.z );
+				mesh.scale.set( iconSize.w,iconSize.h, 1.0 );
+				
+				
+			    if ( !oSceneGEODataMeshArr ) oSceneGEODataMeshArr = [];
+				oSceneGEODataMeshArr.push( {
+			    	type : "Icon",
+			    	point : latlngPoint,
+			    	mesh:mesh,
+			    	iconSize : iconSize,
+		    		iconNo : iconNo
+			    } );
+				oScene.add(mesh);
+				iconNo ++;
+				
+				
+			}
+			
+		}
+		
+	}
+
+	function _draw3DGEODataIcon(geometry,viewBox, data )
+	{
+		
+	}
+
+	function _draw3DGEODataLineString(geometry,viewBox, data )
+	{
+		var points = [];
+		
+		
+		var coordinates = data.geometry.coordinates;
+		
+		if ( coordinates.length <= 1 )
+			coordinates = coordinates[0];
+			
+		for( var i=0; i<coordinates.length; i++ )
+		{
+			var p=coordinates[i];
+			points.push( {lng:p[0],lat:p[1],h:p[2]} );
+		}
+		
+		for( var i=0; i<points.length; i++ )
+		{
+			var p1 = _latLngToPointData( viewBox, points[i].lat, points[i].lng, points[i].h );
+			geometry.vertices.push( new THREE.Vertex( new THREE.Vector3(p1.x, p1.y, p1.z) ) );  
+		}
+		
+		return points
+	}
+
+	function _draw3DGEODataPolygon(geometry, triangleList,viewBox, data )
+	{
+		var triangles = [];
+		for( var j=0; j<triangleList.length; j++ )
+		{
+			var tri = triangleList[j];
+			
+			var p1 = _latLngToPointData( viewBox, tri.p1.y, tri.p1.x, tri.p1.h );
+			var p2 = _latLngToPointData( viewBox, tri.p2.y, tri.p2.x, tri.p2.h );
+			var p3 = _latLngToPointData( viewBox, tri.p3.y, tri.p3.x, tri.p3.h );
+			var v1 = new THREE.Vector3(p1.x, p1.y, p1.z);
+			var v2 = new THREE.Vector3(p2.x, p2.y, p2.z);
+			var v3 = new THREE.Vector3(p3.x, p3.y, p3.z);
+			geometry.vertices.push(new THREE.Vertex(v1));
+			geometry.vertices.push(new THREE.Vertex(v2));
+			geometry.vertices.push(new THREE.Vertex(v3));
+			
+			var face = new THREE.Face3( geometry.vertices.length-3, geometry.vertices.length-2, geometry.vertices.length-1 );
+			geometry.faces.push( face );
+			
+		}
+		
+		return triangles;
+	}
+
+	
+	
+    /*-----------------------------------------------------------------------------------------------*/
+    window.onresize = EvtResize;
+
+    //-->
+    </script>
+</head>
+<body onload="Init();">
+    高さの強調度を変えたい場合は、「index.html」の20行目の数値を変更してください。
+    <div id="webgl"></div>
+</body>
+</html>

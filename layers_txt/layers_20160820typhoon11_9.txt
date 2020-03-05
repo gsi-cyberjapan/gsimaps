@@ -1,0 +1,157 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0825dol",
+      "title": "常呂川_正射画像（8/25撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0825dol/{z}/{x}/{y}.png",
+      "cocotile": false,
+      "minZoom": 10,
+      "maxZoom": 18,
+      "html": "<div class=\"gsi_layerinfo_title\">常呂川_正射画像（8/25撮影）</div><div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0825suichokul",
+      "title": "常呂川_垂直写真（8/25撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0825suichokul/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">常呂川_垂直写真（8/25撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0825nanamel",
+      "title": "常呂川_斜め写真（8/25撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0825nanamel/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">常呂川_斜め写真（8/25撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0824nanamel",
+      "title": "常呂川_斜め写真（8/24撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0824nanamel/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">常呂川_斜め写真（8/24撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0823nanamel",
+      "title": "常呂川_斜め写真（8/23撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0823nanamel/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">常呂川_斜め写真（8/23撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0825shinsui",
+      "title": "常呂川_推定浸水範囲（8/25 12:00時点）",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0825shinsui/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "国土地理院撮影（8月25日12:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0824shinsui",
+      "title": "常呂川_推定浸水範囲（8/24 12:00時点）",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0824shinsui/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "国土地理院撮影（8月24日12:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_0823shinsui",
+      "title": "常呂川_推定浸水範囲（8/23 15:00時点）",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0823shinsui/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "国土地理院撮影（8月23日15:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160820typhoon11_9_uav",
+      "title": "北海道砂川市焼山_UAV動画（8/22撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">北海道砂川市焼山の土砂災害箇所(UAV動画)</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "__airphoto_20160820",
+      "title": "簡易空中写真（2004年～）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+      "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 5,
+      "html": "<div class=\"gsi_layerinfo_title\">簡易空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/Laser_HP/index.html\">航空レーザ測量</a>の点検用に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "_relief_20160820",
+      "title": "色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "maxZoom": 18,
+      "maxNativeZoom": 15,
+      "legendUrl": "https://maps.gsi.go.jp/legend/attension_relief.html",
+      "html": "<div class=\"gsi_layerinfo_title\">色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "治水地形分類図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "_lcmfc2_20160820",
+          "title": "更新版(2007～2014年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2014年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_lcmfc1_20160820",
+          "title": "初版(1976～1978年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

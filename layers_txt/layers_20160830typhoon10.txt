@@ -1,0 +1,499 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "パンケ新得川（北海道新得町）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901nanamel4",
+          "title": "斜め写真（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901nanamel4/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">パンケ新得川（北海道新得町）_斜め写真（9/1撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "札内川（北海道帯広市）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901nanamel3",
+          "title": "斜め写真（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901nanamel3/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">札内川（北海道帯広市）_斜め写真（9/1撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901shinsui3",
+          "title": "推定浸水範囲（9/1 12:00時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901shinsui3/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（9月1日12:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "空知川（北海道南富良野町）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901nanamel1",
+          "title": "斜め写真（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901nanamel1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">空知川（北海道南富良野町）_斜め写真（9/1撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901shinsui1",
+          "title": "推定浸水範囲（9/1 13:30時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901shinsui1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（9月1日13:30）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel4",
+          "title": "斜め写真（8/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831nanamel4/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">空知川（北海道南富良野町）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui4",
+          "title": "推定浸水範囲（8/31 15:00時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831shinsui4/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日15:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "芽室川・美生川（北海道芽室町）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901nanamel2",
+          "title": "斜め写真（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901nanamel2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">芽室川・美生川（北海道芽室町）_斜め写真（9/1撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901shinsui2",
+          "title": "推定浸水範囲（9/1 12:30時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901shinsui2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（9月1日12:30）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel3",
+          "title": "斜め写真（8/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831nanamel3/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">芽室川・美生川（北海道芽室町）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui3",
+          "title": "推定浸水範囲（8/31 16:00時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831shinsui3/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日16:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "久慈川・長内川（岩手県久慈市）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel2",
+          "title": "斜め写真（8/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831nanamel2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">久慈川・長内川（岩手県久慈市）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui2",
+          "title": "推定浸水範囲（8/31 14:00時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831shinsui2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日14:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "安家川（岩手県岩泉町）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907dol1",
+          "title": "安家地区正射画像（9/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907dol1/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907suichokul1",
+          "title": "安家地区垂直写真（9/7撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907suichokul1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">安家地区_垂直写真（9/7撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_handoku1",
+          "title": "安家地区土砂崩壊・堆積地等分布図（9/7撮影時）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_handoku1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">安家地区土砂崩壊・堆積地等分布図（9/7撮影時）</div><div class=\"gsi_layerinfo_kaisetu\"><ol><li>この地図は国土地理院が9月7日に撮影した垂直写真から、平成28年台風第10号に係る降雨等により生じたと考えられる土砂崩壊・堆積地及び道路の損壊を判読したものです。なお、現地踏査は実施しておらず、実際に崩壊・堆積や損壊のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊・堆積地は、急傾斜地の崩壊、地すべり、土石流を1つの項目にまとめて表現しています。</li><li>土砂崩壊・堆積地、道路損壊の大まかな形状を表現しています。</li><li>崩壊・堆積の発生を確認して、表記しているものであり、保全対象との関係などから土砂災害ではないものも含まれる場合があります。</li></ol>平成28年9月16日更新</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0902nanamel2",
+          "title": "斜め写真（9/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0902nanamel2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">安家川（岩手県岩泉町）_斜め写真（9/2撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "小本川（岩手県岩泉町）",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007dol1",
+          "title": "穴沢地区正射画像（10/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007dol1/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007dol2",
+          "title": "鼠入地区正射画像（10/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007dol2/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007suichokul1",
+          "title": "穴沢地区垂直写真（10/7撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007suichokul1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">穴沢地区_垂直写真（10/7撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007suichokul2",
+          "title": "鼠入地区垂直写真（10/7撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007suichokul2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">鼠入地区_垂直写真（10/7撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007handoku",
+          "title": "穴沢・鼠入地区土砂崩壊・堆積地等分布図（10/7撮影等）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007handoku/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">穴沢・鼠入地区土砂崩壊・堆積地等分布図（10/7撮影等）</div><div class=\"gsi_layerinfo_kaisetu\"><ol><li>この地図は国土地理院が10月7日に撮影した垂直写真から、平成28年台風第10号に係る降雨等により生じたと考えられる土砂崩壊・堆積地及び道路の損壊を判読したものです。なお、現地踏査は実施しておらず、実際に崩壊・堆積や損壊のあった箇所でも把握できていない部分があります。また、国土交通省東北地方整備局が撮影したUAV映像も参考にして判読しています。<br><a target=\"_blank\" href=\"http://www.thr.mlit.go.jp/Bumon/B00097/k00360/saigai-info/h28taifu10/top.html\">参照</a></li><li>土砂崩壊・堆積地は、急傾斜地の崩壊、地すべり、土石流を1つの項目にまとめて表現しています。</li><li>土砂崩壊・堆積地、道路損壊箇所の中心付近を丸で表しており、土砂崩壊・堆積地、道路損壊箇所の形状を表現しているわけではありません。</li><li>線状に連続しているものは、おおむね100m毎に点を取得しています。</li><li>崩壊・堆積の発生を確認して、表記しているものであり、保全対象との関係などから土砂災害ではないものも含まれる場合があります。</li><li>今後の降雨等により、土砂崩壊・堆積地の箇所数が増加する可能性があります。</li></ol>平成28年10月14日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_1007handokuhani",
+          "title": "穴沢・鼠入地区土砂崩壊・堆積地等判読範囲（10/7撮影等）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007handokuhani/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_kaisetu\">「穴沢・鼠入地区土砂崩壊・堆積地等分布図（10/7撮影等）」の判読範囲を示しています。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907dol2",
+          "title": "穴沢地区正射画像（9/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907dol2/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907dol3",
+          "title": "鼠入地区正射画像（9/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907dol3/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907suichokul2",
+          "title": "穴沢地区垂直写真（9/7撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907suichokul2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">穴沢地区_垂直写真（9/7撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907suichokul3",
+          "title": "鼠入地区垂直写真（9/7撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907suichokul3/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">鼠入地区_垂直写真（9/7撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_handoku2",
+          "title": "穴沢・鼠入地区土砂崩壊・堆積地等分布図（9/7撮影時）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_handoku2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">穴沢・鼠入地区土砂崩壊・堆積地等分布図（9/7撮影時）</div><div class=\"gsi_layerinfo_kaisetu\"><ol><li>この地図は国土地理院が9月7日に撮影した垂直写真から、平成28年台風第10号に係る降雨等により生じたと考えられる土砂崩壊・堆積地及び道路の損壊を判読したものです。なお、現地踏査は実施しておらず、実際に崩壊・堆積や損壊のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊・堆積地は、急傾斜地の崩壊、地すべり、土石流を1つの項目にまとめて表現しています。</li><li>土砂崩壊・堆積地、道路損壊の大まかな形状を表現しています。</li><li>崩壊・堆積の発生を確認して、表記しているものであり、保全対象との関係などから土砂災害ではないものも含まれる場合があります。</li></ol>平成28年9月16日更新</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0907handokuhani",
+          "title": "安家・穴沢・鼠入地区土砂崩壊・堆積地等判読範囲（9/7撮影時）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0907handokuhani/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_kaisetu\">「安家・穴沢・鼠入地区土砂崩壊・堆積地等分布図（9/7撮影時）」の判読範囲を示しています。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0902nanamel1",
+          "title": "斜め写真（9/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0902nanamel1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">小本川（岩手県岩泉町）_斜め写真（9/2撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831nanamel1",
+          "title": "斜め写真（8/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831nanamel1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">小本川（岩手県岩泉町）_斜め写真（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831shinsui1",
+          "title": "推定浸水範囲（8/31 14:00時点）",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831shinsui1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "国土地理院撮影（8月31日14:00）の画像（斜め写真）判読により推定<br>この推定浸水範囲は、空中写真（斜め写真）を基に浸水した範囲を判読したものですので、実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0901uav1",
+          "title": "UAV動画（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0901uav1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">岩手県岩泉町_UAV動画（9/1撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160830typhoon10_0831uav1",
+          "title": "UAV動画（8/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+          "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_0831uav1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">岩手県岩泉町_UAV動画（8/31撮影）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20160830typhoon10_lndst_h160824",
+      "title": "北海道地区_被災前の人工衛星画像<br>(Landsat8)",
+      "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_lndst_h160824/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "maxZoom": 18,
+      "maxNativeZoom": 14,
+      "html": "（2016/8/24観測）<br>本タイル画像を利用する場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>「国土地理院コンテンツ利用規約」</a>で定める方法での出所明示に加え、 以下の出所も合わせて明示してください。<br>データソース：Landsat8画像　courtesy of the U.S. Geological Survey"
+    },
+    {
+      "type": "Layer",
+      "id": "20160830typhoon10_lndst_t160808",
+      "title": "東北地区_被災前の人工衛星画像<br>(Landsat8)",
+      "url": "https://maps.gsi.go.jp/xyz/20160830typhoon10_lndst_t160808/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "maxZoom": 18,
+      "maxNativeZoom": 14,
+      "html": "（2016/8/8観測）<br>本タイル画像を利用する場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>「国土地理院コンテンツ利用規約」</a>で定める方法での出所明示に加え、 以下の出所も合わせて明示してください。<br>データソース：Landsat8画像　courtesy of the U.S. Geological Survey"
+    },
+    {
+      "type": "Layer",
+      "id": "_relief_20160830",
+      "title": "色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "maxZoom": 18,
+      "maxNativeZoom": 15,
+      "legendUrl": "https://maps.gsi.go.jp/legend/attension_relief.html",
+      "html": "<div class=\"gsi_layerinfo_title\">色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "治水地形分類図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "_lcmfc2_20160830",
+          "title": "更新版(2007～2014年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2014年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_lcmfc1_20160830",
+          "title": "初版(1976～1978年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

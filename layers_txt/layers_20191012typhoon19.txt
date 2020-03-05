@@ -1,0 +1,536 @@
+{
+"layers": [
+	{
+	"type": "LayerGroup",
+	"title": "正射画像",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "多摩川地区（東京都大田区、世田谷区、八王子市、立川市、府中市、昭島市、調布市、日野市、国立市、福生市、狛江市、多摩市、稲城市、あきる野市、神奈川県川崎市",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tamagawa_1013do",
+			"title": "多摩川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tamagawa_1013do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+			}
+		]
+		},	
+		{
+		"type": "LayerGroup",
+		"title": "都幾川地区（埼玉県川越市、東松山市、坂戸市、嵐山町、川島町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tokigawa_1013do",
+			"title": "都幾川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tokigawa_1013do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},		
+		{
+		"type": "LayerGroup",
+		"title": "那珂川地区（茨城県水戸市、ひたちなか市、常陸大宮市、那珂市、城里町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nakagawa_1017do",
+			"title": "那珂川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nakagawa_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "久慈川地区（茨城県日立市、常陸太田市、常陸大宮市、那珂市、東海村）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_1017do",
+			"title": "久慈川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		]
+		},		
+		{
+		"type": "LayerGroup",
+		"title": "久慈川（大子）地区（茨城県大子町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_daigo_1017do",
+			"title": "久慈川（大子）地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_daigo_1017do/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+			}
+		]
+		}
+	]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "正射画像（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "千曲川地区（長野県長野市、須坂市、中野市、千曲市、小布施町、山ノ内町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1016do_sokuho",
+			"title": "千曲川地区（10/16撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1016do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "丸森地区（宮城県白石市、角田市、丸森町、福島県相馬市、伊達市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1020do_sokuho",
+			"title": "丸森地区（10/20撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1020do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			},
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1021do_sokuho",
+			"title": "丸森地区（10/21撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1021do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		}
+				]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "垂直写真（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "千曲川地区（長野県長野市、須坂市、中野市、千曲市、小布施町、山ノ内町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1013suichoku",
+			"title": "千曲川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			},
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_chikumagawa_1016suichoku",
+			"title": "千曲川地区（10/16撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_chikumagawa_1016suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "多摩川地区（東京都大田区、世田谷区、八王子市、立川市、府中市、昭島市、調布市、日野市、国立市、福生市、狛江市、多摩市、稲城市、あきる野市、神奈川県川崎市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tamagawa_1013suichoku",
+			"title": "多摩川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tamagawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "都幾川地区（埼玉県川越市、東松山市、坂戸市、嵐山町、川島町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_tokigawa_1013suichoku",
+			"title": "都幾川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_tokigawa_1013suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+			]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "那珂川地区（茨城県水戸市、ひたちなか市、常陸大宮市、那珂市、城里町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nakagawa_1017suichoku",
+			"title": "那珂川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nakagawa_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		  ]
+		},		
+{
+		"type": "LayerGroup",
+		"title": "久慈川地区（茨城県日立市、常陸太田市、常陸大宮市、那珂市、東海村）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_1017suichoku",
+			"title": "久慈川地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		  ]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "久慈川（大子）地区（茨城県大子町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_kujigawa_daigo_1017suichoku",
+			"title": "久慈川（大子）地区（10/17撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kujigawa_daigo_1017suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+		  ]
+		},
+				{
+		"type": "LayerGroup",
+		"title": "丸森地区（宮城県白石市、角田市、丸森町、福島県相馬市、伊達市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1020suichoku",
+			"title": "丸森地区（10/20撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1020suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			},
+						{
+			"type": "Layer",
+			"id": "20191012typhoon19_marumori_1021suichoku",
+			"title": "丸森地区（10/21撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_marumori_1021suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります"
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "斜め写真",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "吉田川地区（宮城県大崎市、富谷市、松島町、大和町、大郷町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_yoshidagawa_1013naname",
+			"title": "吉田川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_yoshidagawa_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川（丸森）地区（宮城県角田市、丸森町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma-marumori_1013naname",
+			"title": "阿武隈川（丸森）地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma-marumori_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川（伊達）地区（福島県伊達市、桑折町、国見町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma-date_1013naname",
+			"title": "阿武隈川（伊達）地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma-date_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "阿武隈川地区（福島県郡山市、須賀川市、本宮市、鏡石町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_abukuma_1013naname",
+			"title": "阿武隈川地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "長野地区（長野県長野市、須坂市、中野市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_nagano_1013naname",
+			"title": "長野地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_nagano_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "雲の影響により地上が見えにくい場合があります。斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "埼玉地区（埼玉県さいたま市、川越市、東松山市、狭山市、入間市、富士見市、ふじみ野市、川島町、鳩山町、ときがわ町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191012typhoon19_saitama_1013naname",
+			"title": "埼玉地区（10/13撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_saitama_1013naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。また、アイコンの示す方向は、撮影方向の概略を示しております。"
+			}
+					]
+		}
+				]
+	},
+	{
+      "type": "Layer",
+      "id": "20191012typhoon19_1013uav",
+      "title": "UAV動画",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_1013uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "Layer",
+      "id": "20191012typhoon19_syamenhoukai_taiseki",
+      "title": "斜面崩壊・堆積分布図",
+      "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_syamenhoukai_taiseki/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 6,
+      "maxZoom": 17,
+      "maxNativeZoom": 2,
+      "html": "</div>解説：<br>１．この情報は国土地理院が10月20日および21日に撮影した速報用空中写真から、令和元年東日本台風の豪雨により生じたと考えられる斜面崩壊等によりできた地形変化を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、令和元年東日本台風による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>２．地形変化の範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>３．地形が変化した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。<br>４．道路、河川上の土砂は撤去されている可能性があります。<br></div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_syamenhoukai_taiseki.PNG\" width=200 alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"></li></ul></div><div class=\"gsi_layerinfo_copy\">"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定段彩図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_naruse_1014dansaizu",
+          "title": "鳴瀬川水系（吉田川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_naruse_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日17時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_naruse_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_abukuma_1014dansaizu",
+          "title": "阿武隈川水系（阿武隈川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_abukuma_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日18時までの情報と国土地理院が10月13日に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_abukuma_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_shinano_1013dansaizu",
+          "title": "信濃川水系（千曲川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_shinano_1013dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月13日13時までの情報と国土地理院が10月13日に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_shinano_1013dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_kuji_1014dansaizu",
+          "title": "久慈川水系（久慈川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_kuji_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_kuji_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_naka_1014dansaizu",
+          "title": "那珂川水系（那珂川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_naka_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_naka_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20191012typhoon19_arakawa_1014dansaizu",
+          "title": "荒川水系（入間川・越辺川・都幾川）",
+          "url": "https://maps.gsi.go.jp/xyz/20191012typhoon19_arakawa_1014dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 15,
+          "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日16時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_arakawa_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        }
+    ]
+   }
+ ]
+}

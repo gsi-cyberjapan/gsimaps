@@ -1,0 +1,28 @@
+{
+  "name":"地理院地図",
+  "short_name":"地理院地図",
+  "description" : "地理院地図",
+  "start_url": "./index_m.html",
+  "display": "standalone",
+  "orientation" : "any",
+  "background_color": "#FFFFFF",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "./image/logo-96.png",
+      "sizes":"96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/logo-192.png",
+      "sizes":"192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/logo-512.png",
+      "sizes":"512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

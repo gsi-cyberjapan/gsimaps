@@ -1,0 +1,1264 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "fukkyukizu",
+      "title": "応急復旧対策基図",
+      "url": "https://maps.gsi.go.jp/xyz/fukkyukizu/{z}/{x}/{y}.png",
+      "cocotile": false,
+      "minZoom": 5,
+      "maxZoom": 18,
+      "legendUrl": "https://maps.gsi.go.jp/legend/fukkyukizu_legend.pdf",
+      "html": "<div class=\"gsi_layerinfo_title\">応急復旧対策基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kanri/kanri61002.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_epicenter",
+      "title": "震央",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/092.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_epicenter/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_shinou_all",
+      "title": "震源分布データ",
+      "url": "https://maps.gsi.go.jp/overlay/160414kumamoto/20160414kumamoto_shinou_all.kml",
+      "minZoom": 2,
+      "maxZoom": 12,
+      "html": "このデータは、気象庁が大学や国立研究開発法人防災科学技術研究所等の関係機関から地震観測データの提供を受け、文部科学省と協力して整理したものです。<br><br><div class=\"gsi_layerinfo_title\">平成28年4月14日に熊本県で発生した地震において、発生後１週間以内に起きたマグニチュード４以上の震源分布データ</div><br><table border=\"1\" cellspacing=\"0\" bordercolor=\"#000000\"><tr><td>大きさ</td><td>マグニチュード</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\" width=\"20\" height=\"20\"></td><td>４以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"30\" height=\"30\"></td><td>５以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"40\" height=\"40\"></td><td>６以上</td></tr><tr><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/081.png\" alt=\"大きさ\"  width=\"50\" height=\"50\"></td><td>７以上</td></tr></table>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_faultmodel",
+      "title": "震源断層モデル",
+      "url": "https://maps.gsi.go.jp/overlay/160414kumamoto/20160414kumamoto_faultmodel.kml",
+      "minZoom": 3,
+      "maxZoom": 12,
+      "html": "平成28年4月14日・16日、熊本県で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000140781.pdf\">解説</a>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "電子基準点による地殻変動",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_fvector",
+          "title": "4月16日01時25分（M7.3）<br>迅速解（水平）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_fvector/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 5,
+          "maxZoom": 17,
+          "html": "平成28年（2016年）４月16日01時25分に熊本県熊本地方で発生した地震について、震源域周辺の電子基準点で観測された４時間分のデータを解析した結果、震源に近い電子基準点「長陽」（熊本県阿蘇郡南阿蘇村）が南西方向に約97cmの変動、上下方向に約23cmの隆起（いずれも暫定値）をはじめ、熊本県を中心とした地域で大きな地殻変動が確認されました。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/BOUSAI/H27-kumamoto-earthquake-index.html#4\">解説</a>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_fvectorv",
+          "title": "4月16日01時25分（M7.3）<br>迅速解（上下）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_fvectorv/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 5,
+          "maxZoom": 17,
+          "html": "平成28年（2016年）４月16日01時25分に熊本県熊本地方で発生した地震について、震源域周辺の電子基準点で観測された４時間分のデータを解析した結果、震源に近い電子基準点「長陽」（熊本県阿蘇郡南阿蘇村）が南西方向に約97cmの変動、上下方向に約23cmの隆起（いずれも暫定値）をはじめ、熊本県を中心とした地域で大きな地殻変動が確認されました。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/BOUSAI/H27-kumamoto-earthquake-index.html#4\">解説</a>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "変動補正パラメータ",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_zahyo_param",
+          "title": "座標変換パラメータ",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_zahyo_param/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 9,
+          "maxZoom": 14,
+          "html": "緑色に塗られた領域が平成28年熊本地震に伴う座標補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/sokuchikijun40036.html\">「ダウンロードページ」</a>から入手できます。"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_hyoko_param",
+          "title": "標高補正パラメータ",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_hyoko_param/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 10,
+          "maxZoom": 14,
+          "html": "茶色に塗られた領域が平成28年熊本地震に伴う標高補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/patchjgd_h/download/index.html\">「ダウンロードページ」</a>から入手できます。"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "正射画像(まとめ)",
+          "id": "20160414kumamoto_ort_all",
+          "toggleall": true,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol1",
+              "title": "益城地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.878434,130.635681],[32.606989,130.979004 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol2",
+              "title": "熊本南地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.824212,130.529937],[32.67406,130.788117 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol3",
+              "title": "宇城地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol3/{z}/{x}/{y}.png",
+              "bounds" : [ [32.702956,130.529937],[32.512077,130.766144 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol1",
+              "title": "熊本地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.635681],[32.742237,130.829316 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol2",
+              "title": "宇土地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.769956,130.593109],[32.565333,130.808716 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol3",
+              "title": "合志地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol3/{z}/{x}/{y}.png",
+              "bounds" : [ [32.98678,130.65628],[32.849596,130.851288 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol4",
+              "title": "西原地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol4/{z}/{x}/{y}.png",
+              "bounds" : [ [32.932624,130.807342],[32.742237,131.021576 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol5",
+              "title": "阿蘇地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol5/{z}/{x}/{y}.png",
+              "bounds" : [ [33.000602,130.935058],[32.891119,131.21521 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol6",
+              "title": "南阿蘇地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol6/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.97763],[32.79651,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol7",
+              "title": "別府地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol7/{z}/{x}/{y}.png",
+              "bounds" : [ [33.364944,131.42807],[33.254766,131.537934 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0419dol2",
+              "title": "南阿蘇2地区正射画像（4/19撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.935058],[32.756097,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0419dol6",
+              "title": "小国地区正射画像（4/19撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol6/{z}/{x}/{y}.png",
+              "bounds" : [ [33.230647,130.935058],[32.99945,131.193238 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol06",
+              "title": "天草地区正射画像（4/19,4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol06/{z}/{x}/{y}.png",
+              "bounds" : [ [32.756098,130.102844],[32.428658,130.660401 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol01",
+              "title": "西原2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
+              "bounds" : [ [32.946454,130.827941],[32.79651,131.065522 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol02",
+              "title": "阿蘇2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol02/{z}/{x}/{y}.png",
+              "bounds" : [ [33.040904,130.935058],[32.891119,131.300355 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol03",
+              "title": "南阿蘇2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol03/{z}/{x}/{y}.png",
+              "bounds" : [ [32.757253,130.935058],[32.606989,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol04",
+              "title": "御船地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol04/{z}/{x}/{y}.png",
+              "bounds" : [ [32.824212,130.76477],[32.525973,130.958405 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol05",
+              "title": "八代地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png",
+              "bounds" : [ [32.608146,130.487365],[32.429817,130.808716 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol07",
+              "title": "玉名地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol07/{z}/{x}/{y}.png",
+              "bounds" : [ [32.98678,130.421447],[32.741082,130.681 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol08",
+              "title": "山鹿地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol08/{z}/{x}/{y}.png",
+              "bounds" : [ [33.108798,130.377502],[32.970651,130.744172 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol09",
+              "title": "菊池地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol09/{z}/{x}/{y}.png",
+              "bounds" : [ [33.108798,130.720825],[32.917638,131.000977 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol10",
+              "title": "竹田地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol10/{z}/{x}/{y}.png",
+              "bounds" : [ [33.040904,131.212463],[32.889966,131.492615 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol11",
+              "title": "湯布院地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol11/{z}/{x}/{y}.png",
+              "bounds" : [ [33.406225,131.256408],[33.174341,131.473389 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429dol1",
+              "title": "熊本断層地区A正射画像（4/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.913027,130.8815],[32.810361,131.032563 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429dol2",
+              "title": "熊本断層地区B正射画像（4/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.851904,130.753784],[32.680996,130.936432 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0530dol",
+              "title": "益城・西原地区正射画像（5/30撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.892273,130.678253],[32.71451,131.000977 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0531dol",
+              "title": "南阿蘇河陽地区正射画像（5/31撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.932624,130.935058],[32.810361,131.086121 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+             },
+             {
+              "type": "Layer",
+              "id": "20160414kumamoto_0705dol",
+              "title": "阿蘇3地区正射画像（7/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705dol/{z}/{x}/{y}.png",
+              "bounds" : [ [33.027088,130.935058],[32.87728,131.065522 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0724dol",
+              "title": "熊本2地区正射画像（7/5～24撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.919944,130.700225],[32.71451,131.086121 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "正射画像",
+          "toggleall": true,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0724dol",
+              "title": "熊本2地区正射画像（7/5～24撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.919944,130.700225],[32.71451,131.086121 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0705dol",
+              "title": "阿蘇3地区正射画像（7/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705dol/{z}/{x}/{y}.png",
+              "bounds" : [ [33.027088,130.935058],[32.87728,131.065522 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0531dol",
+              "title": "南阿蘇河陽地区正射画像（5/31撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.932624,130.935058],[32.810361,131.086121 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0530dol",
+              "title": "益城・西原地区正射画像（5/30撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
+              "bounds" : [ [32.892273,130.678253],[32.71451,131.000977 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429dol1",
+              "title": "熊本断層地区A正射画像（4/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.913027,130.8815],[32.810361,131.032563 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429dol2",
+              "title": "熊本断層地区B正射画像（4/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.851904,130.753784],[32.680996,130.936432 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol01",
+              "title": "西原2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
+              "bounds" : [ [32.946454,130.827941],[32.79651,131.065522 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol02",
+              "title": "阿蘇2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol02/{z}/{x}/{y}.png",
+              "bounds" : [ [33.040904,130.935058],[32.891119,131.300355 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol03",
+              "title": "南阿蘇2地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol03/{z}/{x}/{y}.png",
+              "bounds" : [ [32.757253,130.935058],[32.606989,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol04",
+              "title": "御船地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol04/{z}/{x}/{y}.png",
+              "bounds" : [ [32.824212,130.76477],[32.525973,130.958405 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol05",
+              "title": "八代地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png",
+              "bounds" : [ [32.608146,130.487365],[32.429817,130.808716 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol06",
+              "title": "天草地区正射画像（4/19,4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol06/{z}/{x}/{y}.png",
+              "bounds" : [ [32.756098,130.102844],[32.428658,130.660401 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol07",
+              "title": "玉名地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol07/{z}/{x}/{y}.png",
+              "bounds" : [ [32.98678,130.421447],[32.741082,130.681 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol08",
+              "title": "山鹿地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol08/{z}/{x}/{y}.png",
+              "bounds" : [ [33.108798,130.377502],[32.970651,130.744172 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol09",
+              "title": "菊池地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol09/{z}/{x}/{y}.png",
+              "bounds" : [ [33.108798,130.720825],[32.917638,131.000977 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol10",
+              "title": "竹田地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol10/{z}/{x}/{y}.png",
+              "bounds" : [ [33.040904,131.212463],[32.889966,131.492615 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420dol11",
+              "title": "湯布院地区正射画像（4/20撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol11/{z}/{x}/{y}.png",
+              "bounds" : [ [33.406225,131.256408],[33.174341,131.473389 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0419dol2",
+              "title": "南阿蘇2地区正射画像（4/19撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.935058],[32.756097,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0419dol6",
+              "title": "小国地区正射画像（4/19撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol6/{z}/{x}/{y}.png",
+              "bounds" : [ [33.230647,130.935058],[32.99945,131.193238 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol1",
+              "title": "熊本地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.635681],[32.742237,130.829316 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol2",
+              "title": "宇土地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.769956,130.593109],[32.565333,130.808716 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol3",
+              "title": "合志地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol3/{z}/{x}/{y}.png",
+              "bounds" : [ [32.98678,130.65628],[32.849596,130.851288 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol4",
+              "title": "西原地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol4/{z}/{x}/{y}.png",
+              "bounds" : [ [32.932624,130.807342],[32.742237,131.021576 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol5",
+              "title": "阿蘇地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol5/{z}/{x}/{y}.png",
+              "bounds" : [ [33.000602,130.935058],[32.891119,131.21521 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol6",
+              "title": "南阿蘇地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol6/{z}/{x}/{y}.png",
+              "bounds" : [ [32.865747,130.97763],[32.79651,131.171265 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416dol7",
+              "title": "別府地区正射画像（4/16撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol7/{z}/{x}/{y}.png",
+              "bounds" : [ [33.364944,131.42807],[33.254766,131.537934 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol1",
+              "title": "益城地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
+              "bounds" : [ [32.878434,130.635681],[32.606989,130.979004 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol2",
+              "title": "熊本南地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
+              "bounds" : [ [32.824212,130.529937],[32.67406,130.788117 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415dol3",
+              "title": "宇城地区正射画像（4/15撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol3/{z}/{x}/{y}.png",
+              "bounds" : [ [32.702956,130.529937],[32.512077,130.766144 ] ],
+              "cocotile": false,
+              "minZoom": 10,
+              "maxZoom": 18
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "垂直写真",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0724suichokul",
+              "title": "熊本2地区垂直写真（7/5～24撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724suichokul/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0705suichokul",
+              "title": "阿蘇3地区垂直写真（7/5撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705suichokul/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0531suichokul",
+              "title": "南阿蘇河陽地区垂直写真（5/31撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531suichokul/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0530suichokul",
+              "title": "益城・西原地区垂直写真（5/30撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530suichokul/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429suichokul1",
+              "title": "熊本断層地区A垂直写真（4/29撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429suichokul1/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0429suichokul2",
+              "title": "熊本断層地区B垂直写真（4/29撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429suichokul2/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul01",
+              "title": "西原2地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul01/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul02",
+              "title": "阿蘇2地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul02/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul03",
+              "title": "南阿蘇2地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul03/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul04",
+              "title": "御船地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul04/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul05",
+              "title": "八代地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul05/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul06",
+              "title": "天草地区垂直写真（4/19,20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul06/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul07",
+              "title": "玉名地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul07/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul08",
+              "title": "山鹿地区垂直写真（4/19,20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul08/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul09",
+              "title": "菊池地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul09/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul12",
+              "title": "小国地区垂直写真（4/19,20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul12/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul10",
+              "title": "竹田地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul10/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0420suichokul11",
+              "title": "湯布院地区垂直写真（4/20撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420suichokul11/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0419suichokul2",
+              "title": "南阿蘇2地区垂直写真（4/19撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419suichokul2/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul1",
+              "title": "熊本地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul1/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul2",
+              "title": "宇土地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul2/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul3",
+              "title": "合志地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul3/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul4",
+              "title": "西原地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul4/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul5",
+              "title": "阿蘇地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul5/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul6",
+              "title": "南阿蘇地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul6/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416suichokul7",
+              "title": "別府地区垂直写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416suichokul7/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415suichokul1",
+              "title": "益城地区垂直写真（4/15撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415suichokul1/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415suichokul2",
+              "title": "熊本南地区垂直写真（4/15撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415suichokul2/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415suichokul3",
+              "title": "宇城地区垂直写真（4/15撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415suichokul3/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "斜め写真",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0417nanamel",
+              "title": "南阿蘇山王谷川周辺斜め写真（4/17撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0417nanamel/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+             },
+             {
+              "type": "Layer",
+              "id": "20160414kumamoto_0416nanamel",
+              "title": "南阿蘇河陽周辺斜め写真（4/16撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416nanamel/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+             },
+             {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415nanamel3",
+              "title": "熊本地区斜め写真（4/15午後撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415nanamel3/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415nanamel2",
+              "title": "益城地区斜め写真（4/15午後撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415nanamel2/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "20160414kumamoto_0415nanamel",
+              "title": "益城地区斜め写真（4/15午前撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415nanamel/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            }
+          ]
+        },
+        {
+          "type": "Layer",
+          "id": "_ort20160414",
+          "title": "写真（2007年～）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_title\">写真</div><div class=\"gsi_layerinfo_subtitle\">(最新（2007年～）)</div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/development/ichiran.html#ort\">解説</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_airphoto20160417",
+          "title": "簡易空中写真（2004年～）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "<div class=\"gsi_layerinfo_title\">簡易空中写真（2004年～）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/Laser_HP/index.html\">航空レーザ測量</a>の点検用に撮影した写真をつなぎ合わせて、ウェブ地図として閲覧できるようにしたものです。</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "段彩図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_relief_after",
+          "title": "布田川断層帯周辺陰影段彩図（地震後）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_relief_after/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯・日奈久断層帯周辺陰影段彩図（地震後）</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日の航空レーザ測量から求めた標高から作成しました。</li><li>標高の高い部分を茶色の暖色系に、標高の低い部分を青色の寒色系で彩色したものに陰影を付けたものです。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png\" alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_relief_before",
+          "title": "布田川断層帯周辺陰影段彩図（地震前）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_relief_before/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯・日奈久断層帯周辺陰影段彩図（地震前）</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成17年度・24年度（東端部）の航空レーザ測量から求めた標高から、平成28年5月8日の航空レーザ測量と同じ範囲を作成しました。</li><li>標高の高い部分を茶色の暖色系に、標高の低い部分を青色の寒色系で彩色したものに陰影を付けたものです。</li></ul><span style=\"font-size:10.5pt\">※ 使用した平成17年度・24年度（東端部）の航空レーザ測量データは、九州地方整備局が整備したものです。</span></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png\" alt=\"凡例\"></td></tr></table>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_relief_d",
+          "title": "布田川断層帯周辺標高差分段彩図",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_relief_d/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯・日奈久断層帯周辺標高差分段彩図</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20160414kumamoto_relief_d.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日と平成17年度・24年度（東端部）の航空レーザ測量から求めた標高から、差分を算出してカラーで表現しました。使用した航空レーザ測量のデータは、平成28年5月8日は国土地理院が、平成17年度・24年度（東端部）は九州地方整備局が整備したものです。</li></ul></div>（注意）<div class=\"gsi_layerinfo_kaisetu\"><ul><li>平成17年度・24年度との比較なので、ほ場整備、宅地造成、河川の土砂堆積等の地震以外の影響の上下変動も含まれています。</li><li>平成17～27年度の地殻変動の影響の可能性も含まれています。</li><li>水平方向にも1ｍ以上移動しているところもありますので、斜面等は水平方向に移動したことによる上下変動として表れることがあります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_relief_d2",
+          "title": "布田川断層帯及び菊陽周辺標高差分段彩図",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_relief_d2/{z}/{x}/{y}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "maxNativeZoom": 16,
+          "html": "<div class=\"gsi_layerinfo_title\">布田川断層帯及び菊陽周辺標高差分段彩図</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20160414kumamoto_relief_d2.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日・17日と平成17年度・22年度・24年度の航空レーザ測量から求めた標高から、差分を算出してカラーで表現しました。使用した航空レーザ測量のデータは、平成28年5月8日・17日は国土地理院が、平成17年度・22年度・24年度は九州地方整備局が整備したものです。</li></ul></div>（注意）<div class=\"gsi_layerinfo_kaisetu\"><ul><li>平成17年度・22年度・24年度との比較なので、ほ場整備、宅地造成、河川の土砂堆積等の地震以外の影響の上下変動も含まれています。</li><li>平成17～27年度の地殻変動の影響の可能性も含まれています。</li><li>水平方向にも1ｍ以上移動しているところもありますので、斜面等は水平方向に移動したことによる上下変動として表れることがあります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "土砂崩壊地分布図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_handoku2",
+          "title": "土砂崩壊地分布図（7月撮影分）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_handoku2/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">平成28年熊本地震・空から見た（航空写真判読による）土砂崩壊地分布図（7月撮影分）</div><div class=\"gsi_layerinfo_kaisetu\"><ol><li>この地図は国土地理院が緊急に撮影した航空写真（7月5日～24日撮影）から、地震により生じた土砂崩壊地の分布を判読したものです（図上の丸印をクリックすると、判読に使用した航空写真の撮影日が表示されます）。現地踏査は実施しておらず、実際に崩壊のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、急傾斜地の崩壊、地すべり、土石流を1つの項目にまとめて表現しています。</li><li>土砂崩壊地（大）はおおむね1ヘクタール（サッカー場）以上のもので、黄色の大きな丸で表現しています。土砂崩壊地（小）はおおむね0.1ヘクタール（50ｍプール）～1ヘクタールのもので、黄色の小さな丸で表しています。</li><li>土砂崩壊地の中心付近を丸で表しており、土砂崩壊地の形状を表現しているわけではありません。</li><li>崩壊が連続的に発生しているものを複数箇所として示している場合があります。</li><li>崩壊の発生を確認して、表記しているものであり、保全対象との関係などから土砂災害ではないものも含まれる場合があります</li><li>今後の地震活動、降雨等により、土砂崩壊地の箇所数が増加する可能性があります。</li><li>正射画像の表示範囲外に土砂崩壊地が表示されることがありますが、当該地域の航空写真は、垂直写真から確認できます。</li></ol>平成28年7月27日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_handokuhani1",
+          "title": "土砂崩壊地分布図判読範囲（4月撮影分）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_handokuhani1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "maxNativeZoom": 2
+        },
+        {
+          "type": "Layer",
+          "id": "20160414kumamoto_handoku1",
+          "title": "土砂崩壊地分布図（4月撮影分）",
+          "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_handoku1/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "maxNativeZoom": 2,
+          "html": "<div class=\"gsi_layerinfo_title\">平成28年熊本地震・空から見た（航空写真判読による）土砂崩壊地分布図（4月撮影分）</div><div class=\"gsi_layerinfo_kaisetu\"><ol><li>この地図は国土地理院が緊急に撮影した航空写真（4月16日、19日及び20日撮影）から、地震により生じた土砂崩壊地の分布を判読したものです（図上の丸印をクリックすると、判読に使用した航空写真の撮影日が表示されます）。現地踏査は実施しておらず、実際に崩壊のあった箇所でも把握できていない部分があります。</li><li>土砂崩壊地は、急傾斜地の崩壊、地すべり、土石流を1つの項目にまとめて表現しています。</li><li>土砂崩壊地（大）はおおむね1ヘクタール（サッカー場）以上のもので、赤丸で表現しています。土砂崩壊地（小）はおおむね0.1ヘクタール（50ｍプール）～1ヘクタールのもので、青丸で表しています。</li><li>土砂崩壊地の中心付近を丸で表しており、土砂崩壊地の形状を表現しているわけではありません。</li><li>崩壊が連続的に発生しているものを複数箇所として示している場合があります。</li><li>崩壊の発生を確認して、表記しているものであり、保全対象との関係などから土砂災害ではないものも含まれる場合があります</li><li>今後の地震活動、降雨等により、土砂崩壊地の箇所数が増加する可能性があります。</li><li>正射画像の表示範囲外に土砂崩壊地が表示されることがありますが、当該地域の航空写真は、垂直写真から確認できます。</li></ol>平成28年4月25日更新</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_jiware",
+      "title": "布田川断層帯周辺の地表の亀裂分布図",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_jiware/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 17,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">空から見た（航空写真判読による）布田川断層帯周辺の地表の亀裂分布図</div><div class=\"gsi_layerinfo_kaisetu\">平成28年4月16日1時25分の地震（マグニチュード7.3）の発生後に、国土地理院が撮影した航空写真を用いて、布田川（ふたがわ）断層帯周辺を中心に地震により生じたと推定される地表の亀裂を判読しました。<br>判読した亀裂は、今回の地震による断層のずれが地表に現れたもの、斜面の崩落等により生じたもの、地震動や液状化によって生じたもの等がありますが、現地踏査をしていませんので区別していません。<br>益城町（ましきまち）や西原村（にしはらむら）付近では、都市圏活断層図「熊本」で示されている布田川断層帯の断層線付近に断続的に亀裂が確認でき、この活断層が活動したことが伺えます。また、益城町付近では、断層線から分岐して延びる亀裂も確認でき、都市圏活断層図では示されていない新たな活断層が存在している可能性があります。<br><br>（注）布田川断層帯周辺を中心に航空写真判読により確認できるものを抽出しており、現地で確認できるものを必ずしもすべて含んでおりません。また、より詳細な判読により、今後内容が更新されることがあります。<br><br>平成28年10月3日</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_0416uav",
+      "title": "UAV動画",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "LayerGroup",
+      "title": "活断層図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "_afm20160414",
+          "title": "活断層図（都市圏活断層図）",
+          "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "maxZoom": 16,
+          "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+          "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_afm_spec20160414",
+          "title": "諸元情報",
+          "url": "https://maps.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_201604kumamoto.txt"
+    },
+    {
+      "type": "Layer",
+      "id": "20160414kumamoto_addinfo",
+      "title": "平成25年の火山研究所西側付近の<br>建物・道路",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_addinfo/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 14,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "layers": [
+       {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830do",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831do",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+       {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830suichoku",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831suichoku",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+   {
+     "type": "LayerGroup",
+     "title": "正射画像（速報）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830do_sokuho",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830do_sokuho/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831do_sokuho",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831do_sokuho/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxNativeZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+   {
+     "type": "LayerGroup",
+     "title": "垂直写真（速報）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "佐賀地区（佐賀県佐賀市、唐津市、多久市、伊万里市、武雄市、小城市、嬉野市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0830suichoku_sokuho",
+          "title": "佐賀地区（8/30撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0830suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。<br>また、雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190828kyusyu_sagachiku_0831suichoku_sokuho",
+          "title": "佐賀地区一部（8/31撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_sagachiku_0831suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "斜め写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+         {
+       "type": "LayerGroup",
+       "title": "六角川地区（佐賀県佐賀市、武雄市、小城市、大町町、江北町、白石町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+       {
+        "type": "Layer",
+        "id": "20190828kyusyu_rokkakuchiku_naname",
+        "title": "六角川地区（8/29撮影）",
+        "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_rokkakuchiku_naname/{z}/{x}/{y}.geojson",
+        "cocotile": true,
+        "minZoom": 2,        
+        "maxZoom": 18,
+        "maxNativeZoom": 2, 
+        "html": ""
+          }
+         ]
+        }
+       ]
+      },
+     {
+      "type": "LayerGroup",
+      "title": "浸水推定段彩図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20190828_kyusyu_0828dansaizu",
+          "title": "浸水推定段彩図",
+          "url": "https://maps.gsi.go.jp/xyz/20190828_kyusyu_0828dansaizu/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "html": "<table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul>この地図は、8月28日15時頃に国土交通省災害対策用ヘリコプターが撮影した画像を使用し、浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。<br>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20190828_kyusyu_0828dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+          }
+        ]
+      },
+    {
+     "type": "LayerGroup",
+     "title": "デジタル標高地形図",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+        "type": "Layer",
+        "id": "20190828kyusyu_matsuurakawa_digital",
+        "title": "松浦川水系松浦川周辺",
+        "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_matsuurakawa_digital/{z}/{x}/{y}.png",
+        "cocotile": true,
+        "minZoom": 2,        
+        "maxZoom": 16,
+        "html": "デジタル標高地形図<br>2019年8月作成<br>（c）国土地理院"
+        },
+        {
+        "type": "Layer",
+        "id": "20190828kyusyu_ushidu_digital",
+        "title": "六角川水系牛津川周辺",
+        "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_ushidu_digital/{z}/{x}/{y}.png",
+        "cocotile": true,
+        "minZoom": 2, 
+        "maxZoom": 16,
+        "html": "デジタル標高地形図<br>2019年8月作成<br>（c）国土地理院"
+        },
+       {
+        "type": "Layer",
+        "id": "20190828kyusyu_kose_digital",
+        "title": "筑後川水系巨瀬川周辺",
+        "url": "https://maps.gsi.go.jp/xyz/20190828kyusyu_kose_digital/{z}/{x}/{y}.png",
+        "cocotile": true,
+        "minZoom": 2, 
+        "maxZoom": 16,
+        "html": "デジタル標高地形図<br>2019年8月作成<br>（c）国土地理院"
+        }
+       ]
+      }
+  ]
+}

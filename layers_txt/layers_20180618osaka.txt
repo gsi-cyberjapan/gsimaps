@@ -1,0 +1,88 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "20180618osaka_epicenter",
+      "title": "震央",
+      "url": "https://maps.gsi.go.jp/xyz/20180618osaka_epicenter/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "平成30年(2018年)6月18日7時58分に発生した、大阪府北部を震源とする地震の震央<br>(平成30年6月18日10時00分　気象庁発表)"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "活断層図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "_afm20160414",
+          "title": "活断層図（都市圏活断層図）",
+          "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "maxZoom": 16,
+          "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+          "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "_afm_spec20160414",
+          "title": "諸元情報",
+          "url": "https://maps.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "治水地形分類図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "_lcmfc2",
+         "title": "更新版(2007～2016年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 5,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2016年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+         "type": "Layer",
+         "id": "_lcmfc1",
+         "title": "初版(1976～1978年)",
+         "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 2,
+         "maxZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+         "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+         }
+       ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "デジタル標高地形図",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+        "type": "Layer",
+        "id": "_d1-no845",
+        "title": "大阪_2015年11月",
+        "url": "https://maps.gsi.go.jp/xyz/d1-no845/{z}/{x}/{y}.png",
+        "cocotile": true,
+        "maxZoom": 14,
+        "html": "<div class=\"gsi_layerinfo_title\">近畿</div><div class=\"gsi_layerinfo_subtitle\">(大阪_2015年11月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>背景地図は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+       ]
+     }
+  ]
+}

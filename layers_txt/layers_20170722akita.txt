@@ -1,0 +1,92 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20170722akita_0724naname",
+          "title": "7/24撮影",
+          "url": "https://maps.gsi.go.jp/xyz/20170722akita_0724naname/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20170722akita_shinsui",
+      "title": "推定浸水範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20170722akita_shinsui/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 16,
+      "maxNativeZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_title\">国土地理院が7月24日に撮影した斜め写真を用いて浸水範囲を判読</div><ol><li>この情報は、国土地理院が7月24日に撮影した斜め写真に基づき、平成29年7月22日からの梅雨前線に伴う大雨により生じたと考えられる浸水範囲を判読したものです。斜め写真の撮影位置は、地理院地図のレイヤ「平成29年7月22日からの梅雨前線に伴う大雨」>「斜め写真」>「7/24撮影」でご確認いただけます。</li><li>斜め写真の撮影範囲内の判読であること、撮影時点(7月24日15時20分から17時頃)における浸水状況を判読したこと、及び現地踏査は実施していないことから、実際に浸水のあった箇所でも把握できていない部分があります。</li><li>判読できた浸水範囲を青色で表しています。</li><li>今後の降雨により状況が変化する可能性があります。</li></ol><div>平成29年7月26日作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "cocotile": true,
+      "minZoom": 2,
+      "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数年代の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "seamlessphoto_spec",
+      "title": "┗全国最新写真（シームレス）撮影期間",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
+      "cocotile": true,
+      "minZoom": 14,
+      "maxNativeZoom": 11,
+      "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18で表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　2007年～</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#ffd045\">■</span>　2004年～（簡易空中写真）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>　国土画像情報<br>　　（第四期：1988年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20170722akita_digiele",
+      "title": "デジタル標高地形図<br>【雄物川周辺】",
+      "url": "https://maps.gsi.go.jp/xyz/20170722akita_digiele/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 3,
+      "maxZoom": 16,
+      "legendUrl": "https://maps.gsi.go.jp/legend/saigai_0725_legend.jpg",
+      "html": "基盤地図情報の数値標高モデルを使用して作成"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "治水地形分類図",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "lcmfc2",
+          "title": "更新版(2007～2014年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2014年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "lcmfc1",
+          "title": "初版(1976～1978年)",
+          "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+          "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

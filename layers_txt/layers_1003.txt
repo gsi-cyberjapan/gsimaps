@@ -1,0 +1,10 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "mount1003",
+      "title": "日本の主な山岳標高（1003山）",
+      "url": "https://maps.gsi.go.jp/overlay/mount1003/mount1003.geojson"
+    }
+  ]
+}

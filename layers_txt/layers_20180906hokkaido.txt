@@ -1,0 +1,485 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+          "title": "統合版",
+          "iconUrl": "",
+          "toggleall": true,
+          "id": "20180906hokkaido_ort",
+          "html": "この統合版は空中写真（9/6～9/13撮影）から作成した正射画像上に地図情報（注記）を重ねたものです。<br>自動処理で作成した各正射画像を単純に重ねたものであり、構造物等の歪み、不連続等が発生している箇所があります。<br>また、雲の影響により地上が見えにくい場合があります。",
+          "entries": [
+            {
+             "type": "Layer",
+             "id": "experimental_anno",
+             "title": "地図情報（注記）",
+             "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 15,
+             "maxZoom": 18,
+             "maxNativeZoom": 15,
+             "html": "ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+            },
+            {
+             "type": "Layer",
+             "id": "20180906hokkaido_atsuma_0906do",
+             "title": "厚真川地区（9/6撮影）",
+             "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906do/{z}/{x}/{y}.png",
+             "cocotile": true,
+             "minZoom": 10,
+             "maxZoom": 18,
+             "html": "雲の影響により地上が見えにくい場合があります。<br>簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+            },
+            {
+             "type": "Layer",
+             "id": "20180906hokkaido_atsuma_0911do",
+             "title": "厚真川地区（9/11撮影）",
+             "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911do/{z}/{x}/{y}.png",
+             "cocotile": true,
+             "minZoom": 10,
+             "maxZoom": 18,
+             "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+            },
+            {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0912do",
+          "title": "札幌市清田地区（9/12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0912do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。また、簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0913do",
+          "title": "札幌市清田地区（9/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumtoubu_0911do",
+          "title": "厚真東部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumaseibu_0911do",
+          "title": "安平・厚真西部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumachiku_0906do",
+          "title": "厚真地区（9/6,8撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_abira_0911do",
+          "title": "安平地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
+          }
+          ]
+          },
+       {
+       "type": "LayerGroup",
+       "title": "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0906do",
+          "title": "厚真川地区（9/6撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。<br>簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0911do",
+          "title": "厚真川地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumachiku_0906do",
+          "title": "厚真地区（9/6,8撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "安平・厚真西部地区（北海道千歳市・苫小牧市など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumaseibu_0911do",
+          "title": "安平・厚真西部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真東部地区（北海道勇払郡厚真町・むかわ町、沙流郡平取町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumtoubu_0911do",
+          "title": "厚真東部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
+          }
+         ]
+        },
+        {
+       "type": "LayerGroup",
+       "title": "札幌市清田地区（北海道札幌市清田区・厚別区、北広島市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0912do",
+          "title": "札幌市清田地区（9/12撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0912do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "雲の影響により地上が見えにくい場合があります。また、簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0913do",
+          "title": "札幌市清田地区（9/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。"
+          }
+         ]
+        },
+        {
+       "type": "LayerGroup",
+       "title": "安平地区（北海道勇払郡安平町・厚真町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_abira_0911do",
+          "title": "安平地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": ""
+          }
+         ]
+        }
+       ]
+     },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0906suichoku",
+          "title": "厚真川地区（9/6撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsuma_0911suichoku",
+          "title": "厚真川地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真地区（北海道勇払郡厚真町・安平町・むかわ町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumachiku_0906suichoku",
+          "title": "厚真地区（9/6,8撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "太陽高度が低い時間の撮影のため山陰等で見えにくいところがあります。<br>青丸は9/6・緑丸は9/8撮影"
+          }
+         ]
+        },
+        {
+       "type": "LayerGroup",
+       "title": "安平・厚真西部地区（北海道千歳市・苫小牧市など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumaseibu_0911suichoku",
+          "title": "安平・厚真西部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "厚真東部地区（北海道勇払郡厚真町・むかわ町、沙流郡平取町）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_atsumatoubu_0911suichoku",
+          "title": "厚真東部地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        },
+        {
+       "type": "LayerGroup",
+       "title": "札幌市清田地区（北海道札幌市清田区・厚別区、北広島市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_kiyota_0913suichoku",
+          "title": "札幌市清田地区（9/13撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "安平地区（北海道勇払郡安平町・厚真町など）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20180906hokkaido_abira_0911suichoku",
+          "title": "安平地区（9/11撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": ""
+          }
+         ]
+        }
+       ]
+     },
+     {
+      "type": "Layer",
+      "id": "seamlessphoto1",
+      "title": "被災前最新写真",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数年代の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+     },
+     {
+      "type": "Layer",
+      "id": "20180906hokkaido_iburi_hokaichi",
+      "title": "斜面崩壊・堆積分布図",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_iburi_hokaichi/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 6,
+      "maxNativeZoom": 16,
+      "maxZoom": 17,
+      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20180906hokkaido_iburi_hokaichi_legend.PNG\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が9月6日から11日にかけて撮影した空中写真から、平成30年北海道胆振東部地震によって生じたと考えられる斜面崩壊・堆積範囲を判読したものです。現地踏査は実施していないことから、実際に斜面崩壊等のあった箇所でもプロットできていない場合や、平成30年北海道胆振東部地震による斜面崩壊等以外の箇所をプロットしている場合があり得ます。<br>2.斜面崩壊・堆積範囲は、斜面崩壊等で土砂が移動、堆積し裸地化した範囲を一括りでプロットしています。<br>3.斜面崩壊・堆積した範囲を把握するための資料で、人家等に被害の無い範囲もプロットしています。<br>4.道路、河川上の土砂は撤去されている可能性があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院"
+     },
+     {
+       "type": "LayerGroup",
+       "title": "震源断層モデル・震源",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+     {
+      "type": "Layer",
+      "id": "20180906hokkaido_epicenter",
+      "title": "震央",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_epicenter/Iburi2018EQepi.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "発生日時：　2018年9月6日3時7分<br>マグニチュード：　M6.7"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_hypo",
+      "title": "震源分布データ",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_hypo/Iburi2018EQhypo.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "このデータは、気象庁が大学や国立研究開発法人防災科学技術研究所等の関係機関から地震観測データの提供を受け、文部科学省と協力して整理したものです。<br>(平成30年9月6日に北海道で発生した地震後、同年9月11日までに起きたマグニチュード２以上の地震の震源分布データ)"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_faultmodel",
+      "title": "震源断層モデル",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_faultmodel/IburiEQ_FaultModel.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": "平成30年9月6日に北海道で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<a target=\"_blank\" href=\"http://www.gsi.go.jp/cais/topic180912-index.html\">詳しい解説</a>"
+    },
+    {
+      "type": "Layer",
+      "id": "20180906hokkaido_scale_line",
+      "title": "深さ（３Ｄ表示用）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_scale_line/scale.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "html": ""
+     }
+     ]
+     },
+    {
+     "type": "LayerGroup",
+     "title": "デジタル標高地形図",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+        "type": "Layer",
+        "id": "20180906hokkaido_atsuma_digital",
+        "title": "厚真町周辺",
+        "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_digital/{z}/{x}/{y}.png",
+        "cocotile": true,
+         "minZoom": 6,
+         "maxZoom": 18,
+         "maxNativeZoom": 16,
+        "html": "<div class=\"gsi_layerinfo_title\">デジタル標高地形図</div><div class=\"gsi_layerinfo_subtitle\">2018年9月作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+       ]
+     },
+    {
+     "type": "LayerGroup",
+     "title": "赤色立体地図",
+     "toggleall": false,
+     "entries": [
+       {
+         "type": "Layer",
+         "id": "20180906hokkaido_atsuma_sekishoku",
+         "title": "厚真町周辺",
+         "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_sekishoku/{z}/{x}/{y}.png",
+         "cocotile": true,
+         "minZoom": 6,
+         "maxZoom": 18,
+         "maxNativeZoom": 16,
+         "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+         "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+       ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_201809iburi.txt"
+    }
+  ]
+}

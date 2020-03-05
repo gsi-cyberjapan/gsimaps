@@ -1,0 +1,177 @@
+{
+"layers": [
+	{
+	"type": "LayerGroup",
+	"title": "正射画像（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "佐倉地区（千葉県千葉市、佐倉市、四街道市、印西市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_sakura_1026do_sokuho",
+			"title": "佐倉地区（10/26撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_sakura_1026do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。"
+			}
+					]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "茂原地区（千葉県茂原市、睦沢町、長生村、長南町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1026do_sokuho",
+			"title": "茂原地区（10/26撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1026do_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 10,
+			"maxZoom": 18,
+			"html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。"
+			}
+					]
+		}
+				]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "垂直写真（速報）",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "佐倉地区（千葉県千葉市、佐倉市、四街道市、印西市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_sakura_1026suichoku",
+			"title": "佐倉地区（10/26撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_sakura_1026suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+			}
+		  ]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "茂原地区（千葉県茂原市、睦沢町、長生村、長南町）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1026suichoku",
+			"title": "茂原地区（10/26撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1026suichoku/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"maxNativeZoom": 2,
+			"html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。"
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "斜め写真",
+	"iconUrl": "",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "千葉地区（千葉県千葉市緑区、茂原市、佐倉市、市原市、四街道市、印西市）",
+		"iconUrl": "",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_chiba_1026naname",
+			"title": "千葉地区（10/26撮影）",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_chiba_1026naname/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 2,        
+			"maxZoom": 18,
+			"maxNativeZoom": 2, 
+			"html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。"
+			}
+					]
+		}
+		
+				]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "浸水推定段彩図",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "速報版",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_sakura_1026dansaizu_sokuho",
+			"title": "千葉県佐倉市周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_sakura_1026dansaizu_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日7時30分前後に国土交通省災害対策用ヘリコプターが撮影した画像と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+			},
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1026dansaizu_sokuho",
+			"title": "千葉県茂原市・大網白里市周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1026dansaizu_sokuho/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日8時30分前後に国土交通省災害対策用ヘリコプターが撮影した画像と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+			}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "空中写真判読版",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "20191025oame_mobara_1028dansaizu_handoku",
+			"title": "一宮川水系（一宮川・豊田川・阿久川）茂原駅周辺",
+			"url": "https://maps.gsi.go.jp/xyz/20191025oame_mobara_1028dansaizu_handoku/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 16,
+			"maxNativeZoom": 15,
+			"html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月26日14時30分前後に国土地理院が撮影した速報用空中写真を使用し、土砂等の痕跡から今回の大雨で浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191025oame_mobara_1028dansaizu.PNG\" width=100 alt=\"凡例\"></td></tr></table>"
+			}
+		]
+		}
+	]
+	}
+	
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "20170327nasu_chizu",
+      "title": "雪崩発生付近の地図",
+      "url": "https://maps.gsi.go.jp/xyz/20170327nasu_chizu/{z}/{x}/{y}.png",
+      "cocotile": false,
+      "minZoom": 15,
+      "maxZoom": 18,
+      "html": "平成2年刊行の火山基本図を基に、現在のスキーリフトの位置等を表示しました。<br>ＰＤＦ版は<a href='http://www1.gsi.go.jp/geowww/Volcano/download/other/vdm20-a-201703.pdf' target='_blank'>こちら</a>。"
+    }
+  ]
+}

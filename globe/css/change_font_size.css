@@ -1,0 +1,16 @@
+/* http://www.gsi.go.jp/common/verck_mac.css */
+
+.h1 { font-size:140%; margin-top:5px; margin-bottom:5px; }
+
+.navi1 { font-size:80%; letter-spacing:1px; line-height:120%; margin-left:5px; margin-right:5px; }
+.navi2 { font-size:80%; letter-spacing:1px; line-height:120%; margin-top:5px; margin-bottom:5px; }
+
+.left-navi1 { font-size:80%; letter-spacing:1px; line-height:150%; }
+
+.top-new { font-size:80%; letter-spacing:1px; margin-top:4px; }
+
+.base_txt { font-size: 90%;}
+
+.small { font-size: 65%; line-height:140%; } /* 文字サイズ：10ポイント相当 */
+.medium { font-size: 80%; line-height:140%; } /* 文字サイズ：12ポイント相当 */
+.large { font-size: 90%; line-height:140%; } /* 文字サイズ：14ポイント相当 */
