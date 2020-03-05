@@ -952,6 +952,49 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "2020年迅速更新情報",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "jin202001",
+                  "title": "1月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin202001/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2020年面的更新情報",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men202001",
+                  "title": "1月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/men202001/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2020年登山道更新情報",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "toz202001",
+                  "title": "1月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz202001/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                }
+               ]
+            },            
+            {
+              "type": "LayerGroup",
               "title": "2019年迅速更新情報",
               "toggleall": false,
               "entries": [
