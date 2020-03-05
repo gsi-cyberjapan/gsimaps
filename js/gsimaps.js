@@ -171,7 +171,7 @@ CONFIG.HANREILIST = {
 
 CONFIG.HANREILIST = {
   "gsjGeomap_seamless200k_v2": {
-    "url": "./hanrei/legend.json",
+    "url": "https://gbank.gsj.jp/seamless/v2/api/1.2.1/legend.json",
     "layer": {
       "url": "https://gbank.gsj.jp/seamless/v2/api/1.2/tiles/{z}/{y}/{x}.png",
       "minZoom": 3,
