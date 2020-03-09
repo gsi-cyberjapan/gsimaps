@@ -29732,6 +29732,7 @@ GSI.Footer = L.Evented.extend({
     } else {
       this._seamlessContainer.show();
       this._seamlessView.html("---");
+      this._contentSizeChange();
     }
 
     var map = this._mapManager.getMap();
@@ -51201,7 +51202,8 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
     }
 
     if (CONFIG.USEATTRPANEL == true) {
-      this._mapManager._attrpanel.updateContent(this.mapLayerList);
+      this._mapManager._attrpanel.updateContent(this._mapLayerList);
+      //this._mapManager._attrpanel.updateContent(this.mapLayerList);
     }
 
     this.initializeList();
