@@ -8148,8 +8148,10 @@ GSI.Header = L.Evented.extend({
   },
   getHeight: function () {
     if (!this.options.visible) return 0;
-
-    return this.header.outerHeight(true) + (this.topMessageVisible ? this.topMessage.outerHeight(true) : 0);
+    var height = this.header.outerHeight();
+    if ( !this.header.is(":visible")) height = 40;
+    return height + (this.topMessageVisible ? this.topMessage.outerHeight(true) : 0);
+  
   },
   refresh: function (screenSize) {
     if (!this.options.visible) return;
@@ -51203,7 +51205,6 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
     if (CONFIG.USEATTRPANEL == true) {
       this._mapManager._attrpanel.updateContent(this._mapLayerList);
-      //this._mapManager._attrpanel.updateContent(this.mapLayerList);
     }
 
     this.initializeList();
@@ -52327,6 +52328,9 @@ GSI.Menu = GSI.MenuBase.extend({
     this._iconButtons = [];
     for( var i=0; i<this._config.length; i++ ) {
       var iconInfo = this._config[i];
+      if ( this._container.hasClass("local")) {
+        if  (iconInfo.id == "reset" || iconInfo["class"] =="gsi-header-tool-vectorlogo-icon") continue;
+      }
       var iconButton = new GSI.Menu.IconButton(this,this, iconInfo);
       iconButton.create( this._container);
       this._iconButtons.push( iconButton );

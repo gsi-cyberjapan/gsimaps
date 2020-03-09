@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="js.lib/leaflet-1.2.0/leaflet.css" />
+  <script type="text/javascript" src="js.lib/leaflet-1.2.0/leaflet.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css" />
+  <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.qrcode/jquery.qrcode.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery.csv/jquery.csv.min.js"></script>
+
+  <script type="text/javascript" src="./js.lib/jquery/jquery.cookie.js"></script>
+  <link rel="stylesheet" href="./js.lib/jquery/jquery.alerts.css" type="text/css" media="all" />
+  <script type="text/javascript" src="./js.lib/jquery/jquery.alerts.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/jquery.simple-color-picker.css" />
+  <script type="text/javascript" src="./js.lib/jquery/colorpicker/jquery.simple-color-picker.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/colorpicker/js/colorpicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/css/colorpicker.css" />
+  <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
+  <script type="text/javascript" src="js.lib/OSGeo/proj4js-combined.js"></script>
+
+
+  <script type="text/javascript" src="js.lib/exif.js"></script>
+  <script type="text/javascript" src="js.lib/geotiff.browserify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.label/leaflet.label-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.label/leaflet.label.js"></script>
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Sync/L.Map.Sync.js"></script>
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Geodesic/Leaflet.Geodesic.js"></script>
+
+  <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
+  <script type="text/javascript" src="js.lib/html2canvas.js"></script>
+  <script type="text/javascript" src="js.lib/encoding/encoding.js"></script>
+  <script type="text/javascript" src="js.lib/NoSleep/NoSleep.min.js"></script>
+  <link rel="stylesheet" href="js.lib/leaflet-plugin/Leaflet.zoomslider-0.6.1/L.Control.Zoomslider.css" type="text/css" />
+  <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.zoomslider-0.6.1/L.Control.Zoomslider.js"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="./css/gsimaps.css" />
+  <script type="text/javascript" src="js/gsimaps.js"></script>
+  <script type="text/javascript" src="js/tooltip.js"></script>
+  <script type="text/javascript" src="js/pc.js"></script>
+
+  
+  <script type="text/javascript" src="js/muni.js"></script>
+  <script type="text/javascript" src="js/jiki.js"></script>
+  
+  <noscript>
+    <div class="noscript">
+      JavaScriptを有効にしてご覧ください。
+    </div>
+  </noscript>
+</head>
+
+<body>
+  <div id="header" class="logo_s" style="padding-left:0;">
+    
+    <div class="logoarea" style="display:none;">
+      <a style="text-decoration:none;" href="">
+      </a>
+    </div>
+
+    <div class="magnifyingglass">
+      <img name="magnifyimage" id="magnifyimage" src="./image/system/search.png" />
+    </div>
+    
+    <form name="search_f" id="search_f" autocomplete="off">
+      <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
+    </form>
+
+    <div class="gsi-header-tools local"></div>
+  </div>
+
+  <div id="topmessage"></div>
+  <div id="map"></div>
+
+
+  <canvas id="measure" width="0" height="0" style="visibility:hidden;position:absolute;"></canvas>
+
+</body>
+
+</html>
