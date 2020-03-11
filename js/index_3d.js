@@ -7568,7 +7568,7 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function (urlList, coords, targetUrl
 
 	}
 
-	if (this._demData) hasErrorPixel = false;
+	//if (this._demData) hasErrorPixel = false;
 
 	this._demData = demData;
 
@@ -7579,6 +7579,16 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function (urlList, coords, targetUrl
 		this._urlList = $.extend(true, [], targetUrl.complementList);
 		this._startLoadDEM(this._currentCoords);
 
+	}
+	else if (hasErrorPixel == true){
+		if ((urlList) && (urlList.length > 0)){
+			this._urlList = urlList;
+			this._startLoadDEM(this._currentCoords);
+		}
+		else{
+			this._demLoaded = true;
+			this._checkLoaded();
+		}
 	}
 	else {
 
@@ -7693,56 +7703,55 @@ GSI3D.DEMLoader.getURLList = function (x, y, z) {
 	if (!GSI3D.DEMLoader.DEMAREA2[key]) return [
 		{
 			url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
-			minZoom: 15,
+			minZoom: 9,
 			maxZoom: 15,
 			complementList: [
-				/*
 				{
-					url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
-					minZoom : 0,
-					maxZoom : 14
+					url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+					minZoom: 9,
+					maxZoom: 15
 				},
-				*/
 				{
+					url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+					minZoom: 9,
+					maxZoom: 15
+				},
+			  	{
 					url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
 					minZoom: 0,
 					maxZoom: 14
-				}
+			  	}
 			]
 		},
 		{
 			url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
-			minZoom: 15,
+			minZoom: 9,
 			maxZoom: 15,
 			complementList: [
-				/*
 				{
-					url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
-					minZoom : 0,
-					maxZoom : 14
+					url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+					minZoom: 9,
+					maxZoom: 15
 				},
-				*/
+			  	{
+					url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+					minZoom: 0,
+					maxZoom: 14
+			  	}
+			]
+		},
+		{
+			url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+			minZoom: 9,
+			maxZoom: 15,
+			complementList: [
 				{
 					url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
 					minZoom: 0,
 					maxZoom: 14
-				}
+			  	}
 			]
 		},
-		/*
-		{
-			url:"https://cyberjapandata.gsi.go.jp/xyz/dem10b_png/{z}/{x}/{y}.png",
-			minZoom : 0,
-			maxZoom : 14,
-			complementList : [
-				{
-					url : "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
-					minZoom : 0,
-					maxZoom : 14
-				}
-			]
-		},
-		*/
 		{
 			url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
 			minZoom: 0,

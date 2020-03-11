@@ -601,7 +601,6 @@
           "type": "LayerGroup",
           "title": "南極",
 	      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/nankyoku.png",          
-          "src": "./layers_antarctic.txt",
           "toggleall": false,
           "html" : "<div class='layer_text'>南極の地形図や写真など、南極の情報を閲覧できます。</div>",
           "entries": [
@@ -777,7 +776,6 @@
         {
           "type": "LayerGroup",
           "title": "世界の土地被覆",
-          "src": "./layers_tochihifuku.txt",
 	      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/tochihihuku.png",          
           "toggleall": false,
           "html" : "<div class='layer_text'>世界の土地被覆や樹木の比率を表した地図を閲覧できます。</div>",
@@ -2884,7 +2882,6 @@
           "type": "LayerGroup",
           "title": "ベクトルタイル提供実検",
 	      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/vector.png",          
-          "src": "./layers_experimental.txt",
           "toggleall": false,
           "html" : "<div class='layer_text'>ベクトルという形式で提供実験している情報を閲覧できます。</div>",
           "entries": [

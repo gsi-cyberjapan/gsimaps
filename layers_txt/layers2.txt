@@ -1701,7 +1701,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 8,
           "legendUrl": "",
-          "html": "<div class='layer_text'>標高に応じて色分けした世界地図です。地球地図全球版標高第2版データから算出しています。<img src='https://maps.gsi.go.jp/legend/legend_earthdegital.JPG' alt='' width='50%' height='50%'></div>"
+          "html": "<div class='layer_text'>標高に応じて色分けした世界地図です。地球地図全球版標高第2版データから算出しています。</div><img src='https://maps.gsi.go.jp/legend/legend_earthdegital.JPG' alt='' width='50%' height='50%'>"
         },
         {
           "type": "Layer",
@@ -1734,7 +1734,7 @@
           "minZoom": 3,
           "maxZoom": 18,
           "maxNativeZoom": 15,
-          "html": "<div class='layer_text'>地表面の傾きを示した地図です。白いほど緩やか、黒いほど急峻であることを意味しています。<p>凡例</p><img src='https://maps.gsi.go.jp/legend/slopemap.png' alt='' width='30%' height='30%'></div></div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>"
+          "html": "<div class='layer_text'>地表面の傾きを示した地図です。白いほど緩やか、黒いほど急峻であることを意味しています。</div><p>凡例</p><img src='https://maps.gsi.go.jp/legend/slopemap.png' alt='' width='30%' height='30%'><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>"
         },
         {
           "type": "Layer",
