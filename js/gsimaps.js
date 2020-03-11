@@ -5961,6 +5961,8 @@ GSI.ShareDialog = GSI.Dialog.extend({
 
     var ls = this.pageStateManager.getLayersQueryString();
     var disp = this.pageStateManager.getTileViewSetting();
+
+    var hasReliefFree = ls.indexOf( "relief_free") >= 0 ? true: false;
     if (this._layerpCheck.is(':checked')) {
       if (ls != '') {
         if (fBassLS_Trim) {
@@ -6201,7 +6203,12 @@ GSI.ShareDialog = GSI.Dialog.extend({
         }
       }
     }
-
+    
+    if (hasReliefFree) {
+      var currentData = this._gsimaps._mainMap._mapLayerList.getElevationData();
+      var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
+      queryString = '&relief=' + text;
+    }
 
     if (additionalParam && additionalParam != '') {
       queryString += (queryString != '' ? '&' : '#') + additionalParam;
@@ -11748,13 +11755,58 @@ GSI.PageStateManager = L.Class.extend({
   },
   getCurrentPathQueryString: function () {
     var path = this._mapMenu.getMapListPanel().getCurrentPath();
-    return (path && path != '' ? 'lcd=' + encodeURIComponent(path) : '');
+    var hit = false;
+
+    if ( path && path != '' ) {
+      var mapLayerList = this._gsimaps._mainMap._mapLayerList;
+      console.log( mapLayerList);
+      var tileList = mapLayerList.getTileList();
+      for( var i=0; i<tileList.length; i++ ) {
+        if ( tileList[i].id == path) {
+          hit = true;
+          break;
+        }
+      }
+      if ( !hit) {
+        var list = mapLayerList.getList();
+        for( var i=0; i<list.length; i++ ) {
+          if ( list[i].id == path) {
+            hit = true;
+            break;
+          }
+        }
+      }
+    }
+    return (path && path != '' && hit ? 'lcd=' + encodeURIComponent(path) : '');
   },
   getCurrentPathQueryString2: function () {
     if (!this._gsimaps._subMap || !this._gsimaps._subMap._mapMenu) return "";
 
     var path = this._gsimaps._subMap._mapMenu.getMapListPanel().getCurrentPath();
-    return (path && path != '' ? 'lcd2=' + encodeURIComponent(path) : '');
+
+    var hit = false;
+
+    if ( path && path != '' ) {
+      var mapLayerList = this._gsimaps._subMap._mapLayerList;
+      var tileList = mapLayerList.getTileList();
+      for( var i=0; i<tileList.length; i++ ) {
+        if ( tileList[i].id == path) {
+          hit = true;
+          break;
+        }
+      }
+      if ( !hit) {
+        var list = mapLayerList.getList();
+        for( var i=0; i<list.length; i++ ) {
+          if ( list[i].id == path) {
+            hit = true;
+            break;
+          }
+        }
+      }
+    }
+
+    return (path && path != '' && hit ? 'lcd2=' + encodeURIComponent(path) : '');
   },
   getBaseLayerQueryString: function () {
     var ret = "";
@@ -18561,8 +18613,8 @@ GSI.Control.MapSplitControl = L.Control.extend({
           },
           "position": { my: "right top+10", at: "center bottom", collision: "flipfit" }
         });
+        
       }catch(ex) {
-
       }
       this.fire("stop");
     }, this));
@@ -38417,7 +38469,8 @@ GSI.QueryParams = L.Class.extend({
       vHashLocation = vHash[0];
       vHashOptions = vHash[1];
     }
-    queryStrings += vHashOptions;
+    
+    queryStrings += (queryStrings != "" ? "&" : "") + vHashOptions;
 
     this._f_queryLocation = queryStrings;
     this._f_queryOptions = vHashOptions;
@@ -50085,16 +50138,19 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         }
       }
       if (f) {
+        if ( this._currentItemId == item.id ) this._currentItemId = "";
         this._mapManager._map.removeLayer(this._mapManager._baseLayer);
 
       }
       else {
+        this._currentItemId = item.id;
         this._mapManager._map.addLayer(this._mapManager._baseLayer);
         this._mapLayerList.append(item);
         GSI.Utils.sendSelectedLayer(this._current_id);
       }
     }
     else if (target && target.title_evac && target.title_evac == CONFIG.layerEvacuationFolderSYS) {
+      
       var f = false;
       if (this._mapLayerList.exists(item)) {
         f = true;
@@ -50147,15 +50203,18 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
       //this._onHideAllClick();
       if (f == false) {
+        this._currentItemId = item.id;
         this._mapLayerList.append(item);
         GSI.Utils.sendSelectedLayer(this._current_id);
       }
       else{
+        if ( this._currentItemId == item.id ) this._currentItemId = "";
         this._mapLayerList.remove(item);
       }
     }
     else {
       if (!this._mapLayerList.exists(item)) {
+        this._currentItemId = item.id;
         //if (item.id.indexOf('relief') >= 0)
         if (CONFIG.BLENDLAYERS[item.id])
           this._mapLayerList.append(item, null, null, null, true);
@@ -50165,6 +50224,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
       }
       else {
+        if ( this._currentItemId == item.id ) this._currentItemId = "";
         this._mapLayerList.remove(item);
         added = false;
       }
@@ -52762,7 +52822,19 @@ GSI.Menu.Panel = GSI.MenuBase.extend({
     this._container.hide("slide",{"direction":"right"},200);
     
     GSI.MenuBase.prototype.hide.call(this);
+    
+    try {
+        
+      $("body").tooltip("destroy").tooltip({
+        "show": { duration: 300 },
+        "hide": { duration: 200 },
+        "open": function (evt, ui) {
+        },
+        "position": { my: "right top+10", at: "center bottom", collision: "flipfit" }
+      });
+    }catch(ex) {
 
+    }
 
   }
 
@@ -53073,6 +53145,7 @@ GSI.GSIMaps = L.Evented.extend({
           $.cookie(CONFIG.COOKIEKEY_HASH), { path: '/' });
       }
     }
+    
     if (queryParams) {
       this._queryParams = queryParams;
       this._syncSplitMap = this._queryParams.getSyncSplitedMap();
@@ -53400,6 +53473,9 @@ GSI.GSIMaps = L.Evented.extend({
       }
     }
     else {
+      
+
+
       if (this._subMap) {
         this._subMap._splited = false;
         this._refreshSync(false);
@@ -53743,6 +53819,8 @@ GSI.GSIMaps = L.Evented.extend({
 
         this._hash_options = new GSI.HashOptions(this, map);
         this._hash.bind(this._hash_options, this._hash_options.Callback);
+        this._hash.onMapMove();
+        
       }
     }, this));
 
@@ -53929,7 +54007,6 @@ GSI.GSIMaps = L.Evented.extend({
 
     // 初期位置設定
     map.setView(this._startUpCenter, this._startUpZoom, { reset: true });
-
 
     // ファイル
     window.addEventListener("dragover", function (e) {
