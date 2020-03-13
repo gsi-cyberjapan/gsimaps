@@ -51126,7 +51126,8 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
   _onMenuButtonClick : function(menuBtn,menuElements) {
 
     if ( !this._popupLayerMenu ) {
-      this._popupLayerMenu = new GSI.ShowingMapListPanel.PopupLayerMenu(this._listFrame);
+      this._popupLayerMenu = new GSI.ShowingMapListPanel.PopupLayerMenu(
+        this._listFrame, this._contentFrame.parents(".gsi-mapmenu-container"));
     }
     this._popupLayerMenu.show( menuBtn, menuElements);
   },
@@ -51875,14 +51876,14 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
 
 
-
 GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
   options : {
 
   },
 
-  initialize : function(listFrame) {
+  initialize : function(listFrame,ownerContainer) {
     this._listFrame = listFrame;
+    this._ownerContainer = ownerContainer;
   },
 
   _initEvents : function() {
@@ -51932,7 +51933,7 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
     this._btn = btn;
     this._create();
 
-    var framePos = $("body").find(".gsi-mapmenu-container").offset();
+    var framePos = this._ownerContainer.offset();
 
     this._container.css({
       "visibility" : "hidden"
@@ -51944,8 +51945,8 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
     }).hide();
     
     var pos = this._btn.offset();
+    pos.left = this._btn.position().left;
     pos.left -= (width-35);
-    if ( pos.left < 0 ) pos.left = 0;
 
     this._container.css( {
       left : pos.left + "px",
@@ -51981,7 +51982,8 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
     }
 
     this._container.append(ul);
-    $("body").find(".gsi-mapmenu-container").append(this._container);
+    //$("body").find(".gsi-mapmenu-container").append(this._container);
+    this._ownerContainer.append( this._container );
 
   },
 
