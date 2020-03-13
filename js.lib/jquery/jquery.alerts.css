@@ -41,6 +41,12 @@
 
 #popup_message {
 	padding-left: 10px;
+	font-size:9pt;
+	overflow-y:auto;
+	max-height:400px;
+}
+#popup_message a{
+	font-size:9pt;
 }
 
 #popup_panel {

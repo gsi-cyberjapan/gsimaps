@@ -15360,7 +15360,7 @@ GSI.MapLayerList = MA.Class.extend( {
 				var mes ="航空法第132条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第236条第1号から第3号までに掲げる空域（空港等の周辺空域）を表示します。緑色の面は、上空での飛行が禁止される制限表面を表します。紫色の面は、上空及びその下の空域での飛行が禁止される進入表面及び転移表面並びに上空の空域で飛行が禁止される空港等の敷地を表します。<br>" +
 				         "なお、この情報には誤差が含まれている場合があります。また空港等の敷地については工事等により変更がある場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>" +
 				         "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。" 
-				jConfirm(mes, '留意事項', function(r) {
+				jConfirm2(mes, '留意事項', 480, function(r) {
 					if(r) {
 						KARI.append(info, noFinishMove, isHide ,1);
 					}
@@ -15384,7 +15384,7 @@ GSI.MapLayerList = MA.Class.extend( {
 		{
 			if(Confirm_FLAG == null){
 				var KARI=this;
-				jConfirm("赤色立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。赤色立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。", 'ご利用上の注意', function(r) {
+				jConfirm2("赤色立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。赤色立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。", 'ご利用上の注意', 480, function(r) {
 					if(r) {
 						KARI.append(info, noFinishMove, isHide ,1);
 					}
@@ -15392,6 +15392,61 @@ GSI.MapLayerList = MA.Class.extend( {
 				return;
 			}
 		}
+		if (info.id == "tokyo20201"){
+			if(Confirm_FLAG == null){
+				var KARI=this;
+				jConfirm2("・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。" + "<br>" + 
+    "・地図は、仕様上、必ずしも道路や建物等全てを取得・表現しているとは限りません。また、地図及び飛行禁止区域はその性質上、誤差を有しています。これらの点を踏まえ、飛行禁止区域等の境界付近での厳密な区域の判定が必要な場合には十分にご注意ください。" + "<br>" + 
+    "・赤色の面は、上空での飛行が禁止される対象大会関係施設の区域を表します。" + "<br>" + 
+    "・青色の線で囲まれた面は、上空での飛行が禁止される対象大会関係施設周辺地域を表します。" + "<br>" +
+    "・赤色の線は、上空での飛行が禁止される聖火リレールートを表します。赤色の線が次の(1)から(4)までの場合は、それぞれ(1)から(4)に定める区域で飛行が禁止されます。" + "<br>"  +
+    "　(1) 赤線が道路法（昭和27年法律第180号）第２条第１項に規定する「道路」上にある場合" + "<br>"+
+    "　　赤線が引かれた区間の道路の敷地の区域" + "<br>"+
+    "　(2) 赤線が鉄道線路上にある場合" + "<br>" +
+    "　　赤線が引かれた区間の鉄道線路の敷地の区域" + "<br>"+
+    "　(3) 赤線が海上にある場合" + "<br>"+
+    "　　赤線から左右40メートルにわたる区域" + "<br>"+
+    "　(4) その他の場合"+ "<br>"+
+    "　　赤線から左右1メートルにわたる区域"+ "<br>"+
+    "・詳細については、<a href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>", 
+							'留意事項', 480, function(r) {
+					if(r) {
+						KARI.append(info, noFinishMove, isHide ,0);
+					}
+				});
+				return;
+			}
+		}
+		if (info.id == "tokyo20201e"){
+			if(Confirm_FLAG == null){
+				var KARI=this;
+				jConfirm2("※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect." + "<br>" +
+    "This data shows prohibited areas for flying Unmanned Aerial System/drones created by Japan Sports Agency." + "<br>" + 
+    "Some roads or buildings are omitted from the base map due to our map specifications." + "<br>" + 
+    "Please be aware of positional errors inherent in the map, especially in determining accurate boundary of the prohibited area." + "<br>" +
+    "Our basemap in English is less frequently updated than the Japanese version." + "<br>" + 
+    "Please refer to the Japanese version for the latest update. We will update the English version by the end of May." + "<br>" + 
+    "Red areas: Areas of designated facilities where flying UAS/drones is prohibited." + "<br>" + 
+    "Areas surrounded by blue lines: Surrounding areas where flying UAS/drones is prohibited." + "<br>" +
+    "Red lines: Torch Relay route where flying UAS/drones is prohibited. If red lines are on the areas prescribed following (i)~(iv), the flight is prohibited over the areas in each article prescribed following (i)~(iv):" + "<br>" + 
+    "(i) If red lines are on the ‘road’(a road as prescribed in Article 2, paragraph (1) of the Road Act (Act No. 180 of 1952));" + "<br>" + 
+    "　The site of the road in the section with red line." + "<br>" +
+    "(ii)If red lines are on the railway track;" + "<br>" + 
+    "　The site of the railway track in the section with red line." + "<br>" + 
+    "(iii)If red lines are on the ocean;" + "<br>" + 
+    "　Areas within 40 meters each leftward and rightward from the red line." + "<br>" + 
+    "(iv)In other cases;" + "<br>" + 
+    "　Areas within 1 meters each leftward and rightward from the red line." + "<br>" + 
+    "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.", 
+							'ATTENTION', 480, function(r) {
+					if(r) {
+						KARI.append(info, noFinishMove, isHide ,0);
+					}
+				});
+				return;
+			}
+		}
+
 
 		var tileChanged = false;
 		
