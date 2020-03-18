@@ -204,6 +204,8 @@
               "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
               "cocotile": true,
               "minZoom": 5,
+              "maxZoom": 18,
+			"maxNativeZoom": 17,
               "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
