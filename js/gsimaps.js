@@ -5936,7 +5936,17 @@ GSI.ShareDialog = GSI.Dialog.extend({
     if (url_.indexOf("?") == 0) {
       url_ = "&" + url_.substring(1, url_.length);
     }
-    var url_site = _location.pathname + "index_pm.html?postmessage=1" + url_;
+
+    var lp = _location.pathname;
+    var da = lp.lastIndexOf("/");
+    if ((da >= 0) && (da < lp.length - 1)){
+      var x = lp.substring(da + 1);
+      if (x == "index.html"){
+        lp = lp.substring(0, da + 1);
+      }
+    }
+    var url_site = lp + "index_pm.html?postmessage=1" + url_;
+    //var url_site = _location.pathname + "index_pm.html?postmessage=1" + url_;
 
     html = html.replace('/*url*/', url);
     html = html.replace('/*url_site*/', url_site);
