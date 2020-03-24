@@ -155,19 +155,6 @@ CONFIG.layers = [
   }
 ];
 */
-/*
-CONFIG.HANREILIST = {
-  "soil-inventory": {
-    "url": "./hanrei/legend.csv",
-    "layer": {
-      "url": "https://soil-inventory.dc.affrc.go.jp/tile/figure/{z}/{x}/{y}.png",
-      "minZoom": 6,
-      "maxZoom": 18,
-      "maxNativeZoom": 15
-    }
-  }
-};
-*/
 
 CONFIG.HANREILIST = {
   "gsjGeomap_seamless200k_v2": {
@@ -179,6 +166,8 @@ CONFIG.HANREILIST = {
     }
   }
 };
+
+
 
 
 CONFIG.layerEvacuationFolder = "指定緊急避難場所";
@@ -5936,7 +5925,17 @@ GSI.ShareDialog = GSI.Dialog.extend({
     if (url_.indexOf("?") == 0) {
       url_ = "&" + url_.substring(1, url_.length);
     }
-    var url_site = _location.pathname + "index_pm.html?postmessage=1" + url_;
+
+    var lp = _location.pathname;
+    var da = lp.lastIndexOf("/");
+    if ((da >= 0) && (da < lp.length - 1)){
+      var x = lp.substring(da + 1);
+      if (x == "index.html"){
+        lp = lp.substring(0, da + 1);
+      }
+    }
+    var url_site = lp + "index_pm.html?postmessage=1" + url_;
+    //var url_site = _location.pathname + "index_pm.html?postmessage=1" + url_;
 
     html = html.replace('/*url*/', url);
     html = html.replace('/*url_site*/', url_site);
@@ -11807,7 +11806,6 @@ GSI.PageStateManager = L.Class.extend({
 
     if ( path && path != '' ) {
       var mapLayerList = this._gsimaps._mainMap._mapLayerList;
-      console.log( mapLayerList);
       var tileList = mapLayerList.getTileList();
       for( var i=0; i<tileList.length; i++ ) {
         if ( tileList[i].id == path) {
@@ -30757,8 +30755,10 @@ GSI.HanreiLoader = L.Evented.extend({
     }
 
     if (!hanrei) return;
-    if (hanrei.layer) layer = hanrei.layer;
-
+    if (hanrei.layer) {
+      hanrei.layer.id = layer.id;
+      layer = hanrei.layer;
+    }
 
     var zoom = this._map.getZoom();
     if (layer.maxNativeZoom < zoom) zoom = layer.maxNativeZoom;
@@ -30772,13 +30772,13 @@ GSI.HanreiLoader = L.Evented.extend({
     if (!this._tileImageRGBLoader) {
       this._createImageRGBLoader();
     }
+    
     if (!this._targetHanrei || this._targetHanrei.id != layer.id) {
 
       this._targetHanrei = {
         "id": layer.id,
         "hanrei": hanrei
       };
-
       if (!hanrei.data) {
         this._loadData(this._targetHanrei);
       }
