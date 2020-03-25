@@ -135,6 +135,12 @@ CONFIG.UI.MENU = [
         childViewStyle : "panel",
         panelClass: "gsi-menu-rightpanel mobile",
         children : [
+           {
+             id : "measure",
+             title : "計測",
+             description : "距離や面積を計測できます",
+             icon : "./image/system/tool/tool-keisoku.png"
+           },
           {
             id : "danmen",
             title : "断面図",
