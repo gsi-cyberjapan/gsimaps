@@ -135,10 +135,10 @@
           "title": "┗撮影期間",
           "url": "https://maps.gsi.go.jp/xyz/ort_spec/{z}/{x}/{y}.geojson",
           "cocotile": true,
-          "minZoom": 14,
+          "minZoom": 5,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "html": "<div class=\"gsi_layerinfo_title\">2007年～撮影期間</div><div class=\"gsi_layerinfo_subtitle\">ズーム14～18で表示します。</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">2007年～撮影期間</div><div class=\"gsi_layerinfo_subtitle\">ズーム5～18で表示します。</div>"
         },
         {
           "type": "Layer",
