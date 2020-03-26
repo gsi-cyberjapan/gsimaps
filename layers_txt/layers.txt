@@ -1,8 +1,5 @@
 [
 	{
-		"url":"./layers_tokyo2020.txt"
-	},
-	{
 		"url":"./layers1.txt"
 	},
 	{
