@@ -2,6 +2,7 @@
   "name":"地理院地図",
   "short_name":"地理院地図",
   "description" : "地理院地図",
+  "scope": "./index_m.html",
   "start_url": "./index_m.html",
   "display": "standalone",
   "orientation" : "any",
