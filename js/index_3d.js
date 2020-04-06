@@ -1580,7 +1580,16 @@ function RequestLayers(url, z, x, y, nTilesOTS_X, nTilesOTS_Y) {
 		var vURLType = vLayers[nLayers].url_type;
 		var vURLExt = vLayers[nLayers].url_ext;
 		var vURLStyle = vLayers[nLayers].styleurl;
+		var bzyx = false;
 
+		if (vURLI.length < 2){
+			//not zxy, may be zyx
+			var tURLI = vURL.replace("\{z\}\/\{y\}\/\{x\}", "*").split("*");
+			if (tURLI.length == 2){
+				bzyx = true;
+				vURLI = tURLI;
+			}
+		}
 
 		if (vURLType == "tile") {
 			if (vURLI.length == 2) {
@@ -1607,6 +1616,9 @@ function RequestLayers(url, z, x, y, nTilesOTS_X, nTilesOTS_Y) {
 						xx = checkTileCoord(xx, nz);
 						yy = checkTileCoord(yy, nz);
 						var src = vURLI[0] + z + "/" + xx + "/" + yy + vURLI[1];
+						if (bzyx){
+							src = vURLI[0] + z + "/" + yy + "/" + xx + vURLI[1];
+						}
 						if (vURLExt == "img") {
 							var isDraw = checkBounds(xx, yy, z, bounds);
 							if (isDraw) {
