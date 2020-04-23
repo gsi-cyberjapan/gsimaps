@@ -461,7 +461,7 @@
                 },
                 {
                   "type": "Layer",
-                  "id": "vlcd_satumaio",
+                  "id": "vlcd_satsumaio",
                   "title": "火山地形分類データ（薩摩硫黄島）",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumaio/{z}/{x}/{y}.png",
                   "cocotile": true,
