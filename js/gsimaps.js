@@ -9787,6 +9787,7 @@ GSI.LayersJSON = L.Evented.extend({
           entries[i]["title_evac"] = CONFIG.layerEvacuationFolderSYS;
         } else if (entries[i].title == "自然災害伝承碑") {
           entries[i]["title_evac"] = CONFIG.DisasterLoreFolder;
+          entries[i]["title_disasterlore"] = CONFIG.DisasterLoreFolderSYS;
         } else if (entries[i].title == "火山地形分類データ") {
           entries[i]["title_evac"] = CONFIG.VolcanoTerrainFolderSYS;
         } else {
@@ -50373,7 +50374,6 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     }
     else if (target && target.title_disasterlore && target.title_disasterlore == CONFIG.DisasterLoreFolderSYS) {
       var f = false;
-
       if (item.id == CONFIG.DisasterLoreAll){
         if (this._mapLayerList.exists(item)) {
           f = true;
