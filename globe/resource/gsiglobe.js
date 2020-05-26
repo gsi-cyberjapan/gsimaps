@@ -23816,6 +23816,23 @@ GSI.LayersJSON = MA.Class.extend( {
 			
         }
         */
+		
+		var initEvecDisaster = function(entries, func) {
+			if  (!entries) return;
+			for( var i=0; i<entries.length; i++ ) {
+				if (entries[i].title == "指定緊急避難場所") {
+					entries[i]["title_evac"] = CONFIG.layerEvacuationFolderSYS;
+				} else if (entries[i].title == "自然災害伝承碑") {
+					entries[i]["title_evac"] = CONFIG.DisasterLoreFolder;
+					entries[i]["title_disasterlore"] = CONFIG.DisasterLoreFolderSYS;
+				} else if (entries[i].title == "火山地形分類データ") {
+					entries[i]["title_evac"] = CONFIG.VolcanoTerrainFolderSYS;
+				} else {
+					func( entries[i].entries, func );
+				}
+			}
+		};
+		
 		if ( (json.layers) && (json.layers[0].title) && (!json.layers[0].title_sys) )
 		{
 			var hybridjson = JSON.parse("{ \"layers\":[] }");
@@ -23834,7 +23851,8 @@ GSI.LayersJSON = MA.Class.extend( {
 				}
 				else
 				{
-					hybridjson.layers.push(json.layers[ll]);
+          initEvecDisaster( json.layers[ll].entries, initEvecDisaster );
+          hybridjson.layers.push(json.layers[ll]);
 				}
 			}
 			json = hybridjson;
