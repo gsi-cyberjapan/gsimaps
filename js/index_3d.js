@@ -33,15 +33,13 @@ var CONFIG = {};
 CONFIG.layerBase = ['./layers_txt/layers0.txt'];
 CONFIG.layerBaseDefaultID = "std";
 CONFIG.layers = [
-	'./layers_txt/layers_topic_kusatsushirane.txt',
-	'./layers_txt/layers_topic_new.txt',
 	'./layers_txt/layers1.txt',
 	'./layers_txt/layers2.txt',
 	'./layers_txt/layers3.txt',
 	'./layers_txt/layers4.txt',
-	'./layers_txt/layers_skhb.txt',
 	'./layers_txt/layers5.txt',
-	'./layers_txt/layers_experimental.txt'
+	'./layers_txt/layers6.txt',
+	'./layers_txt/layers7.txt'
 ];
 
 CONFIG.FREERELIEFID = "relief_free";
