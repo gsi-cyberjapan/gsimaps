@@ -809,6 +809,96 @@
           "toggleall": false,
           "html" : "<div class='layer_text'>国土地理院以外の機関が作成した情報を閲覧できます。</div>",
           "entries": [
+		{
+		"type": "LayerGroup",
+		"title": "震災伝承施設（東北地整）",
+		"src": "",
+		"iconUrl": "",          
+		"toggleall": false,
+		"html" : "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div>",
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "shinsaidenshoushisetsu",
+			"title": "震災伝承施設（東北地整）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/shinsaidenshoushisetsu.png",
+			"url": "https://maps.gsi.go.jp/xyz/shinsaidenshoushisetsu/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 7,
+			"maxNativeZoom": 2,
+			"legendUrl": "",
+			"area" : {
+				"lat" : 38.709089,
+				"lng" : 141.355591,
+				"zoom" : 8
+				},
+			"html": "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://maps.gsi.go.jp/legend/legend_shinsaidenshoushisetsu.png'></td></tr></tbody></table></div><div><span style='font-weight:bold'>第1分類</span><div>下記の項目のいずれか一つ以上に該当する施設。<br>・災害の教訓が理解できるもの<br>・災害時の防災に貢献できるもの<br>・災害の恐怖や自然の畏怖を理解できるもの<br>・災害における歴史的・学術的価値があるもの<br>・その他、災害の実情や教訓の伝承と認められるもの</div></div><div><span style='font-weight:bold'>第2分類</span><div>第1分類うち、公共交通機関等の利便性が高い、近隣に有料又は無料の駐車場がある等、来訪者が訪問しやすい施設。</div></div><div><span style='font-weight:bold'>第3分類</span><div>第2分類のうち、案内員の配置や語り部活動等、来訪者の理解しやすさに配慮している施設。</div></div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho1",
+			"title": "2011年3月～2011年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"maxNativeZoom": 17,
+			"maxZoom": 18,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho2",
+			"title": "2011年5月～2012年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho3",
+			"title": "2012年10月～2013年5月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho4",
+			"title": "2013年9月～2013年12月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "seamlessphoto",
+			"title": "全国最新写真（シームレス）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>"
+			},
+			{
+			"type": "Layer",
+			"id": "fukkokizu",
+			"title": "災害復興計画基図",
+			"url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 5,
+			"legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
+			"html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			}
+		]
+		},
         {
           "type": "LayerGroup",
           "title": "土地分類基本調査（土地履歴調査）－国土政策局",
@@ -955,6 +1045,22 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "jin202005",
+                  "title": "5月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin202005/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "jin202004",
+                  "title": "4月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin202004/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "jin202003",
                   "title": "3月更新",
                   "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
@@ -984,6 +1090,20 @@
               "title": "2020年面的更新情報",
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men202005",
+                  "title": "5月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/men202005/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "men202004",
+                  "title": "4月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/men202004/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
                 {
                   "type": "Layer",
                   "id": "men202003",
@@ -2512,6 +2632,15 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "fgd_update_2020_04",
+                  "title": "4月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 4,
+                  "maxZoom": 12
+                },
+                {
+                  "type": "Layer",
                   "id": "fgd_update_2020_01",
                   "title": "1月更新",
                   "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_01/{z}/{x}/{y}.png",
@@ -2526,7 +2655,7 @@
               "title": "2019年更新情報",
               "toggleall": false,
               "entries": [
-               {
+                {
                   "type": "Layer",
                   "id": "fgd_update_2019_10",
                   "title": "10月更新",
@@ -2534,8 +2663,8 @@
                   "cocotile": true,
                   "minZoom": 4,
                   "maxZoom": 12
-               },
-               {
+                },
+                {
                   "type": "Layer",
                   "id": "fgd_update_2019_07",
                   "title": "7月更新",
@@ -2543,8 +2672,8 @@
                   "cocotile": true,
                   "minZoom": 4,
                   "maxZoom": 12
-               },
-               {
+                },
+                {
                   "type": "Layer",
                   "id": "fgd_update_2019_04",
                   "title": "4月更新",
