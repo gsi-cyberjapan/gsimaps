@@ -16,7 +16,8 @@
         {
           "type": "Layer",
           "id": "skhb01",
-          "title": "洪水",
+          "title": "指定緊急避難場所（洪水）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb01/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -26,7 +27,8 @@
         {
           "type": "Layer",
           "id": "skhb02",
-          "title": "崖崩れ、土石流及び地滑り",
+          "title": "指定緊急避難場所（崖崩れ、土石流及び地滑り）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb02/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -36,7 +38,8 @@
         {
           "type": "Layer",
           "id": "skhb03",
-          "title": "高潮",
+          "title": "指定緊急避難場所（高潮）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb03/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -46,7 +49,8 @@
         {
           "type": "Layer",
           "id": "skhb04",
-          "title": "地震",
+          "title": "指定緊急避難場所（地震）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb04/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -56,7 +60,8 @@
         {
           "type": "Layer",
           "id": "skhb05",
-          "title": "津波",
+          "title": "指定緊急避難場所（津波）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb05/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -66,7 +71,8 @@
         {
           "type": "Layer",
           "id": "skhb06",
-          "title": "大規模な火事",
+          "title": "指定緊急避難場所（大規模な火事）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb06/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -76,7 +82,8 @@
         {
           "type": "Layer",
           "id": "skhb07",
-          "title": "内水氾濫",
+          "title": "指定緊急避難場所（内水氾濫）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb07/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -86,7 +93,8 @@
         {
           "type": "Layer",
           "id": "skhb08",
-          "title": "火山現象",
+          "title": "指定緊急避難場所（火山現象）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
           "url": "https://maps.gsi.go.jp/xyz/skhb08/{z}/{x}/{y}.geojson",
           "minZoom": 10,
           "maxZoom": 18,
@@ -104,7 +112,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_all",
-          "title": "すべて",
+          "title": "自然災害伝承碑（すべて）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_all/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -116,7 +124,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_0",
-          "title": "洪水",
+          "title": "自然災害伝承碑（洪水）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_flood/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -128,7 +136,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_1",
-          "title": "土砂災害",
+          "title": "自然災害伝承碑（土砂災害）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_sediment/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -140,7 +148,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_2",
-          "title": "高潮",
+          "title": "自然災害伝承碑（高潮）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_hightide/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -152,7 +160,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_3",
-          "title": "地震",
+          "title": "自然災害伝承碑（地震）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_earthquake/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -164,7 +172,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_4",
-          "title": "津波",
+          "title": "自然災害伝承碑（津波）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_tsunami/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -176,7 +184,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_5",
-          "title": "火山災害",
+          "title": "自然災害伝承碑（火山災害）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_volcano/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -188,7 +196,7 @@
         {
           "type": "Layer",
           "id": "disaster_lore_6",
-          "title": "その他",
+          "title": "自然災害伝承碑（その他）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_other/{z}/{x}/{y}.geojson",
           "cocotile": true,
@@ -198,8 +206,98 @@
           "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">その他の災害伝承碑を表示します。</div>"
         }
       ]
-        }
-        ]
-    }
+        },
+		{
+		"type": "LayerGroup",
+		"title": "震災伝承施設（東北地整）",
+		"src": "",
+		"iconUrl": "",
+		"toggleall": false,
+		"html" : "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div>",
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "shinsaidenshoushisetsu",
+			"title": "震災伝承施設（東北地整）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/shinsaidenshoushisetsu.png",
+			"url": "https://maps.gsi.go.jp/xyz/shinsaidenshoushisetsu/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 7,
+			"maxNativeZoom": 2,
+			"legendUrl": "",
+			"area" : {
+				"lat" : 38.709089,
+				"lng" : 141.355591,
+				"zoom" : 8
+				},
+			"html": "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://maps.gsi.go.jp/legend/legend_shinsaidenshoushisetsu.png'></td></tr></tbody></table></div><div><span style='font-weight:bold'>第1分類</span><div>下記の項目のいずれか一つ以上に該当する施設。<br>・災害の教訓が理解できるもの<br>・災害時の防災に貢献できるもの<br>・災害の恐怖や自然の畏怖を理解できるもの<br>・災害における歴史的・学術的価値があるもの<br>・その他、災害の実情や教訓の伝承と認められるもの</div></div><div><span style='font-weight:bold'>第2分類</span><div>第1分類うち、公共交通機関等の利便性が高い、近隣に有料又は無料の駐車場がある等、来訪者が訪問しやすい施設。</div></div><div><span style='font-weight:bold'>第3分類</span><div>第2分類のうち、案内員の配置や語り部活動等、来訪者の理解しやすさに配慮している施設。</div></div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho1",
+			"title": "2011年3月～2011年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"maxNativeZoom": 17,
+			"maxZoom": 18,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho2",
+			"title": "2011年5月～2012年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho3",
+			"title": "2012年10月～2013年5月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho4",
+			"title": "2013年9月～2013年12月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "seamlessphoto",
+			"title": "全国最新写真（シームレス）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>"
+			},
+			{
+			"type": "Layer",
+			"id": "fukkokizu",
+			"title": "災害復興計画基図",
+			"url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 5,
+			"legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
+			"html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			}
+		]
+		}
+		]
+		}
   ]
 }
