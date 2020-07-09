@@ -28,7 +28,7 @@
                         }
                     ]
                 },
-                                {
+                {
                     "type": "LayerGroup",
                     "title": "久留米地区（福岡県久留米市、筑後市、大川市、小郡市、うきは市、朝倉市、大刀洗町、大木町、広川町、佐賀県鳥栖市、神埼市、上峰町、みやき町）",
                     "toggleall": false,
@@ -72,7 +72,7 @@
                       "lng" : 130.726318,
                       "zoom" : 14
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日10時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日13時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_kumagawahitoyoshi_0704dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日10時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日13時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -88,7 +88,7 @@
                       "lng" : 130.660400,
                       "zoom" : 14
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害用ヘリコプターが7月4日15時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日20時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_kumagawa_0704dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害用ヘリコプターが7月4日15時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日20時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -104,7 +104,7 @@
                       "lng" : 130.484619,
                       "zoom" : 14
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害対策用ヘリコプターが7月4日18時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日22時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_sashikigawayunouragawaashikita_0704dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害対策用ヘリコプターが7月4日18時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日22時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -120,7 +120,7 @@
                       "lng" : 130.440674,
                       "zoom" : 14
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日7時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_omuta_0707dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日7時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -136,7 +136,7 @@
                       "lng" : 130.907593,
                       "zoom" : 15
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日14時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_hita_0707dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日14時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -152,7 +152,7 @@
                       "lng" : 130.462732,
                       "zoom" : 14
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日18時までに収集した情報と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_miyama_0708dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日18時までに収集した情報と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 },
                 {
                     "type": "Layer",
@@ -164,11 +164,27 @@
                     "maxZoom": 16,
                     "maxNativeZoom": 15,
                     "area" : {
-                      "lat" : 33.293086,
-                      "lng" : 130.515518,
+                      "lat" : 33.327086,
+                      "lng" : 130.566673,
                       "zoom" : 12
                     },
-                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日12時までに収集したSNS画像、報道情報、国土交通省災害対策用ヘリコプターが7月8日10時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日16時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_chikugogawa_0708dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日12時までに収集したSNS画像、報道情報、国土交通省災害対策用ヘリコプターが7月8日10時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日16時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_chikugogawa_0709dansaizu",
+                    "title": "筑後川水系筑後川第2報（2020年7月9日18時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_chikugogawa_0709dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.327086,
+                      "lng" : 130.566673,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日14時頃に撮影した空中写真と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月9日18時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 }
             ]
         }
