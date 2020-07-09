@@ -36,7 +36,7 @@
                         {
                             "type": "Layer",
                             "id": "20200703oame_kurume_0708naname",
-                            "title": "久留米地区（7/８撮影）",
+                            "title": "久留米地区（7/8撮影）",
                             "url": "https://maps.gsi.go.jp/xyz/20200703oame_kurume_0708naname/{z}/{x}/{y}.geojson",
                             "cocotile": true,
                             "minZoom": 2,
