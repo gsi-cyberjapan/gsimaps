@@ -49412,7 +49412,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       else {
         this._mapManager._map.addLayer(this._mapManager._baseLayer);
         this._mapLayerList.append(item);
-        GSI.Utils.sendSelectedLayer(this._current_id);
+        GSI.Utils.sendSelectedLayer(this._mapManager._baseLayer.getActiveId());
       }
     }
 
@@ -52706,6 +52706,11 @@ GSI.Menu.IconButton = GSI.MenuBase.extend({
 
   _onClick : function() {
     this.fire("click");
+    if ( this._container ) {
+      try{
+        this._container.blur();
+      } catch(e) {}
+    }
   }
 
 
