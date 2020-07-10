@@ -14983,7 +14983,7 @@ GSI.BaseLayer = L.Layer.extend({
       options.errorTileUrl = errorTileUrl;
       //options.crossOrigin = true;
 
-      if ( this._layer) {
+      if ( this._layer && this._map) {
         this._map.removeLayer(this._layer);
       }
       
