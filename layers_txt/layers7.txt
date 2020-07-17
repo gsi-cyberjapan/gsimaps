@@ -2952,7 +2952,7 @@
               "minZoom": 2,
               "maxZoom": 14,
               "maxNativeZoom": 2,
-              "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲を表示します。<br><ul><li>地上画素寸法20cmの数値写真を用いて作成した範囲については、桃色で表示</li><li>地上画素寸法40cmの数値写真を用いて作成した範囲については、水色で表示</li></ul>5mメッシュDEM作成に使用した空中写真の撮影時期は、トップから「空中写真・衛星画像」にある「2007年～撮影期間」（ズーム14～18で表示）から確認いただけます。</div><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+              "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲を表示します。<br><ul><li>地上画素寸法20cmの数値写真を用いて作成した範囲については、桃色で表示</li><li>地上画素寸法40cmの数値写真を用いて作成した範囲については、水色で表示</li></ul>5mメッシュDEM作成に使用した空中写真の撮影時期は、トップから「年代別の写真」の「電子国土基本図（オルソ画像）（2007年～ ） 」の下にある「撮影期間」（ズーム5～18で表示）から確認いただけます。</div><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
             },
             {
               "type": "Layer",
