@@ -410,7 +410,7 @@
           "minZoom": 10,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class='layer_text'><p>1984年～1967年に撮影された空中写真です。</p></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
+          "html": "<div class='layer_text'><p>1984年～1986年に撮影された空中写真です。</p></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/johofukyu/kani_ortho_1.html\">解説</a><br><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
         },
         {
           "type": "Layer",
