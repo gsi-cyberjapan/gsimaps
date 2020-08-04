@@ -463,7 +463,7 @@
         {
           "type": "Layer",
           "id": "ort_riku10",
-          "title": "1936年頃",
+          "title": "1936年～1942年頃",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "https://maps.gsi.go.jp/xyz/ort_riku10/{z}/{x}/{y}.png",
           "cocotile": true,
@@ -471,11 +471,28 @@
           "maxZoom": 18,
           "maxNativeZoom": 18,
           "area" : {
-            "lat" : 35.701917,
-            "lng" : 139.745407,
+            "lat" : 35.038992,
+            "lng" : 137.658691,
+            "zoom" : 7
+          },
+          "html": "<div class='layer_text'><p>1936年から1942年頃に撮影された空中写真です。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
+        },
+        {
+          "type": "Layer",
+          "id": "ort_1928",
+          "title": "1928年頃",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/ort_1928/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 18,
+          "area" : {
+            "lat" : 34.685169,
+            "lng" : 135.502625,
             "zoom" : 11
           },
-          "html": "<div class='layer_text'><p>1936年頃に撮影された空中写真です。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
+          "html": "<div class='layer_text'><p>1928年頃に撮影された空中写真です。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
         },
         {
           "type": "Layer",
