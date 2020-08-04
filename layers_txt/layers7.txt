@@ -1045,6 +1045,14 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "jin202007",
+                  "title": "7月更新",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                  "url": "https://maps.gsi.go.jp/xyz/jin202007/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "jin202006",
                   "title": "6月更新",
                   "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
@@ -1098,6 +1106,13 @@
               "title": "2020年面的更新情報",
               "toggleall": false,
               "entries": [
+                {
+                  "type": "Layer",
+                  "id": "men202007",
+                  "title": "7月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/men202007/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
                 {
                   "type": "Layer",
                   "id": "men202006",
@@ -2647,6 +2662,15 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "fgd_update_2020_07",
+                  "title": "7月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 4,
+                  "maxZoom": 12
+                },
+                {
+                  "type": "Layer",
                   "id": "fgd_update_2020_04",
                   "title": "4月更新",
                   "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_04/{z}/{x}/{y}.png",
@@ -2961,6 +2985,33 @@
               "url": "https://maps.gsi.go.jp/xyz/fgd_dem10a_area/{z}/{x}/{y}.png",
               "cocotile": true,
               "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(10mメッシュDEM（火山基本図）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>火山基本図の等高線データを基に作成した10mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2020年7月更新",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "fgd_dem5a_update_2020_07",
+                  "title": "5ｍメッシュDEM（航空レーザ測量）",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2020_07/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 12,
+                  "maxNativeZoom": 2
+                },
+                {
+                  "type": "Layer",
+                  "id": "fgd_dem5b_update_2020_07",
+                  "title": "5ｍメッシュDEM（写真測量）",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2020_07/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 12,
+                  "maxNativeZoom": 2
+                }
+              ]
             },
             {
               "type": "LayerGroup",

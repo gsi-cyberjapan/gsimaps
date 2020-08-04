@@ -185,6 +185,38 @@
                       "zoom" : 12
                     },
                     "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日14時頃に撮影した空中写真と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月9日18時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200729rain_mogamigawa_0729dansaizu",
+                    "title": "最上川水系最上川（2020年7月29日12時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200729rain_mogamigawa_0729dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 38.472776,
+                      "lng" : 140.358860,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月29日12時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200729rain_mogamigawa_0729dansaizu2",
+                    "title": "最上川水系最上川（2020年7月29日20時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200729rain_mogamigawa_0729dansaizu2/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 38.472776,
+                      "lng" : 140.358860,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像、国土交通省災害対策用ヘリコプターが7月29日14時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li><li>大江町と中山町の浸水範囲は、2020年7月29日12時作成の速報版の情報になります。</li></ul>2020年7月29日20時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
                 }
             ]
         }
