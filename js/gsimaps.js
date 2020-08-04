@@ -222,6 +222,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_chokai": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/vlcd_chokai.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_kurikoma": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/vlcd_kurikoma.csv",
     "layer": {
@@ -6401,7 +6409,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
     if (hasReliefFree) {
       var currentData = this._gsimaps._mainMap._mapLayerList.getElevationData();
       var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
-      queryString = '&relief=' + text;
+      queryString += (queryString != '' ? '&' : '#') + 'reliefdata=' + text;
     }
 
     if (additionalParam && additionalParam != '') {
@@ -19324,7 +19332,8 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
     var key = this._tileCoordsToKey(coords);
     var req = this._requests[key];
     if (req) return;
-    loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
+    loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
+    //loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
       overZooming: true,
       useHillshademap: this._elevationData.useHillshademap,
       hillshademapUrl: this._hillshademapUrl
@@ -31936,7 +31945,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       var tile = tileList[i];
       var coords = tile.coords;
       // 読み込み開始
-      var loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
+      var loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
+      //var loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
         overZooming: true,
         useHillshademap: false
       });
@@ -32689,8 +32699,6 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     td.append(a);
     tr.append(td);
 
-
-    //
 
     if (next) { //(!desc && next) || (desc && prev) ) {
       td = $("<td>");
@@ -39868,6 +39876,92 @@ GSI.DEMLoader = L.Evented.extend({
 
 });
 
+GSI.FreeReliefDEMLoader = GSI.DEMLoader.extend({
+  // 読み込み開始
+  load: function () {
+    if (!this._globalTileRange) {
+      var bounds = this._map.getPixelWorldBounds(this._tileZoom);
+      if (bounds) {
+        this._globalTileRange = this._pxBoundsToTileRange(bounds);
+      }
+    }
+
+    this._demData = null;
+    this._demInfo = null;
+    this._demLoaded = false;
+    this._currentCoords = $.extend(true, {}, this._coords);
+
+    this._urlList = GSI.FreeReliefDEMLoader.getURLList(this._coords.x, this._coords.y, this._coords.z);
+
+    this._startLoadDEM(this._currentCoords);
+
+  },
+  _loadDEM: function (urlList, coords) {
+    var targetUrl = null;
+    var targetId = null;
+    var z = coords.z;
+
+    if (urlList.length > 0){
+      var urlInfo = urlList.shift();
+      targetUrl = $.extend(true, {}, urlInfo);
+      targetId = urlInfo.id;
+
+      if (this.options.overZooming){
+        if (targetId == "DEM10B"){
+          if (z > 14){
+            coords = this._slideZoom(urlInfo.maxZoom);
+          }
+        }
+      }
+      else{
+        if (urlInfo.maxZoom < z || urlInfo.minZoom > z){
+          this._demLoadError();
+          return;
+        }
+      }
+    }
+    else{
+      // 遡らない
+      this._demLoadError();
+      return;
+    }
+
+    var url = this.getDEMTileUrl(targetUrl.url, coords);
+
+    this._demImage = document.createElement('img');
+
+    $(this._demImage)
+      .on('load', L.bind(
+        function (urlList, coords, targetUrl, targetId) {
+          this._demLoadSuccess(urlList, coords, targetUrl, targetId);
+        }, this, urlList, coords, targetUrl, targetId)
+      )
+      .on('error', L.bind(
+        function (urlList, coords, e) {
+          this._loadDEM(urlList, coords);
+        }, this, urlList, coords)
+      );
+
+    this._demImage.setAttribute('crossOrigin', 'anonymous');
+    this._demImage.setAttribute('role', 'presentation');
+    this._demImage.src = url;
+
+  },
+  _slideZoom: function (z) {
+    var scale = Math.pow(2, this._coords.z - z);
+    var point = L.point(this._coords.x * 256 / scale, this._coords.y * 256 / scale)
+      .divideBy(256)._floor();
+
+    this._currentCoords = {
+      x: point.x,
+      y: point.y,
+      z: z
+    };
+
+    return this._currentCoords;
+  }
+
+});
 
 /*******************************************************
  GSI.CrossSectionDEMLoader
@@ -40269,7 +40363,7 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
   // ZL9以上
   var key;
 
-  // DEMAREAになけれdem_gm
+  // DEMAREAになければdem_gm
   key = coordsToKey(getCoords(x, y, z, 8));
   if (!GSI.DEMLoader.DEMAREA[key]) return [{
     id: "DEMGM",
@@ -40415,7 +40509,7 @@ GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
   // ZL9以上
   var key;
 
-  // DEMAREAになけれdem_gm
+  // DEMAREAになければdem_gm
   key = coordsToKey(getCoords(x, y, z, 8));
   if (!GSI.DEMLoader.DEMAREA[key]) return [{
     url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
@@ -40518,7 +40612,148 @@ GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
 
 };
 
+GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
+  var getCoords = function (x, y, z, targetZoom) {
+    var scale = Math.pow(2, z - targetZoom);
+    var point = L.point(x * 256 / scale, y * 256 / scale).divideBy(256)._floor();
 
+    return {
+      x: point.x,
+      y: point.y,
+      z: targetZoom
+    };
+  };
+  var coordsToKey = function (coords) { return coords.z + "/" + coords.x + "/" + coords.y; };
+  //-------------------------------------------------------------------------------
+
+
+  // ZL8以下はdem_gm
+  if (z <= 8) {
+    return [{
+      id: "DEMGM",
+      url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 8
+    }];
+  }
+
+  // ZL9以上
+  var key;
+
+  // DEMAREAになければdem_gm
+  key = coordsToKey(getCoords(x, y, z, 8));
+  if (!GSI.DEMLoader.DEMAREA[key]) return [{
+    id: "DEMGM",
+    url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+    minZoom: 0,
+    maxZoom: 8
+  }];
+
+  // DEMAREA2になければdem
+  key = coordsToKey(getCoords(x, y, z, 9));
+  if (!GSI.DEMLoader.DEMAREA2[key])
+    return [
+      {
+        id: "DEM5A",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 15,
+        complementList: [
+          {
+            id: "DEM5B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
+        id: "DEM5B",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+        minZoom: 14,
+        maxZoom: 15,
+        complementList: [
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 14,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 14,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
+        id: "DEM5C",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+        minZoom: 14,
+        maxZoom: 15,
+        complementList: [
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 14,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
+        id: "DEM10B",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 14,
+        complementList: [
+        ]
+      }
+    ];
+
+
+  key = coordsToKey(getCoords(x, y, z, 10));
+  if (!GSI.DEMLoader.DEMAREA3[key] == -1) {
+    // DEMAREA2にあって、DEMAREA3になければdemgm
+    return [{
+      id: "DEMGM",
+      url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 8
+    }];
+  }
+  else {
+    // DEMAREA2にあって、DEMAREA3にあればdem
+    return [{
+      id: "DEM10B",
+      url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+      minZoom: 0,
+      maxZoom: 14,
+      complementList: [
+        {
+          id: "DEMGM",
+          url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+          minZoom: 0,
+          maxZoom: 8
+        }
+      ]
+    }
+    ];
+  }
+
+}
 
 /************************************************************************
  L.Control
