@@ -486,6 +486,7 @@ CONFIG.FREERELIEF_COLORPATTERNS = [
 
 
 //キャッシュ（Layers.txt）
+//CONFIG.LOADLAYERSTXTCACHE = true;
 CONFIG.LOADLAYERSTXTCACHE = false;
 
 //キャッシュ（ココタイル）
@@ -45994,6 +45995,77 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     this._refreshToolButton();
   },
 
+  _onOpacityBtnClick:function(item,btn, tr) {
+
+    var opacity = ( item._opacity != undefined ? item._opacity : 1 );//(item._visibleInfo ? item._visibleInfo.opacity : 1);
+    if (!this._opacityWindow) {
+      this._opacityWindow = $('<div>').addClass('viewlistdialog_opacity_window');
+      this._opacityValue = $('<div>').addClass('value').html('透過率:');
+      this._opacitySlider = $('<div>').addClass('slider').html('&nbsp;');
+      this._opacityWindow.append(this._opacityValue).append(this._opacitySlider);
+      $("body").append(this._opacityWindow);
+      this._opacitySlider.slider({
+        min: 0,
+        max: 100
+      });
+    }
+    else if (this._opacityWindow && this._opacityWindow.is(":visible") && this._opacityWindow.data("item") == item) {
+      this._opacityWindow.slideUp(200);
+      return;
+    }
+    var offset = btn.offset();
+    this._opacityWindow.css({
+      top: offset.top + btn.outerHeight(),
+      left: ( offset.left + btn.outerWidth() - 300 ) + 'px'
+    }).data({ "item": item });
+
+    var opacityPercentage = Math.round(100 - (opacity * 100));
+    this._opacityValue.html('透過率:' + opacityPercentage + '%');
+    this._opacitySlider.data({ "__target_item": item }).slider("option", "value", opacityPercentage);
+    this._opacitySlider.off("slide").on("slide", L.bind(function (event, ui) {
+      var item = this._opacitySlider.data('__target_item');
+      var value = ui.value;// this._opacitySlider.slider( "option", "value" );
+      this._opacityValue.html('透過率:' + value + '%');
+      var opacity = value / 100.0;
+      if (opacity < 0) opacity = 0;
+      if (opacity > 1) opacity = 1;
+      opacity = 1 - opacity;
+      item._layer.setOpacity(opacity);
+      item._opacity = opacity;
+    }, this));
+
+    if (this._hideOpacityWindowHandler) {
+      $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
+      $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+
+    }
+    this._hideOpacityWindowHandler = L.bind(function (event) {
+      if (!this._opacityWindow
+        || event.target == this._opacityWindow[0]
+        || $(event.target).is(".opacity_btn")) return;
+
+      var parents = $(event.target).parents();
+
+      var hit = false;
+      for (var i = 0; i < parents.length; i++) {
+        if ($(parents[i]).is(".viewlistdialog_opacity_window")) {
+          hit = true;
+          break;
+        }
+      }
+      if (!hit) {
+        this._opacityWindow.slideUp(200);
+        $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
+        $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+      }
+    }, this);
+
+    $(document.body).bind('mousedown', this._hideOpacityWindowHandler);
+    $(document.body).bind('touchstart', this._hideOpacityWindowHandler);
+
+    this._opacityWindow.hide().slideDown(200);
+  },
+
   _refreshIconLabelSizeButton: function (frame, item) {
     var labelLarge = frame.find("a.large");
     var labelMiddle = frame.find("a.middle");
@@ -55099,6 +55171,7 @@ $(document).ready(function () {
   $.ajax({
     type: "GET",
     dataType: "JSON",
+    cache: CONFIG.LOADLAYERSTXTCACHE,
     url: CONFIG.layersURL,
     async: true
   })
