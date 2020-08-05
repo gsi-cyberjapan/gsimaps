@@ -22,6 +22,7 @@ $(document).ready(function(){
 		type: "GET",
 		dataType: "JSON",
 		url: CONFIG.layersURL,
+		cache: CONFIG.LOADLAYERSTXTCACHE,
 		async : true
 	})
 	.done( function(data) {
