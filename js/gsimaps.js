@@ -19334,8 +19334,7 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
     var req = this._requests[key];
     if (req) return;
     loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
-    //loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
-      overZooming: true,
+        overZooming: true,
       useHillshademap: this._elevationData.useHillshademap,
       hillshademapUrl: this._hillshademapUrl
 
@@ -31947,7 +31946,6 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       var coords = tile.coords;
       // 読み込み開始
       var loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
-      //var loader = new GSI.DEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
         overZooming: true,
         useHillshademap: false
       });
@@ -32700,6 +32698,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     td.append(a);
     tr.append(td);
 
+
+    //
 
     if (next) { //(!desc && next) || (desc && prev) ) {
       td = $("<td>");
@@ -39892,9 +39892,13 @@ GSI.FreeReliefDEMLoader = GSI.DEMLoader.extend({
     this._demLoaded = false;
     this._currentCoords = $.extend(true, {}, this._coords);
 
+
     this._urlList = GSI.FreeReliefDEMLoader.getURLList(this._coords.x, this._coords.y, this._coords.z);
 
     this._startLoadDEM(this._currentCoords);
+    if (this.options.useHillshademap) {
+      this._loadHillshademap(this._currentCoords);
+    }
 
   },
   _loadDEM: function (urlList, coords) {
@@ -39922,7 +39926,7 @@ GSI.FreeReliefDEMLoader = GSI.DEMLoader.extend({
       }
     }
     else{
-      // 遡らない
+      //遡らない
       this._demLoadError();
       return;
     }
@@ -40364,7 +40368,7 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
   // ZL9以上
   var key;
 
-  // DEMAREAになければdem_gm
+  // DEMAREAになけれdem_gm
   key = coordsToKey(getCoords(x, y, z, 8));
   if (!GSI.DEMLoader.DEMAREA[key]) return [{
     id: "DEMGM",
@@ -40510,7 +40514,7 @@ GSI.CrossSectionDEMLoader.getURLList = function (x, y, z) {
   // ZL9以上
   var key;
 
-  // DEMAREAになければdem_gm
+  // DEMAREAになけれdem_gm
   key = coordsToKey(getCoords(x, y, z, 8));
   if (!GSI.DEMLoader.DEMAREA[key]) return [{
     url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
@@ -40638,10 +40642,11 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
     }];
   }
 
+
   // ZL9以上
   var key;
 
-  // DEMAREAになければdem_gm
+  // DEMAREAになけれdem_gm
   key = coordsToKey(getCoords(x, y, z, 8));
   if (!GSI.DEMLoader.DEMAREA[key]) return [{
     id: "DEMGM",
@@ -40649,6 +40654,7 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
     minZoom: 0,
     maxZoom: 8
   }];
+
 
   // DEMAREA2になければdem
   key = coordsToKey(getCoords(x, y, z, 9));
@@ -40725,6 +40731,7 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
     ];
 
 
+
   key = coordsToKey(getCoords(x, y, z, 10));
   if (!GSI.DEMLoader.DEMAREA3[key] == -1) {
     // DEMAREA2にあって、DEMAREA3になければdemgm
@@ -40753,6 +40760,7 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
     }
     ];
   }
+
 
 }
 
