@@ -1164,6 +1164,27 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "toz202007",
+                  "title": "7月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz202007/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "toz202006",
+                  "title": "6月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz202006/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
+                  "id": "toz202004",
+                  "title": "4月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz202004/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "toz202003",
                   "title": "3月更新",
                   "url": "https://maps.gsi.go.jp/xyz/toz202003/{z}/{x}/{y}.geojson",
