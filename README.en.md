@@ -3,8 +3,8 @@ The source of GSI Maps, the web maps by Geospatial Information Authority of Japa
 
 ## GSI Maps, the web site
 
-- GSI Maps (officially operated by GSI): http://maps.gsi.go.jp/
-- GSI Maps (demo directly based on this repository): http://gsi-cyberjapan.github.io/gsimaps/
+- GSI Maps (officially operated by GSI): https://maps.gsi.go.jp/
+- GSI Maps (demo directly based on this repository): https://gsi-cyberjapan.github.io/gsimaps/
 
 ## How to use this repository
 1. Please download this repository.
@@ -17,7 +17,7 @@ Most of the functions of gsimaps should work even if you open [index.html](index
 Howerver, some important functions such as a function to handle vector tile data, will work only when you host index.html on a web server.
 
 ## Remarks
-- This repository provides the source code of "GSI Maps" http://maps.gsi.go.jp/ operated by GSI (Geospatial Information Authority of Japan.)
+- This repository provides the source code of "GSI Maps" https://maps.gsi.go.jp/ operated by GSI (Geospatial Information Authority of Japan.)
 - As for Leaflet, jQuery, or all other existing software included in this repository, the [Licenses for the respective projects](LICENSE_LIBRARIES.md) applies.
 - According to <a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>GSI Contents License</a> which is based on the Japanese Government's Standard License, 2-clause BSD license, which is the same as Leaflet's, applies for the work by GSI.
 - All the pull requests will be subject to 2-clause BSD License with a credit of GSI after we merge respective pull requests.
@@ -29,7 +29,7 @@ Howerver, some important functions such as a function to handle vector tile data
 See the [LICENSE file](LICENSE) also.
 
 ## See Also
-- Edit tool for layers definition (from this repository): http://gsi-cyberjapan.github.io/gsimaps/config.html
+- Edit tool for layers definition (from this repository): https://gsi-cyberjapan.github.io/gsimaps/config.html
 - The specifications for layers definition (also from our github repository): https://github.com/gsi-cyberjapan/layers-dot-txt-spec
 
 ## hashtag
