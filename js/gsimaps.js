@@ -2835,6 +2835,7 @@ GSI.Links.getURL = function (pageStateManager, id, center, z, bounds) {
 
     return url; //'https://maps.gsi.go.jp/globe/index_globe.html';
   }
+
   else if (id == 'mapion') {
     var zoomLevel = z;
     if (z <= 6) { zoomLevel = 6; }
@@ -2865,9 +2866,16 @@ GSI.Links.getURL = function (pageStateManager, id, center, z, bounds) {
     return "./link.html?site=itsumonavi&lat=" + y + "&lng=" + x + "&z=" + zoomLevel;
     //return "http://www.its-mo.com/z-" + y + "-" + x + "-" + zoomLevel + ".htm";
   }
+
   else if (id == 'ucodehref') {
     return 'http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php?lat=' + center.lat + '&lng=' + center.lng + '&zoom=' + z;
   }
+
+  else if (id == 'gsivector') {
+    var zoomlevel = z - 1;
+    return 'https://maps.gsi.go.jp/vector/#' + zoomlevel + '/' + center.lat + '/' + center.lng + '/&ls=vstd&disp=1&d=l';
+  }
+
   else {
     return id;
   }
@@ -52926,7 +52934,8 @@ GSI.Menu = GSI.MenuBase.extend({
     for( var i=0; i<this._config.length; i++ ) {
       var iconInfo = this._config[i];
       if ( this._container.hasClass("local")) {
-        if  (iconInfo.id == "reset" || iconInfo["class"] =="gsi-header-tool-vectorlogo-icon") continue;
+        //if (iconInfo.id == "reset" || iconInfo["class"] =="gsi-header-tool-vectorlogo-icon") continue;
+        if (iconInfo.id == "reset") continue;
       }
       var iconButton = new GSI.Menu.IconButton(this,this, iconInfo);
       iconButton.create( this._container);
@@ -54872,10 +54881,10 @@ GSI.GSIMaps = L.Evented.extend({
 
       case 'gsi3d_l':
       case 'gsi3d_s':
+      case 'gsivector':
         var linkUrl = GSI.Links.getURL(this._pageStateManager, evt.item.id,
           map.getCenter().wrap(), map.getZoom(), map.getBounds());
         if (!GSI.Utils.canUseWebGL()) {
-
           jConfirm("ご利用の環境では正しく表示されない可能性があります。", '確認', L.bind(function (linkUrl, r) {
             if (r) {
               window.open(linkUrl);
@@ -54946,7 +54955,7 @@ GSI.GSIMaps = L.Evented.extend({
     var linkUrl = GSI.Links.getURL(this._pageStateManager, url,
       map.getCenter().wrap(), map.getZoom(), map.getBounds());
 
-    if (url == "gsi3d_l" || url == "gsi3d_s" || url == "gsiglobe") {
+    if (url == "gsi3d_l" || url == "gsi3d_s" || url == "gsiglobe" || url == "gsivector") {
       // WebGLの対応チェック
       if (!GSI.Utils.canUseWebGL()) {
 

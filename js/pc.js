@@ -309,12 +309,11 @@ CONFIG.UI.MENU = [
   },
 
   {
+    id : "gsivector",
     title : "",
     icon : "",
     class : "gsi-header-tool-vectorlogo-icon",
-    description : "地理院地図Vectorへリンク", // ポップアップされます
-    url : "https://maps.gsi.go.jp/vector/",
-    target : "_blank"
+    description : "地理院地図Vector（仮称）へジャンプ"
   }
 
 ];
