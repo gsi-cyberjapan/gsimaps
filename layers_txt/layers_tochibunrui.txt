@@ -14,7 +14,6 @@
             {
               "type": "LayerGroup",
               "title": "土地利用分類図",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -44,7 +43,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（水害）",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -514,7 +512,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（高潮）",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -599,7 +596,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（土砂災害）",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -662,7 +658,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（津波災害）",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -681,7 +676,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（火山災害）",
-              "open": false,
               "toggleall": false,
               "entries": [
                 {
@@ -700,7 +694,6 @@
             {
               "type": "LayerGroup",
               "title": "災害履歴図（地震災害）",
-               "open": false,
               "toggleall": false,
               "entries": [
                 {

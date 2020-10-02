@@ -12,14 +12,12 @@
             {
               "type": "LayerGroup",
               "title": "20万分の1地質図幅",
-              "open": false,
               "toggleall": false,
               "src": "./layers_gsj_G200K.txt"
             },
             {
               "type": "LayerGroup",
               "title": "5万分の1地質図幅",
-              "open": false,
               "toggleall": false,
               "src": "https://maps.gsi.go.jp/layers_txt/layers_gsj_G50K.txt"
             }
