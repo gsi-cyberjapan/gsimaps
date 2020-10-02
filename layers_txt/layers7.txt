@@ -3041,7 +3041,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2020_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 },
                 {
@@ -3051,7 +3051,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2020_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 }
               ]
@@ -3068,7 +3068,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2019_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 },
                 {
@@ -3078,7 +3078,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2019_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 }
               ]
@@ -3095,7 +3095,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2018_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 },
                 {
@@ -3105,7 +3105,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2018_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 }
               ]
@@ -3122,7 +3122,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2017_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 },
                 {
@@ -3132,7 +3132,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2017_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 }
               ]
@@ -3149,7 +3149,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2016_05/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 },
                 {
@@ -3159,7 +3159,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2016_05/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
-                  "maxZoom": 12,
+                  "maxZoom": 14,
                   "maxNativeZoom": 2
                 }
               ]
