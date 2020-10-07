@@ -3214,7 +3214,7 @@
         },
         {
           "type": "LayerGroup",
-          "title": "ベクトルタイル提供実検",
+          "title": "ベクトルタイル提供実験",
 	      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/vector.png",          
           "toggleall": false,
           "html" : "<div class='layer_text'>ベクトルという形式で提供実験している情報を閲覧できます。</div>",
