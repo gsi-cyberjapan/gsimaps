@@ -48420,6 +48420,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
 
     var latlng = L.latLng(this._gpsInfo.lat, this._gpsInfo.lng);
     var directionIcon = this.ICONLIST[this._gpsInfo.directionKey];
+    
 
     if (!options) options = {};
     options.icon = L.icon({
@@ -48428,6 +48429,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
       iconAnchor: [10, 10]
     });
     this._loadJPEGImage(file);
+
 
 
     L.Marker.prototype.initialize.call(this, latlng, options);
@@ -48468,6 +48470,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
 
     }, this, reader);
     reader.readAsDataURL(file);
+
 
 
   },
@@ -48554,7 +48557,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
     html += '<tr><th>撮影位置</th><td>' +
       this._gpsInfo.lat + ",<br>" + this._gpsInfo.lng + '</td></tr>';
     html += '<tr><th>撮影向き</th><td>' +
-      (!this._gpsInfo.direction && this._gpsInfo.direction != 0 ? "不明" : this._gpsInfo.direction + "度") + '</td></tr>';
+      (!this._gpsInfo.direction || isNaN(this._gpsInfo.direction) ? "不明" : this._gpsInfo.direction + "度") + '</td></tr>';
 
     html += "</table>";
 
@@ -48589,9 +48592,6 @@ GSI.GeoJpegMarker = L.Marker.extend({
   },
 
   _getDirectionKey: function (direction) {
-    if (!direction && direction != 0) {
-      return "none";
-    }
     if (direction >= 337.5 && direction < 22.5) {
       return "n";
     } else if (direction >= 22.5 && direction < 67.5) {
@@ -48608,6 +48608,8 @@ GSI.GeoJpegMarker = L.Marker.extend({
       return "w";
     } else if (direction >= 292.5 && direction < 337.5) {
       return "nw";
+    } else{
+      return "none";
     }
   }
 
