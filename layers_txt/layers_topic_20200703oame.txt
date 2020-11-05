@@ -4,7 +4,6 @@
               "type": "LayerGroup",
               "title": "令和2年7月豪雨",
               "iconUrl": "./image/system/folder_new.png",
-              "open": false,
               "toggleall": false,
               "src": "./layers_20200703oame.txt"
             }
