@@ -2648,7 +2648,8 @@ GSI.Draw.Polygon = L.Draw.Polygon.extend({
     if (!L.LineUtil.isFlat(latlngs)) latlngs = latlngs[0];
 
     this.fire('measurechange', {
-      distance: this._area2MeasurementString(L.GeometryUtil.geodesicArea(latlngs))
+      distance: this._area2MeasurementString(this._area)
+      //distance: this._area2MeasurementString(L.GeometryUtil.geodesicArea(latlngs))
     });
   },
 
