@@ -4,12 +4,11 @@
 
 <head>
 
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、国土地理院が捉えた日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
+  <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
   
   <!-- PWA android-->
   <link rel="manifest" href="manifest.json">
@@ -81,6 +80,9 @@
   
   <script type="text/javascript" src="js/muni.js"></script>
   <script type="text/javascript" src="js/jiki.js"></script>
+  <script type="text/javascript">
+    GSI.GLOBALS.isCreditShow = true;
+  </script>
   
   <noscript>
     <div class="noscript">
@@ -106,18 +108,18 @@
       <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
     </form>
 
-    <!--div class="help">
+    <!-- <div class="help">
       <a id="title_vectorlogo" href="https://maps.gsi.go.jp/vector/" target="_blank"></a>
       <a id="title_bookmark" href="javascript:void(0);"></a>
       <a id="title_help" onclick="HelpButton()">?</a>
-    </div-->
+    </div> -->
     <div class="gsi-header-tools"></div>
   </div>
 
   <div id="topmessage"></div>
   <div id="map"></div>
 
-  <!--div class="gsi_footer gsi_footer_template">
+  <!-- <div class="gsi_footer gsi_footer_template">
     <a class="btn" href="javascript:void(0);"></a>
     <div class="item_frame item_start"><span class="heading">住所:</span><span class="address">----</span><span class="mini_comment">（付近の住所。正確な所属を示すとは限らない。）</span></div>
     <div class="item_frame latlng"><span class="latlng_60">----</span></div>
@@ -128,10 +130,10 @@
     <div class="item_frame" style="display:none;"><span class="heading">全国最新写真(シームレス)撮影期間：</span><span class="seamlessinfo">----</span></div>
 
     <a href="https://maps.gsi.go.jp/help/howtouse.html#h2-3" class="normalbutton footer_description_btn" target="_blank">表示値の説明</a>
-  </div-->
+  </div> -->
 
 
-  <div id="help">
+  <!-- <div id="help">
 
     <div class="help_content" style="text-align:center" title="地理院地図とは">
       <h1 style="font-size:120%;line-height: 130%;">地形図、写真、標高、地形分類、災害情報など、日本の国土の様子を発信しているウェブ地図です。</h1>
@@ -249,9 +251,7 @@
       <a href="http://www.gsi.go.jp/johofukyu/johofukyu40004.html" target="_blank"><img src="./image/help/help_smp_b.jpg"
           style="width:100%;max-width:400px"></a>
     </div>
-  </div>
-
-
+  </div> -->
 
 </body>
 
