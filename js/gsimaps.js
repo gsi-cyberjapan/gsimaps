@@ -3345,6 +3345,18 @@ GSI.Utils.sendSelectedLayer = function (id) {
     cache: false,
   });
 };
+
+GSI.Utils.sendSelectedFunction = function (function_id) {
+  $.ajax({
+    type: "GET",
+    data: function_id,
+    url: "./js/anchor_func.js",
+    datatype: "text",
+    cache: false,
+  });
+};
+
+
 GSI.Utils.get2ndMesh = function (lat, lon) {
 
   //1st mesh code
@@ -11949,6 +11961,7 @@ GSI.PagePrinter = L.Evented.extend({
     return CONFIG.PAPERSIZE[size];
   },
   print: function () {
+    GSI.Utils.sendSelectedFunction("print");
     window.print();
   }
 });
@@ -21608,15 +21621,25 @@ GSI.AddrLoader = L.Evented.extend({
 
       var properties = hitFeature.properties;
       try {
-        var code = parseInt(properties["行政コード"]);
-        var muni = GSI.MUNI_ARRAY["" + code];
-        if (muni) {
-
-          var muniParts = muni.split(",");
-          if (muniParts.length >= 2) title += muniParts[1].trim();
-          if (muniParts.length >= 4) title += muniParts[3].trim();
-          title += (properties["LV01"] ? properties["LV01"] : "")
+        title = properties["pref"] + properties["muni"];
+        if (properties["LV01"]){
+          title += properties["LV01"];
         }
+
+        //読み
+        titleYomi = properties["pref_kana"] + properties["muni_kana"];
+        if (properties["Lv01_kana"]){
+          titleYomi += properties["Lv01_kana"];
+        }
+        
+        // var code = parseInt(properties["行政コード"]);
+        // var muni = GSI.MUNI_ARRAY["" + code];
+        // if (muni) {
+        //   var muniParts = muni.split(",");
+        //   if (muniParts.length >= 2) title += muniParts[1].trim();
+        //   if (muniParts.length >= 4) title += muniParts[3].trim();
+        //   title += (properties["LV01"] ? properties["LV01"] : "")
+        // }
       } catch (ex) {
         console.log(ex);
       }
@@ -29381,6 +29404,7 @@ GSI.Footer = L.Evented.extend({
 
     this._parentContainer = parentContainer;
 
+    this._dispAddrMode = GSI.Footer.DISP_ADDR_KANJI;
   },
 
 
@@ -29750,20 +29774,42 @@ GSI.Footer = L.Evented.extend({
     this._setDisplayMode(dispMode);
   },
 
+  _onLargeModeAddrChangeClick: function(){
+    if (this._dispAddrMode == GSI.Footer.DISP_ADDR_KANJI){
+      this._dispAddrMode = GSI.Footer.DISP_ADDR_YOMI;
+      this._addrChangeReading.html("漢");
+    }
+    else{
+      this._dispAddrMode = GSI.Footer.DISP_ADDR_KANJI;
+      this._addrChangeReading.html("あ");
+    }
+    var map = this._mapManager.getMap();
+    if (!map) return;
+
+    GSI.Utils.sendSelectedFunction("addr-change");
+
+    var center = map.getCenter().wrap();
+    var z = map.getZoom();
+    this._loadAddr(center, z);
+  },
+
   // 住所　表示用コンテナ作成
   _createAddrContainer: function (parentContainer) {
     var container = $("<div>").addClass("item-frame");
-    var heading = $("<span>").addClass("heading").html("住所:");
+    this._addrChangeReading = $("<span>").addClass("addr-ToActive").html("あ");
     this._addrView = $("<span>").addClass("address").html("---");
+    var nbsp2 = $("<span>").html("&nbsp;&nbsp;");
     var comment = $("<span>").addClass("mini-comment").html("（付近の住所。正確な所属を示すとは限らない。）");
 
+    this._addrView.on('click', L.bind(this._onLargeModeAddrChangeClick, this));
+    this._addrChangeReading.on('click', L.bind(this._onLargeModeAddrChangeClick, this));
 
-    container.append(heading).append(this._addrView).append(comment);
+    container.append(this._addrChangeReading).append(nbsp2).append(this._addrView).append(comment);
     parentContainer.append(container);
     return container;
   },
 
-  // 緯度軽度　表示用コンテナ作成
+  // 緯度経度　表示用コンテナ作成
   _createLatLngContainer: function (parentContainer) {
 
     var container = $("<div>").addClass("item-frame");
@@ -29934,6 +29980,26 @@ GSI.Footer = L.Evented.extend({
 
   },
 
+  _loadAddr: function(center, z){
+    if (!this._addrLoader) {
+      this._addrLoader = new GSI.AddrLoader();
+      this._addrLoader.on("load", L.bind(function (e) {
+        if (e.title == undefined) return;
+
+        if (this._dispAddrMode == GSI.Footer.DISP_ADDR_YOMI){
+        this._setAddressResult(e.titleYomi);
+        }
+        else{
+        this._setAddressResult(e.title);
+        }
+      }, this));
+    } else {
+      this._addrLoader.cancel();
+    }
+
+    this._addrLoader.load({ lat: center.lat, lng: center.lng, zoom: z });
+  },
+
   _execRefresh: function (center, zoom) {
     if (!center) {
 
@@ -29945,19 +30011,7 @@ GSI.Footer = L.Evented.extend({
     if (this._dispMode == GSI.Footer.DISP_CLOSE) return;
 
     if (this._dispMode == GSI.Footer.DISP_LARGE) {
-      if (!this._addrLoader) {
-        this._addrLoader = new GSI.AddrLoader();
-        this._addrLoader.on("load", L.bind(function (e) {
-          if (e.title == undefined) return;
-
-
-          this._setAddressResult(e.title);
-        }, this));
-      } else {
-        this._addrLoader.cancel();
-      }
-
-      this._addrLoader.load({ lat: center.lat, lng: center.lng, zoom: zoom });
+      this._loadAddr(center, zoom);
     }
 
     this._refreshSeamlessInfo(center);
@@ -30131,8 +30185,8 @@ GSI.Footer.DISP_LARGE = 2;
 GSI.Footer.DISP_MINI = 1;
 GSI.Footer.DISP_CLOSE = 0;
 
-
-
+GSI.Footer.DISP_ADDR_KANJI=0;
+GSI.Footer.DISP_ADDR_YOMI=1;
 
 
 /************************************************************************
@@ -48421,7 +48475,6 @@ GSI.GeoJpegMarker = L.Marker.extend({
 
     var latlng = L.latLng(this._gpsInfo.lat, this._gpsInfo.lng);
     var directionIcon = this.ICONLIST[this._gpsInfo.directionKey];
-    
 
     if (!options) options = {};
     options.icon = L.icon({
@@ -48431,13 +48484,9 @@ GSI.GeoJpegMarker = L.Marker.extend({
     });
     this._loadJPEGImage(file);
 
-
-
     L.Marker.prototype.initialize.call(this, latlng, options);
 
-
     //this.on("click", L.bind( this._onMarkerClick, this ));
-
   },
 
 
@@ -48471,7 +48520,6 @@ GSI.GeoJpegMarker = L.Marker.extend({
 
     }, this, reader);
     reader.readAsDataURL(file);
-
 
 
   },
@@ -48549,7 +48597,6 @@ GSI.GeoJpegMarker = L.Marker.extend({
   _createPopupContent: function (width, height) {
     var html = '<div class="gsi-jpeginfo-popup">';
 
-
     html += '<img style="' + (width > height ? "max-width:300px" : "max-height:300px") + ';" src="' + this._canvasImage.src + '">';
 
     html += "<table>";
@@ -48559,10 +48606,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
       this._gpsInfo.lat + ",<br>" + this._gpsInfo.lng + '</td></tr>';
     html += '<tr><th>撮影向き</th><td>' +
       (!this._gpsInfo.direction || isNaN(this._gpsInfo.direction) ? "不明" : this._gpsInfo.direction + "度") + '</td></tr>';
-
     html += "</table>";
-
-
 
     html += "</div>";
     return html;
@@ -48609,7 +48653,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
       return "w";
     } else if (direction >= 292.5 && direction < 337.5) {
       return "nw";
-    } else{
+    } else {
       return "none";
     }
   }
@@ -52821,6 +52865,21 @@ GSI.MenuBase = L.Evented.extend({
     }
 
     if ( this._activeChild ) this._activeChild.toggle();
+
+    if (target && target.options){
+      if (target.options.id && target.options.id != ""){
+        var usedid = target.options.id;
+        if (["jihokuline","houiline","toukyoken","othermap"].includes(usedid)){
+          if (this._gsimaps._onoffObjects[usedid]){
+            //非表示なら抜ける
+            if (this._gsimaps._onoffObjects[usedid].obj.options.visible == false){
+              return;
+            }
+          }
+          GSI.Utils.sendSelectedFunction(target.options.id);
+        }
+      }
+    }
   },
 
   _onMapMouseDown : function() {
@@ -54951,6 +55010,10 @@ GSI.GSIMaps = L.Evented.extend({
         this.openLink(evt.item.url, map);
 
         break;
+    }
+    if (evt.item.id != "help" && evt.item.id != "share" && evt.item.id != "print" && evt.item.id != "to-pc" && evt.item.id != "to-mobile" && evt.item.id != "reset"){
+      var usedid = evt.item.id;
+      GSI.Utils.sendSelectedFunction(usedid);
     }
   },
 
