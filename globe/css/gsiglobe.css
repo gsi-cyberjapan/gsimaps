@@ -4354,3 +4354,21 @@ input[type=search]{
 	border: 1px solid #442;
 	margin: 0px;
 }
+
+.addr-ToActive{
+	display:inline-block;
+	border-radius: 3px;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	cursor:pointer;
+	color:#eee;
+	font-weight: bold;
+	background-color: #2b7396;
+	border: 1px solid #555;
+}
+
+.addr-ToActive:hover{
+	background: rgb(51,204,204);
+	color:#111;
+}
+
