@@ -535,6 +535,12 @@ CONFIG.FUNCMENU = {
 	]
 };
 
+/*************
+ * 住所切替用
+ *************/
+CONFIG.DISP_ADDR_KANJI = 0;
+CONFIG.DISP_ADDR_YOMI = 1;
+
 /************************************************************************
  設定：文言
  ************************************************************************/
@@ -8096,6 +8102,7 @@ GLOBE.MAP = {
 	
 	isIE: GSI.Utils.Browser.ie,
 	
+	_dispAddrMode: 0,
 	create: function()
 	{
 		// URLまたは既定値から初期設定
@@ -11111,28 +11118,38 @@ GLOBE.MAP = {
 		var height = GLOBE.MAP.viewer.scene.camera.positionCartographic.height;
 		height = (isNaN(height) ? height : height * 1);
 
-		$.ajax({
-			url : CONFIG.SERVERAPI.GETADDR,
-			dataType : "json",
-			data: {
-				"lon" : lon,
-				"lat" : lat
-			},
-			success : function(data){
-				if (data.results){
-					var address = "";
-					var addObj = data.results;
-					var addressData = GSI.MUNI_ARRAY[parseInt(addObj.muniCd,10)+""];
-					if (addressData) {
-						addressData = addressData.split(",");
-						var muniNm = (addressData[1]+addressData[3]).replace("　","");
-					    address += muniNm;
-					}
-					if (addObj.lv01Nm) address += addObj.lv01Nm;
-				}
-				GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,address);
-			}
-		});
+		if (!this._addrLoader){
+			this._addrLoader = new GSI.AddrLoader();
+			this._addrLoader.on('load', MA.bind( function(evt){
+				GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,evt.title,evt.titleYomi);
+			}, this));
+		}
+		else{
+			this._addrLoader.cancel();
+		}
+		this._addrLoader.load({lat:lat, lng:lon});
+		// $.ajax({
+		// 	url : CONFIG.SERVERAPI.GETADDR,
+		// 	dataType : "json",
+		// 	data: {
+		// 		"lon" : lon,
+		// 		"lat" : lat
+		// 	},
+		// 	success : function(data){
+		// 		if (data.results){
+		// 			var address = "";
+		// 			var addObj = data.results;
+		// 			var addressData = GSI.MUNI_ARRAY[parseInt(addObj.muniCd,10)+""];
+		// 			if (addressData) {
+		// 				addressData = addressData.split(",");
+		// 				var muniNm = (addressData[1]+addressData[3]).replace("　","");
+		// 			    address += muniNm;
+		// 			}
+		// 			if (addObj.lv01Nm) address += addObj.lv01Nm;
+		// 		}
+		// 		GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,address);
+		// 	}
+		// });
 
 		GLOBE.MAP.clearPinLayers("FOOTER");
 		GLOBE.MAP.pindrop(lon, lat, "FOOTER");
@@ -11176,6 +11193,30 @@ GLOBE.MAP = {
 
 		GLOBE.DIALOG.FOOTER.show();
 	},
+	GetAddr: function (center, mode){
+		$.ajax({
+			url : CONFIG.SERVERAPI.GETADDR,
+			dataType : "json",
+			data: {
+				"lon" : center.x,
+				"lat" : center.y
+			},
+			success : function(data){
+				if (data.results){
+					var address = "";
+					var addObj = data.results;
+					var addressData = GSI.MUNI_ARRAY[parseInt(addObj.muniCd,10)+""];
+					if (addressData) {
+						addressData = addressData.split(",");
+						var muniNm = (addressData[1]+addressData[3]).replace("　","");
+					    address += muniNm;
+					}
+					if (addObj.lv01Nm) address += addObj.lv01Nm;
+				}
+				GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,address);
+			}
+		});
+	}
 	/*
 	edit310 ↓delete
 	execRefreshAlt : function (vDemAltTypeN,vDemAltTileX,vDemAltTileY)
@@ -16585,6 +16626,8 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
 	defaultRight: '10px',
 	defaultBottom:'10px',
 	resizable: false,
+	addrKanji:'',
+	addrYomi:'',
 	create: function()
 	{
 		this.createDialog();
@@ -16597,29 +16640,51 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
 				'background': '#333',
 				'opacity': '.90'
 			})
+		this._dispAddrMode = GLOBE.MAP._dispAddrMode;
 	},
 	
-	_initializeContent: function(lon,lat,height,address)
+	_initializeContent: function(lon,lat,height,addressK,addressY)
 	{
 		lon = (isNaN(lon) ? lon : lon * 1);
 		lat = (isNaN(lat) ? lat : lat * 1);
 		height = (isNaN(height) ? height : height * 1);
 		
-    var ellipsoid = GLOBE.MAP.viewer.scene.globe.ellipsoid;
+    	var ellipsoid = GLOBE.MAP.viewer.scene.globe.ellipsoid;
            
 			this.frame = $('<div></div>');
+			this.addrKanji = '---';
+			this.addrYomi = '---';
 
-			if (!address) {address="---";}
+			if (addressK){
+				this.addrKanji = addressK;
+			}
+			if (addressY){
+				this.addrYomi = addressY;
+			}
 
-			this.label1 = $('<div><span style="color:#ccc;">住所：</span>　'+address+'</div>')
-				.appendTo(this.frame);
-			this.label1 = $('<div>　　　　(付近の住所。正確な所属を示すとは限らない)</div>')
+
+			if (this._dispAddrMode == CONFIG.DISP_ADDR_KANJI){
+				this._addr = $('<span style="color:#ccc;">' + this.addrKanji + '</span>');
+				this._addrChangeReading = $("<span>").addClass("addr-ToActive").html("あ");
+			}
+			else{
+				this._addr = $('<span style="color:#ccc;">' + this.addrYomi + '</span>');
+				this._addrChangeReading = $("<span>").addClass("addr-ToActive").html("漢");
+			}
+			this._addrChangeReading.appendTo(this.frame);
+			this._addrChangeReading.on('click', MA.bind(this._onAddrChangeClick, this));
+
+			//this._addr = $('<div><span style="color:#ccc;">住所：</span>　'+address+'</div>');
+			this._addr.appendTo(this.frame);
+			this._addr.on('click', MA.bind(this._onAddrChangeClick, this));
+
+			this._miniComm = $('<div>　　　　(付近の住所。正確な所属を示すとは限らない)</div>')
   			.css({
 				'color': '#ccc',
 				'font-size': '7.5pt'
-			})
+			});
 
-				.appendTo(this.frame);
+			this._miniComm.appendTo(this.frame);
 
 		var center = { lat : lat, lng : lon};
 
@@ -16660,7 +16725,7 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
 			this.outPutHeight.find("#DemHeight").html(GLOBE.MAP.outPutHeight);
 			this._getDemHeightCouter = 0;
 		} else {
-			console.log("reset");
+			//console.log("reset");
 			if ( this.outPutHeight) this.outPutHeight.find("#DemHeight").html("---");
 		}
 	},
@@ -16676,6 +16741,21 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
 	onBeforeClose: function()
 	{
 		GLOBE.MAP.clearPinLayers("FOOTER");
+	},
+
+	_onAddrChangeClick: function(){
+		if (this._dispAddrMode == CONFIG.DISP_ADDR_KANJI){
+		  this._dispAddrMode = CONFIG.DISP_ADDR_YOMI;
+		  this._addrChangeReading.html("漢");
+		  this._addr.html(this.addrYomi);
+		}
+		else{
+		  this._dispAddrMode = CONFIG.DISP_ADDR_KANJI;
+		  this._addrChangeReading.html("あ");
+		  this._addr.html(this.addrKanji);
+		}
+		// var map = this._mapManager.getMap();
+		// if (!map) return;	
 	}
 });
 
@@ -24595,4 +24675,179 @@ GLOBE.MultiLayer = MA.Class.extend( {
 
 
 } );
+
+/************************************************************************
+ GSI.AddrLoader
+************************************************************************/
+GSI.AddrLoader = MA.Class.extend({
+	includes: MA.Mixin.Events,
+
+
+	initialize: function (map, options) {
+	  this._url = 'https://cyberjapandata.gsi.go.jp/xyz/lv01_plg/14/{x}/{y}.geojson';
+	},
+  
+	cancel: function () {
+	  if (this._request) {
+		this._request.abort();
+		this._request = null;
+	  }
+	},
+  
+	destroy: function () {
+	  this.clearEvents();
+	  this.cancel();
+	},
+  
+	load: function (pos) {
+	  this.cancel();
+  
+	  var tileInfo = this._getTileInfo(pos.lat, pos.lng, 14);
+  
+	  var url = this._url;
+	  url = url.replace("{x}", tileInfo.x).replace("{y}", tileInfo.y)
+  
+  
+	  $.ajax({
+		type: "GET",
+		dataType: "JSON",
+		url: url
+	  })
+		.done(MA.bind(this._onLoad, this, url, pos, tileInfo))
+		.fail(MA.bind(this._onLoadError, this, pos, tileInfo));
+  
+  
+	},
+  
+	_onLoad: function (url, pos, tileInfo, e) {
+	  this._request = null;
+	  var data = e;
+  
+	  var hitFeature = null;
+	  if (data && data.features) {
+		var targetPos = [pos.lng, pos.lat];
+		for (var i = 0; i < data.features.length; i++) {
+		  var feature = data.features[i];
+		  if (!feature.geometry || !feature.geometry.coordinates) continue;
+  
+		  var coords = feature.geometry.coordinates;
+		  if (feature.geometry.type != "MultiPolygon") {
+			coords = [coords];
+		  }
+  
+		  for (var j = 0; j < coords.length; j++) {
+			var ret = null;
+  
+			ret = this._isPointInPolygon(targetPos, coords[j][0]);
+			if (ret) {
+			  for (var k = 1; k < coords[j].length; k++) {
+				// くりぬきポリゴン内なら×
+				var ret2 = this._isPointInPolygon(targetPos, coords[j][k]);
+				if (ret2) {
+				  ret = false;
+				  break;
+				}
+			  }
+			  if (ret) {
+				hitFeature = feature;
+				break;
+			  }
+			}
+		  }
+		  if (hitFeature) break;
+		}
+  
+  
+	  }
+  
+	  var title = "";
+	  var titleYomi = null;
+	  var titleEng = null;
+	  if (hitFeature) {
+  
+		var properties = hitFeature.properties;
+		try {
+			title = properties["pref"] + properties["muni"];
+			if (properties["LV01"]){
+			  title += properties["LV01"];
+			}
+  
+			//読み
+			titleYomi = properties["pref_kana"] + properties["muni_kana"];
+			if (properties["Lv01_kana"]){
+			  titleYomi += properties["Lv01_kana"];
+			}
+		  
+		  // var code = parseInt(properties["行政コード"]);
+		  // var muni = GSI.MUNI_ARRAY["" + code];
+		  // if (muni) {
+  
+		  //   var muniParts = muni.split(",");
+		  //   if (muniParts.length >= 2) title += muniParts[1].trim();
+		  //   if (muniParts.length >= 4) title += muniParts[3].trim();
+		  //   title += (properties["LV01"] ? properties["LV01"] : "")
+  
+		  //   //読み
+		  //   titleYomi = properties["pref_kana"] + properties["muni_kana"] + properties["Lv01_kana"];
+		  // }
+		} catch (ex) {
+		  console.log(ex);
+		}
+  
+	  }
+	  this.fire("load", { "feature": hitFeature, "title": title, "titleYomi": titleYomi, "titleEng": titleEng });
+	},
+  
+	_isPointInPolygon: function (point, polygon) {
+	  var wn = 0;
+  
+	  for (var i = 0; i < polygon.length - 1; i++) {
+		if ((polygon[i][1] <= point[1]) && (polygon[i + 1][1] > point[1])) {
+		  var vt = (point[1] - polygon[i][1]) / (polygon[i + 1][1] - polygon[i][1]);
+		  if (point[0] < (polygon[i][0] + (vt * (polygon[i + 1][0] - polygon[i][0])))) {
+  
+			++wn;
+  
+		  }
+		}
+		else if ((polygon[i][1] > point[1]) && (polygon[i + 1][1] <= point[1])) {
+		  var vt = (point[1] - polygon[i][1]) / (polygon[i + 1][1] - polygon[i][1]);
+		  if (point[0] < (polygon[i][0] + (vt * (polygon[i + 1][0] - polygon[i][0])))) {
+  
+			--wn;
+  
+		  }
+		}
+	  }
+	  return (wn != 0);
+  
+	},
+  
+	_onLoadError: function (tileInfo, e) {
+	  this.fire("load", {});
+	},
+  
+	_getTileInfo: function (lat, lng, z) {
+	  var lng_rad = lng * Math.PI / 180;
+	  var R = 128 / Math.PI;
+	  var worldCoordX = R * (lng_rad + Math.PI);
+	  var pixelCoordX = worldCoordX * Math.pow(2, z);
+	  var tileCoordX = Math.floor(pixelCoordX / 256);
+  
+	  var lat_rad = lat * Math.PI / 180;
+	  var worldCoordY = - R / 2 * Math.log((1 + Math.sin(lat_rad)) / (1 - Math.sin(lat_rad))) + 128;
+	  var pixelCoordY = worldCoordY * Math.pow(2, z);
+	  var tileCoordY = Math.floor(pixelCoordY / 256);
+  
+	  return {
+		x: tileCoordX,
+		y: tileCoordY,
+		pX: Math.floor(pixelCoordX - tileCoordX * 256),
+		pY: Math.floor(pixelCoordY - tileCoordY * 256)
+	  };
+  
+	}
+  
+  });
+  
 
