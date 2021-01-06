@@ -1224,6 +1224,13 @@
               "entries": [
                 {
                   "type": "Layer",
+                  "id": "toz202011",
+                  "title": "11月更新",
+                  "url": "https://maps.gsi.go.jp/xyz/toz202011/{z}/{x}/{y}.geojson",
+                  "cocotile": false
+                },
+                {
+                  "type": "Layer",
                   "id": "toz202010",
                   "title": "10月更新",
                   "url": "https://maps.gsi.go.jp/xyz/toz202010/{z}/{x}/{y}.geojson",
