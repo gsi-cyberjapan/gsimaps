@@ -21993,7 +21993,7 @@ GSI.MapLayerList = L.Evented.extend({
         if (!info._visibleInfo._isHidden) this.map.addLayer(info._visibleInfo.layer);
 
         this.list.unshift(info);
-        this._initZIndexOffset(this.list, 10000);
+        this._initZIndex(this.list);
 
 
       }
