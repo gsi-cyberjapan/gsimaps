@@ -647,18 +647,45 @@
                 {
                   "type": "Layer",
                   "id": "_southpole_2500_2",
-                  "title": "1:2,500　南極地形図",
+                  "title": "1:2,500　南極地形図（楕円体高版）",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_2500_2/{z}/{x}/{y}.png",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
+                  "html": ""
                 },
                 {
                   "type": "Layer",
                   "id": "_southpole_2500_spec_2",
-                  "title": "1:2,500　南極地形図整備範囲",
+                  "title": "1:2,500　南極地形図（楕円体高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 13
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:2,500　南極地形図（標高版）",
+              "id": "southpole_2500",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500_elev.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500",
+                  "title": "1:2,500　南極地形図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_spec",
+                  "title": "1:2,500　南極地形図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 13
                 }
@@ -677,7 +704,7 @@
                   "title": "1:2,500　南極写真図",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_2500_ort_2/{z}/{x}/{y}.png",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
+                  "html": ""
                 },
                 {
                   "type": "Layer",
@@ -685,7 +712,7 @@
                   "title": "1:2,500　南極写真図整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
+                  "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 13
                 }
@@ -701,18 +728,18 @@
                 {
                   "type": "Layer",
                   "id": "_southpole_25000",
-                  "title": "1:25,000　南極地形図",
+                  "title": "1:25,000　南極地形図（標高版）",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_25000/{z}/{x}/{y}.png",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/25000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
+                  "html": ""
                 },
                 {
                   "type": "Layer",
                   "id": "_southpole_25000_spec",
-                  "title": "1:25,000　南極地形図整備範囲",
+                  "title": "1:25,000　南極地形図（標高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_25000_spec/{z}/{x}/{y}.geojson",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/25000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
+                  "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 18
                 }
@@ -728,18 +755,18 @@
                 {
                   "type": "Layer",
                   "id": "_southpole_50000",
-                  "title": "1:50,000　南極地形図",
+                  "title": "1:50,000　南極地形図（楕円体高版）",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_50000/{z}/{x}/{y}.png",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
+                  "html": ""
                 },
                 {
                   "type": "Layer",
                   "id": "_southpole_50000_spec",
-                  "title": "1:50,000　南極地形図整備範囲",
+                  "title": "1:50,000　南極地形図（楕円体高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec/{z}/{x}/{y}.geojson",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
+                  "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 18
                 }
@@ -755,17 +782,17 @@
                 {
                   "type": "Layer",
                   "id": "_southpole_satellite_250000",
-                  "title": "1:250,000　南極衛星画像図",
+                  "title": "1:250,000　南極衛星画像図（楕円体高版）",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000/{z}/{x}/{y}.png",
                   "cocotile": false,
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>"
+                  "html": ""
                 },
                 {
                   "type": "Layer",
                   "id": "_southpole_satellite_250000_spec",
-                  "title": "1:250,000　南極衛星画像図整備範囲",
+                  "title": "1:250,000　南極衛星画像図（楕円体高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/{z}/{x}/{y}.geojson",
-                  "html": "<a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000.png\">凡例を表示</a><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">解説</a>",
+                  "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 18
                 }
