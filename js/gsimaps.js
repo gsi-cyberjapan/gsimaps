@@ -286,6 +286,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_hakone": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_hakone/vlcd_hakone.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_hakone/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_izuo": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_izuo/vlcd_izuo.csv",
     "layer": {
