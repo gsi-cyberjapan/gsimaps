@@ -1111,6 +1111,27 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "2021年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202102",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202102/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202101",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202101/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2020年迅速更新情報",
                   "toggleall": false,
                   "entries": [
@@ -1308,6 +1329,13 @@
                   "title": "2020年登山道更新情報",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202012",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202012/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
                     {
                       "type": "Layer",
                       "id": "toz202011",
