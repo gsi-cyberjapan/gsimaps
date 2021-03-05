@@ -15445,8 +15445,9 @@ GSI.MapLayerList = MA.Class.extend( {
     "　　赤線が引かれた区間の道路の敷地の区域" + "<br>"+
     "　(2) 赤線が鉄道線路上にある場合" + "<br>" +
     "　　赤線が引かれた区間の鉄道線路の敷地の区域" + "<br>"+
-    "　(3) 赤線が海上にある場合" + "<br>"+
+    "　(3) 赤線が水面にある場合" + "<br>"+
     "　　赤線から左右40メートルにわたる区域" + "<br>"+
+    "　（40メートル以内に岸がある場合は岸までの区域）" + "<br>"+
     "　(4) その他の場合"+ "<br>"+
     "　　赤線から左右1メートルにわたる区域"+ "<br>"+
     "・詳細については、<a href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>", 
@@ -15474,8 +15475,9 @@ GSI.MapLayerList = MA.Class.extend( {
     "　The site of the road in the section with red line." + "<br>" +
     "(ii)If red lines are on the railway track;" + "<br>" + 
     "　The site of the railway track in the section with red line." + "<br>" + 
-    "(iii)If red lines are on the ocean;" + "<br>" + 
+    "(iii)If red lines are on waters;" + "<br>" + 
     "　Areas within 40 meters each leftward and rightward from the red line." + "<br>" + 
+    "　(If land is within 40 meters, Areas to the land.)" + "<br>" + 
     "(iv)In other cases;" + "<br>" + 
     "　Areas within 1 meters each leftward and rightward from the red line." + "<br>" + 
     "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.", 
