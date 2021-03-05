@@ -1,0 +1,78 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "東京2020オリンピック聖火リレー等における小型無人機等の飛行禁止区域",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/uav.png",
+      "toggleall": false,
+      "html": "<div class='layer_text'></div><img src='https://maps.gsi.go.jp/legend/legend_tokyo2020.png' alt='' ><div>・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。<br>・地図は、仕様上、必ずしも道路や建物等全てを取得・表現しているとは限りません。また、地図及び飛行禁止区域はその性質上、誤差を有しています。これらの点を踏まえ、飛行禁止区域等の境界付近での厳密な区域の判定が必要な場合には十分にご注意ください。<br>・赤色の面は、上空での飛行が禁止される対象大会関係施設の区域を表します。<br>・青色の線で囲まれた面は、上空での飛行が禁止される対象大会関係施設周辺地域を表します。<br>・赤色の線は、上空での飛行が禁止される聖火リレールートを表します。赤色の線が次の(1)から(4)までの場合は、それぞれ(1)から(4)に定める区域で飛行が禁止されます。<br>　(1) 赤線が道路法（昭和27年法律第180号）第２条第１項に規定する「道路」上にある場合<br>　　赤線が引かれた区間の道路の敷地の区域<br>　(2) 赤線が鉄道線路上にある場合<br>　　赤線が引かれた区間の鉄道線路の敷地の区域<br>　(3) 赤線が水面にある場合<br>　　赤線から左右40メートルにわたる区域<br>　（40メートル以内に岸がある場合は岸までの区域）<br>　(4) その他の場合<br>　　赤線から左右1メートルにわたる区域<br>・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。</div>",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "tokyo20201",
+          "title": "3月25日～4月24日",
+          "url": "https://maps.gsi.go.jp/xyz/seika1/{z}/{x}/{y}.geojson",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/uav.png",
+          "minZoom": 8,
+          "maxNativeZoom": 8,
+          "maxZoom": 18,
+          "html": "<div class='layer_text'></div><img src='https://maps.gsi.go.jp/legend/legend_tokyo2020.png' alt='' ><div>・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。<br>・地図は、仕様上、必ずしも道路や建物等全てを取得・表現しているとは限りません。また、地図及び飛行禁止区域はその性質上、誤差を有しています。これらの点を踏まえ、飛行禁止区域等の境界付近での厳密な区域の判定が必要な場合には十分にご注意ください。<br>・赤色の面は、上空での飛行が禁止される対象大会関係施設の区域を表します。<br>・青色の線で囲まれた面は、上空での飛行が禁止される対象大会関係施設周辺地域を表します。<br>・赤色の線は、上空での飛行が禁止される聖火リレールートを表します。赤色の線が次の(1)から(4)までの場合は、それぞれ(1)から(4)に定める区域で飛行が禁止されます。<br>　(1) 赤線が道路法（昭和27年法律第180号）第２条第１項に規定する「道路」上にある場合<br>　　赤線が引かれた区間の道路の敷地の区域<br>　(2) 赤線が鉄道線路上にある場合<br>　　赤線が引かれた区間の鉄道線路の敷地の区域<br>　(3) 赤線が水面にある場合<br>　　赤線から左右40メートルにわたる区域<br>　（40メートル以内に岸がある場合は岸までの区域）<br>　(4) その他の場合<br>　　赤線から左右1メートルにわたる区域<br>・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "Flight prohibition areas of UAS/Drones, in Tokyo 2020 Games-related events such as Torch Relay",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/uav.png",
+      "toggleall": false,
+      "html": "<div class='layer_text'></div><img src='https://maps.gsi.go.jp/legend/legend_tokyo2020_e.png' alt='' ><div>※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect.<br>This data shows prohibited areas for flying Unmanned Aerial System/drones created by Japan Sports Agency.<br>Some roads or buildings are omitted from the base map due to our map specifications.<br>Please be aware of positional errors inherent in the map, especially in determining accurate boundary of the prohibited area.<br>Our basemap in English is less frequently updated than the Japanese version.<br>Please refer to the Japanese version for the latest update. <br>Red areas: Areas of designated facilities where flying UAS/drones is prohibited.<br>Areas surrounded by blue lines: Surrounding areas where flying UAS/drones is prohibited.<br>Red lines: Torch Relay route where flying UAS/drones is prohibited. If red lines are on the areas prescribed following (i)~(iv), the flight is prohibited over the areas in each article prescribed following (i)~(iv):<br>(i) If red lines are on the ‘road’(a road as prescribed in Article 2, paragraph (1) of the Road Act (Act No. 180 of 1952));<br>　The site of the road in the section with red line.<br>(ii)If red lines are on the railway track;<br>　The site of the railway track in the section with red line.<br>(iii)If red lines are on waters;<br>　Areas within 40 meters each leftward and rightward from the red line.<br>　(If land is within 40 meters, Areas to the land.)<br>(iv)In other cases;<br>　Areas within 1 meters each leftward and rightward from the red line.<br>For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.</div>",
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "from March 25 to April 24",
+          "id": "tokyo20201e",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/uav.png",
+          "html": "<div class='layer_text'></div><img src='https://maps.gsi.go.jp/legend/legend_tokyo2020_e.png' alt='' ><div>※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect.<br>This data shows prohibited areas for flying Unmanned Aerial System/drones created by Japan Sports Agency.<br>Some roads or buildings are omitted from the base map due to our map specifications.<br>Please be aware of positional errors inherent in the map, especially in determining accurate boundary of the prohibited area.<br>Our basemap in English is less frequently updated than the Japanese version.<br>Please refer to the Japanese version for the latest update. <br>Red areas: Areas of designated facilities where flying UAS/drones is prohibited.<br>Areas surrounded by blue lines: Surrounding areas where flying UAS/drones is prohibited.<br>Red lines: Torch Relay route where flying UAS/drones is prohibited. If red lines are on the areas prescribed following (i)~(iv), the flight is prohibited over the areas in each article prescribed following (i)~(iv):<br>(i) If red lines are on the ‘road’(a road as prescribed in Article 2, paragraph (1) of the Road Act (Act No. 180 of 1952));<br>　The site of the road in the section with red line.<br>(ii)If red lines are on the railway track;<br>　The site of the railway track in the section with red line.<br>(iii)If red lines are on waters;<br>　Areas within 40 meters each leftward and rightward from the red line.<br>　(If land is within 40 meters, Areas to the land.)<br>(iv)In other cases;<br>　Areas within 1 meters each leftward and rightward from the red line.<br>For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.</div>",
+          "toggleall": true,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "pale2",
+              "title": "淡色地図",
+              "url": "https://maps.gsi.go.jp/xyz/pale2/{z}/{x}/{y}.png?_=20191006a",
+              "cocotile": true,
+              "html": "",
+              "minZoom": 5,
+              "maxNativeZoom": 17,
+              "maxZoom": 18,
+              "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale",
+              "errorTileUrl": "./image/map/no-data-pale.png"
+            },
+            {
+              "type": "Layer",
+              "id": "chuki_eng",
+              "title": "英語注記",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_multil/{z}/{x}/{y}.geojson",
+              "minZoom": 5,
+              "maxNativeZoom": 17,
+              "maxZoom": 18,
+              "styleurl": "./tokyojs/style_eng.18.js",
+              "html": ""
+            },
+            {
+              "type": "Layer",
+              "id": "tokyo20201e",
+              "title": "聖火リレー等における小型無人機等の飛行禁止区域",
+              "url": "https://maps.gsi.go.jp/xyz/seika1_e/{z}/{x}/{y}.geojson",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/uav.png",
+              "minZoom": 8,
+              "maxNativeZoom": 8,
+              "maxZoom": 18,
+              "html": "<div class='layer_text'></div>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
