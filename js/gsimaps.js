@@ -373,6 +373,14 @@ CONFIG.HANREILIST = {
       "minZoom": 10,
       "maxZoom": 16
     }
+  },
+  "swale": {
+    "url": "https://maps.gsi.go.jp/xyz/swale/swale.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+      "minZoom": 5,
+      "maxZoom": 16
+    }
   }
 };
 
@@ -484,6 +492,7 @@ CONFIG.CONFIRM_LAYERS = {
 CONFIG.BLENDLAYERS = {
   "relief": true,
   "relief_free": true,
+  "swale": true,
   "gsjGeomap_seamless200k_v2": true
 };
 
