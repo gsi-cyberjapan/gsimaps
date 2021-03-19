@@ -473,7 +473,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 17,
-          "html": "<div class='layer_text'><p>1961年～1969年に撮影された空中写真です。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
+          "html": "<div class='layer_text'><p>1961年～1969年に撮影された空中写真です。<br>撮影時期の違いにより、構造物等の不連続等が発生している箇所があります。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
         },
         {
           "type": "Layer",
