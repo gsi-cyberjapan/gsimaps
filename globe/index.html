@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript; charset=UTF-8">
+
+<title>地理院地図Globe トップページ</title>
+
+<script type="text/javascript" src="./js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/jquery.cookie.js"></script>
+<script type="text/javascript" src="./js/totop.js"></script>
+<link rel="stylesheet" href="./css/change_font_size.css" type="text/css">
+<link rel="stylesheet" href="./css/common.css" type="text/css">
+</head>
+
+
+<body>
+
+<!-- ヘッダ　開始 -->
+<noscript><p class="position_center">国土地理院ホームページではJavaScriptを使用しています。すべての機能をご利用いただくにはJavascriptを有効にしてください。</p></noscript>
+<div id="headerArea">
+<div class="logo" id="top">
+	<a href="https://www.gsi.go.jp/"><img src="./css/css_image/gsi_logo.gif" alt="国土交通省 国土地理院" width="530" height="85"></a>
+</div>
+
+<div class="header_navi">
+<div class="header_navi01">
+	<div class="header_skip">
+		<a href="#container">本文へ</a>
+	</div>
+	<div class="header_font">
+		<p>文字サイズ変更</p>
+		<ul>
+			<li id="fontDefault"><img src="./css/css_image/hyojun.png" alt="標準"></li>
+			<li id="fontLarge"><img src="./css/css_image/kakudai.png" alt="拡大"></li>
+		</ul>
+	</div>
+	<div class="header_language">
+		<a href="https://www.gsi.go.jp/ENGLISH/index.html">English</a>
+	</div>
+</div>
+
+<div class="header_navi02">
+	<div class="header_search">
+		<div id='cse-search-form' style='width: 100%;'>Loading</div>
+		<script src='//www.google.com/jsapi' type='text/javascript'></script>
+		<script type="text/javascript">
+		google.load('search', '1', {language : 'ja', "callback" : onLoadedGsearch});
+		function onLoadedGsearch() {
+			setTimeout("gsearchCallback()", 250);
+		}
+		function gsearchCallback() {
+			var customSearchOptions = {};
+			var customSearchControl = new google.search.CustomSearchControl('013997707106678309048:u_4aigwwq7c', customSearchOptions);
+			customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+			var options = new google.search.DrawOptions();
+			options.enableSearchboxOnly("https://www.gsi.go.jp/search.html");
+			customSearchControl.draw('cse-search-form', options);
+		};
+		</script>
+	</div>
+	<div class="header_sitemap">
+		<a href="https://www.gsi.go.jp/SITEMAP-index.html">サイトマップ</a>
+	</div>
+</div>
+
+</div>
+</div>
+<!-- ヘッダ　終了 -->
+
+<!-- メニュー　開始 -->
+<div id="menuArea">
+	<table summary=""><tr>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/index.html" class="g_menu">地理院ホーム</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/syoukai.html" class="g_menu">国土地理院の紹介</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/kizyunten.html" class="g_menu">基準点・測地観測データ</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/tizu-kutyu.html" class="g_menu">地図・空中写真</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/bousai.html" class="g_menu">防災関連</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/gis.html" class="g_menu">GIS・国土の情報</a></p></td>
+		<td><p class="navi1"><a href="https://www.gsi.go.jp/sinsei.html" class="g_menu">申請・承認</a></p></td>
+	</tr></table>
+</div>
+<!-- メニュー　終了 -->
+
+<!-- パンくずリスト　開始 -->
+<div id="pankuzu">
+	<table summary=""><tr>
+		<td><a href="https://www.gsi.go.jp/index.html">地理院ホーム</a>&nbsp;&gt;&nbsp;
+		<a href="https://geolib.gsi.go.jp/">地理空間情報ライブラリー</a>&nbsp;&gt;&nbsp;
+		<a href="https://maps.gsi.go.jp/3d/index.html">立体地図（地理院地図3D・触地図）</a>&nbsp;&gt;&nbsp;
+		地理院地図Globe トップページ</td>
+	</tr></table>
+</div>
+<!-- パンくずリスト　終了 -->
+
+<!-- コンテナ　開始-->
+<div id="container">
+<div class="h1_titleBox">
+	<h1 class="h1_normal"><span>地理院地図Globe トップページ</span></h1>
+</div>
+<div class="base_txt">
+
+	<p>「誰でも・簡単に・どこでも」地理院地図を地球儀のように、シームレスに3次元でみることができます。</p>
+	<p>3次元表示により、地形や地表の状況を直感的に理解しやすく、社会資本の管理や防災業務をはじめ、学校教育等、様々な場面で活用されることが期待されます。</p>
+
+	<br>
+
+	<div style="display:table; margin:10px auto 10px auto;">
+		<ul style="display:flex; list-style:none;">
+			<li style="text-align:center">
+				<a href="https://maps.gsi.go.jp/globe/index_globe.html"><img src="./images/logo3.png" width="400" height="184" alt="地理院地図Globe"></a>
+			</li>
+			<li style="margin:30px 0 auto 30px;">
+				<span style="font-size:large; font-weight:bold; letter-spacing:1em">目次</span>
+				<ul>
+					<li><a href="#news">最新情報</a></li>
+					<li><a href="#manual">基本操作</a></li>
+					<li><a href="#image">利用イメージ</a></li>
+					<li><a href="#policy">利用規約</a></li>
+					<li><a href="#other">その他</a></li>
+				</ul>
+				<br>
+			</li>
+		</ul>
+	</div>
+
+	<br>
+
+	<ul>
+		<li>閲覧するには、Internet Explorer 11、Microsoft Edge、Google Chrome、Firefox、Safariをご使用ください。</li>
+		<li>ハードウェア等環境によっては動作しない場合があります。</li>
+		<li>ネットワーク等環境により表示が遅延する場合は、最初は粗い画像が表示されますが、少しずつ精細な画像に切り替わっていきます。</li>
+	</ul>
+
+</div>
+<br>
+
+
+<div class="h2_titleBox" id="news">
+	<h2 class="h2_normal">最新情報</h2>
+</div>
+<div class="base_txt">
+	<ul>
+		<li>令和2年3月5日：地理院地図のUIに合わせるための改良（自分で作る色別標高図や地図表示の再現）を行いました。</li>
+		<li>平成31年3月26日：地理院地図のUIに合わせるための改良（外部タイル読込機能の追加や中抜きポリゴンの表示）を行いました。</li>
+		<li>平成30年3月 8日：地理院地図のUIに合わせるための改良（乗算合成機能や現在位置表示機能の追加）、より使いやすくするための改良（画像アイコンや属性の表示方法の改良）を行いました。</li>
+		<li>平成29年3月14日：<a href="https://www.gsi.go.jp/johofukyu/johofukyu20170314.html" target="_blank">地理院地図Globeを正式公開しました。</a></li>
+		<li>平成28年3月29日：<a href="https://www.gsi.go.jp/johofukyu/johofukyu40056.html" target="_blank">地理院地図Globeを試験公開しました。</a></li>
+	</ul>
+</div>
+<br>
+
+
+<div class="h2_titleBox" id="manual">
+	<h2 class="h2_normal">基本操作</h2>
+</div>
+<div class="base_txt">
+	<table border="2"><!-- summary属性、上下中央揃え -->
+		<tr><td class="cent">ズーム<br><img src="./images/op_zoom.png" alt="ズーム 模式図"></td>
+			<td>マウスホイール／ドラッグ（右ボタン）</td>
+			<td><img src="./images/op_zoom1.png" alt="ズーム 操作例1">&nbsp;&nbsp;<img src="./images/op_zoom2.png" alt="ズーム 操作例2"></td></tr>
+		<tr><td class="cent">パン<br><img src="./images/op_pan.png" alt="パン 模式図"></td>
+			<td>ドラッグ（左ボタン）</td>
+			<td><img src="./images/op_pan1.png" alt="パン 操作例1">&nbsp;&nbsp;<img src="./images/op_pan2.png" alt="パン 操作例2"></td></tr>
+		<tr><td class="cent">チルト<br>(対象を傾ける)<br><img src="./images/op_tilt.png" alt="チルト 模式図"></td>
+			<td>Ctrl+ドラッグ（左ボタン）↓↑</td>
+			<td><img src="./images/op_tilt1.png" alt="チルト 操作例1">&nbsp;&nbsp;<img src="./images/op_tilt2.png" alt="チルト 操作例2"></td></tr>
+		<tr><td class="cent">回転<br>(対象を回転)<br><img src="./images/op_rotate.png" alt="回転 模式図"></td>
+			<td>Ctrl+ドラッグ（左ボタン）←→</td>
+			<td><img src="./images/op_rotate1.png" alt="回転 操作例1">&nbsp;&nbsp;<img src="./images/op_rotate2.png" alt="回転 操作例2"></td></tr>
+	</table>
+	<br>
+	<p>地理院地図Globeの操作方法については、以下のマニュアルをご参照ください。</p>
+	<ul>
+		<li><a href="./manual.pdf" class="blank">地理院地図Globe操作マニュアル [PDF 2,77MB]</a>（2020年3月5日更新）<!--<span style="color: #ff0000">NEW!</span>--></li>
+	</ul>
+</div>
+<br>
+
+
+
+<div class="h2_titleBox" id="image">
+	<h2 class="h2_normal">利用イメージ</h2>
+</div>
+<div class="base_txt">
+	<table summary="利用イメージ" width="95%" align="center">
+
+	<tr>
+		<td width="15%"><img alt="背景情報を空中写真にして表示" src="images/image01a.png"></td><br>
+		<td><font size="3">　背景情報を空中写真にして表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#583/34.47992094/132.4803967/1/80.23/-9.47/0.18/&base=std&ls=std%7C_ort&disp=11&lcd=hisai1408ooame_hiroshima3">地理院地図Globeで表示</a>）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="背景情報を色別標高図にして表示" src="images/image02b.png"></td>
+		<td><font size="3">　背景情報を色別標高図にして表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#34086/34.88688491/139.10850675/1/329.39/-24.72/359.61/&base=std&ls=std%7Crelief&disp=11&lcd=relief">地理院地図Globeで表示</a>）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="標準地図を背景に、平成26年７月の西之島空中写真撮影時の無人飛行機飛行経路データを重ねあわせ表示" src="images/image04b.png"></td>
+		<td><font size="3">　標準地図を背景に、平成26年７月の西之島空中写真撮影時の無人飛行機飛行経路データを重ねあわせ表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#298/27.23561887/140.84290448/1/73.38/2.49/0.16/&base=std&ls=std%7Cuavhikou1311nishinoshima_140704&disp=11&lcd=uavhikou1311nishinoshima_140704">地理院地図Globeで表示</a>）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="空中写真を背景に平成26年８月豪雨災害時の土砂流出範囲図データを重ねあわせ表示" src="images/image05a.png"></td>
+		<td><font size="3">　空中写真を背景に平成26年８月豪雨災害時の土砂流出範囲図データを重ねあわせ表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#378/34.45439787/132.49636877/1/357.36/-10.33/359.99/&base=std&ls=std%7Cseamlessphoto%7C20140828dol%7C_ort%7Chisai1408ooame_hiroshima3&disp=10011&lcd=_ort">地理院地図Globeで表示</a>）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="海外の3D表示" src="images/image09.png"></td>
+		<td><font size="3">　海外の地形を3D表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#165618/31.41152095/74.0470529/9/91.79/-16.75/355.71/&base=std&ls=std%7Cseamlessphoto&disp=11&lcd=seamlessphoto">地理院地図Globeで表示</a>）<br>　表示例（ヒマラヤ周辺：高さ強調9倍）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="1003山の3D表示" src="images/image1003.png"></td>
+		<td><font size="3">　日本の山岳標高1003山を3D表示<br>　（<a href="https://maps.gsi.go.jp/globe/index_globe.html#6878/35.26876946/138.71071522/1/9.65/-22.85/0.03/&base=std&ls=std%7Crelief%7Cmount1003&disp=111&lcd=mount1003">地理院地図Globeで表示</a>）</font></td>
+	</tr>
+
+	<tr>
+		<td width="15%"><img alt="空中写真　＋　橋梁イメージ" src="images/image08.png"></td>
+		<td><font size="3">【参考】空中写真　＋　橋梁イメージ<br><br>　3次元データを読み込むことで、例えば橋梁イメージを表示させることもできます。<br>　（操作マニュアル「4.1 KML・GeoJSONファイルの読み込み」を参照）</font></td>
+	</tr>
+	
+	</table>
+</div>
+<br>
+
+
+<div class="h2_titleBox" id="policy">
+	<h2 class="h2_normal">利用規約</h2>
+</div>
+<div class="base_txt">
+	<p><a href="https://maps.gsi.go.jp/help/use.html">地理院タイルのご利用について</a>をご覧ください。</p>
+</div>
+<br>
+
+
+<div class="h2_titleBox" id="other">
+	<h2 class="h2_normal">その他</h2>
+</div>
+<div class="base_txt">
+	<p>その他技術情報やお問合せ先については<a href="https://maps.gsi.go.jp/help/">地理院地図ヘルプページ</a>をご覧ください。</p>
+</div>
+<br>
+
+
+<div class="bannerBox01">
+	<div class="banner">
+		<a href="https://get.adobe.com/reader/?loc=jp" class="blank"><img src="./css/css_image/get_adobe_reader.png" alt="Adobe Acrobat Reader"></a>
+	</div>
+	<div class="txt">
+		<p>PDF形式のファイルをご覧いただく場合には、Adobe Acrobat Readerが必要です。<br>
+		Adobe Acrobat Readerをお持ちでない方は、以下のページからダウンロードしてください。</p>
+		<div class="icnBlank">
+			<a href="https://get.adobe.com/reader/?loc=jp" class="blank">Adobe Acrobat Reader ダウンロードページ（新規ウィンドウ表示）</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="page_top_scroll">ページトップへ</div>
+</div>
+<!-- コンテナ　終了-->
+
+<!-- フッター　開始 -->
+<p id="copyright" class="small" lang="en">Copyright. Geospatial Information Authority of Japan. ALL RIGHTS RESERVED.</p>
+<!-- フッター　終了 -->
+
+</body>
+</html>

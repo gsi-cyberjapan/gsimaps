@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+<meta name="description" content="「誰でも・簡単に・どこでも」地理院地図を地球儀のように、シームレスに3次元でみることができます。" />
+
+<title>地理院地図Globe</title>
+
+<!--jquery-->
+<link rel="stylesheet" href="resource/jquery/jquery-ui.css" />
+<script type="text/javascript" src="resource/jquery/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="resource/jquery/jquery-ui.1.9.2.js"></script>
+<script type="text/javascript" src="resource/jquery/jquery.ui.touch-punch.js"></script>
+<link rel="stylesheet" href="resource/jquery/jquery.alerts.css" type="text/css" media="all" />
+<script type="text/javascript" src="resource/jquery/jquery.alerts.js"></script>
+<script type="text/javascript" src="resource/jquery/colorpicker/js/colorpicker.js"></script>
+<link rel="stylesheet" type="text/css" href="resource/jquery/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="resource/jquery/jquery.cookie.js"></script>
+<!--/jquery-->
+
+<link rel="stylesheet" href="css/gsiglobe.css" />
+
+<!-- <script src="Build/Cesium/Cesium.js"></script> -->
+<script type="text/javascript" src="Build/CesiumUnminified/Cesium.js"></script>
+<script type="text/javascript" src="resource/JapanGSIGeojsonProvider.js"></script>
+<script type="text/javascript" src="resource/JapanGSIImageryProvider.js"></script>
+<script type="text/javascript" src="resource/JapanGSICombineImageryProvider.js"></script>
+<script type="text/javascript" src="resource/JapanGSIVectorTileProvider.js"></script>
+<script type="text/javascript" src="resource/JapanGSITerrainProvider.js"></script>
+<script type="text/javascript" src="resource/proj4js-combined.js"></script>
+<script type="text/javascript" src="resource/ma.js"></script>
+<script type="text/javascript" src="resource/gsiglobe.js"></script>
+<script type="text/javascript" src="resource/index.js"></script>
+    <noscript>
+        <div class="noscript">
+            JavaScriptを有効にしてご覧ください。
+        </div>
+    </noscript>
+</head>
+
+
+<body class="tundra">
+    <div id="header" class="logo_s">
+        <div class="logoarea">
+            
+            <a href="index_globe.html" style="text-decoration:none;">
+                    <div id="title_logo_upper">地理院地図</div>
+                    <div id="title_logo_lower">Globe</div>
+                </a>
+        </div>
+        <div class="magnifyingglass">
+               <img name = "magnifyimage" id="magnifyimage" src="./image/system/search.png"/>
+        </div>
+        <form name="search_f" id="search_f" autocomplete="off">
+            <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
+        </form>
+        <div class="help">
+            <div id="title_help">?</div>
+        </div>
+    </div>
+    <div id="topmessage"></div>
+    
+    <div id="cesiumContainer"></div>
+    <div id="cesiumCreditContainer"></div>
+    
+    
+    
+    <!-- ここからヘルプコンテンツ -->
+    <div id="help_container" style="display:none;">
+        
+        
+        <div class="help_content" title="基本操作">
+            <table border="2" cellspacing="0">
+                <tr><td style="text-align:center;">ズーム<br/><img alt="tilt" src="./image/help/op_zoom.png"></td><td>マウスホイール／ドラッグ（右ボタン）</td><td><img alt="zoom" src="./image/help/op_zoom1.png">&nbsp;&nbsp;<img alt="zoom" src="./image/help/op_zoom2.png"></td></tr>
+                <tr><td style="text-align:center;">パン<br/><img alt="tilt" src="./image/help/op_pan.png"></td><td>ドラッグ（左ボタン）</td><td><img alt="pan" src="./image/help/op_pan1.png">&nbsp;&nbsp;<img alt="zoom" src="./image/help/op_pan2.png"></td></tr>
+                <tr><td style="text-align:center;">チルト<br/>(対象を傾ける)<br/><img alt="tilt" src="./image/help/op_tilt.png"></td><td>Ctrl+ドラッグ（左ボタン）↓↑</td><td><img alt="tilt" src="./image/help/op_tilt1.png">&nbsp;&nbsp;<img alt="tilt" src="./image/help/op_tilt2.png"></td></tr>
+                <tr><td style="text-align:center;">回転<br/>(対象を回転)<br/><img alt="rotate" src="./image/help/op_rotate.png"></td><td>Ctrl+ドラッグ（左ボタン）←→</td><td><img alt="rotate" src="./image/help/op_rotate1.png">&nbsp;&nbsp;<img alt="rotate" src="./image/help/op_rotate2.png"></td></tr>
+            </table>
+        </div>
+        
+        <div class="help_content" title="関連リンク集">
+            <div style="text-align:left;">
+                <div title="地理院地図Globeトップページ" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://maps.gsi.go.jp/globe/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/gsi_top.png" style="width:20px;vertical-align:middle;margin:3px">地理院地図Globeトップページ</a>
+                </div><br/>
+                <div title="地理院地図ヘルプ" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://maps.gsi.go.jp/help/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/help_icon.png" style="width:20px;vertical-align:middle;margin:3px">地理院地図ヘルプ</a>
+                </div><br/>
+                <div title="データのご利用について" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://maps.gsi.go.jp/help/use.html" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/use_icon.png" style="width:20px;vertical-align:middle;margin:3px">データのご利用について</a>
+                </div><br/>
+                <div title="地理院地図Twitter" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://twitter.com/gsi_cyberjapan" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/twitter.png" style="width:20px;vertical-align:middle;margin:3px">地理院地図Twitter</a>
+                </div><br/>
+                <div title="情報普及課GitHub" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://github.com/gsi-cyberjapan" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/github.png" style="width:20px;vertical-align:middle;margin:3px">情報普及課GitHub</a>
+                </div><br/>
+                <div title="パートナーネットワーク" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="https://maps.gsi.go.jp/pn/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/partner_icon.png" style="width:20px;vertical-align:middle;margin:3px">パートナーネットワーク</a>
+                </div><br/>
+                <div title="国土地理院トップページ" style="display:inline-block;border:2px solid #fff;padding:3px;margin:3px">
+                    <a href="http://www.gsi.go.jp/" target="_blank" style="font-size:110%;text-decoration:none;color:#000"><img src="./image/help/gsi_top.png" style="width:20px;vertical-align:middle;margin:3px">国土地理院トップページ</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help_content" title="利用イメージ1">
+        	<div align="center">
+				<a href="https://maps.gsi.go.jp/globe/index_globe.html#583/34.47992094/132.4803967/1/80.23/-9.47/0.18/&base=std&ls=std%7C_ort&disp=11&lcd=hisai1408ooame_hiroshima3"><img src="./image/help/image01a.png" width="600px" alt="背景情報を空中写真にして表示"></a>
+			</div>
+			<div style="text-align:center;">
+				背景情報を空中写真にして表示<br/>画像をクリックすると地理院地図Globeで見ることができます。
+			</div>
+        </div>
+        
+         <div class="help_content" title="利用イメージ2">
+        	<div align="center">
+				<a href="https://maps.gsi.go.jp/globe/index_globe.html#165618/31.41152095/74.0470529/9/91.79/-16.75/355.71/&base=std&ls=std%7Cseamlessphoto&disp=11&lcd=seamlessphoto"><img src="./image/help/image09.png" width="600px" alt="海外の地形を3D表示"></a>
+			</div>
+			<div style="text-align:center;">
+				海外の地形を3D表示<br/>画像をクリックすると地理院地図Globeで見ることができます。<br/>　　表示例（ヒマラヤ周辺：高さ強調9倍）
+			</div>
+        </div>
+        
+         <div class="help_content" title="利用イメージ3">
+        	<div align="center">
+				<a href="https://maps.gsi.go.jp/globe/index_globe.html#6878/35.26876946/138.71071522/1/9.65/-22.85/0.03/&base=std&ls=std%7Crelief%7Cmount1003&disp=111&lcd=mount1003"><img src="./image/help/image1003.png" width="600px" alt="日本の山岳標高1003山を3D表示"></a>
+			</div>
+			<div style="text-align:center;">
+				日本の山岳標高1003山を3D表示<br/>画像をクリックすると地理院地図Globeで見ることができます。
+			</div>
+        </div>
+        
+         <div class="help_content" title="利用イメージ4">
+        	<div align="center">
+				<a href="https://maps.gsi.go.jp/globe/index_globe.html#378/34.45439787/132.49636877/1/357.36/-10.33/359.99/&base=std&ls=std%7Cseamlessphoto%7C20140828dol%7C_ort%7Chisai1408ooame_hiroshima3&disp=10011&lcd=_ort"><img src="./image/help/image05a.png" width="600px" alt="空中写真を背景に平成26年８月豪雨災害時の土砂流出範囲図データを重ねあわせ表示"></a>
+			</div>
+			<div style="text-align:center;">
+				空中写真を背景に平成26年８月豪雨災害時の土砂流出範囲図データを重ねあわせ表示<br/>画像をクリックすると地理院地図Globeで見ることができます。
+			</div>
+        </div>
+        
+    </div>
+    <!-- ここまでヘルプコンテンツ -->
+
+
+
+</body>
+</html>
