@@ -1,0 +1,178 @@
+{
+  "layers": [
+     {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "鹿児島中央地区（鹿児島県鹿児島市、日置市、南九州市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_chuou_0704do",
+          "title": "鹿児島中央地区（7/4撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_chuou_0704do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "曽於地区（鹿児島県曽於市、霧島市、鹿屋市、志布志市、大崎町、宮崎県都城市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_soo_0707do",
+          "title": "曽於地区（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_soo_0707do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          }
+         ]
+        }        
+      ]
+    },
+     {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "曽於１地区（鹿児島県曽於市、霧島市、鹿屋市、志布志市、大崎町、宮崎県都城市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_soo1_0707suichokuh",
+          "title": "曽於１地区（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_soo1_0707suichokuh/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "曽於２地区（鹿児島県曽於市、志布志市、宮崎県都城市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_soo2_0707suichokuh",
+          "title": "曽於２地区（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_soo2_0707suichokuh/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "鹿児島中央地区（鹿児島県鹿児島市、日置市、南九州市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_chuou_0704suichokuh",
+          "title": "鹿児島中央地区（7/4撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_chuou_0704suichokuh/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真（速報版）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "曽於１地区（鹿児島県曽於市、霧島市、鹿屋市、志布志市、大崎町、宮崎県都城市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_soo1_0707suichoku",
+          "title": "曽於１地区（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_soo1_0707suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "曽於２地区（鹿児島県曽於市、志布志市、宮崎県都城市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_soo2_0707suichoku",
+          "title": "曽於２地区（7/7撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_soo2_0707suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "鹿児島中央地区（鹿児島県鹿児島市、日置市、南九州市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190704_kagoshima_chuou_0704suichoku",
+          "title": "鹿児島中央地区（7/4撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190704_kagoshima_chuou_0704suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }                
+      ]
+    }
+  ]
+}

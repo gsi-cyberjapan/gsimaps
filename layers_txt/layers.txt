@@ -1,0 +1,26 @@
+[
+	{
+		"url":"./layers_tokyo.txt"
+	},
+	{
+		"url":"./layers1.txt"
+	},
+	{
+		"url":"./layers2.txt"
+	},
+	{
+		"url":"./layers3.txt"
+	},
+	{
+		"url":"./layers4.txt"
+	},
+	{
+		"url":"./layers5.txt"
+	},
+	{
+		"url":"./layers6.txt"
+	},
+	{
+		"url":"./layers7.txt"
+	}
+]

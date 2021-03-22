@@ -1,0 +1,160 @@
+{
+  "layers": [
+      {
+     "type": "LayerGroup",
+     "title": "正射画像",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "鶴岡村上地区（山形県鶴岡市、新潟県村上市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0620do",
+          "title": "鶴岡村上地区（6/20撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0620do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          },
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626do1",
+          "title": "鶴岡村上地区（6/26撮影①）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626do1/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          },
+           {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626do",
+          "title": "鶴岡村上地区（6/26撮影②）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626do/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。（ズームレベル10～18で表示されます）"
+          }
+         ]
+        }
+       ]
+      },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "鶴岡市駅前地区（山形県鶴岡市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokashiekimae_0620suichoku",
+          "title": "鶴岡市駅前地区（6/20撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokashiekimae_0620suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "鶴岡村上地区（山形県鶴岡市、新潟県村上市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0620suichoku",
+          "title": "鶴岡村上地区（6/20撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0620suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626suichoku1",
+          "title": "鶴岡村上地区（6/26撮影①）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626suichoku1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          },
+          {
+          "type": "Layer",
+          "id": "20190618yamagata_tsuruokamurakami_0626suichoku2",
+          "title": "鶴岡村上地区（6/26撮影②）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruokamurakami_0626suichoku2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        },
+       {
+       "type": "LayerGroup",
+       "title": "弘法トンネル地区（新潟県村上市）",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20190618yamagata_kouboutonneru_0620suichoku",
+          "title": "弘法トンネル地区（6/20撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_kouboutonneru_0620suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。"
+          }
+         ]
+        }
+       ]
+      },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_201906yamagataoki.txt"
+    },
+    {
+     "type": "LayerGroup",
+     "title": "デジタル標高地形図",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+        "type": "Layer",
+        "id": "20190618yamagata_tsuruoka_digital",
+        "title": "山形県鶴岡市周辺",
+        "url": "https://maps.gsi.go.jp/xyz/20190618yamagata_tsuruoka_digital/{z}/{x}/{y}.png",
+        "cocotile": true,
+        "maxZoom": 16,
+        "html": "デジタル標高地形図<br>2019年6月作成<br>（c）国土地理院<img src=\"https://maps.gsi.go.jp/legend/20190618yamagata_tsuruoka_digital_legend.png\" width=\"320\">"
+        }
+       ]
+      }
+  ]
+}

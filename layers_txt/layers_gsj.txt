@@ -1,0 +1,25 @@
+{
+  "layers": [
+            {
+              "type": "Layer",
+              "id": "gsjGeomap_seamless200k_v2",
+              "title": "20万分の1日本シームレス地質図V2",
+              "url": "https://gbank.gsj.jp/seamless/v2/api/1.2/tiles/{z}/{y}/{x}.png?layer=glf",
+              "cocotile": false,
+              "minZoom": 3,
+              "maxZoom": 13,
+              "html": "産業技術総合研究所地質調査総合センターが提供する日本全国統一の凡例を用いた地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1日本シームレス地質図V2</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/seamless/v2/legend.html\">凡例</a> <a target=\"_blank\" href=\"https://gbank.gsj.jp/seamless/\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"            },
+            {
+              "type": "LayerGroup",
+              "title": "20万分の1地質図幅",
+              "toggleall": false,
+              "src": "./layers_gsj_G200K.txt"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "5万分の1地質図幅",
+              "toggleall": false,
+              "src": "https://maps.gsi.go.jp/layers_txt/layers_gsj_G50K.txt"
+            }
+  ]
+}

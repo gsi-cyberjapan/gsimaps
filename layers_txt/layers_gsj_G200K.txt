@@ -1,0 +1,2280 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "北海道地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_01kitami",
+          "title": "20万分の1地質図幅「北見」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_01kitami/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              43.33589,
+              142.99589
+            ],
+            [
+              44.00251,
+              143.99591
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「北見」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_01kitami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_02obihiro",
+          "title": "20万分の1地質図幅「帯広」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_02obihiro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.66932,
+              142.99593
+            ],
+            [
+              43.33593,
+              143.99596
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「帯広」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_02obihiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_03hiroo",
+          "title": "20万分の1地質図幅「広尾」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_03hiroo/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              41.89942,
+              142.99598
+            ],
+            [
+              42.66934,
+              143.99583
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広尾」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_03hiroo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_07asashikawa",
+          "title": "20万分の1地質図幅「旭川」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_07asashikawa/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              43.33583,
+              141.99598
+            ],
+            [
+              44.00248,
+              142.996
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「旭川」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_07asashikawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_08yubaridake",
+          "title": "20万分の1地質図幅「夕張岳」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_08yubaridake/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.66919,
+              141.99603
+            ],
+            [
+              43.33589,
+              142.99587
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「夕張岳」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_08yubaridake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_09urakawa",
+          "title": "20万分の1地質図幅「浦河」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_09urakawa/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.00275,
+              141.99607
+            ],
+            [
+              42.66931,
+              142.99611
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浦河」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_09urakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_13rumoi",
+          "title": "20万分の1地質図幅「留萌」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_13rumoi/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              43.33577,
+              140.99608
+            ],
+            [
+              44.00244,
+              141.99601
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「留萌」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_13rumoi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_14sapporo",
+          "title": "20万分の1地質図幅「札幌」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_14sapporo/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.66925,
+              140.99612
+            ],
+            [
+              43.33586,
+              141.99614
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「札幌」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_14sapporo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_15tomakomai",
+          "title": "20万分の1地質図幅「苫小牧」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_15tomakomai/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.00255,
+              140.99616
+            ],
+            [
+              42.66927,
+              141.99603
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「苫小牧」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_15tomakomai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_16shiriyazaki",
+          "title": "20万分の1地質図幅「尻屋崎」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_16shiriyazaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              41.33609,
+              140.9962
+            ],
+            [
+              42.00269,
+              141.99617
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「尻屋崎」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_16shiriyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_20iwanai2ed",
+          "title": "20万分の1地質図幅「岩内（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_20iwanai2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.66916,
+              139.99621
+            ],
+            [
+              43.38582,
+              140.99626
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岩内（第2版）」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_20iwanai2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_21muroran",
+          "title": "20万分の1地質図幅「室蘭」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_21muroran/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.00268,
+              139.99625
+            ],
+            [
+              42.66924,
+              141.01492
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「室蘭」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_21muroran.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_2228hakodate-oshimaoshima",
+          "title": "20万分の1地質図幅「函館及び渡島大島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_2228hakodate-oshimaoshima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              41.33604,
+              139.74632
+            ],
+            [
+              42.00265,
+              140.99612
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「函館及び渡島大島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2228hakodate-oshimaoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_27kudo",
+          "title": "20万分の1地質図幅「久遠」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_27kudo/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.0027,
+              138.99634
+            ],
+            [
+              42.72257,
+              139.99631
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久遠」（1979年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_27kudo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK55_25shibetsu",
+          "title": "20万分の1地質図幅「標津」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK55_25shibetsu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              43.33598,
+              144.99571
+            ],
+            [
+              44.00259,
+              145.99576
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「標津」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_25shibetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK55_26nemuro",
+          "title": "20万分の1地質図幅「根室」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK55_26nemuro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.66928,
+              144.99575
+            ],
+            [
+              43.336,
+              145.99562
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「根室」（1975年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_26nemuro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK55_31shari",
+          "title": "20万分の1地質図幅「斜里」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK55_31shari/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              43.33593,
+              143.9958
+            ],
+            [
+              44.00255,
+              144.99583
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「斜里」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_31shari.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK55_32kushiro",
+          "title": "20万分の1地質図幅「釧路」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK55_32kushiro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              42.6693,
+              143.99584
+            ],
+            [
+              43.33596,
+              144.99581
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「釧路」（1976年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_32kushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_06monbetsu",
+          "title": "20万分の1地質図幅「紋別」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_06monbetsu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.00247,
+              142.99584
+            ],
+            [
+              44.6691,
+              143.99588
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「紋別」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_06monbetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_11esashi",
+          "title": "20万分の1地質図幅「枝幸」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_11esashi/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.66912,
+              141.99589
+            ],
+            [
+              45.33565,
+              142.99576
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「枝幸」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_11esashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_12nayoro",
+          "title": "20万分の1地質図幅「名寄」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_12nayoro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.00244,
+              141.99594
+            ],
+            [
+              44.66906,
+              142.99596
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名寄」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_12nayoro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_16wakkanai",
+          "title": "20万分の1地質図幅「稚内」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_16wakkanai/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              45.3356,
+              140.93334
+            ],
+            [
+              46.0022,
+              142.20047
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「稚内」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_16wakkanai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_17teshio",
+          "title": "20万分の1地質図幅「天塩」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_17teshio/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.66897,
+              140.99598
+            ],
+            [
+              45.33561,
+              141.99602
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「天塩」（1968年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_17teshio.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL54_18haboro",
+          "title": "20万分の1地質図幅「羽幌」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL54_18haboro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.0023,
+              140.99603
+            ],
+            [
+              44.66903,
+              141.99594
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「羽幌」（1962年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_18haboro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL55_30shiretokomisaki",
+          "title": "20万分の1地質図幅「知床岬」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL55_30shiretokomisaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.00259,
+              144.99566
+            ],
+            [
+              44.66917,
+              145.99576
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「知床岬」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_30shiretokomisaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NL55_36abashiri",
+          "title": "20万分の1地質図幅「網走」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NL55_36abashiri/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              44.00247,
+              143.99575
+            ],
+            [
+              44.66914,
+              144.99574
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「網走」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_36abashiri.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "東北地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_13morioka",
+          "title": "20万分の1地質図幅「盛岡」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_13morioka/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              39.33639,
+              140.99631
+            ],
+            [
+              40.00293,
+              142.09279
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「盛岡」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_13morioka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_14ichinoseki",
+          "title": "20万分の1地質図幅「一関」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_14ichinoseki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              38.6698,
+              140.99635
+            ],
+            [
+              39.33633,
+              141.99633
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「一関」（2005年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_14ichinoseki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_15ishinomaki",
+          "title": "20万分の1地質図幅「石巻（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_15ishinomaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              38.00313,
+              140.99638
+            ],
+            [
+              38.66974,
+              141.99645
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石巻（第2版）」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_15ishinomaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_1622fukushima",
+          "title": "20万分の1地質図幅「福島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_1622fukushima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              37.33648,
+              139.9965
+            ],
+            [
+              38.00313,
+              141.05722
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福島」（2003年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1622fukushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_1723shirakawa",
+          "title": "20万分の1地質図幅「白河」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_1723shirakawa/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.66968,
+              139.99667
+            ],
+            [
+              37.33649,
+              141.06356
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「白河」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1723shirakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_1925akita-oga",
+          "title": "20万分の1地質図幅「秋田及び男鹿」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_1925akita-oga/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              39.33632,
+              139.68059
+            ],
+            [
+              40.01801,
+              140.99625
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「秋田及び男鹿」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1925akita-oga.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_2026shinjo-sakata",
+          "title": "20万分の1地質図幅「新庄及び酒田」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_2026shinjo-sakata/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              38.66957,
+              139.49648
+            ],
+            [
+              39.3363,
+              140.99645
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新庄及び酒田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_2026shinjo-sakata.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_21sendai",
+          "title": "20万分の1地質図幅「仙台」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_21sendai/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              38.00314,
+              139.99647
+            ],
+            [
+              38.66971,
+              140.99643
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「仙台」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_21sendai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_27murakami",
+          "title": "20万分の1地質図幅「村上」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_27murakami/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              38.00307,
+              138.99656
+            ],
+            [
+              38.66968,
+              139.99642
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「村上」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_27murakami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_17noheji",
+          "title": "20万分の1地質図幅「野辺地」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_17noheji/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              40.66942,
+              140.99624
+            ],
+            [
+              41.3361,
+              141.99613
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野辺地」（1963年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_17noheji.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_18hachinohe",
+          "title": "20万分の1地質図幅「八戸」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_18hachinohe/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              40.003,
+              140.99628
+            ],
+            [
+              40.66951,
+              141.99631
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八戸」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_18hachinohe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_23aomori2ed",
+          "title": "20万分の1地質図幅「青森（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_23aomori2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              40.66951,
+              139.90006
+            ],
+            [
+              41.33607,
+              140.9964
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「青森（第2版）」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_23aomori2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NK54_2430hirosaki-fukaura",
+          "title": "20万分の1地質図幅「弘前及び深浦」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NK54_2430hirosaki-fukaura/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              40.00279,
+              139.81305
+            ],
+            [
+              40.66948,
+              140.99645
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「弘前及び深浦」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2430hirosaki-fukaura.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "関東地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG54_08ogasawara",
+          "title": "20万分の1地質図幅「小笠原諸島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG54_08ogasawara/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              20.38789,
+              136.03059
+            ],
+            [
+              27.83784,
+              154.02974
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小笠原諸島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG54_08ogasawara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_19chiba",
+          "title": "20万分の1地質図幅「千葉」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_19chiba/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.3368,
+              139.99659
+            ],
+            [
+              36.00335,
+              140.99645
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「千葉」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_19chiba.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_20otaki",
+          "title": "20万分の1地質図幅「大多喜」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_20otaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.67015,
+              139.99662
+            ],
+            [
+              35.33676,
+              140.99666
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大多喜」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_20otaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_25tokyo",
+          "title": "20万分の1地質図幅「東京」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_25tokyo/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33668,
+              138.99668
+            ],
+            [
+              36.00332,
+              139.9967
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「東京」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_25tokyo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_26yokosuka2nd",
+          "title": "20万分の1地質図幅「横須賀（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_26yokosuka2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.66661,
+              138.99679
+            ],
+            [
+              35.33661,
+              140.00016
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「横須賀（第2版）」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_26yokosuka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_27miyakejima",
+          "title": "20万分の1地質図幅「三宅島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_27miyakejima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00342,
+              138.99673
+            ],
+            [
+              34.67014,
+              139.99659
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「三宅島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_27miyakejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_28mikurajima",
+          "title": "20万分の1地質図幅「御蔵島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_28mikurajima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33693,
+              138.74678
+            ],
+            [
+              34.00354,
+              139.74684
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「御蔵島」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_28mikurajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_29hachijojima",
+          "title": "20万分の1地質図幅「八丈島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_29hachijojima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.67037,
+              138.99678
+            ],
+            [
+              33.33695,
+              139.99675
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八丈島」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_29hachijojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_24mito2ed",
+          "title": "20万分の1地質図幅「水戸（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_24mito2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.00343,
+              139.99656
+            ],
+            [
+              36.66994,
+              140.9965
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「水戸（第2版）」（2001年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_24mito2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_29nikko",
+          "title": "20万分の1地質図幅「日光」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_29nikko/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.66994,
+              138.99662
+            ],
+            [
+              37.33651,
+              139.99656
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「日光」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_29nikko.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_30utsunomiya",
+          "title": "20万分の1地質図幅「宇都宮」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_30utsunomiya/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.00333,
+              138.99665
+            ],
+            [
+              36.66992,
+              139.99646
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇都宮」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_30utsunomiya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_36nagano",
+          "title": "20万分の1地質図幅「長野」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_36nagano/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.00317,
+              137.99674
+            ],
+            [
+              36.66989,
+              138.9967
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長野」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_36nagano.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "中部・北陸地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_01iida2nd",
+          "title": "20万分の1地質図幅「飯田(第2版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_01iida2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33665,
+              136.99685
+            ],
+            [
+              36.00327,
+              137.99684
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「飯田(第2版)」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_01iida2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_0203toyohashi-irakozaki",
+          "title": "20万分の1地質図幅「豊橋及び伊良湖岬」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_0203toyohashi-irakozaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.5033,
+              136.99688
+            ],
+            [
+              35.33675,
+              137.9972
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「豊橋及び伊良湖岬」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_0203toyohashi-irakozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_07gifu",
+          "title": "20万分の1地質図幅「岐阜」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_07gifu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33656,
+              135.93712
+            ],
+            [
+              36.00325,
+              136.99692
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岐阜」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_07gifu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_31kofu",
+          "title": "20万分の1地質図幅「甲府」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_31kofu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33659,
+              137.99676
+            ],
+            [
+              36.0033,
+              138.99672
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甲府」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_31kofu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI54_3233shizuoka2nd",
+          "title": "20万分の1地質図幅「静岡及び御前崎（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI54_3233shizuoka2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.5033,
+              137.99681
+            ],
+            [
+              35.33665,
+              138.99688
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「静岡及び御前崎（第2版）」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_3233shizuoka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_0410wajima",
+          "title": "20万分の1地質図幅「輪島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_0410wajima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              37.33638,
+              136.49681
+            ],
+            [
+              38.00303,
+              137.49663
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「輪島」（1961年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_0410wajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_0511nanao-toyama",
+          "title": "20万分の1地質図幅「七尾･富山」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_0511nanao-toyama/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.66981,
+              136.49684
+            ],
+            [
+              37.33644,
+              137.4969
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「七尾･富山」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_0511nanao-toyama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_05toyama",
+          "title": "20万分の1地質図幅「富山」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_05toyama/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.66991,
+              136.9968
+            ],
+            [
+              37.33645,
+              137.99671
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「富山」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_05toyama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_06takayama",
+          "title": "20万分の1地質図幅「高山」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_06takayama/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.00333,
+              136.99682
+            ],
+            [
+              36.66986,
+              137.99673
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高山」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_06takayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_12kanazawa",
+          "title": "20万分の1地質図幅「金沢」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_12kanazawa/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.00311,
+              135.96851
+            ],
+            [
+              36.66984,
+              136.99681
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「金沢」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_12kanazawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_28niigata2nd",
+          "title": "20万分の1地質図幅「新潟（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_28niigata2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              37.33629,
+              138.9967
+            ],
+            [
+              38.003,
+              139.99666
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新潟（第2版）」（2011年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_28niigata2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_3334aikawa-nagaoka",
+          "title": "20万分の1地質図幅「相川及び長岡の一部」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_3334aikawa-nagaoka/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              37.73636,
+              137.99666
+            ],
+            [
+              38.40302,
+              138.99652
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「相川及び長岡の一部」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_3334aikawa-nagaoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_34nagaoka2ed",
+          "title": "20万分の1地質図幅「長岡（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_34nagaoka2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              37.33615,
+              137.99673
+            ],
+            [
+              38.00314,
+              138.997
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長岡（第2版）」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_34nagaoka2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ54_35takada",
+          "title": "20万分の1地質図幅「高田」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ54_35takada/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              36.66986,
+              137.99671
+            ],
+            [
+              37.33648,
+              138.99679
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高田」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_35takada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "近畿地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_08nagoya3rd",
+          "title": "20万分の1地質図幅「名古屋(第3版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_08nagoya3rd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.66987,
+              135.99706
+            ],
+            [
+              35.33656,
+              136.99714
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名古屋(第3版)」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_08nagoya3rd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_09ise",
+          "title": "20万分の1地質図幅「伊勢」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_09ise/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.99989,
+              135.99703
+            ],
+            [
+              34.66986,
+              136.99999
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「伊勢」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_09ise.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_10kinomoto",
+          "title": "20万分の1地質図幅「木本」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_10kinomoto/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33688,
+              135.99701
+            ],
+            [
+              34.00347,
+              136.99698
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「木本」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_10kinomoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_13miyazu",
+          "title": "20万分の1地質図幅「宮津」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_13miyazu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33664,
+              134.99703
+            ],
+            [
+              36.00322,
+              135.99695
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮津」（1968年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_13miyazu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_14kyoto-osaka",
+          "title": "20万分の1地質図幅「京都及大阪」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_14kyoto-osaka/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.67008,
+              134.99705
+            ],
+            [
+              35.33663,
+              135.99687
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「京都及大阪」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_14kyoto-osaka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_15wakayama",
+          "title": "20万分の1地質図幅「和歌山」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_15wakayama/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00333,
+              134.99708
+            ],
+            [
+              34.67004,
+              135.997
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「和歌山」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_15wakayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_16tanabe",
+          "title": "20万分の1地質図幅「田辺」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_16tanabe/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.3369,
+              134.9971
+            ],
+            [
+              34.00345,
+              135.997
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「田辺」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_16tanabe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_19tottori",
+          "title": "20万分の1地質図幅「鳥取」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_19tottori/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33662,
+              133.99712
+            ],
+            [
+              36.0032,
+              134.99697
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鳥取」（1975年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_19tottori.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_20himeji",
+          "title": "20万分の1地質図幅「姫路」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_20himeji/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.66999,
+              133.99714
+            ],
+            [
+              35.33661,
+              134.99717
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「姫路」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_20himeji.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "中国・四国地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_0203yamaguchi-mishima",
+          "title": "20万分の1地質図幅「山口及び見島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_0203yamaguchi-mishima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00332,
+              130.99743
+            ],
+            [
+              34.88659,
+              131.99746
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「山口及び見島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_0203yamaguchi-mishima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_21tokushima",
+          "title": "20万分の1地質図幅「徳島(第2版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_21tokushima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00334,
+              133.99717
+            ],
+            [
+              34.67002,
+              134.99707
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳島(第2版)」（1995年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_21tokushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_22kenzan",
+          "title": "20万分の1地質図幅「剣山」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_22kenzan/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.22775,
+              133.99719
+            ],
+            [
+              34.00343,
+              134.99723
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「剣山」（1969年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_22kenzan.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_2531matsue-taisya",
+          "title": "20万分の1地質図幅「松江及び大社」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_2531matsue-taisya/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.33651,
+              132.58058
+            ],
+            [
+              36.00317,
+              133.99701
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松江及び大社」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_2531matsue-taisya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_26takahashi",
+          "title": "20万分の1地質図幅「高梁」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_26takahashi/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.67003,
+              132.99723
+            ],
+            [
+              35.33658,
+              133.99704
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高梁」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_26takahashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_27okayama-marugame",
+          "title": "20万分の1地質図幅「岡山及び丸亀」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_27okayama-marugame/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00335,
+              132.99726
+            ],
+            [
+              34.66999,
+              133.99723
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岡山及び丸亀」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_27okayama-marugame.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_28kochi",
+          "title": "20万分の1地質図幅「高知」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_28kochi/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33685,
+              132.99728
+            ],
+            [
+              34.0034,
+              133.99733
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高知」（1959年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_28kochi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_29kubokawa",
+          "title": "20万分の1地質図幅「窪川」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_29kubokawa/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.67019,
+              132.9973
+            ],
+            [
+              33.33681,
+              133.99712
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「窪川」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_29kubokawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_32hamada",
+          "title": "20万分の1地質図幅「浜田」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_32hamada/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.66989,
+              131.99732
+            ],
+            [
+              35.33656,
+              132.99734
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浜田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_32hamada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_34matsuyama2nd",
+          "title": "20万分の1地質図幅「松山（第2版）」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_34matsuyama2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33339,
+              131.99753
+            ],
+            [
+              34.00321,
+              133.00004
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松山（第2版）」（2016年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_34matsuyama2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_33hiroshima",
+          "title": "20万分の1地質図幅「広島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_33hiroshima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00331,
+              131.99734
+            ],
+            [
+              34.66997,
+              132.99725
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広島」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_33hiroshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI53_35uwajima",
+          "title": "20万分の1地質図幅「宇和島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI53_35uwajima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.6693,
+              131.99739
+            ],
+            [
+              33.33679,
+              133.04717
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇和島」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_35uwajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NJ53_3036saigo",
+          "title": "20万分の1地質図幅「西郷」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NJ53_3036saigo/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              35.91964,
+              131.81663
+            ],
+            [
+              37.27502,
+              133.66398
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「西郷」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_3036saigo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "九州地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_01miyazaki",
+          "title": "20万分の1地質図幅「宮崎」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_01miyazaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              31.33686,
+              130.99751
+            ],
+            [
+              32.00359,
+              131.99731
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮崎」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_01miyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_020814kaimondake",
+          "title": "20万分の1地質図幅「開聞岳及び黒島の一部」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_020814kaimondake/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              30.67037,
+              129.83107
+            ],
+            [
+              31.33699,
+              131.16432
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「開聞岳及び黒島の一部」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_020814kaimondake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_07kagoshima",
+          "title": "20万分の1地質図幅「鹿児島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_07kagoshima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              31.33694,
+              129.9976
+            ],
+            [
+              32.00357,
+              130.99749
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鹿児島」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_07kagoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_1314koshikijima",
+          "title": "20万分の1地質図幅「甑島及び黒島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_1314koshikijima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              30.67046,
+              129.24767
+            ],
+            [
+              32.00355,
+              129.99765
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甑島及び黒島」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_1314koshikijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_05oita2nd",
+          "title": "20万分の1地質図幅「大分(第２版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_05oita2nd/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.66664,
+              130.99764
+            ],
+            [
+              33.33631,
+              132.01341
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大分(第２版)」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_05oita2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_04nakatsu",
+          "title": "20万分の1地質図幅「中津」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_04nakatsu/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33648,
+              130.9951
+            ],
+            [
+              34.00638,
+              131.99759
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「中津」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_04nakatsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_06nobeoka",
+          "title": "20万分の1地質図幅「延岡」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_06nobeoka/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.00356,
+              130.99749
+            ],
+            [
+              32.67018,
+              131.9974
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「延岡」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_06nobeoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_09kogushi",
+          "title": "20万分の1地質図幅「小串」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_09kogushi/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.00325,
+              129.99753
+            ],
+            [
+              34.66993,
+              130.99741
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小串」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_09kogushi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_10fukuoka",
+          "title": "20万分の1地質図幅「福岡」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_10fukuoka/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33664,
+              129.99755
+            ],
+            [
+              34.00334,
+              130.99734
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福岡」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_10fukuoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_11kumamoto",
+          "title": "20万分の1地質図幅「熊本」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_11kumamoto/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.67009,
+              129.99757
+            ],
+            [
+              33.33675,
+              130.99745
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「熊本」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_11kumamoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_1218yatsushiro",
+          "title": "20万分の1地質図幅「八代」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_1218yatsushiro/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.0033,
+              129.93103
+            ],
+            [
+              32.67005,
+              130.99765
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八代」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_1218yatsushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_15izuhara",
+          "title": "20万分の1地質図幅「厳原」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_15izuhara/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              34.0699,
+              128.99762
+            ],
+            [
+              34.73657,
+              129.99757
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「厳原」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_15izuhara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_16karatsu2ed",
+          "title": "20万分の1地質図幅「唐津(第2版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_16karatsu2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              33.33674,
+              128.99764
+            ],
+            [
+              34.00332,
+              129.99766
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「唐津(第2版)」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_16karatsu2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_17nagasaki2ed",
+          "title": "20万分の1地質図幅「長崎(第2版)」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_17nagasaki2ed/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.67015,
+              128.99766
+            ],
+            [
+              33.33673,
+              129.99755
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長崎(第2版)」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_17nagasaki2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_18nomozaki",
+          "title": "20万分の1地質図幅「野母崎」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_18nomozaki/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              32.00355,
+              128.99767
+            ],
+            [
+              32.67014,
+              129.99749
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野母崎」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_18nomozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NI52_2324fukue-tomie",
+          "title": "20万分の1地質図幅「福江及び富江」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NI52_2324fukue-tomie/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              31.95337,
+              127.99776
+            ],
+            [
+              33.25334,
+              128.99779
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福江及び富江」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_2324fukue-tomie.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "南西諸島地域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG52_20262127yoronto-naha",
+          "title": "20万分の1地質図幅「与論島及び那覇」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG52_20262127yoronto-naha/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              24.42127,
+              127.49801
+            ],
+            [
+              27.17075,
+              131.34313
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「与論島及び那覇」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_20262127yoronto-naha.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG51_05061112miyakojima",
+          "title": "20万分の1地質図幅「宮古島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG51_05061112miyakojima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              24.33762,
+              124.49822
+            ],
+            [
+              25.00424,
+              125.49825
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮古島」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_05061112miyakojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG51_1218ishigakijima",
+          "title": "20万分の1地質図幅「石垣島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG51_1218ishigakijima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              24.00406,
+              122.91039
+            ],
+            [
+              24.67084,
+              124.49856
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石垣島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_1218ishigakijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG51_16uotsurijima",
+          "title": "20万分の1地質図幅「魚釣島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG51_16uotsurijima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              25.33721,
+              122.9983
+            ],
+            [
+              26.00412,
+              123.99832
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「魚釣島」（2008年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_16uotsurijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG52_131920tokunoshima",
+          "title": "20万分の1地質図幅「徳之島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG52_131920tokunoshima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              27.30387,
+              128.13126
+            ],
+            [
+              28.00394,
+              129.0647
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳之島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_131920tokunoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NG52_2733kumejima",
+          "title": "20万分の1地質図幅「久米島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NG52_2733kumejima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              26.00411,
+              126.49802
+            ],
+            [
+              26.67076,
+              127.49793
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久米島」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_2733kumejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_0309yakushima",
+          "title": "20万分の1地質図幅「屋久島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_0309yakushima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              30.00371,
+              129.99764
+            ],
+            [
+              30.67038,
+              131.08076
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「屋久島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_0309yakushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gsjGeomap_G200_NH52_18amamioshima",
+          "title": "20万分の1地質図幅「奄美大島」",
+          "url": "https://gbank.gsj.jp/geonavi/maptile/wmts/1.0.0/G200_NH52_18amamioshima/default/EPSG900913/{z}/{y}/{x}.png",
+          "cocotile": false,
+          "minZoom": 6,
+          "maxZoom": 12,
+          "bounds": [
+            [
+              27.99202,
+              128.99777
+            ],
+            [
+              28.67058,
+              130.05774
+            ]
+          ],
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「奄美大島」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_18amamioshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)産総研地質調査総合センター</div>"
+        }
+      ]
+    }
+  ]
+}

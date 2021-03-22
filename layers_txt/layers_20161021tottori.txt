@@ -1,0 +1,62 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "20161021tottori_epicenter",
+      "title": "震央",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/092.png",
+      "url": "https://maps.gsi.go.jp/xyz/20161021tottori_epicenter/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "Layer",
+      "id": "20161021tottori_faultmodel",
+      "title": "震源断層モデル",
+      "url": "https://maps.gsi.go.jp/overlay/161021tottori/20161021tottori_faultmodel.kml",
+      "minZoom": 2,
+      "maxZoom": 16,
+      "html": "平成28年10月21日、鳥取県中部で発生した地震において、SAR（だいち 2 号）及び GNSS で観測された地殻変動から推定した震源断層モデルです。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000147191.pdf\">解説</a>"
+    },
+    {
+      "type": "Layer",
+      "id": "20161021tottori_1022dol",
+      "title": "正射画像（10/22撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20161021tottori_1022dol/{z}/{x}/{y}.png",
+      "cocotile": false,
+      "minZoom": 10,
+      "maxZoom": 18,
+      "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20161021tottori_1022suichokul",
+      "title": "垂直写真（10/22撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+      "url": "https://maps.gsi.go.jp/xyz/20161021tottori_1022suichokul/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "Layer",
+      "id": "20161021tottori_1022uav",
+      "title": "UAV動画（10/22撮影）",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/189.png",
+      "url": "https://maps.gsi.go.jp/xyz/20161021tottori_1022uav/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_201610tottori.txt"
+    }
+  ]
+}

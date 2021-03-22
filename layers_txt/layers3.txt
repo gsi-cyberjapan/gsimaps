@@ -1,0 +1,2241 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "土地の成り立ち・土地利用",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/tochijoken.png",      
+      "html" : "<div class='layer_text'>地形や活断層、火山、土地利用など、様々な観点で土地の特徴を表した地図などを閲覧できます。</div>",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "活断層図",
+          "toggleall": false,
+          "html" : "<div class='layer_text'><p>活断層の位置などを表した地図です。</p></div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "afm",
+              "title": "活断層図（都市圏活断層図）",
+              "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000153506.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "afm_spec",
+              "title": "諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "火山基本図・火山基本図データ",
+          "html" : "<div class='layer_text'><p>火山の精密な等高線や火山防災施設などを示した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "vbmd_bm",
+              "title": "火山基本図データ（基図）",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（基図）　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\" target=\"_blank\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><form name=\"vbmd_bm_legend\"><select name=\"vbmd_bm_select\" ><option value=\"l_vbmd_bm_esan\">恵山</option><option value=\"l_vbmd_bm_iwate\">岩手山</option><option value=\"l_vbmd_bm_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbmd_bm_chokai\">鳥海山</option><option value=\"l_vbmd_bm_kurikoma\">栗駒山</option><option value=\"l_vbmd_bm_azuma\">吾妻山</option><option value=\"l_vbmd_bm_nikkoshirane\">日光白根山</option><option value=\"l_vbmd_bm_kusatsushirane\">草津白根山</option><option value=\"l_vbmd_bm_hakone\">箱根山</option><option value=\"l_vbmd_bm_nishinoshima\">西之島</option><option value=\"l_vbmd_bm_niijima\">新島</option><option value=\"l_vbmd_bm_hachijojima\">八丈島</option><option value=\"l_vbmd_bm_niigatayakeyama\">新潟焼山</option><option value=\"l_vbmd_bm_midagahara\">弥陀ヶ原</option><option value=\"l_vbmd_bm_yakedake\">焼岳</option><option value=\"leg_vbm29_bm\">乗鞍岳</option><option value=\"l_vbmd_bm_aso\">阿蘇山</option><option value=\"leg_vbm45_bm\">雲仙岳</option><option value=\"l_vbmd_bm_kirishimayama\">霧島山</option><option value=\"l_vbmd_bm_sakurajima\">桜島</option><option value=\"l_vbmd_bm_kuchinoerabujima\">口永良部島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_bm_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_colorrel",
+              "title": "火山基本図データ（陰影段彩図）",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（陰影段彩図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><form name=\"vbmd_relieaf_legend\"><select name=\"vbmd_relief_select\" ><option value=\"l_vbmd_relief_iwate\">岩手山</option><option value=\"l_vbmd_relief_akitakoma\">秋田駒ケ岳</option><option value=\"l_vbmd_relief_chokai\">鳥海山</option><option value=\"l_vbmd_relief_azuma\">吾妻山</option><option value=\"l_vbmd_relief_nikkoshirane\">日光白根山</option><option value=\"l_vbmd_relief_kusatsushirane\">草津白根山</option><option value=\"l_vbmd_relief_nishinoshima\">西之島</option><option value=\"l_vbmd_relief_niijima\">新島</option><option value=\"l_vbmd_relief_hachijojima\">八丈島</option><option value=\"l_vbmd_relief_niigatayakeyama\">新潟焼山</option><option value=\"l_vbmd_relief_midagahara\">弥陀ヶ原</option><option value=\"l_vbmd_relief_yakedake\">焼岳</option><option value=\"leg_vbm29_colorrel\">乗鞍岳</option><option value=\"l_vbmd_relief_aso\">阿蘇山</option><option value=\"leg_vbm45_colorrel\">雲仙岳</option><option value=\"l_vbmd_relief_kirishimayama\">霧島山</option><option value=\"l_vbmd_relief_sakurajima\">桜島</option><option value=\"l_vbmd_relief_kuchinoerabujima\">口永良部島</option></select><input type=\"button\" value=\"標高表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_relief_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_pm",
+              "title": "火山基本図データ（写真地図）",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（写真地図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbm",
+              "title": "火山基本図",
+              "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 17,
+              "html": "<div class=\"gsi_layerinfo_title\">火山基本図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_meakan\">雌阿寒岳</option><option value=\"l_vbm_tokachi\">十勝岳</option><option value=\"l_vbm_tarumae\">樽前山</option><option value=\"l_vbm_usu\">有珠山</option><option value=\"l_vbm_hokkaidokoma\">北海道駒ヶ岳</option><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_asama\">浅間山</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_izuoshima\">伊豆大島</option><option value=\"l_vbm_miyake\">三宅島</option><option value=\"l_vbm_ontake\">御獄山</option><option value=\"l_vbm_tsurumi\">鶴見岳</option><option value=\"l_vbm_kujyu\">くじゅう連山</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option><option value=\"l_vbm_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "火山土地条件図・火山地形分類データ",
+          "html" : "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "火山地形分類データ",
+              "html": "<div class='layer_text'><p>火山土地条件図の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "vlcd_meakan",
+                  "title": "火山地形分類データ（雌阿寒岳・雄阿寒岳）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_meakan/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 43.384653,
+                    "lng" : 144.011879,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「雌阿寒岳・雄阿寒岳」（平成19・20年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_tokachi",
+                  "title": "火山地形分類データ（十勝岳）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_tokachi/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 15,
+                  "area" : {
+                    "lat" : 43.424188,
+                    "lng" : 142.676353,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「十勝岳」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_tarumae",
+                  "title": "火山地形分類データ（樽前山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_tarumae/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 42.689312,
+                    "lng" : 141.376019,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「樽前山」（平成11年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_usu",
+                  "title": "火山地形分類データ（有珠山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_usu/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 42.540623,
+                    "lng" : 140.833912,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「有珠山」（平成10年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_hokoma",
+                  "title": "火山地形分類データ（北海道駒ヶ岳）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_hokoma/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 42.065798,
+                    "lng" : 140.685768,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「北海道駒ヶ岳」（平成5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_iwate",
+                  "title": "火山地形分類データ（岩手山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_iwate/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 39.849601,
+                    "lng" : 140.997677,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「岩手山」（平成23・24年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_akitayake",
+                  "title": "火山地形分類データ（秋田焼山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 39.967188,
+                    "lng" : 140.761814,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「秋田焼山」（平成27年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_akitakoma",
+                  "title": "火山地形分類データ（秋田駒ヶ岳）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 39.754911,
+                    "lng" : 140.797348,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「秋田駒ヶ岳」（平成26年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_chokai",
+                  "title": "火山地形分類データ（鳥海山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 39.099227,
+                    "lng" : 140.034485,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「鳥海山」（平成28、29年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_kurikoma",
+                  "title": "火山地形分類データ（栗駒山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 38.964948,
+                    "lng" : 140.781727,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「栗駒山」（平成22年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_adatara",
+                  "title": "火山地形分類データ（安達太良山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_adatara/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 37.628304,
+                    "lng" : 140.283222,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「安達太良山」（平成17・18年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_bandai",
+                  "title": "火山地形分類データ（磐梯山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_bandai/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 37.607228,
+                    "lng" : 140.078602,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「磐梯山」（平成12・13年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_kusatsu",
+                  "title": "火山地形分類データ（草津白根山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_kusatsu/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 36.637088,
+                    "lng" : 138.539658,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「草津白根山」（平成2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_niigatayake",
+                  "title": "火山地形分類データ（新潟焼山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 36.921009,
+                    "lng" : 138.036690,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「新潟焼山」（平成25年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_ontake",
+                  "title": "火山地形分類データ（御嶽山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_ontake/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 35.895099,
+                    "lng" : 137.485313,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「御嶽山」（平成21・22年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_fuji",
+                  "title": "火山地形分類データ（富士山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_fuji/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 35.362386,
+                    "lng" : 138.731232,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「富士山」（平成14・15年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_hakone",
+                  "title": "火山地形分類データ（箱根山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_hakone/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 35.234596,
+                    "lng" : 139.022133,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「箱根山」（令和元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_izuo",
+                  "title": "火山地形分類データ（伊豆大島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_izuo/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 34.729128,
+                    "lng" : 139.396248,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「伊豆大島」（平成16・17年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_miyake",
+                  "title": "火山地形分類データ（三宅島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_miyake/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 34.082308,
+                    "lng" : 139.526539,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「三宅島」（平成6年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_kuju",
+                  "title": "火山地形分類データ（くじゅう連山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_kuju/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 33.089456,
+                    "lng" : 131.244049,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「くじゅう連山」（平成18・19年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_aso",
+                  "title": "火山地形分類データ（阿蘇山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_aso/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 32.883119,
+                    "lng" : 131.088524,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「阿蘇山」（平成4年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_unzen",
+                  "title": "火山地形分類データ（雲仙岳）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_unzen/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 32.757758,
+                    "lng" : 130.304718,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「雲仙岳」（平成8年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_kiri",
+                  "title": "火山地形分類データ（霧島山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_kiri/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 31.911006,
+                    "lng" : 130.883217,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「霧島山」（平成7・9年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_sakura",
+                  "title": "火山地形分類データ（桜島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_sakura/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 31.585189,
+                    "lng" : 130.657139,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「桜島」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_satsumaio",
+                  "title": "火山地形分類データ（薩摩硫黄島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumaio/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 30.791470,
+                    "lng" : 130.303173,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_satsumatake",
+                  "title": "火山地形分類データ（薩摩竹島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumatake/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 30.810638,
+                    "lng" : 130.426426,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                }
+              ]
+            },
+            {
+              "type": "Layer",
+              "id": "vlcd",
+              "title": "火山土地条件図",
+              "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "html": "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。</p></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"l_vlcd_chokai\">鳥海山</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_hakone\">箱根山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "土地条件図",
+          "html" : "<div class='layer_text'><p>土地を形態、成り立ちなどによって、地形分類（山地、台地・段丘、低地、水部、人工地形など）した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "lcm25k_2012",
+              "title": "数値地図25000（土地条件）",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcm25k",
+              "title": "初期整備版",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcm25k_spec",
+              "title": "初期整備版 諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "沿岸海域土地条件図",
+          "html" : "<div class='layer_text'><p>沿岸部の地形や水深などを表した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "ccm1",
+              "title": "平成元年以降",
+              "url": "https://maps.gsi.go.jp/xyz/ccm1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/CCM2_hanrei.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "ccm2",
+              "title": "昭和63年以前",
+              "url": "https://maps.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/CCM1_hanrei.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "治水地形分類図",
+          "html" : "<div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "lcmfc2",
+              "title": "更新版(2007～2020年)",
+              "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2020年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcmfc1",
+              "title": "初版(1976～1978年)",
+              "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
+              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/bousaichiri41053.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "地形分類（ベクトルタイル提供実験）",
+          "html" : "<div class='layer_text'>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification1",
+              "title": "地形分類（自然地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification2",
+              "title": "地形分類（人工地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地図上をクリックすると「切土地」「盛土地」などが分かります。</p></div>数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "土地分類基本調査（土地履歴調査）－国土政策局",
+          "html" : "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
+          "toggleall": false,
+          "src": "./layers_tochibunrui.txt"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "地質図－産総研地質調査総合センター",
+          "html" : "<div class='layer_text'><p>全国の地質図を表示します。</p></div>",
+          "toggleall": false,
+          "src": "./layers_gsj.txt"
+        },
+        {
+          "type": "Layer",
+          "id": "swale",
+          "title": "明治期の低湿地",
+          "url": "https://maps.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "toggleall": false,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lw_legend.pdf",
+          "html": "<div class='layer_text'><p>明治期の地図から、当時の低湿地の分布を示した地図です。土地の液状化と関連が深いと考えられる区域を確認できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "湖沼図・湖沼データ",
+          "html" : "<div class='layer_text'>湖沼の地形（深さ、起伏）や植生などを示した地図です。</div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "lakedata",
+              "title": "湖沼データ",
+              "url": "https://maps.gsi.go.jp/xyz/lakedata/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 18,
+              "legendUrl": "https://maps.gsi.go.jp/legend/lakedata.pdf",
+              "html": "<script>function lakedatajmp(zbl){var zbl_a = zbl.split('/');GSI.GLOBALS.map.setView([zbl_a[1],zbl_a[2]],zbl_a[0]);}</script><div class=\"gsi_layerinfo_title\">湖沼データ　<a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/gsilake.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\">（注）湖岸線等は湖沼調査時点のものであり電子地形図と異なる場合があります。</div><form name=\"lakedatajump\"><select name=\"lakedataselect\" onchange=\"lakedatajmp(this.form.lakedataselect.value) \"><option value=\"\" disabled selected style='display:none;'>---選択して下さい---</option><option value=\"16/43.969917/144.175934/\">網走湖（北海道,平成25・26年改測）</option><option value=\"16/45.065595/141.705812/\">ペンケ沼（北海道，平成17年測量）</option><option value=\"16/45.031485/141.717292/\">パンケ沼（北海道，平成17年測量）</option><option value=\"16/43.930323/144.395475/\">涛沸湖（北海道，平成3年測量）</option><option value=\"16/43.959654/144.323900/\">藻琴湖（北海道，平成3年測量）</option><option value=\"16/43.579019/144.537005/\">摩周湖（北海道，昭和61年測量）</option><option value=\"16/43.278847/143.113321/\">然別湖（北海道，平成18年測量）</option><option value=\"16/43.249907/145.517381/\">温根沼（北海道，平成21年測量）</option><option value=\"16/43.044068/145.006174/\">火散布沼（北海道，平成16年測量）</option><option value=\"16/43.182367/144.494462/\">シラルトロ沼（北海道，平成12年測量）</option><option value=\"16/43.145517/144.541025/\">塘路湖（北海道，平成4年測量）</option><option value=\"16/43.106161/144.483862/\">達古武湖（北海道，平成4年測量）</option><option value=\"16/42.697987/141.709149/\">ウトナイ湖（北海道，平成12年測量）</option><option value=\"16/42.503119/141.178790/\">倶多楽湖（北海道，昭和53年測量）</option><option value=\"16/40.857359/141.322246/\">内沼（青森県，昭和39年測量）</option><option value=\"16/40.774968/141.332041/\">小川原湖（青森県，平成26・27年改測）</option><option value=\"16/40.711256/141.332985/\">姉沼（青森県，昭和39年測量）</option><option value=\"16/39.912244/140.040329/\">八郎潟調整池（秋田県，昭和63年測量）</option><option value=\"16/39.718920/140.666556/\">田沢湖（秋田県，昭和41年測量）</option><option value=\"16/38.718248/141.102862/\">伊豆沼（宮城県，平成9年測量）</option><option value=\"16/38.711408/141.075203/\">内沼（宮城県，平成9年測量）</option><option value=\"16/38.424966/141.396800/\">万石浦（宮城県，平成24年改測）</option><option value=\"16/37.657172/140.121067/\">秋元湖（福島県，平成3年改測）</option><option value=\"16/37.670947/140.095489/\">小野川湖（福島県，平成3年改測）</option><option value=\"16/36.737126/139.457754/\">中禅寺湖（栃木県，昭和45年測量）</option><option value=\"16/35.998077/140.582943 /\">北浦（茨城県，平成8年改測）</option><option value=\"16/35.913028/140.601590/\">外浪逆浦（茨城県・千葉県，平成8年改測）</option><option value=\"16/36.020963/140.413513/\">霞ヶ浦（茨城県，昭和63-平成3年修正）</option><option value=\"16/35.946692/140.128920/\">牛久沼（茨城県，平成7年測量）</option><option value=\"16/35.792858/140.247710/\">北印旛沼（千葉県，平成5年測量）</option><option value=\"16/35.746338/140.191190/\">西印旛沼（千葉県，平成4年測量）</option><option value=\"16/35.216192/139.006297/\">芦ノ湖（神奈川県，昭和46年測量）</option><option value=\"16/36.365000/136.441000/\">木場潟（石川県，平成20年測量）</option><option value=\"16/36.350907/136.372390/\">柴山潟（石川県，平成20年測量）</option><option value=\"16/36.269907/136.240093/\">北潟湖（石川県・福井県，平成19年測量）</option><option value=\"16/36.648769/136.674349/\">河北潟（石川県，平成元年測量）</option><option value=\"14/35.583897/135.888262/\">三方五湖（福井県，昭和55年測量）</option><option value=\"16/35.517033/138.754985/\">河口湖（山梨県，平成30年改測）</option><option value=\"16/35.498500/138.686267/\">西湖（山梨県，平成24年改測）</option><option value=\"16/35.490079/138.607947/\">精進湖（山梨県，平成30年改測）</option><option value=\"16/36.827489/138.222198/\">野尻湖（長野県，平成10年測量）</option><option value=\"16/35.567090/135.173142/\">阿蘇海（京都府，昭和59年測量）</option><option value=\"16/35.624076/134.907238/\">久美浜湾（京都府，昭和59年測量）</option><option value=\"16/35.508020/134.149890/\">湖山池（鳥取県，昭和57年測量）</option><option value=\"16/35.477010/133.891003/\">東郷池（鳥取県，昭和57年測量）</option><option value=\"16/35.453215/132.936984/\">宍道湖（島根県，平成28・29年改測）</option></select></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lake1",
+              "title": "湖沼図",
+              "url": "https://maps.gsi.go.jp/xyz/lake1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 17,
+              "legendUrl": "https://maps.gsi.go.jp/legend/LAKE_beforeH2.png",
+              "html": "<script>function lake1jmp(zbl){var zbl_a = zbl.split('/');GSI.GLOBALS.map.setView([zbl_a[1],zbl_a[2]],zbl_a[0]);}</script><div class=\"gsi_layerinfo_title\">湖沼図　<a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/gsilake.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\">（注）湖岸線等は湖沼調査時点のものであり電子地形図と異なる場合があります。</div><form name=\"lake1jump\"><select name=\"lake1select\" onchange=\"lake1jmp(this.form.lake1select.value) \"><option value=\"\" disabled selected style='display:none;'>---選択して下さい---</option><option value=\"16/45.143075/142.335119/\">クッチャロ湖(大沼)（昭和60年測量）</option><option value=\"16/45.154356/142.271544/\">クッチャロ湖(小沼)（昭和62年測量）</option><option value=\"16/45.275830/142.207867/\">ポロ沼（昭和62年測量）</option><option value=\"16/44.112871/143.783782/\">サロマ湖（昭和46-49年測量）</option><option value=\"16/44.033200/144.149648/\">能取湖（昭和52年測量）</option><option value=\"16/44.265301/143.497120/\">コムケ湖（昭和53年測量）</option><option value=\"16/43.285602/145.325925/\">風蓮湖（昭和54・56年測量）</option><option value=\"16/43.649138/144.289419/\">屈斜路湖（昭和45・46年測量）</option><option value=\"16/43.042179/144.856646/\">厚岸湖（昭和50年測量）</option><option value=\"16/43.455504/144.097762/\">阿寒湖（昭和53年測量）</option><option value=\"16/42.768017/141.372594/\">支笏湖（昭和42・43年測量）</option><option value=\"16/42.589875/140.812997/\">洞爺湖（昭和43・44年測量）</option><option value=\"16/41.999034/140.688493/\">大沼（昭和58年測量）</option><option value=\"16/41.973849/140.657970/\">小沼 （昭和58年測量）</option><option value=\"16/40.475607/140.888779/\">十和田湖（昭和38・39年測量）</option><option value=\"16/41.019485/140.351200/\">十三湖（昭和55年測量）</option><option value=\"16/38.184582/140.963044/\">井土浦（昭和58年測量）</option><option value=\"16/38.033514/140.909374/\">鳥の海（昭和58年測量）</option><option value=\"16/37.503326/140.129753/\">猪苗代湖（昭和41・42年測量）</option><option value=\"16/37.688230/140.045450/\">桧原湖（昭和42年測量）</option><option value=\"16/35.418066/138.874333/\">山中湖（昭和38年測量）</option><option value=\"16/35.463886/138.586521/\">本栖湖（昭和39年測量）</option><option value=\"16/36.048023/138.083339/\">諏訪湖（昭和40年測量）</option><option value=\"16/34.723273/137.566037/\">浜名湖（昭和40・41年測量）</option><option value=\"16/34.784201/137.556789/\">猪鼻湖（昭和40・41年測量）</option><option value=\"16/35.124209/135.936713/\">琵琶湖（昭和48・51年部分修正）</option><option value=\"16/35.523180/136.193819/\">余呉湖（昭和36年測量）</option><option value=\"16/35.521093/133.178469/\">中海（昭和37・38年測量）</option><option value=\"16/31.236766/130.561695/\">池田湖（昭和47年測量）</option><option value=\"16/31.222546/130.604224/\">鰻池（昭和47年測量）</option></select></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lakedata_spec",
+              "title": "諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/lakedata_spec/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 15,
+              "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/kankyochiri/koshouchousa-list.html\" target=\"_blank\">調査実施湖沼一覧</a>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "日本の典型地形",
+          "html" : "<div class='layer_text'><p>日本の代表的な地形の位置を表示しています。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "tenkei_chikaku",
+              "title": "地殻の変動による地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_chikaku/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（地殻の変動による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_chikaku.html\">こちら</a></div><br>地形項目：<br>構造盆地、地震断層、活断層崖(横ずれ含む) 、その他の断層崖、撓曲崖、活褶曲、衝上断層、断層湖、堰止湖、隆起波食棚、隆起海食洞、隆起サンゴ礁、二重山稜・線状凹地、地割れ、噴砂現象<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_kazan",
+              "title": "火山の活動による地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_kazan/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（火山の活動による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_kazan.html\">こちら</a></div><br>地形項目：<br>成層火山、火山岩尖、溶岩円頂丘、火山砕屑丘、寄生火山（側火山）、火口、爆裂火口、カルデラ、火口湖、カルデラ湖・火口原湖、溶岩流、溶岩台地、火山性高原、火砕流台地、火砕流凹地、火山麓扇状地、流れ山（泥流丘）、堰止湖、溶岩末端崖、溶岩トンネル、枕状溶岩、溶岩樹型、泥火山・噴泉塔、火山岩頸<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_chishitsu",
+              "title": "地質を反映した地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_chishitsu/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（地質を反映した地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_chishitsu.html\">こちら</a></div><br>地形項目：<br>カルスト台地、カッレンフェルト、ドリーネ、ウバーレ、ポリエ、鍾乳洞、石灰華段丘、石灰華ドーム、円錐カルスト、塔状カルスト、沈水カルスト、平頂峰（キャップロック）、メサ、ビュート、ケスタ、非対称谷、残丘、花崗岩ドーム、岩峰・岩峰群、奇岩怪石・巨石群、天然橋・岩門・石門、柱状節理・板状節理、バッドランド、地すべり地、地すべりによって生じた凹地，池、千枚田、蜂の巣状構造<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_kasen",
+              "title": "河川の作用による地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_kasen/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（河川の作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_kasen.html\">こちら</a></div><br>地形項目：<br>峡谷、懸谷、滝及び滝壺、ナメ・淵、甌穴群（ポットホール）、土柱、穿入蛇行、還流丘陵、河川争奪地形、風隙、谷中分水界、堰止湖、湖岸段丘、谷底平野、谷戸（谷津・谷地）、埋積谷、河岸段丘及び段丘崖、 瀞、瀬、扇状地、沖積錐、合流扇状地、網状流、天井川、水無川、湧泉・湧泉群、自然河川、自由蛇行（自然蛇行）、自然堤防、旧河道、後背湿地、河畔砂丘、三日月湖、落堀（押堀）、三角州、延長川、マッドランプ、残丘<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_umi",
+              "title": "海の作用による地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_umi/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（海の作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_umi.html\">こちら</a></div><br>地形項目：<br>多島海、リアス式海岸（溺れ谷）、岩石海岸、波食棚、海食台、鬼の洗濯岩、海成段丘、海食崖、海食洞、ノッチ、潮吹き穴、きのこ岩、甌穴群（ポットホール）、岩礁、砂浜、浜堤、砂州、砂嘴、トンボロ及び陸繋島、砂紋、砂丘・風紋、砂丘間湖、三稜石、潟湖（ラグーン）、干潟、マングローブ湿地、サンゴ礁、礁湖、ビーチロック、サーフベンチ、津波石<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_hyoga",
+              "title": "氷河・周氷河作用による地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_hyoga/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（氷河・周氷河作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_hyoga.html\">こちら</a></div><br>地形項目：<br>カール、氷食による岩壁、アレート、氷食尖峰、氷食谷、羊背岩、モレーン、周氷河性波状地、デレ、化石周氷河現象、岩塊流、岩石氷河、化石構造土、クリオペディメント、麓屑面、永久凍土、パルサ、構造土、アースハンモック、谷地坊主、雪食凹地、ペイブメント、風食裸地、アバランチシュート、非対称山稜、非対称谷<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "tenkei_sonota",
+              "title": "その他の地形",
+              "url": "https://maps.gsi.go.jp/xyz/tenkei_sonota/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（その他の地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_sonota.html\">こちら</a></div><br>地形項目：<br>隆起準平原、準平原遺物、鋸歯状山稜、キレット、大規模崩壊地、崩壊地、崩壊堆積地形、土石流堆積地形、崖錐、風穴、ペディメント、鉄穴流し跡、高層湿原・池塘、中間湿原、低層湿原、湖沼、堰止湖、厚い段丘礫層、地層等の見える大露頭、指標テフラの見える露頭、断層露頭、不整合露頭<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "宅地利用動向調査",
+          "html" : "<div class='layer_text'><p>三大都市圏の年代別の土地利用を示した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "首都圏",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital2005",
+                  "title": "2005年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital2005/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(2005年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital2000",
+                  "title": "2000年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital2000/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(2000年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital1994",
+                  "title": "1994年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital1994/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(1994年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital1989",
+                  "title": "1989年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital1989/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(1989年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital1984",
+                  "title": "1984年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital1984/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(1984年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital1979",
+                  "title": "1979年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital1979/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(1979年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_capital1974",
+                  "title": "1974年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_capital1974/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">首都圏</div><div class=\"gsi_layerinfo_subtitle\">(1974年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "中部圏",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu2003",
+                  "title": "2003年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu2003/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(2003年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu1997",
+                  "title": "1997年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu1997/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1997年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu1991",
+                  "title": "1991年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu1991/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1991年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu1987",
+                  "title": "1987年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu1987/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1987年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu1982",
+                  "title": "1982年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu1982/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1982年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_chubu1977",
+                  "title": "1977年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_chubu1977/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">中部圏</div><div class=\"gsi_layerinfo_subtitle\">(1977年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "近畿圏",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki2008",
+                  "title": "2008年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(2008年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki2001",
+                  "title": "2001年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki2001/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(2001年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki1996",
+                  "title": "1996年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki1996/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1996年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki1991",
+                  "title": "1991年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki1991/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1991年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki1985",
+                  "title": "1985年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki1985/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1985年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki1979",
+                  "title": "1979年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki1979/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1979年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "lum4bl_kinki1974",
+                  "title": "1974年",
+                  "url": "https://maps.gsi.go.jp/xyz/lum4bl_kinki1974/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1974年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Layer",
+          "id": "lum200k",
+          "title": "20万分１土地利用図（1982～1983年）",
+          "url": "https://maps.gsi.go.jp/xyz/lum200k/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 11,
+          "maxZoom": 14,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lum200k_legend.jpg",
+          "html": "<div class='layer_text'><p>1982～83年に作成した、全国の当時の土地利用を表した地図です。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-200k.html\">解説</a></div>"
+        },
+        {
+          "type": "LayerGroup",
+          "title": "全国植生指標データ（250m）",
+          "html" : "<div class='layer_text'><p>衛星データから作成した植物の量や活力を表した地図です。緑に近いほど植物の量や活力が高いと考えられます。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "2012年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2012_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2012_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2012年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2011年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2011_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2011_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2011年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2010年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2010_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2010_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2010年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2009年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2009_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2009_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2009年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2008年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2008_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2008_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2008年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2007年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2007_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2007_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2007年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2006年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2006_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2006_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2005年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_03",
+                  "title": "3月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_03/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年3月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_02",
+                  "title": "2月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_02/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2005_01",
+                  "title": "1月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2005_01/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2005年1月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2004年",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_12",
+                  "title": "12月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_12/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年12月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_11",
+                  "title": "11月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_11/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年11月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_10",
+                  "title": "10月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_10/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年10月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_09",
+                  "title": "9月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_09/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年9月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_08",
+                  "title": "8月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_08/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年8月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_07",
+                  "title": "7月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_07/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年7月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_06",
+                  "title": "6月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_06/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年6月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_05",
+                  "title": "5月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_05/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年5月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "ndvi_250m_2004_04",
+                  "title": "4月",
+                  "url": "https://maps.gsi.go.jp/xyz/ndvi_250m_2004_04/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 3,
+                  "maxZoom": 10,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2004年4月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

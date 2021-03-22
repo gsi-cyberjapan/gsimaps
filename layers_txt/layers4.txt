@@ -1,0 +1,279 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "基準点・地磁気・地殻変動",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/sankakuten.jpg",            
+      "html" : "<div class='layer_text'>すべての測量の基礎となる基準点などの情報を閲覧できます。</div>",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "cp",
+          "title": "基準点",
+          "url": "https://maps.gsi.go.jp/xyz/cp/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 12,
+          "html": "<div class='layer_text'><p>三角点、水準点、電子基準点等の基準点の位置を表示します。</p></div><div class=\"gsi_layerinfo_title\">基準点の配点図</div><table border=\"1\" cellspacing=\"0\" bordercolor=\"#000000\"><tr><td></td><td>成果正常</td><td>成果公表停止</td><td>表示ズーム</td></tr><tr><td>電子基準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/476.png\" alt=\"電子基準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/476_None.png\" alt=\"電子基準点（成果停止）\" width=\"20\" height=\"20\"></td><td>7～18</td></tr><tr><td>一等三角点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/201.png\" alt=\"一等三角点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/201_None.png\" alt=\"一等三角点（成果停止）\" width=\"20\" height=\"20\"></td><td>8～18</td></tr><tr><td>二等三角点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/202.png\" alt=\"二等三角点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/202_None.png\" alt=\"二等三角点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>三等三角点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/203.png\" alt=\"三等三角点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/203_None.png\" alt=\"三等三角点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>四等三角点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/204.png\" alt=\"四等三角点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/204_None.png\" alt=\"四等三角点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>基準水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206.png\" alt=\"基準水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206_None.png\" alt=\"基準水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>一等水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206.png\" alt=\"一等水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206_None.png\" alt=\"一等水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>二等水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/207.png\" alt=\"二等水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/207_None.png\" alt=\"二等水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>一等道路水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206.png\" alt=\"一等道路水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206_None.png\" alt=\"一等道路水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>二等道路水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/207.png\" alt=\"二等道路水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/207_None.png\" alt=\"二等道路水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><tr><td>準基準水準点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206.png\" alt=\"準基準水準点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206_None.png\" alt=\"準基準水準点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr><tr><td>一等水準交差点</td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206.png\" alt=\"一等水準交差点（正常）\" width=\"20\" height=\"20\"></td><td><img src=\"//maps.gsi.go.jp/portal/sys/v4/symbols/206_None.png\" alt=\"一等水準交差点（成果停止）\" width=\"20\" height=\"20\"></td><td>12～18</td></tr></table>詳しい情報:<a href=\"http://sokuseikagis1.gsi.go.jp/\" target='_blank'>基準点成果等閲覧サービス</a></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "regmos",
+          "title": "REGMOS",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+          "url": "https://maps.gsi.go.jp/xyz/regmos/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class='layer_text'><p>火山周辺の地殻変動を捉えるために設置された<a href=\"http://www.gsi.go.jp/kidou/regmos.html\"  target='_blank'>REGMOS</a>の位置を表示します。</p></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "kenchou",
+          "title": "験潮場（海岸昇降検知センター登録）",
+          "url": "https://maps.gsi.go.jp/xyz/kenchou/{z}/{x}/{y}.geojson",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "html": "<div class='layer_text'><p>＜海岸昇降検知センター登録験潮場＞<br/>国土地理院、気象庁、海上保安庁、国交省等の験潮場<br/>験潮記録から地殻変動を検知しています</p></div><div class=\"gsi_layerinfo_kaisetu\"><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/655.png' alt='国土地理院'>　国土地理院<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/657.png' alt='気象庁'>　気象庁<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/659.png' alt='海上保安庁'>　海上保安庁<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/661.png' alt='東京大学地震研究所'>　東京大学地震研究所<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/663.png' alt='北海道開発局・沖縄総合事務局'>　北海道開発局・沖縄総合事務局<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/665.png' alt='地方整備局'>　地方整備局<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/667.png' alt='港湾空港技術研究所'>　港湾空港技術研究所<br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/669.png' alt='県・その他'>　県・その他</div>"
+        },
+		{
+		"type": "LayerGroup",
+		"title": "磁気図",
+		"html": "<div class='layer_text'><p>全国の磁場の分布を表した地図です。</p></div>",
+		"toggleall": false,
+		"entries": [
+			{
+			"type": "LayerGroup",
+			"title": "磁気図2015.0年値",
+			"html": "<div class='layer_text'><p>全国の磁場の分布を表した地図です。（2015年1月1日時点の磁気図）</p></div>",          "toggleall": false,
+			"entries": [
+				{
+				"type": "Layer",
+				"id": "jikizu2015_chijiki_d",
+				"title": "磁気図（偏角）／偏角一覧図",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_d/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": "4",
+				"maxZoom": "13",
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（偏角）2015.0年値／偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における偏角（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br>ズームレベル9～13まで拡大すると2次メッシュに対応した偏角値が表示されます（偏角一覧図）。<br><br>※偏角：真北と磁北のなす角度（西偏○度）<br><br><凡例><br>黒線：1度ごと<br>白線：10分ごと<br><br>【参考】<br>偏角の電子データ（二次メッシュ）が欲しい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/menu03_magnetic_chart.html#menu02\">地磁気データ提供サービス</a>へ<br>任意の地点の偏角を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu2015_chijiki_i",
+				"title": "磁気図（伏角）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_i/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": "4",
+				"maxZoom": "8",
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（伏角）2015.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における伏角（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br><br>※伏角：全磁力と水平面のなす角度（下向きを正）<br><br><凡例><br>黒線：1度ごと<br>白線：10分ごと<br><br>【参考】<br>任意の地点の伏角を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu2015_chijiki_f",
+				"title": "磁気図（全磁力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_f/{z}/{x}/{y}.png",
+				"cocotile":true,
+				"minZoom": "4",
+				"maxZoom": "8",
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（全磁力）2015.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における全磁力（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br><br>※全磁力：地磁気の強さ<br><br><凡例><br>黒線：1000nTごと<br>白線：100nTごと<br><br>【参考】<br>任意の地点の全磁力を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu2015_chijiki_h",
+				"title": "磁気図（水平分力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_h/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": "4",
+				"maxZoom": "8",
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（水平分力）2015.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における水平分力（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br><br>※水平分力：水平面内の地磁気の強さ<br><br><凡例><br>黒線：1000nTごと<br>白線：100nTごと<br><br>【参考】<br>任意の地点の水平分力を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu2015_chijiki_z",
+				"title": "磁気図（鉛直分力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_z/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": "4",
+				"maxZoom": "8",
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（鉛直分力）2015.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における鉛直分力（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br><br>※鉛直分力：鉛直面内の地磁気の強さ<br><br><凡例><br>黒線：1000nTごと<br>白線：100nTごと<br><br>【参考】<br>任意の地点の鉛直分力を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				}
+				]
+				},
+			{
+			"type": "LayerGroup",
+			"title": "磁気図2010.0年値",
+			"html": "<div class='layer_text'><p>全国の磁場の分布を表した地図です。（2010年1月1日時点の磁気図）</p></div>",
+			"toggleall": false,
+			"entries": [
+				{
+				"type": "Layer",
+				"id": "jikizu_chijiki_d",
+				"title": "磁気図（偏角）／偏角一覧図",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu_chijikid/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": 4,
+				"maxZoom": 13,
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（偏角）2010.0年値／偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、偏角の分布を図に表したものです。<br/>拡大すると2次メッシュに対応した偏角値（偏角一覧図）が確認できます。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu_chijiki_i",
+				"title": "磁気図（伏角）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu_chijikii/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": 4,
+				"maxZoom": 7,
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（伏角）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1度ごと<br/>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu_chijiki_f",
+				"title": "磁気図（全磁力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu_chijikif/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": 4,
+				"maxZoom": 7,
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（全磁力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、全磁力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu_chijiki_h",
+				"title": "磁気図（水平分力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu_chijikih/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": 4,
+				"maxZoom": 7,
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（水平分力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、水平分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				},
+				{
+				"type": "Layer",
+				"id": "jikizu_chijiki_z",
+				"title": "磁気図（鉛直分力）",
+				"url": "https://maps.gsi.go.jp/xyz/jikizu_chijikiz/{z}/{x}/{y}.png",
+				"cocotile": true,
+				"minZoom": 4,
+				"maxZoom": 7,
+				"html": "<div class=\"gsi_layerinfo_title\">磁気図（鉛直分力）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、鉛直分力の分布を図に表したものです。<br/><br/>＜凡例＞<br/>黒線 ： 1000nTごと<br/>白線 ： 100nTごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+				}
+			]
+			}
+		]
+		},
+        {
+          "type": "LayerGroup",
+          "title": "観測を強化している地域の地殻変動",
+          "html": "<div class='layer_text'><p>地震・火山活動の調査研究のために地殻変動の監視を強化している地区を表示します。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "現在観測している地区",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "suijun",
+                  "title": "水準",
+                  "url": "https://maps.gsi.go.jp/overlay/top_1_suijun.kml",
+                  "cocotile": false,
+                  "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 水準</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'></span><br/><p style='text-indent:-2em;padding-left:2em;'></p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "gravity",
+                  "title": "重力",
+                  "url": "https://maps.gsi.go.jp/overlay/top_1_gravity.kml",
+                  "cocotile": false,
+                  "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 重力</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'></span><br/><p style='text-indent:-2em;padding-left:2em;'></p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "伊豆大島地区",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "izuoshima_aps",
+                      "title": "測距",
+                      "url": "https://maps.gsi.go.jp/xyz/izuoshima_aps/{z}/{x}/{y}.geojson",
+                      "cocotile": false,
+                      "minZoom": 2,
+                      "maxZoom": 18,
+                      "maxNativeZoom": 2,
+                      "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 伊豆大島</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png' alt='測距' width='15' height='15'>　測距<br/><br/>光波測距儀を用いた基線観測。<br/>器械点～ミラー点間における基線長の変化を観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "izuoshima_suijun",
+                      "title": "水準",
+                      "url": "https://maps.gsi.go.jp/xyz/izuoshima_suijun/{z}/{x}/{y}.geojson",
+                      "cocotile": false,
+                      "minZoom": 2,
+                      "maxZoom": 18,
+                      "maxNativeZoom": 2,
+                      "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 伊豆大島</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<br/><br/>水準測量による上下変動の観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "izuoshima_gravity",
+                      "title": "重力",
+                      "url": "https://maps.gsi.go.jp/xyz/izuoshima_gravity/{z}/{x}/{y}.geojson",
+                      "cocotile": false,
+                      "minZoom": 2,
+                      "maxZoom": 18,
+                      "maxNativeZoom": 2,
+                      "html": "<div class=\"gsi_layerinfo_title\">現在観測している地区 - 伊豆大島</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<br/><br/>重力測量による重力値の変化の観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "過去に観測していた地区",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "EDM_finish",
+                  "title": "測距",
+                  "url": "https://maps.gsi.go.jp/xyz/top1_EDM_finish/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": "<div class=\"gsi_layerinfo_title\">過去に観測していた地区 - 測距</div><div class=\"gsi_layerinfo_kaisetu\"><b>測量方法</b><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/097.png' alt='測距' width='15' height='15'>　測距<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='http://www.gsi.go.jp/common/000079136.bmp' alt='水準' width='15' height='15'>　水準<span style='vertical-align:super;font-size:0.8em;'></span><br/><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' alt='重力' width='15' height='15'>　重力<span style='vertical-align:super;font-size:0.8em;'></span><br/><p style='text-indent:-2em;padding-left:2em;'></p><br/>地震・火山噴火の調査研究のために地殻変動等の監視を強化している地区。<br/>その地域の特徴を考慮した測量手法で観測。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "干渉SAR",
+          "html": "<div class='layer_text'><p>地震や火山活動等による地盤変動の様子を表示します。</p></div>",
+          "toggleall": false,
+          "entries": [
+                    {
+                      "type": "LayerGroup",
+                      "title": "だいち2号（ALOS-2） ",
+                      "toggleall": false,
+                      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos2.txt"
+                    },
+                    {
+                      "type": "LayerGroup",
+                       "title": "だいち（ALOS） ",
+                      "toggleall": false,
+                      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos.txt"
+                    }
+                    ]
+        }
+      ]
+    }
+  ]
+}

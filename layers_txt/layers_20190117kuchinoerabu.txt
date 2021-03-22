@@ -1,0 +1,338 @@
+{
+"layers": [
+	{
+	"type": "LayerGroup",
+	"title": "2019年1月～",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "SAR解析結果(ALOS-2)",
+		"toggleall": false,
+		"src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_kuchinoerajima_2019.txt"
+		},
+		{
+		"type": "Layer",
+		"id": "20190117kuchinoerabu_0118naname",
+		"title": "斜め写真（2019/1/18）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+		"url": "https://maps.gsi.go.jp/xyz/20190117kuchinoerabu_0118naname/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"maxNativeZoom": 2,
+		"html": "口永良部島・斜め写真（1/18）"
+		}
+	]
+	},
+	{
+	"type": "LayerGroup",
+	"title": "2015年5月～",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "LayerGroup",
+		"title": "SAR解析結果(ALOS-2)",
+		"toggleall": false,
+		"src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_vol_kuchinoerajima.txt"
+		},
+		{
+		"type": "LayerGroup",
+		"title": "Landsat8観測画像",
+		"toggleall": false,
+		"entries": [
+		{
+		"type": "Layer",
+		"id": "20150724_ls8_kuchinoerabu",
+		"title": "2015/7/24",
+		"url": "https://maps.gsi.go.jp/xyz/20150724_ls8_kuchinoerabu/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 8,
+		"maxZoom": 15,
+		"html": "<div class=\"gsi_layerinfo_title\">Landsat8</div><div class=\"gsi_layerinfo_subtitle\">(2015.7.24)</div><div class=\"gsi_layerinfo_kaisetu\">Image produced by GSI. Source of Landsat 8 data: U.S. Geological Survey.</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150606_ls8_kuchinoerabu",
+		"title": "2015/6/6",
+		"url": "https://maps.gsi.go.jp/xyz/20150606_ls8_kuchinoerabu/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 8,
+		"maxZoom": 15,
+		"maxNativeZoom": 16,
+		"html": "<div class=\"gsi_layerinfo_title\">Landsat8</div><div class=\"gsi_layerinfo_subtitle\">(2015.6.6)</div><div class=\"gsi_layerinfo_kaisetu\">Image produced by GSI. Source of Landsat 8 data: U.S. Geological Survey.</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150521_ls8_kuchinoerabu",
+		"title": "2015/5/21",
+		"url": "https://maps.gsi.go.jp/xyz/20150521_ls8_kuchinoerabu/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 8,
+		"maxZoom": 15,
+		"html": "<div class=\"gsi_layerinfo_title\">Landsat8</div><div class=\"gsi_layerinfo_subtitle\">(2015.5.21)</div><div class=\"gsi_layerinfo_kaisetu\">Image produced by GSI. Source of Landsat 8 data: U.S. Geological Survey.</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "handoku150606kuchinoerabu",
+		"title": "2015/5/21と2015/6/6で変化が認められる範囲",
+		"url": "https://maps.gsi.go.jp/overlay/1505kuchinoerabu/handoku150606kuchinoerabu.kml",
+		"cocotile": false,
+		"minZoom": 8,
+		"maxZoom": 15,
+		"html": "赤線はLandsat8観測画像　5/21と6/6で変化が認められる範囲、緑線は変化が認められるが境界が不明確な範囲"
+		}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "UAVによる写真",
+		"toggleall": false,
+		"entries": [
+		{
+		"type": "Layer",
+		"id": "20150911dol",
+		"title": "UAV撮影による正射画像（2015/9/8,11,12）",
+		"url": "https://maps.gsi.go.jp/xyz/20150911dol/{z}/{x}/{y}.png",
+		"cocotile": false,
+		"minZoom": 14,
+		"maxZoom": 18,
+		"html": "無人航空機(UAV)撮影による正射画像（2015/9/8,11,12撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150714dol",
+		"title": "UAV撮影による正射画像（2015/7/14）",
+		"url": "https://maps.gsi.go.jp/xyz/20150714dol/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 14,
+		"maxZoom": 18,
+		"html": "無人航空機(UAV)撮影による正射画像（2015.7.14撮影）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "kuchinoerabu_nanamel_150911",
+		"title": "UAV撮影による斜め写真（2015/9/11）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+		"url": "https://maps.gsi.go.jp/xyz/kuchinoerabu_nanamel_150911/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"maxNativeZoom": 2,
+		"html": "無人航空機(UAV)撮影による斜め写真（2015.9.11撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "naname150714kuchinoerabu",
+		"title": "UAV撮影による斜め写真（2015/7/14）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+		"url": "https://maps.gsi.go.jp/overlay/1505kuchinoerabu/naname150714kuchinoerabu.kml",
+		"cocotile": false,
+		"html": "無人航空機(UAV)撮影による斜め写真（2015.7.14撮影）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "kuchinoerabu_suichokul_150911",
+		"title": "UAV撮影による垂直写真（2015/9/11）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+		"url": "https://maps.gsi.go.jp/xyz/kuchinoerabu_suichokul_150911/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"maxNativeZoom": 2,
+		"html": "無人航空機(UAV)撮影による垂直写真（2015.9.11撮影）<br>雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "suichoku150714kuchinoerabu",
+		"title": "UAV撮影による垂直写真（2015/7/14）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+		"url": "https://maps.gsi.go.jp/overlay/1505kuchinoerabu/suichoku150714kuchinoerabu.kml",
+		"cocotile": false,
+		"html": "無人航空機(UAV)撮影による垂直写真（2015.7.14撮影）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "UAV撮影による写真判読図（2015/9/11）",
+		"toggleall": false,
+		"entries": [
+		{
+		"type": "Layer",
+		"id": "20150911_kasairyuresult_kuchinoerabu",
+		"title": "火砕流・泥流判読結果（2015/9/11）",
+		"url": "https://maps.gsi.go.jp/xyz/20150911_kasairyuresult_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"legendUrl": "https://maps.gsi.go.jp/legend/20150714_kasairyuresult_kuchinoerabu.jpg",
+		"html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150911_dourotsuukou_kuchinoerabu",
+		"title": "道路通行困難箇所（2015/9/11）",
+		"url": "https://maps.gsi.go.jp/xyz/20150911_dourotsuukou_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150911_houraku_kuchinoerabu",
+		"title": "崩落箇所・土砂流出箇所（2015/9/11）",
+		"url": "https://maps.gsi.go.jp/xyz/20150911_houraku_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"html": "9月11日に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000108360.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		}
+		]
+		},
+		{
+		"type": "LayerGroup",
+		"title": "UAV撮影による写真判読図（2015/7/14）",
+		"toggleall": false,
+		"entries": [
+		{
+		"type": "Layer",
+		"id": "20150714_kasairyuresult_kuchinoerabu",
+		"title": "火砕流・泥流判読結果（2015/7/14）",
+		"url": "https://maps.gsi.go.jp/xyz/20150714_kasairyuresult_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"legendUrl": "https://maps.gsi.go.jp/legend/20150714_kasairyuresult_kuchinoerabu.jpg",
+		"html": "7月14日（火）に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000105684.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150714_kasairyurange_kuchinoerabu",
+		"title": "火砕流・泥流判読範囲（2015/7/14）",
+		"url": "https://maps.gsi.go.jp/xyz/20150714_kasairyurange_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"html": "7月14日（火）に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000105684.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150714_dourotsuukou_kuchinoerabu",
+		"title": "道路通行困難箇所（2015/7/14）",
+		"url": "https://maps.gsi.go.jp/xyz/20150714_dourotsuukou_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"html": "7月14日（火）に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000105684.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		},
+		{
+		"type": "Layer",
+		"id": "20150714_houraku_kuchinoerabu",
+		"title": "崩落箇所（2015/7/14）",
+		"url": "https://maps.gsi.go.jp/xyz/20150714_houraku_kuchinoerabu/{z}/{x}/{y}.geojson",
+		"cocotile": false,
+		"minZoom": 2,
+		"maxZoom": 16,
+		"maxNativeZoom": 2,
+		"html": "7月14日（火）に無人航空機（UAV）で撮影した口永良部島の空中写真を使用して、火砕流や泥流などについて判読しました。\n<a href=\"http://www.gsi.go.jp/common/000105684.pdf\" target=\"_blank\">詳細説明ページ</a>"
+		}
+		]
+		},
+		{
+		"type": "Layer",
+		"id": "naname150529kuchinoerabu",
+		"title": "斜め写真（2015/5/29）",
+		"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+		"url": "https://maps.gsi.go.jp/overlay/1505kuchinoerabu/naname150529kuchinoerabu.kml",
+		"cocotile": false,
+		"html": "口永良部島・斜め写真（5/29）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		}
+		]
+		},
+	{
+	"type": "Layer",
+	"id": "_airphoto_2015_05",
+	"title": "過去の簡易空中写真（2016/4）",
+	"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+	"url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+	"cocotile": true,
+	"minZoom": 5,
+	"html": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html#airphoto\" target=\"_blank\">簡易空中写真</a><br>\n新岳周辺は2016年4月撮影\n<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+	},
+	{
+	"type": "LayerGroup",
+	"title": "火山基本図・火山基本図データ",
+	"toggleall": false,
+	"entries": [
+		{
+		"type": "Layer",
+		"id": "vbmd_bm",
+		"title": "火山基本図データ（基図）",
+		"url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（基図）　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\" target=\"_blank\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><a href=\"https://maps.gsi.go.jp/legend/l_vbmd_bm_kuchinoerabujima.jpg\" target=\"_blank\">凡例表示</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "vbmd_colorrel",
+		"title": "火山基本図データ（陰影段彩図）",
+		"url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（陰影段彩図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><a href=\"https://maps.gsi.go.jp/legend/l_vbmd_relief_kuchinoerabujima.jpg\" target=\"_blank\">標高表示</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		},
+		{
+		"type": "Layer",
+		"id": "vbmd_pm",
+		"title": "火山基本図データ（写真地図）",
+		"url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+		"cocotile": true,
+		"minZoom": 2,
+		"maxZoom": 18,
+		"html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（写真地図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+		}
+	]
+	},
+	{
+	"type": "Layer",
+	"id": "20150529_relief_kuchinoerabu",
+	"title": "口永良部島　陰影段彩図",
+	"url": "https://maps.gsi.go.jp/xyz/20150529_relief_kuchinoerabu/{z}/{x}/{y}.png",
+	"cocotile": true,
+	"minZoom": 8,
+	"maxZoom": 18,
+	"html": "<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+	},
+	{
+	"type": "Layer",
+	"id": "20150529_taisakuzu_kuchinoerabu",
+	"title": "口永良部島　火山災害対策用図",
+	"url": "https://maps.gsi.go.jp/xyz/20150529_taisakuzu_kuchinoerabu/{z}/{x}/{y}.png",
+	"cocotile": true,
+	"minZoom": 8,
+	"maxZoom": 18,
+	"html": "<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+	},
+	{
+	"type": "Layer",
+	"id": "kuchinoerabured",
+	"title": "赤色立体地図（口永良部島）",
+	"url": "https://maps.gsi.go.jp/xyz/kuchinoerabured/{z}/{x}/{y}.png",
+	"cocotile": true,
+	"minZoom": 2,
+	"maxZoom": 18,
+	"html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\"><div class=\"gsi_layerinfo_kaisetu\">本図は航空レーザ測量データを基にアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+	}
+]
+}

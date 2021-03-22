@@ -1,0 +1,944 @@
+{
+  "layers": [
+            {
+              "type": "Layer",
+              "id": "terrainclassification1",
+              "title": "地形分類図",
+              "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/terrainclassification/terrainclassification1/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 16,
+              "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">地形分類図（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/terrainclassification/地形分類.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "土地利用分類図",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "landuseclassification1",
+                  "title": "土地利用分類（第一期:明治期）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/landuseclassification/landuseclassification1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">土地利用分類（第一期:明治期）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/landuseclassification/土地利用.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "landuseclassification2",
+                  "title": "土地利用分類（第二期：昭和期）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/landuseclassification/landuseclassification2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">土地利用分類（第二期：昭和期）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/landuseclassification/土地利用2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（水害）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_tokyo",
+                  "title": "東京地区（東京東北部・東京西北部・東京西南部）　昭和49年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/tokyo/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）東京地区（東京東北部・東京西北部・東京西南部）昭和49年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_東京地区（東京東北部・東京西北部・東京西南部）_昭和49年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_tokyo.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_saitamaChiba1",
+                  "title": "東京地区　昭和33年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/tokyo2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）東京地区　昭和33年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_東京地区_昭和33年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_tokyo2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_saitamaChiba2",
+                  "title": "埼玉・千葉地区（大宮・野田［南部］）　昭和56年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/saitamaChiba2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）埼玉・千葉地区（大宮・野田［南部］）昭和56年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_埼玉・千葉地区（大宮・野田［南部］）_昭和56年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_saitamaChiba2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_saitamaChiba3",
+                  "title": "埼玉・千葉地区（大宮・野田［南部］・佐倉・千葉）　昭和56年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/saitamaChiba3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）埼玉・千葉地区（大宮・野田［南部］・佐倉・千葉）昭和56年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_埼玉・千葉地区（大宮・野田［南部］・佐倉・千葉）_昭和56年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_saitamaChiba3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_saitamaChiba4",
+                  "title": "埼玉・千葉地区（川越）　昭和33年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/saitamaChiba4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）埼玉・千葉地区（川越）昭和33年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_埼玉・千葉地区（川越）_昭和33年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_saitamaChiba4.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_SaitamaChibaIbaragi1",
+                  "title": "埼玉・千葉・茨城地区（常総）　昭和61年～平成27年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/SaitamaChibaIbaragi1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）埼玉・千葉・茨城地区（常総）　昭和61年～平成27年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_関東地区（常総）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_sizuoka",
+                  "title": "静岡地区　明治44年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/sizuoka/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）静岡地区　明治44年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_静岡地区_明治44年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_sizuoka.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie1",
+                  "title": "中部地区（岐阜・大垣）　昭和30年代以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（岐阜・大垣）昭和30年代以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（岐阜・大垣）_昭和30年代以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie2",
+                  "title": "中部地区（岐阜・大垣）　昭和40～63年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（岐阜・大垣）昭和40～63年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（岐阜・大垣）_昭和40_63年.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie3",
+                  "title": "中部地区（岐阜・大垣）　平成元年～23年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（岐阜・大垣）平成元年～23年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（岐阜・大垣）_平成元年_23年.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie4",
+                  "title": "中部地区（瀬戸）　昭和32年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（瀬戸）昭和32年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（瀬戸）_昭和32年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie4.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie5",
+                  "title": "中部地区（桑名・四日市）　昭和34年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie5/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（桑名・四日市）昭和34年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（桑名・四日市）_昭和34年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie5.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie6",
+                  "title": "中部地区（豊田・名古屋北部・名古屋南部）　昭和34年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie6/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（豊田・名古屋北部・名古屋南部）昭和34年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_中部地区（豊田・名古屋北部・名古屋南部）_昭和34年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_gifuAichiMie6.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kinki1",
+                  "title": "近畿地区（大津・京都・京都南部）　明治29年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kinki1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）近畿地区（大津・京都・京都南部）明治29年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_近畿地区（大津・京都・京都南部）_明治29年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_kinki1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kinki2",
+                  "title": "近畿地区（奈良・桜井・大阪・神戸・明石）　昭和7年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kinki2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）近畿地区（奈良・桜井・大阪・神戸・明石）昭和7年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_近畿地区（奈良・桜井・大阪・神戸・明石）_昭和7年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_kinki2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kinki3",
+                  "title": "近畿地区（岸和田・和歌山）　昭和27年以後",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kinki3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）近畿地区（岸和田・和歌山）昭和27年以後（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_近畿地区（岸和田・和歌山）_昭和27年以後.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_kinki3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku1",
+                  "title": "中国地区（岡山）　昭和59年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（岡山）　昭和59年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（岡山）_昭和59年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku2",
+                  "title": "中国地区（岡山）　昭和60年以降",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（岡山）　昭和60年以降（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（岡山）_昭和60年以降.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku3",
+                  "title": "中国地区（広島）　昭和19年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（広島）　昭和19年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（広島）_昭和19年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku4",
+                  "title": "中国地区（広島）　昭和20年以降",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（広島）　昭和20年以降（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（広島）_昭和20年以降.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku4.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku7",
+                  "title": "中国地区（山口）　昭和26年～平成21年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku7/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（山口）　昭和26年～平成21年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害高潮災害_中国地区（山口・防府）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku1",
+                  "title": "四国地区（高松）　昭和51年～平成17年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（高松）　昭和51年～平成17年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_四国地区（高松）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku2",
+                  "title": "四国地区（高知）　昭和47年～平成10年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（高知）　昭和47年～平成10年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_四国地区（高知）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku3",
+                  "title": "四国地区（松山）　その1　昭和18年～平成22年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（松山）　その1　昭和18年～平成22年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_四国地区（松山）_その１.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku4",
+                  "title": "四国地区（松山）　その2　平成13年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（松山）　その2　平成13年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_四国地区（松山）_その２.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku4.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku8",
+                  "title": "四国地区（徳島）　昭和51年～平成26年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku8/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（徳島）　昭和51年～平成26年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_四国地区（徳島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu7",
+                  "title": "九州地区（宮崎）　昭和14年～平成17年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu7/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（宮崎）　昭和14年～平成17年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（宮崎）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu8",
+                  "title": "九州地区（長崎）　昭和57年～平成24年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu8/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（長崎）　昭和57年～平成24年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_九州地区（長崎）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu9",
+                  "title": "九州地区（鹿児島)　平成5年～平成18年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu9/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（鹿児島)　平成5年～平成18年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（鹿児島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu1",
+                  "title": "九州地区（福岡）　昭和28年～平成21年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（福岡）　昭和28年～平成21年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（福岡）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu2",
+                  "title": "九州地区（福岡）　昭和48～55年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（福岡）　昭和48～55年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（福岡）S48～55.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu3",
+                  "title": "九州地区（福岡）　昭和56～平成元年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（福岡）　昭和56～平成元年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（福岡）S56～H1.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu6",
+                  "title": "九州地区（大分・別府）　昭和28年～平成24年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu6/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（大分・別府）　昭和28年～平成24年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害_九州地区（大分・別府）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu4",
+                  "title": "九州地区（北九州） その1　昭和28年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（北九州） その1　昭和28年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_九州地区（北九州）_その1.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_kyushu5",
+                  "title": "九州地区（北九州） その2　平成18年～平成25年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/kyushu5/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）九州地区（北九州） その2　平成18年～平成25年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_九州地区（北九州）_その2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_hokuriku1",
+                  "title": "北陸地区（金沢）　昭和49年～平成20年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/hokuriku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）北陸地区（金沢）　昭和49年～平成20年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_北陸地区（金沢）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_hokuriku2",
+                  "title": "北陸地区（富山） その1　土石流、台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/hokuriku2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）北陸地区（富山） その1　土石流、台風（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_北陸地区（富山）_その1.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_hokuriku3",
+                  "title": "北陸地区（富山） その2　洪水進路、浸水域",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/hokuriku3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）北陸地区（富山） その2　洪水進路、浸水域（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_北陸地区（富山）_その2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_hokuriku4",
+                  "title": "北陸地区（長岡）　平成16年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/hokuriku4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）北陸地区（長岡）　平成16年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_北陸地区（長岡）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_hokuriku5",
+                  "title": "北陸地区（新潟）　昭和42年～平成10年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/hokuriku5/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）北陸地区（新潟）　昭和42年～平成10年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_北陸地区（新潟）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_sizuoka1",
+                  "title": "静岡地区（沼津）　昭和33年～平成19年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/sizuoka1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）静岡地区（沼津）　昭和33年～平成19年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_静岡地区（沼津）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku9",
+                  "title": "四国地区（高知）　平成26年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku9/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（高知）　平成26年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_四国地区（高知）_その2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（高潮）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku5",
+                  "title": "中国地区（岡山）　平成16年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku5/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中国地区（岡山）　平成16年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_高潮災害_中国地区（岡山）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku5.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku6",
+                  "title": "中国地区（広島）　平成3年～16年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku6/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中国地区（広島）　平成3年～16年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_高潮災害_中国地区（広島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Chugoku6.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku5",
+                  "title": "四国地区（高松）　昭和25年～平成17年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku5/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）四国地区（高松）　昭和25年～平成17年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_高潮災害_四国地区（高松）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku5.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku6",
+                  "title": "四国地区（高知）　昭和25年～昭和45年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku6/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）四国地区（高知）　昭和25年～昭和45年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_高潮災害_四国地区（高知）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku6.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_shikoku7",
+                  "title": "四国地区（松山）　昭和25年～平成3年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/shikoku7/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）四国地区（松山）　昭和25年～平成3年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_高潮災害_四国地区（松山）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/DisasterHist_flood_Shikoku7.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_shikoku1",
+                  "title": "四国地区（徳島）　昭和25年～昭和36年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/shikoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）四国地区（徳島）　昭和25年～昭和36年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_四国地区（徳島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_kyushu1",
+                  "title": "九州地区（北九州）　平成11年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）九州地区（北九州）　平成11年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_九州地区（北九州）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（土砂災害）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Landslide_kyushu3",
+                  "title": "九州地区（宮崎）　平成13年～平成28年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Landslide/kyushu3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（土砂災害）九州地区（宮崎）　平成13年～平成28年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Landslide/災害履歴_土砂災害_九州地区（宮崎）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Landslide_kyushu4",
+                  "title": "九州地区（鹿児島）　昭和61年～平成18年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Landslide/kyushu4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（土砂災害）九州地区（鹿児島）　昭和61年～平成18年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Landslide/災害履歴_土砂災害_九州地区（鹿児島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Landslide_chugoku1",
+                  "title": "中国地区（山口）　平成5年～平成21年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Landslide/chugoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（土砂災害）中国地区（山口）　平成5年～平成21年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Landslide/災害履歴_土砂災害_中国地区（山口・防府）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Landslide_kyushu2",
+                  "title": "九州地区（大分・別府）　平成5～24年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Landslide/kyushu2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（土砂災害）九州地区（大分・別府）　平成5～24年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Landslide/災害履歴_土砂災害_九州地区（大分・別府）H5～24.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Landslide_kyushu1",
+                  "title": "九州地区（北九州）　昭和28年～平成22年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Landslide/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（土砂災害）九州地区（北九州）　昭和28年～平成22年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Landslide/災害履歴_土砂災害_九州地区（北九州）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（津波災害）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Tsunami_kyushu1",
+                  "title": "九州地区（宮崎）　寛文2(1662)年の日向灘地震の津波",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Tsunami/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（津波災害）九州地区（宮崎）　寛文2(1662)年の日向灘地震の津波（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Tsunami/災害履歴_津波災害_九州地区（宮崎）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（火山災害）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Volcano_kyushu1",
+                  "title": "九州地区（鹿児島）　大正3年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Volcano/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（火山災害）九州地区（鹿児島）　大正3年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Volcano/災害履歴_火山災害_九州地区（鹿児島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（地震災害）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_kantou",
+                  "title": "東京・埼玉・千葉地区　関東地震等",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/kantou/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）東京・埼玉・千葉地区　関東地震等（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_東京・埼玉・千葉地区_関東地震等.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_kantou.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_SaitamaChibaibaragi1",
+                  "title": "埼玉・千葉・茨城地区（常総）　関東地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/SaitamaChibaibaragi1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）埼玉・千葉・茨城地区（常総）　関東地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_関東地区（常総）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_sizuoka1",
+                  "title": "静岡地区　建物被害・液状化地点・ひび割れ",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/sizuoka1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）静岡地区　建物被害・液状化地点・ひび割れ（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_静岡地区_建物被害・液状化地点・ひび割れ.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_sizuoka1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_sizuoka2",
+                  "title": "静岡地区　津波の浸水域・沿岸での津波観測値",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/sizuoka2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）静岡地区　津波の浸水域・沿岸での津波観測値（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_静岡地区_津波の浸水域・沿岸での津波観測値.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_sizuoka2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_noubi1",
+                  "title": "中部地区（豊田・名古屋）　濃尾地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/noubi1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊田・名古屋）　濃尾地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊田・名古屋北部・名古屋南部）_濃尾地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_noubi1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_noubi2",
+                  "title": "中部地区（瀬戸・岐阜）　濃尾地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/noubi2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（瀬戸・岐阜）　濃尾地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（瀬戸・岐阜）_濃尾地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_noubi2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_tounankai1",
+                  "title": "中部地区（豊田・名古屋）　東南海地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/tounankai1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊田・名古屋）　東南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊田・名古屋北部・名古屋南部）_東南海地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_tounankai1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_tounankai2",
+                  "title": "中部地区（瀬戸・岐阜・大垣）　東南海地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/tounankai2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（瀬戸・岐阜・大垣）　東南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（瀬戸・岐阜・大垣）_東南海地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_tounankai2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_tounankai3",
+                  "title": "中部地区（桑名・四日市）　東南海地震等",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/tounankai3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（桑名・四日市）　東南海地震等（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_中部地区（桑名・四日市）_東南海地震等.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_tounankai3.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_mikawa",
+                  "title": "中部地区（豊田・名古屋）　三河地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/mikawa/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊田・名古屋）　三河地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊田・名古屋北部・名古屋南部）_三河地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_mikawa.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_kanei",
+                  "title": "近畿地区（奈良・桜井・大阪東北部・大阪東南部）　寛永地震等",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/kanei/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）近畿地区（奈良・桜井・大阪東北部・大阪東南部）　寛永地震等（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_近畿地区（奈良・桜井・大阪東北部・大阪東南部）寛永地震等.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_kanei.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hyougoNanbu1",
+                  "title": "近畿地区（大阪西北部・神戸・明石）　兵庫県南部地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hyougoNanbu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）近畿地区（大阪西北部・神戸・明石）兵庫県南部地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_近畿地区（大阪西北部・神戸・明石）兵庫県南部地震等_地震災害1.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_hyougoNanbu1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hyougoNanbu2",
+                  "title": "近畿地区（大阪西南部、西北部・神戸・明石）　兵庫県南部地震等",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hyougoNanbu2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）近畿地区（大阪西南部、西北部・神戸・明石）　兵庫県南部地震等（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_近畿地区（大阪西南部、西北部・神戸・明石）兵庫県南部地震等_地震災害2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_hyougoNanbu2.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_shikoku1",
+                  "title": "四国地区（高知）　南海地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/shikoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）四国地区（高知）　南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震津波災害_四国地区（高知）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_Shikoku1.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_shikoku2",
+                  "title": "四国地区（徳島）　南海地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/shikoku2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）四国地区（徳島）　南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_四国地区（徳島）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_kyushu1",
+                  "title": "九州地区（福岡）　福岡県西方沖地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/kyushu1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）九州地区（福岡）　福岡県西方沖地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_九州地区（福岡）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hokuriku1",
+                  "title": "北陸地区（金沢）　金沢地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hokuriku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（金沢）　金沢地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（金沢）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hokuriku2",
+                  "title": "北陸地区（富山）　飛越地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hokuriku2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（富山）　飛越地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（富山）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hokuriku3",
+                  "title": "北陸地区（長岡）　長岡地震、新潟県中越地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hokuriku3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（長岡）　長岡地震、新潟県中越地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（長岡）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_hokuriku4",
+                  "title": "北陸地区（新潟）　新潟地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hokuriku4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（新潟）　新潟地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（新潟）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_sizuoka3",
+                  "title": "静岡地区（沼津）　北伊豆地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/sizuoka3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）静岡地区（沼津）　北伊豆地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_静岡地区（沼津）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "Layer",
+              "id": "DisasterHist_landSubsidence",
+              "title": "災害履歴図（地盤沈下）",
+              "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_landSubsidence/landSubsidence/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 16,
+              "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地盤沈下）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_landSubsidence/災害履歴（地盤沈下）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_landSubsidence/landSubsidence.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+            }
+  ]
+}

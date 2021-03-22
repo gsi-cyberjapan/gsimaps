@@ -1,0 +1,3555 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "その他",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/topic.png",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "地理教育支援",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/chirikyouiku.png",
+          "toggleall": false,
+          "html": "<div class='layer_text'>地理教育に活用できる情報を閲覧できます。</div>",
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "地形等を活用した地理教育ネタ帳",
+              "html": "<div class='layer_text'><p>教科横断的な視点で様々な分野と関わりのある地域の地形等を解説します。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "history",
+                  "title": "歴史と地理地形",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/807.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/history/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">歴史と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "river",
+                  "title": "川と地理地形",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/river/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">川と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "volcano",
+                  "title": "火山と地理地形",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/volcano/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "literary",
+                  "title": "文学と地理地形",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/808.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/literary/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">文学と地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "geo",
+                  "title": "いろいろな地理地形",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/geo/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">いろいろな地理地形</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "map-symbol",
+                  "title": "地図記号を読む",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/520.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/map-symbol/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 15,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">地図記号を読む</div>国土地理院のツィッターヘリンクしています<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "【地理教育支援】被災状況の空中写真・UAVによる動画",
+              "html": "<div class='layer_text'><p>災害の際にドローン等で撮影した動画を見ることができます。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "movie-earthquake",
+                  "title": "地震",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/300.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-earthquake/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">地震</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "movie-flood",
+                  "title": "台風・豪雨等",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/435.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-flood/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">台風・豪雨等</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "movie-volcano",
+                  "title": "火山活動",
+                  "iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/447.png",
+                  "url": "https://cyberjapandata.gsi.go.jp/xyz/chirikyouiku/movie-volcano/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "subdmains": "",
+                  "attribution": "",
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">火山活動</div>動画を閲覧いただけます<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "都道府県の地形（デジタル標高地形図）",
+              "html": "<div class='layer_text'><p>標高に応じて色分けした都道府県ごと地図です。起伏が直感的に分かります。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "d1-no943",
+                  "title": "北海道_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no943/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(北海道_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no944",
+                  "title": "青森県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no944/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(青森県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no945",
+                  "title": "岩手県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no945/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岩手県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no946",
+                  "title": "宮城県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no946/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(宮城県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no947",
+                  "title": "秋田県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no947/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(秋田県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no948",
+                  "title": "山形県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no948/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山形県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no949",
+                  "title": "福島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no949/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no950",
+                  "title": "茨城県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no950/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(茨城県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no951",
+                  "title": "栃木県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no951/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(栃木県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no952",
+                  "title": "群馬県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no952/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(群馬県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no953",
+                  "title": "埼玉県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no953/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(埼玉県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no954",
+                  "title": "千葉県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no954/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(千葉県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no955",
+                  "title": "東京都_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no955/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(東京都_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no956",
+                  "title": "神奈川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no956/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(神奈川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no957",
+                  "title": "新潟県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no957/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(新潟県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no958",
+                  "title": "富山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no958/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(富山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no959",
+                  "title": "石川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no959/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(石川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no960",
+                  "title": "福井県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no960/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福井県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no961",
+                  "title": "山梨県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no961/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山梨県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no962",
+                  "title": "長野県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no962/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(長野県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no963",
+                  "title": "岐阜県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no963/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岐阜県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no964",
+                  "title": "静岡県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no964/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(静岡県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no965",
+                  "title": "愛知県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no965/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(愛知県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no966",
+                  "title": "三重県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no966/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(三重県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no967",
+                  "title": "滋賀県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no967/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(滋賀県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no968",
+                  "title": "京都府_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no968/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(京都府_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no969",
+                  "title": "大阪府_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no969/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(大阪府_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no970",
+                  "title": "兵庫県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no970/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(兵庫県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no971",
+                  "title": "奈良県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no971/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(奈良県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no972",
+                  "title": "和歌山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no972/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(和歌山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no973",
+                  "title": "鳥取県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no973/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(鳥取県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no974",
+                  "title": "島根県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no974/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(島根県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no975",
+                  "title": "岡山県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no975/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(岡山県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no976",
+                  "title": "広島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no976/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(広島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no977",
+                  "title": "山口県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no977/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(山口県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no978",
+                  "title": "徳島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no978/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(徳島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no979",
+                  "title": "香川県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no979/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(香川県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no980",
+                  "title": "愛媛県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no980/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(愛媛県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no981",
+                  "title": "高知県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no981/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(高知県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no982",
+                  "title": "福岡県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no982/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(福岡県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no983",
+                  "title": "佐賀県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no983/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(佐賀県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no984",
+                  "title": "長崎県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no984/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(長崎県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no985",
+                  "title": "熊本県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no985/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(熊本県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no986",
+                  "title": "大分県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no986/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(大分県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no987",
+                  "title": "宮崎県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no987/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(宮崎県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no988",
+                  "title": "鹿児島県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no988/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(鹿児島県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。一部離島は表示範囲に含まれておりません。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "d1-no989",
+                  "title": "沖縄県_2019年6月",
+                  "url": "https://maps.gsi.go.jp/xyz/d1-no989/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "maxZoom": 16,
+                  "html": "<div class=\"gsi_layerinfo_subtitle\">(沖縄県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "南極",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/nankyoku.png",
+          "toggleall": false,
+          "html": "<div class='layer_text'>南極の地形図や写真など、南極の情報を閲覧できます。</div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "southpole_satellite_250000_spec",
+              "title": "南極の地理空間情報（整備範囲へジャンプ）",
+              "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/2/2/3.geojson",
+              "html": "<div class='layer_text'><p>南極の情報が整備されている範囲を表示します。</p></div>概ね、東経15度から59度、南緯65度から79度の範囲の一部となります。",
+              "maxNativeZoom": 2,
+              "maxZoom": 18
+            },
+            {
+              "type": "Layer",
+              "id": "antarctic_base",
+              "title": "日本の基地の位置",
+              "url": "https://maps.gsi.go.jp/xyz/southpole_base/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "styleurl": "./xyz/southpole_base/style.js",
+              "html": "<div class='layer_text'><p>日本の南極基地である昭和基地やドームふじ基地の場所を表示します。</p></div>昭和基地　　　　東経39度34分55秒　南緯69度00分15秒<br>ドームふじ基地　東経39度42分23秒　南緯77度19分00秒",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "Layer",
+              "id": "southpole_cp",
+              "title": "南極の基準点",
+              "url": "https://maps.gsi.go.jp/xyz/southpole_cp/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "styleurl": "https://maps.gsi.go.jp/xyz/southpole_cp/style.js",
+              "html": "<div class='layer_text'><p>南極に設置した基準点の緯度・経度・高さなどの位置情報を表示します。より詳細な情報は、<a href=\"http://www.gsi.go.jp/antarctic/07.html\" target=\"_blank\">国土地理院の「南極の地理空間情報（基準点測量）」ページ</a>をご覧ください。</div>",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:2,500　南極地形図（楕円体高版）",
+              "id": "southpole_2500_2",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:2,500南極地形図（楕円体高版）については、等高線、基準点、標高点等の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約21m高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_2",
+                  "title": "1:2,500　南極地形図（楕円体高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_spec_2",
+                  "title": "1:2,500　南極地形図（楕円体高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 13
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:2,500　南極地形図（標高版）",
+              "id": "southpole_2500",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500_elev.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500",
+                  "title": "1:2,500　南極地形図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_spec",
+                  "title": "1:2,500　南極地形図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 13
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:2,500　南極写真図",
+              "id": "southpole_2500_ort_2",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>2500分の１の南極写真図です。</p></div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_ort_2",
+                  "title": "1:2,500　南極写真図",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_ort_2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_2500_spec_2",
+                  "title": "1:2,500　南極写真図整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 13
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:25,000　南極地形図（標高版）",
+              "id": "southpole_25000",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>1:25,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/25000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_25000",
+                  "title": "1:25,000　南極地形図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_25000/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_25000_spec",
+                  "title": "1:25,000　南極地形図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_25000_spec/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 18
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:50,000　南極地形図（楕円体高版）",
+              "id": "southpole_50000",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:50,000南極地形図（楕円体高版）については、等高線、基準点、標高点等の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約10～40m程度高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_50000",
+                  "title": "1:50,000　南極地形図（楕円体高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_50000_spec",
+                  "title": "1:50,000　南極地形図（楕円体高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 18
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:250,000　南極衛星画像図（楕円体高版）",
+              "id": "southpole_satellite_250000",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:250,000南極衛星画像図（楕円体高版）については、等高線の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約10～40m程度高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_satellite_250000",
+                  "title": "1:250,000　南極衛星画像図（楕円体高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_satellite_250000_spec",
+                  "title": "1:250,000　南極衛星画像図（楕円体高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/{z}/{x}/{y}.geojson",
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "世界の土地被覆",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/tochihihuku.png",
+          "toggleall": false,
+          "html": "<div class='layer_text'>世界の土地被覆や樹木の比率を表した地図を閲覧できます。</div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "glcnmo2",
+              "title": "土地被覆(GLCNMO)",
+              "url": "https://maps.gsi.go.jp/xyz/gmld_glcnmo2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 7,
+              "legendUrl": "https://maps.gsi.go.jp/legend/Legend_GLCNMO.pdf",
+              "html": "<div class='layer_text'><p>世界の土地が何に覆われているかを表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院、千葉大学、地球地図国際運営委員会、協働機関</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "ptc2",
+              "title": "植生(樹木被覆率)",
+              "url": "https://maps.gsi.go.jp/xyz/gmld_ptc2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 7,
+              "legendUrl": "https://maps.gsi.go.jp/legend/Legend_PTC.pdf",
+              "html": "<div class='layer_text'><p>世界の地表面に対する樹木の比率を表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院、千葉大学、地球地図国際運営委員会、協働機関</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "他機関の情報",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/topic.png",
+          "toggleall": false,
+          "html": "<div class='layer_text'>国土地理院以外の機関が作成した情報を閲覧できます。</div>",
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "震災伝承施設（東北地整）",
+              "src": "",
+              "iconUrl": "",
+              "toggleall": false,
+              "html": "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "shinsaidenshoushisetsu",
+                  "title": "震災伝承施設（東北地整）",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/shinsaidenshoushisetsu.png",
+                  "url": "https://maps.gsi.go.jp/xyz/shinsaidenshoushisetsu/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 7,
+                  "maxNativeZoom": 2,
+                  "legendUrl": "",
+                  "area": {
+                    "lat": 38.709089,
+                    "lng": 141.355591,
+                    "zoom": 8
+                  },
+                  "html": "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://maps.gsi.go.jp/legend/legend_shinsaidenshoushisetsu.png'></td></tr></tbody></table></div><div><span style='font-weight:bold'>第1分類</span><div>下記の項目のいずれか一つ以上に該当する施設。<br>・災害の教訓が理解できるもの<br>・災害時の防災に貢献できるもの<br>・災害の恐怖や自然の畏怖を理解できるもの<br>・災害における歴史的・学術的価値があるもの<br>・その他、災害の実情や教訓の伝承と認められるもの</div></div><div><span style='font-weight:bold'>第2分類</span><div>第1分類うち、公共交通機関等の利便性が高い、近隣に有料又は無料の駐車場がある等、来訪者が訪問しやすい施設。</div></div><div><span style='font-weight:bold'>第3分類</span><div>第2分類のうち、案内員の配置や語り部活動等、来訪者の理解しやすさに配慮している施設。</div></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "toho1",
+                  "title": "2011年3月～2011年4月",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "maxNativeZoom": 17,
+                  "maxZoom": 18,
+                  "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "toho2",
+                  "title": "2011年5月～2012年4月",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "toho3",
+                  "title": "2012年10月～2013年5月",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "toho4",
+                  "title": "2013年9月～2013年12月",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "seamlessphoto",
+                  "title": "全国最新写真（シームレス）",
+                  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+                  "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "fukkokizu",
+                  "title": "災害復興計画基図",
+                  "url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 5,
+                  "legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
+                  "html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "土地分類基本調査（土地履歴調査）－国土政策局",
+              "html": "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
+              "toggleall": false,
+              "src": "./layers_tochibunrui.txt"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "地質図－産総研地質調査総合センター",
+              "html": "<div class='layer_text'><p>全国の地質図を表示します。</p></div>",
+              "toggleall": false,
+              "src": "./layers_gsj.txt"
+            },
+            {
+              "type": "Layer",
+              "id": "kunijiban",
+              "title": "地盤情報（KuniJiban）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/098.png",
+              "url": "https://maps.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>ボーリング柱状図を見ることができます。</p></div>国土地盤情報サイト <a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/'>KuniJiban</a> が提供する国土交通省の地盤情報です（ズームレベル15以上で表示されます）。ご利用にあたっては<a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/terms.html'>利用規約</a>を遵守いただけますようお願い致します。<br>＜凡例＞<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/098.png' width='15' height='15'>XML提供<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' width='15' height='15'>PDF提供"
+            },
+            {
+              "type": "Layer",
+              "id": "active_volcanoes",
+              "title": "活火山分布（気象庁）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+              "url": "https://maps.gsi.go.jp/xyz/active_volcanoes/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class='layer_text'><p>日本の活火山の分布です。リンクから活動履歴を確認することができます。</p></div>"
+            },
+            {
+              "type": "Layer",
+              "id": "active_fault_jishinhonbu",
+              "title": "全国の主要活断層帯（地震調査研究推進本部）",
+              "url": "https://maps.gsi.go.jp/xyz/active_fault/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 11,
+              "maxNativeZoom": 2,
+              "html": "<div class='layer_text'><p>地震調査研究推進本部で公表している主要活断層帯のトレースです（ズームレベル2～11で表示されます）。ご利用にあたっては、地震調査研究推進本部の<a target='_blank' href='https://www.jishin.go.jp/agreement/'>ウェブサイト</a>をご確認ください。</p></div>"
+            },
+            {
+              "type": "Layer",
+              "id": "rinya",
+              "title": "森林（国有林）の空中写真（林野庁）",
+              "url": "https://maps.gsi.go.jp/xyz/rinya/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 18,
+              "html": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。"
+            },
+            {
+              "type": "Layer",
+              "id": "did2015",
+              "title": "人口集中地区 平成27年（総務省統計局）",
+              "url": "https://maps.gsi.go.jp/xyz/did2015/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 8,
+              "maxZoom": 18,
+              "html": "<div class='layer_text'><p>平成27年国勢調査で設定された人口集中地区（DID）を表示します。</p></div>ズームレベル8～18で表示されます。<br>ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+            },
+            {
+              "type": "Layer",
+              "id": "did2010",
+              "title": "人口集中地区 平成22年（総務省統計局）",
+              "url": "https://maps.gsi.go.jp/xyz/did2010/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 8,
+              "maxZoom": 18,
+              "html": "<div class='layer_text'><p>平成22年国勢調査で設定された人口集中地区（DID）を表示します。</p></div>ズームレベル8～18で表示されます。<br>ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+            },
+            {
+              "type": "Layer",
+              "id": "kokuarea",
+              "title": "空港等の周辺空域（航空局）",
+              "url": "https://maps.gsi.go.jp/xyz/kokuarea/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 8,
+              "maxZoom": 18,
+              "maxNativeZoom": 8,
+              "html": "<div class='layer_text'><p>航空法第132条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第236条第1号から第3号までに掲げる空域（空港等の周辺空域）を表示します。</p></div>緑色の面は、上空での飛行が禁止される制限表面を表します。紫色の面は、上空及びその下の空域での飛行が禁止される進入表面及び転移表面並びに上空の空域で飛行が禁止される空港等の敷地を表します。（ズームレベル８～18で表示されます）<br>なお、この情報には誤差が含まれている場合があります。また空港等の敷地については工事等により変更がある場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "みなとオアシス（港湾局)",
+              "iconUrl": "",
+              "toggleall": true,
+              "id": "minato",
+              "html": "<div class='layer_text'><p>港湾局が登録した「みなとオアシス」の位置を表示します。</p></div>ズームレベル5～9で位置アイコン、ズームレベル10～18で詳細施設が表示されます<br>なお、最新の登録情報については、<a target='_blank' href='http://www.mlit.go.jp/kowan/kowan_tk1_000001.html'>国土交通省ホームページ</a>で確認して下さい。<br>※みなとオアシスとは、みなとを核としたまちづくりを推進するため、住民参加による地域振興の取組が継続的に行われる施設を国土交通省港湾局長が登録するものです。",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "minato_icon",
+                  "title": "みなとオアシス（港湾局）",
+                  "url": "https://maps.gsi.go.jp/xyz/minato_icon/{z}/{x}/{y}.geojson",
+                  "styleurl": "https://maps.gsi.go.jp/xyz/minato_icon/style.js",
+                  "cocotile": false,
+                  "minZoom": 5,
+                  "maxZoom": 9,
+                  "maxNativeZoom": 2,
+                  "html": "解説"
+                },
+                {
+                  "type": "Layer",
+                  "id": "minato_polygon",
+                  "title": "みなとオアシス（港湾局）",
+                  "url": "https://maps.gsi.go.jp/xyz/minato_polygon/{z}/{x}/{y}.geojson",
+                  "styleurl": "https://maps.gsi.go.jp/xyz/minato_polygon/style.js",
+                  "cocotile": false,
+                  "minZoom": 10,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 2,
+                  "html": "解説"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "地図の更新情報や提供地域",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/koushin.png",
+          "html": "<div class='layer_text'><p>地図の更新情報や図郭・地域メッシュを閲覧できます。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "LayerGroup",
+              "title": "電子国土基本図の更新情報",
+              "toggleall": false,
+              "html": "<div class='layer_text'><p>電子国土基本図を更新した地域を年月別に表示します。</p></div>",
+              "entries": [
+                {
+                  "type": "LayerGroup",
+                  "title": "2021年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin202102",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202102/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202101",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202101/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2021年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men202102",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202102/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202101",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202101/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2021年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202102",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202102/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202101",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202101/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2020年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin202012",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202012/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202011",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202011/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202010",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202010/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202009",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202009/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202008",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202008/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202007",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202007/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202006",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202006/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202005",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202005/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202004",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202004/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202003",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202003/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202002",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202002/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin202001",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202001/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2020年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men202012",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202012/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202011",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202011/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202010",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202010/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202009",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202009/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202008",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202008/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202007",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202007/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202006",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202006/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202005",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202005/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202004",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202004/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202003",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202003/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202002",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202002/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men202001",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202001/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2020年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202012",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202012/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202011",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202011/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202010",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202010/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202009",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202009/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202008",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202008/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202007",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202007/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202006",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202006/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202004",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202004/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202003",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202003/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202002",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202002/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202001",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202001/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2019年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201912",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201912/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201911",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201911/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201910",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201910/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201909",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201909/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201908",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201908/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201907",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201907/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201906",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201906/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201905",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201905/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201904",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201904/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201903",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201903/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201902",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201902/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201901",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201901/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2019年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201912",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201912/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201911",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201911/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201910",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201910/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201907",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201907/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201906",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201906/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201905",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201905/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201904",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201904/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201903",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201903/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201902",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201902/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201901",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201901/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2019年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz201912",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201912/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201911",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201911/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201910",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201910/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201909",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201909/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201907",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201907/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201906",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201906/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201905",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201905/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201904",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201904/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201903",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201903/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201902",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201902/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201901",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201901/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201812",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201812/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201811",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201811/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201810",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201810/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201809",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201809/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201808",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201808/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201807",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201807/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201806",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201806/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201805",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201805/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201804",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201804/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201803",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201803/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201802",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201802/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201801",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201801/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201812",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201812/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201811",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201811/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201810",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201810/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201809",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201809/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201808",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201808/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201807",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201807/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201806",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201806/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201804",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201804/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201803",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201803/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201802",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201802/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201801",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201801/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz201812",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201812/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201810",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201810/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201809",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201809/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201808",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201808/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201807",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201807/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201806",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201806/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201804",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201804/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz201803",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz201803/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201712",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201712/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201711",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201711/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201710",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201710/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201709",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201709/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201708",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201708/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201707",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201707/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201706",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201706/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201705",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201705/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201704",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201704/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201703",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201703/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201702",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201702/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201701",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201701/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201712",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201712/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201711",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201711/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201710",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201710/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201709",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201709/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201708",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201708/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201707",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201707/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201706",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201706/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201705",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201705/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201704",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201704/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201703",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201703/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201702",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201702/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201701",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201701/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201612",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201612/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201611",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201611/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201610",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201610/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201609",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201609/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201608",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201608/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201607",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201607/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201606",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201606/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201605",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201605/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201604",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin201604/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201603",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2016/201603.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201602",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2016/201602.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201601",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2016/201601.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201612",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201612/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201611",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201611/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201610",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201610/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201609",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201609/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201608",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201608/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201607",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201607/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201606",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201606/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201605",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201605/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201604",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men201604/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201603",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2016/201603.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201602",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2016/201602.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201601",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2016/201601.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2015年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201512",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201512.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201511",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201511.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201510",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201510.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201509",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201509.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201508",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201508.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201507",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201507.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201506",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201506.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201505",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201505.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201504",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201504.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201503",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201503.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201502",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201502.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201501",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2015/201501.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2015年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201512",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201512.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201511",
+                      "title": "11月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201511.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201510",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201510.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201509",
+                      "title": "9月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201509.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201508",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201508.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201507",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201507.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201506",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201506.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201505",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201505.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201503",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201503.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201502",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201502.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201501",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2015/201501.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2014年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201412",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201412.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201411",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201411.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201410",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201410.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201409",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201409.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201408",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201408.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201407",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201407.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201406",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201406.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201405",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201405.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201404",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201404.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201403",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201403.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201402",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201402.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201401",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2014/201401.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2014年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men201412",
+                      "title": "12月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201412.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201410",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201410.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201408",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201408.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201407",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201407.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201406",
+                      "title": "6月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201406.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201405",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201405.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201404",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201404.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201403",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201403.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "men201402",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/men2014/201402.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2013年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201312",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201312.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201311",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201311.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201310",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201310.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201309",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201309.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201308",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201308.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201307",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201307.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201306",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201306.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201305",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201305.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201304",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201304.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201303",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201303.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201302",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201302.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201301",
+                      "title": "1月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2013/201301.kml",
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2012年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin201212",
+                      "title": "12月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/104.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201212.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201211",
+                      "title": "11月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/103.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201211.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201210",
+                      "title": "10月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/102.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201210.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201209",
+                      "title": "9月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201209.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201208",
+                      "title": "8月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201208.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201207",
+                      "title": "7月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201207.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201206",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201206.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201205",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201205.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201204",
+                      "title": "4月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201204.kml",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "jin201203",
+                      "title": "3月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+                      "url": "https://maps.gsi.go.jp/overlay/update_std/data/jinsoku2012/201203.kml",
+                      "cocotile": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "基盤地図情報基本項目の更新情報",
+              "html": "<div class='layer_text'><p>基盤地図情報を更新した地域を年月別に表示します。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "fgd_2500_area",
+                  "title": "縮尺2500分1相当以上の概ねの範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_2500_area/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 4,
+                  "maxZoom": 12,
+                  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(縮尺2500分1相当以上の概ねの範囲)</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2021年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2021_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2021_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2020年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2020_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2020_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2020_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2020_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2020_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2019年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2019_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2019_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2019_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2019_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2019_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2018_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2018_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2018_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2018_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2018_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_08",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_08/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2017_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2017_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2016_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2016_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2016_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2016_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2016_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2016_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2016_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2016_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2015年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2015_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2015_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2015_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2015_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2015_04",
+                      "title": "4月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2015_04/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2015_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2015_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2014年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2014_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2014_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "基盤地図情報数値標高モデルの更新情報",
+              "html": "<div class='layer_text'><p>基盤地図情報数値標高モデルの提供地域と更新地域を表示します。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "LayerGroup",
+                  "title": "5ｍメッシュDEM（航空レーザ測量）の<br>提供地域と作業年度",
+                  "id": "fgd_dem5a_area_dtil",
+                  "toggleall": false,
+                  "html": "<div class=\"gsi_layerinfo_title\">5ｍメッシュDEM（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_subtitle\">（基盤地図情報数値標高モデル）</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した5mメッシュDEMの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>5mメッシュDEMの提供範囲（概略）</li><li>ズーム：12～14<br>5mメッシュDEMの提供範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/attension_dem5a_area.html\">解説</a></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_area_dtil_5",
+                      "title": "提供範囲",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 5,
+                      "maxZoom": 11,
+                      "maxNativeZoom": 5
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_area_dtil_12",
+                      "title": "提供範囲と作業年度",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/{z}/{x}/{y}.geojson",
+                      "styleurl": "https://maps.gsi.go.jp/xyz/fgd_dem5a_area_dtil/style_canvas.js",
+                      "cocotile": true,
+                      "minZoom": 12,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "Layer",
+                  "id": "fgd_dem5b_area",
+                  "title": "5mメッシュDEM（写真測量）の<br>提供地域",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_area/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 14,
+                  "maxNativeZoom": 2,
+                  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(5mメッシュDEM（写真測量）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>写真測量により整備した5mメッシュDEMの提供範囲を表示します。<br><ul><li>地上画素寸法20cmの数値写真を用いて作成した範囲については、桃色で表示</li><li>地上画素寸法40cmの数値写真を用いて作成した範囲については、水色で表示</li></ul>5mメッシュDEM作成に使用した空中写真の撮影時期は、トップから「年代別の写真」の「電子国土基本図（オルソ画像）（2007年～ ） 」の下にある「撮影期間」（ズーム5～18で表示）から確認いただけます。</div><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "fgd_dem10a_area",
+                  "title": "10mメッシュDEM（火山基本図）の<br>提供地域",
+                  "url": "https://maps.gsi.go.jp/xyz/fgd_dem10a_area/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(10mメッシュDEM（火山基本図）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>火山基本図の等高線データを基に作成した10mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2020年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2020_07",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2020_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2020_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2020_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2019年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2019_07",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2019_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2019_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2019_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2018年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2018_07",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2018_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2018_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2018_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2017年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2017_07",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2017_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2017_07",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2017_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2016年5月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2016_05",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2016_05/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2016_05",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2016_05/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Layer",
+              "id": "zk25000",
+              "title": "2万5千分1地形図郭",
+              "url": "https://maps.gsi.go.jp/xyz/zk25000/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "maxNativeZoom": 8,
+              "html": "<div class='layer_text'><p>2万5千分1地形図の図名と地図の範囲を表示します。</p></div>ズーム10～18で表示します。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/chizuhensyu/zukaku_ido_keido1.html\">多色刷の2万5千分1地形図の図郭</a>です。"
+            },
+            {
+              "type": "Layer",
+              "id": "chiikimesh",
+              "title": "地域メッシュ",
+              "url": "https://maps.gsi.go.jp/xyz/chiikimesh/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 6,
+              "maxZoom": 18,
+              "maxNativeZoom": 14,
+              "html": "<div class='layer_text'><p>地域メッシュとメッシュコードを表示します。</p></div>第1次地域区画：ズーム6～9で表示<br>第2次地域区画：ズーム10～13で表示<br>第3次地域区画：ズーム14～18で表示<br>参考：<a target=\"_blank\" href=\"http://www.stat.go.jp/data/mesh/gaiyou.htm\">総務省統計局　地域メッシュ統計の概要</a>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "ベクトルタイル提供実験",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/vector.png",
+          "toggleall": false,
+          "html": "<div class='layer_text'>ベクトルという形式で提供実験している情報を閲覧できます。</div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "experimental_rdcl",
+              "title": "地図情報（道路中心線）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_rdcl/{z}/{x}/{y}.geojson",
+              "styleurl": "https://maps.gsi.go.jp/xyz/experimental_rdcl/style_canvas.js",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>ベクトル形式の道路の中心線を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_railcl",
+              "title": "地図情報（鉄道中心線）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_railcl/{z}/{x}/{y}.geojson",
+              "styleurl": "https://maps.gsi.go.jp/xyz/experimental_railcl/style_canvas.js",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>ベクトル形式の鉄道の中心線を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_rvrcl",
+              "title": "地図情報（河川中心線）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_rvrcl/{z}/{x}/{y}.geojson",
+              "styleurl": "https://maps.gsi.go.jp/xyz/experimental_rvrcl/style_canvas.js",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>ベクトル形式の河川の中心線を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_anno",
+              "title": "地図情報（注記）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>ベクトル形式の注記を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_anno/'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_nrpt",
+              "title": "地名情報（居住地名）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_nrpt/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>ベクトル形式の居住地名を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_nnfpt",
+              "title": "地名情報（自然地名）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_nnfpt/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>ベクトル形式の自然地名を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_pfpt",
+              "title": "地名情報（公共施設）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_pfpt/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 15,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>ベクトル形式の公共施設を表示します。</p></div>ズーム15～18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_jhj",
+              "title": "地名情報（住居表示住所）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_jhj/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 18,
+              "maxZoom": 18,
+              "maxNativeZoom": 18,
+              "html": "<div class='layer_text'><p>ベクトル形式の住居表示住所を表示します。</p></div>ズーム18で表示します。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_pni'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_jhj_index",
+              "title": "┗住居表示住所の提供範囲",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_jhj_area/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "html": "ズーム5～18で表示します。<br>ピンク色で塗りつぶされた部分以外には住居表示住所データはございません。<br>なお、この住居表示住所データの範囲は目安であり厳密なデータ範囲とは一致しませんのでご留意ください。"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_fgd",
+              "title": "基盤地図情報_基本項目",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_fgd/{z}/{x}/{y}.geojson",
+              "styleurl": "https://maps.gsi.go.jp/xyz/experimental_fgd/style_canvas.js",
+              "cocotile": true,
+              "minZoom": 17,
+              "maxZoom": 18,
+              "maxNativeZoom": 18,
+              "html": "<div class='layer_text'><p>ベクトル形式の基準点や等高線等を表示します。</p></div>ズーム17～18で表示します。<a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_dem10b",
+              "title": "基盤地図情報_数値標高モデル(10m)",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_dem10b/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 18,
+              "maxZoom": 18,
+              "maxNativeZoom": 18,
+              "html": "<div class='layer_text'><p>ベクトル形式の標高データを表示します。</p></div>ズーム18で表示します。基盤地図情報数値標高モデル10mメッシュDEMです。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/vector-tile-experiment'>ベクトルタイル提供実験</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification1",
+              "title": "地形分類（自然地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br><br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification2",
+              "title": "地形分類（人工地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地図上をクリックすると「切土地」「盛土地」などが分かります。</p></div>ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br><br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

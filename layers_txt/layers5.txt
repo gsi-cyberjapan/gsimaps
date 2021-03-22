@@ -1,0 +1,303 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "災害伝承・避難場所",
+	"iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb_20px.png",
+      "toggleall": false,
+      "html" : "<div class='layer_text'>災害から命を守るための情報や、過去の自然災害の教訓を閲覧できます。</div>",
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "指定緊急避難場所",
+          "toggleall": false,
+          "html" : "<div class='layer_text'>災害発生時に緊急的に避難する場所です。災害の種類ごとに対応した避難場所を表示します。<br>地理院地図に掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。<br>【ご利用上の注意】<br>1.本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。最新の状況などは当該市町村にご確認ください。<br>2.本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href='https://hinan.gsi.go.jp/hinanjocjp/hinanbasho/koukaidate.html' target='_blank'><span>市町村別公開日・更新日一覧</span></a>）。<br>3.指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。<br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>1.「指定緊急避難場所」について</span></a><br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html' target='_blank'><span>2.利用方法</span></a><br><a href='https://hinan.gsi.go.jp/hinanjocjp/hinanbasho/koukaidate.html' target='_blank'><span>3.市町村別公開日・更新日一覧</span></a><br><a href='https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101' target='_blank'><span>4.お問い合わせ</span></a></div>",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "skhb01",
+          "title": "指定緊急避難場所（洪水）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb01/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した洪水に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb02",
+          "title": "指定緊急避難場所（崖崩れ、土石流及び地滑り）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb02/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した崖崩れ、土石流及び地滑りに対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb03",
+          "title": "指定緊急避難場所（高潮）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb03/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した高潮に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb04",
+          "title": "指定緊急避難場所（地震）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb04/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した地震に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb05",
+          "title": "指定緊急避難場所（津波）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb05/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した津波に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb06",
+          "title": "指定緊急避難場所（大規模な火事）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb06/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した大規模な火事に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div><span style='font-weight:bold'>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span style='font-weight:bold'>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span style='font-weight:bold'>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb07",
+          "title": "指定緊急避難場所（内水氾濫）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb07/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した内水氾濫に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "skhb08",
+          "title": "指定緊急避難場所（火山現象）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
+          "url": "https://maps.gsi.go.jp/xyz/skhb08/{z}/{x}/{y}.geojson",
+          "minZoom": 10,
+          "maxZoom": 18,
+          "maxNativeZoom": 10,
+          "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した火山現象に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+        }
+      ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "自然災害伝承碑",
+          "toggleall": false,
+          "html" : "<div class='layer_text'>過去に発生した災害についての様子や教訓が刻まれた碑です。写真や伝承内容を確認することもできます。</div>",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "disaster_lore_all",
+          "title": "自然災害伝承碑（すべて）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_all/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">全ての災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_0",
+          "title": "自然災害伝承碑（洪水）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_flood/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">洪水の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_1",
+          "title": "自然災害伝承碑（土砂災害）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_sediment/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">土砂災害の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_2",
+          "title": "自然災害伝承碑（高潮）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_hightide/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">高潮の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_3",
+          "title": "自然災害伝承碑（地震）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_earthquake/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">地震の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_4",
+          "title": "自然災害伝承碑（津波）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_tsunami/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">津波の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_5",
+          "title": "自然災害伝承碑（火山災害）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_volcano/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">火山災害の災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_6",
+          "title": "自然災害伝承碑（その他）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/836.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_other/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">その他の災害伝承碑を表示します。</div>"
+        }
+      ]
+        },
+		{
+		"type": "LayerGroup",
+		"title": "震災伝承施設（東北地整）",
+		"src": "",
+		"iconUrl": "",
+		"toggleall": false,
+		"html" : "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div>",
+		"entries": [
+			{
+			"type": "Layer",
+			"id": "shinsaidenshoushisetsu",
+			"title": "震災伝承施設（東北地整）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/shinsaidenshoushisetsu.png",
+			"url": "https://maps.gsi.go.jp/xyz/shinsaidenshoushisetsu/{z}/{x}/{y}.geojson",
+			"cocotile": true,
+			"minZoom": 7,
+			"maxNativeZoom": 2,
+			"legendUrl": "",
+			"area" : {
+				"lat" : 38.709089,
+				"lng" : 141.355591,
+				"zoom" : 8
+				},
+			"html": "<div>「震災伝承施設」は、東日本大震災から得られた個々の実情と教訓を、総体として広く国内外及び次世代に継承すること、あわせて地域の交流促進、地方創生及び地域の防災力の強化に寄与することを目的として、東北地方整備局、青森県、岩手県、宮城県、福島県、仙台市から構成される<a href='http://www.thr.mlit.go.jp/sinsaidensyou/sisetsu/index.html' target='_blank'>震災伝承ネットワーク協議会</a>が広く一般から募集し、登録された施設です。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://maps.gsi.go.jp/legend/legend_shinsaidenshoushisetsu.png'></td></tr></tbody></table></div><div><span style='font-weight:bold'>第1分類</span><div>下記の項目のいずれか一つ以上に該当する施設。<br>・災害の教訓が理解できるもの<br>・災害時の防災に貢献できるもの<br>・災害の恐怖や自然の畏怖を理解できるもの<br>・災害における歴史的・学術的価値があるもの<br>・その他、災害の実情や教訓の伝承と認められるもの</div></div><div><span style='font-weight:bold'>第2分類</span><div>第1分類うち、公共交通機関等の利便性が高い、近隣に有料又は無料の駐車場がある等、来訪者が訪問しやすい施設。</div></div><div><span style='font-weight:bold'>第3分類</span><div>第2分類のうち、案内員の配置や語り部活動等、来訪者の理解しやすさに配慮している施設。</div></div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho1",
+			"title": "2011年3月～2011年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"maxNativeZoom": 17,
+			"maxZoom": 18,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho2",
+			"title": "2011年5月～2012年4月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho3",
+			"title": "2012年10月～2013年5月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "toho4",
+			"title": "2013年9月～2013年12月",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 5,
+			"html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			},
+			{
+			"type": "Layer",
+			"id": "seamlessphoto",
+			"title": "全国最新写真（シームレス）",
+			"iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+			"url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+			"cocotile": true,
+			"minZoom": 2,
+			"maxZoom": 18,
+			"html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>"
+			},
+			{
+			"type": "Layer",
+			"id": "fukkokizu",
+			"title": "災害復興計画基図",
+			"url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+			"cocotile": true,
+			"minZoom": 5,
+			"legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
+			"html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+			}
+		]
+		}
+		]
+		}
+  ]
+}

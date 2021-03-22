@@ -1,0 +1,224 @@
+{
+    "layers": [
+        {
+            "type": "LayerGroup",
+            "title": "斜め写真",
+            "toggleall": false,
+            "entries": [
+                {
+                    "type": "LayerGroup",
+                    "title": "球磨川地区（熊本県八代市、芦北町、球磨村）",
+                    "toggleall": false,
+                    "entries": [
+                        {
+                            "type": "Layer",
+                            "id": "20200703oame_kumagawa_0704naname",
+                            "title": "球磨川地区（7/4撮影）",
+                            "url": "https://maps.gsi.go.jp/xyz/20200703oame_kumagawa_0704naname/{z}/{x}/{y}.geojson",
+                            "cocotile": true,
+                            "minZoom": 2,
+                            "maxZoom": 18,
+                            "maxNativeZoom": 2,
+                            "area" : {
+                              "lat" : 32.406777,
+                              "lng" : 130.648384,
+                              "zoom" : 12
+                            },
+                            "html": "撮影は、左岸を下流から上流へ移動しながら実施し（往路）、その後、右岸を上流から下流へ移動しながら実施しました（復路）。往路の写真のアイコンを赤、復路の写真のアイコンを青とし、アイコンの中心が概ね写真の中心を示しています。"
+                        }
+                    ]
+                },
+                {
+                    "type": "LayerGroup",
+                    "title": "久留米地区（福岡県久留米市、筑後市、大川市、小郡市、うきは市、朝倉市、大刀洗町、大木町、広川町、佐賀県鳥栖市、神埼市、上峰町、みやき町）",
+                    "toggleall": false,
+                    "entries": [
+                        {
+                            "type": "Layer",
+                            "id": "20200703oame_kurume_0708naname",
+                            "title": "久留米地区（7/8撮影）",
+                            "url": "https://maps.gsi.go.jp/xyz/20200703oame_kurume_0708naname/{z}/{x}/{y}.geojson",
+                            "cocotile": true,
+                            "minZoom": 2,
+                            "maxZoom": 18,
+                            "maxNativeZoom": 2,
+                            "area" : {
+                              "lat" : 33.315898,
+                              "lng" : 130.618515,
+                              "zoom" : 11
+                            },
+                            "html": "斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しております。<br>また、雲の影響により地上が見えにくい場合があります。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "LayerGroup",
+            "title": "浸水推定図",
+            "toggleall": false,
+            "entries": [
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_kumagawahitoyoshi_0704dansaizu",
+                    "title": "球磨川水系球磨川　人吉市周辺（2020年7月4日13時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_kumagawahitoyoshi_0704dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 32.222096,
+                      "lng" : 130.726318,
+                      "zoom" : 14
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日10時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日13時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_kumagawa_0704dansaizu",
+                    "title": "球磨川水系球磨川（2020年7月4日20時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_kumagawa_0704dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 32.444885,
+                      "lng" : 130.660400,
+                      "zoom" : 14
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害用ヘリコプターが7月4日15時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日20時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_sashikigawayunouragawaashikita_0704dansaizu",
+                    "title": "佐敷川及び湯浦川流域　芦北町周辺（2020年7月4日22時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_sashikigawayunouragawaashikita_0704dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 32.296420,
+                      "lng" : 130.484619,
+                      "zoom" : 14
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月4日15時までに収集したSNS画像、国土交通省災害対策用ヘリコプターが7月4日18時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月4日22時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_omuta_0707dansaizu",
+                    "title": "大牟田市周辺（2020年7月7日9時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_omuta_0707dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.054716,
+                      "lng" : 130.440674,
+                      "zoom" : 14
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日7時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_hita_0707dansaizu",
+                    "title": "筑後川水系花月川　日田市友田周辺（2020年7月7日14時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_hita_0707dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.325939,
+                      "lng" : 130.907593,
+                      "zoom" : 15
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日14時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_miyama_0708dansaizu",
+                    "title": "矢部川水系矢部川　みやま市周辺（2020年7月8日9時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_miyama_0708dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.128567,
+                      "lng" : 130.462732,
+                      "zoom" : 14
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日18時までに収集した情報と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日9時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_chikugogawa_0708dansaizu",
+                    "title": "筑後川水系筑後川（2020年7月8日16時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_chikugogawa_0708dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.327086,
+                      "lng" : 130.566673,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日12時までに収集したSNS画像、報道情報、国土交通省災害対策用ヘリコプターが7月8日10時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月8日16時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200703oame_chikugogawa_0709dansaizu",
+                    "title": "筑後川水系筑後川第2報（2020年7月9日18時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200703oame_chikugogawa_0709dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 33.327086,
+                      "lng" : 130.566673,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月8日14時頃に撮影した空中写真と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月9日18時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200729rain_mogamigawa_0729dansaizu",
+                    "title": "最上川水系最上川（2020年7月29日12時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200729rain_mogamigawa_0729dansaizu/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 38.472776,
+                      "lng" : 140.358860,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月29日12時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                },
+                {
+                    "type": "Layer",
+                    "id": "20200729rain_mogamigawa_0729dansaizu2",
+                    "title": "最上川水系最上川（2020年7月29日20時作成）",
+                    "url": "https://maps.gsi.go.jp/xyz/20200729rain_mogamigawa_0729dansaizu2/{z}/{x}/{y}.png",
+                    "cocotile": true,
+                    "minZoom": 2,
+                    "maxZoom": 16,
+                    "maxNativeZoom": 15,
+                    "area" : {
+                      "lat" : 38.472776,
+                      "lng" : 140.358860,
+                      "zoom" : 12
+                    },
+                    "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像、国土交通省災害対策用ヘリコプターが7月29日14時頃に撮影した画像及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li><li>大江町と中山町の浸水範囲は、2020年7月29日12時作成の速報版の情報になります。</li></ul>2020年7月29日20時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+                }
+            ]
+        }
+    ]
+}
