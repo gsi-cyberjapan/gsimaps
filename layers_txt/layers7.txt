@@ -669,7 +669,7 @@
               "title": "1:2,500　南極地形図（標高版）",
               "id": "southpole_2500",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500_elev.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイド高を21.0ｍとして使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500_elev.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -747,24 +747,24 @@
             },
             {
               "type": "LayerGroup",
-              "title": "1:50,000　南極地形図（楕円体高版）",
-              "id": "southpole_50000",
+              "title": "1:50,000　南極地形図（標高版）",
+              "id": "southpole_50000_2",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:50,000南極地形図（楕円体高版）については、等高線、基準点、標高点等の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約10～40m程度高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>1:50,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイドモデル「地球重力モデル2008（EGM2008)」を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000_2.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
-                  "id": "_southpole_50000",
-                  "title": "1:50,000　南極地形図（楕円体高版）",
-                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000/{z}/{x}/{y}.png",
+                  "id": "_southpole_50000_2",
+                  "title": "1:50,000　南極地形図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_2/{z}/{x}/{y}.png",
                   "cocotile": false,
                   "html": ""
                 },
                 {
                   "type": "Layer",
-                  "id": "_southpole_50000_spec",
-                  "title": "1:50,000　南極地形図（楕円体高版）整備範囲",
-                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec/{z}/{x}/{y}.geojson",
+                  "id": "_southpole_50000_spec_2",
+                  "title": "1:50,000　南極地形図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec_2/{z}/{x}/{y}.geojson",
                   "cocotile": false,
                   "html": "",
                   "maxNativeZoom": 2,
@@ -1114,6 +1114,13 @@
                   "title": "2021年登山道更新情報",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202103",
+                      "title": "3月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202103/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
                     {
                       "type": "Layer",
                       "id": "toz202102",
