@@ -15456,7 +15456,7 @@ GSI.GeoJSON = L.Layer.extend({
     }
   },
   onPointToLayer: function (feature, latlng) {
-    if (!feature.properties) return L.marker(latlng, { icon: L.icon({ iconUrl: 'https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png', iconSize: [20, 20], iconAnchor: [10, 10] }) });
+    if (!feature.properties) return L.marker(latlng, { icon: L.icon({ iconUrl: CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON, iconSize: [20, 20], iconAnchor: [10, 10] }) });
 
     var marker = null;
     if (feature.properties["_markerType"]) {
@@ -15508,7 +15508,7 @@ GSI.GeoJSON = L.Layer.extend({
 
     if (!marker) {
       if (!feature.properties["_iconUrl"])
-        return L.marker(latlng, { icon: L.icon({ iconUrl: 'https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/080.png', iconSize: [20, 20], iconAnchor: [10, 10] }) });
+        return L.marker(latlng, { icon: L.icon({ iconUrl: CONFIG.SAKUZU.SYMBOL.URL + CONFIG.SAKUZU.SYMBOL.DEFAULTICON, iconSize: [20, 20], iconAnchor: [10, 10] }) });
       var iconUrl = feature.properties["_iconUrl"];
       var iconSize = feature.properties["_iconSize"];
       var iconAnchor = feature.properties["_iconAnchor"];
@@ -16634,13 +16634,16 @@ GSI.MapToImage = L.Evented.extend({
     $("body").append(dummy);
 
     dummy.append(markerPane);
+    var outerthis = this;
     html2canvas(markerPane[0], {
-      onrendered: L.bind(this._onMarkerRendered, this),
       logging: false,
       userCORS: true,
       allowTaint: false,
       width: size.x,
-      height: size.y
+      height: size.y,
+      backgroundColor: "transparent"
+    }).then(function(canvas){
+      outerthis._onMarkerRendered(canvas);
     });
 
   },
@@ -16724,13 +16727,16 @@ GSI.MapToImage = L.Evented.extend({
 
     //mapPane.append( popupPane );
     dummy.append(popupPane);
+    var outerthis = this;
     html2canvas(popupPane[0], {
-      onrendered: L.bind(this._onPopupRendered, this),
       logging: false,
       userCORS: true,
       allowTaint: false,
       width: size.x,
-      height: size.y
+      height: size.y,
+      backgroundColor: "transparent"
+    }).then(function(canvas){
+      outerthis._onPopupRendered(canvas);
     });
   },
 
@@ -16838,10 +16844,14 @@ GSI.MapToImage = L.Evented.extend({
       background: "transparent"
     }).remove();
 
+    var xx = baloon.find(".leaflet-popup-content-wrapper").remove();
     baloon.find(".leaflet-popup-tip-container").remove();
-    baloon.append(closeBtn);
-    var origin = this._map.getPixelOrigin();
-    var pixelBounds = (this.options.pixelBounds ? this.options.pixelBounds : this._map.getPixelBounds());
+    xx.removeClass("leaflet-popup-content-wrapper");
+    xx.css({'background':'#ffffff','color':'#333','padding':'1px','text-align':'left','border-radius':'12px'});
+    baloon.find(".leaflet-popup-tip-container").remove();
+    baloon.append(xx);
+    // var origin = this._map.getPixelOrigin();
+    // var pixelBounds = (this.options.pixelBounds ? this.options.pixelBounds : this._map.getPixelBounds());
 
     var dummy = $("<div>").addClass("maptoimage-dummy").css({ "z-index": 0, "width": "1px", "height": "1px", "position": "absolute" });
     $("body").append(dummy);
@@ -16874,13 +16884,16 @@ GSI.MapToImage = L.Evented.extend({
       "top": 0
     });
 
+    var outerthis =this;
     html2canvas(baloon[0], {
-      onrendered: L.bind(this._onBalloonRendered, this),
       logging: false,
       userCORS: true,
       allowTaint: true,
       width: this._baloons[0].width,
-      height: this._baloons[0].height
+      height: this._baloons[0].height,
+      backgroundColor: "transparent"
+    }).then(function(canvas){
+      outerthis._onBalloonRendered(canvas);
     });
   },
 
@@ -16954,7 +16967,7 @@ GSI.MapToImage = L.Evented.extend({
     size.y = Math.floor(size.y);
 
     if (this._gsimaps._onoffObjects[CONFIG.PARAMETERNAMES.MINIMAP].obj.getVisible()) {
-      var miniMap = GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.MINIMAP].obj.miniMap;
+      var miniMap = this._gsimaps._onoffObjects[CONFIG.PARAMETERNAMES.MINIMAP].obj.miniMap;
       var tileLayer = new GSI.MapToImage.TileLayer(miniMap._miniMap, miniMap._layer);
       tileLayer.on("loaded", L.bind(this._onMiniMapLoad, this, { tileLayer: tileLayer, miniMap: miniMap }));
       tileLayer.refreshQueue();
@@ -16991,73 +17004,73 @@ GSI.MapToImage = L.Evented.extend({
     $("body").append(dummy);
 
     dummy.append(miniMapContainer);
+    var outerthis = this;
     var canvas2 = canvas[0];
     html2canvas(miniMapContainer[0], {
-      onrendered: L.bind(function (canvas) {
-        var offset = $(this._map.getContainer()).offset();
-        var pos = $(".leaflet-control-container .leaflet-control-minimap").offset();
-        pos.left -= offset.left;
-        pos.top -= offset.top;
-
-
-        if ($("#footer").is(":visible"))
-          pos.top += $("#footer").outerHeight();
-        //this._mapTexture.drawImage(canvas, pos.left, pos.top );
-        //this._mapTexture.drawImage(canvas2, pos.left+2, pos.top+2 );
-
-        var min = null;
-        var max = null;
-
-        for (var i = 0; i < data.miniMap._aimingRect._parts[0].length; i++) {
-          if (!min) min = $.extend({}, data.miniMap._aimingRect._parts[0][i]);
-          else {
-            if (min.x > data.miniMap._aimingRect._parts[0][i].x) min.x = data.miniMap._aimingRect._parts[0][i].x;
-            if (min.y > data.miniMap._aimingRect._parts[0][i].y) min.y = data.miniMap._aimingRect._parts[0][i].y;
-          }
-          if (!max) max = $.extend({}, data.miniMap._aimingRect._parts[0][i]);
-          else {
-            if (max.x < data.miniMap._aimingRect._parts[0][i].x) max.x = data.miniMap._aimingRect._parts[0][i].x;
-            if (max.y < data.miniMap._aimingRect._parts[0][i].y) max.y = data.miniMap._aimingRect._parts[0][i].y;
-          }
-        }
-
-        var w = max.x - min.x;
-        var h = max.y - min.y;
-        var texture = canvas2.getContext("2d");
-        texture.moveTo(parseInt(size.x / 2 - w / 2), parseInt(size.y / 2 - h / 2));
-        texture.lineTo(parseInt(size.x / 2 + w / 2), parseInt(size.y / 2 - h / 2));
-        texture.lineTo(parseInt(size.x / 2 + w / 2), parseInt(size.y / 2 + h / 2));
-        texture.lineTo(parseInt(size.x / 2 - w / 2), parseInt(size.y / 2 + h / 2));
-        texture.closePath();
-        texture.save();
-        texture.lineWidth = 2;
-        texture.strokeStyle = data.miniMap._aimingRect.options.color;
-        texture.fillStyle = data.miniMap._aimingRect.options.color;
-
-        texture.globalAlpha = data.miniMap._aimingRect.options.fillOpacity;
-        texture.fill();
-        texture.globalAlpha = data.miniMap._aimingRect.options.opacity;
-        texture.stroke();
-        texture.restore();
-
-        //var drawLayer = new GSI.MapToImage.VectorTileLayer( data.miniMap._miniMap , data.miniMap._aimingRect );
-        //drawLayer.draw( canvas.getContext("2d") );
-
-        this._mapTexture.shadowBlur = 10;
-        this._mapTexture.shadowColor = "rgba(0, 0, 0, 0.5)";
-
-        this._mapTexture.drawImage(canvas, pos.left, pos.top);
-        this._mapTexture.drawImage(canvas2, pos.left + 2, pos.top + 2);
-
-
-        $(".maptoimage-dummy").remove();
-        this._scaleToCanvas();
-      }, this),
       logging: false,
       userCORS: true,
       allowTaint: false,
       width: size.x + 4,
       height: size.y + 4
+    }).then(function (canvas) {
+      var offset = $(outerthis._map.getContainer()).offset();
+      var pos = $(".leaflet-control-container .leaflet-control-minimap").offset();
+      pos.left -= offset.left;
+      pos.top -= offset.top;
+
+
+      if ($("#footer").is(":visible"))
+        pos.top += $("#footer").outerHeight();
+      //this._mapTexture.drawImage(canvas, pos.left, pos.top );
+      //this._mapTexture.drawImage(canvas2, pos.left+2, pos.top+2 );
+
+      var min = null;
+      var max = null;
+
+      for (var i = 0; i < data.miniMap._aimingRect._parts[0].length; i++) {
+        if (!min) min = $.extend({}, data.miniMap._aimingRect._parts[0][i]);
+        else {
+          if (min.x > data.miniMap._aimingRect._parts[0][i].x) min.x = data.miniMap._aimingRect._parts[0][i].x;
+          if (min.y > data.miniMap._aimingRect._parts[0][i].y) min.y = data.miniMap._aimingRect._parts[0][i].y;
+        }
+        if (!max) max = $.extend({}, data.miniMap._aimingRect._parts[0][i]);
+        else {
+          if (max.x < data.miniMap._aimingRect._parts[0][i].x) max.x = data.miniMap._aimingRect._parts[0][i].x;
+          if (max.y < data.miniMap._aimingRect._parts[0][i].y) max.y = data.miniMap._aimingRect._parts[0][i].y;
+        }
+      }
+
+      var w = max.x - min.x;
+      var h = max.y - min.y;
+      var texture = canvas2.getContext("2d");
+      texture.moveTo(parseInt(size.x / 2 - w / 2), parseInt(size.y / 2 - h / 2));
+      texture.lineTo(parseInt(size.x / 2 + w / 2), parseInt(size.y / 2 - h / 2));
+      texture.lineTo(parseInt(size.x / 2 + w / 2), parseInt(size.y / 2 + h / 2));
+      texture.lineTo(parseInt(size.x / 2 - w / 2), parseInt(size.y / 2 + h / 2));
+      texture.closePath();
+      texture.save();
+      texture.lineWidth = 2;
+      texture.strokeStyle = data.miniMap._aimingRect.options.color;
+      texture.fillStyle = data.miniMap._aimingRect.options.color;
+
+      texture.globalAlpha = data.miniMap._aimingRect.options.fillOpacity;
+      texture.fill();
+      texture.globalAlpha = data.miniMap._aimingRect.options.opacity;
+      texture.stroke();
+      texture.restore();
+
+      //var drawLayer = new GSI.MapToImage.VectorTileLayer( data.miniMap._miniMap , data.miniMap._aimingRect );
+      //drawLayer.draw( canvas.getContext("2d") );
+
+      outerthis._mapTexture.shadowBlur = 10;
+      outerthis._mapTexture.shadowColor = "rgba(0, 0, 0, 0.5)";
+
+      outerthis._mapTexture.drawImage(canvas, pos.left, pos.top);
+      outerthis._mapTexture.drawImage(canvas2, pos.left + 2, pos.top + 2);
+
+
+      $(".maptoimage-dummy").remove();
+      outerthis._scaleToCanvas();
     });
 
   },
