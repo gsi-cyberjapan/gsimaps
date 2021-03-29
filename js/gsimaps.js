@@ -56470,6 +56470,7 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
     this.setActiveIndex(this.activeIndex);
     this.setGrayScale(defaultMapGrayScale);
 
+    
     if (!L.android) {
       this.on('tileunload', this._onTileRemove);
     }
@@ -56553,6 +56554,7 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
       }
       
 
+      var zIndex = undefined;
       if ( this._layerList[idx].type == "LayerGroup") {
 
         this._layer = new GSI.MultiLayer( this._layerList[idx].entries);
@@ -56560,8 +56562,13 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
         this._layer.setOpacity( this.options.opacity ? this.options.opacity : this.opacity );
         this._layer.load();
       } else {
+
+        if ( this._layer ) {
+          zIndex = this._layer.options.zIndex;
+        }
+
         this._layer = L.tileLayer(url, options);
-      
+        
       
         this._layer.isGrayScale = this.isGrayScale;
         this._layer.setOpacity( this.options.opacity ? this.options.opacity : this.opacity );
@@ -56577,6 +56584,7 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
 
       if (this._map) {
         this._layer.addTo( this._map);
+        if ( zIndex ) this._layer.setZIndex(zIndex);
         this._layer._setView(this._map.getCenter(), this._map.getZoom());
       }
       this.fire("change", {index:this.activeIndex});
@@ -56595,7 +56603,7 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
 
   onAdd  : function(map) {
     
-    if ( this._layer  && !this._layer._map) {
+    if ( this._layer && !this._layer._map) {
      
       this._layer.isGrayScale = this.isGrayScale;
       //this._layer.options.crossOrigin = ( this.isGrayScale ? true :false );
@@ -56648,6 +56656,11 @@ GSI.ComparePhotoLayer = L.Layer.extend( {
     
   },
 
+  setZIndex: function(zIndex) {
+    if ( this._layer ) {
+      this._layer.setZIndex(zIndex);
+    }
+  },
   getGrayScale: function () {
     return this.isGrayScale;
   },
