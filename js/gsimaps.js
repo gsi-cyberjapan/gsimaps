@@ -16042,6 +16042,13 @@ GSI.MapToImage = L.Evented.extend({
       else if (item.type == "geotiff" || item.type == "videooverlay") {
         item.drawLayer = new GSI.MapToImage.OverlayLayer(this._map, layer, { opacity: item.opacity, pixelBounds: this.options.pixelBounds });
       }
+      else if ( layer instanceof GSI.ComparePhotoLayer) {
+        item.drawLayer = new GSI.MapToImage.TileLayer(this._map, layer._layer, {
+          opacity: item.opacity,
+          grayscale: item.grayscale,
+          blend: item.blend, pixelBounds: this.options.pixelBounds
+        });
+      }
       else if (item.type == "tile") {
 
         if (layer instanceof GSI.ReliefTileLayer) {
