@@ -1266,8 +1266,11 @@ CONFIG.SAKUZU = {
 
 
   FONTSIZELIST: [
-    8, 9, 10, 11, 12, 15, 18, 19, 20, 24, 32, 48, 64, 92
+    8, 9, 9.5, 10, 10.5, 11, 12, 15, 18, 19, 20, 24, 32, 48, 64, 92
   ]
+  // FONTSIZELIST: [
+  //   8, 9, 10, 11, 12, 15, 18, 19, 20, 24, 32, 48, 64, 92
+  // ]
 
 };
 
@@ -49049,10 +49052,12 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
         var children = a.children();
         if (children.length > 0) {
           if (children[0].style && children[0].style.fontSize) {
-            fontSize = parseInt(children[0].style.fontSize);
+            fontSize = parseFloat(children[0].style.fontSize);
+            //fontSize = parseInt(children[0].style.fontSize);
           }
           else {
-            fontSize = parseInt($(children[0]).css("font-size"));
+            fontSize = parseFloat($(children[0]).css("font-size"));
+            //fontSize = parseInt($(children[0]).css("font-size"));
           }
           var fontWeight = $(children[0]).css("font-weight");
           if (fontWeight && fontWeight != 'normal')
@@ -49141,8 +49146,15 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     // テキストモード
     var fontSize = this._pointEditTextFontSizeSelect.val();
     var style = '';
-    if (fontSize && fontSize != '')
+    if (fontSize && fontSize != ''){
       style += "font-size:" + fontSize + 'pt;'
+    }
+    else{
+      //See css defnition of 'gsi-div-icon'.
+      if (text.indexOf("font-size") < 0){
+        style += "font-size:9.5pt;";
+      }
+    }
 
     if (this._pointEditTextFontBoldButton.data('_bold'))
       style += "font-weight:bold;";
