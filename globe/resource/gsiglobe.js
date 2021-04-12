@@ -11122,7 +11122,8 @@ GLOBE.MAP = {
 		if (!this._addrLoader){
 			this._addrLoader = new GSI.AddrLoader();
 			this._addrLoader.on('load', MA.bind( function(evt){
-				GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,evt.title,evt.titleYomi);
+				GLOBE.DIALOG.FOOTER._initializeContent(evt.lon,evt.lat,height,evt.title,evt.titleYomi);
+				//GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,evt.title,evt.titleYomi);
 			}, this));
 		}
 		else{
@@ -18354,8 +18355,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
 			data = eval( "(" + data + ")" );
 			
 			
-			this.options = $.extend( {}, data.options,this.options );
-			//this.options = $.extend( {}, this.options, data.options );
+			this.options = $.extend( {}, this.options, data.options );
 			
 			if ( data.geojsonOptions ) this.geojsonOptions =  data.geojsonOptions;
 			for ( var i=0; i<this._tiles.length; i++ ) 
@@ -24984,7 +24984,7 @@ GSI.AddrLoader = MA.Class.extend({
 		}
   
 	  }
-	  this.fire("load", { "feature": hitFeature, "title": title, "titleYomi": titleYomi, "titleEng": titleEng });
+	  this.fire("load", { "feature": hitFeature, "title": title, "titleYomi": titleYomi, "titleEng": titleEng, "lon": pos.lng, "lat": pos.lat });
 	},
   
 	_isPointInPolygon: function (point, polygon) {
