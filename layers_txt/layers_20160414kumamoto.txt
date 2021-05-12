@@ -53,6 +53,7 @@
           "cocotile": false,
           "minZoom": 5,
           "maxZoom": 17,
+          "maxNativeZoom": 2,
           "html": "平成28年（2016年）４月16日01時25分に熊本県熊本地方で発生した地震について、震源域周辺の電子基準点で観測された４時間分のデータを解析した結果、震源に近い電子基準点「長陽」（熊本県阿蘇郡南阿蘇村）が南西方向に約97cmの変動、上下方向に約23cmの隆起（いずれも暫定値）をはじめ、熊本県を中心とした地域で大きな地殻変動が確認されました。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/BOUSAI/H27-kumamoto-earthquake-index.html#4\">解説</a>"
         },
         {
@@ -63,6 +64,7 @@
           "cocotile": false,
           "minZoom": 5,
           "maxZoom": 17,
+          "maxNativeZoom": 2,
           "html": "平成28年（2016年）４月16日01時25分に熊本県熊本地方で発生した地震について、震源域周辺の電子基準点で観測された４時間分のデータを解析した結果、震源に近い電子基準点「長陽」（熊本県阿蘇郡南阿蘇村）が南西方向に約97cmの変動、上下方向に約23cmの隆起（いずれも暫定値）をはじめ、熊本県を中心とした地域で大きな地殻変動が確認されました。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/BOUSAI/H27-kumamoto-earthquake-index.html#4\">解説</a>"
         }
       ]
