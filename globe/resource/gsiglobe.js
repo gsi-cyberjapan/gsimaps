@@ -7766,7 +7766,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
 	setTitle : function( title )
 	{
 		var subTitle = $( '<a>' ).html( "協力:東大CSIS" ).addClass( 'searchresultdialog_subtitle' )
-			.css( {'font-size':'7pt'} ).attr('href', 'http://newspat.csis.u-tokyo.ac.jp/geocode/')
+			.css( {'font-size':'7pt'} ).attr('href', 'https://geocode.csis.u-tokyo.ac.jp/home/simple-geocoding/')
 			.attr('target', '_blank');
 		
 		this.headerTitle.html( title ).append( subTitle );
