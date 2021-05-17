@@ -5749,7 +5749,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend({
   },
   setTitle: function (title) {
     var subTitle = $('<a>').html("協力:東大CSIS").addClass('searchresultdialog_subtitle')
-      .css({ 'font-size': '7pt' }).attr('href', 'http://newspat.csis.u-tokyo.ac.jp/geocode/')
+      .css({ 'font-size': '7pt' }).attr('href', 'https://geocode.csis.u-tokyo.ac.jp/home/simple-geocoding/')
       .attr('target', '_blank');
 
     this.title.html(title).append(subTitle);
@@ -34617,7 +34617,7 @@ GSI.CSVLoadDialog = GSI.Dialog.extend({
 
     tr.append($('<td>').append(this._pointIconSizeSelect));
 
-    tr.append($('<td>').css({ 'white-space': 'nowrap' }).html('<a href = "http://newspat.csis.u-tokyo.ac.jp/geocode/" target=_blank style="padding-left:2em;">協力：東大CSIS</a>'));
+    tr.append($('<td>').css({ 'white-space': 'nowrap' }).html('<a href = "https://geocode.csis.u-tokyo.ac.jp/home/simple-geocoding/" target=_blank style="padding-left:2em;">協力：東大CSIS</a>'));
 
     tbody.append(tr);
     table.append(tbody);
