@@ -464,6 +464,7 @@ CONFIG.CONFIRM_LAYERS = {
     "title": "留意事項", // 確認ダイアログに表示するタイトル
     // 表示するメッセージ
     "message": "・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。" + "<br>" + 
+    "・聖火リレールートの変更等により、実際の小型無人機等の飛行禁止区域と表示情報が異なる可能性があります。" + "<br>" + 
     "・地図は、仕様上、必ずしも道路や建物等全てを取得・表現しているとは限りません。また、地図及び飛行禁止区域はその性質上、誤差を有しています。これらの点を踏まえ、飛行禁止区域等の境界付近での厳密な区域の判定が必要な場合には十分にご注意ください。" + "<br>" + 
     "・赤色の面は、上空での飛行が禁止される対象大会関係施設の区域を表します。" + "<br>" + 
     "・青色の線で囲まれた面は、上空での飛行が禁止される対象大会関係施設周辺地域を表します。" + "<br>" +
@@ -515,6 +516,7 @@ CONFIG.CONFIRM_LAYERS = {
     // 表示するメッセージ
     "message": "※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect." + "<br>" +
     "This data shows prohibited areas for flying Unmanned Aerial System/drones created by Japan Sports Agency." + "<br>" + 
+    "The data of the displayed information may be different from actual prohibited areas for flying UAS/drones due to changes of Torch Relay route." + "<br>" + 
     "Some roads or buildings are omitted from the base map due to our map specifications." + "<br>" + 
     "Please be aware of positional errors inherent in the map, especially in determining accurate boundary of the prohibited area." + "<br>" +
     "Our basemap in English is less frequently updated than the Japanese version." + "<br>" + 
@@ -25977,7 +25979,112 @@ GSI.ElevationLoader = L.Evented.extend({
 
 });
 
+/************************************************************************
+ L.Evented
+ - GSI.ElevationLoader
+   - GSI.FooterElevationLoader (フッター用標高画像ローダー)
+ ************************************************************************/
+GSI.FooterElevationLoader = GSI.ElevationLoader.extend({
+  initialize: function (map, options) {
+    this._map = map;
+    this._demUrlList = [
+      {
+        "title": "DEM5A",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+        "minzoom": 15,
+        "maxzoom": 15,
+        "fixed": 1
+      },
+      {
+        "title": "DEM5B",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+        "minzoom": 15,
+        "maxzoom": 15,
+        "fixed": 1
+      },
+      {
+        "title": "DEM5C",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+        "minzoom": 15,
+        "maxzoom": 15,
+        "fixed": 1
+      },
+      {
+        "title": "DEM10B",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+        "minzoom": 14,
+        "maxzoom": 14,
+        "fixed": 0
+      },
+      {
+        "title": "DEMGM",
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
+        "minzoom": 8,
+        "maxzoom": 8,
+        "fixed": 0
+      }
+    ];
 
+    this.pow2_8 = Math.pow(2, 8);
+    this.pow2_16 = Math.pow(2, 16);
+    this.pow2_23 = Math.pow(2, 23);
+    this.pow2_24 = Math.pow(2, 24);
+
+  },
+  _load: function (current, valueError) {
+    this._destroyImage();
+
+    if (this._current != current) return;
+
+    if (!this._current.urlList || this._current.urlList.length <= 0) {
+      // not found
+      this.fire("load", {
+        h: undefined,
+        pos: current.pos
+      })
+      return;
+    }
+
+    var url = this._current.urlList.shift();
+
+    if (valueError && url.title == "DEMGM") {
+      this.fire("load", {
+        h: undefined,
+        pos: current.pos
+      });
+      return;
+    }
+
+    if ((this._map.getZoom() > url.zoom) && (url.title == "DEMGM")){
+      this.fire("load", {
+        h: undefined,
+        pos: current.pos
+      });
+      return;
+    }
+
+    var tileInfo = this._getTileInfo(this._current.pos.lat, this._current.pos.lng, url.zoom);
+    this._img = document.createElement("img");
+    this._img.setAttribute("crossorigin", "anonymous");
+
+    this._imgLoadHandler = L.bind(this._onImgLoad, this, url, current, tileInfo, this._img);
+    this._imgLoadErrorHandler = L.bind(this._onImgLoadError, this, url, current, tileInfo, this._img);
+
+    this._img.addEventListener("load", this._imgLoadHandler);
+    this._img.addEventListener("error", this._imgLoadErrorHandler);
+
+    function makeUrl(url, tileInfo) {
+      var result = url.url.replace("{x}", tileInfo.x);
+      result = result.replace("{y}", tileInfo.y);
+      result = result.replace("{z}", url.zoom);
+      return result;
+    }
+
+    this._img.src = makeUrl(url, tileInfo);
+
+  }
+
+});
 
 /************************************************************************
  L.Class
@@ -30784,7 +30891,8 @@ GSI.Footer = L.Evented.extend({
     this._refreshSeamlessInfo(center);
 
     if (!this._elevationLoader) {
-      this._elevationLoader = new GSI.ElevationLoader();
+      this._elevationLoader = new GSI.FooterElevationLoader(this._mapManager.getMap());
+      //this._elevationLoader = new GSI.ElevationLoader();
       this._elevationLoader.on("load", L.bind(function (e) {
         if (e.h == undefined) return;
         this._setElevationRusult(e.h.toFixed(e.fixed != undefined ? e.fixed : 0) + "m", e.title);
