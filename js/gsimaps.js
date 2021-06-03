@@ -51367,13 +51367,13 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
   _initializeListProc: function () {
     if (this._visibleLayers && this._visibleLayers.length > 0) {
       var fAppend = true;
-      for (var i = 0; i < this._visibleLayers.length; i++) {
-        var l = this._visibleLayers[i];
-        if (!l.info) {
-          fAppend = false;
-          this._initializeList_VisibleLayers(l.id);
-        }
-      }
+      // for (var i = 0; i < this._visibleLayers.length; i++) {
+      //   var l = this._visibleLayers[i];
+      //   if (!l.info) {
+      //     fAppend = false;
+      //     this._initializeList_VisibleLayers(l.id);
+      //   }
+      // }
 
       if (fAppend) {
         for (var i = 0; i < this._visibleLayers.length; i++) {
@@ -51426,7 +51426,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
   _initializeList_IDProc: function (current) {
     var fInit = true;
     if (this._initializeList_ID_Mode == "visible") {
-      if (current == null) {
+      if (current == null && this.visibleLayers) {
         for (var i = 0; i < this.visibleLayers.length; i++) {
           var l = this.visibleLayers[i];
           if (l.id == this._initializeList_ID_Mode_ID) {
@@ -51696,6 +51696,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
   },
 
   _onAreaBtnClick : function(a, item) {
+    if (this._mapLayerList.exists(item) == false){
+      this.onItemClick(a, item);
+    }
     if ( !item.area ) return;
     var map = this._mapManager.getMap();
 
