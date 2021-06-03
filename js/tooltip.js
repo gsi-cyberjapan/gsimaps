@@ -18,7 +18,7 @@ CONFIG.TOOLTIP.SELECTMAP = {
   "UP" : "上へ",
   "DOWN" : "下へ",
   "INFORMATION" : "解説や凡例を表示します", // iマーク
-  "AREA" : "データがあるところに移動", // 範囲ボタン
+  "AREA" : "データがあるところに移動して表示", // 範囲ボタン
   "REMOVE" : "削除", // ゴミ箱
   "OPACITY" : "透過率を設定できます",
   "GRAYSCALE" : "灰色基調の地図になります",
