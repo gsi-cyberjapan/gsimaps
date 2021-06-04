@@ -1094,6 +1094,14 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "jin202105",
+                      "title": "5月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202105/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
                       "id": "jin202104",
                       "title": "4月更新",
                       "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/083.png",
@@ -1131,6 +1139,13 @@
                   "title": "2021年面的更新情報",
                   "toggleall": false,
                   "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men202105",
+                      "title": "5月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202105/{z}/{x}/{y}.geojson",
+                      "cocotile": false
+                    },
                     {
                       "type": "Layer",
                       "id": "men202104",
