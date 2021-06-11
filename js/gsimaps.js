@@ -437,29 +437,6 @@ CONFIG.CONFIRM_LAYERS = {
       "20190807asama_sekisyoku"
     ]
   },
-  "tokyo20201":{
-    "title": "留意事項", // 確認ダイアログに表示するタイトル
-    // 表示するメッセージ
-    "message": "・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。" + "<br>" + 
-    "・地図は、仕様上、必ずしも道路や建物等全てを取得・表現しているとは限りません。また、地図及び飛行禁止区域はその性質上、誤差を有しています。これらの点を踏まえ、飛行禁止区域等の境界付近での厳密な区域の判定が必要な場合には十分にご注意ください。" + "<br>" + 
-    "・赤色の面は、上空での飛行が禁止される対象大会関係施設の区域を表します。" + "<br>" + 
-    "・青色の線で囲まれた面は、上空での飛行が禁止される対象大会関係施設周辺地域を表します。" + "<br>" +
-    "・赤色の線は、上空での飛行が禁止される聖火リレールートを表します。赤色の線が次の(1)から(4)までの場合は、それぞれ(1)から(4)に定める区域で飛行が禁止されます。" + "<br>"  +
-    "　(1) 赤線が道路法（昭和27年法律第180号）第２条第１項に規定する「道路」上にある場合" + "<br>"+
-    "　　赤線が引かれた区間の道路の敷地の区域" + "<br>"+
-    "　(2) 赤線が鉄道線路上にある場合" + "<br>" +
-    "　　赤線が引かれた区間の鉄道線路の敷地の区域" + "<br>"+
-    "　(3) 赤線が水面にある場合" + "<br>"+
-    "　　赤線から左右40メートルにわたる区域" + "<br>"+
-    "　（40メートル以内に岸がある場合は岸までの区域）" + "<br>"+
-    "　(4) その他の場合"+ "<br>"+
-    "　　赤線から左右1メートルにわたる区域"+ "<br>"+
-    "・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>",
-    "withBlend": false, // 合成するかどうか
-    "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201"
-    ]
-  },
   "tokyo20202":{
     "title": "留意事項", // 確認ダイアログに表示するタイトル
     // 表示するメッセージ
@@ -481,34 +458,7 @@ CONFIG.CONFIRM_LAYERS = {
     "・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20202"
-    ]
-  },
-  "tokyo20201e":{
-    "title": "ATTENTION", // 確認ダイアログに表示するタイトル
-    // 表示するメッセージ
-    "message": "※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect." + "<br>" +
-    "This data shows prohibited areas for flying Unmanned Aerial System/drones created by Japan Sports Agency." + "<br>" + 
-    "Some roads or buildings are omitted from the base map due to our map specifications." + "<br>" + 
-    "Please be aware of positional errors inherent in the map, especially in determining accurate boundary of the prohibited area." + "<br>" +
-    "Our basemap in English is less frequently updated than the Japanese version." + "<br>" + 
-    "Please refer to the Japanese version for the latest update. " + "<br>" + 
-    "Red areas: Areas of designated facilities where flying UAS/drones is prohibited." + "<br>" + 
-    "Areas surrounded by blue lines: Surrounding areas where flying UAS/drones is prohibited." + "<br>" +
-    "Red lines: Torch Relay route where flying UAS/drones is prohibited. If red lines are on the areas prescribed following (i)~(iv), the flight is prohibited over the areas in each article prescribed following (i)~(iv):" + "<br>" + 
-    "(i) If red lines are on the ‘road’(a road as prescribed in Article 2, paragraph (1) of the Road Act (Act No. 180 of 1952));" + "<br>" + 
-    "　The site of the road in the section with red line." + "<br>" +
-    "(ii)If red lines are on the railway track;" + "<br>" + 
-    "　The site of the railway track in the section with red line." + "<br>" + 
-    "(iii)If red lines are on waters;" + "<br>" + 
-    "　Areas within 40 meters each leftward and rightward from the red line." + "<br>" + 
-    "　(If land is within 40 meters, Areas to the land.)" + "<br>" + 
-    "(iv)In other cases;" + "<br>" + 
-    "　Areas within 1 meters each leftward and rightward from the red line." + "<br>" + 
-    "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.",
-    "withBlend": false, // 合成するかどうか
-    "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201e"
+      "tokyo20201","tokyo20202","seika3"
     ]
   },
   "tokyo20202e":{
@@ -536,7 +486,7 @@ CONFIG.CONFIRM_LAYERS = {
     "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20202e"
+      "tokyo20201e","tokyo20202e","seika3_e"
     ]
   }
 };
