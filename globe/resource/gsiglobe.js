@@ -18470,8 +18470,8 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
 			};
 			data = eval( "(" + data + ")" );
 			
-			
-			this.options = $.extend( {}, this.options, data.options );
+			this.options = $.extend( {}, data.options, this.options );
+			//this.options = $.extend( {}, this.options, data.options );
 			
 			if ( data.geojsonOptions ) this.geojsonOptions =  data.geojsonOptions;
 			for ( var i=0; i<this._tiles.length; i++ ) 
