@@ -458,7 +458,7 @@ CONFIG.CONFIRM_LAYERS = {
     "・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201","tokyo20202","seika3"
+      "tokyo20201", "tokyo20202", "seika3", "seika3_20210619to0627"
     ]
   },
   "tokyo20202e":{
@@ -486,7 +486,7 @@ CONFIG.CONFIRM_LAYERS = {
     "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201e","tokyo20202e","seika3_e"
+      "tokyo20201e", "tokyo20202e", "seika3_e", "seika3_e_20210619to0627"
     ]
   }
 };
@@ -19097,6 +19097,14 @@ GSI.Control.MapSplitControl = L.Control.extend({
     this._syncSwitch.checked(on);
     this._sync = this._syncSwitch.checked();
     this.fire("syncchange", { sync: this._sync });
+  },
+
+  setTopMargin : function() {
+    $( this._frame ).css({"margin-top":"90px"})
+  },
+
+  removeTopMargin : function() {
+    $( this._frame ).css({"margin-top":"0"});
   }
 
 });
@@ -29969,13 +29977,23 @@ GSI.MapManager = L.Evented.extend({
   },
 
   showComparePhotoControl: function() {
-
     var control = this.getComparePhotoControl();
     control.show();
-    this._mapMenu.setTopMargin();
+    
+    if (this._gsimaps.compared() && this._gsimaps._comparisonSeparater) {
+      this._gsimaps._comparisonSeparater._refresh();
+
+    }
+    this.setTopMargin();
     return control;
   },
 
+  setTopMargin : function() {
+    this._mapMenu.setTopMargin();
+    if ( this._syncControl ) {
+      this._syncControl.setTopMargin();
+    }
+  },
 
   hideComparePhotoControl: function() {
     if ( !this._comparePhotoControl ) return;
@@ -29983,6 +30001,11 @@ GSI.MapManager = L.Evented.extend({
     this._comparePhotoControl.hide();
 
     this._mapMenu.removeTopMargin();
+    
+    if ( this._syncControl ) {
+      this._syncControl.removeTopMargin();
+    }
+
     return  this._comparePhotoControl;
   }
 
@@ -55320,10 +55343,10 @@ GSI.GSIMaps = L.Evented.extend({
         this._refreshSync(this._syncSplitMap);
 
       }
-    }
-    else {
       
+      if (this._mainMap._comparePhotoControl) this._mainMap._comparePhotoControl.adjust();
 
+    } else {
 
       if (this._subMap) {
         this._subMap._splited = false;
@@ -55334,6 +55357,9 @@ GSI.GSIMaps = L.Evented.extend({
         this._subMap.destroy();
         this._subMap = null;
       }
+
+      if (this._mainMap._comparePhotoControl) this._mainMap._comparePhotoControl.adjust();
+
     }
     if (this._hash_options) this._hash_options.HashCreate();
   },
@@ -55648,7 +55674,13 @@ GSI.GSIMaps = L.Evented.extend({
             this._subMap._syncControl = new GSI.Control.MapSplitControl({
               sync: this._syncSplitMap
             });
+
             this._subMap._syncControl.addTo(this._subMap._map);
+            
+            if ( this._subMap._comparePhotoControl && this._subMap._comparePhotoControl.isVisible() ) {
+              this._subMap._syncControl.setTopMargin();
+            }
+
             this._subMap._syncControl
               .on("stop", L.bind(function () {
                 this.split(false);
@@ -55659,7 +55691,6 @@ GSI.GSIMaps = L.Evented.extend({
                 this._syncSplitMap = e.sync;
                 this._refreshSync(this._syncSplitMap);
               }, this));
-
             this._refreshSync(this._syncSplitMap);
           }
         }
@@ -57160,6 +57191,7 @@ GSI.ComparePhotoControl = L.Evented.extend({
       });
 
     }
+
     this.adjust();
     this._container.css({"visibility":"visible"});
 
@@ -57181,6 +57213,9 @@ GSI.ComparePhotoControl = L.Evented.extend({
     this.refreshSize();
   },
 
+  isVisible : function() {
+    return this._container.is(":visible");
+  },
 
   hide : function() {
 
@@ -57240,12 +57275,15 @@ GSI.ComparePhotoControl = L.Evented.extend({
   setLeft: function(left) {
     if ( !this._container) return;
 
-    this._parentContainer.css({"left": ( left + 60 ) +"px"})
+    this._container.css({"left": ( left ) +"px"});
+    this.adjust();
   },
 
 
   setRight: function(right) {
 
+    this._container.css({"right": ( right ) +"px"});
+    this.adjust();
   },
 
 
