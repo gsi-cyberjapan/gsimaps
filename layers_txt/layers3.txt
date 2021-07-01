@@ -534,6 +534,7 @@
               "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
               "cocotile": true,
               "maxZoom": 16,
+              "maxNativeZoom": 2,
               "legendUrl": "",
               "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
@@ -687,6 +688,7 @@
               "cocotile": false,
               "minZoom": 2,
               "maxZoom": 15,
+              "maxNativeZoom": 2,
               "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/kankyochiri/koshouchousa-list.html\" target=\"_blank\">調査実施湖沼一覧</a>"
             }
           ]
@@ -705,6 +707,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（地殻の変動による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_chikaku.html\">こちら</a></div><br>地形項目：<br>構造盆地、地震断層、活断層崖(横ずれ含む) 、その他の断層崖、撓曲崖、活褶曲、衝上断層、断層湖、堰止湖、隆起波食棚、隆起海食洞、隆起サンゴ礁、二重山稜・線状凹地、地割れ、噴砂現象<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -715,6 +718,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（火山の活動による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_kazan.html\">こちら</a></div><br>地形項目：<br>成層火山、火山岩尖、溶岩円頂丘、火山砕屑丘、寄生火山（側火山）、火口、爆裂火口、カルデラ、火口湖、カルデラ湖・火口原湖、溶岩流、溶岩台地、火山性高原、火砕流台地、火砕流凹地、火山麓扇状地、流れ山（泥流丘）、堰止湖、溶岩末端崖、溶岩トンネル、枕状溶岩、溶岩樹型、泥火山・噴泉塔、火山岩頸<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -725,6 +729,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（地質を反映した地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_chishitsu.html\">こちら</a></div><br>地形項目：<br>カルスト台地、カッレンフェルト、ドリーネ、ウバーレ、ポリエ、鍾乳洞、石灰華段丘、石灰華ドーム、円錐カルスト、塔状カルスト、沈水カルスト、平頂峰（キャップロック）、メサ、ビュート、ケスタ、非対称谷、残丘、花崗岩ドーム、岩峰・岩峰群、奇岩怪石・巨石群、天然橋・岩門・石門、柱状節理・板状節理、バッドランド、地すべり地、地すべりによって生じた凹地，池、千枚田、蜂の巣状構造<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -735,6 +740,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（河川の作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_kasen.html\">こちら</a></div><br>地形項目：<br>峡谷、懸谷、滝及び滝壺、ナメ・淵、甌穴群（ポットホール）、土柱、穿入蛇行、還流丘陵、河川争奪地形、風隙、谷中分水界、堰止湖、湖岸段丘、谷底平野、谷戸（谷津・谷地）、埋積谷、河岸段丘及び段丘崖、 瀞、瀬、扇状地、沖積錐、合流扇状地、網状流、天井川、水無川、湧泉・湧泉群、自然河川、自由蛇行（自然蛇行）、自然堤防、旧河道、後背湿地、河畔砂丘、三日月湖、落堀（押堀）、三角州、延長川、マッドランプ、残丘<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -745,6 +751,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（海の作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_umi.html\">こちら</a></div><br>地形項目：<br>多島海、リアス式海岸（溺れ谷）、岩石海岸、波食棚、海食台、鬼の洗濯岩、海成段丘、海食崖、海食洞、ノッチ、潮吹き穴、きのこ岩、甌穴群（ポットホール）、岩礁、砂浜、浜堤、砂州、砂嘴、トンボロ及び陸繋島、砂紋、砂丘・風紋、砂丘間湖、三稜石、潟湖（ラグーン）、干潟、マングローブ湿地、サンゴ礁、礁湖、ビーチロック、サーフベンチ、津波石<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -755,6 +762,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（氷河・周氷河作用による地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_hyoga.html\">こちら</a></div><br>地形項目：<br>カール、氷食による岩壁、アレート、氷食尖峰、氷食谷、羊背岩、モレーン、周氷河性波状地、デレ、化石周氷河現象、岩塊流、岩石氷河、化石構造土、クリオペディメント、麓屑面、永久凍土、パルサ、構造土、アースハンモック、谷地坊主、雪食凹地、ペイブメント、風食裸地、アバランチシュート、非対称山稜、非対称谷<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
@@ -765,6 +773,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 13,
+              "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（その他の地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_sonota.html\">こちら</a></div><br>地形項目：<br>隆起準平原、準平原遺物、鋸歯状山稜、キレット、大規模崩壊地、崩壊地、崩壊堆積地形、土石流堆積地形、崖錐、風穴、ペディメント、鉄穴流し跡、高層湿原・池塘、中間湿原、低層湿原、湖沼、堰止湖、厚い段丘礫層、地層等の見える大露頭、指標テフラの見える露頭、断層露頭、不整合露頭<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
