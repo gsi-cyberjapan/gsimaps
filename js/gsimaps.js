@@ -12029,7 +12029,7 @@ GSI.PagePrinter = L.Evented.extend({
     // attention
     var trinfo = $('<tr>');
     var tdinfo = $('<td>');
-    tdinfo.html("「用紙サイズ」で選択したサイズや向きで印刷するには、プリンターのプロパティで用紙サイズや向きを設定する必要があります。")
+    tdinfo.html("「用紙サイズ」で選択したサイズや向きで印刷するには、プリンターのプロパティで用紙サイズや向きを設定する必要があります。なお、地図はこのページでもスクロールできます。")
       .attr({ colspan: "4" })
       .css({ "text-align": "left" })
       .addClass('no_print');
