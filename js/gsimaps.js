@@ -458,7 +458,7 @@ CONFIG.CONFIRM_LAYERS = {
     "・詳細については、<a target=\"_blank\" href='https://www.mext.go.jp/sports/b_menu/sports/mcatetop08/list/detail/1372975_00001.htm'>スポーツ庁ホームページ</a>で確認してください。" + "<br>",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201", "tokyo20202", "seika3", "seika3_20210619to0627","seika3_20210628to0708"
+      "tokyo20201", "tokyo20202", "seika3", "seika3_20210619to0627","seika3_20210628to0708","seika3_20210709to0723"
     ]
   },
   "tokyo20202e":{
@@ -486,7 +486,7 @@ CONFIG.CONFIRM_LAYERS = {
     "For more information, please see <a target=\"_blank\" href='https://www.mext.go.jp/sports/en/b_menu/policy/international/prohibition_of_flight.html'>Japan Sport Agency Website</a>.",
     "withBlend": false, // 合成するかどうか
     "layers": [ // レイヤーのIDを配列で指定
-      "tokyo20201e", "tokyo20202e", "seika3_e", "seika3_e_20210619to0627","seika3_e_20210628to0708"
+      "tokyo20201e", "tokyo20202e", "seika3_e", "seika3_e_20210619to0627","seika3_e_20210628to0708","seika3_e_20210709to0723"
     ]
   }
 };
