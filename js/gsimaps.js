@@ -51691,6 +51691,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     }
     if ( lat != undefined && lng != undefined && zoom != undefined) {
       map.setView([lat, lng], zoom);
+      map.setZoom( zoom );
     } else if ( lat != undefined && lng != undefined ) {
       map.setView( [lat, lng]);
     } else if( zoom != undefined) {
