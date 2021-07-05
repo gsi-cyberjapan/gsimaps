@@ -1513,6 +1513,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和3年7月1日からの大雨",
+              "toggleall": false,
+              "src": "./layers_20210705oame.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和2年7月豪雨",
               "toggleall": false,
               "src": "./layers_20200703oame.txt"
@@ -1537,13 +1543,13 @@
             },
             {
               "type": "LayerGroup",
-              "title": "令和元年８月の前線に伴う大雨",
+              "title": "令和元年8月の前線に伴う大雨",
               "toggleall": false,
               "src": "./layers_20190828kyusyu.txt"
             },
             {
               "type": "LayerGroup",
-              "title": "令和元年６月下旬からの大雨",
+              "title": "令和元年6月下旬からの大雨",
               "toggleall": false,
               "src": "./layers_20190704kagoshima.txt"
             },

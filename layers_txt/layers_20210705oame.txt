@@ -1,0 +1,58 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20210705oame_0705naname1",
+          "title": "熱海伊豆山地区（7/5撮影①）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_0705naname1/{z}/{x}/{y}.geojson",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影①）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20210705oame_0705naname2",
+          "title": "熱海伊豆山地区（7/5撮影②）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_0705naname2/{z}/{x}/{y}.geojson",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影②）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "20210705oame_atami_houkaichi",
+      "title": "崩壊地等分布図（速報）",
+      "url": "https://maps.gsi.go.jp/xyz/20210705oame_atami_houkaichi/{z}/{x}/{y}.geojson",
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "area" : {
+        "lat" : 35.116021,
+        "lng" : 139.078717,
+        "zoom" : 15
+      },
+      "html": "<div class=\"gsi_layerinfo_title\">崩壊地等分布図（速報）</div><div class=\"gsi_layerinfo_kaisetu\">この情報は、中部地方整備局・静岡県が7月3日～4日にUAVで撮影した映像から、地山・土砂が見えている部分を判読したものです。現地踏査は実施していないことから、実際に梅雨前線に伴う大雨により崩壊等のあった箇所でもプロットできていない場合や、梅雨前線に伴う大雨による崩壊地以外の箇所を判読している場合があり得ます。<br>崩壊地の位置を把握するための資料で、人家等に被害のない箇所もプロットしています。</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_atami_houkaichi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    }
+  ]
+}
