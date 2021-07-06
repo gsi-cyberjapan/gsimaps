@@ -19,7 +19,7 @@
             "lng" : 139.078717,
             "zoom" : 15
           },
-          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影①）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影①）</div><div class=\"gsi_layerinfo_kaisetu\">斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しております。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",
@@ -35,7 +35,7 @@
             "lng" : 139.078717,
             "zoom" : 15
           },
-          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影②）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/5撮影②）</div><div class=\"gsi_layerinfo_kaisetu\">斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しております。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         }
       ]
     },
@@ -53,6 +53,21 @@
         "zoom" : 15
       },
       "html": "<div class=\"gsi_layerinfo_title\">崩壊地等分布図（速報）</div><div class=\"gsi_layerinfo_kaisetu\">この情報は、中部地方整備局・静岡県が7月3日～4日にUAVで撮影した映像から、地山・土砂が見えている部分を判読したものです。現地踏査は実施していないことから、実際に梅雨前線に伴う大雨により崩壊等のあった箇所でもプロットできていない場合や、梅雨前線に伴う大雨による崩壊地以外の箇所を判読している場合があり得ます。<br>崩壊地の位置を把握するための資料で、人家等に被害のない箇所もプロットしています。</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_atami_houkaichi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "20210705oame_atami_houkaichi2",
+      "title": "崩壊地等分布図（第2報）",
+      "url": "https://maps.gsi.go.jp/xyz/20210705oame_atami_houkaichi2/{z}/{x}/{y}.geojson",
+      "minZoom": 2,
+      "maxZoom": 17,
+      "maxNativeZoom": 2,
+      "area" : {
+        "lat" : 35.116021,
+        "lng" : 139.078717,
+        "zoom" : 15
+      },
+      "html": "<div class=\"gsi_layerinfo_title\">崩壊地等分布図（第2版）</div><div class=\"gsi_layerinfo_kaisetu\">この情報は、中部地方整備局・静岡県が7月3日～4日にUAVで撮影した映像および国土地理院が7月5日に撮影した空中写真から、地山・土砂が見えている部分を判読したものです。現地踏査は実施していないことから、実際に梅雨前線に伴う大雨により崩壊等のあった箇所でもプロットできていない場合や、梅雨前線に伴う大雨による崩壊地以外の箇所を判読している場合があり得ます。<br>崩壊地の位置を把握するための資料で、人家等に被害のない箇所もプロットしています。<br>2021年7月5日作成</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_atami_houkaichi2_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     }
   ]
 }
