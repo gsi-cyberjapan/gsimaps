@@ -134,6 +134,73 @@
       ]
     },
     {
+      "type": "LayerGroup",
+      "title": "標高値変化量",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20210705oame_hyoukou",
+          "title": "7/6 UAV計測による標高値",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_hyoukou/{z}/{x}/{y}.png",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_hyoukou_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20210705oame_hyoukou_2021-2019",
+          "title": "2019年の標高に対する<br>2021年（発災後）の標高の変化",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_hyoukou_2021-2019/{z}/{x}/{y}.png",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div class=\"gsi_layerinfo_kaisetu\">2021年（発災後）の標高値は、7/6に実施したUAVレーザ計測により取得したものです。2019年の標高値は、航空レーザ測量から取得したものです。</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2021-2019or2009_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20210705oame_hyoukou_2021-2009",
+          "title": "2009年の標高に対する<br>2021年（発災後）の標高の変化",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_hyoukou_2021-2009/{z}/{x}/{y}.png",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div class=\"gsi_layerinfo_kaisetu\">2021年（発災後）の標高値は、7/6に実施したUAVレーザ計測により取得したものです。2009年の標高値は、航空レーザ測量から取得したものです。</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2021-2019or2009_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20210705oame_hyoukou_2019-2009",
+          "title": "2009年の標高に対する<br>2019年の標高の変化",
+          "iconUrl": "",
+          "url": "https://maps.gsi.go.jp/xyz/20210705oame_hyoukou_2019-2009/{z}/{x}/{y}.png",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+            "lat" : 35.116021,
+            "lng" : 139.078717,
+            "zoom" : 15
+          },
+          "html": "<div class=\"gsi_layerinfo_kaisetu\">2009年及び2019年の標高値は、航空レーザ測量から取得したものです。</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2019-2009_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
       "type": "Layer",
       "id": "20210705oame_atami_houkaichi",
       "title": "崩壊地等分布図（速報）",
