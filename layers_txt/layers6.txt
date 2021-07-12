@@ -1513,6 +1513,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和3年7月中国地方の大雨",
+              "toggleall": false,
+              "src": "./layers_20210712oame.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和3年7月九州地方の大雨",
               "toggleall": false,
               "src": "./layers_20210710oame.txt"
