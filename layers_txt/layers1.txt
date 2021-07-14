@@ -14,7 +14,8 @@
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
           "minZoom": 14,
-          "maxZoom": 18
+          "maxZoom": 18,
+          "html": "地理院地図で公開している写真の一部について、時系列で表示できます。"
         },
         {
           "type": "Layer",
