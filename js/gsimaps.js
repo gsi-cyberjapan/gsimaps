@@ -7091,6 +7091,8 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
       var url = info.url;
       var title = info.title;
 
+      if (!info.layerType){ info.layerType = list[i].layertype; }
+
       delete info["url"];
       delete info["title"];
 
@@ -7200,7 +7202,8 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
 
         url: url,
         title: title,
-        tms: isTMS
+        tms: isTMS,
+        layertype: layerType
       };
 
       if (this._minZoomSelect.val() != "") layerInfo.minZoom = parseInt(this._minZoomSelect.val());
@@ -32950,8 +32953,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
         if (tileList.length <= 0) {
           var colors = $.extend(true, [], GSI.ReliefTileLayer.getElevationSampleData().colors);
           var low = Math.floor(minMax.min);
-          if (low < 0) low = 0;
           var hi = Math.floor(minMax.max);
+          if (low < 0 && hi > 0){
+            low = 0;
+          }
           colors[0].h = low;
           for (var i = 1; i < colors.length - 2; i++) {
             var p = (1 / (colors.length - 1)) * (i);
