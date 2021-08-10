@@ -570,9 +570,9 @@ CONFIG.LOADCOCOTILECACHE = true;
 CONFIG.TOPMESSAGE = null;
 // 閉じた時のID != 現在のID または EXPIRES時間過ぎた場合にお知らせ復活
 /*CONFIG.TOPMESSAGE = {
-  MESSAGE : '<a href="https://maps.gsi.go.jp/help/howtouse/150108abstract.pdf"  TARGET="_blank">主な機能概要</a>',
+  MESSAGE : '<span class="i">i</span><span style="font-weight:bold;">国土地理院は<a href="http://163.42.60.125/fdrv/demo2021/kawai/210712_message/#15/35.116030/139.078696/&base=std&ls=std%7C20210705oame_0706do%7C20210705oame_atami_houkaichi3%7C20210705oame_0706shusuiiki1&blend=0&disp=1111&lcd=20210705oame_0706shusuiiki1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m" target="_blank">熱海市</a>及び<a href="http://163.42.60.125/fdrv/demo2021/kawai/210712_message/#9/31.678628/130.320923/" target="_blank">九州地方</a>の大雨を注視しています。詳細は<a href="https://www.gsi.go.jp/BOUSAI/R3_0701_heavyrain.html" target="_blank">防災のページ</a>をご覧ください。</span>',
   DETAILS : '',
-  ID : '20150216', // 文字列を指定この値に変更あった場合はお知らせが復活
+  ID : '20210712a', // 文字列を指定この値に変更あった場合はお知らせが復活
   EXPIRES : -1 //-1  // クッキーの有効期限( hour )
 };*/
 
@@ -8459,9 +8459,11 @@ GSI.Header = L.Evented.extend({
     catch (e) { }
   },
   onCloseClick: function () {
-    this.topMessage.animate(
+    // this.topMessage.animate(
+    $("#map").animate(
       {
-        height: "hide"
+        // height: "hide"
+        top: "40px"
       },
       {
         duration: 80, easing: "linear",
