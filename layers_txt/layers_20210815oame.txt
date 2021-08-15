@@ -1,0 +1,35 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+        {
+        "type": "LayerGroup",
+        "title": "六角川地区（佐賀県佐賀市、武雄市、小城市、大町町、江北町、白石町）",
+        "iconUrl": "",
+        "toggleall": false,
+        "entries": [
+             {
+             "type": "Layer",
+             "id": "20210815oame_0815naname",
+             "title": "六角川地区（8/15撮影）",
+             "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+             "url": "https://maps.gsi.go.jp/xyz/20210815oame_0815naname/{z}/{x}/{y}.geojson",
+             "minZoom": 2,
+             "maxZoom": 18,
+             "maxNativeZoom": 2,
+             "area" : {
+               "lat" : 33.188081,
+               "lng" : 130.096666,
+               "zoom" : 12
+             },
+             "html": "<div class=\"gsi_layerinfo_title\">斜め写真（8/15撮影）</div><div class=\"gsi_layerinfo_kaisetu\">斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しています。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0811_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

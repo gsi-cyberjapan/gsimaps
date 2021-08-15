@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "令和3年8月の大雨",
+      "iconUrl": "./image/system/folder_new.png",
+      "toggleall": false,
+      "src": "./layers_20210815oame.txt"
+    }
+  ]
+}
