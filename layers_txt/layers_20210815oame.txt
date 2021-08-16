@@ -30,6 +30,29 @@
           ]
         }
       ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定図",
+      "toggleall": false,
+      "entries": [
+          {
+              "type": "Layer",
+              "id": "20210815oame_0815dansaizu",
+              "title": "六角川（2021年8月15日15時作成）",
+              "url": "https://maps.gsi.go.jp/xyz/20210815oame_0815dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 15,
+              "area" : {
+                "lat" : 33.205479,
+                "lng" : 130.083447,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が8月15日10時頃に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現しています。</li><li>時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、また、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>令和3年8月15日15時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20210815oame_0815dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R3_0811_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
     }
   ]
 }
