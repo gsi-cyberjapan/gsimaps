@@ -15544,7 +15544,7 @@ GSI.MapLayerList = MA.Class.extend( {
 				return;
 			}
 		}
-		if ((info.id == "tokyo20201") || (info.id == "tokyo20202") || (info.id == "seika3") || (info.id == "seika3_20210619to0627") || (info.id == "seika3_20210628to0708")|| (info.id == "seika3_20210709to0723")){
+		if ((info.id == "tokyo20201") || (info.id == "tokyo20202") || (info.id == "seika3") || (info.id == "seika3_20210619to0627") || (info.id == "seika3_20210628to0708")|| (info.id == "seika3_20210709to0723") || (info.id == "seika_20210817to0824")){
 			if(Confirm_FLAG == null){
 				var KARI=this;
 				jConfirm2("・オリパラ特措法に基づき指定された小型無人機等の飛行禁止区域を、スポーツ庁からデータ提供を受け表示しています。" + "<br>" + 
@@ -15571,7 +15571,7 @@ GSI.MapLayerList = MA.Class.extend( {
 				return;
 			}
 		}
-		if ((info.id == "tokyo20201e") || (info.id == "tokyo20202e") || (info.id == "seika3_e") || (info.id =="seika3_e_20210619to0627") || (info.id == "seika3_e_20210628to0708") || (info.id == "seika3_e_20210709to0723")){
+		if ((info.id == "tokyo20201e") || (info.id == "tokyo20202e") || (info.id == "seika3_e") || (info.id =="seika3_e_20210619to0627") || (info.id == "seika3_e_20210628to0708") || (info.id == "seika3_e_20210709to0723") || (info.id == "seika_e_20210817to0824")){
 			if(Confirm_FLAG == null){
 				var KARI=this;
 				jConfirm2("※Notice: This is a tentative English translation of original Japanese texts for the purpose of reference. Only the original Japanese texts of regulations have legal effect." + "<br>" +
