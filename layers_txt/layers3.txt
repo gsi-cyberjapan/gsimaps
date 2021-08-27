@@ -554,7 +554,7 @@
               "cocotile": true,
               "maxZoom": 16,
               "legendUrl": "https://maps.gsi.go.jp/legend/CCM2_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
@@ -564,7 +564,7 @@
               "cocotile": true,
               "maxZoom": 16,
               "legendUrl": "https://maps.gsi.go.jp/legend/CCM1_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www1.gsi.go.jp/geowww/coastmap/ccm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
