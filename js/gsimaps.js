@@ -49850,10 +49850,10 @@ GSI.GeoJpegMarker = L.Marker.extend({
       direction: exif["GPSImgDirection"]
     };
 
-    if (latRef != "N") {
+    if (latRef == "S") {
       result.lat = -result.lat;
     }
-    if (lngRef != "E") {
+    if (lngRef == "W") {
       result.lng = -result.lng;
     }
     result.directionKey = this._getDirectionKey(result.direction);
