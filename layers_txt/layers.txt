@@ -6,9 +6,6 @@
 		"url":"./layers_topic_20210705oame.txt"
 	},
 	{
-		"url":"./layers_tokyo.txt"
-	},
-	{
 		"url":"./layers1.txt"
 	},
 	{
