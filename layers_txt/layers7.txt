@@ -3301,6 +3301,15 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2021_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2021_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2021_07",
                       "title": "7月更新",
                       "url": "https://maps.gsi.go.jp/xyz/fgd_update_2021_07/{z}/{x}/{y}.png",
