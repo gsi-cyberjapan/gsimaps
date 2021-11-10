@@ -112,7 +112,6 @@
               "id": "20160414kumamoto_0415dol1",
               "title": "益城地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.878434,130.635681],[32.606989,130.979004 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -122,7 +121,6 @@
               "id": "20160414kumamoto_0415dol2",
               "title": "熊本南地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.824212,130.529937],[32.67406,130.788117 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -132,7 +130,6 @@
               "id": "20160414kumamoto_0415dol3",
               "title": "宇城地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol3/{z}/{x}/{y}.png",
-              "bounds" : [ [32.702956,130.529937],[32.512077,130.766144 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -142,7 +139,6 @@
               "id": "20160414kumamoto_0416dol1",
               "title": "熊本地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.635681],[32.742237,130.829316 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -152,7 +148,6 @@
               "id": "20160414kumamoto_0416dol2",
               "title": "宇土地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.769956,130.593109],[32.565333,130.808716 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -162,7 +157,6 @@
               "id": "20160414kumamoto_0416dol3",
               "title": "合志地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol3/{z}/{x}/{y}.png",
-              "bounds" : [ [32.98678,130.65628],[32.849596,130.851288 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -172,7 +166,6 @@
               "id": "20160414kumamoto_0416dol4",
               "title": "西原地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol4/{z}/{x}/{y}.png",
-              "bounds" : [ [32.932624,130.807342],[32.742237,131.021576 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -182,7 +175,6 @@
               "id": "20160414kumamoto_0416dol5",
               "title": "阿蘇地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol5/{z}/{x}/{y}.png",
-              "bounds" : [ [33.000602,130.935058],[32.891119,131.21521 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -192,7 +184,6 @@
               "id": "20160414kumamoto_0416dol6",
               "title": "南阿蘇地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol6/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.97763],[32.79651,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -202,7 +193,6 @@
               "id": "20160414kumamoto_0416dol7",
               "title": "別府地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol7/{z}/{x}/{y}.png",
-              "bounds" : [ [33.364944,131.42807],[33.254766,131.537934 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -212,7 +202,6 @@
               "id": "20160414kumamoto_0419dol2",
               "title": "南阿蘇2地区正射画像（4/19撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.935058],[32.756097,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -222,7 +211,6 @@
               "id": "20160414kumamoto_0419dol6",
               "title": "小国地区正射画像（4/19撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol6/{z}/{x}/{y}.png",
-              "bounds" : [ [33.230647,130.935058],[32.99945,131.193238 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -232,7 +220,6 @@
               "id": "20160414kumamoto_0420dol06",
               "title": "天草地区正射画像（4/19,4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol06/{z}/{x}/{y}.png",
-              "bounds" : [ [32.756098,130.102844],[32.428658,130.660401 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -242,7 +229,6 @@
               "id": "20160414kumamoto_0420dol01",
               "title": "西原2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
-              "bounds" : [ [32.946454,130.827941],[32.79651,131.065522 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -252,7 +238,6 @@
               "id": "20160414kumamoto_0420dol02",
               "title": "阿蘇2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol02/{z}/{x}/{y}.png",
-              "bounds" : [ [33.040904,130.935058],[32.891119,131.300355 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -262,7 +247,6 @@
               "id": "20160414kumamoto_0420dol03",
               "title": "南阿蘇2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol03/{z}/{x}/{y}.png",
-              "bounds" : [ [32.757253,130.935058],[32.606989,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -272,7 +256,6 @@
               "id": "20160414kumamoto_0420dol04",
               "title": "御船地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol04/{z}/{x}/{y}.png",
-              "bounds" : [ [32.824212,130.76477],[32.525973,130.958405 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -282,7 +265,6 @@
               "id": "20160414kumamoto_0420dol05",
               "title": "八代地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png",
-              "bounds" : [ [32.608146,130.487365],[32.429817,130.808716 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -292,7 +274,6 @@
               "id": "20160414kumamoto_0420dol07",
               "title": "玉名地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol07/{z}/{x}/{y}.png",
-              "bounds" : [ [32.98678,130.421447],[32.741082,130.681 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -302,7 +283,6 @@
               "id": "20160414kumamoto_0420dol08",
               "title": "山鹿地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol08/{z}/{x}/{y}.png",
-              "bounds" : [ [33.108798,130.377502],[32.970651,130.744172 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -312,7 +292,6 @@
               "id": "20160414kumamoto_0420dol09",
               "title": "菊池地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol09/{z}/{x}/{y}.png",
-              "bounds" : [ [33.108798,130.720825],[32.917638,131.000977 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -322,7 +301,6 @@
               "id": "20160414kumamoto_0420dol10",
               "title": "竹田地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol10/{z}/{x}/{y}.png",
-              "bounds" : [ [33.040904,131.212463],[32.889966,131.492615 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -332,7 +310,6 @@
               "id": "20160414kumamoto_0420dol11",
               "title": "湯布院地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol11/{z}/{x}/{y}.png",
-              "bounds" : [ [33.406225,131.256408],[33.174341,131.473389 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -342,7 +319,6 @@
               "id": "20160414kumamoto_0429dol1",
               "title": "熊本断層地区A正射画像（4/29撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.913027,130.8815],[32.810361,131.032563 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -352,7 +328,6 @@
               "id": "20160414kumamoto_0429dol2",
               "title": "熊本断層地区B正射画像（4/29撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.851904,130.753784],[32.680996,130.936432 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -362,7 +337,6 @@
               "id": "20160414kumamoto_0530dol",
               "title": "益城・西原地区正射画像（5/30撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.892273,130.678253],[32.71451,131.000977 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -372,7 +346,6 @@
               "id": "20160414kumamoto_0531dol",
               "title": "南阿蘇河陽地区正射画像（5/31撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.932624,130.935058],[32.810361,131.086121 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -382,7 +355,6 @@
               "id": "20160414kumamoto_0705dol",
               "title": "阿蘇3地区正射画像（7/5撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705dol/{z}/{x}/{y}.png",
-              "bounds" : [ [33.027088,130.935058],[32.87728,131.065522 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -392,7 +364,6 @@
               "id": "20160414kumamoto_0724dol",
               "title": "熊本2地区正射画像（7/5～24撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.919944,130.700225],[32.71451,131.086121 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -409,7 +380,6 @@
               "id": "20160414kumamoto_0724dol",
               "title": "熊本2地区正射画像（7/5～24撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.919944,130.700225],[32.71451,131.086121 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -419,7 +389,6 @@
               "id": "20160414kumamoto_0705dol",
               "title": "阿蘇3地区正射画像（7/5撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705dol/{z}/{x}/{y}.png",
-              "bounds" : [ [33.027088,130.935058],[32.87728,131.065522 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -429,7 +398,6 @@
               "id": "20160414kumamoto_0531dol",
               "title": "南阿蘇河陽地区正射画像（5/31撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.932624,130.935058],[32.810361,131.086121 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -439,7 +407,6 @@
               "id": "20160414kumamoto_0530dol",
               "title": "益城・西原地区正射画像（5/30撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
-              "bounds" : [ [32.892273,130.678253],[32.71451,131.000977 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -449,7 +416,6 @@
               "id": "20160414kumamoto_0429dol1",
               "title": "熊本断層地区A正射画像（4/29撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.913027,130.8815],[32.810361,131.032563 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -459,7 +425,6 @@
               "id": "20160414kumamoto_0429dol2",
               "title": "熊本断層地区B正射画像（4/29撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.851904,130.753784],[32.680996,130.936432 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -469,7 +434,6 @@
               "id": "20160414kumamoto_0420dol01",
               "title": "西原2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
-              "bounds" : [ [32.946454,130.827941],[32.79651,131.065522 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -479,7 +443,6 @@
               "id": "20160414kumamoto_0420dol02",
               "title": "阿蘇2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol02/{z}/{x}/{y}.png",
-              "bounds" : [ [33.040904,130.935058],[32.891119,131.300355 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -489,7 +452,6 @@
               "id": "20160414kumamoto_0420dol03",
               "title": "南阿蘇2地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol03/{z}/{x}/{y}.png",
-              "bounds" : [ [32.757253,130.935058],[32.606989,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -499,7 +461,6 @@
               "id": "20160414kumamoto_0420dol04",
               "title": "御船地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol04/{z}/{x}/{y}.png",
-              "bounds" : [ [32.824212,130.76477],[32.525973,130.958405 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -509,7 +470,6 @@
               "id": "20160414kumamoto_0420dol05",
               "title": "八代地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png",
-              "bounds" : [ [32.608146,130.487365],[32.429817,130.808716 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -519,7 +479,6 @@
               "id": "20160414kumamoto_0420dol06",
               "title": "天草地区正射画像（4/19,4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol06/{z}/{x}/{y}.png",
-              "bounds" : [ [32.756098,130.102844],[32.428658,130.660401 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -529,7 +488,6 @@
               "id": "20160414kumamoto_0420dol07",
               "title": "玉名地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol07/{z}/{x}/{y}.png",
-              "bounds" : [ [32.98678,130.421447],[32.741082,130.681 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -539,7 +497,6 @@
               "id": "20160414kumamoto_0420dol08",
               "title": "山鹿地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol08/{z}/{x}/{y}.png",
-              "bounds" : [ [33.108798,130.377502],[32.970651,130.744172 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -549,7 +506,6 @@
               "id": "20160414kumamoto_0420dol09",
               "title": "菊池地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol09/{z}/{x}/{y}.png",
-              "bounds" : [ [33.108798,130.720825],[32.917638,131.000977 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -559,7 +515,6 @@
               "id": "20160414kumamoto_0420dol10",
               "title": "竹田地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol10/{z}/{x}/{y}.png",
-              "bounds" : [ [33.040904,131.212463],[32.889966,131.492615 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -569,7 +524,6 @@
               "id": "20160414kumamoto_0420dol11",
               "title": "湯布院地区正射画像（4/20撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol11/{z}/{x}/{y}.png",
-              "bounds" : [ [33.406225,131.256408],[33.174341,131.473389 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -579,7 +533,6 @@
               "id": "20160414kumamoto_0419dol2",
               "title": "南阿蘇2地区正射画像（4/19撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.935058],[32.756097,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -589,7 +542,6 @@
               "id": "20160414kumamoto_0419dol6",
               "title": "小国地区正射画像（4/19撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol6/{z}/{x}/{y}.png",
-              "bounds" : [ [33.230647,130.935058],[32.99945,131.193238 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -599,7 +551,6 @@
               "id": "20160414kumamoto_0416dol1",
               "title": "熊本地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.635681],[32.742237,130.829316 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -609,7 +560,6 @@
               "id": "20160414kumamoto_0416dol2",
               "title": "宇土地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.769956,130.593109],[32.565333,130.808716 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -619,7 +569,6 @@
               "id": "20160414kumamoto_0416dol3",
               "title": "合志地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol3/{z}/{x}/{y}.png",
-              "bounds" : [ [32.98678,130.65628],[32.849596,130.851288 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -629,7 +578,6 @@
               "id": "20160414kumamoto_0416dol4",
               "title": "西原地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol4/{z}/{x}/{y}.png",
-              "bounds" : [ [32.932624,130.807342],[32.742237,131.021576 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -639,7 +587,6 @@
               "id": "20160414kumamoto_0416dol5",
               "title": "阿蘇地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol5/{z}/{x}/{y}.png",
-              "bounds" : [ [33.000602,130.935058],[32.891119,131.21521 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -649,7 +596,6 @@
               "id": "20160414kumamoto_0416dol6",
               "title": "南阿蘇地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol6/{z}/{x}/{y}.png",
-              "bounds" : [ [32.865747,130.97763],[32.79651,131.171265 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -659,7 +605,6 @@
               "id": "20160414kumamoto_0416dol7",
               "title": "別府地区正射画像（4/16撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol7/{z}/{x}/{y}.png",
-              "bounds" : [ [33.364944,131.42807],[33.254766,131.537934 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -669,7 +614,6 @@
               "id": "20160414kumamoto_0415dol1",
               "title": "益城地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
-              "bounds" : [ [32.878434,130.635681],[32.606989,130.979004 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -679,7 +623,6 @@
               "id": "20160414kumamoto_0415dol2",
               "title": "熊本南地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
-              "bounds" : [ [32.824212,130.529937],[32.67406,130.788117 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18
@@ -689,7 +632,6 @@
               "id": "20160414kumamoto_0415dol3",
               "title": "宇城地区正射画像（4/15撮影）",
               "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol3/{z}/{x}/{y}.png",
-              "bounds" : [ [32.702956,130.529937],[32.512077,130.766144 ] ],
               "cocotile": false,
               "minZoom": 10,
               "maxZoom": 18

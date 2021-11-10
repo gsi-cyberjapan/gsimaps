@@ -19,7 +19,7 @@
               "type": "LayerGroup",
               "title": "5万分の1地質図幅",
               "toggleall": false,
-              "src": "https://maps.gsi.go.jp/layers_txt/layers_gsj_G50K.txt"
+              "src": "./layers_gsj_G50K.txt"
             }
   ]
 }
