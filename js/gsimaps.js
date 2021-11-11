@@ -6382,6 +6382,12 @@ GSI.ShareDialog = GSI.Dialog.extend({
       }
     }
 
+    if (hasReliefFree) {
+      var currentData = this._gsimaps._mainMap._mapLayerList.getElevationData();
+      var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
+      queryString += (queryString != '' ? '&' : '#') + 'reliefdata=' + text;
+    }
+
     if (this._gsimaps.splited() || this._gsimaps.compared()) {
       if (!this._gsimaps.compared()) {
         queryString += (queryString != '' ? '&' : '#') + "sync=" + (this._gsimaps._syncSplitMap ? "1" : "0");
@@ -6395,6 +6401,8 @@ GSI.ShareDialog = GSI.Dialog.extend({
 
       var ls = this.pageStateManager.getLayersQueryString2();
       var disp = this.pageStateManager.getTileViewSetting2();
+      var hasReliefFree2 = ls.indexOf( "relief_free") >= 0 ? true: false;
+
       if (this._layerpCheck.is(':checked')) {
         if (ls != '') {
           if (fBassLS_Trim) {
@@ -6464,14 +6472,13 @@ GSI.ShareDialog = GSI.Dialog.extend({
           }
         }
       }
+      if (hasReliefFree2) {
+        var currentData = this._gsimaps._subMap._mapLayerList.getElevationData();
+        var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
+        queryString += (queryString != '' ? '&' : '#') + 'reliefdata2=' + text;
+      } 
     }
     
-    if (hasReliefFree) {
-      var currentData = this._gsimaps._mainMap._mapLayerList.getElevationData();
-      var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
-      queryString += (queryString != '' ? '&' : '#') + 'reliefdata=' + text;
-    }
-
     if (additionalParam && additionalParam != '') {
       queryString += (queryString != '' ? '&' : '#') + additionalParam;
     }
@@ -10215,7 +10222,10 @@ GSI.LayersJSON = L.Evented.extend({
           this.layers.push(info);
         }
       }
-      tree[i].parent = parent;
+      if (tree[i].id != "f0"){
+        //最上層にparentを付けない
+        tree[i].parent = parent;
+      }
       this._initializeTree(tree[i].isMultiLayer ? null : tree[i].entries, tree[i]);
     }
   },
@@ -11896,11 +11906,27 @@ GSI.PagePrinter = L.Evented.extend({
 
     // タイトル
     td = $('<td>');
-    td.append($('<img>').attr({ 'src': 'image/print/title.png' })).css({ 'text-align': 'left' });
+    td.append($('<img>').attr({ 'src': 'image/print/title.png' })).css({ 'text-align': 'left' ,width:"150px"});
     tr.append(td);
 
+
+    var tdtitle = $('<td>');
+    
+    tdtitle
+      .attr({colspan: "3"})
+      .css({"text-align":"center"});
+      //.addClass('no_print');
+    
+    var tid = 'gsi_print_title';
+    this._title = $("<input>").attr({"type":"textbox", "id":tid}).css({"width":"420px", border:"solid 1px", "white-space":"no-wrap"});
+    var labelTitle = $("<span>").attr({ "for": tid }).html("タイトル：").addClass("no_print");
+    tr.append(tdtitle.append(labelTitle).append(this._title));
+    tbody.append(tr);
+    
+    
     // サイズ選択
-    td = $('<td>').css({ width: "240px" });
+    tr = $('<tr>');
+    td = $('<td>').attr({colspan:"2"}).css({ width: "240px" ,"text-align":"right"});
     this._paperSizeSelect = $('<select>').addClass('no_print');
     if (CONFIG.USELARGEPAPERSIZE || !CONFIG.PAPERSIZE["A4_portrait"]["large"]) {
       this._paperSizeSelect.append($('<option>').html("A4縦(標準)").val("A4_portrait"));
@@ -11961,6 +11987,7 @@ GSI.PagePrinter = L.Evented.extend({
       this._paperSizeSelect[0].selectedIndex = 0;
 
     this._paperSizeSelect.change(L.bind(this._paperSizeChage, this));
+
     td.append($('<span>').html('用紙サイズ：').addClass('no_print'));
     td.append(this._paperSizeSelect);
     tr.append(td);
@@ -11993,6 +12020,7 @@ GSI.PagePrinter = L.Evented.extend({
     // direction
     var trdirection = $('<tr>');
     var tddirection = $('<td>');
+
     tddirection
       .attr({ colspan: "4" })
       .css({ "text-align": "right" })
@@ -12029,7 +12057,21 @@ GSI.PagePrinter = L.Evented.extend({
   },
   print: function () {
     GSI.Utils.sendSelectedFunction("print");
+    this._titleSet();
     window.print();
+    this._titleClear();
+  },
+  _titleSet: function(){
+    var titletext = document.getElementById('gsi_print_title');
+    if (titletext != null){
+      $(titletext).css({border:"none"});
+    }
+  },
+  _titleClear: function(){
+    var titletext = document.getElementById('gsi_print_title');
+    if (titletext != null){
+      $(titletext).css({border:"solid 1px"});
+    }
   }
 });
 
@@ -12266,6 +12308,7 @@ GSI.PageStateManager = L.Class.extend({
       fGrayScale = false;
     }
 
+    var hasReliefFree = false;
     var result = '';
     var result_grayscale = '';
     var result_blend = '';
@@ -12298,6 +12341,9 @@ GSI.PageStateManager = L.Class.extend({
         var opacityText = (opacity == 0 ? "0" : opacity.toFixed(2));
         if (opacityText != "0") opacityText = opacityText.replace(/0$/g, '');
         result += (result != '' ? '|' : '') + tileIdList[i].id + (opacity != 1 ? ',' + opacityText : '');
+        if (tileIdList[i].id == CONFIG.FREERELIEFID) {
+          hasReliefFree = true;
+        }
         if (i != tileIdList.length - 1) {
           var l = tileIdList[i]._visibleInfo.blend ? "1" : "0";
           result_blend += l;
@@ -12338,6 +12384,14 @@ GSI.PageStateManager = L.Class.extend({
       result_blend = "&blend2=" + result_blend;
     }
 
+    var resultReliefData = '';
+
+    if (options.withRelief && hasReliefFree) {
+      var currentData = this._gsimaps._subMap._mapLayerList.getElevationData();
+      var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
+      resultReliefData = '&relief2=' + text;
+    }
+
     if (result != '' || result_grayscale) {
       if (result_grayscale != "") {
         if (result != "") {
@@ -12345,7 +12399,7 @@ GSI.PageStateManager = L.Class.extend({
         }
       }
 
-      return result_grayscale + "ls2=" + encodeURIComponent(result) + result_blend;;
+      return result_grayscale + "ls2=" + encodeURIComponent(result) + result_blend + resultReliefData;
     }
     else {
       return "";
@@ -12563,7 +12617,18 @@ GSI.PageStateManager = L.Class.extend({
 
     if (!text || text == defaultDataText) return "";
     return "reliefdata=" + text;
+  },
+
+  getFreeReliefQueryString2: function () {
+    var currentData = this._gsimaps._subMap._mapLayerList.getElevationData();
+    var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
+
+    var defaultDataText = GSI.ReliefTileLayer.getEncodedElevationSampleData();
+
+    if (!text || text == defaultDataText) return "";
+    return "reliefdata2=" + text;
   }
+
 });
 
 
@@ -13106,7 +13171,6 @@ GSI.Control.DirectionSign = L.Control.extend({
   onRemove: function (map) {
   }
 });
-
 
 /************************************************************************
  L.Control
@@ -21226,7 +21290,7 @@ GSI.Canvas.PathProcs = {
 
       if (options.stroke) {
         ctx.globalCompositeOperation = 'source-over';
-        ctx.lineWidth = options.weight * (scale ? scale : 1);
+        ctx.lineWidth = options.weight;
         ctx.strokeStyle = options.color;
         if (options.lineCap &&
           (options.lineCap == "butt" ||
@@ -39375,6 +39439,12 @@ GSI.HashOptions = L.Class.extend({
         }
       }
 
+      // 自由な色別標高図
+      var freeRelief = this._gsimaps._pageStateManager.getFreeReliefQueryString();
+
+      if (freeRelief != "")
+        hash += "&" + freeRelief;
+
       if (this._gsimaps.splited() || this._gsimaps.compared()) {
         if (!this._gsimaps.compared()) {
           hash += "&sync=" + (this._gsimaps._syncSplitMap ? "1" : "0");
@@ -39412,13 +39482,12 @@ GSI.HashOptions = L.Class.extend({
           hash += "&" + v;
         }
 
+        var freeRelief2 = this._gsimaps._pageStateManager.getFreeReliefQueryString2();
+
+        if (freeRelief2 != "")
+          hash += "&" + freeRelief2;
+  
       }
-
-      // 自由な色別標高図
-      var freeRelief = this._gsimaps._pageStateManager.getFreeReliefQueryString();
-
-      if (freeRelief != "")
-        hash += "&" + freeRelief;
 
       // 等距圏
       var toukyokenCenter = this._gsimaps._pageStateManager.getToukyokenCenter();
@@ -39495,36 +39564,23 @@ GSI.HashOptions = L.Class.extend({
     // 選択中の情報設定
     // disp=
     var layers = this._gsimaps._queryParams.getLayers();
-    var bfind = false;
-    var vl = this._gsimaps._pageStateManager.getLayersQueryString();
-    var idx = vl.indexOf("ls=");
-    if (idx >= 0) {
-      vl = vl.substring(idx + 3).split("%7C");
-    }
-    if (layers && (vl && vl.length > 0)) {
+    var lcd = this._gsimaps._queryParams.getCurrentPath();
 
-      for (var i = 0; i < layers.length; i++) {
-        for (var j = 0; j < vl.length; j++) {
-          if (layers[i].id == vl[j]) {
-            bfind = true;
-            break;
-          }
-
-        }
-        if (bfind == false) {
-          this._gsimaps._mainMap._mapMenu.getMapListPanel().setCurrentPath(this._gsimaps._queryParams.getCurrentPath());
-        }
-        bfind = false;
-      }
-    }
-    else if (layers) {
+    if (layers) {
       for (i = 0; i < layers.length; i++) {
         GSI.Utils.sendSelectedLayer(layers[i].id);
       }
     }
-    this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
-    this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(
-      this._gsimaps._mainMap._layersJSON.visibleLayers);
+
+    if (lcd != ""){
+      this._gsimaps._mainMap._mapMenu.getMapListPanel().setCurrentPath(lcd);
+      this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
+      this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._mainMap._layersJSON.visibleLayers);
+    }
+    else{
+      this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
+      this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._mainMap._layersJSON.visibleLayers);  
+    }
 
     var viewSetting = this._gsimaps._queryParams.getViewSetting();
     try {
@@ -39604,34 +39660,22 @@ GSI.HashOptions = L.Class.extend({
       // 選択中の情報設定
       // disp=
       var layers2 = this._gsimaps._queryParams.getLayers2();
-      var bfind2 = false;
-      var vl2 = this._gsimaps._pageStateManager.getLayersQueryString2();
-      var idx2 = vl2.indexOf("ls=");
-      if (idx2 >= 0) {
-        vl2 = vl2.substring(idx2 + 3).split("%7C");
+      var lcd2 = this._gsimaps._queryParams.getCurrentPath2();
+
+      if (lcd2 != ""){
+        this._gsimaps._subMap._mapMenu.getMapListPanel().setCurrentPath(lcd2);
+        this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
+        this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._subMap._layersJSON.visibleLayers);
       }
-      if (layers2 && (vl2 && vl2.length > 0)) {
-
-        for (var i = 0; i < layers2.length; i++) {
-          for (var j = 0; j < vl2.length; j++) {
-            if (layers2[i].id == vl2[j]) {
-              bfind2 = true;
-              break;
-            }
-
-          }
-          if (bfind2 == false) {
-            this._gsimaps._subMap._layerTreeDialog.setCurrentPath(this._gsimaps._queryParams.getCurrentPath2());
-          }
-          bfind2 = false;
-        }
+      else{
+        this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
+        this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._subMap._layersJSON.visibleLayers);  
       }
-
-      this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
-      this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(
-        this._gsimaps._subMap._layersJSON.visibleLayers);
-
-
+  
+      this._gsimaps._subMap._mapLayerList.setElevationData(this._gsimaps._queryParams.getReliefData2());
+      if (this._gsimaps._subMap._mapLayerList._editReliefDialog) {
+        this._gsimaps._subMap._mapLayerList._editReliefDialog.refresh();
+      }
     }
     else {
       // 2画面解除
@@ -39873,6 +39917,7 @@ GSI.QueryParams = L.Class.extend({
     try { this._initDialogSettings(); } catch (e) { }
     try { this._initSyncSplitedMap(); } catch (e) { }
     try { this._initReliefData(); } catch (e) { }
+    try { this._initReliefData2(); } catch (e) { }
     try { this._initToukyokenCenter(); } catch (e) { }
     try { this._initHouilineCenter(); } catch (e) { }
 
@@ -39899,6 +39944,9 @@ GSI.QueryParams = L.Class.extend({
 
   getReliefData: function () {
     return this._reliefData;
+  },
+  getReliefData2: function () {
+    return this._reliefData2;
   },
   getPosition: function (defaultPosition) {
     return (this._position ? this._position : defaultPosition);
@@ -40542,6 +40590,12 @@ GSI.QueryParams = L.Class.extend({
     var reliefData = this.params["reliefdata"];
     if (reliefData)
       this._reliefData = GSI.ReliefTileLayer.decodeElevationDataText(reliefData);
+
+  },
+  _initReliefData2: function () {
+    var reliefData = this.params["reliefdata2"];
+    if (reliefData)
+      this._reliefData2 = GSI.ReliefTileLayer.decodeElevationDataText(reliefData);
 
   },
 
@@ -50875,6 +50929,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._activeTabIndex = 0;
     this._mapManager = mapManager;
     GSI.MapPanelContainer.prototype.initialize.call(this, parentContainer, options);
+    this._ljsSrc = null;
   },
 
   refreshSize : function() {
@@ -51171,12 +51226,13 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     if (onOffSwitch.checked()) {
       if (!this._initializeList_ID_Mode_cocoTileLayer) {
         var path = "";
-        this._CurrentData_SRC = new Array();
+
+        this._CurrentData_SRC = {};
         this._CurrentData_SRC_ID = "";
         this._initializeList_ID_Mode = "cocoTileLayer";
         this._initializeList_IDProc_Data(this.tree, path);
-        this._CurrentData_SRC_ID = path;
-        this._initializeList_IDProc_DataSrc();
+        //this._CurrentData_SRC_ID = path;
+        this._initializeList_IDProc_DataSrc("", path);
 
         this._initializeList_ID_Mode_cocoTileLayer = true;
       }
@@ -51203,7 +51259,24 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       //this.activateTab(this._activeTabIndex);
     }
     else {
-      this._initializeListProc();
+      var needsrc = [];
+      if (this._visibleLayers && this._visibleLayers.length > 0){
+        for (var x = 0; x < this._visibleLayers.length; x++){
+          var v = this._visibleLayers[x];
+          needsrc.push(v.id);
+        }
+      }
+      if (needsrc.length > 0){
+        var outerthis = this;
+        this._ljsSrc = new GSI.layersJSONSearchSRC(this._mapManager);
+        this._ljsSrc.on('searchEnd', L.bind( function (){
+          outerthis._initializeListProc();
+        }));
+        this._ljsSrc.kick(needsrc);
+      }
+      else{
+        this._initializeListProc();
+      }
     }
 
     if ( this._showAllButton ) {
@@ -51334,19 +51407,26 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._initializeList_ID_Mode_ID = id;
     this._initializeList_ID(id);
   },
-  
   _initializeList_ID: function (path) {
     var current = null;
     if (!path || path == '') return null;
 
-    this._CurrentData_SRC = new Array();
+    this._CurrentData_SRC = {};
     this._CurrentData_SRC_ID = "";
     current = this._initializeList_IDProc_Data(this.tree, path);
-    if (current == null && this._CurrentData_SRC.length > 0) {
-      this._CurrentData_SRC_ID = path;
-      this._initializeList_IDProc_DataSrc();
+    var keys = Object.keys(this._CurrentData_SRC);
+    if (current == null && keys.length > 0) {
+      //this._CurrentData_SRC_ID = path;
+      var srcurl = this._CurrentData_SRC[keys[0]].src;
+      this._initializeList_IDProc_DataSrc(srcurl, path);
     }
     else {
+      if (current != null){
+        if (!this._visibleLayers || this._visibleLayers.length < 1){
+          this._visibleLayers = this._mapManager._layersJSON.visibleLayers;
+          this._visibleLayersHash = this._mapManager._layersJSON.visibleLayersHash;
+        }
+      }
       this._initializeList_IDProc(current);
     }
     return current;
@@ -51406,7 +51486,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
           tree[i].src_ = true;
           tree[i].src = path + "/" + tree[i].src.substr(2);
         }
-        this._CurrentData_SRC.push(tree[i]);
+        this._CurrentData_SRC[tree[i].src] = tree[i];
       }
       else if (tree[i].entries && !tree[i].isMultiLayer) {
         current = this._initializeList_IDProc_Data(tree[i].entries, id);
@@ -51419,7 +51499,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
           if (tree[i].parent) {
             current = tree[i].parent;
 
-            this._CurrentData_SRC.length = 0;
+            this._CurrentData_SRC = {};
           }
           else {
             current = null;
@@ -51432,22 +51512,25 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
     return current;
   },
-  _initializeList_IDProc_DataSrc: function () {
-    if (this._CurrentData_SRC.length > 0) {
+  _initializeList_IDProc_DataSrc: function (srcurl, path) {
+    var keys = Object.keys(this._CurrentData_SRC);
+    if (keys.length > 0) {
       if (GSI.GLOBALS.layersJSONCache &&
-        GSI.GLOBALS.layersJSONCache[this._CurrentData_SRC[0].src]) {
+        GSI.GLOBALS.layersJSONCache[srcurl]) {
         this._initializeList_IDProc_DataSrc_Success(
-          GSI.GLOBALS.layersJSONCache[this._CurrentData_SRC[0].src]
+          srcurl,
+          path,
+          GSI.GLOBALS.layersJSONCache[srcurl]
         );
       }
       else {
         this.ajax = $.ajax({
           type: "GET",
-          url: this._CurrentData_SRC[0].src,
+          url: srcurl,
           dataType: "text",
           cache: true,
-          success: L.bind(this._initializeList_IDProc_DataSrc_Success, this),
-          error: L.bind(this._initializeList_IDProc_DataSrc_Error, this)
+          success: L.bind(this._initializeList_IDProc_DataSrc_Success, this, srcurl, path),
+          error: L.bind(this._initializeList_IDProc_DataSrc_Error, this, srcurl, path)
         });
       }
     }
@@ -51456,37 +51539,52 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       this._initializeList_IDProc(null);
     }
   },
-  _initializeList_IDProc_DataSrc_Success: function (data) {
-    if (this._CurrentData_SRC.length > 0) {
+  _initializeList_IDProc_DataSrc_Success: function (srcurl, path, data) {
+    var keys = Object.keys(this._CurrentData_SRC);
+    if (keys.length > 0) {
 
       if (!GSI.GLOBALS.layersJSONCache) GSI.GLOBALS.layersJSONCache = {};
 
-      GSI.GLOBALS.layersJSONCache[this._CurrentData_SRC[0].src] = data;
+      GSI.GLOBALS.layersJSONCache[srcurl] = data;
 
       var json = JSON.parse(data);
       if (json.layers) {
         for (var i = 0; i < json.layers.length; i++) {
-          json.layers[i].parent = this._CurrentData_SRC[0];
-          json.layers[i].src_url = this._CurrentData_SRC[0].src_url;
+          json.layers[i].parent = this._CurrentData_SRC[srcurl];
+          if(this._CurrentData_SRC[srcurl]){
+            json.layers[i].src_url = this._CurrentData_SRC[srcurl].src_url;
+          }
         }
       }
-      this._CurrentData_SRC[0].entries = json.layers;
+      this._CurrentData_SRC[srcurl].entries = json.layers;
 
-      this._mapManager._layersJSON._initializeTree(this._CurrentData_SRC[0].entries, this._CurrentData_SRC[0]);
+      this._mapManager._layersJSON._initializeTree(this._CurrentData_SRC[srcurl].entries, this._CurrentData_SRC[srcurl]);
 
-      current = this._initializeList_IDProc_Data(this._CurrentData_SRC[0].entries, this._CurrentData_SRC_ID);
+      current = this._initializeList_IDProc_Data(this._CurrentData_SRC[srcurl].entries, path);
 
       if (current == null) {
-        this._initializeList_IDProc_DataSrc_Error();
+        this._initializeList_IDProc_DataSrc_Error(srcurl, path);
       }
       else {
+        if (this._visibleLayers == null || this._visibleLayers.length == 0){
+          this._visibleLayers = this._mapManager._layersJSON.visibleLayers;
+          this._visibleLayersHash = this._mapManager._layersJSON.visibleLayersHash;
+          if (!this._current_id || this._current_id == ""){
+            this._current_id = this.options.currentPath;
+          }
+        }
         this._initializeList_IDProc(current);
       }
     }
   },
-  _initializeList_IDProc_DataSrc_Error: function () {
-    this._CurrentData_SRC.shift();
-    this._initializeList_IDProc_DataSrc();
+  _initializeList_IDProc_DataSrc_Error: function (srcurl, path) {
+    delete this._CurrentData_SRC[srcurl];
+    var src = "";
+    for(var key in this._CurrentData_SRC){
+      src = this._CurrentData_SRC[key].src;
+      break;
+    }
+    this._initializeList_IDProc_DataSrc(src, path);
   },
 
 
@@ -52869,16 +52967,23 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
   refresh: function (visibleLayers) {
     this._removeAll();
+    var needsrc = new Array();
+    this._ljsSrc = new GSI.layersJSONSearchSRC(this._mapManager);
 
     for (var i = 0; i < visibleLayers.length; i++) {
       var l = visibleLayers[i];
-      if (l && l.info) {
-        //GSI.GLOBALS.mapLayerList.append(l.info, true,l.hidden);
-        this._mapManager._mapLayerList.append(l.info, true, l.hidden, null, l.blend);
-      }
+      needsrc.push(l.id);
     }
-
-    this._initializeList(true);
+    if (needsrc.length > 0){
+      this._ljsSrc.kick(needsrc);
+      var outerthis = this;
+      this._ljsSrc.on('searchEnd', L.bind(function (){
+        outerthis._initializeList(true);
+      }));
+    }
+    else{
+      this._initializeList(true);
+    }
   },
   _initializeList: function (liRefresh) {
     this._hideItemTooltip();
@@ -53762,6 +53867,200 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
 
 } );
 
+
+
+/************************************************************************
+ L.Evented
+ - GSI.layersJSONSearchSRC
+
+ layers_txtのsrc探索をMapListPanel以外で実行する為の補完
+ ************************************************************************/
+
+GSI.layersJSONSearchSRC = L.Evented.extend({
+  initialize: function (mapManager) {
+      this._mapManager = mapManager;
+      this.current = null;
+      this._CurrentData_SRC = null;
+      this._idMap = null;
+      this._pathidx = 0;
+  },
+  _nextSearch: function(){
+      this._pathidx += 1;
+      var keys = Object.keys(this._paths);
+      if (this._pathidx < keys.length){
+          this._initializeList_ID(this._paths[this._pathidx]);
+      }
+      else{
+          this.fire("searchEnd");
+      }
+  },
+  kick: function(paths){
+      this.tree = this._mapManager._layersJSON.tree;
+      this._CurrentData_SRC = new Array();
+      this._paths = paths;
+      this._idMap = {};
+      for(var s = 0; s < paths.length; s++){
+          this._idMap[paths[s]] = 0;
+      }
+      if (paths.length > 0){
+          this._initializeList_ID(paths[0]);
+      }
+  },
+  _initializeList_ID: function (path) {
+      var current = null;
+      if (!path || path == '') return null;
+
+      current = this._initializeList_IDProc_Data(this.tree, path);
+      if (current == null && this._CurrentData_SRC.length > 0) {
+          var srcurl = this._CurrentData_SRC[this._idMap[path]].src;
+          this._initializeList_IDProc_DataSrc(srcurl, path);
+      }
+      else {
+          //src属性の場合も2回目はこちら側を通るので、visibleLayersを作る必要がある
+          if (current != null){
+            if (!this._visibleLayers || this._visibleLayers.length < 1){
+              this._mapManager._layersJSON._initializeTree(this.tree, current.id);
+              this._visibleLayers = this._mapManager._layersJSON.visibleLayers;
+              this._visibleLayersHash = this._mapManager._layersJSON.visibleLayersHash;
+            }
+          }
+          this._initializeList_IDProc(current, path);
+          this._nextSearch();
+      }
+      //return current;
+  },
+  _initializeList_IDProc_Data: function (tree, id) {
+
+      var current = null;
+      for (var i = 0; i < tree.length; i++) {
+          if (tree[i].src && !tree[i].entries) {
+              if (!tree[i].src_ && tree[i].src.indexOf('./') == 0) {
+                  var path = tree[i].src_url.substring(0, tree[i].src_url.lastIndexOf('/'));
+                  tree[i].src_ = true;
+                  tree[i].src = path + "/" + tree[i].src.substr(2);
+              }
+              if (this._CurrentData_SRC.includes(tree[i]) == false){
+                  this._CurrentData_SRC.push(tree[i]);
+              }
+          }
+          else if (tree[i].entries && !tree[i].isMultiLayer) {
+              current = this._initializeList_IDProc_Data(tree[i].entries, id);
+              if (current != null) {
+                  break;
+              }
+          }
+          else {
+              if (tree[i].id == id) {
+                  if (tree[i].parent) {
+                      current = tree[i].parent;
+
+                      this._CurrentData_SRC.length = 0;
+                  }
+                  else {
+                      current = null;
+                  }
+                  break;
+              }
+          }
+      }
+      return current;
+  },
+  _initializeList_IDProc: function (current, path) {
+      this.current = current;
+      var target = this.current;
+      if (target && target.title_sys == CONFIG.layerBaseFolderSYS && !CONFIG.layerBaseFolderVisible) {
+          target = null;
+          this.current = null;
+      }
+
+      this._initializeListProc(path);
+  },
+  _initializeListProc: function (id) {
+      if (this._visibleLayers && this._visibleLayers.length > 0) {
+          for (var i = 0; i < this._visibleLayers.length; i++) {
+              var l = this._visibleLayers[i];
+              if (l.info != null && (id && l.id == id)) {
+                 this._mapManager._mapLayerList.append(l.info, true, l.hidden, null, l.blend);
+              }
+          }
+      }
+  },
+  _initializeList_IDProc_DataSrc: function (srcurl, path) {
+      if (this._CurrentData_SRC.length > 0) {
+          if (GSI.GLOBALS.layersJSONCache &&
+              GSI.GLOBALS.layersJSONCache[srcurl]) {
+              this._initializeList_IDProc_DataSrc_Success(
+                  srcurl, path, GSI.GLOBALS.layersJSONCache[srcurl], true
+              );
+          }
+          else {
+              $.ajax({
+                  type: "GET",
+                  url: srcurl,
+                  dataType: "text",
+                  cache: true,
+                  success: L.bind(this._initializeList_IDProc_DataSrc_Success, this, srcurl, path),
+                  error: L.bind(this._initializeList_IDProc_DataSrc_Error, this, srcurl, path)
+              });
+          }
+      }
+      else {
+          this._initializeList_IDProc(null);
+      }
+  },
+  _initializeList_IDProc_DataSrc_Success: function (srcurl, path, data, isCached) {
+      if (this._CurrentData_SRC.length > 0) {
+
+          if (!isCached || isCached == false){
+              if (!GSI.GLOBALS.layersJSONCache) GSI.GLOBALS.layersJSONCache = {};
+
+              GSI.GLOBALS.layersJSONCache[srcurl] = data;
+          }
+
+          var json = JSON.parse(data);
+          if (json.layers) {
+              for (var i = 0; i < json.layers.length; i++) {
+                  json.layers[i].parent = this._CurrentData_SRC[this._idMap[path]];
+                  json.layers[i].src_url = this._CurrentData_SRC[this._idMap[path]].src_url;
+              }
+          }
+
+          this._CurrentData_SRC[this._idMap[path]].entries = json.layers;
+          this._mapManager._layersJSON._initializeTree(this._CurrentData_SRC[this._idMap[path]].entries, this._CurrentData_SRC[this._idMap[path]]);
+          current = this._initializeList_IDProc_Data(this._CurrentData_SRC[this._idMap[path]].entries, path);
+
+          if (current == null) {
+              if (this._CurrentData_SRC.length > this._idMap[path]){
+                  this._initializeList_IDProc_DataSrc_Error(srcurl, path);
+              }
+              else{
+                  this._nextSearch();
+                  //return current;
+              }
+          }
+          else {
+              if (this._visibleLayers == null || this._visibleLayers.length == 0) {
+                  this._visibleLayers = this._mapManager._layersJSON.visibleLayers;
+                  this._visibleLayersHash = this._mapManager._layersJSON.visibleLayersHash;
+              }
+              this._initializeList_IDProc(current, path);
+              this._nextSearch();
+          }
+      }
+  },
+  _initializeList_IDProc_DataSrc_Error: function (srcurl, path) {
+      var idx = this._idMap[path];
+      this._idMap[path] = ++idx;
+
+      if (idx < this._CurrentData_SRC.length){
+        var src = this._CurrentData_SRC[this._idMap[path]].src;
+        this._initializeList_IDProc_DataSrc(src, path);
+      }
+      else{
+        this._nextSearch();
+      }
+  }
+})
 
 /************************************************************************
  L.Evented
@@ -55500,6 +55799,9 @@ GSI.GSIMaps = L.Evented.extend({
       this._subMap.create();
       this._subMap.initializeMap(ctrlSetting);
       this._setCompared(true);
+
+      if (this._queryParams.getReliefData2())
+      this._subMap._mapLayerList.setElevationData(this._queryParams.getReliefData2());
     }
     // ヘッダー
     this._header = new GSI.Header(
@@ -55783,6 +56085,9 @@ GSI.GSIMaps = L.Evented.extend({
 
     if (this._queryParams.getReliefData())
       this._mainMap._mapLayerList.setElevationData(this._queryParams.getReliefData());
+
+    if (this._queryParams.getReliefData2())
+      this._subMap._mapLayerList.setElevationData(this._queryParams.getReliefData2());
 
     this._onoffObjects[CONFIG.PARAMETERNAMES.TOUKYOKEN] = { obj: new GSI.Toukyoken(
         map, dialogManager, this._funcMenu, { visible: viewSetting.toukyoKen, center: this._queryParams.getToukyokenCenter()}), 
