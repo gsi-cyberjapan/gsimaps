@@ -30743,11 +30743,34 @@ GSI.Footer = L.Evented.extend({
     var center = map.getCenter().wrap();
     var dms = GSI.Utils.latLngToDMS(center);
 
+    var lats = (Math.round(dms.lat.s * 100) / 100).toFixed(2);
+    var lngs = (Math.round(dms.lng.s * 100) / 100).toFixed(2);
+    if ('' + lats == "60.00") {
+      lats = "0.00";
+      dms.lat.m += 1;
+    }
+    if ('' + lngs == "60.00") {
+      lngs = "0.00";
+      dms.lng.m += 1;
+    }
+    if (dms.lat.m == 60){
+      dms.lat.m = 0;
+      dms.lat.d += 1;
+    }
+    if (dms.lng.m == 60){
+      dms.lng.m = 0;
+      dms.lng.d += 1;
+    }
     this._latlng60View.html(
-      (center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + (Math.round(dms.lat.s * 100) / 100).toFixed(2) + '秒'
+      (center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + lats + '秒'
       + '&nbsp;' +
-      (center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + (Math.round(dms.lng.s * 100) / 100).toFixed(2) + '秒'
+      (center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + lngs + '秒'
     );
+    // this._latlng60View.html(
+    //   (center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + (Math.round(dms.lat.s * 100) / 100).toFixed(2) + '秒'
+    //   + '&nbsp;' +
+    //   (center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + (Math.round(dms.lng.s * 100) / 100).toFixed(2) + '秒'
+    // );
 
     this._latlng10View.html(
       (Math.round(center.lat * 1000000) / 1000000).toFixed(6)
