@@ -16745,8 +16745,26 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
 		var center = { lat : lat, lng : lon};
 
 		var dms = GSI.Utils.latLngToDMS( center );
-			var lon2=(center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + ( Math.round( dms.lat.s * 100 ) / 100 ).toFixed(2)  + '秒'
-			var lat2=(center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + ( Math.round( dms.lng.s * 100 ) / 100 ).toFixed(2)  + '秒'
+			var lats = ( Math.round( dms.lat.s * 100 ) / 100 ).toFixed(2);
+			var lngs = ( Math.round( dms.lng.s * 100 ) / 100 ).toFixed(2);
+			if ('' + lats == "60.00"){
+				lats = "0.00";
+				dms.lat.m += 1;
+			}
+			if ('' + lngs == "60.00"){
+				lngs = "0.00";
+				dms.lng.m += 1;
+			}
+			if (dms.lat.m == 60){
+				dms.lat.m = 0;
+				dms.lat.d += 1;
+			}
+			if (dms.lng.m == 60){
+				dms.lng.m = 0;
+				dms.lng.d += 1;
+			}
+			var lon2=(center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + lats  + '秒'
+			var lat2=(center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + lngs  + '秒'
     	if ((isNaN(lat) == true) && (isNaN(lon) == true)){
 			lat = "---";
 			lon = "---";
