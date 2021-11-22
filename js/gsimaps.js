@@ -10335,7 +10335,7 @@ GSI.Utils.infoToLayer = function (info, noFinishMove) {
     if ((info.maxZoom == 0 || info.maxZoom) && info.maxZoom != "") options.maxZoom = info.maxZoom;
     if (info.maxNativeZoom && info.maxNativeZoom != "") options.maxNativeZoom = info.maxNativeZoom;
     if (info.attribution) options.attribution = info.attribution;
-    if (info.bounds && info.bounds != "") options.bounds = info.bounds;
+    if (info.bounds && info.bounds != "") options.bounds = L.latLngBounds(info.bounds);
     if (info.id == CONFIG.FREERELIEFID)
       layer = new GSI.ReliefTileLayer(info.url, options);
     else
@@ -17293,7 +17293,11 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
   },
 
   load: function () {
-    if (!this._queue) return;
+    if (!this._queue){
+      this.fire('loaded');
+      return;
+    }
+    
     var zoom = this._getZoomForUrl();
     var tileSize = this._getTileSize();
     var origin = this._map.getPixelOrigin();
@@ -17405,6 +17409,7 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
 
   draw: function (texture) {
     var grayScaleCanvas = null;
+    if (!this._queue) return;
     texture.globalAlpha = (this.options.opacity ? this.options.opacity : 1.0);
     for (var i = 0; i < this._queue.length; i++) {
       var tilePoint = this._queue[i];
@@ -30766,11 +30771,7 @@ GSI.Footer = L.Evented.extend({
       + '&nbsp;' +
       (center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + lngs + '秒'
     );
-    // this._latlng60View.html(
-    //   (center.lat < 0 ? '-' : '') + dms.lat.d + '度' + dms.lat.m + '分' + (Math.round(dms.lat.s * 100) / 100).toFixed(2) + '秒'
-    //   + '&nbsp;' +
-    //   (center.lng < 0 ? '-' : '') + dms.lng.d + '度' + dms.lng.m + '分' + (Math.round(dms.lng.s * 100) / 100).toFixed(2) + '秒'
-    // );
+
 
     this._latlng10View.html(
       (Math.round(center.lat * 1000000) / 1000000).toFixed(6)
