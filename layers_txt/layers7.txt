@@ -964,6 +964,17 @@
             },
             {
               "type": "Layer",
+              "id": "landslide",
+              "title": "地すべり地形分布図日本全国版（防災科学技術研究所）",
+              "url": "https://jmapweb3v.bosai.go.jp/map/xyz/landslide/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 15,
+              "maxNativeZoom": 15,
+              "html": "<div class='layer_text'><p>防災科学技術研究所地震ハザードステーション（J-SHIS）が提供する地すべり地形分布図日本全国版を表示します。<p>地すべり地形分布図は、地すべり変動によって形成された地形的痕跡である「地すべり地形」の外形と基本構造（滑落崖・移動体）を空中写真判読によりマッピングし、1:50,000地形図にその分布を示した図面です。<p>ご利用にあたっては、<a target='_blank' href='https://www.j-shis.bosai.go.jp/landslidemap'>詳細</a>及び<a target='_blank' href='https://www.j-shis.bosai.go.jp/agreement-landslidemap'>利用規約</a>をご確認ください。</div>"
+            },
+            {
+              "type": "Layer",
               "id": "kunijiban",
               "title": "地盤情報（KuniJiban）",
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/098.png",
