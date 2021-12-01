@@ -3476,6 +3476,20 @@ GSI.Utils.setMixBlendMode = function (item, flg) {
   item._visibleInfo.layer._container.setAttribute('style', el);
 };
 
+GSI.Utils.objAssign = function(tt, src){
+  var dest;
+  if (Array.isArray(src) == true){
+    dest = $.extend([], src);
+  }
+  else{
+    dest = $.extend({}, src);
+
+  }
+
+  return dest;
+};
+
+
 /************************************************************************
  GSI.UTM
  ************************************************************************/
@@ -16413,21 +16427,21 @@ GSI.MapToImage = L.Evented.extend({
           if (w > lineWidth) lineWidth = w;
           lineCount++;
         }
+        this._mapTexture.restore();
         if (bgColor) {
           var textPadding = Math.floor(textHeight / 4);
-          this._mapTexture.restore();
           this._mapTexture.fillStyle = bgColor;
           this._mapTexture.fillRect(
             left + margin.left,
             top + margin.top - (textPadding),
             lineWidth,
             textHeight * (lineCount) + (textPadding * 2));
-          this._mapTexture.save();
         }
 
         var lineIndex = 0;
         for (var i = 0; i < lines.length; i++) {
           if (lines[i] == "") continue;
+          this._mapTexture.save();
           this._mapTexture.translate(left + margin.left, top + margin.top + (lineIndex * textHeight));
           this._mapTexture.textBaseline = textBaseline;
           if (textShadow && textShadow != '') {
@@ -16613,8 +16627,8 @@ GSI.MapToImage = L.Evented.extend({
     for (var i = 0; i < markers.length; i++) {
       var marker = $(markers[i]);
       if (marker.prop("tagName") == "DIV" && marker.find("img").length <= 0) {
-        if (this._drawDIVMarker(marker, origin, pixelBounds))
-          marker.remove();
+        //  if (this._drawDIVMarker(marker, origin, pixelBounds))
+        //    marker.remove();
       }
 
     }
@@ -39597,8 +39611,10 @@ GSI.HashOptions = L.Class.extend({
     }
 
     if (lcd != ""){
-      this._gsimaps._mainMap._mapMenu.getMapListPanel().setCurrentPath(lcd);
       this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
+      this._gsimaps._mainMap._mapMenu.getMapListPanel().setLayers(layers);
+      this._gsimaps._mainMap._mapMenu.getMapListPanel().setCurrentPath(lcd);
+      //this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
       this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._mainMap._layersJSON.visibleLayers);
     }
     else{
@@ -39687,8 +39703,11 @@ GSI.HashOptions = L.Class.extend({
       var lcd2 = this._gsimaps._queryParams.getCurrentPath2();
 
       if (lcd2 != ""){
-        this._gsimaps._subMap._mapMenu.getMapListPanel().setCurrentPath(lcd2);
         this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
+        this._gsimaps._subMap._mapMenu.getMapListPanel().setLayers(layers2);
+        this._gsimaps._subMap._mapMenu.getMapListPanel().setCurrentPath(lcd2);
+          //this._gsimaps._subMap._mapMenu.getMapListPanel().setCurrentPath(lcd2);
+        //this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
         this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._subMap._layersJSON.visibleLayers);
       }
       else{
@@ -51180,7 +51199,6 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._listFrame.css({"height": (height-this._pankzFrame.position().top-pankzHeight) + "px"});
   },
 
-  
   getCurrentPath: function () {
     var id = "";
     if (this._current_id) {
@@ -51193,7 +51211,32 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this.options.currentPath = path;
     this.setTree(this.tree);
   },
+  setLayers: function(layers, tree, layersHash){
+    if (layers && layers.length > 0){
+      this._visibleLayers = [];
+      this._visibleLayersHash = {};
+      this._visibleLayers = GSI.Utils.objAssign(this._visibleLayers, this._mapManager._layersJSON.visibleLayers);
+      this._visibleLayersHash = GSI.Utils.objAssign(this._visibleLayersHash, this._mapManager._layersJSON.visibleLayersHash);
 
+      var needsrc = [];
+      if (this._visibleLayers && this._visibleLayers.length > 0){
+        for (var x = 0; x < this._visibleLayers.length; x++){
+          var v = this._visibleLayers[x];
+          needsrc.push(v.id);
+        }
+      }
+      if (needsrc.length > 0){
+        var outerthis = this;
+        this._ljsSrc = new GSI.layersJSONSearchSRC(this._mapManager);
+        this._ljsSrc.on('searchEnd', L.bind(function(){
+          if (tree && layersHash){
+            outerthis.setTree(tree, layers, layersHash);
+          }
+        }));
+        this._ljsSrc.kick(needsrc);
+      }
+    }   
+  },
   setMapLayerList : function(mapLayerList) {
     this._mapLayerList = mapLayerList;
     this._baseMapPanel.setMapLayerList( mapLayerList);
@@ -51337,6 +51380,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       return;
     }
 
+    if (!this._listContainer){
+      return;
+    }
     var liList = (liRefresh ? this._listContainer.children('li') : null);
 
     var showAllButtonEnable = false;
@@ -51447,8 +51493,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     else {
       if (current != null){
         if (!this._visibleLayers || this._visibleLayers.length < 1){
-          this._visibleLayers = this._mapManager._layersJSON.visibleLayers;
-          this._visibleLayersHash = this._mapManager._layersJSON.visibleLayersHash;
+          this._mapManager._layersJSON._initializeTree(this.tree, current.id);
+          this._visibleLayers = GSI.Utils.objAssign(this._visibleLayers,this._mapManager._layersJSON.visibleLayers);
+          this._visibleLayersHash = GSI.Utils.objAssign(this._visibleLayersHash,this._mapManager._layersJSON.visibleLayersHash);
         }
       }
       this._initializeList_IDProc(current);
@@ -53963,7 +54010,15 @@ GSI.layersJSONSearchSRC = L.Evented.extend({
                   tree[i].src_ = true;
                   tree[i].src = path + "/" + tree[i].src.substr(2);
               }
-              if (this._CurrentData_SRC.includes(tree[i]) == false){
+
+              var samelayer = false;
+              for(var k = 0; k < this._CurrentData_SRC.length; k++){
+                if (this._CurrentData_SRC[k].id == tree[i].id){
+                  samelayer = true;
+                  break;
+                }
+              }
+              if (samelayer == false){
                   this._CurrentData_SRC.push(tree[i]);
               }
           }
@@ -54385,7 +54440,15 @@ GSI.MenuBase = L.Evented.extend({
     if (target && target.options){
       if (target.options.id && target.options.id != ""){
         var usedid = target.options.id;
-        if (["jihokuline","houiline","toukyoken","othermap"].includes(usedid)){
+        var appendmaps = ["jihokuline","houiline","toukyoken","othermap"];
+        var usedflg = false;
+        for(var x = 0; x< appendmaps.length; x++){
+          if (appendmaps[x] == usedid){
+            usedflg = true;
+            break;
+          }
+        }
+        if (usedflg == true){
           if (this._gsimaps._onoffObjects[usedid]){
             //非表示なら抜ける
             if (this._gsimaps._onoffObjects[usedid].obj.options.visible == false){
@@ -55911,7 +55974,8 @@ GSI.GSIMaps = L.Evented.extend({
       //  this._mainMap._mapMenu.setTree(e.tree, e.visibleLayers, e.visibleLayersHash);
       //}
       if (typeof this._mainMap._mapMenu != "undefined") {
-        this._mainMap._mapMenu.getMapListPanel().setTree(e.tree, e.visibleLayers, e.visibleLayersHash);
+        this._mainMap._mapMenu.getMapListPanel().setLayers(e.visibleLayers,e.tree, e.visibleLayersHash);
+        //this._mainMap._mapMenu.getMapListPanel().setTree(e.tree, e.visibleLayers, e.visibleLayersHash);
       }
       if (typeof this._cocoTileLayer != "undefined") {
         this._cocoTileLayer.refresh();
@@ -55930,8 +55994,10 @@ GSI.GSIMaps = L.Evented.extend({
           this._subMap.initializeBaseLayer(this._queryParams.getBaseMap2(), this._queryParams.getBaseMapGrayScale2());
 
 
-          this._subMap._mapMenu.getMapListPanel().setTree_Init(layersJSON.tree,
-            layersJSON.visibleLayers, layersJSON.visibleLayersHash);
+          this._subMap._mapMenu.getMapListPanel().setLayers(layersJSON.visibleLayers,
+            layersJSON.tree, layersJSON.visibleLayersHash);
+          // this._subMap._mapMenu.getMapListPanel().setTree_Init(layersJSON.tree,
+          //   layersJSON.visibleLayers, layersJSON.visibleLayersHash);
 
           if (this._queryParams.getBaseMap2() != "") {
             this._subMap._baseLayer.addTo(this._subMap._map);
