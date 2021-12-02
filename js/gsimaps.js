@@ -5847,6 +5847,7 @@ GSI.SearchResultDialog = GSI.Dialog.extend({
     return a;
   },
   showResult: function () {
+    this.container.css({"height":"auto"});
     if (this.markerList) this.map.removeLayer(this.markerList);
 
     this.markerList = L.layerGroup();
@@ -47189,6 +47190,9 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
   },
 
   _refreshList: function () {
+    //自動調整用css再設定
+    this.container.css({height:"auto"});
+    
     this._listUL.empty();
 
     this._sakuzuList.eachItems(L.bind(function (item) {
