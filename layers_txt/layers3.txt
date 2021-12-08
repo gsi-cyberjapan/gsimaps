@@ -118,7 +118,7 @@
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_tokachi/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
-                  "maxZoom": 15,
+                  "maxZoom": 16,
                   "area" : {
                     "lat" : 43.424188,
                     "lng" : 142.676353,
