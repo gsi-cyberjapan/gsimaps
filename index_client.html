@@ -16,6 +16,8 @@
         function Init(){
             oMap = document.createElement("iframe");
             oMap.style.display = "none";
+  
+            EvtResize();
             oMap.src = vURL + vURL_Site;
             oMap.onload = function(){
                 var oContent   = oMap.contentWindow;
@@ -30,8 +32,6 @@
                 /*INSERT-SCRIPT*/
 
                 oContent.postMessage(ClientMode, vURL);
-  
-                EvtResize();
             };
 
             document.body.appendChild(oMap);
