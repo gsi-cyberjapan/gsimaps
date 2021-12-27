@@ -5683,6 +5683,9 @@ GLOBE.DIALOG.LOADOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_l
 			var url = info.url;
 			var title = info.title;
 
+			if (!info.layerType){
+				info.layerType = GSI.LayersJSON.url2LayerType(url);
+			}
 			delete info["url"];
 			delete info["title"];
 
@@ -5712,7 +5715,8 @@ GLOBE.DIALOG.LOADOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_l
 
 
 		try {
-			var queueItem = this._queue.shift();
+			var queueItem = this._queue.pop();
+			//var queueItem = this._queue.shift();
 			this._mapLayerList.appendOutSideTile(queueItem.url, queueItem.title, queueItem.info);
 
 			this._msg.html("外部タイル読込中 [" + (this._totalQueueSize - this._queue.length) + "/" + this._totalQueueSize + "]");
@@ -8484,8 +8488,10 @@ GLOBE.MAP = {
 			}
 			else
 			{
-				layers += '|' + tile[i].id;
-				layersShow += ( tile[i]._visibleInfo._isHidden ? '0' : '1' );
+				if (!tile[i]._isOutside){
+					layers += '|' + tile[i].id;
+					layersShow += ( tile[i]._visibleInfo._isHidden ? '0' : '1' );
+				}
 			}
 			
 			if ( tile[i].id == CONFIG.FREERELIEFID ) {
@@ -14056,7 +14062,8 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 			if (item.maxNativeZoom || item.maxNativeZoom == 0) entry.maxNativeZoom = item.maxNativeZoom;
 			if (item.tms) entry.tms = true;
 
-			layersJSON.layers[0].entries.unshift(entry);
+			layersJSON.layers[0].entries.push(entry);
+			//layersJSON.layers[0].entries.unshift(entry);
 		}
 		var layersJSONText = JSON.stringify(layersJSON, null, "  ");
 
@@ -15366,7 +15373,7 @@ GSI.MapLayerList = MA.Class.extend( {
 	{
 		if (!layerOptions) layerOptions = {};
 		var info = $.extend({
-			id: "________________o_u_t_s_i_d_e________________",
+			//id: "________________o_u_t_s_i_d_e________________",
 			title: caption,
 			url: url,
 			layerType: (layerOptions.tms ? "tms" : "tile")
