@@ -28,7 +28,7 @@
       "cocotile": true,
       "maxNativeZoom": 14,
       "html" : "",
-      "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#blank",
+      "legendUrl": "",
       "errorTileUrl": "./image/map/no-data-blank.png"
     },
     {
@@ -49,7 +49,7 @@
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
       "cocotile": true,
       "html" : "",
-      "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#seamlessphoto",
+      "legendUrl": "",
       "errorTileUrl": "./image/map/no-data-ort.png"
     }
   ]
