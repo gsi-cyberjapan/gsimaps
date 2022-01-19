@@ -2828,6 +2828,14 @@ GSI.Utils.ConverUnit = function(map, shape, radius, unit_src, unit_to)
     return radius;
 };
 
+GSI.Utils.getNextOutsideTileNo = function(){
+	if ( !GSI.Utils._outsideTileNo ){
+		GSI.Utils._outsideTileNo = 0;
+	}
+
+	return GSI.Utils._outsideTileNo++;
+};
+
 GSI.Utils.Cookie = MA.Class.extend( {
 	
 	_config : {
@@ -15373,7 +15381,7 @@ GSI.MapLayerList = MA.Class.extend( {
 	{
 		if (!layerOptions) layerOptions = {};
 		var info = $.extend({
-			//id: "________________o_u_t_s_i_d_e________________",
+			id: "o_u_t_s_i_d_e_" + GSI.Utils.getNextOutsideTileNo(),
 			title: caption,
 			url: url,
 			layerType: (layerOptions.tms ? "tms" : "tile")
