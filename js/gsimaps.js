@@ -3489,6 +3489,13 @@ GSI.Utils.objAssign = function(tt, src){
   return dest;
 };
 
+GSI.Utils.getNextOutsideTileNo = function(){
+	if ( !GSI.Utils._outsideTileNo ){
+		GSI.Utils._outsideTileNo = 0;
+	}
+
+	return GSI.Utils._outsideTileNo++;
+};
 
 /************************************************************************
  GSI.UTM
@@ -22079,7 +22086,7 @@ GSI.MapLayerList = L.Evented.extend({
   appendOutSideTile: function (url, caption, layerOptions) {
     if (!layerOptions) layerOptions = {};
     var info = $.extend({
-      id: "________________o_u_t_s_i_d_e________________",
+      id: "o_u_t_s_i_d_e_" + GSI.Utils.getNextOutsideTileNo(),
       title: caption,
       url: url
     }, layerOptions);
