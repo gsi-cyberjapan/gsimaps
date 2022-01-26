@@ -394,34 +394,42 @@ SOFTWARE.
 				var b = 0;
 				var a = 0;
 				
-				
-				switch( mode )
-				{
-					case 1: //半透明
-						r = c1.r + ( ( c2.r - c1.r ) * opacity );
-						g = c1.g + ( ( c2.g - c1.g ) * opacity );
-						b = c1.b + ( ( c2.b - c1.b ) * opacity );
-						a = c1.a + ( ( c2.a - c1.a ) * opacity );
-						break;
-						
-					case 2: //乗算
-						r = c1.r * ( c2.r / 255 );
-						g = c1.g * ( c2.g / 255 );
-						b = c1.b * ( c2.b / 255 );
-						a = c1.a * ( c2.a / 255 );
-						break;
-					case 3: //両方
-						r = c1.r * ( c2.r / 255 );
-						g = c1.g * ( c2.g / 255 );
-						b = c1.b * ( c2.b / 255 );
-						a = c1.a * ( c2.a / 255 );
-						r = c1.r + ( ( r - c1.r ) * opacity );
-						g = c1.g + ( ( g - c1.g ) * opacity );
-						b = c1.b + ( ( b - c1.b ) * opacity );
-						a = c1.a + ( ( a - c1.a ) * opacity );
-						break;
+
+				if (c2.a == 0 || opacity == 0){
+					//a=0と透過100%は乗算しない
+					r = c1.r;
+					g = c1.g;
+					b = c1.b;
+					a = c1.a;
 				}
-				
+				else{
+					switch( mode )
+					{
+						case 1: //半透明
+							r = c1.r + ( ( c2.r - c1.r ) * opacity );
+							g = c1.g + ( ( c2.g - c1.g ) * opacity );
+							b = c1.b + ( ( c2.b - c1.b ) * opacity );
+							a = c1.a + ( ( c2.a - c1.a ) * opacity );
+							break;
+							
+						case 2: //乗算
+							r = c1.r * ( c2.r / 255 );
+							g = c1.g * ( c2.g / 255 );
+							b = c1.b * ( c2.b / 255 );
+							a = c1.a * ( c2.a / 255 );
+							break;
+						case 3: //両方
+							r = c1.r * ( c2.r / 255 );
+							g = c1.g * ( c2.g / 255 );
+							b = c1.b * ( c2.b / 255 );
+							a = c1.a * ( c2.a / 255 );
+							r = c1.r + ( ( r - c1.r ) * opacity );
+							g = c1.g + ( ( g - c1.g ) * opacity );
+							b = c1.b + ( ( b - c1.b ) * opacity );
+							a = c1.a + ( ( a - c1.a ) * opacity );
+							break;
+					}
+				}
 				r = Math.floor(r);
 				g = Math.floor(g);
 				b = Math.floor(b);
@@ -557,8 +565,9 @@ SOFTWARE.
 		
 		var canvasWidth = 256;
 		var canvasHeight = 256;
-		
-		return Cesium.when.all(promiseList)
+
+		var othis = this;
+		return Cesium.when.resolve(Promise.allSettled(promiseList)
 		.then(function(imageList){
 			try
 			{
@@ -578,9 +587,11 @@ SOFTWARE.
 				
 				for ( var i=imageList.length-1; i>=0; i-- )
 				{
-					var tile = this._tileList[i];
-					var data = imageList[i];
-					
+					//Promiseを解決できていない分はスキップ
+					if (imageList[i].status != "fulfilled")	continue;
+
+					var tile = othis._tileList[i];
+					var data = imageList[i].value;
 					if ( !tile || !tile._visibleInfo || tile._visibleInfo._isHidden ) continue;
 					if ( tile.minZoom != null && tile.minZoom > level ) continue;
 					if ( tile.maxZoom != null && tile.maxZoom < level ) continue;
@@ -616,7 +627,7 @@ SOFTWARE.
 					}
 				}
 				
-				if ( this._test )
+				if ( othis._test )
 				{
 					workCtx.beginPath();
 					workCtx.strokeStyle = "#c00";
@@ -633,7 +644,7 @@ SOFTWARE.
 			{
 				console.log("Error at Combine:", e);
 			}
-		}.bind(this));
+		}));
 	};
 
     JapanGSICombineImageryProvider.prototype.pickFeatures = function() {
