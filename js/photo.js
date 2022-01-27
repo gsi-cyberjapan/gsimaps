@@ -85,7 +85,7 @@ CONFIG.COMPAREPHOTO_PHOTOLIST = [
     "maxZoom": 18,
     "maxNativeZoom": 17,
     "year": {
-      "from": 1988,
+      "from": 1987,
       "to": 1990
     }
   },
