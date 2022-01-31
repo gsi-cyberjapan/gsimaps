@@ -3381,6 +3381,22 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "2022年更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_update_2022_01",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2022_01/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2021年更新情報",
                   "toggleall": false,
                   "entries": [
