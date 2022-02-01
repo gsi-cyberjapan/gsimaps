@@ -6849,7 +6849,7 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
 
 
 
-    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=44'>こちら</a>");
+    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=48'>こちら</a>");
     dd.append(div);
 
     div = $("<div>");
