@@ -36509,19 +36509,11 @@ GSI.CrossSectionView = L.Evented.extend({
     }
 
     this._data.points[0].distance = 0;
-    var totalDistance = 0;
-
-    //if (!this._data.points[0].h) this._data.points[0].h = 0;
     this._data.max = this._data.points[0].h;
     this._data.min = this._data.points[0].h;
+
     for (var i = 0; i < this._data.points.length - 1; i++) {
-      var inverse = GSI.Utils.Geodesic.vincentyInverse(
-        this._data.points[i].latlng, this._data.points[i + 1].latlng);
-
-      //if (!this._data.points[i + 1].h) this._data.points[i + 1].h = 0;
-
-      totalDistance += inverse.distance;
-      this._data.points[i + 1].distance = totalDistance;
+      this._data.points[i + 1].distance = this._data.totalDistance / (this.options.maxPoints - 1) * (i + 1);
       if (this._data.max == null) {
         this._data.max = this._data.points[i + 1].h;
       } else if (this._data.max < this._data.points[i + 1].h) {
@@ -36535,7 +36527,6 @@ GSI.CrossSectionView = L.Evented.extend({
       }
 
     }
-    this._data.totalDistance = totalDistance;
 
 
     //if ( this.options.autoGraph )
