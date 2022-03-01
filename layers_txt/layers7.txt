@@ -654,7 +654,7 @@
               "url": "https://maps.gsi.go.jp/xyz/southpole_cp/{z}/{x}/{y}.geojson",
               "cocotile": false,
               "styleurl": "https://maps.gsi.go.jp/xyz/southpole_cp/style.js",
-              "html": "<div class='layer_text'><p>南極に設置した基準点の緯度・経度・高さなどの位置情報を表示します。より詳細な情報は、<a href=\"http://www.gsi.go.jp/antarctic/07.html\" target=\"_blank\">国土地理院の「南極の地理空間情報（基準点測量）」ページ</a>をご覧ください。</div>",
+              "html": "<div class='layer_text'><p>南極に設置した基準点の緯度・経度・高さなどの位置情報を表示します。より詳細な情報は、<a href=\"https://www.gsi.go.jp/antarctic/07.html\" target=\"_blank\">国土地理院の「南極の地理空間情報（基準点測量）」ページ</a>をご覧ください。</div>",
               "minZoom": 2,
               "maxZoom": 18,
               "maxNativeZoom": 2
@@ -664,7 +664,7 @@
               "title": "1:2,500　南極地形図（楕円体高版）",
               "id": "southpole_2500_2",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:2,500南極地形図（楕円体高版）については、等高線、基準点、標高点等の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約21m高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:2,500南極地形図（楕円体高版）については、等高線、基準点、標高点等の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約21m高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -691,7 +691,7 @@
               "title": "1:2,500　南極地形図（標高版）",
               "id": "southpole_2500",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイド高を21.0ｍとして使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500_elev.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>1:2,500南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイド高を21.0ｍとして使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/2500.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -718,7 +718,7 @@
               "title": "1:2,500　南極写真図",
               "id": "southpole_2500_ort_2",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>2500分の１の南極写真図です。</p></div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>2500分の１の南極写真図です。</p></div></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -745,7 +745,7 @@
               "title": "1:25,000　南極地形図（標高版）",
               "id": "southpole_25000",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>1:25,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/25000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>1:25,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/25000.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -772,7 +772,7 @@
               "title": "1:50,000　南極地形図（標高版）",
               "id": "southpole_50000_2",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>1:50,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイドモデル「地球重力モデル2008（EGM2008)」を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000_2.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>1:50,000南極地形図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイドモデル「地球重力モデル2008（EGM2008)」を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/50000_2.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -799,7 +799,7 @@
               "title": "1:250,000　南極衛星画像図（楕円体高版）",
               "id": "southpole_satellite_250000",
               "toggleall": true,
-              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:250,000南極衛星画像図（楕円体高版）については、等高線の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約10～40m程度高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000.png\">凡例</a><br><br><a target=\"_blank\" href=\"http://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "html": "<div class='layer_text'><p>高さを楕円体高で表した地形図です。地形図を現地で使用する際に衛星測位の観測値と直接比較できます。<br><br>解説<br><br>1:250,000南極衛星画像図（楕円体高版）については、等高線の高さは楕円体高を使用しています。<br><br>楕円体高は、GPS等の衛星測位で求められる地球楕円体からの高さであり、この地域においては、海面からの高さである標高値より約10～40m程度高い値となっておりますので、ご利用の際はご注意ください。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -814,6 +814,32 @@
                   "id": "_southpole_satellite_250000_spec",
                   "title": "1:250,000　南極衛星画像図（楕円体高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/{z}/{x}/{y}.geojson",
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 18
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:250,000　南極地勢図（標高版）",
+              "id": "southpole_250000",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>1:250,000南極地勢図（標高版）については、等高線、基準点、標高点の高さは標高を使用しています。<br><br>解説<br><br>楕円体高から標高への換算は、ジオイドモデル「地球重力モデル2008（EGM2008)」を使用しています。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/250000_chiseizu.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "_southpole_250000",
+                  "title": "1:250,000　南極地勢図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_250000/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "_southpole_250000_250000_spec",
+                  "title": "1:250,000　南極地勢図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_250000_spec/{z}/{x}/{y}.geojson",
                   "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 18
