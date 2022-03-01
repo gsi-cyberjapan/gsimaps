@@ -732,7 +732,7 @@
                   "type": "Layer",
                   "id": "_southpole_2500_spec_2",
                   "title": "1:2,500　南極写真図整備範囲",
-                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_spec_2/{z}/{x}/{y}.geojson",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_2500_ort_spec_2/{z}/{x}/{y}.geojson",
                   "cocotile": false,
                   "html": "",
                   "maxNativeZoom": 2,
