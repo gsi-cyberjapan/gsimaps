@@ -1,0 +1,33 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+         {
+         "type": "Layer",
+         "id": "20220317fukushimakenoki_0317naname",
+         "title": "宮城福島沿岸地区(3/17撮影)",
+         "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+         "url": "https://maps.gsi.go.jp/xyz/20220317fukushimakenoki_0317naname/{z}/{x}/{y}.geojson",
+         "minZoom": 2,
+         "maxZoom": 18,
+         "maxNativeZoom": 2,
+         "area" : {
+           "lat" : 38.04,
+           "lng" : 141.04,
+           "zoom" : 9
+         },
+         "html": "<div class=\"gsi_layerinfo_title\">斜め写真（3/17撮影）</div><div class=\"gsi_layerinfo_kaisetu\">斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しています。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20220316_fukushima_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20220316fukushimaken-oki.txt"
+    }
+  ]
+}
