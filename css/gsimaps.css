@@ -1821,7 +1821,7 @@ form {
 }
 
 .layertreedialog_ul li a.item .title.withinfo {
-	padding-right: 22px;
+	padding-right: 33px;
 }
 /*
 .layertreedialog_ul li a.folder .title {
@@ -1927,6 +1927,37 @@ form {
 	color: #eee;
 }
 
+.layertreedialog_ul li .setting_btn {
+	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+	position: absolute;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 0 0 0;
+	right: 30px;
+	top: 50%;
+	/*10px;*/
+	margin-top: -11px;
+	z-index: 10;
+	text-align: center;
+	font-size: 11px;
+	/*10px;*/
+	line-height: 20px;
+	/*16px;*/
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	height: 20px;
+	/*16px;*/
+	width: 20px;
+	/*16px;*/
+	color: #eee;
+	background-image: url(../image/setting.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+}
+
 .layertreedialog_ul li .area_btn {
 	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
 	position: absolute;
@@ -1988,6 +2019,9 @@ form {
 	right: 2px;
 }
 
+.minmode .layertreedialog_ul li .setting_btn {
+	right: 22px;
+}
 
 .minmode .layertreedialog_ul li .area_btn {
 	right: 22px;
@@ -3022,6 +3056,36 @@ form {
 	-webkit-user-select: none;
 }
 
+.viewlistdialog_ul li .setting_btn {
+	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+	position: absolute;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	right: 59px;
+	top: 6px;
+	z-index: 10;
+	text-align: center;
+	font-size: 11px;
+	/*10px;*/
+	line-height: 20px;
+	/*16px;*/
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	height: 20px;
+	/*16px;*/
+	width: 20px;
+	/*16px;*/
+	color: #eee;
+	background-image: url(../image/setting.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
 .viewlistdialog_ul li .outside_edit_btn {
 	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
 	position: absolute;
@@ -3099,8 +3163,17 @@ form {
 
 }
 
+.viewlistdialog_ul li.free_relief_id .multiplytile {
+	right: 119px;
+}
+.viewlistdialog_ul li.free_relief_id .opacity_btn {
+	right: 82px;
+}
 .minmode .viewlistdialog_ul li .description_btn {
 	right:24px;
+}
+.minmode .viewlistdialog_ul li .setting_btn {
+	display: none;
 }
 .minmode .viewlistdialog_ul li .closebtn {
 	right:2px;
@@ -3197,14 +3270,6 @@ form {
 	text-decoration: none;
 	white-space: nowrap;
 }
-
-.minmode .viewlistdialog_ul li .description_btn {
-	right:24px;
-}
-.minmode .viewlistdialog_ul li .closebtn {
-	right:3px;
-}
-
 
 .minmode .viewlistdialog_ul li .menubtn {
 	right:48px;
@@ -10854,4 +10919,9 @@ MapMenu
   top:auto;
   bottom: 100%;
   margin-bottom:5px
+}
+
+
+#incompatible{
+	display: none;
 }
