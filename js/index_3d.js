@@ -1226,6 +1226,11 @@ function InitFrameDownload(o) {
 			+ "<td>ブラウザでぐるぐる回す用のファイルです（今の画面のファイル）</td>"
 			+ "<td><input id=\"dl_three\" onclick=\"showDownloadWindow('webgl');\" type=\"button\" value=\"ダウンロード\"></td>"
 			+ "</tr>"
+			+ "<tr>"
+			+ "<th style=\"font-weight: bold;\">OBJファイル</th>"
+			+ "<td>多くのアプリケーションで開くことのできる形式です</td>"
+			+ "<td><input id=\"dl_three\" onclick=\"showDownloadWindow('obj');\" type=\"button\" value=\"ダウンロード\"></td>"
+			+ "</tr>"
 			+ "</tbody>"
 			+ "</table>"
 
@@ -5840,6 +5845,22 @@ function DownloadProc(fname, a) {
 		data = txt;
 		data_type = "txt_blob";
 	}
+	else if (fname == "dem.mtl") {
+		fDone = true;
+		var txt = "";
+		txt += "newmtl Material\n";
+		txt += "Ka 0.000000 0.000000 0.000000\n";
+		txt += "Kd 1.0 1.0 1.0\n";
+		txt += "Ks 0.000000 0.000000 0.000000\n";
+		txt += "Ns 2.000000\n";
+		txt += "d 1.000000\n";
+		txt += "Tr 0.000000\n";
+		txt += "Pr 0.333333\n";
+		txt += "Pm 0.080000\n";
+		txt += "map_Kd texture.png\n";
+		data = txt;
+		data_type = "txt_blob";
+	}
 	else if (fname == "texture.png") {
 		fDone = true;
 
@@ -5851,7 +5872,7 @@ function DownloadProc(fname, a) {
 		data = oIconTextureCanvas.toDataURL();
 		data_type = "img";
 	}
-	else if (fname == "dem.stl" || fname == "dem.wrl") {
+	else if (fname == "dem.stl" || fname == "dem.wrl" || fname == "dem.obj") {
 		fDone = true;
 
 		var vSceneMesh2 = [].concat(vSceneMesh);
@@ -5878,6 +5899,7 @@ function DownloadProc(fname, a) {
 		}
 		if (fname == "dem.stl") { data = Download_STL(vDemMesh, vZRate, vDistance); }
 		else if (fname == "dem.wrl") { data = Download_WRL(vDemMesh, vZRate, vDistance); }
+		else if (fname == "dem.obj") { data = Download_OBJ(vDemMesh, vZRate, vDistance); }
 
 		data_type = "txt_blob";
 
@@ -6096,6 +6118,36 @@ function Download_WRL(vDem, vZRate, vDistance) {
 	ret = ret.replace(/{facetList2}/g, vData.wrlFacetList2);      // 面リスト（上面以外）
 	ret = ret.replace(/{pointCoordtList}/g, vData.wrlPointCoordtList); // 画像の頂点の座標リスト（Xは0～1、Yは-1～0）
 
+	return ret;
+};
+
+/*-----------------------------------------------------------------------------------------------*/
+// ダウンロード：OBJ
+/*-----------------------------------------------------------------------------------------------*/
+function Download_OBJ(vDem, vZRate, vDistance) {
+	var ret = "";
+	/*....................................................................
+	 * TEMPLATE
+	 *....................................................................*/
+	ret += DownloadTextLine("mtllib dem.mtl");
+	ret += DownloadTextLine("g model");
+	ret += DownloadTextLine("{objVList}");
+	ret = ret.substr(0, (ret.length - 1));
+	ret += DownloadTextLine("{objVtList}");
+	ret = ret.substr(0, (ret.length - 1));
+	ret += DownloadTextLine("usemtl Material");
+	ret += DownloadTextLine("{objFList}");
+	ret = ret.substr(0, (ret.length - 1));
+	/*....................................................................
+	 * Make
+	 *....................................................................*/
+	var vData = Download_ConvertFromDem("OBJ", vDem, vZRate, vDistance)
+	/*....................................................................
+	 * Complete
+	 *....................................................................*/
+	ret = ret.replace(/{objVList}/g, vData.objPointList);      // 頂点リスト
+	ret = ret.replace(/{objVtList}/g, vData.objTextureList);   // UVリスト
+	ret = ret.replace(/{objFList}/g, vData.objFaceList);      // 面リスト
 	return ret;
 };
 
@@ -6440,12 +6492,42 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 		wrlPointCoordtList = wrlPointCoordtList.substr(0, (wrlPointCoordtList.length - 2));
 	}
 	/*....................................................................*/
+	else if (type == "OBJ") {
+		objPointList = "";
+		objTextureList = "";
+		objFaceList = "";
+		// ポイントリスト
+		for (nY = 0; nY < colY; nY++) {
+			for (nX = 0; nX < colX; nX++) {
+				objPointList += "v " + (modelSizeX * (-1) + vDemXY * nX).toFixed(5) + " " + (modelSizeH + vDem[nX][nY] * vDemZ * vZRate).toFixed(5) + " " + (vDemXY * nY).toFixed(5) + "\n";
+			}
+		}
+		// テクスチャUV
+		for (nY = 0; nY < colY; nY++) {
+			for (nX = 0; nX < colX; nX++) {
+				px = 1.0 * nX / colX;
+				py = 1.0 - 1.0 * nY / colY;
+				objTextureList += "vt " + px.toFixed(5) + " " + py.toFixed(5) + "\n";
+			}
+		}
+		// 面リスト
+		for (nY = 0; nY < colY-1; nY++) {
+			for (nX = 0; nX < colX-1; nX++) {
+				objFaceList += "f " + (nY * colX + nX + 1) + "/" + (nY * colX + nX + 1) + " " + ((nY + 1) * colX + nX + 1) + "/" + ((nY + 1) * colX + nX + 1) + " " + (nY * colX + nX + 2) + "/" + (nY * colX + nX + 2) + "\n";
+				objFaceList += "f " + (nY * colX + nX + 2) + "/" + (nY * colX + nX + 2) + " " + ((nY + 1) * colX + nX + 1) + "/" + ((nY + 1) * colX + nX + 1) + " " + ((nY + 1) * colX + nX + 2) + "/" + ((nY + 1) * colX + nX + 2) + "\n";
+			}
+		}
+	}
+	/*....................................................................*/
 	return {
 		stlPointList: stlPointList
 		, wrlPointList1: wrlPointList1
 		, wrlFacetList1: wrlFacetList1
 		, wrlFacetList2: wrlFacetList2
 		, wrlPointCoordtList: wrlPointCoordtList
+		, objPointList: objPointList
+		, objTextureList: objTextureList
+		, objFaceList: objFaceList
 	};
 };
 
