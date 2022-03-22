@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css" />
   <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
 
-  <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+  <!-- <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script> -->
   <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
@@ -58,9 +58,10 @@
   
 
   <link rel="stylesheet" type="text/css" href="./css/gsimaps.css" />
+  <script type="text/javascript" src="js/setting.js"></script>
+  <script type="text/javascript" src="js/tooltip.js"></script>
   <script type="text/javascript" src="js/gsimaps.js"></script>
   <script type="text/javascript" src="js/photo.js"></script>
-  <script type="text/javascript" src="js/tooltip.js"></script>
   <script type="text/javascript" src="js/pc.js"></script>
 
   
@@ -72,9 +73,23 @@
       JavaScriptを有効にしてご覧ください。
     </div>
   </noscript>
+  <script type="text/javascript">
+    if(L.Browser.ie) { 
+      window.onload = function () { 
+        document.getElementById("incompatible").style.display = 'block'; 
+        document.getElementById("header").style.display = 'none';
+        document.getElementById("topmessage").style.display = 'none';
+        document.getElementById("measure").style.display = 'none';
+      }; 
+    }
+  </script>
 </head>
 
 <body>
+  <div id = "incompatible">
+    地理院地図は Microsoft Edge, Google Chrome, Mozilla Firefox, Apple Safari でご利用ください。
+  </div>
+
   <div id="header" class="logo_s" style="padding-left:0;">
     
     <div class="logoarea" style="display:none;">
@@ -95,7 +110,13 @@
 
   <div id="topmessage"></div>
   <div id="map"></div>
-
+  <div class="leaflet-control-flatpanel leaflet-control" id="zoomGuidePanel" style="display: none;z-index: 2;position: absolute;right: 10px;bottom: 35px;">
+    <div class="leaflet-control-crpanel" id="zoomGuideMinMax" style="border-radius: 5px 5px 0px 0px;">この情報はズームmin～maxで表示されます。</div>
+    <div class="leaflet-control-crpanel">なお、整備範囲が全国であるとは限りません。</div><div class="leaflet-control-crpanel" style="border-radius: 0px 0px 5px 5px;">
+      <input class="" type="checkbox" id="zoomGuideCheckbox">
+      <label class="" for="zoomGuideCheckbox">以後、この案内を表示しない</label>
+    </div>
+  </div>
 
   <canvas id="measure" width="0" height="0" style="visibility:hidden;position:absolute;"></canvas>
 

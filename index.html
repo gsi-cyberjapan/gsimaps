@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="地形図、写真、標高、地形分類、災害情報など、日本の国土の様子を発信するウェブ地図です。地形図や写真の3D表示も可能。">
 
-  <title>地理院地図 / GSI Maps｜国土地理院</title>
+  <title>（ページタイトル）</title>
 
   <link rel="stylesheet" href="js.lib/leaflet-1.2.0/leaflet.css" />
   <script type="text/javascript" src="js.lib/leaflet-1.2.0/leaflet-src.js"></script>
@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css" />
   <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
 
-  <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+  <!-- <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script> -->
   <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
@@ -57,34 +57,51 @@
   <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.zoomslider-0.6.1/L.Control.Zoomslider.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./css/gsimaps.css" />
+  <script type="text/javascript" src="js/setting.js"></script>
+  <script type="text/javascript" src="js/tooltip.js"></script>
   <script type="text/javascript" src="js/gsimaps.js"></script>
 
   <script type="text/javascript" src="js/photo.js"></script>
 
-  <script type="text/javascript" src="js/tooltip.js"></script>
   <script type="text/javascript" src="js/pc.js"></script>
-
-  <script type="text/javascript">
-    GSI.GLOBALS.isCreditShow = true;
-  </script>
 
   <script type="text/javascript" src="js/muni.js"></script>
   <script type="text/javascript" src="js/jiki.js"></script>
 
   <script type="text/javascript" src="js/multilang.js"></script>
 
+  <script type="text/javascript">
+    GSI.GLOBALS.isCreditShow = true;
+  </script>
+
   <noscript>
     <div class="noscript">
       JavaScriptを有効にしてご覧ください。
     </div>
   </noscript>
+  <script type="text/javascript">
+    if(L.Browser.ie) { 
+      window.onload = function () { 
+        document.getElementById("incompatible").style.display = 'block'; 
+        document.getElementById("header").style.display = 'none';
+        document.getElementById("topmessage").style.display = 'none';
+        document.getElementById("measure").style.display = 'none';
+      }; 
+    }
+  </script>
 </head>
 
 <body>
+  <div id = "incompatible">
+    地理院地図は Microsoft Edge, Google Chrome, Mozilla Firefox, Apple Safari でご利用ください。
+  </div>
   <div id="header" class="logo_s">
 
     <div class="logoarea">
-
+       <a style="text-decoration:none;" href="">
+        <div id="title_logo_upper">タイトル</div>
+        <div id="title_logo_lower">（サンプル）</div>
+      </a> 
     </div>
 
     <div class="magnifyingglass">
@@ -100,6 +117,13 @@
 
   <div id="topmessage"></div>
   <div id="map"></div>
+  <div class="leaflet-control-flatpanel leaflet-control" id="zoomGuidePanel" style="display: none;z-index: 2;position: absolute;right: 10px;bottom: 35px;">
+    <div class="leaflet-control-crpanel" id="zoomGuideMinMax" style="border-radius: 5px 5px 0px 0px;">この情報はズームmin～maxで表示されます。</div>
+    <div class="leaflet-control-crpanel">なお、整備範囲が全国であるとは限りません。</div><div class="leaflet-control-crpanel" style="border-radius: 0px 0px 5px 5px;">
+      <input class="" type="checkbox" id="zoomGuideCheckbox">
+      <label class="" for="zoomGuideCheckbox">以後、この案内を表示しない</label>
+    </div>
+  </div>
 
   <canvas id="measure" width="0" height="0" style="visibility:hidden;position:absolute;"></canvas>
 
