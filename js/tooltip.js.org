@@ -222,7 +222,7 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを[上記のHTMLを保存]>ボタンをクリックして保存して下さい。' + '<div style="font-size:85%;">※HTML は一時的なものとしてご利用ください。作図情報は、作図機能を使ってファイルに保存することをおすすめします。</div>';
  GSITEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '次のHTMLをテキストエディタで<strong>文字コードUTF-8</strong>で保存して下さい。';
  
- GSITEXT.SHARE.DIALOG_TEMPLATELOADERROR = '保存したHTMLファイルではこの機能を使うことはできません。';
+ GSITEXT.SHARE.DIALOG_TEMPLATELOADERROR = '大変申し訳ありません。しばらく経ってからご利用下さい';
  
  GSITEXT.SHARE.DIALOG_DOWNLOADBTN = '上記のHTMLを保存';
  GSITEXT.SHARE.DIALOG_COPYBTN = 'クリップボードにコピー';

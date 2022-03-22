@@ -94,6 +94,12 @@ CONFIG.UI.MENU = [
         defaultCheck: true,
         description : "地図の中央に十字線を表示します"
       },
+      {
+        id: CONFIG.PARAMETERNAMES.ZOOMGUIDE,
+        title: '表示ズームの案内',
+        typeA: 'check',
+        defaultCheck: true
+      },
       /*
       {
         id: CONFIG.PARAMETERNAMES.JIHOKULINE,

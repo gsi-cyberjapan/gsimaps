@@ -98,6 +98,12 @@ CONFIG.UI.MENU = [
             defaultCheck: true
           },
           {
+            id: CONFIG.PARAMETERNAMES.ZOOMGUIDE,
+            title: '表示ズームの案内',
+            typeA: 'check',
+            defaultCheck: true
+          },
+          {
             id: CONFIG.PARAMETERNAMES.MINIMAP,
             title: '広域図',
             typeA: 'check',
