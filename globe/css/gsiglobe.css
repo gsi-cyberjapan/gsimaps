@@ -1305,6 +1305,38 @@ input[type=search]{
    
 }
 
+.layertreedialog_ul li .setting_btn {
+	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+	position: absolute;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 0 0 0;
+	right: 44px;
+	top: 50%;
+	/*10px;*/
+	margin-top: -11px;
+	z-index: 10;
+	text-align: center;
+	font-size: 11px;
+	/*10px;*/
+	line-height: 20px;
+	/*16px;*/
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	height: 20px;
+	/*16px;*/
+	width: 20px;
+	/*16px;*/
+	color: #eee;
+	background-image: url(../image/elevation/setting.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+}
+
+
 
 
 .tab_scroll_btn
@@ -1895,7 +1927,6 @@ input[type=search]{
     -webkit-touch-callout:none;
     -webkit-user-select  :none;
 }
-
 
 .viewlistdialog_ul .item_frame ,
 .viewlistdialog_ul .item_frame_fixed
@@ -2622,6 +2653,42 @@ input[type=search]{
     -webkit-user-select  :none;
 }
 
+.viewlistdialog_ul li .setting_btn {
+	font-family: 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO';
+	position: absolute;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	right: 66px;
+	top: 17px;
+	z-index: 10;
+	text-align: center;
+	font-size: 11px;
+	/*10px;*/
+	line-height: 20px;
+	/*16px;*/
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	height: 20px;
+	/*16px;*/
+	width: 20px;
+	/*16px;*/
+	color: #eee;
+	background-image: url(../image/elevation/setting.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.viewlistdialog_ul li.free_relief_id .multiplytile {
+	right: 128px;
+}
+.viewlistdialog_ul li.free_relief_id .opacity_btn {
+	right: 90px;
+}
 
 .gsi_layerinfo_title
 {
@@ -3466,7 +3533,7 @@ input[type=search]{
 }
 .gsi_onoffswitch_toggle .inner {
     display: block; 
-    #width: 100%; 
+    /* #width: 100%;  */
     width: 200%; 
     margin-left: -100%;
     -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
@@ -3481,23 +3548,23 @@ input[type=search]{
 }
 .gsi_onoffswitch_toggle .inner:before {
     content: "解除";
-    #padding-left: 3px;
-    #padding-left: 4px;
+    /* #padding-left: 3px;
+    #padding-left: 4px; */
     background-color: #2B7396; color: #EEE;
     text-align: center;
-    #text-align: left;
+    /* #text-align: left; */
 }
 .gsi_onoffswitch_toggle .inner:after {
     content: "合成";
-    #padding-left:3px;
-    #padding-right:4px;
+    /* #padding-left:3px;
+    #padding-right:4px; */
     background-color: #EEEEEE; color: #AAA;
     text-align: center;
-    #text-align: right;
+    /* #text-align: right; */
 }
 .gsi_onoffswitch_toggle .switch {
     display: none; width: 5px; margin: 0px;
-    #display: block; width: 5px; margin: 0px;
+    /* #display: block; width: 5px; margin: 0px; */
     background: #333;
     border: 1px solid #555; 
     
@@ -4372,3 +4439,10 @@ input[type=search]{
 	color:#111;
 }
 
+.footer_label{
+  color: #ccc;
+}
+
+#gsi_dialog_footer{
+  width: auto;
+}
