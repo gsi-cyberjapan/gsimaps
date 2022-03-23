@@ -6162,6 +6162,10 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 	var wrlFacetList2 = "";
 	var wrlPointCoordtList = "";
 
+	var objPointList = "";
+	var objTextureList = "";
+	var objFaceList = "";
+	
 	/*....................................................................
 	 * VALUE
 	 *....................................................................*/
@@ -6493,9 +6497,6 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 	}
 	/*....................................................................*/
 	else if (type == "OBJ") {
-		objPointList = "";
-		objTextureList = "";
-		objFaceList = "";
 		// ポイントリスト
 		for (nY = 0; nY < colY; nY++) {
 			for (nX = 0; nX < colX; nX++) {
@@ -6533,8 +6534,6 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 
 
 
-
-
 /*-----------------------------------------------------------------------------------------------*/
 // ダウンロード：Math
 /*-----------------------------------------------------------------------------------------------*/
@@ -6556,23 +6555,6 @@ function checkTileCoord(xory, zmb2) {
 		return xory;
 	}
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
