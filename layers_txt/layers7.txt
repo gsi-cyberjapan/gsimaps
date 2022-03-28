@@ -4184,10 +4184,21 @@
               "title": "地形分類（自然地形）",
               "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
               "cocotile": true,
-              "minZoom": 4,
+              "minZoom": 5,
               "maxZoom": 16,
               "maxNativeZoom": 16,
-              "html": "<div class='layer_text'><p>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br><br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+              "html": "<div class='layer_text'><p>地形分類（自然地形）は表示するズームレベルにより、以下の3段階に分けられます。</p></div>ズームレベル5～8『広域版』：全国の大分類地形（山地・丘陵、火山地形、台地・段丘、低地ほか）を見ることができます。</p></div>ズームレベル9～13『地域版』：全国の中分類地形（山地、火山地形（明瞭・やや不明瞭）、丘陵・小起伏地、台地･段丘、低地ほか）を見ることができます。</p></div>ズームレベル14～16『詳細版』：主要な平野部について更に細かい地形分類を見ることができます。『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</p></div>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='https://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification3",
+              "title": "諸元情報（自然地形『詳細版』）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification3/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 13,
+              "maxNativeZoom": 13,
+              "html":"<div class='layer_text'><p>地図上をクリックすると「地形分類（自然地形）」のズームレベル14～16で表示される『詳細版』の諸元情報が表示されます。</p></div>『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</a>"
             },
             {
               "type": "Layer",
