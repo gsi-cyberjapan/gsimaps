@@ -46788,7 +46788,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._toolTipViewCounter = 0;
     this._baseMapPanel.refresh();
 
-    this._mapManager._footer.updateLakeDepthVisible(false);
+    !this._mapManager.options.noFooter && this._mapManager._footer.updateLakeDepthVisible(false);
   },
 
   onCocoTileCheckChange: function (onOffSwitch) {
