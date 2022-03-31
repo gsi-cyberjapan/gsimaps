@@ -293,6 +293,21 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "vlcd_asamayama",
+                  "title": "火山地形分類データ（浅間山）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_asamayama/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 36.407000,
+                    "lng" : 138.520000,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「浅間山」（令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "vlcd_niigatayake",
                   "title": "火山地形分類データ（新潟焼山）",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/{z}/{x}/{y}.png",
@@ -380,6 +395,21 @@
                     "zoom" : 13
                   },
                   "html": "<div class='layer_text'><p>火山土地条件図「三宅島」（平成6年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "vlcd_hachijojima",
+                  "title": "火山地形分類データ（八丈島）",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_hachijojima/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 10,
+                  "maxZoom": 16,
+                  "area" : {
+                    "lat" : 33.100000,
+                    "lng" : 139.812000,
+                    "zoom" : 13
+                  },
+                  "html": "<div class='layer_text'><p>火山土地条件図「八丈島」（平成30～令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
                 },
                 {
                   "type": "Layer",
@@ -496,7 +526,7 @@
               "cocotile": true,
               "minZoom": 2,
               "maxZoom": 16,
-              "html": "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。</p></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"l_vlcd_chokai\">鳥海山</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_hakone\">箱根山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form>"
+              "html": "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。</p></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_00iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ケ岳</option><option value=\"l_vlcd_chokai\">鳥海山</option><option value=\"kurikoma_D2_58_legend\">栗駒山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"l_vlcd_asamayama\">浅間山</option><option value=\"yakiyama\">新潟焼山</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_hakone\">箱根山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_hachijojima\">八丈島</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form>"
             }
           ]
         },
