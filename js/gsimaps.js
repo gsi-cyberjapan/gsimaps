@@ -4957,7 +4957,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
     visibles[CONFIG.PARAMETERNAMES.SPLITWINDOW] = this._gsimaps.splited();
     visibles[CONFIG.PARAMETERNAMES.COMPAREMAP] = this._gsimaps.compared();
 
-    if (this.mapManager._footer.isVisible())
+    if (this.mapManager._footer && this.mapManager._footer.isVisible())
       visibles[CONFIG.PARAMETERNAMES.FOOTER] = this.mapManager._footer.getDisplayMode();
     else
       visibles[CONFIG.PARAMETERNAMES.FOOTER] = 0;
@@ -4968,7 +4968,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
     var visibles2 = {};
     var visibleDialogs2 = {};
     if (this._gsimaps.splited() && this._gsimaps._subMap) {
-      if (this._gsimaps._subMap._footer.isVisible())
+      if (this._gsimaps._subMap._footer && this._gsimaps._subMap._footer.isVisible())
         visibles2[CONFIG.PARAMETERNAMES.FOOTER] = this._gsimaps._subMap._footer.getDisplayMode();
       else
         visibles2[CONFIG.PARAMETERNAMES.FOOTER] = 0;
@@ -9059,9 +9059,8 @@ GSI.MapMouse = L.Evented.extend({
     if (this.rightClickTime != null) {
       if ( this._rightClicMoveVisible)
         this._move(latlng);
-
-      var visible = this._mapManager._footer.isVisible();
-      if (visible == false) {
+      
+      if(this._mapManager._footer && !this._mapManager._footer.isVisible()){
         this._mapManager._footer.onBtnClick();
       }
     }
@@ -12209,7 +12208,7 @@ L.Util.extend(GSI.KML, {
               options.opacity = parseInt(value.substring(0, 2), 16) / 255.0;
             }
           } else if (key === 'width') {
-            options.weight = value;
+            options.weight = parseInt(value);
           } else if (key === 'Icon') {
             ioptions = _parse(e);
             if (ioptions.href) { options.href = ioptions.href; }
@@ -35421,7 +35420,7 @@ GSI.HashOptions = L.Class.extend({
       visibles[CONFIG.PARAMETERNAMES.SPLITWINDOW] = this._gsimaps.splited();
       visibles[CONFIG.PARAMETERNAMES.COMPAREMAP] = this._gsimaps.compared();
 
-      if (this._gsimaps._mainMap._footer.isVisible())
+      if (this._gsimaps._mainMap._footer && this._gsimaps._mainMap._footer.isVisible())
         visibles[CONFIG.PARAMETERNAMES.FOOTER] = this._gsimaps._mainMap._footer.getDisplayMode();
       else
         visibles[CONFIG.PARAMETERNAMES.FOOTER] = 0;
@@ -35431,7 +35430,7 @@ GSI.HashOptions = L.Class.extend({
       var visibles2 = {};
       var visibleDialogs2 = {};
       if (this._gsimaps.splited()) {
-        if (this._gsimaps._subMap._footer.isVisible())
+        if (this._gsimaps._subMap._footer && this._gsimaps._subMap._footer.isVisible())
           visibles2[CONFIG.PARAMETERNAMES.FOOTER] = this._gsimaps._subMap._footer.getDisplayMode();
         else
           visibles2[CONFIG.PARAMETERNAMES.FOOTER] = 0;
@@ -42935,6 +42934,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
             if (lval.feature.geometry.type.toLowerCase() == 'point' && (lval.feature.properties._markerType == undefined || lval.feature.properties._markerType.toLowerCase() =="icon")) {
               var obj = lval.feature.properties;
               Object.keys(obj).forEach(function (key) {
+                if(key === "description") return;
                 if (key[0] != '_' && !keyNameList.includes(key)) {
                   keyNameList.push(key);
                 }
@@ -42944,6 +42944,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
             if (lval._icon != undefined && lval.options.icon.options.iconUrl && lval._information.table != null) {
               var ary = lval._information.table;
               ary.forEach(function(aval,index,ar) {
+                if(aval.key === "description") return;
                 if (!keyNameList.includes(aval.key)) {
                   keyNameList.push(aval.key);
                 }
@@ -44246,7 +44247,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
           break;
       }
 
-      this._setLayerStyle({ weight: this._lineWeightSelect.val(), dashArray: dashArray });
+      this._setLayerStyle({ weight: lineWeight, dashArray: dashArray });
     };
     // 線幅
     tr.append($('<td>').css({ "white-space": "nowrap" }).html('線幅:'));
@@ -46788,7 +46789,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._toolTipViewCounter = 0;
     this._baseMapPanel.refresh();
 
-    !this._mapManager.options.noFooter && this._mapManager._footer.updateLakeDepthVisible(false);
+    if(this._mapManager._footer){
+      this._mapManager._footer.updateLakeDepthVisible(false);
+    }
   },
 
   onCocoTileCheckChange: function (onOffSwitch) {
@@ -48297,7 +48300,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
   },
 
   _enableLakeDepthForItem: function(id, enabled){
-    if(id == "lakedata"){
+    if(id == "lakedata" && this._mapManager._footer){
       this._mapManager._footer.updateLakeDepthVisible(enabled);
     }
   },
