@@ -8936,18 +8936,22 @@ GLOBE.MAP = {
       pairsDict.dataSet[innerID] = {};
       pairsDict.dataSet[innerID]["name"] = name;
       if(desp){
-        var $desp = $(desp);
-        var trs = $desp.find("tr");
-        for(var i = 0; i < trs.length; i++){
-          var tds = $(trs[i]).find("td");
-          if(tds.length != 2) break;
-          var key = $(tds[0]).html();
-          var value = $(tds[1]).html();
-          if(key && value) {
-            if(!pairsDict.keys.includes(key)) pairsDict.keys.push(key);
-            pairsDict.dataSet[innerID][key] = value;
+        try{
+          var $desp = $(desp);
+          var trs = $desp.find("tr");
+          for(var i = 0; i < trs.length; i++){
+            var tds = $(trs[i]).find("td");
+            if(tds.length != 2) break;
+            var key = $(tds[0]).html();
+            var value = $(tds[1]).html();
+            if(key && value) {
+              if(!pairsDict.keys.includes(key)) pairsDict.keys.push(key);
+              pairsDict.dataSet[innerID][key] = value;
+            }
           }
-        }
+        } catch {
+          console.log("cannot parse properties from description: " + desp);
+        };
       }
     }
 
