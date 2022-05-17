@@ -1046,6 +1046,16 @@
             },
             {
               "type": "Layer",
+              "id": "did2020",
+              "title": "人口集中地区 令和2年（総務省統計局）",
+              "url": "https://maps.gsi.go.jp/xyz/did2020/{z}/{x}/{y}.png",
+              "cocotile": false,
+              "minZoom": 8,
+              "maxZoom": 18,
+              "html": "<div class='layer_text'><p>令和2年国勢調査で設定された人口集中地区（DID）を表示します。</p></div>ズームレベル8～18で表示されます。<br>ご利用にあたっては、<a target='_blank' href='http://www.stat.go.jp/data/chiri/1-3.htm'>総務省統計局サイト</a>に記載された事項をご確認ください。"
+            },
+            {
+              "type": "Layer",
               "id": "did2015",
               "title": "人口集中地区 平成27年（総務省統計局）",
               "url": "https://maps.gsi.go.jp/xyz/did2015/{z}/{x}/{y}.png",
