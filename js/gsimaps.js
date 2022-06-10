@@ -31865,6 +31865,7 @@ GSI.CSVLineLatLngLoader = L.Evented.extend({
       setTimeout(L.bind(function () {
         this._next();
       }, this), 0);
+      return;
     }
 
     this._request = $.ajax({
