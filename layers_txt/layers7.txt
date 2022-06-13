@@ -863,7 +863,7 @@
               "cocotile": true,
               "maxZoom": 7,
               "legendUrl": "https://maps.gsi.go.jp/legend/Legend_GLCNMO.pdf",
-              "html": "<div class='layer_text'><p>世界の土地が何に覆われているかを表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院、千葉大学、地球地図国際運営委員会、協働機関</div>"
+              "html": "<div class='layer_text'><p>世界の土地が何に覆われているかを表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院・千葉大学・協働機関</div>"
             },
             {
               "type": "Layer",
@@ -873,7 +873,7 @@
               "cocotile": true,
               "maxZoom": 7,
               "legendUrl": "https://maps.gsi.go.jp/legend/Legend_PTC.pdf",
-              "html": "<div class='layer_text'><p>世界の地表面に対する樹木の比率を表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院、千葉大学、地球地図国際運営委員会、協働機関</div>"
+              "html": "<div class='layer_text'><p>世界の地表面に対する樹木の比率を表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院・千葉大学・協働機関</div>"
             }
           ]
         },
