@@ -332,7 +332,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "干渉SAR時系列解析",
+              "title": "時系列解析",
               "toggleall": false,
               "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_tsa.txt"
             }
