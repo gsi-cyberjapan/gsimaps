@@ -506,6 +506,695 @@
                   "maxZoom": 18,
                   "maxNativeZoom": 16,
                   "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）四国地区（高知）　平成26年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_四国地区（高知）_その2.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku8",
+                  "title": "中国地区（倉敷）　昭和59年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku8/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（倉敷）　昭和59年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（倉敷）_昭和59年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku9",
+                  "title": "中国地区（倉敷）　昭和60年以降",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku9/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（倉敷）　昭和60年以降（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（倉敷）_昭和60年以降.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_gifuAichiMie7",
+                  "title": "中部地区（豊橋）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/gifuAichiMie7/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（豊橋東部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害災害_中部地区（豊橋東部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_title\">災害履歴（水害）中部地区（豊橋西部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害災害_中部地区（豊橋西部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku10",
+                  "title": "中国地区（呉）　平成22年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku10/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（呉）　平成22年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（呉）_平成22年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku11",
+                  "title": "中国地区（呉）　平成30年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku11/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（呉）　平成30年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（呉）_平成30年.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku12",
+                  "title": "中国地区（福山）　平成28年以前",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku12/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（福山）　平成28年以前（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（福山）_平成28年以前.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood_chugoku13",
+                  "title": "中国地区（福山）　平成30年",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/chugoku13/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（水害）中国地区（福山）　平成30年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_中国地区（福山）_平成30年.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害履歴図（水害　災害毎）",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_outline80_add21",
+                  "title": "水害履歴図（浸水）範囲",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/outline_80_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1896_09_m29",
+                  "title": "1896（明治29）年 9月 降雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1896_09_m29/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1911_08_m44_t",
+                  "title": "1911（明治44）年 8月4日台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1911_08_m44_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1935_06_s10",
+                  "title": "1935（昭和10）年 6月 降雨 鴨川大洪水",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1935_06_s10/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1938_07_s13",
+                  "title": "1938（昭和13）年 7月 降雨 大雨 阪神大水害",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1938_07_s13/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1947_09_s22_t",
+                  "title": "1947（昭和22）年 9月 降雨 カスリーン台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1947_09_s22_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1950_09_s25_t",
+                  "title": "1950（昭和25）年 9月 降雨・高潮 ジェーン台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1950_09_s25_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1951_07_s26_t",
+                  "title": "1951（昭和26）年 7月 降雨 ケイト台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1951_07_s26_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1952_07_s27",
+                  "title": "1952（昭和27）年 7月 降雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1952_07_s27/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1953_08_s28",
+                  "title": "1953（昭和28）年 8月 降雨 大雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1953_08_s28/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1953_09_s28_t",
+                  "title": "1953（昭和28）年 9月 降雨 台風13号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1953_09_s28_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1953_08-09_s28_t",
+                  "title": "1953（昭和28）年 8･9月 降雨 南山城水害･台風13号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1953_08-09_s28_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1954_06_s29",
+                  "title": "1954（昭和29）年 6月 降雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1954_06_s29/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1957_08_s32",
+                  "title": "1957（昭和32）年 8月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1957_08_s32/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1958_09_s33_t",
+                  "title": "1958（昭和33）年 9月 降雨 台風22号･狩野川台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1958_09_s33_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1959_08_s34_t",
+                  "title": "1959（昭和34）年 8月 降雨 台風7号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1959_08_s34_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1959_09_s34_t",
+                  "title": "1959（昭和34）年 9月 降雨 伊勢湾台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1959_09_s34_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1961_06_s36",
+                  "title": "1961（昭和36）年 6月 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1961_06_s36/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1961_09_s36_t",
+                  "title": "1961（昭和36）年 9月 降雨・高潮 第２室戸台風",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1961_09_s36_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1966_06_s41_t",
+                  "title": "1966（昭和41）年 6月 降雨 台風4号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1966_06_s41_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1967_07_s42",
+                  "title": "1967（昭和42）年 7月 降雨 昭和42年 7月 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1967_07_s42/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1971_08_s46_t",
+                  "title": "1971（昭和46）年 8月 台風23号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1971_08_s46_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1972_07_s47_t",
+                  "title": "1972（昭和47）年 7月 降雨 台風6号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1972_07_s47_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1972_07_s47_add21",
+                  "title": "1972（昭和47）年 7月 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1972_07_s47_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1974_06_s49",
+                  "title": "1974（昭和49）年6月 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1974_06_s49/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1974_07_s49_t_add21",
+                  "title": "1974（昭和49）年 7月 降雨 台風8号・七夕豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1974_07_s49_t_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1974_07_s49_add21",
+                  "title": "1974（昭和49）年 7月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1974_07_s49_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1975_10_s50_t",
+                  "title": "1975（昭和50）年 10月  台風13号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1975_10_s50_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1976_05_s51",
+                  "title": "1976（昭和51）年 5月 降雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1976_05_s51/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1976_09_s51_t_add21",
+                  "title": "1976（昭和51）年9月  台風17号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1976_09_s51_t_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1981_07_s56",
+                  "title": "1981（昭和56）年 7月 降雨 集中豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1981_07_s56/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1981_10_s56_t",
+                  "title": "1981（昭和56）年 10月 降雨 台風24号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1981_10_s56_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1982_08_s57_t",
+                  "title": "1982（昭和57）年 8月 降雨 台風10号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1982_08_s57_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1982_09_s57_t",
+                  "title": "1982（昭和57）年 9月 降雨 台風18号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1982_09_s57_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1983_09_s58_t",
+                  "title": "1983（昭和58）年 9月 豪雨 台風10号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1983_09_s58_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1986_07_s61",
+                  "title": "1986（昭和61）年 7月 降雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1986_07_s61/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1986_08_s61_t",
+                  "title": "1986（昭和61）年 8月  台風10号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1986_08_s61_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1989_09_h01_t",
+                  "title": "1989（平成元年 9月 降雨 台風22号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1989_09_h01_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1990_00_h02_t",
+                  "title": "1990（平成2）年 台風19号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1990_00_h02_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1990_09_h02",
+                  "title": "1990（平成2）年 9月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1990_09_h02/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1991_09_h03_t_add21",
+                  "title": "1991（平成3）年 9月 降雨 台風18号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1991_09_h03_t_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1995_07_h07",
+                  "title": "1995（平成7）年 7月 降雨 大雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1995_07_h07/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1996_09_h08_t",
+                  "title": "1996（平成8）年 9月 降雨 台風17号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1996_09_h08_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1997_08_h09",
+                  "title": "1997（平成9）年 8月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1997_08_h09/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1998_08_h10",
+                  "title": "1998（平成10）年 8月 水害",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1998_08_h10/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1998_09_h10_t",
+                  "title": "1998（平成10）年 9月  台風6･7号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1998_09_h10_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_1999_08_h11",
+                  "title": "1999（平成11）年 8月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1999_08_h11/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2000_09_h12_t_add21",
+                  "title": "2000（平成12）年 9月  台風14号･東海豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2000_09_h12_t_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2004_10_h16",
+                  "title": "2004（平成16）年 10月 水害",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2004_10_h16/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2004_10_h16_t",
+                  "title": "2004（平成16）年 10月 降雨 台風23号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2004_10_h16_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2005_09_h17_t",
+                  "title": "2005（平成17）年 9月 降雨 台風14号",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2005_09_h17_t/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2007_07_h19",
+                  "title": "2007（平成19）年 7月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2007_07_h19/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2007_09_h19",
+                  "title": "2007（平成19）年 9月 水害",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2007_09_h19/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2008_08_h20_add21",
+                  "title": "2008（平成20）年 8月 降雨 豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2008_08_h20_add21/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_flood2_2012_08_h24",
+                  "title": "2012（平成24）年 8月 降雨 京都南部豪雨",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/2012_08_h24/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 7,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 17,
+                  "html": ""
                 }
               ]
             },
@@ -590,6 +1279,50 @@
                   "maxZoom": 18,
                   "maxNativeZoom": 16,
                   "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）九州地区（北九州）　平成11年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_九州地区（北九州）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_chugoku1",
+                  "title": "中国地区（倉敷）　高潮",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/chugoku1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中国地区（倉敷）　高潮（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_中国地区（倉敷）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_GifuAichiMie1",
+                  "title": "中部地区（豊橋）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/GifuAichiMie1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中部地区（豊橋東部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_中部地区（豊橋東部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中部地区（豊橋西部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_中部地区（豊橋西部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_chugoku7",
+                  "title": "中国地区（呉）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/chugoku7/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中国地区（呉）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_中国地区（呉）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_stormSurge_chugoku8",
+                  "title": "中国地区（福山）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_stormSurge/chugoku8/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（高潮）中国地区（福山）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_stormSurge/災害履歴_高潮災害_中国地区（福山）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
                 }
               ]
             },
@@ -670,6 +1403,17 @@
                   "maxZoom": 18,
                   "maxNativeZoom": 16,
                   "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（津波災害）九州地区（宮崎）　寛文2(1662)年の日向灘地震の津波（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Tsunami/災害履歴_津波災害_九州地区（宮崎）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_Tsunami_GifuAichiMie1",
+                  "title": "中部地区（豊橋）",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_Tsunami/GifuAichiMie1/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴（津波災害）中部地区（豊橋東部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Tsunami/災害履歴_津波災害_中部地区（豊橋東部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_title\">災害履歴（津波災害）中部地区（豊橋西部）（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_Tsunami/災害履歴_津波災害_中部地区（豊橋西部）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
                 }
               ]
             },
@@ -764,6 +1508,17 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "DisasterHist_quake_noubi3",
+                  "title": "中部地区（豊橋）　濃尾地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/noubi3/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊橋）　濃尾地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊橋西部）_濃尾地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "DisasterHist_quake_tounankai1",
                   "title": "中部地区（豊田・名古屋）　東南海地震",
                   "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/tounankai1/{z}/{x}/{y}.png",
@@ -797,6 +1552,17 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "DisasterHist_quake_tounakai4",
+                  "title": "中部地区（豊橋）　東南海地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/tounankai4/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊橋東部）　東南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊橋東部）_東南海地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊橋西部）　東南海地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊橋西部）_東南海地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
                   "id": "DisasterHist_quake_mikawa",
                   "title": "中部地区（豊田・名古屋）　三河地震",
                   "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/mikawa/{z}/{x}/{y}.png",
@@ -805,6 +1571,17 @@
                   "maxZoom": 18,
                   "maxNativeZoom": 16,
                   "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊田・名古屋）　三河地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊田・名古屋北部・名古屋南部）_三河地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/DisasterHist_quake_mikawa.html\">災害履歴図の詳細を表示</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "DisasterHist_quake_mikawa2",
+                  "title": "中部地区（豊橋）　三河地震",
+                  "url": "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/mikawa2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 18,
+                  "maxNativeZoom": 16,
+                  "html": "国土交通省国土政策局が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>ご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊橋東部）　三河地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊橋東部）_三河地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_title\">災害履歴図（地震）中部地区（豊橋西部）　三河地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震_中部地区（豊橋西部）_三河地震.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土政策局</div>"
                 },
                 {
                   "type": "Layer",
