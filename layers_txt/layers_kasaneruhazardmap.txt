@@ -1,0 +1,82 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "洪水浸水想定区域",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "01_flood_l2_shinsuishin_data",
+          "title": "洪水浸水想定区域（想定最大規模）",
+          "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">洪水浸水想定区域（想定最大規模）</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">河川が氾濫した際に浸水が想定される区域と水深（想定し得る最大規模の降雨（計画規模を上回るもの））</div><div style=\"font-weight:bold;\">凡例</div><div style=\"border-bottom:1px dotted #2c6983;\"><img src=\"https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png\" alt=\"凡例\"></div><div style=\"font-weight:bold;\">注意点</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">このシミュレーションの実施にあたっては、支川の氾濫、シミュレーションの前提となる降雨を超える規模の降雨、高潮及び内水による氾濫等を考慮していません（ただし、東京都が管理する河川のみ内水による氾濫を考慮しています）ので、この浸水想定区域に指定されていない区域においても浸水が発生する場合や想定される水深が実際の浸水深と異なる場合があります。なお、東京都の公表図面では浸水深0.1m未満の区域は着色されていないため、本サイトにおいても同様の表現としております。</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/kasen_kuni_sinsuiL2.html\" target=\"_blank\">データの掲載状況一覧（国管理河川）</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/kasen_pref_sinsuiL2.html\" target=\"_blank\">データの掲載状況一覧（都道府県管理河川）</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "01_flood_l1_shinsuishin_newlegend_data",
+          "title": "洪水浸水想定区域（計画規模（現在の凡例））",
+          "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l1_shinsuishin_newlegend_data/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">洪水浸水想定区域（計画規模（現在の凡例））</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">河川が氾濫した際に浸水が想定される区域と水深（10年～100年に1回程度の降雨規模）</div><div style=\"font-weight:bold;\">凡例</div><div style=\"border-bottom:1px dotted #2c6983;\"><img src=\"https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png\" alt=\"凡例\"></div><div style=\"font-weight:bold;\">注意点</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">このシミュレーションの実施にあたっては、支川の氾濫、シミュレーションの前提となる降雨を超える規模の降雨、高潮及び内水による氾濫等を考慮していませんので、この浸水想定区域に指定されていない区域においても浸水が発生する場合や想定される水深が実際の浸水深と異なる場合があります。<br>本データは整備中の地域もあるため、必ずデータ作成時点が異なる「洪水浸水想定区域（計画規模（旧凡例））」のデータもあわせてご確認ください。詳細は、「データの掲載状況一覧」より、出典をご確認ください。</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/kasen_kuni_newL1.html\" target=\"_blank\">データの掲載状況一覧（国管理河川）</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/kasen_pref_newL1.html\" target=\"_blank\">データの掲載状況一覧（都道府県管理河川）</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "04_tsunami_newlegend_data",
+      "title": "津波浸水想定（想定最大規模）",
+      "url": "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 2,
+      "maxZoom": 17,
+      "html": "<div class=\"gsi_layerinfo_title\">津波浸水想定（想定最大規模）</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">津波が発生した際に浸水が想定される区域と水深</div><div style=\"font-weight:bold;\">凡例</div><div style=\"border-bottom:1px dotted #2c6983;\"><img src=\"https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png\" alt=\"凡例\"></div><div style=\"font-weight:bold;\">注意点</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">このシミュレーションは現在の科学的知見を基に設定したものであり、この浸水域外で浸水する場合や浸水深がさらに大きくなる可能性がないというものでありません。</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/tsunami_sinsui.html\" target=\"_blank\">データの掲載状況一覧</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "土砂災害警戒区域等",
+      "toggleall": false,
+      "html": "<div class=\"gsi_layerinfo_title\">土砂災害警戒区域等</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">急傾斜地の崩壊等が発生した場合に、住民等の生命又は身体に危害が生じる恐れがあると認められる区域から、土砂災害防止法に基づき、都道府県が指定したもの。</div>",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "05_kyukeishakeikaikuiki",
+          "title": "急傾斜地の崩壊<br>(黄は警戒区域、赤は特別警戒区域)",
+          "iconUrl": "https://disaportal.gsi.go.jp/maps/image/skin/dosha_keikai_kyukeisha.png",
+          "url": "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">急傾斜地の崩壊</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">傾斜度が三十度以上である土地が崩壊する自然現象</div><div style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai.png\" target=\"_blank\">凡例</a><span class=\"gsi_layerinfo_kaisetu\">（点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。）</span></div><div style=\"font-weight:bold;\">注意事項</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai_chui.html\" target=\"_blank\">「国土数値情報　土砂災害警戒区域データ」利用時の注意事項</a></div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "05_dosekiryukeikaikuiki",
+          "title": "土石流<br>(黄は警戒区域、赤は特別警戒区域)",
+          "iconUrl": "https://disaportal.gsi.go.jp/maps/image/skin/dosha_keikai_dosekiryu.png",
+          "url": "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">土石流</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">山腹が崩壊して生じた土石等又は渓流の土石等が一体となって流下する自然現象</div><div style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai.png\" target=\"_blank\">凡例</a><span class=\"gsi_layerinfo_kaisetu\">（点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。）</span></div><div style=\"font-weight:bold;\">注意事項</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai_chui.html\" target=\"_blank\">「国土数値情報　土砂災害警戒区域データ」利用時の注意事項</a></div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "05_jisuberikeikaikuiki",
+          "title": "地すべり<br>(黄は警戒区域、赤は特別警戒区域)",
+          "iconUrl": "https://disaportal.gsi.go.jp/maps/image/skin/dosha_keikai_jisuberi.png",
+          "url": "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 17,
+          "html": "<div class=\"gsi_layerinfo_title\">地すべり</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">土地の一部が地下水等に起因して滑る自然現象又はこれに伴って移動する自然現象</div><div style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai.png\" target=\"_blank\">凡例</a><span class=\"gsi_layerinfo_kaisetu\">（点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。）</span></div><div style=\"font-weight:bold;\">注意事項</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/maps/image/legend/dosha_keikai_chui.html\" target=\"_blank\">「国土数値情報　土砂災害警戒区域データ」利用時の注意事項</a></div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>"
+        }
+      ]
+    }
+  ]
+}

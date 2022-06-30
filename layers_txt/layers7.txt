@@ -983,6 +983,56 @@
             },
             {
               "type": "LayerGroup",
+              "title": "人口動態データ（国土政策局）",
+              "src": "",
+              "iconUrl": "",
+              "toggleall": false,
+              "html": "",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "jinkodotai_jinko_sabun1995_2015",
+                  "title": "人口増減数（1995年～2015年）",
+                  "url": "https://maps.gsi.go.jp/xyz/jinkodotai_jinko_sabun1995_2015/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 12,
+                  "maxZoom": 17,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">人口増減数（1995年～2015年）</div><div class=\"gsi_layerinfo_kaisetu\"><p>　1995年（平成7年）及び2015年（平成27年）の2時期の国勢調査の小地域集計（人口等基本集計に関する集計）の4次メッシュ（500mメッシュ）統計データの「男女別人口総数及び世帯総数」（平成７年）及び「その１人口等基本集計に関する事項」(平成27年)から、20年間の500mメッシュ区画単位の人口総数の増減数を計算し、４つの階級区分により表示したものです（ズームレベル12～17で表示されます）。</p><p>　<a href=\"https://maps.gsi.go.jp/legend/jinkodotai_jinko_sabun1995_2015.png\" target=\"_blank\"><span style=\"font-weight:bold\">凡例</span></a></p><p>　メッシュ統計データの詳細は、<a href=\"https://www.stat.go.jp/data/mesh/teikyo.html\" target=\"_blank\">総務省統計局サイト</a>でご確認ください。</p></div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害リスク情報（防災科学技術研究所）",
+              "src": "",
+              "iconUrl": "",
+              "toggleall": false,
+              "html": "",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "jishindo_yosoku",
+                  "title": "確率論的地震動予測地図（今後30年間に震度6弱以上の揺れに見舞われる確率）",
+                  "url": "https://maps.gsi.go.jp/xyz/jishindo_yosoku/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 17,
+                  "maxNativeZoom": 15,
+                  "legendUrl": "",
+                  "html": "<div class=\"gsi_layerinfo_title\">確率論的地震動予測地図</div><div class=\"gsi_layerinfo_kaisetu\"><p>　防災科学技術研究所の地震ハザードステーション（J-SHIS）が提供する全国地震動予測地図を表示します。<br> 　本サイトの地図は、地震ハザードステーションの250mメッシュ区画を単位とした公開GISデータにより国土政策局が作成し公開しているもので、以下の条件により作成された地図を表示しています（ズームレベル12～17で表示）。</p><p>　「確率論的地震動予測地図」（平成3年3月26日公表）<br>　　　今後30年間に震度６弱以上の揺れに見舞われる確率<br>　　　基準年：2020年（地震発生確率の評価基準日：2020/01/01）<br>　　　地震種別：全ての地震<br>　　　確率ケース：平均ケース<br>　確率論的地震動予測地図の詳細は、<a href=\"https://www.j-shis.bosai.go.jp/shm\" target=\"_blank\">地震ハザードステーション（J-SHIS）</a>をご確認ください。</p><p><span style=\"font-weight:bold\">　凡例</span><br><span style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/jishindo_yosoku.png\" width=300 alt=\"凡例\"></span></p></div>"
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "災害リスク情報（重ねるハザードマップ）",
+              "html": "",
+              "toggleall": false,
+              "src": "./layers_kasaneruhazardmap.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "地質図－産総研地質調査総合センター",
               "html": "<div class='layer_text'><p>全国の地質図を表示します。</p></div>",
               "toggleall": false,
