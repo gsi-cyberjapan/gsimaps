@@ -28,7 +28,7 @@
           "minZoom": 2,
           "maxZoom": 18,
           "maxNativeZoom": 2,
-          "html": "<div class='layer_text'><p>火山周辺の地殻変動を捉えるために設置された<a href=\"http://www.gsi.go.jp/kidou/regmos.html\"  target='_blank'>REGMOS</a>の位置を表示します。</p></div>"
+          "html": "<div class='layer_text'><p>電子基準点をサポートして詳細な地殻変動を捉えるために設置された<a href=\"http://www.gsi.go.jp/kidou/regmos.html\"  target='_blank'>REGMOS</a>の位置を表示します。</p></div>"
         },
         {
           "type": "Layer",
