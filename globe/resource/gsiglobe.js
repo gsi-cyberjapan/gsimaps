@@ -11493,8 +11493,11 @@ GLOBE.MAP = {
     GLOBE.MAP.outPutLakeStdHeight = undefined;
     GLOBE.DIALOG.FOOTER.refreshLakeDepth(GLOBE.MAP.lakedataEnabled);
 
-    this._lakedepthLoader.load({lat:lat,lng:lon});
-    this._lakeStdHeightLoader.load({lat:lat,lng:lon});
+    if(GLOBE.MAP.lakedataEnabled)
+    {
+      this._lakedepthLoader.load({lat:lat,lng:lon});
+      this._lakeStdHeightLoader.load({lat:lat,lng:lon});
+    }
 
     GLOBE.DIALOG.FOOTER.show();
   },
