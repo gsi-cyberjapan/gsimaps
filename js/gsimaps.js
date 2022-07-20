@@ -27669,8 +27669,10 @@ GSI.Footer = L.Evented.extend({
       this._lakeStdHeightLoader.cancel();
     }
 
-    this._lakedepthLoader.load(loadCondition);
-    this._lakeStdHeightLoader.load(loadCondition);
+    if(GSI.Footer.DISP_LAKE_DATA){
+      this._lakedepthLoader.load(loadCondition);
+      this._lakeStdHeightLoader.load(loadCondition);
+    }
   },
 
   _refreshSeamlessInfo: function (center) {
@@ -27817,6 +27819,7 @@ GSI.Footer = L.Evented.extend({
   },
 
   updateLakeDepthVisible: function(enabled){
+    GSI.Footer.DISP_LAKE_DATA = enabled;
     this._lakeDepthEnabled = enabled;
     this._lakeDepthContainer.css("display", this._dispMode == GSI.Footer.DISP_LARGE && enabled ? "block":"none");
   },
@@ -27859,6 +27862,8 @@ GSI.Footer.DISP_CLOSE = 0;
 
 GSI.Footer.DISP_ADDR_KANJI=0;
 GSI.Footer.DISP_ADDR_YOMI=1;
+
+GSI.Footer.DISP_LAKE_DATA = false;
 
 /************************************************************************
  L.Class
