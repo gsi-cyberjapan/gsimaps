@@ -12061,7 +12061,7 @@ GSI.LakeDepthLoader = GSI.LakeDataLoader.extend({
         "title": "",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/lakedepth/{z}/{x}/{y}.png",
         "minzoom": 14,
-        "maxzoom": 18,
+        "maxzoom": 14,
         "fixed": 1
       }
     ];
@@ -12081,7 +12081,7 @@ GSI.LakeStdHeightLoader = GSI.LakeDataLoader.extend({
         "title": "",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/lakedepth_standard/{z}/{x}/{y}.png",
         "minzoom": 14,
-        "maxzoom": 18,
+        "maxzoom": 14,
         "fixed": 1
       }
     ];
@@ -13786,7 +13786,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     return infoFrame;
   },
   
-  _onReliefStyleEidtClick :function(item)
+  _onReliefStyleEidtClick :function(a, item)
   {
     this._curItem = undefined;
     this._hideItemTooltip();
@@ -13796,7 +13796,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     {
       GSI.GLOBALS.mapLayerList._editReliefDialog = new GSI.EditReliefDialog( this._map, GSI.GLOBALS.mapLayerList, {
         width:280, left :parseInt(windowSize.w /2 - 160 ), top :windowSize.h- 500,
-        effect : CONFIG.EFFECTS.DIALOG
+        effect : CONFIG.EFFECTS.DIALOG,
+        listItem: a, listObj: item
         }
       );
     }
@@ -13988,9 +13989,9 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         'href': 'javascript:void(0);',
         'title' : 'スタイル変更'}).addClass('setting_btn').html("");
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', MA.bind( function(item){
-        this._onReliefStyleEidtClick( item );
-      },this, item ));
+      settingBtn.unbind('click').bind('click', MA.bind( function(a, item){
+        this._onReliefStyleEidtClick( a, item );
+      },this, a, item ));
     }
 
     // 詳細
@@ -14249,7 +14250,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     
     if ( item && item.id == CONFIG.FREERELIEFID )
     {
-      if ( item._visibleInfo) this._onReliefStyleEidtClick( item );
+      if ( item._visibleInfo) this._onReliefStyleEidtClick( a, item );
       else if ( GSI.GLOBALS.mapLayerList && GSI.GLOBALS.mapLayerList._editReliefDialog ) GSI.GLOBALS.mapLayerList._editReliefDialog.hide();
     }
   },
@@ -14282,6 +14283,34 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
       }
       return false;
+  },
+  selectReliefFree : function( a, item )
+  {
+   
+    if(!this.mapLayerList.exists(item))
+    { 
+
+      this._userControlStarted = true;
+    
+      //var target = this.current;
+      //var item = a.data( 'data' );
+      //if ( a ) item = a.data( 'data' );
+  
+      this._current_id = item.id;
+
+      this.mapLayerList.append(item);
+      GSI.Utils.sendSelectedLayer(this._current_id);
+      if ( item && item.id == CONFIG.FREERELIEFID )
+      {
+        if ( item._visibleInfo){
+          this._onReliefStyleEidtClick( a, item );
+        }
+        else if ( GSI.GLOBALS.mapLayerList && GSI.GLOBALS.mapLayerList._editReliefDialog ) {
+          GSI.GLOBALS.mapLayerList._editReliefDialog.hide();
+        }
+      } 
+    }
+    
   }
 
 });
@@ -14795,9 +14824,9 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         'href': 'javascript:void(0);',
         'title' : 'スタイル変更'}).addClass('setting_btn').html("");
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', MA.bind( function(item){
-        this._onReliefStyleEidtClick( item );
-      },this, item ));
+      settingBtn.unbind('click').bind('click', MA.bind( function(a, item){
+        this._onReliefStyleEidtClick( a, item );
+      },this, a, item ));
 
       li.addClass('free_relief_id');
     }
@@ -15214,6 +15243,15 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         this.updateCombineLayer('onItemClick');
         GLOBE.MAP.setLayersHash();
   },
+  showReliefFree: function (item) {
+    if (item._visibleInfo._isHidden) {
+      item._visibleInfo._isHidden = false;
+      item._visibleInfo.layer._setVisible(this.map.viewer, true);//show = true;
+    }
+
+    this.updateCombineLayer('showReliefFree');
+    GLOBE.MAP.setLayersHash();
+  },
   onMapLayerListChange : function()
   {
     var tileList = this.mapLayerList.getTileList();
@@ -15297,7 +15335,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   },
   
   
-  _onReliefStyleEidtClick :function(item)
+  _onReliefStyleEidtClick :function(a, item)
   {
     this._curItem = undefined;
         this._hideItemTooltip();
@@ -15307,7 +15345,8 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     {
       GSI.GLOBALS.mapLayerList._editReliefDialog = new GSI.EditReliefDialog( this._map, GSI.GLOBALS.mapLayerList, {
         width:280, left :parseInt(windowSize.w /2 - 160 ), top :windowSize.h- 500,
-        effect : CONFIG.EFFECTS.DIALOG
+        effect : CONFIG.EFFECTS.DIALOG,
+        listItem: a, listObj: item
         }
       );
     }
@@ -20783,6 +20822,30 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     
     a.click( MA.bind( function() {
       this._reflection();
+      var isshow = false;
+      for(var i=0; i < this._mapLayerList.tileList.length; i++){
+        var t = this._mapLayerList.tileList[i];
+        if (t.id == "relief_free"){
+          //自分で作る色別標高図が非表示の時だけ起動
+          if (t._visibleInfo && t._visibleInfo._isHidden){
+            if (t._visibleInfo._isHidden == true){
+              GSI.GLOBALS.viewListDialog.showReliefFree(t);
+              GSI.GLOBALS.viewListDialog.onMapLayerListChange();
+              isshow = true;
+              break;
+            }
+          }
+        }
+      }
+
+      if (isshow == false){
+        if (this.options.listItem && this.options.listObj){
+          if (!this.options.listObj._visibleinfo){
+            GSI.GLOBALS.layerTreeDialog.selectReliefFree(this.options.listItem, this.options.listObj);
+          }
+        }
+      }
+
     },this ) );
     
     reflectionFrame.append( a );
@@ -22142,8 +22205,18 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     
     
     var removeButtons = frame.find("a.remove_btn");
-    if ( removeButtons.length <= 2 )
-      removeButtons.hide();
+    if ( removeButtons.length <= 2 ){
+      if (removeButtons.length > 0){
+        removeButtons.hide();
+      }
+      else{
+        //createLowDataを通った場合はframeが空でtableにしかデータが無い
+        removeButtons = table.find("a.remove_btn");
+        if (removeButtons.length <= 2){
+          removeButtons.hide();
+        }
+      }
+    }
     else
       removeButtons.show();
     frame.append( table );
