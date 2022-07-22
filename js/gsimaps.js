@@ -5403,7 +5403,7 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
     div.append(this._layerNameInput);
     dd.append(div);
 
-    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=48'>こちら</a>");
+    div = $("<div>").addClass("caption").html("URL:URL例は<a target='_blank' href='https://maps.gsi.go.jp/help/pdf/GSIMaps.pdf#page=54'>こちら</a>");
     dd.append(div);
 
     div = $("<div>");
@@ -29065,6 +29065,33 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
 
     a.click(L.bind(function () {
       this._reflection();
+      var isshow = false;
+      for(var i=0; i < this._mapLayerList.tileList.length; i++){
+        var t = this._mapLayerList.tileList[i];
+        if (t.id == CONFIG.FREERELIEFID){
+          //自分で作る色別標高図が非表示の時だけ起動
+          if (t._visibleInfo && t._visibleInfo._isHidden){
+            if (t._visibleInfo._isHidden == true){
+              var x = this._mapLayerList._gsimaps._mainMap._mapMenu.getShowingMapListPanel();
+              x.showReliefFree(t);
+              this._mapLayerList.fire("change");
+              isshow = true;
+              break;
+            }
+          }
+        }
+      }
+
+      if (isshow == false){
+        if (this.options.listItem && this.options.listObj){
+          if (!this.options.listObj._visibleInfo){
+            var y = this._mapLayerList._gsimaps._mainMap._mapMenu.getMapListPanel();
+            y.selectReliefFree(this.options.listItem, this.options.listObj);
+            GSI.Utils.sendSelectedLayer(CONFIG.FREERELIEFID);
+          }
+        }
+      }
+
     }, this));
 
     reflectionFrame.append(a);
@@ -30282,8 +30309,18 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     $(table.find("tr")[0]).prepend(td);
 
     var removeButtons = frame.find("a.remove_btn");
-    if (removeButtons.length <= 2)
-      removeButtons.hide();
+    if (removeButtons.length <= 2){
+      if (removeButtons.length > 0){
+        removeButtons.hide();
+      }
+      else{
+        //createLowDataを通った場合はframeが空でtableにしかデータが無い
+        removeButtons = table.find("a.remove_btn");
+        if (removeButtons.length <= 2){
+          removeButtons.hide();
+        }
+      }
+    }
     else
       removeButtons.show();
     frame.append(table);
@@ -47267,7 +47304,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         'href': 'javascript:void(0);',
         'title' : GSI.Utils.getTooltipText("SELECTMAP","SETTING") }).addClass('setting_btn').html("");
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, item));
+      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
     }
     // 詳細
     var descriptionBtn = $('<a>').attr({
@@ -47710,7 +47747,64 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       var targetItem = this._mapManager._layersJSON.layersHash[item.id];
 
       if (!targetItem) targetItem = item;
-      if (targetItem._visibleInfo) this._onReliefStyleEidtClick(targetItem);
+      if (targetItem._visibleInfo) this._onReliefStyleEidtClick(a, targetItem);
+      else if (this._mapLayerList && this._mapLayerList._editReliefDialog) {
+        this._mapLayerList._editReliefDialog.hide();
+      }
+    }
+  },
+  selectReliefFree: function (a, item) {
+    //var target = this.current;
+
+    //if (a) item = a.data('data');
+
+    if (GSI.GLOBALS.gsimaps._mainMap._zoomGuide.getVisible()
+    && !a[0].className.includes('view')
+    && this.onZoomCheck(item)) {      
+
+      $("#zoomGuideCheckbox").off('change').on('change', function(){
+        var bol = $('#zoomGuideCheckbox').is(":checked");
+        GSI.GLOBALS.gsimaps._mainMap._zoomGuide.setVisible(!bol);
+      });
+
+      // var posid = this._mapManager.options.position;
+      // posid = posid.replace('full','left');
+      var mintxt = '', maxtxt = '', minmaxtxt = GSI.TEXT.ANNAI.MINMAX;
+      if (item.minZoom) mintxt = item.minZoom;
+      if (item.maxZoom) maxtxt = item.maxZoom;
+      minmaxtxt = minmaxtxt.replace('min', mintxt);
+      minmaxtxt = minmaxtxt.replace('max', maxtxt);
+      $('#zoomGuideCheckbox').prop('checked', false);
+      $('#zoomGuideMinMax').text(minmaxtxt);
+      $('#zoomGuidePanel').show();
+      clearTimeout(GSI.ZOOMGUIDETIMER);
+      GSI.ZOOMGUIDETIMER = setTimeout(function(){
+        $('#zoomGuidePanel').slideUp();
+      },3000);
+    }
+
+    //var added = true;
+
+    if (!this._mapLayerList.exists(item)) {
+      this._currentItemId = item.id;
+      if (CONFIG.BLENDLAYERS[item.id])
+        this._mapLayerList.append(item, null, null, null, true);
+      else
+        this._mapLayerList.append(item);
+      GSI.Utils.sendSelectedLayer(this._current_id);
+
+    }
+    else {
+      return;
+    }
+
+    this._current_id = item.id;
+
+    if (item && item.id == CONFIG.FREERELIEFID) {
+      var targetItem = this._mapManager._layersJSON.layersHash[item.id];
+
+      if (!targetItem) targetItem = item;
+      if (targetItem._visibleInfo) this._onReliefStyleEidtClick(a, targetItem);
       else if (this._mapLayerList && this._mapLayerList._editReliefDialog) {
         this._mapLayerList._editReliefDialog.hide();
       }
@@ -47752,7 +47846,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     }
     return infoFrame;
   },
-  _onReliefStyleEidtClick: function (item) {
+  _onReliefStyleEidtClick: function (a, item) {
     this._curItem = undefined;
     this._hideItemTooltip();
     windowSize = GSI.Utils.getScreenSize();
@@ -47761,7 +47855,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       this._mapLayerList._editReliefDialog = new GSI.EditReliefDialog(this._mapManager._dialogManager,
           this._mapManager.getMap(), this._mapLayerList, {
         width: 300, left: parseInt(windowSize.w / 2 - 160), top: windowSize.h - 500,
-        effect: CONFIG.EFFECTS.DIALOG
+        effect: CONFIG.EFFECTS.DIALOG, listItem: a, listObj: item
       }
       );
     }
@@ -48431,7 +48525,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       var settingBtn = $("<span>").addClass('setting_btn')
       .attr({"title": GSI.Utils.getTooltipText("SELECTMAP","SETTING")});
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, item));
+      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
       li.addClass("free_relief_id");
       buttonElements.colorSet = settingBtn;
     }
@@ -48660,6 +48754,25 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       a.removeClass("view");
       a.addClass("nococotile");
     }
+  },
+  showReliefFree: function (item) {
+    if (!item) return;
+
+    var item_layer = item._visibleInfo.layer;
+
+    if (item._visibleInfo._isHidden) {
+      item._visibleInfo._isHidden = false;
+      this._mapManager.getMap().addLayer(item_layer);
+    }
+
+    if (item._visibleInfo.blend) {
+      //this._blendTile(a, item._visibleInfo.blend);
+      if (!GSI.Utils.Browser.ie && !GSI.Utils.Browser.edge) {
+        GSI.Utils.setMixBlendMode(item, true);
+      } 
+    }
+
+    this._mapLayerList.fire("visiblechange");
   },
   _onMapLayerListChange: function () {
 

@@ -167,6 +167,7 @@ CONFIG.UI.MENU = [
     icon : "./image/system/tool-icon-tool.png",
     description : "ツール",
     childViewStyle : "panel",
+    buttonWidth : "64px",
     children : [
       {
         id : "sakuzu",
