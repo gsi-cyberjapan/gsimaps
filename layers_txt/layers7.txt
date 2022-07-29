@@ -3610,6 +3610,15 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2022_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2022_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2022_04",
                       "title": "4月更新",
                       "url": "https://maps.gsi.go.jp/xyz/fgd_update_2022_04/{z}/{x}/{y}.png",
