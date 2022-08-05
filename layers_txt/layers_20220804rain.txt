@@ -1,0 +1,27 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定図",
+      "toggleall": false,
+      "entries": [
+          {
+              "type": "Layer",
+              "id": "20220804rain_0804dansaizu",
+              "title": "村上市坂町周辺（2022年8月4日17時作成）",
+              "url": "https://maps.gsi.go.jp/xyz/20220804rain_0804dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 15,
+              "area" : {
+                "lat" : 38.132160,
+                "lng" : 139.437146,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土交通省災害対策用ヘリコプターが8月4日10時頃に撮影した画像及び標高データを用いて、国土地理院が、浸水範囲における水深を算出して深さを濃淡で表現した地図です。</li><li>時点情報のため、最大浸水範囲を示したものではありません。</li><li>得られた情報から浸水したと推定された範囲のみが着色されています。このため、着色されていない範囲でも実際には浸水被害がある可能性があります。また、浸水していない範囲でも浸水範囲として着色されている部分があります。</li></ul>2022年8月4日17時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20220804rain_0804dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        }
+      ]
+    }
+  ]
+}

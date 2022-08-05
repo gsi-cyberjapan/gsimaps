@@ -1525,6 +1525,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和4年8月3日からの大雨",
+              "toggleall": false,
+              "src": "./layers_20220804rain.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和3年8月の大雨",
               "toggleall": false,
               "src": "./layers_20210815oame.txt"
