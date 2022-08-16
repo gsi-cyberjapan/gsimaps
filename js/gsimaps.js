@@ -17992,7 +17992,7 @@ Datum = JGD2000"
     image.readRGB(L.bind(function (samplesperPixcel, raster) {
       var canvas = this._image;
       canvas.style.position = "absolute";
-      canvas.style.zIndex = 1111111;
+      //canvas.style.zIndex = 1111111;
 
       canvas.width = image.getWidth();
       canvas.height = image.getHeight();

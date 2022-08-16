@@ -2697,7 +2697,7 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg) {
 				if (!fProc) {
 					break;
 				}
-				if (!vLayer[i].loadCanvas) {
+				if (!vLayer[i].loadCanvas && vURLExt != "geojson") {
 					vLayer[i].loadCanvas = true;
 
 					var imgURL = vLayer[i].src;
@@ -2746,26 +2746,6 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg) {
 						else
 							LoadLayersCanvas(oTextureCanvas_2D, vLayers[nLayers], vLayer[i], nx, ny, nw, nh);
 					}
-					else {
-						try {
-							if (vLayer[i].data != "") {
-								var data = LoadLayersProcVectorData(vLayer[i]);
-								if (data) {
-									if (vURLExt == "geojson") {
-										if (data.features) {
-											if (LoadLayers_Vectors(oTextureCanvas_2D, data.features, vLayers[nLayers])) {
-												fProc = false;
-											}
-										}
-									}
-								}
-							}
-						}
-						catch (e) {
-							InitProgressMsgError("Vector[" + vLayer[i].src + "]...[" + e + "]");
-						}
-					}
-
 				}
 			}
 		}
@@ -2796,6 +2776,12 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg) {
 		}
 	}
 
+	try {
+		LoadLayers_GeotiffOpener(oTextureCanvas_2D);
+	} catch(ex) {
+		console.log( ex );
+	}
+
 	if (fProc) {
 		// Layer：Vector
 		LoadLayers_VectorsOpener(oTextureCanvas_2D);
@@ -2804,11 +2790,50 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg) {
 		//oTextureCanvas_2D.restore();
 	}
 
-	try {
-		LoadLayers_GeotiffOpener(oTextureCanvas_2D);
-	} catch(ex) {
-		console.log( ex );
+	fProc = true;
+	// Layer
+	for (var nLayers = 0; nLayers < vLayers.length; nLayers++) {
+		if (!fProc) {
+			break;
+		}
+
+		var vID = vLayers[nLayers].id;
+		var vURLType = vLayers[nLayers].url_type;
+		var vURLExt = vLayers[nLayers].url_ext;
+
+		var vLayer = vLayersData[vID];
+
+		if (vURLType == "tile") {
+			for (var i = 0; i < vLayer.length; i++) {
+				if (!fProc) {
+					break;
+				}
+				if (!vLayer[i].loadCanvas) {
+					vLayer[i].loadCanvas = true;
+
+					try {
+						if (vLayer[i].data != "") {
+							var data = LoadLayersProcVectorData(vLayer[i]);
+							if (data) {
+								if (vURLExt == "geojson") {
+									if (data.features) {
+										if (LoadLayers_Vectors(oTextureCanvas_2D, data.features, vLayers[nLayers])) {
+											//fProc = false;
+										}
+									}
+								}
+							}
+						}
+					}
+					catch (e) {
+						InitProgressMsgError("Vector[" + vLayer[i].src + "]...[" + e + "]");
+					}
+				}
+			}
+		}
 	}
+
+	
 };
 
 function LoadLayers_GeotiffOpener(ctx) {
