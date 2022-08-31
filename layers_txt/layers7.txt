@@ -1324,6 +1324,22 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "toz202208",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202208/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202207",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202207/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
                       "id": "toz202206",
                       "title": "6月更新",
                       "url": "https://maps.gsi.go.jp/xyz/toz202206/{z}/{x}/{y}.geojson",
