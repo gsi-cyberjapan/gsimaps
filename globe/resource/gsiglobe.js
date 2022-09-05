@@ -9394,7 +9394,19 @@ GLOBE.MAP = {
         // ポイント(アイコン,TEXT)-------------
         if(geomType == "Point" && (markerType == "Icon" || markerType == "DivIcon")){
           var position    = Cesium.Cartesian3.fromDegrees(coord[0], coord[1], (coord.length>=3 ? coord[2] : 0), ellipsoid);
-          var imageURL    = (markerType == "DivIcon")? "image/system/icon_nothing.png" : feature.properties._iconUrl;
+          var imageURL    = "";
+          if (markerType == "DivIcon")
+          {
+            imageURL = "image/system/icon_nothing.png"; 
+          }
+          else{
+            if (feature.properties._iconUrl && feature.properties._iconUrl != ""){
+              imageURL = feature.properties._iconUrl;
+            }
+            else{
+              imageURL = "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png"
+            }
+          }
           
           if ( depthFlag )
           {
@@ -10984,6 +10996,8 @@ GLOBE.MAP = {
       // fill opacity: 0.2 → 33 (HEX)
       // fill: 1    (boolean)
       // outline: 1 (boolean)
+      // icon: https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png
+      // icon-scale: 1
       
       // ダミー生成 (Style)
       var $styleParent = $(kml).find("kml > Document");
@@ -11013,8 +11027,15 @@ GLOBE.MAP = {
       var polyStyle = '<PolyStyle>'
         + '<color>33ff8833</color>'
         + '</PolyStyle>';
-      
-      var textStyle    = '<Style id="GsiDefaultStyles">' + lineStyle + polyStyle + '</Style>';
+      //アイコン
+      var iconStyle = '<IconStyle>'
+        + '<Icon>'
+        + '<href>https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png</href>'
+        + '</Icon>'
+        + '<scale>1</scale>'
+        + '</IconStyle>'
+
+      var textStyle    = '<Style id="GsiDefaultStyles">' + lineStyle + polyStyle + iconStyle + '</Style>';
       var textStyleUrl = '<styleUrl>#GsiDefaultStyles</styleUrl>';
       
       var textKml = new XMLSerializer().serializeToString(kml);
@@ -11023,6 +11044,7 @@ GLOBE.MAP = {
       
       kml = $.parseXML(textKml);
     }
+
     return kml;
   },
   
@@ -18119,7 +18141,19 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
       // ポイント(アイコン,TEXT)-------------
       if(geomType == "Point" && (markerType == "Icon" || markerType == "DivIcon")){
         var position    = new Cesium.Cartesian3.fromDegrees(coord[0], coord[1], (coord.length>=3 ? coord[2] : 0), ellipsoid);
-        var imageURL    = (markerType == "DivIcon")? "image/system/icon_nothing.png" : feature.properties._iconUrl;
+        var imageURL    = "";
+        
+        if (markerType == "DivIcon"){
+          "image/system/icon_nothing.png";
+        }
+        else{
+          if (feature.properties._iconUrl && feature.properties._iconUrl != ""){
+            imageURL = feature.properties._iconUrl;
+          }
+          else{
+            imageURL = "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png";
+          }
+        }
 
         lonArray.push(coord[0]);
         latArray.push(coord[1]);
