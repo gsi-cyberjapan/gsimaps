@@ -12210,8 +12210,23 @@ L.Util.extend(GSI.KML, {
           } else if (key === 'width') {
             options.weight = parseInt(value);
           } else if (key === 'Icon') {
-            ioptions = _parse(e);
-            if (ioptions.href) { options.href = ioptions.href; }
+            if (e.childNodes.length < 1){
+              //Iconタグの子タグがない場合は強制指定
+              options.href = "https://maps.gsi.go.jp/portal/sys/v4/symbols/" + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;;
+            }
+            else{
+              //Iconタグの子タグがあったらhrefを探す
+              for(var k = 0; k < e.childNodes.length; k++){
+                if (e.childNodes[k].tagName == "href"){
+                  options.href = e.childNodes[k].innerHTML;
+                  break;
+                }
+              }
+              if (!options.href || options.href == ""){
+                //hrefが空か、hrefがなかったら強制指定
+                options.href = "https://maps.gsi.go.jp/portal/sys/v4/symbols/" + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
+              }
+            }
           } else if (key === 'href') {
             options.href = value;
           } else if (key === 'scale') {
@@ -12219,9 +12234,43 @@ L.Util.extend(GSI.KML, {
           }
         }
       }
+
       return options;
     }
 
+    if (!sl || sl.length < 1){
+      //Styleタグが無い場合はアイコンを地理院独自のアイコンで補完する
+      //他はleafletが補完するので無いままにしておく
+      //他のスタイルも補完する場合はここに書いておく
+
+      var defSt = xml.createElement('Style');
+      defSt.id = "gsidefaultStyle";
+      var defIcSt = xml.createElement('IconStyle');
+      var defic = xml.createElement('Icon');
+      var defhref = xml.createElement('href');
+      defhref.innerHTML = "https://maps.gsi.go.jp/portal/sys/v4/symbols/" + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
+      var defsc = xml.createElement('scale');
+      defsc.innerHTML = "1";
+
+      //階層順に積む
+      defic.appendChild(defhref);
+      defIcSt.appendChild(defic);
+      defIcSt.appendChild(defsc);
+      defSt.appendChild(defIcSt);
+
+      var km = xml.getElementsByTagName('Document');
+      km[0].appendChild(defSt);
+
+      var pm = xml.getElementsByTagName('Placemark');
+      if (pm && pm.length > 0){
+        var sttag = xml.createElement('styleUrl');
+        sttag.innerHTML = "#gsidefaultStyle";
+        pm[0].appendChild(sttag);
+      }
+      //取り直す
+      sl = xml.getElementsByTagName('Style');
+    }
+  
     for (var i = 0; i < sl.length; i++) {
       var e = sl[i], el;
       var options = {}, poptions = {}, ioptions = {};
@@ -12232,7 +12281,16 @@ L.Util.extend(GSI.KML, {
       if (poptions.color) { options.fillColor = poptions.color; }
       if (poptions.opacity || poptions.opacity == 0) { options.fillOpacity = poptions.opacity; }
       el = e.getElementsByTagName('IconStyle');
-      if (el && el[0]) { ioptions = _parse(el[0]); }
+      if (el && el[0]) {
+        ioptions = _parse(el[0]);
+      }
+
+      if (!ioptions.href || ioptions.href == ""){
+        ioptions.href = "https://maps.gsi.go.jp/portal/sys/v4/symbols/" + CONFIG.SAKUZU.SYMBOL.DEFAULTICON;
+      }
+      if (!ioptions.scale || ioptions.scale == ""){
+        ioptions.scale = 1;
+      }
       if (ioptions.href) {
         // save anchor info until the image is loaded
         options.icon = {
@@ -12245,6 +12303,7 @@ L.Util.extend(GSI.KML, {
       }
       style['#' + e.getAttribute('id')] = options;
     }
+
     return style;
   },
   parseStyleMap: function (xml, existingStyles) {
