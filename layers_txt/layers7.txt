@@ -1193,7 +1193,7 @@
                       "type": "Layer",
                       "id": "jin202209",
                       "title": "9月更新",
-                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/088.png",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/101.png",
                       "url": "https://maps.gsi.go.jp/xyz/jin202209/{z}/{x}/{y}.geojson",
                       "maxNativeZoom": 2,
                       "cocotile": false
