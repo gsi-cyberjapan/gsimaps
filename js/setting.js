@@ -254,8 +254,8 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
-  "vlcd_satumaio": {
-    "url": "https://maps.gsi.go.jp/xyz/vlcd_satumaio/vlcd_satumaio.csv",
+  "vlcd_satsumaio": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumaio/vlcd_satsumaio.csv",
     "layer": {
       "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumaio/{z}/{x}/{y}.png",
       "minZoom": 10,
