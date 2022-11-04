@@ -42894,6 +42894,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     
     this._listUL.empty();
 
+    var liHeight = 0;
+
     this._sakuzuList.eachItems(L.bind(function (item) {
       item._viewData = {};
 
@@ -43121,6 +43123,23 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     }, this));
 
     this._refreshToolButton();
+
+    for(var x = 0; x < this._listUL.length; x++){
+      liHeight += $(this._listUL[x]).outerHeight();
+    }
+
+    if (liHeight > 0 && this._userResized == false){
+      //ダイアログが表示されていて、変更された時
+      var ws = GSI.Utils.getScreenSize();
+      var titleHeight = this._title? this._title.outerHeight(): 30;
+      var tBarHeight = this._topPanelToolBar? this._topPanelToolBar.outerHeight() : 40;
+      var limitHeight = ws.h - 50 - titleHeight - tBarHeight - this.container.offset().top;
+
+      if (liHeight > limitHeight){
+        liHeight = limitHeight;
+      }
+      $(this.container).find(".gsi-sakuzudialog-list-container").css({"height": liHeight});
+    }
   },
 
   _onOpacityBtnClick:function(item,btn, tr) {
@@ -43503,6 +43522,26 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
 
     GSI.Dialog.prototype.show.call(this);
     this._refreshFileButton();
+
+    var liHeight = 0;
+    for(var x = 0; x < this._listUL.length; x++){
+      liHeight += $(this._listUL[x]).outerHeight();
+    }
+
+    if (liHeight > 0 && this._userResized == false){
+      //ダイアログが表示されていない時に、変更された時
+      var ws = GSI.Utils.getScreenSize();
+      var titleHeight = this._title? this._title.outerHeight(): 30;
+      var tBarHeight = this._topPanelToolBar? this._topPanelToolBar.outerHeight() : 40;
+      //not offset().top, need offsetTop
+      var limitHeight = ws.h - 50 - titleHeight - tBarHeight - $(this.container)[0].offsetTop;
+
+      if (liHeight > limitHeight){
+        liHeight = limitHeight;
+      }
+      $(this.container).find(".gsi-sakuzudialog-list-container").css({"height": liHeight});
+    }
+
   },
 
   _showTopPanel: function (beforePanel) {
