@@ -15212,7 +15212,7 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
           }
           ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
 
-          texture.drawImage(grayScaleCanvas, 0, 0, 256, 256,
+          texture.drawImage(grayScaleCanvas, 0, 0, grayScaleCanvas.width, grayScaleCanvas.height,
             tilePoint.pos.x, tilePoint.pos.y,
             tilePoint.size, tilePoint.size);
 
