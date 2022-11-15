@@ -12083,7 +12083,7 @@ GSI.LakeDepthLoader = GSI.LakeDataLoader.extend({
         "title": "",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/lakedepth/{z}/{x}/{y}.png",
         "minzoom": 14,
-        "maxzoom": 14,
+        "maxzoom": 18,
         "fixed": 1
       }
     ];
@@ -12103,7 +12103,7 @@ GSI.LakeStdHeightLoader = GSI.LakeDataLoader.extend({
         "title": "",
         "url": "https://cyberjapandata.gsi.go.jp/xyz/lakedepth_standard/{z}/{x}/{y}.png",
         "minzoom": 14,
-        "maxzoom": 14,
+        "maxzoom": 18,
         "fixed": 1
       }
     ];
