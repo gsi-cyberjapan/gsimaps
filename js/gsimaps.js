@@ -23211,6 +23211,21 @@ GSI.LakeDataLoader = GSI.ElevationLoader.extend({
     this._demUrlList = [];
   },
 
+  _makeUrlList: function (pos) {
+    var list = [];
+    for (var i = 0; i < this._demUrlList.length; i++) {
+      var demUrl = this._demUrlList[i];
+      list.push({
+        "title": demUrl.title,
+        "zoom": 18,
+        "url": demUrl.url,
+        "fixed": demUrl.fixed
+      });
+    }
+
+    return list;
+  },
+
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
     
@@ -26778,7 +26793,15 @@ GSI.MapManager = L.Evented.extend({
     }
 
     return  this._comparePhotoControl;
-  }
+  },
+  
+  enableLakeData: function(enabled) {
+    this._enableLakeData = enabled;
+  },
+
+  lakeDataEnabled: function() {
+    return this._enableLakeData;
+  }  
 });
 
 /************************************************************************
@@ -27669,7 +27692,7 @@ GSI.Footer = L.Evented.extend({
       this._lakeStdHeightLoader.cancel();
     }
 
-    if(GSI.Footer.DISP_LAKE_DATA){
+    if(this._mapManager.lakeDataEnabled()){
       this._lakedepthLoader.load(loadCondition);
       this._lakeStdHeightLoader.load(loadCondition);
     }
@@ -27819,7 +27842,7 @@ GSI.Footer = L.Evented.extend({
   },
 
   updateLakeDepthVisible: function(enabled){
-    GSI.Footer.DISP_LAKE_DATA = enabled;
+    this._mapManager.enableLakeData(enabled);
     this._lakeDepthEnabled = enabled;
     this._lakeDepthContainer.css("display", this._dispMode == GSI.Footer.DISP_LARGE && enabled ? "block":"none");
   },
@@ -27862,8 +27885,6 @@ GSI.Footer.DISP_CLOSE = 0;
 
 GSI.Footer.DISP_ADDR_KANJI=0;
 GSI.Footer.DISP_ADDR_YOMI=1;
-
-GSI.Footer.DISP_LAKE_DATA = false;
 
 /************************************************************************
  L.Class
@@ -48441,6 +48462,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
   _enableLakeDepthForItem: function(id, enabled){
     if(id == "lakedata" && this._mapManager._footer){
       this._mapManager._footer.updateLakeDepthVisible(enabled);
+      if(enabled) this._mapManager._footer._refresh();
     }
   },
 
