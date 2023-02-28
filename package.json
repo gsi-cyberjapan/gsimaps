@@ -18,6 +18,9 @@
   },
   "homepage": "https://maps.gsi.go.jp/",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "@cucumber/cucumber": "^9.0.0",
+    "dotenv": "^16.0.3",
+    "live-server": "^1.2.2",
+    "puppeteer": "^19.7.2"
   }
 }
