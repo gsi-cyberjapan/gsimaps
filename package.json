@@ -4,6 +4,7 @@
   "description": "The source of GSI Maps, the web maps by Geospatial Information Authority of Japan (GSI,) Japan's National Geospatial Information Authority (NGIA.)",
   "main": "index.html",
   "scripts": {
+    "start": "live-server --host=localhost --port=8080 --entry-file=index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/geolonia/gsimaps/issues"
   },
-  "homepage": "https://maps.gsi.go.jp/"
+  "homepage": "https://maps.gsi.go.jp/",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
