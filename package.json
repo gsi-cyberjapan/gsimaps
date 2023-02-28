@@ -1,0 +1,19 @@
+{
+  "name": "gsimaps",
+  "version": "1.0.0",
+  "description": "The source of GSI Maps, the web maps by Geospatial Information Authority of Japan (GSI,) Japan's National Geospatial Information Authority (NGIA.)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geolonia/gsimaps.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause license",
+  "bugs": {
+    "url": "https://github.com/geolonia/gsimaps/issues"
+  },
+  "homepage": "https://maps.gsi.go.jp/"
+}
