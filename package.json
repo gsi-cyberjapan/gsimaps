@@ -1,0 +1,28 @@
+{
+  "name": "gsimaps",
+  "version": "1.0.0",
+  "description": "The source of GSI Maps, the web maps by Geospatial Information Authority of Japan (GSI,) Japan's National Geospatial Information Authority (NGIA.)",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --host=localhost --port=8080 --entry-file=index.html",
+    "test": "concurrently 'http-server . -p 4444 -s' cucumber-js --success first --kill-others"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geolonia/gsimaps.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause license",
+  "bugs": {
+    "url": "https://github.com/geolonia/gsimaps/issues"
+  },
+  "homepage": "https://maps.gsi.go.jp/",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.0.0",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "puppeteer": "^19.7.2"
+  }
+}
