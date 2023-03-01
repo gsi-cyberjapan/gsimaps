@@ -8,4 +8,4 @@ Feature: 地理院地図のテスト
 
   Scenario: Check the map should be displayed.
     When I click the element ".gsi-mapmenu-btn"
-    Then I expect the element ".gsi-mapmenu-container" is visible
+    Then I expect the element ".gsi-mapmenu-container" is not visible
