@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "live-server --host=localhost --port=8080 --entry-file=index.html",
-    "test": "cucumber-js"
+    "test": "concurrently 'http-server . -p 4444 -s' cucumber-js --success first --kill-others"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   "homepage": "https://maps.gsi.go.jp/",
   "devDependencies": {
     "@cucumber/cucumber": "^9.0.0",
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
+    "http-server": "^14.1.1",
     "live-server": "^1.2.2",
     "puppeteer": "^19.7.2"
   }

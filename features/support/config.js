@@ -58,7 +58,7 @@ BeforeAll(async function(){
 Before(async function(scenario) {
 
   // Check if the current scenario is in the same feature test
-  const currentFeature = 'http://localhost:8080';
+  const currentFeature = 'http://localhost:4444';
   if(featureScope.isNewFeature(currentFeature))
     await featureScope.init(currentFeature, this.worldParameters);
 
