@@ -32,6 +32,187 @@
                   "maxNativeZoom": 2,
                   "legendUrl": "https://maps.gsi.go.jp/legend/geography_flood_legend.png",
                   "html": "<div class=\"gsi_layerinfo_title\">水害編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "地震編",
+                  "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                  "html": "<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "LayerGroup",
+                      "title": "新潟地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "niigata_liq",
+                          "title": "液状化",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_niigata/liq/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        },
+                        {
+                          "type": "Layer",
+                          "id": "niigata_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_niigata/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "LayerGroup",
+                      "title": "三陸はるか沖地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "sanrikuharukaoki_liq",
+                          "title": "液状化",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_sanrikuharukaoki/liq/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        },
+                        {
+                          "type": "Layer",
+                          "id": "sanrikuharukaoki_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_sanrikuharukaoki/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "LayerGroup",
+                      "title": "兵庫県南部地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "hyougokennnanbu_liq",
+                          "title": "液状化",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_hyougokennnanbu/liq/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        },
+                        {
+                          "type": "Layer",
+                          "id": "hyougokennnanbu_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_hyougokennnanbu/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "LayerGroup",
+                      "title": "日本海中部地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "nihonkaichubu_liq",
+                          "title": "液状化",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_nihonkaichubu/liq/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        },
+                        {
+                          "type": "Layer",
+                          "id": "nihonkaichubu_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_nihonkaichubu/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "LayerGroup",
+                      "title": "伊豆半島沖地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "izuhantouoki_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_izuhantouoki/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "LayerGroup",
+                      "title": "伊豆大島近海地震",
+                      "toggleall": false,
+                      "entries": [
+                        {
+                          "type": "Layer",
+                          "id": "izuoshimakinkai_bld",
+                          "title": "建物被害",
+                          "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_izuoshimakinkai/bld/{z}/{x}/{y}.png",
+                          "cocotile": true,
+                          "subdmains": "",
+                          "attribution": "",
+                          "minZoom": 11,
+                          "maxZoom": 15,
+                          "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+                          "html":"<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },

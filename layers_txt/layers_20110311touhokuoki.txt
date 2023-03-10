@@ -1,0 +1,945 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "津波浸水範囲と自然災害伝承碑",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20110311_tohoku_shinsui",
+          "title": "東北地方太平洋沖地震　津波浸水範囲",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/1105.png",
+          "url": "https://maps.gsi.go.jp/xyz/20110311_tohoku_shinsui/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 16,
+          "html":"<div class=\"gsi_layerinfo_subtitle\">東北地方太平洋沖地震後に撮影した空中写真及び観測された衛星画像に基づき、津波による浸水範囲を判読したものです。実際に浸水のあった地域でも把握できていない部分があります。また、雲等により浸水範囲が十分に判読できていないところもあります。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_20110311",
+          "title": "自然災害伝承碑：東日本大震災（2023年3月2日時点）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/837.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_20110311/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している東北地方太平洋沖地震による被害を伝える自然災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_19330303",
+          "title": "自然災害伝承碑：昭和三陸地震津波（2023年3月2日時点）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/838.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_19330303/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している昭和三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "disaster_lore_18960615",
+          "title": "自然災害伝承碑：明治三陸地震津波（2023年3月2日時点）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/839.png",
+          "url": "https://maps.gsi.go.jp/xyz/disaster_lore_18960615/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 7,
+          "maxZoom": 18,
+          "maxNativeZoom": 7,
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している明治三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "地殻変動量",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "gejechikaku_aomori",
+          "title": "青森県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/aomori.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 青森県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_iwate",
+          "title": "岩手県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/iwate.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 岩手県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_miyagi",
+          "title": "宮城県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/miyagi.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 宮城県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_akita",
+          "title": "秋田県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/akita.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 秋田県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_yamagata",
+          "title": "山形県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/yamagata.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 山形県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_fukushima",
+          "title": "福島県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/fukushima.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 福島県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_ibaraki",
+          "title": "茨城県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/ibaraki.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 茨城県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_tochigi",
+          "title": "栃木県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/tochigi.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 栃木県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_gunma",
+          "title": "群馬県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/gunma.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 群馬県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_saitama",
+          "title": "埼玉県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/saitama.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 埼玉県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_chiba",
+          "title": "千葉県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/chiba.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 千葉県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_tokyo",
+          "title": "東京都",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/tokyo.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 東京都</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_kanagawa",
+          "title": "神奈川県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/kanagawa.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 神奈川県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_niigata",
+          "title": "新潟県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/niigata.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 新潟県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "gejechikaku_nagano",
+          "title": "長野県",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/686.png",
+          "url": "https://maps.gsi.go.jp/overlay/nagano.kml",
+          "cocotile": false,
+          "legendUrl": "https://maps.gsi.go.jp/legend/geje-chikaku_legend.html",
+          "html": "<div class=\"gsi_layerinfo_title\">地殻変動量 - 長野県</div><div class=\"gsi_layerinfo_kaisetu\">水準測量作業を実施した結果、2011年3月11日の東日本大震災（東北地方太平洋沖地震）に伴う詳細な地殻変動量（上下方向）が確認されました。<br/><br/>※ただし、地殻変動量には、地震前までに蓄積していた地殻変動、及び地震後の余効変動等を含みます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "fukkokizu",
+      "title": "災害復興計画基図",
+      "url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+      "cocotile": true,
+      "minZoom": 5,
+      "legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
+      "html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "toho4",
+          "title": "2013年9月～2013年12月",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2013年9月～2013年12月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "toho3",
+          "title": "2012年10月～2013年5月",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2012年10月～2013年5月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "toho2",
+          "title": "2011年5月～2012年4月",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 5,
+          "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年5月～2012年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "toho1",
+          "title": "2011年3月～2011年4月",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+          "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxNativeZoom": 17,
+          "maxZoom": 18,
+          "html": "<div class=\"gsi_layerinfo_title\">東日本大震災後正射画像</div><div class=\"gsi_layerinfo_subtitle\">(2011年3月～2011年4月)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/geje-ort.pdf\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "001naname1103tohoku",
+          "title": "青森県六ヶ所村",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/001.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県六ヶ所村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "002naname1103tohoku",
+          "title": "青森県三沢市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/002.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県三沢市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "003naname1103tohoku",
+          "title": "青森県おいらせ町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/003.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県おいらせ町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "004naname1103tohoku",
+          "title": "青森県八戸市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/004.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県八戸市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "005naname1103tohoku",
+          "title": "青森県階上町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/005.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 青森県階上町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "006naname1103tohoku",
+          "title": "岩手県洋野町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/006.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県洋野町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "007naname1103tohoku",
+          "title": "岩手県久慈市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/007.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県久慈市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "008naname1103tohoku",
+          "title": "岩手県野田村",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/008.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県野田村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "009naname1103tohoku",
+          "title": "岩手県普代村",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/009.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県普代村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "010naname1103tohoku",
+          "title": "岩手県田野畑村",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/010.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県田野畑村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "011naname1103tohoku",
+          "title": "岩手県岩泉町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/011.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県岩泉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "012naname1103tohoku",
+          "title": "岩手県宮古市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/012.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県宮古市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "013naname1103tohoku",
+          "title": "岩手県山田町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/013.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県山田町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "014naname1103tohoku",
+          "title": "岩手県大槌町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/014.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県大槌町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "015naname1103tohoku",
+          "title": "岩手県釜石市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/015.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県釜石市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "016naname1103tohoku",
+          "title": "岩手県大船渡市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/016.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県大船渡市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "017naname1103tohoku",
+          "title": "岩手県陸前高田市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/017.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 岩手県陸前高田市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "018naname1103tohoku",
+          "title": "宮城県気仙沼市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/018.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県気仙沼市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "019naname1103tohoku",
+          "title": "宮城県南三陸町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/019.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県南三陸町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "020naname1103tohoku",
+          "title": "宮城県女川町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/020.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県女川町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "021naname1103tohoku",
+          "title": "宮城県石巻市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/021.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県石巻市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "022naname1103tohoku",
+          "title": "宮城県東松島市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/022.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県東松島市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "023naname1103tohoku",
+          "title": "宮城県松島町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/023.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県松島町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "024naname1103tohoku",
+          "title": "宮城県塩竈市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/024.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県塩竈市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "025naname1103tohoku",
+          "title": "宮城県利府町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/025.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県利府町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "026naname1103tohoku",
+          "title": "宮城県七ヶ浜町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/026.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県七ヶ浜町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "027naname1103tohoku",
+          "title": "宮城県多賀城市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/027.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県多賀城市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "028naname1103tohoku",
+          "title": "宮城県仙台市宮城野区",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/028.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県仙台市宮城野区</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "029naname1103tohoku",
+          "title": "宮城県仙台市若林区",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/029.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県仙台市若林区</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "030naname1103tohoku",
+          "title": "宮城県名取市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/030.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県名取市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "031naname1103tohoku",
+          "title": "宮城県岩沼市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/031.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県岩沼市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "032naname1103tohoku",
+          "title": "宮城県亘理町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/032.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県亘理町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "033naname1103tohoku",
+          "title": "宮城県山元町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/033.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 宮城県山元町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "034naname1103tohoku",
+          "title": "福島県新地町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/034.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県新地町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "035naname1103tohoku",
+          "title": "福島県相馬市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/035.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県相馬市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "036naname1103tohoku",
+          "title": "福島県南相馬市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/036.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県南相馬市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "037naname1103tohoku",
+          "title": "福島県浪江町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/037.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県浪江町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "038naname1103tohoku",
+          "title": "福島県双葉町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/038.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県双葉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "039naname1103tohoku",
+          "title": "福島県大熊町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/039.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県大熊町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "040naname1103tohoku",
+          "title": "福島県富岡町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/040.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県富岡町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "041naname1103tohoku",
+          "title": "福島県楢葉町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/041.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県楢葉町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "042naname1103tohoku",
+          "title": "福島県広野町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/042.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県広野町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "043naname1103tohoku",
+          "title": "福島県いわき市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/043.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 福島県いわき市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "044naname1103tohoku",
+          "title": "茨城県北茨城市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/044.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県北茨城市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "045naname1103tohoku",
+          "title": "茨城県高萩市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/045.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県高萩市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "046naname1103tohoku",
+          "title": "茨城県日立市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/046.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県日立市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "047naname1103tohoku",
+          "title": "茨城県東海村",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/047.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県東海村</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "048naname1103tohoku",
+          "title": "茨城県ひたちなか市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/048.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県ひたちなか市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "049naname1103tohoku",
+          "title": "茨城県大洗町",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/049.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県大洗町</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "050naname1103tohoku",
+          "title": "茨城県鉾田市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/050.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県鉾田市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "051naname1103tohoku",
+          "title": "茨城県鹿嶋市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/051.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県鹿嶋市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "052naname1103tohoku",
+          "title": "茨城県神栖市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/052.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 茨城県神栖市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "053naname1103tohoku",
+          "title": "千葉県銚子市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/053.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 千葉県銚子市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "054naname1103tohoku",
+          "title": "千葉県旭市",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/054.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">斜め写真 - 千葉県旭市</div><div class=\"gsi_layerinfo_kaisetu\"><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile002.bmp' width='15' height='15'>は、平成24年4月1日に追加した南相馬市～いわき市沿岸の撮影画像です。<br/><br/><img src='http://saigai.gsi.go.jp/20110311eqObliquePhoto/icon/mobile001.bmp' width='15' height='15'>は、平成24年3月31日以前の撮影画像です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "空中写真",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "001airphoto1103tohoku",
+          "title": "青森県　三八地方沿岸（3/13撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/aomori_kokudo45n.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 青森県　三八地方沿岸（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "002airphoto1103tohoku",
+          "title": "青森県　三八上北地方沿岸（4/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/097.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/aomori_sanrikukaigan0405.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 青森県　三八上北地方沿岸（4月5日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "003airphoto1103tohoku",
+          "title": "岩手県　沿岸北部（3/13撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/iwate_kokudo45n.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　沿岸北部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "004airphoto1103tohoku",
+          "title": "岩手県　沿岸南部（3/13撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/iwate_kokudo45s.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　沿岸南部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "005airphoto1103tohoku",
+          "title": "岩手県～宮城県　三陸海岸（4/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/iwate_sanrikukaigan0401.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県～宮城県　三陸海岸（4月1日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "006airphoto1103tohoku",
+          "title": "岩手県　三陸海岸（4/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/097.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/iwate_sanrikukaigan0405.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 岩手県　三陸海岸（4月5日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "007airphoto1103tohoku",
+          "title": "宮城県　沿岸北部（3/13撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_kokudo45s.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　沿岸北部（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "008airphoto1103tohoku",
+          "title": "宮城県　石巻市周辺（3/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_ishinomaki.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　石巻市周辺（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "009airphoto1103tohoku",
+          "title": "宮城県　仙台市周辺（3/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_sendai0312.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　仙台市周辺（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "010airphoto1103tohoku",
+          "title": "宮城県　仙台市周辺（3/13撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/082.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_sendai0313.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　仙台市周辺（3月13日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "011airphoto1103tohoku",
+          "title": "宮城県　沿岸南部（3/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_kokudo6.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　沿岸南部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "012airphoto1103tohoku",
+          "title": "宮城県　三陸海岸（3/19撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/098.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/miyagi_sanrikukaigan0319.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 宮城県　三陸海岸（3月19日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "013airphoto1103tohoku",
+          "title": "福島県　沿岸北部（3/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/fukushima_kokudo6.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 福島県　沿岸北部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "014airphoto1103tohoku",
+          "title": "茨城県　沿岸北部（3/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/ibaraki0312.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 茨城県　沿岸北部（3月12日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "015airphoto1103tohoku",
+          "title": "茨城県　沿岸南部（3/27撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png",
+          "url": "https://maps.gsi.go.jp/overlay/1103tohoku/ibaraki0327.kml",
+          "cocotile": false,
+          "html": "<div class=\"gsi_layerinfo_title\">空中写真 - 茨城県　沿岸南部（3月27日撮影）</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、空中写真が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": "beforeafter1103tohoku",
+      "title": "新旧写真比較",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/180.png",
+      "url": "https://maps.gsi.go.jp/overlay/1103tohoku/beforeafter.kml",
+      "cocotile": false,
+      "html": "<div class=\"gsi_layerinfo_title\">新旧写真比較</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、別画面で、新旧画像を比較することができます。<br/><br/>別画面において、画像中央の縦棒をドラッグすると、被災前後の画像をずらして見ることが出来ます。<br/><br/>別画面の上方が写真と写真の比較で、下方が地図と写真の比較です。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "digelevmap1103tohoku",
+      "title": "デジタル標高図",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/086.png",
+      "url": "https://maps.gsi.go.jp/overlay/1103tohoku/digelevmap.kml",
+      "cocotile": false,
+      "html": "<div class=\"gsi_layerinfo_title\">デジタル標高図</div><div class=\"gsi_layerinfo_kaisetu\">photoURLのリンクをクリックすると、被災前のデジタル標高地形図が見られます。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "epicenter1103tohoku",
+      "title": "震央",
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/092.png",
+      "url": "https://maps.gsi.go.jp/overlay/1103tohoku/epicenter.kml",
+      "cocotile": false,
+      "html": "<div class=\"gsi_layerinfo_title\">震央</div><div class=\"gsi_layerinfo_kaisetu\">＊電子基準点で検出した地殻変動情報は<a href='http://www.gsi.go.jp/chibankansi/chikakukansi_tohoku.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による震源断層モデル(暫定)は<a href='http://www.gsi.go.jp/cais/topic110313-index.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による滑り分布モデル(地震時，暫定)は<a href='http://www.gsi.go.jp/cais/topic110314.2-index.html' target='_blank'>こちら</a><br/>＊電子基準点データ解析による滑り分布モデル(地震後，暫定)は<a href='http://www.gsi.go.jp/cais/topic110314-index.html' target='_blank'>こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    },
+    {
+      "type": "Layer",
+      "id": "roadRegulation1103tohoku",
+      "title": "東北地方道路規制情報",
+      "url": "https://maps.gsi.go.jp/overlay/1103tohoku/roadRegulation.kml",
+      "cocotile": false,
+      "legendUrl": "https://maps.gsi.go.jp/legend/1103tohoku_roadRegulation_legend.png",
+      "html": "<div class=\"gsi_layerinfo_title\">東北地方道路規制情報</div><div class=\"gsi_layerinfo_kaisetu\">【2014/3/20　9:00時点情報】<br/>2014/12/8現在情報の変更はありません<br/><br/>道路規制情報は、各道路管理者の公表資料を基に作成しています。<br/><br/>東北地方整備局　<a href='http://road.thr.mlit.go.jp/index.html' target='_blank'>道路情報提供システム</a><br/>岩手県　　<a href='http://www.douro.com/' target='_blank'>道路情報提供サービス</a><br/>宮城県　　<a href='http://www.pref.miyagi.jp/road/kiseinow.htm' target='_blank'>道路規制情報</a><br/>福島県　　<a href='http://www.pref.fukushima.jp/douro/kisei/kisei-list.htm' target='_blank'>道路総室</a><br/>NEXCO東日本　　<a href='http://www.e-nexco.co.jp/pressroom/press_release/tohoku/' target='_blank'>東北支社プレスリリース</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    }
+  ]
+}
