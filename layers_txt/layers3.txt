@@ -607,13 +607,13 @@
             {
               "type": "Layer",
               "id": "lcmfc2",
-              "title": "更新版(2007～2021年)",
+              "title": "更新版（2007年以降）",
               "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
               "cocotile": true,
               "minZoom": 5,
               "maxZoom": 16,
               "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
-              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版(2007～2021年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-更新版（2007年以降）</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
               "type": "Layer",
