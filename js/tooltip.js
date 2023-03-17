@@ -250,16 +250,16 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  
  GSITEXT.EVAC = {};
  GSITEXT.EVAC.KIYAKU = '最新の状況などは当該市町村にご確認ください。';
- GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="https://hinan.gsi.go.jp/hinanjocjp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>';
+ GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>';
  GSITEXT.EVAC.CONFIRMTOP = '地理院地図及び重ねるハザードマップに掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。';
  GSITEXT.EVAC.ATTENTION = '【ご利用上の注意】';
  GSITEXT.EVAC.CONFIRMITEM1 = '本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。<span style="font-weight:bold; color:#ff0000;">最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span>';
- GSITEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href="https://hinan.gsi.go.jp/hinanjocjp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>）。';
+ GSITEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>）。';
  GSITEXT.EVAC.CONFIRMITEM3 = '指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。';
  GSITEXT.EVAC.ATTENTIONDATA = '【データについて】';
  GSITEXT.EVAC.DATAITEM1 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>';
  GSITEXT.EVAC.DATAITEM2 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">利用方法</a>';
- GSITEXT.EVAC.DATAITEM3 = '<a href="https://hinan.gsi.go.jp/hinanjocjp/hinanbasho/koukaidate.html" target="blank">市町村別公開日・更新日一覧</a>';
+ GSITEXT.EVAC.DATAITEM3 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>';
  GSITEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
  
  GSITEXT.LINEEDITTIP = '<span style="font-size:11px;">※右クリックで直前の点を取り消すことができます。</span><br>';
