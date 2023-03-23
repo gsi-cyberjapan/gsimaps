@@ -4603,6 +4603,17 @@
             },
             {
               "type": "Layer",
+              "id": "denshichikeizu50000",
+              "title": "電子地形図50000の更新情報",
+              "url": "./xyz/denshichikeizu50000/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">電子地形図50000の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">電子地形図50000の図郭と提供範囲を表示します。<br>地図上をクリックすると、コード、図名(漢字)、図名(よみ)、発行年月日が表示されます。</div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/chizuhensyu/chizuhensyu41036.html\" target=\"_blank\">電子地形図50000サイト</a></div>"
+            },
+            {
+              "type": "Layer",
               "id": "zk25000",
               "title": "2万5千分1地形図郭",
               "url": "https://maps.gsi.go.jp/xyz/zk25000/{z}/{x}/{y}.geojson",
