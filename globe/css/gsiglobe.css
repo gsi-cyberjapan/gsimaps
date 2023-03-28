@@ -4446,3 +4446,155 @@ input[type=search]{
 #gsi_dialog_footer{
   width: auto;
 }
+
+.gsi_comparephoto_container {
+	position: relative;
+	left:0px;
+	right:0;
+	top:0;
+	background: rgba(51, 51, 51, 0.9);
+	z-index: 1000;
+}
+  
+.gsi_comparephoto_container table{
+	width:100%;
+}
+.gsi_comparephoto_container table td:first-child{
+	width:100%;
+}
+  
+.gsi_comparephoto_container table td a{
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 9pt;
+}
+  
+.gsi_comparephoto_container table td a.small{
+	position: absolute;
+	right:0;
+	top:0;
+	padding: 0;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+ }
+  
+.gsi_comparephoto_slider_container {
+
+-ms-user-select: none;
+-moz-user-select: -moz-none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+
+padding-left:15px;
+padding-right:15px;
+padding-top:8px;
+padding-bottom:35px;
+/*padding-bottom:8px;*/
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+cursor: pointer;
+}
+
+
+.gsi_comparephoto_slider_container.small {
+padding-top: 35px;
+}
+
+.gsi_comparephoto_slider_container.dragging,
+.gsi_comparephoto_slider_container.dragging * {
+cursor:ew-resize;
+}
+
+.gsi_comparephoto_slider_container * {
+
+-ms-user-select: none;
+-moz-user-select: -moz-none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+}
+
+.gsi_comparephoto_slider_container_bar {
+position: relative;
+background-color: #fff;
+
+width:100%;
+height:8px;
+border-radius: 1px;
+cursor: pointer;
+
+}
+
+.gsi_comparephoto_slider_container_bar_line {
+position: absolute;
+background-color: #ccc;
+z-index: 0;
+width:1px;
+top:0;
+bottom:0;
+cursor: pointer;
+}
+
+
+
+.gsi_comparephoto_slider_container_handle {
+z-index: 1;
+position: absolute;
+
+background-color: #fff;
+border: 1px solid #666;
+width:20px;
+height: 20px;
+
+margin-top:-10px;
+margin-left:-10px;
+
+left :0;
+top:4px;
+border-radius: 4px;
+
+cursor:ew-resize;
+
+}
+
+
+.gsi_comparephoto_slider_container_bar_label {
+position: absolute;
+z-index: 0;
+top:15px;
+cursor: pointer;
+
+font-size:8px;
+color:#fff;
+opacity: 0.3;
+}
+
+.gsi_comparephoto_slider_container_bar_label.haslayer {
+opacity: 1;
+}
+
+.gsi_comparephoto_slider_container.small
+.gsi_comparephoto_slider_container_bar_label {
+transform: scale(0.9);
+
+}
+
+
+
+.gsi_comparephoto_slider_container_bar_label.top {
+
+top:auto;
+bottom: 100%;
+margin-bottom:5px
+}

@@ -11546,7 +11546,74 @@ GLOBE.MAP = {
         GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,address);
       }
     });
-  }
+  }, 
+
+  // 202303 時系列表示ダイアログを取得
+  getComparePhotoControl: function() {
+    if ( !this._comparePhotoControl ) {
+      this._comparePhotoControl = new GLOBE.ComparePhotoControl(this);
+    }
+    return this._comparePhotoControl;
+  },
+    // 時系列表示ダイアログを表示
+  showComparePhotoControl: function() {
+    var control = this.getComparePhotoControl();
+    control.show();
+
+//    this.setTopMargin();
+    return control;
+  },
+  // 時系列表示ダイアログを非表示
+  hideComparePhotoControl: function() {
+    if ( !this._comparePhotoControl ) return;
+
+    this._comparePhotoControl.hide();
+
+//    this._mapMenu.removeTopMargin();
+
+    return  this._comparePhotoControl;
+  },
+
+  // heightからズームレベルを取得
+  getZoomFromHeight: function()
+  {
+
+    var zoom = this.getCurrentZoom();
+
+    //this.getZoomLevel();
+    if ( this.currents.height ){
+      var height = this.currents.height;
+      var zooms = CONFIG.Z2HEIGHT;
+
+      if (zooms) {
+
+        var length = Object.keys(zooms).length;
+        var low = false; // 低倍率チェック
+        var high = false; // 高倍率チェック
+
+        for (var i=0; i < length; i++) {
+          if (height < zooms[i]) {
+            low = true;
+            zoom = i;
+          } else if ( zooms[i] < height) {
+            high = true;
+          } else {
+            low = true;
+            high = true;
+          }
+          if (low && (high || i == length-1)) {
+            break;
+          }
+        }
+
+      }
+
+    }
+    
+    return zoom;
+  },
+
+  
   /*
   edit310 ↓delete
   execRefreshAlt : function (vDemAltTypeN,vDemAltTileX,vDemAltTileY)
@@ -13436,20 +13503,20 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             }
 
             if(fAppend){
-            for(var i = 0; i < this.visibleLayers.length; i++){
-              var l = this.visibleLayers[i];
-                    if(l.info != null){
-                  if ( l.info._isBaseLayer )
-                  {
-              l.info.initialGrayScale = GLOBE.MAP.initials.baseGray;
-                    this.mapLayerList.setBaseLayer(l.info);
-                      }
-                      else
-                      {
-              this.mapLayerList.append(l.info, true, l.hidden);
-            }
+              for(var i = 0; i < this.visibleLayers.length; i++){
+                var l = this.visibleLayers[i];
+                  if(l.info != null){
+                    if ( l.info._isBaseLayer )
+                    {
+                        l.info.initialGrayScale = GLOBE.MAP.initials.baseGray;
+                        this.mapLayerList.setBaseLayer(l.info);
                     }
-                }
+                    else
+                    {
+                      this.mapLayerList.append(l.info, true, l.hidden);
+                    }
+                  }
+              }
                 this.visibleLayers.length = 0;
 
                 this._initializeListProc();
@@ -14267,7 +14334,13 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             GSI.Utils.sendSelectedLayer(this._current_id);
         }
         else 
-        { this.mapLayerList.remove(item); }
+          { 
+            this.mapLayerList.remove(item);
+            // 202303
+            if (item.id == CONFIG.COMPAREPHOTO_ID) {
+              this.mapLayerList.map.hideComparePhotoControl();
+            }
+          }
         }
     
     if ( item && item.id == CONFIG.FREERELIEFID )
@@ -14352,7 +14425,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     this.map = map;
     this.mapLayerList = mapLayerList;
     this.cocoTileLayer = cocoTileLayer;
-    this.mapLayerList.on( 'change', MA.bind( this.onMapLayerListChange, this ) )
+    this.mapLayerList.on( 'change', MA.bind( this.onMapLayerListChange, this ) );
     this.mapLayerList.on( 'tilechange', MA.bind( this.updateCombineLayer, this, 'tilechange' ) );
     GSI.Dialog.prototype.initialize.call(this, options);
 
@@ -14934,7 +15007,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   updateCombineLayer : function(callfrom)
   {
     var tileList = this.mapLayerList.getTileList();
-    
+
     var anyCombineEnabled = false;
     for ( var i=0; i<tileList.length; i++ )
     {
@@ -14949,7 +15022,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     var combineLayerIndex = tileList.length;
     
     var openCombineLayerFnc = function(){
-      
+
       if ( this._beforeCombineLayer )
       {
         layers.remove(this._beforeCombineLayer);
@@ -14966,7 +15039,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         }
         combineLayerIndex++;
       }
-      
+
       this._currentCombineLayer = layers.addImageryProvider(
         new Cesium.JapanGSICombineImageryProvider({
           tileList : tileList
@@ -14986,7 +15059,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       this._currentCombineLayer = undefined;
       
     }.bind(this);
-    
+
     if ( anyCombineEnabled )
     {
       openCombineLayerFnc();
@@ -15213,7 +15286,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   {
     var item = a.data( 'data' );
     var item_layer = item._visibleInfo.layer;
-    
+
     if(item._visibleInfo._isHidden)
     {
       item._visibleInfo._isHidden = false;
@@ -15234,6 +15307,12 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
           GSI.GLOBALS.evacDialog.show();
         }
       }
+
+      // 202303
+      if (item.id == CONFIG.COMPAREPHOTO_ID) {
+        this.mapLayerList.map.showComparePhotoControl();
+      }
+      
     }
     else
     {
@@ -15253,7 +15332,13 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       {
         GSI.GLOBALS.evacDialog.hide();
       }
-        }
+
+      // 202303
+      if (item.id == CONFIG.COMPAREPHOTO_ID) {
+        this.mapLayerList.map.hideComparePhotoControl();
+      }
+
+    }
 
     var cocoVisible = this.cocoTileLayer.getVisible();
     if (cocoVisible && item.cocotile && !item.hasTile )
@@ -15953,6 +16038,13 @@ GSI.MapLayerList = MA.Class.extend( {
         return;
       }
     }
+    // 202303 時系列表示を選択時
+    if (info.id==CONFIG.COMPAREPHOTO_ID) {
+      this.appendComparePhoto(info, isHide);
+      this.fire('tilechange');
+      this.fire('change');
+      return;
+    }
 
     var tileChanged = false;
     
@@ -16308,7 +16400,12 @@ GSI.MapLayerList = MA.Class.extend( {
       var info = list[i];
       if ( info._visibleInfo.layer )
       {
-        this.map.viewer.imageryLayers.lowerToBottom(info._visibleInfo.layer);
+        // 202303
+        if (info._isComparePhoto) {
+          this.map.viewer.imageryLayers.lowerToBottom(info._visibleInfo.layer._layer);
+        } else {
+          this.map.viewer.imageryLayers.lowerToBottom(info._visibleInfo.layer);
+        }
       }
     }
     
@@ -16418,6 +16515,11 @@ GSI.MapLayerList = MA.Class.extend( {
       //310-指定レイヤを削除
       if (targetInfo._visibleInfo.layer && targetInfo._visibleInfo.layer._remove) 
         targetInfo._visibleInfo.layer._remove( this.map.viewer );
+
+      // 202303
+      if (targetInfo.id == CONFIG.COMPAREPHOTO_ID) {
+        targetInfo._visibleInfo.layer.onRemove();
+      }
       
       targetInfo._visibleInfo = null;
       
@@ -16443,8 +16545,15 @@ GSI.MapLayerList = MA.Class.extend( {
       var info = this.tileList[i];
       //310-指定レイヤを削除
       
-      if (info._visibleInfo.layer && info._visibleInfo.layer._remove) 
-        info._visibleInfo.layer._remove( this.map.viewer );
+      if (info._visibleInfo.layer && info._visibleInfo.layer._remove) {
+        // 202303
+        if (info.id == CONFIG.COMPAREPHOTO_ID) {
+          info._visibleInfo.layer.onRemove();
+        } else {
+          info._visibleInfo.layer._remove( this.map.viewer );
+        }
+
+      }
       info._visibleInfo = null;
     }
     this.tileList =[];
@@ -16463,7 +16572,68 @@ GSI.MapLayerList = MA.Class.extend( {
   {
     return ( this.tileList ? this.tileList.length : 0 )
       + ( this.list ? this.list.length : 0 );
-  }
+  },
+
+  // 202303 時系列表示追加
+  appendComparePhoto : function(info, isHide) { 
+
+    if ( this.hasComparePhotoTile() ) return;
+
+    if ( !info._visibleInfo) {
+      var info = $.extend({}, info);
+      info.id = CONFIG.COMPAREPHOTO_ID;
+      info.title = "時系列表示";
+      info._visibleInfo = {};
+      info._visibleInfo._isHidden = ( isHide ? true : false );
+      info.initialOpacity = null;
+      info._visibleInfo.opacity = 1.0;
+      info._isComparePhoto = true;
+      if ( info._visibleInfo._isCombine == undefined ) info._visibleInfo._isCombine = true;
+
+      info._visibleInfo.layer = new GLOBE.ComparePhotoLayer(this.map, this, false, info);
+
+    }
+
+    info._visibleInfo.layer.alpha = info._visibleInfo.opacity;
+    info._visibleInfo.layer._setVisible(this.map.viewer, !info._visibleInfo._isHidden);
+    
+    // info._visibleInfo.layerの変更時のイベントを追加
+    info._visibleInfo.layer.on("change", MA.bind(function(info) {
+      var title = info._visibleInfo.layer.getActiveTitle();
+      var layerInfo = info._visibleInfo.layer.getLayerInfo();
+      if ( layerInfo.minZoom && layerInfo.minZoom > this.map.getCurrentZoom() ) {
+        title = null;
+      }
+      info.title = (title ? "時系列表示("+ title + ")" : "時系列表示" );
+      
+      this.fire("tilechange");
+      this.fire("change");
+    }, this, info));
+
+    this.tileList.unshift(info);
+    this._initZIndex(this.tileList);
+    
+    // 時系列選択レイヤを表示
+    if (!info._visibleInfo._isHidden) {
+      this.map.showComparePhotoControl();
+    }
+
+  },
+
+  // 202303 時系列表示が含まれるかチェック
+  hasComparePhotoTile : function() {
+
+    var result = false;
+    for (var i = 0; i < this.tileList.length; i++) {
+      if (this.tileList[i]._isComparePhoto) {
+        result = true;
+        break;
+      }
+    }
+    return result;
+
+  },
+
 } );
 
 GSI.Utils.infoToLayer = function( info, noFinishMove )
@@ -25568,3 +25738,965 @@ function getFileData(url, key) {
     });
   }
 };
+
+// 202303 時系列表示関連のオブジェクトを追加
+
+/************************************************************************
+ GLOBE.ComparePhotoControl（時系列選択）
+ ************************************************************************/
+ GLOBE.ComparePhotoControl = MA.Class.extend({
+
+  includes: MA.Mixin.Events,
+
+  initialize : function(map) {
+    this._photoList = CONFIG.COMPAREPHOTO_PHOTOLIST;
+
+    this._map = map;
+    this._mapContainer = $('#cesiumContainer');
+    this._parentContainer = GLOBE.DIALOG.COMPAREPHOTO;
+
+  },
+
+  refreshSize:function() {
+    this.adjust();
+  },
+
+  destroyEvents : function() {
+    if ( this._windowResizeHandler ) $(window).off("resize", this._windowResizeHandler);
+    this._windowResizeHandler = undefined;
+  },
+
+  destroyContainsChecker : function() {
+    if ( this._cocoTileLoader ) {
+      this._cocoTileLoader.stop();
+      this._cocoTileLoader = undefined;
+    }
+  },
+
+  show : function() {
+    if ( !this._container) {
+      this._create();
+
+    }
+
+    this.destroyContainsChecker();
+    this.destroyEvents();
+
+    this._windowResizeHandler = MA.bind(this._onWindowResize, this );
+    $(window).on("resize", this._windowResizeHandler);
+
+    this._container.css({"visibility":"hidden"});
+    this._container.show();
+
+    this._container.css({"visibility":"visible"});
+
+    if ( !this._cocoTileLoader ) {
+      this._cocoTileLoader = new GLOBE.ComparePhotoContainsChecker(this._map, this._photoList);
+      this._cocoTileLoader.on("load", MA.bind(function(evt){
+
+        var idList = evt.idList;
+        this._slider.refresh(idList);
+      },this))
+    }
+
+    this._cocoTileLoader.start();
+    this._slider.change();
+
+    this._parentContainer.container.show();
+
+    this.adjust();
+
+  },
+
+  _onWindowResize: function() {
+    this.refreshSize();
+  },
+
+  isVisible : function() {
+    return this._container.is(":visible");
+  },
+
+  hide : function() {
+
+    this.destroyContainsChecker();
+    this.destroyEvents();
+    if ( !this._container) return;
+    this._container.hide();
+    this._parentContainer.hide();
+  },
+
+  _onSliderChange : function(e) {
+    this.fire("select",{index:e.index});
+  },
+
+  refreshList : function(idList) {
+    this._slider.refresh(idList);
+  },
+
+  adjust : function() {
+    
+    this._slider.adjust(this._parentContainer);
+
+  },
+
+  _create : function() {
+    this._container = $("<div>").addClass("gsi_comparephoto_container").hide();
+
+    var table = $("<table>");
+    var tr = $("<tr>");
+    var td = $("<td>");
+    this._clearButton = $("<a>").attr({"href":"javascript:void(0);"}).addClass("normalbutton").html("時系列解除").hide();
+
+    this._slider = new GLOBE.ComparePhotoControl.Slider( this._container, td, this._photoList, this._clearButton);
+    this._slider.on("change", MA.bind(this._onSliderChange, this ));
+    this._slider.create();
+    tr.append(td);
+
+    this._clearButton.on("click", MA.bind(function(){
+      this._map._mapLayerList.remove({id:CONFIG.COMPAREPHOTO_ID });
+
+    }, this));
+
+    td = $("<td>");
+    td.append(this._clearButton);
+    tr.append(td);
+
+    table.append(tr);
+
+    this._container.append(table);
+    this._parentContainer.setDialogContent(this._container);
+
+    this._mapContainer.append(this._parentContainer);
+
+  },
+
+  setLeft: function(left) {
+    if ( !this._container) return;
+
+    this._container.css({"left": ( left ) +"px"});
+    this.adjust();
+  },
+
+  setRight: function(right) {
+
+    this._container.css({"right": ( right ) +"px"});
+    this.adjust();
+  },
+
+  destroy: function() {
+    if ( !this._container) return;
+    this._container.remove();
+  }
+});
+
+
+/************************************************************************
+GLOBE.ComparePhotoControl.Slider（時系列選択スライダー部分）
+************************************************************************/
+GLOBE.ComparePhotoControl.Slider = MA.Class.extend({
+
+  includes: MA.Mixin.Events,
+
+  initialize : function(ownerContainer, parentContainer, photoList, clearButton) {
+    this._clearButton = clearButton;
+    this._ownerContainer = ownerContainer
+    this._parentContainer = parentContainer;
+    this._photoList = photoList;
+    this._activeIndex = -1;
+    this._layerList = CONFIG.COMPAREPHOTO_PHOTOLIST;
+  },
+
+  setActiveIndex: function(index) {
+    if ( this._activeIndex == index ) return;
+
+    if ( index >= 0 ) {
+      this._handleContainer.css({
+        left : Math.round(this._list[index].left) + "px"
+      });
+    }
+
+    this._activeIndex = index;
+
+    this.change();
+
+  },
+
+  getActiveTitle: function() {
+    if ( this._activeIndex < 0 || this._activeIndex > this._layerList.length-1 ) return "";
+    var year = this._layerList[this._activeIndex].year;
+
+    return year.from + "年" + ( year.to ? "〜" + year.to + "年" : "" );
+  },
+
+  change:function() {
+    this.fire("change", {index:this._activeIndex});
+  },
+
+  refresh: function(idList) {
+
+    for( var i=0; i<this._photoList.length; i++ ) {
+      var photo = this._photoList[i];
+
+      const id = photo.id;
+
+      if ( idList.indexOf( id ) >= 0 ) {
+        this._list[i].label.addClass("haslayer");
+      } else {
+        this._list[i].label.removeClass("haslayer");
+      }
+    }
+  },
+
+  adjust: function(parentContainer) {
+
+    var container = this._ownerContainer;
+    if (parentContainer) container = parentContainer.container;
+
+    var isSmall = container.outerWidth() < 800;
+
+    if ( isSmall ) {
+      this._container.addClass("small");
+      if ( container.outerWidth() < 500 ) {
+        this._clearButton.html("×");
+        this._clearButton.addClass("small");
+      } else {
+        this._clearButton.html("解除");
+        this._clearButton.removeClass("small");
+      }
+    } else {
+      this._container.removeClass("small");
+      this._clearButton.html("時系列解除");
+      this._clearButton.removeClass("small");
+    }
+
+    var containerWidth = this._barContainer.outerWidth();
+
+    var sizeInterval =containerWidth / ( this._list.length -1);
+    var left = 0;
+    for( var i=0; i<this._list.length; i++ ) {
+      var item = this._list[i];
+      item.left = left;
+      item.elem.css({
+        left: Math.round(left) + "px"
+      });
+
+      item.label.css({
+        left: Math.round(left - (item.label.outerWidth() / 2) ) + "px"
+      });
+
+      if ( isSmall && i %2 == 1) {
+        item.label.addClass("top");
+      } else {
+        item.label.removeClass("top");
+      }
+
+      if ( this._activeIndex == i ) {
+        this._handleContainer.css({
+          left : Math.round(left) + "px"
+        });
+      }
+
+      left += sizeInterval;
+    }
+  },
+
+  create : function() {
+    if ( this._container ) return;
+
+    this._container = $("<div>").addClass("gsi_comparephoto_slider_container");
+
+    this._container.on("click", MA.bind( this._onContainerClick,this));
+
+    // 背景用バー
+    this._barContainer = $("<div>").addClass("gsi_comparephoto_slider_container_bar");
+
+    // メモリ
+    this._list = [];
+    for( var i=0; i<this._photoList.length; i++ ) {
+      var photo = this._photoList[i];
+      var item = {};
+
+      item.elem = $("<div>").addClass("gsi_comparephoto_slider_container_bar_line");
+      item.label = $("<div>").addClass("gsi_comparephoto_slider_container_bar_label");
+
+      item.label.html(
+        photo.year.from + ( photo.year.to ? "<br>〜" + photo.year.to : ""));
+
+      if ( i === 0 || i===this._photoList.length-1 ) {
+        item.elem.hide();
+      }
+
+      this._barContainer.append( item.label);
+      this._barContainer.append( item.elem);
+
+      this._list.push( item );
+    }
+
+    // つまみ
+    this._handleContainer = $("<div>").addClass("gsi_comparephoto_slider_container_handle");
+
+    this._handleContainer.on("mousedown", MA.bind(this._onHandleMouseDown, this));
+    this._handleContainer.on("touchstart", MA.bind(this._onHandleMouseDown, this));
+
+    this._barContainer.append( this._handleContainer);
+    this._container.append( this._barContainer);
+
+    this.setActiveIndex(0);
+
+    this._parentContainer.append(this._container);
+
+  },
+
+  destroyMouseEvents : function() {
+    this._container.removeClass("dragging");
+
+    if ( this._mouseMoveHandler ) {
+      $(window).off("mousemove", this._mouseMoveHandler);
+      $(window).off("touchmove", this._mouseMoveHandler);
+      this._mouseMoveHandler = undefined;
+    }
+    if ( this._mouseUpHandler ) {
+      $(window).off("mouseup", this._mouseUpHandler);
+      $(window).off("touchend", this._mouseUpHandler);
+      this._mouseUpHandler = undefined;
+    }
+  },
+
+  _onContainerClick : function(e) {
+    var targetIndex = this._screenLeftToIndex(e.pageX );
+    if ( targetIndex >= 0 ) {
+      this.setActiveIndex(targetIndex);
+    }
+  },
+
+  _onHandleMouseDown : function(e) {
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    this.destroyMouseEvents();
+
+    this._mouseMoveHandler = MA.bind( this._onWindowMouseMove, this);
+    this._mouseUpHandler = MA.bind( this._onWindowMouseUp, this);
+    $(window).on("mousemove", this._mouseMoveHandler);
+    $(window).on("touchmove", this._mouseMoveHandler);
+    $(window).on("mouseup", this._mouseUpHandler);
+    $(window).on("touchend", this._mouseUpHandler);
+
+    this._container.addClass("dragging");
+
+  },
+
+  _screenLeftToIndex : function ( screenLeft ) {
+
+    var left = 0;
+    var barPosition = this._barContainer.offset();
+
+    left =  screenLeft- barPosition.left;
+
+    var containerWidth = this._barContainer.outerWidth();
+
+    var sizeInterval =containerWidth / ( this._list.length -1);
+    var lineLeft = 0;
+    var minDistance = undefined;
+    var targetIndex = -1;
+    for( var i=0; i<this._list.length; i++ ) {
+      var item = this._list[i];
+      item.left = lineLeft;
+
+      var distance = Math.abs( item.left - left );
+      if ( minDistance === undefined || minDistance > distance ) {
+        targetIndex = i;
+        minDistance = distance;
+      }
+      lineLeft += sizeInterval;
+    }
+
+    return targetIndex;
+  },
+
+  _onWindowMouseMove : function(e) {
+
+    var pageX = e.pageX;
+    if ( e.type =="touchmove") {
+      pageX = e.originalEvent.changedTouches[0].pageX;
+    }
+
+    var targetIndex = this._screenLeftToIndex(pageX );
+
+    if ( targetIndex >= 0 ) {
+      this.setActiveIndex(targetIndex);
+    }
+  },
+
+  _onWindowMouseUp : function(e) {
+    this.destroyMouseEvents();
+
+  }
+});
+
+
+/************************************************************************
+GLOBE.ComparePhotoLayer（時系列表示レイヤ）initにlayerを追加
+************************************************************************/
+GLOBE.ComparePhotoLayer = MA.TileLayer.extend( {
+
+  activeIndex: 0,
+  isGrayScale: false,
+  opacity: 1,
+  isTileImage: true,
+
+  initialize: function (map, mapLayerList, defaultMapGrayScale, layerInfo) {
+    this._map = map;
+    this._mapLayerList = mapLayerList;
+    this.activeIndex = 0;
+    this.activeIndexPre = -1;
+    this._layerInfo = layerInfo;
+    this._layerList = CONFIG.COMPAREPHOTO_PHOTOLIST;
+
+    options = MA.setOptions(this, {});
+//    options.minZoom = 2;
+    this.setActiveIndex(this.activeIndex);
+    this.setGrayScale(defaultMapGrayScale);
+    this.onAdd(this._map);
+
+    if (!MA.android) {
+      this.on('tileunload', this._onTileRemove);
+    }
+  },
+
+  getLayerInfo : function() {
+    return this._layerInfo;
+  },
+
+  getOpacity: function (opacity) {
+    return this.opacity;
+  },
+  setOpacity: function (opacity) {
+    this.opacity = opacity;
+    this.options.opacity = opacity;
+    if ( this._layer ) {
+      this._layer.setOpacity( opacity );
+    }
+  },
+
+  // getAttribution: function () {
+  //   if (this._layerList[this.activeIndex].attribution) {
+  //     return this._layerList[this.activeIndex].attribution;
+  //   }
+  //   return "";
+  // },
+
+  getActiveTitle: function() {
+    if ( this.activeIndex < 0 || this.activeIndex > this._layerList.length-1 ) return "";
+    var year = this._layerList[this.activeIndex].year;
+
+    return year.from + "年" + ( year.to ? "〜" + year.to + "年" : "" );
+  },
+
+  getActiveId: function () {
+    return this._layerList[this.activeIndex].id;
+  },
+  getActiveIndex: function () {
+    return this.activeIndex;
+  },
+  setActiveId: function (id) {
+    for (var i = 0; i < this._layerList.length; i++) {
+      if (this._layerList[i].id == id) {
+        this.setActiveIndex(i);
+      }
+    }
+  },
+  setActiveIndex: function (idx) {
+
+    if (this.activeIndexPre == -1 || this.activeIndexPre != idx) {
+      this.activeIndex = idx;
+
+      var url = this._layerList[idx].url;
+      var options = {};
+
+      if (this._layerList[idx].subdomains) {
+        options.subdomains = this._layerList[idx].subdomains;
+      }
+      options.maxNativeZoom = this._layerList[idx].maxNativeZoom;
+
+      if (this._layerList[idx].maxZoom) {
+        options.maxZoom = this._layerList[idx].maxZoom;
+      } else {
+        options.maxZoom = 18;
+      }
+
+      if (this._layerList[idx].minZoom) {
+        options.minZoom = this._layerList[idx].minZoom;
+      }
+      if (!options.maxNativeZoom) options.maxNativeZoom = 18;
+
+      var errorTileUrl = "image/map/no-data.png";
+      if (errorTileUrl) {
+        errorTileUrl = this._layerList[idx].errorTileUrl;
+      }
+      options.errorTileUrl = errorTileUrl;
+
+      // 前の時系列レイヤーは削除
+      var deletePos = null;
+      if ( this._layer && this._mapLayerList) {
+        deletePos = this._remove();
+      }
+
+//      var zIndex = undefined;
+      if ( this._layerList[idx].type == "LayerGroup") {
+
+        this._layer = new GLOBE.MultiLayer( this._layerList[idx].entries);
+        this._layer.isGrayScale = this.isGrayScale;
+        this._layer.setOpacity( this.options.opacity ? this.options.opacity : this.opacity );
+        this._layer.load();
+      } else {
+
+        this._layerInfo.url = url;
+        $.extend(this._layerInfo, options);
+
+        if (this._map) {
+          var layers = this._map.viewer.imageryLayers;
+
+          this._layer = layers.addImageryProvider(
+           new Cesium.JapanGSIImageryProvider(this._layerInfo),
+           deletePos
+          );
+
+        }
+
+      }
+
+      this._mapLayerList.fire('tilechange');
+      this._mapLayerList.fire('change'); 
+
+      this.fire("change", {index:this.activeIndex});
+    }
+    this.activeIndexPre = this.activeIndex;
+
+  },
+
+  onAdd  : function(map) {
+
+    if ( this._layerInfo && !this._map) {
+
+      this._layerInfo._visibleInfo.opacity = this.options.opacity ? this.options.opacity :this.opacity;
+      
+      var layers = this._map.viewer.imageryLayers;
+
+      this._layer = layers.addImageryProvider(
+      new Cesium.JapanGSIImageryProvider(this._layerInfo)
+      );
+
+    }
+
+    if ( !this._selectHandler ) {
+      this._selectHandler = MA.bind(function(e){
+        this.setActiveIndex(e.index);
+      }, this);
+    }
+
+    var control = this._map.getComparePhotoControl();
+
+    if ( control ) {
+      control.on("select",this._selectHandler );
+    }
+
+    this._setMoveEnd(true);
+
+  },
+
+  _onZoomEnd:function() {
+    this.fire("change", {index:this.activeIndex});
+  },
+
+  onRemove : function() {
+
+    this._setMoveEnd(false);
+
+    if ( this._layer ) this._remove();
+
+    var control = this._map.hideComparePhotoControl();
+
+    if ( this._selectHandler)
+      control.off("select",this._selectHandler );
+
+  },
+
+  // setZIndex: function(zIndex) {
+  //   if ( this._layer ) {
+  //     this._layer.setZIndex(zIndex);
+  //   }
+  // },
+  getGrayScale: function () {
+    return this.isGrayScale;
+  },
+  setGrayScale: function (isGrayScale) {
+
+    if (this.isGrayScale != isGrayScale) {
+      this.isGrayScale = isGrayScale;
+      if ( this._layer ) {
+        this._layer.isGrayScale = this.isGrayScale;
+        this._layer.redraw();
+      }
+    }
+  },
+
+  _getZoomForUrl: function () {
+
+    var zoom = this._tileZoom,
+      maxZoom = this.options.maxZoom,
+      zoomReverse = this.options.zoomReverse,
+      zoomOffset = this.options.zoomOffset;
+
+    this.options.tileSize = 256;
+
+    if (zoomReverse) {
+      zoom = maxZoom - zoom;
+    }
+
+    return zoom + zoomOffset;
+  },
+
+  _tileOnLoad: function (done, tile) {
+    var layer = this;
+    var img = tile;
+
+    if (layer && layer.isGrayScale && img.src !== L.Util.emptyImageUrl) {
+      $(img).addClass("grayscale");
+      if (GSI.Utils.Browser.ie) {
+        if (GSI.Utils.Browser.version >= 10) {
+          if (!$(img).data("_src") && img.src.indexOf("data:") < 0) {
+            $(img).data({ "_src": this.src });
+            img.src = this.grayscaleIE1011(img);//.src );
+          }
+        }
+        else {
+          $(img).css({ 'filter': 'gray', opacity: layer.opacity });
+        }
+      }
+    }
+
+    L.TileLayer.prototype._tileOnLoad.call(this, done, tile);
+  },
+  grayscaleIE1011: function (img) //src)
+  {
+    var size = this.getTileSize();
+
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = size.x;
+    canvas.height = size.y;
+    ctx.drawImage(img, 0, 0);
+    var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+    for (var y = 0; y < imgPixels.height; y++) {
+      for (var x = 0; x < imgPixels.width; x++) {
+        var i = (y * 4) * imgPixels.width + x * 4;
+        var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+        imgPixels.data[i] = avg;
+        imgPixels.data[i + 1] = avg;
+        imgPixels.data[i + 2] = avg;
+      }
+    }
+    ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+
+    return canvas.toDataURL();
+  },
+  createTile: function (coords, done) {
+    var tile = L.TileLayer.prototype.createTile.call(this, coords, done);
+
+    if (this.isGrayScale) {
+      if (GSI.Utils.Browser.ie && GSI.Utils.Browser.version >= 10)
+        $(tile).attr({ 'crossOrigin': 'Anonymous' });
+      $(tile).addClass("grayscale");
+      if (GSI.Utils.Browser.ie && GSI.Utils.Browser.version < 10) {
+        $(tile).css({ 'filter': 'gray', opacity: this.opacity });
+      }
+    }
+    return tile;
+  },
+  _resetTile: function (tile) {
+    $(tile).data({ "_src": null });
+  },
+
+  _setVisible: function(viewer,visible) {
+    this.show = visible;
+    this._layerInfo._visibleInfo._isHidden = !visible;
+
+    var index = this._map.viewer.scene.imageryLayers.indexOf(this._layer);
+    if (index != -1) {
+      this._map.viewer.scene.imageryLayers._layers[index].show = visible;
+    }
+
+    // moveEndを操作
+    this._setMoveEnd(visible);
+
+  },
+
+  _remove: function() {
+
+    var index = this._map.viewer.scene.imageryLayers.indexOf(this._layer);
+
+    this._map.viewer.scene.imageryLayers.remove(this._layer, false);
+
+    return index;
+
+  },
+
+  setAlpha : function( alpha )
+  {
+    this._layer.alpha = alpha;
+
+  },
+
+  _setMoveEnd : function(visible) {
+
+    if ( !this._moveEndHandler && visible ) {
+      this._moveEndHandler = MA.bind(this._onZoomEnd,this );
+      this._map.viewer.camera.moveEnd.addEventListener( this._moveEndHandler );
+
+    }
+
+    if ( this._moveEndHandler && !visible) {
+      this._map.viewer.camera.moveEnd.removeEventListener(this._moveEndHandler);
+      this._moveEndHandler = undefined;
+    }
+
+  }
+
+
+});
+
+
+/************************************************************************
+GLOBE.ComparePhotoContainsChecker
+************************************************************************/
+GLOBE.ComparePhotoContainsChecker = MA.Class.extend( {
+
+  includes: MA.Mixin.Events,
+
+  initialize : function(map, photoList) {
+    this._map = map;
+    this._photoList = photoList;
+  },
+
+  start : function() {
+
+    if ( !this._onMapMoveEndHandler ) {
+      this._onMapMoveEndHandler = MA.bind( this._onMapMoveEnd, this );
+      this._map.viewer.camera.moveEnd.addEventListener(this._onMapMoveEndHandler);
+    }
+
+    this._onMapMoveEndHandler();
+  },
+
+  stop : function() {
+
+    this._destroyRequest();
+    if ( this._onMapMoveEndHandler) {
+      this._map.viewer.camera.moveEnd.removeEventListener(this._onMapMoveEndHandler);
+      this._onMapMoveEndHandler = undefined;
+    }
+  },
+
+  _destroyRequest: function() {
+    if ( this._requests ) {
+      for( var i=0; i<this._requests.length; i++ ) {
+        this._requests[i].request.abort();
+      }
+
+      this._requests = undefined;
+    }
+  },
+
+  _getTileX: function (z, lon) {
+    var lng_rad = lon * Math.PI / 180; var R = 128 / Math.PI; var worldCoordX = R * (lng_rad + Math.PI);
+    var pixelCoordX = worldCoordX * Math.pow(2, z); var tileCoordX = Math.floor(pixelCoordX / 256);
+    return { n: tileCoordX, px: Math.floor(pixelCoordX - tileCoordX * 256) };
+  },
+
+  _getTileY: function (z, lat) {
+    var lat_rad = lat * Math.PI / 180; var R = 128 / Math.PI; var worldCoordY = - R / 2 * Math.log((1 + Math.sin(lat_rad)) / (1 - Math.sin(lat_rad))) + 128; var pixelCoordY = worldCoordY * Math.pow(2, z); var tileCoordY = Math.floor(pixelCoordY / 256);
+    return { n: tileCoordY, px: Math.floor(pixelCoordY - tileCoordY * 256) };
+  },
+
+  _onMapMoveEnd : function() {
+
+    var z = this._map.getZoomFromHeight();
+    var center = this._map.getCenterPosition(true);
+
+    var hash = {};
+
+    for( var i=0; i<this._photoList.length; i++ ) {
+      var photo = this._photoList[i];
+      var maxNativeZoom = photo.maxNativeZoom;
+      var url = CONFIG.COMPAREPHOTO_COCOTILEURL;
+
+      if ( maxNativeZoom && maxNativeZoom < z ) {
+
+        if( hash[maxNativeZoom+""] ) continue;
+
+        var x = this._getTileX(maxNativeZoom, center[1]);
+        var y = this._getTileY(maxNativeZoom, center[0]);
+        url = url.replace( "{x}", x.n).replace( "{y}", y.n).replace("{z}", maxNativeZoom);
+        hash[maxNativeZoom+""] = url;
+      } else {
+        if( hash[z+""] ) continue;
+        var x = this._getTileX(z, center[1]);
+        var y = this._getTileY(z, center[0]);
+        url = url.replace( "{x}", x.n).replace( "{y}", y.n).replace("{z}", z );
+
+        hash[z+""] = url;
+      }
+    }
+
+    this._requests = [];
+    this._idList = [];
+    for( var key in hash) {
+      var url = hash[key];
+      var request = $.ajax({
+        type: "GET",
+        url: url,
+        datatype: "text",
+        cache: false,
+      })
+      .done(MA.bind(function (data) {
+        try {
+          var ids = data.split(",");
+          for( var i=0; i<ids.length; i++ ) {
+            if ( this._idList.indexOf(ids[i]) < 0 ) {
+              this._idList.push(ids[i]);
+            }
+          }
+        }catch(ex) {
+
+        }
+      },this ) )
+      .always(MA.bind(function(req1,b,req2) {
+        var loaded = true;
+        for( var i=0; i<this._requests.length; i++ ) {
+          if ( req1 == this._requests[i].request || req2 == this._requests[i].request) {
+            this._requests[i].loaded = true;
+          }
+
+          if ( !this._requests[i].loaded ) {
+            loaded = false;
+          }
+        }
+
+        if ( loaded ) {
+          this.fire("load", {idList:this._idList});
+        }
+      }, this ) );
+
+      this._requests.push( {
+        request : request,
+        loaded : false
+      });
+    }
+
+  }
+});
+
+
+/************************************************************************
+ GLOBE.DIALOG.COMPAREPHOTO（時系列表示レイヤダイアログ）
+ ************************************************************************/
+ GLOBE.DIALOG.COMPAREPHOTO = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_comparephoto'), {
+  options: {
+    title: '時系列表示'
+  },
+  defaultTop:   '5%',
+  defaultLeft:  '10%',
+  defaultRight: 'auto',
+  defaultBottom:'auto',
+  
+  resizable: true,
+
+  initialize: function() {
+    this._photoLayerList = CONFIG.COMPAREPHOTO_PHOTOLIST;
+    this._activeIndex = -1;
+  },
+  
+  create: function()
+  {
+    this.initialize();
+    this.createDialog();
+    this.initPosition();
+
+    this.setDialogHeader(this.createHeader());
+//    this.setDialogContent(this.createContent());
+  },
+  
+  initPosition: function()
+  {
+    this.container
+        .css({
+        'color': '#fff',
+        'background': '#333',
+        'opacity': '.90',
+        'width': '80%',
+        'min-width': '88px'
+      });
+    
+    this.container.css('top', this.defaultTop);
+    this.container.css('left', this.defaultLeft);
+    this.container.css('right', this.defaultRight);
+    this.container.css('bottom', this.defaultBottom);
+    
+    this.contentFrame.css({
+      'padding': '10px',
+      'background-color': '#333',
+      'color': '#fff'
+    });
+  },
+
+  createHeader : function()
+  {
+    this._title = $( '<div>' ).html( this.options.title );
+    return $( '<div>' ).append( this._title );
+  },
+
+  createContent : function()
+  {
+    this._content = $('<div>').addClass("gsi_comparephoto_slider_container");
+
+    this._content.append(this._barContainer);
+
+//    this.setActiveIndex(0);
+
+    return this._content;
+  },
+  
+  onBeforeShow: function()
+  {
+    this.initPosition();
+  },
+  
+  onDragStart: function()
+  {
+    this.container.css({
+      'right': 'auto',
+      'bottom': 'auto'
+    });
+  },
+
+  setActiveIndex: function(index) {
+    if (this._activeIndex == index) return;
+
+    if ( index >= 0 ) {
+      this._handleContainer.css({
+        left : Math.round(this._list[index].left) + "px"
+      });
+    }
+
+    this._activeIndex = index;
+
+    this.change();
+
+  },
+
+
+});
+

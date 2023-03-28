@@ -47,7 +47,7 @@ function getElementSize(elem){
  ************************************************************************/
 function url2LayerType( url ){
 	if ( !url ) return null;
-	url = $.trim( url );
+	url = (url) ? url.trim() : '';
 
 	if(url.match( /\{tms\}/ )){
 		return "tms";
@@ -218,7 +218,7 @@ $(function (){
 		    .tree('reset', oFrame[nFrame], null, "layers.txt");
     }
 
-	$(window).resize(adjustWindow);
+	$(window).on('resize',adjustWindow);
 	adjustWindow();
 } );
 
@@ -232,7 +232,7 @@ $(function (){
         var o = _options.o;
 
 		// 新規
-		this.find( '*[menu_method=new]' ).click(
+		this.find( '*[menu_method=new]' ).on('click',
             function(){
     			if(confirm( '現在編集中の情報は破棄されます。よろしいですか？' )){
 				    o.oTree.tree('reset', o, null, "layers.txt");
@@ -287,7 +287,7 @@ $(function (){
             }
 		}
 
-		this.find( 'li a' ).unbind().data( { '_o' : o, '_target' : _options.targetElem } );
+		this.find( 'li a' ).off().data( { '_o' : o, '_target' : _options.targetElem } );
 		this.find( 'li a' ).on('click', 
             function(){
 			    if(_options.onClick){
@@ -317,11 +317,11 @@ $(function (){
         var o = _options.o;
 
 		var container = o.oMenuLoad;
-		var fileInput = $("input[type=file]").eq(o.n).change(function(){ _fileCheck(); });
+		var fileInput = $("input[type=file]").eq(o.n).on('change',function(){ _fileCheck(); });
 		var reader = null;
 
 		// 表示
-		this.click(
+		this.on('click',
             function(){
                 container[0].style.top = o.vPosT + "px";
 			    container.fadeIn();
@@ -329,14 +329,14 @@ $(function (){
         );
 
 		// 中止
-		container.find("*[load_method=cancel]").click(
+		container.find("*[load_method=cancel]").on('click',
             function(){
 			    container.fadeOut();
 		    }
         );
 
 		// 読み込み
-		container.find("*[load_method=load]").click(
+		container.find("*[load_method=load]").on('click',
             function(){
 			    if(_fileCheck()){
 				    var files = fileInput.prop('files');
@@ -542,25 +542,25 @@ $(function (){
 					return false;
 				}
             )
-			.click(
+			.on('click',
                 function(){
 					$this.tree("select", o, this);
 				}
             )
-			.dblclick(
+			.on('dblclick',
                 function(){
 					_openFolder(this);
 				}
             );
             
-        if ( item.id && $.trim(item.id) !="" ) title.addClass( "file" );
+        if ( item.id && item.id.trim() !="" ) title.addClass( "file" );
         else  title.removeClass( "file" );
 		item._element = title;
 
 		if(item.children){
 			var arrow = $( "<a>" ).attr({'href':'javascript:void(0);'})
 				.html("&nbsp;").addClass("arrow")
-				.click(
+				.on('click',
                     function(){
                         $(this).addClass( 'open' );
                         _openFolder($(this).next('a'));
@@ -655,7 +655,7 @@ $(function (){
 					    var _data     = (data._editedData ? data._editedData : data);
 					    var titleText = (_data.title && _data.title != '' ? _data.title : '<span style="color:#999;">名称未設定</span>');
 					    
-        				if ( _data.id && $.trim(_data.id) !="" ) $(target).addClass( "file" )
+        				if ( _data.id && _data.id.trim() !="" ) $(target).addClass( "file" )
         				else $(target).removeClass("file");
 					    $(target).html(titleText);
                         //??-DELETE
@@ -683,7 +683,7 @@ $(function (){
 					var li = _createTreeItem(o, this, newFolder);
 					var ul = this.find('ul');
 					$(ul[0]).append(li);
-					li.children("a").click();
+					li.children("a").trigger('click');
 					break;
 
 				case "createfolder_next":
@@ -733,7 +733,7 @@ $(function (){
 						var li = _createTreeItem(o, this, newFolder);
 						ul.append( li );
 					}
-					li.children("a").click();
+					li.children("a").trigger('click');
 
 					break;
 
@@ -753,7 +753,7 @@ $(function (){
 
 					var li = _createTreeItem(o, this, newFolder);
 					ul.append( li );
-					li.children("a").click();
+					li.children("a").trigger('click');
 					break;
 
 				case "remove":
@@ -795,14 +795,14 @@ $(function (){
                     }
 					var title = (item.title && item.title != '' ? item.title : '<span style="color:#999;">名称未設定</span>');
 					
-    				if ( item.id && $.trim(item.id) !="" ) targetFolderElem.addClass( "file" )
+    				if ( item.id && item.id.tirm() !="" ) targetFolderElem.addClass( "file" )
     				else targetFolderElem.removeClass("file");
 					targetFolderElem.html(title);
                     //??-DELETE
                     // + (item.children ? '<span class="num">' + item.children.length + '</span>' : '')
 
 					if(!targetFolderElem.data('_expanded')){
-						targetFolderElem.dblclick();
+						targetFolderElem.trigger('dblclick');
                     }
 				}
 			}
@@ -906,7 +906,7 @@ $(function (){
 
 
                                 _insertAfterClickEvt = function(o, a){
-                                    a.unbind();
+                                    a.off();
 			                        a.on("contextmenu",
                                         function(){
                                             var data  = $(this).data("_data")._editedData;
@@ -929,7 +929,7 @@ $(function (){
 					                        return false;
 				                        }
                                     );
-			                        a.click(
+			                        a.on('click',
                                         function(){
                                             $this.tree("select", o, this);
 				                        }
@@ -1112,7 +1112,7 @@ $(function (){
 			    }
             );
 
-            o.oEdit.find("input,textarea,select").unbind();
+            o.oEdit.find("input,textarea,select").off();
 		},
 
 		set : function(o, data, options)
@@ -1213,15 +1213,15 @@ $(function (){
                 var fEditLayer     = o.oEdit.find(".edit_folder");
 				var fEditLayerForm = fEditLayer.find("form[name=folder]");
 
-				fEditLayerForm.find("input[name=title]"          ).val(_data.title                           ).bind("blur", this, onBlur);
-				fEditLayerForm.find("input[name=iconUrl]"        ).val(_data.iconUrl   ? _data.iconUrl   : "").bind("blur", this, onBlur);
-                fEditLayerForm.find("input[name=layersUrl]"      ).val(_data.layersUrl ? _data.layersUrl : "").bind("blur", this, onBlur);
+				fEditLayerForm.find("input[name=title]"          ).val(_data.title                           ).on("blur", this, onBlur);
+				fEditLayerForm.find("input[name=iconUrl]"        ).val(_data.iconUrl   ? _data.iconUrl   : "").on("blur", this, onBlur);
+                fEditLayerForm.find("input[name=layersUrl]"      ).val(_data.layersUrl ? _data.layersUrl : "").on("blur", this, onBlur);
 				if(fEditLayerForm.find("input[name='toggleall']" ).length > 0){
-					fEditLayerForm.find("input[name='toggleall']").prop({"checked":_data.toggleall ? true : false } ).bind("click", this, onBlur);
+					fEditLayerForm.find("input[name='toggleall']").prop({"checked":_data.toggleall ? true : false } ).on("click", this, onBlur);
                 }
                 
-				fEditLayerForm.find( "input[name=id]" ).val($.trim(_data.id )).bind("blur", this, onBlur);
-				fEditLayerForm.find( "input[name=tolayer]" ).off("click").bind("click", this, function(e){
+				fEditLayerForm.find( "input[name=id]" ).val((_data.id) ? _data.id.trim() : '').on("blur", this, onBlur);
+				fEditLayerForm.find( "input[name=tolayer]" ).off("click").on("click", this, function(e){
 					methods.fixEdit.apply(e.data, [o]);
 					if( $(this).is(":checked") )
 					{
@@ -1234,7 +1234,7 @@ $(function (){
 						fEditLayerForm.find( ".id_frame" ).hide();
 					}
 				});
-                if ( _data.id && $.trim(_data.id ) != "" )
+                if ( _data.id && _data.id.trim() != "" )
                 {
 					fEditLayerForm.find( "input[name=tolayer]" ).prop({"checked":true} );
 					fEditLayerForm.find( ".id_frame" ).show();
@@ -1260,22 +1260,22 @@ $(function (){
 				}
 
 				if(_data.type){
-					fEditLayerForm.find("input[name='type']").val ([_data.type]     ).bind("click", this, onLayerTypeChange);
+					fEditLayerForm.find("input[name='type']").val ([_data.type]     ).on("click", this, onLayerTypeChange);
 				}
 				else{
-					fEditLayerForm.find("input[name='type']").attr({checked : false}).bind("click", this, onLayerTypeChange);
+					fEditLayerForm.find("input[name='type']").attr({checked : false}).on("click", this, onLayerTypeChange);
 				}
 
-				fEditLayerForm.find("input[name='id']"            ).val(_data.id            ? _data.id            : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("input[name='title']"         ).val(_data.title         ? _data.title         : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("input[name=iconUrl]"         ).val(_data.icon          ? _data.icon          : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("input[name=url]"             ).val(_data.url           ? _data.url           : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("input[name=subdomains]"      ).val(_data.subdomains    ? _data.subdomains    : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("input[name=attribution]"     ).val(_data.attribution   ? _data.attribution   : "").bind("blur"  , this, onBlur);
-                fEditLayerForm.find("input[name=errorTileUrl]"    ).val(_data.errorTileUrl  ? _data.errorTileUrl  : "").bind("blur"  , this, onBlur); 
-                fEditLayerForm.find("input[name=styleurl]"    ).val(_data.styleurl  ? _data.styleurl  : "").bind("blur"  , this, onBlur);                 
+				fEditLayerForm.find("input[name='id']"            ).val(_data.id            ? _data.id            : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("input[name='title']"         ).val(_data.title         ? _data.title         : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("input[name=iconUrl]"         ).val(_data.icon          ? _data.icon          : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("input[name=url]"             ).val(_data.url           ? _data.url           : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("input[name=subdomains]"      ).val(_data.subdomains    ? _data.subdomains    : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("input[name=attribution]"     ).val(_data.attribution   ? _data.attribution   : "").on("blur"  , this, onBlur);
+                fEditLayerForm.find("input[name=errorTileUrl]"    ).val(_data.errorTileUrl  ? _data.errorTileUrl  : "").on("blur"  , this, onBlur); 
+                fEditLayerForm.find("input[name=styleurl]"    ).val(_data.styleurl  ? _data.styleurl  : "").on("blur"  , this, onBlur);                 
 				if(fEditLayerForm.find("input[name='cocotile']"   ).length > 0){
-					fEditLayerForm.find("input[name='cocotile']"  ).prop({"checked" : _data.cocotile ? true : false }).bind("click"  , this, onBlur);
+					fEditLayerForm.find("input[name='cocotile']"  ).prop({"checked" : _data.cocotile ? true : false }).on("click"  , this, onBlur);
                 }
                 
                 var southWest = "";
@@ -1287,14 +1287,14 @@ $(function (){
 					northEast =  _data.bounds[1][0] + "," + _data.bounds[1][1];
 				}
 				
-				fEditLayerForm.find("input[name=bounds_southwest]"    ).val(southWest).bind("blur"  , this, onBlur );
-				fEditLayerForm.find("input[name=bounds_northeast]"    ).val(northEast).bind("blur"  , this, onBlur );
+				fEditLayerForm.find("input[name=bounds_southwest]"    ).val(southWest).on("blur"  , this, onBlur );
+				fEditLayerForm.find("input[name=bounds_northeast]"    ).val(northEast).on("blur"  , this, onBlur );
 					
-				fEditLayerForm.find("select[name='minZoom']"      ).val(_data.minZoom       ? _data.minZoom       : "").bind("change", this, onBlur);
-				fEditLayerForm.find("select[name='maxZoom']"      ).val(_data.maxZoom       ? _data.maxZoom       : "").bind("change", this, onBlur);
-				fEditLayerForm.find("select[name='maxNativeZoom']").val(_data.maxNativeZoom ? _data.maxNativeZoom : "").bind("change", this, onBlur);
-			    fEditLayerForm.find("input[name=legendUrl]"       ).val(_data.legendUrl     ? _data.legendUrl     : "").bind("blur"  , this, onBlur);
-				fEditLayerForm.find("textarea[name=html]"         ).val(_data.description   ? _data.description   : "").bind("blur"  , this, onBlur);
+				fEditLayerForm.find("select[name='minZoom']"      ).val(_data.minZoom       ? _data.minZoom       : "").on("change", this, onBlur);
+				fEditLayerForm.find("select[name='maxZoom']"      ).val(_data.maxZoom       ? _data.maxZoom       : "").on("change", this, onBlur);
+				fEditLayerForm.find("select[name='maxNativeZoom']").val(_data.maxNativeZoom ? _data.maxNativeZoom : "").on("change", this, onBlur);
+			    fEditLayerForm.find("input[name=legendUrl]"       ).val(_data.legendUrl     ? _data.legendUrl     : "").on("blur"  , this, onBlur);
+				fEditLayerForm.find("textarea[name=html]"         ).val(_data.description   ? _data.description   : "").on("blur"  , this, onBlur);
 
 				onLayerTypeChangeProc(o);
 
@@ -1337,7 +1337,7 @@ $(function (){
 		var container = o.oMenuSave;
 
 		// 表示
-		this.click(
+		this.on('click',
             function() {
                 container[0].style.top = o.vPosT + "px";
 
@@ -1356,18 +1356,18 @@ $(function (){
 				    return;
 			    }
 
-			    $("input[name=download_text_indent]").eq(o.n).unbind();
-			    $("input[name=download_text_indent]").eq(o.n).bind( "click", this, 
+			    $("input[name=download_text_indent]").eq(o.n).off();
+			    $("input[name=download_text_indent]").eq(o.n).on( "click", this, 
                     function(e) {
     				    var info = o.oEdit.data("_info");
 				        $('textarea[name="download_text"]').eq(o.n).val(_makeLayersJSONText(o, info.treeData, this.checked));
                     }
 			    );
 
-			    var a = $("*[save_method=load]").eq(o.n).unbind();
+			    var a = $("*[save_method=load]").eq(o.n).off();
 
 			    $('input[name="download_filename"]').eq(o.n).val(info.fileName && info.fileName != '' ? info.fileName : 'layers.txt');
-			    a.attr( { href:'javascript:void(0);', target:''} ).click(
+			    a.attr( { href:'javascript:void(0);', target:''} ).on('click',
                     function(){
                         var f = true;
                         if(o.fSaveMsg){
@@ -1377,7 +1377,7 @@ $(function (){
                             }
                         }
                         if(f){
-					        var fileName = $.trim($('input[name="download_filename"]').eq(o.n).val());
+					        var fileName = ($('input[name="download_filename"]').eq(o.n).val()) ? $('input[name="download_filename"]').eq(o.n).val().trim() : '';
 					        if(fileName == ''){
                                 fileName = 'layers.txt';
                             }
@@ -1406,7 +1406,7 @@ $(function (){
         );
 
 		// 中止
-		container.find("*[save_method=cancel]").click(
+		container.find("*[save_method=cancel]").on('click',
             function(){
 			    container.fadeOut();
             }

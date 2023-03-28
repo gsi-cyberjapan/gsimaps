@@ -954,7 +954,79 @@ MA.TileLayer = MA.Class.extend({
 		}
 
 		layer._tileLoaded();
-	}
+	},
+
+	// leaflet gridTiles
+	_clampZoom: function (zoom) {
+		var options = this.options;
+
+		if (undefined !== options.minNativeZoom && zoom < options.minNativeZoom) {
+			return options.minNativeZoom;
+		}
+
+		if (undefined !== options.maxNativeZoom && options.maxNativeZoom < zoom) {
+			return options.maxNativeZoom;
+		}
+
+		return zoom;
+	},
+
+	// leaflet gridTiles
+	_setView: function (center, zoom) {
+		var tileZoom = this._clampZoom(Math.round(zoom));
+		if ((this.options.maxZoom !== undefined && tileZoom > this.options.maxZoom) ||
+		    (this.options.minZoom !== undefined && tileZoom < this.options.minZoom)) {
+			tileZoom = undefined;
+		}
+
+		var tileZoomChanged = this.options.updateWhenZooming && (tileZoom !== this._tileZoom);
+
+		if (tileZoomChanged) {
+
+			this._tileZoom = tileZoom;
+
+			if (this._abortLoading) {
+				this._abortLoading();
+			}
+
+			this._updateLevels();
+			this._resetGrid();
+
+			if (tileZoom !== undefined) {
+				this._update(center);
+			}
+
+		}
+
+		this._setZoomTransforms(center, zoom);
+	},
+
+	// leaflet gridTiles
+	_setZoomTransforms: function (center, zoom) {
+		for (var i in this._levels) {
+			this._setZoomTransform(this._levels[i], center, zoom);
+		}
+	},
+
+	// leaflet gridTiles
+	_setZoomTransform: function (level, center, zoom) {
+		var scale = this._map.getZoomScale(zoom, level.zoom),
+		    translate = level.origin.multiplyBy(scale)
+		        .subtract(this._map._getNewPixelOrigin(center, zoom)).round();
+
+		if (any3d) {
+			setTransform(level.el, translate, scale);
+		} else {
+			setPosition(level.el, translate);
+		}
+	},
+
+	// leaflet gridTiles
+	_onTileRemove: function (e) {
+		e.tile.onload = null;
+	},
+
+
 });
 
 MA.tileLayer = function (url, options) {

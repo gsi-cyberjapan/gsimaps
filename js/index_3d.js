@@ -1137,28 +1137,28 @@ function setCameraPosition(param) {
 			// 西から
 			oCamera.position.x = targetPos.x - distance2d;
 			oCamera.position.y = targetPos.y;
-			oCamera.up.set(cameraUpPosx, cameraUpPos.y, cameraUpPos.z);
+			oCamera.up.set(cameraUpPos.x, cameraUpPos.y, cameraUpPos.z);
 			break;
 
 		case "e":
 			// 東から
 			oCamera.position.x = targetPos.x + distance2d;
 			oCamera.position.y = targetPos.y;
-			oCamera.up.set(cameraUpPosx, cameraUpPos.y, cameraUpPos.z);
+			oCamera.up.set(cameraUpPos.x, cameraUpPos.y, cameraUpPos.z);
 			break;
 
 		case "n":
 			// 北から
 			oCamera.position.x = targetPos.x;
 			oCamera.position.y = targetPos.y + distance2d;
-			oCamera.up.set(cameraUpPosx, cameraUpPos.y, cameraUpPos.z);
+			oCamera.up.set(cameraUpPos.x, cameraUpPos.y, cameraUpPos.z);
 			break;
 
 		case "s":
 			// 南から
 			oCamera.position.x = targetPos.x;
 			oCamera.position.y = targetPos.y - distance2d;
-			oCamera.up.set(cameraUpPosx, cameraUpPos.y, cameraUpPos.z);
+			oCamera.up.set(cameraUpPos.x, cameraUpPos.y, cameraUpPos.z);
 			break;
 
 		default:
@@ -1254,7 +1254,7 @@ function InitFrameDownload(o) {
 		oHelpLink = $("<a>").attr({
 			id: "gsimap_help",
 			"href": "javascript:void(0);"
-		}).html("操作説明").click(function () {
+		}).html("操作説明").on('click',function () {
 			if (oHelpPanel.is(":visible")) {
 				oHelpPanel.fadeOut(300);
 			} else {
@@ -1266,11 +1266,11 @@ function InitFrameDownload(o) {
 
 
 		oCameraPosition = $("<div>").addClass("camera-control-frame");
-		var setCameraPositionEastButton = $("<a>").addClass("camera-east").attr({ "href": "javascript:void(0);" }).click(function () { setCameraPosition("e"); });
-		var setCameraPositionWestButton = $("<a>").addClass("camera-west").attr({ "href": "javascript:void(0);" }).click(function () { setCameraPosition("w"); });
-		var setCameraPositionNorthButton = $("<a>").addClass("camera-north").attr({ "href": "javascript:void(0);" }).click(function () { setCameraPosition("n"); });
-		var setCameraPositionSouthButton = $("<a>").addClass("camera-south").attr({ "href": "javascript:void(0);" }).click(function () { setCameraPosition("s"); });
-		var setCameraPositionResetButton = $("<a>").addClass("camera-reset").attr({ "href": "javascript:void(0);" }).click(function () { setCameraPosition(); });
+		var setCameraPositionEastButton = $("<a>").addClass("camera-east").attr({ "href": "javascript:void(0);" }).on('click',function () { setCameraPosition("e"); });
+		var setCameraPositionWestButton = $("<a>").addClass("camera-west").attr({ "href": "javascript:void(0);" }).on('click',function () { setCameraPosition("w"); });
+		var setCameraPositionNorthButton = $("<a>").addClass("camera-north").attr({ "href": "javascript:void(0);" }).on('click',function () { setCameraPosition("n"); });
+		var setCameraPositionSouthButton = $("<a>").addClass("camera-south").attr({ "href": "javascript:void(0);" }).on('click',function () { setCameraPosition("s"); });
+		var setCameraPositionResetButton = $("<a>").addClass("camera-reset").attr({ "href": "javascript:void(0);" }).on('click',function () { setCameraPosition(); });
 
 		oCameraPosition.append(setCameraPositionEastButton);
 		oCameraPosition.append(setCameraPositionWestButton);
@@ -1281,7 +1281,7 @@ function InitFrameDownload(o) {
 		var transFrame = $("<div>").addClass("trans_frame");
 		oFaceTransparentCheck = $("<input>").attr({ "type": "checkbox", "id": "facetrans_check" })
 			.prop({ "checked": bFaceTransparent })
-			.click(function () {
+			.on('click',function () {
 				if (!oFaceMaterial) return;
 				if ($(this).is(":checked")) {
 					bFaceTransparent = true;
@@ -1314,7 +1314,7 @@ function InitFrameDownload(o) {
 
 		oDisplayInfoCheck = $("<input>").attr({ "type": "checkbox", "id": "displayinfo_check" })
 			.prop({ "checked": bDisplayInfo })
-			.click(function () {
+			.on('click',function () {
 				if ($(this).is(":checked")) {
 					bDisplayInfo = true;
 					showDirectionArrows();
@@ -4941,7 +4941,7 @@ function Draw3DGEOData() {
 			var parts = fontFamily.split(',');
 			fontFamily = "";
 			for (var k = 0; k < parts.length; k++) {
-				fontFamily += (fontFamily == "" ? "" : ",") + "'" + $.trim(parts[k]).replace(/[\'\"]/g, "") + "'";
+				fontFamily += (fontFamily == "" ? "" : ",") + "'" + ((parts[k]) ? parts[k].trim() : '').replace(/[\'\"]/g, "") + "'";
 			}
 
 			var opacity = div.css("opacity");
@@ -6052,7 +6052,7 @@ function Download_STL(vDem, vZRate, vDistance) {
 	ret += DownloadTextLine("solid 3d_data");
 	ret += DownloadTextLine("{stlPointList}");
 	ret += DownloadTextLine("endsolid");
-	ret = ret.substr(0, (ret.length - 1));
+	ret = ret.substring(0, (ret.length - 1));
 	/*....................................................................
 	 * Make
 	 *....................................................................*/
@@ -7148,7 +7148,7 @@ GSI3D.LayersJSONLoader.prototype._load = function (url) {
 		url: url,
 		_url: url
 	})
-		.success(function (text) {
+		.done(function (text) {
 			try {
 				if (!this$._cache) this$._cache = {};
 				this$._cache[url] = text;
@@ -7158,7 +7158,7 @@ GSI3D.LayersJSONLoader.prototype._load = function (url) {
 				this$._onLoadError(this._url);
 			}
 		})
-		.error(function () {
+		.fail(function () {
 			this$._onLoadError(this._url);
 		})
 		.always(function () {
@@ -7964,7 +7964,7 @@ GSI3D.ReliefTileLayer.colorStringToRGBA = function (c) {
 	var toHex = function (v) {
 		return '0x' + (('0000' + v.toString(16).toUpperCase()).substr(-4));
 	};
-	if (jQuery.type(c) == "string") {
+	if (c !== null && typeof c === "string") {
 		var color = {
 			r: 0, g: 0, b: 0, a: 0
 		};
@@ -8094,7 +8094,7 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype._initializeElevationData = function (
 
 	for (var i = 0; i < data.colors.length; i++) {
 		var c = data.colors[i];
-		if (jQuery.type(c.color) == "string") {
+	if (typeof c.color === "string") {
 			var color = GSI3D.ReliefTileLayer.colorStringToRGBA(c.color);
 
 			c.color = color;

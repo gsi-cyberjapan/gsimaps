@@ -5,8 +5,8 @@
 $(document).ready(function(){
 	
 	
-  $(".logoarea a").click( function() {
-    $.cookie("GSIGLOBEHASH","");
+	$(".logoarea a").click( function() {
+		$.cookie("GSIGLOBEHASH","");
     return true;
 	});
 	
@@ -68,6 +68,7 @@ $(document).ready(function(){
 		GLOBE.DIALOG.GETLINK.create();
 		GLOBE.DIALOG.INFOBOX.create();
 		GLOBE.DIALOG.FOOTER.create();  //フッター
+		GLOBE.DIALOG.COMPAREPHOTO.create(); //時系列表示選択ダイアログ
 
 		GSI.GLOBALS.queryParams = new GSI.QueryParams({ queryString: GSI.ClientMode.queryString });
 	        initialize_proc();

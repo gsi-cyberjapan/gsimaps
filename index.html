@@ -15,24 +15,25 @@
   <script type="text/javascript" src="js.lib/leaflet-1.2.0/leaflet-src.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css" />
-  <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="./js.lib/jquery/jquery-3.6.3.min.js"></script>
 
   <!-- <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script> -->
   <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
+<!--  <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script> -->
   <script type="text/javascript" src="./js.lib/jquery/jquery.qrcode/jquery.qrcode.min.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/jquery.csv/jquery.csv.min.js"></script>
 
-  <script type="text/javascript" src="./js.lib/jquery/jquery.cookie.js"></script>
-  <link rel="stylesheet" href="./js.lib/jquery/jquery.alerts.css" type="text/css" media="all" />
+<!--  <script type="text/javascript" src="./js.lib/jquery/jquery.cookie.js"></script> -->
+<script type="text/javascript" src="./js.lib/js.cookie.min.js"></script>
+<link rel="stylesheet" href="./js.lib/jquery/jquery.alerts.css" type="text/css" media="all" />
   <script type="text/javascript" src="./js.lib/jquery/jquery.alerts.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/jquery.simple-color-picker.css" />
   <script type="text/javascript" src="./js.lib/jquery/colorpicker/jquery.simple-color-picker.js"></script>
   <script type="text/javascript" src="./js.lib/jquery/colorpicker/js/colorpicker.js"></script>
   <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/css/colorpicker.css" />
-  <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
+  <!-- <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script> -->
   <script type="text/javascript" src="js.lib/OSGeo/proj4js-combined.js"></script>
 
   <script type="text/javascript" src="js.lib/exif.js"></script>
@@ -60,6 +61,7 @@
   <script type="text/javascript" src="js/setting.js"></script>
   <script type="text/javascript" src="js/tooltip.js"></script>
   <script type="text/javascript" src="js/gsimaps.js"></script>
+  <script type="text/javascript" src="js/extend_jqlibs.js"></script>
 
   <script type="text/javascript" src="js/photo.js"></script>
 
@@ -81,12 +83,19 @@
   </noscript>
   <script type="text/javascript">
     if(L.Browser.ie) { 
-      window.onload = function () { 
-        document.getElementById("incompatible").style.display = 'block'; 
-        document.getElementById("header").style.display = 'none';
-        document.getElementById("topmessage").style.display = 'none';
-        document.getElementById("measure").style.display = 'none';
-      }; 
+
+      // 202303
+      // ieの場合は別ブラウザ推奨ページへ
+      setTimeout(function() {
+        location.href = "/deprecated.html";
+      }, 0);
+
+      // window.onload = function () { 
+      //   document.getElementById("incompatible").style.display = 'block'; 
+      //   document.getElementById("header").style.display = 'none';
+      //   document.getElementById("topmessage").style.display = 'none';
+      //   document.getElementById("measure").style.display = 'none';
+      // }; 
     }
   </script>
 </head>

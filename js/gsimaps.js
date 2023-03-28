@@ -2043,11 +2043,13 @@ GSI.Utils.sendSelectedLayer = function (id) {
 };
 
 GSI.Utils.sendSelectedFunction = function (function_id) {
+  // 202303 convetersを追加
   $.ajax({
     type: "GET",
     data: function_id,
     url: "./js/anchor_func.js",
     datatype: "text",
+    converters: {'text script': window.String},
     cache: false,
   });
 };
@@ -3864,9 +3866,9 @@ GSI.Dialog = L.Evented.extend({
     if (this.options.width) {
       this.container.css({ width: this.options.width });
     }
-    this.closeBtn.click(L.bind(this._cloceButtonClick, this));
+    this.closeBtn.on('click',L.bind(this._cloceButtonClick, this));
 
-    if (this.minimizeBtn) this.minimizeBtn.click(L.bind(this._minimizeButtonClick, this));
+    if (this.minimizeBtn) this.minimizeBtn.on('click',L.bind(this._minimizeButtonClick, this));
 
     this.container.hide();
 
@@ -4096,7 +4098,7 @@ GSI.HelpDialog = L.Class.extend({
     this.map = map;
     this.mapMouse = mapMouse;
     this._blind = $("<div>")
-      .click(L.bind(function () { this.hide(); }, this))
+      .on('click',L.bind(function () { this.hide(); }, this))
       .addClass("help_window_blind");
 
     this._frame = $("<div>").addClass("help_window_frame");
@@ -4143,7 +4145,7 @@ GSI.HelpDialog = L.Class.extend({
 
     this._closeButton = $("<a>")
       .attr({ "href": "javascript:void(0);" })
-      .click(L.bind(function () { this.hide(); }, this))
+      .on('click',L.bind(function () { this.hide(); }, this))
       .addClass("help_window_closebtn").html("×");
 
     this._titleFrame.append($("<span>"));
@@ -4158,7 +4160,7 @@ GSI.HelpDialog = L.Class.extend({
       .addClass("help_window_frame_button")
       .addClass("help_window_frame_next_button")
       .html("")
-      .click(L.bind(function () { this._nextButton.blur(); this.next(); }, this));
+      .on('click',L.bind(function () { this._nextButton.trigger('blur'); this.next(); }, this));
 
     this._prevButton = $("<a>")
       .attr({
@@ -4167,7 +4169,7 @@ GSI.HelpDialog = L.Class.extend({
       .addClass("help_window_frame_button")
       .addClass("help_window_frame_prev_button")
       .html("")
-      .click(L.bind(function () { this._prevButton.blur(); this.prev(); }, this));
+      .on('click',L.bind(function () { this._prevButton.trigger('blur'); this.prev(); }, this));
 
     this._frame.append(this._prevButton);
     this._frame.append(this._nextButton);
@@ -4297,15 +4299,15 @@ GSI.SearchResultDialog = GSI.Dialog.extend({
 
     this.initializeKenSelect();
 
-    this.kenSelect.change(L.bind(this.onKenChange, this));
+    this.kenSelect.on('change',L.bind(this.onKenChange, this));
     this.shiSelect.empty();
     this.shiSelect.append($('<option>').html("市区町村").val(","));
-    this.shiSelect.change(L.bind(this.onShiChange, this));
+    this.shiSelect.on('change',L.bind(this.onShiChange, this));
     this.typeSelect.empty();
     this.typeSelect.append($('<option>').html("すべて").val(","));
     this.typeSelect.append($('<option>').html("居住地名").val("5,居住地名"));
     this.typeSelect.append($('<option>').html("居住地名以外").val("3,居住地名以外"));
-    this.typeSelect.change(L.bind(this.onTypeSelectChange, this));
+    this.typeSelect.on('change',L.bind(this.onTypeSelectChange, this));
     this.typeSelectDiv.append(this.typeSelect);
 
     selectFrame.append(this.kenSelect).append(this.shiSelect).append(this.typeSelectDiv);
@@ -4415,9 +4417,9 @@ GSI.SearchResultDialog = GSI.Dialog.extend({
       a.append(div);
     }
 
-    a.click(L.bind(this.onResultClick, this, item));
-    a.mouseenter(L.bind(this.onResultMouseover, this, item));
-    a.mouseleave(L.bind(this.onResultMouseout, this, item));
+    a.on('click',L.bind(this.onResultClick, this, item));
+    a.on('mouseenter', L.bind(this.onResultMouseover, this, item));
+    a.on('mouseleave', L.bind(this.onResultMouseout, this, item));
     a.css({ "padding-left": '32px' });
     if (this.options.maxMarkerNum < 0 || this.markerNum < this.options.maxMarkerNum) {
       var latitude = item.geometry.coordinates[1];
@@ -4787,7 +4789,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
     javascript = javascript.replace(/GSI.ClientMode/g, 'ClientMode');
 
     html = html.replace('/*INSERT-SCRIPT*/', javascript);
-    this._textarea.focus();
+    this._textarea.trigger('focus');
     this._textarea.val(html);
   },
   _onDownLoadClick: function () {
@@ -5168,13 +5170,13 @@ GSI.ShareDialog = GSI.Dialog.extend({
     var frame = $('<div>').addClass('textareacontent');
 
     var textareaFrame = $('<div>');
-    this._textarea = $('<textarea>').attr({ rows: 4, readonly: "readonly", 'wrap': 'off' }).click(function () { this.select(); });
-    this._textarea.focus();
+    this._textarea = $('<textarea>').attr({ rows: 4, readonly: "readonly", 'wrap': 'off' }).on('click',function () { this.select(); });
+    this._textarea.trigger('focus');
     this._textarea.val('');
     textareaFrame.append(this._textarea);
 
     this._downloadButton = $('<a>').attr({ 'href': 'javascript:void(0);' }).addClass("normalbutton").css({ 'float': 'right' })
-      .html(GSI.TEXT.SHARE.DIALOG_DOWNLOADBTN).click(L.bind(this._onDownLoadClick, this));
+      .html(GSI.TEXT.SHARE.DIALOG_DOWNLOADBTN).on('click',L.bind(this._onDownLoadClick, this));
 
     if (!GSI.Utils.canUseFlashPlayer()) {
       this._copyButton = $('<span>').css({ 'float': 'right' }).html(GSI.TEXT.SHARE.DIALOG_NOCOPYMSG);
@@ -5188,7 +5190,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
 
     this._settingButton = $('<a>').attr({ 'href': 'javascript:void(0);' }).addClass("normalbutton").css({ 'float': 'left' })
       .html('詳細設定')
-      .click(L.bind(function () { this._settingFrame.slideToggle('fast'); }, this));
+      .on('click',L.bind(function () { this._settingFrame.slideToggle('fast'); }, this));
 
     var buttonFrame = $('<div>').addClass('buttonframe');
 
@@ -5221,7 +5223,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
       var label = $('<label>').attr({ 'for': id });
       label.html(title);
       li.append(label);
-      check.click(L.bind($this._onSettingChange, $this));
+      check.on('click',L.bind($this._onSettingChange, $this));
       return { li: li, checkbox: check };
     };
 
@@ -5415,7 +5417,7 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
     this._optionBtn = $("<a>")
       .addClass("option_btn").attr({ "href": "javascript:void(0);" })
       .html("オプション")
-      .click(L.bind(function () {
+      .on('click',L.bind(function () {
         if (this._optionFrame.is(":visible")) {
           this._optionBtn.removeClass("expand");
           this._optionFrame.slideUp(300, L.bind(function () {
@@ -5487,13 +5489,13 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
     var btnFrame = $("<div>").addClass("button_frame");
 
     this._loadButton = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("上記の内容で読込開始");
-    this._loadButton.click(L.bind(function () { this._load(); }, this));
+    this._loadButton.on('click',L.bind(function () { this._load(); }, this));
     btnFrame.append(this._loadButton);
 
     this.frame.append(btnFrame);
 
-    this._loadFromUrlRadio.click(L.bind(this._loadModeChange, this));
-    this._loadFromFileRadio.click(L.bind(this._loadModeChange, this));
+    this._loadFromUrlRadio.on('click',L.bind(this._loadModeChange, this));
+    this._loadFromFileRadio.on('click',L.bind(this._loadModeChange, this));
 
     this._fileInput.on("change", L.bind(this._onFileInputChange, this));
     this._loadModeChange();
@@ -5527,14 +5529,19 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
   // 読み込みラジオ変更時
   _loadModeChange: function () {
     if (this._loadFromUrlRadio.is(":checked")) {
-      this._layerNameInput.removeProp("disabled");
-      this._urlInput.removeProp("disabled");
-      this._tmsInput.removeProp("disabled");
+      // 202303 remoPropではなくpropでfalseを設定する。
+      // this._layerNameInput.removeProp("disabled");
+      // this._urlInput.removeProp("disabled");
+      // this._tmsInput.removeProp("disabled");
+      this._layerNameInput.prop({"disabled": false});
+      this._urlInput.prop({ "disabled": false });
+      this._tmsInput.prop({ "disabled": false });
       this._fileInput.prop({ "disabled": "disabled" });
     }
     else {
 
-      this._fileInput.removeProp("disabled");
+//      this._fileInput.removeProp("disabled");
+      this._fileInput.prop({"disabled": false});
 
       this._layerNameInput.prop({ "disabled": "disabled" });
       this._urlInput.prop({ "disabled": "disabled" });
@@ -5689,8 +5696,8 @@ GSI.LoadOutsideTileDialog = GSI.Dialog.extend({
 
     if (this._loadFromUrlRadio.is(":checked")) {
 
-      var url = $.trim(this._urlInput.val());
-      var title = $.trim(this._layerNameInput.val());
+      var url = (this._urlInput.val()) ? this._urlInput.val().trim() : '';
+      var title = (this._layerNameInput.val()) ? this._layerNameInput.val().trim() : '';
       var isTMS = this._tmsInput.is(":checked");
 
       var layerType = GSI.LayersJSON.url2LayerType(url);
@@ -5844,7 +5851,7 @@ GSI.EditOutsideTileDialog = GSI.Dialog.extend({
     var btnFrame = $("<div>").addClass("button_frame");
 
     this._okBtn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("上記の内容で変更");
-    this._okBtn.click(L.bind(this._onOkClick, this));
+    this._okBtn.on('click',L.bind(this._onOkClick, this));
     btnFrame.append(this._okBtn);
     this.frame.append(btnFrame);
 
@@ -5856,8 +5863,8 @@ GSI.EditOutsideTileDialog = GSI.Dialog.extend({
 
     if (this._target) {
 
-      var url = $.trim(this._urlInput.val());
-      var title = $.trim(this._layerNameInput.val());
+      var url = (this._urlInput.val()) ? this._urlInput.val().trim() : '';
+      var title = (this._layerNameInput.val()) ? this._layerNameInput.val().trim() : '';
       var isTMS = this._tmsInput.is(":checked");
 
       var layerType = GSI.LayersJSON.url2LayerType(url);
@@ -6100,7 +6107,7 @@ GSI.QRCodeDialog = GSI.Dialog.extend({
       .append($('<option>').html("小(120px×120px)").val("120"));
 
     this._sizeSelect.val("180")
-      .change(L.bind(function () {
+      .on('change',L.bind(function () {
         this._refreshQRCode();
       }, this));
     td = $('<td>').attr({ "colspan": 3 }).append(this._sizeSelect);
@@ -6127,7 +6134,7 @@ GSI.QRCodeDialog = GSI.Dialog.extend({
     this._imageTypeSelect.val("image/png")
 
     this._saveButton = $("<a>").attr({ "href": "javascript:void(0);" }).html("でダウンロードする")
-      .click(L.bind(function () { this._saveImage(this._imageTypeSelect.val()); }, this));
+      .on('click',L.bind(function () { this._saveImage(this._imageTypeSelect.val()); }, this));
 
     this._saveFrame.append(this._imageTypeSelect);
     this._saveFrame.append(this._saveButton);
@@ -6204,6 +6211,8 @@ GSI.EvacDialog = L.Control.extend({
   onAdd: function (map) {
     this._map = map;
     this._container = L.DomUtil.create('div', 'evac_dialog');
+    // 202303 生成時にidを追加
+    this._container.id = 'evacDialogContainer';
     //content
     var frame = $('<div>').addClass('evac_dialog_content').html(this.createContent());
 
@@ -6835,7 +6844,7 @@ GSI.Header = L.Evented.extend({
 
         this.topMessage.append(closeBtn);
 
-        closeBtn.click(L.bind(this.onCloseClick, this));
+        closeBtn.on('click',L.bind(this.onCloseClick, this));
 
         this.topMessageVisible = true;
       }
@@ -6950,7 +6959,7 @@ GSI.IconSelector = L.Evented.extend({
 
     options = L.setOptions(this, options);
 
-    this.image.click(L.bind(this.onClick, this));
+    this.image.on('click',L.bind(this.onClick, this));
   },
   onClick: function () {
     this.show();
@@ -6990,7 +6999,7 @@ GSI.IconSelector = L.Evented.extend({
       }
 
       var td = $('<td>');
-      var a = $('<a>').attr({ href: 'javascript:void(0);' }).click(L.bind(this.onSelect, this, iconInfo));
+      var a = $('<a>').attr({ href: 'javascript:void(0);' }).on('click',L.bind(this.onSelect, this, iconInfo));
       var image = $('<img>').attr({ src: iconInfo.url });
       if (iconInfo.size) {
         image.css({
@@ -8553,7 +8562,7 @@ GSI.LayersJSON = L.Evented.extend({
       if (tree[i].type == "Layer") {
         var info = tree[i];
 
-        if ($.isArray(info.url)) {
+        if (Array.isArray(info.url)) {
           for (var k = 0; k < info.url.length; k++) {
             if ((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0)) {
               info.url[k] = info.url[k].replace('https://', '//');
@@ -8647,7 +8656,7 @@ GSI.LayersJSON = L.Evented.extend({
 
 GSI.LayersJSON.url2LayerType = function (url) {
 
-  if ($.isArray(url)) {
+  if (Array.isArray(url)) {
 
     for (var i = 0; i < url.length; i++) {
       if (url[i].match(/\.webm$/) || url[i].match(/\.mp4$/)) return "videooverlay";
@@ -8656,7 +8665,7 @@ GSI.LayersJSON.url2LayerType = function (url) {
     return "";
   }
   if (!url) return "";
-  url = $.trim(url);
+  url = (url) ? url.trim() : '';
 
   if (url.match(/\{tms\}/)) {
     return "tms";
@@ -8887,7 +8896,7 @@ GSI.Utils.infoToLayer = function (info, noFinishMove) {
     options.crossOrigin = true;
     layer = L.videoOverlay(info.url, info.videoBounds, options);
     layer.on("load", L.bind(function () {
-      $(this.getElement()).click(L.bind(function () {
+      $(this.getElement()).on('click',L.bind(function () {
         this.getElement().play();
       }, this))
     }, layer));
@@ -9154,9 +9163,12 @@ GSI.Modal.BaseClass = L.Evented.extend({
     this.adjustWindow();
 
     if (!GSI.Modal.blind.is(':visible'))
-      GSI.Modal.blind.show("fade", { "direction": "both", "easing": "linear" }, "fast");
+        // 202303 displayをclassで管理する。
+//      GSI.Modal.blind.show("fade", { "direction": "both", "easing": "linear" }, "fast");
+      GSI.Modal.blind.fadeIn('fast', 'linear').removeClass('gsi_modal_dialog_display');;
 
-    this.container.show("fade", { "direction": "both", "easing": "linear" }, "fast");
+    this.container.fadeIn('fast', 'linear').removeClass('gsi_modal_dialog_display');
+//    this.container.show("fade", { "direction": "both", "easing": "linear" }, "fast");
 
     if (!this._onWindowResize) {
       this._onWindowResize = L.bind(this.onWindowResize, this);
@@ -9171,7 +9183,7 @@ GSI.Modal.BaseClass = L.Evented.extend({
     var isVisible = this.container.is(':visible');
 
     if (!isVisible) {
-      this.container.css({ "visibility": "hidden" }).show();
+      this.container.removeClass('gsi_modal_dialog_display');
     }
     this.contentFrame.css({
       "max-width": windowSize.w - 50 + 'px',
@@ -9186,7 +9198,8 @@ GSI.Modal.BaseClass = L.Evented.extend({
     });
 
     if (!isVisible) {
-      this.container.hide().css({ "visibility": "visible" });
+      this.container.addClass('gsi_modal_dialog_display');
+//      this.container.hide().css({ "visibility": "visible" });
     }
   },
   createContainer: function () {
@@ -9198,7 +9211,7 @@ GSI.Modal.BaseClass = L.Evented.extend({
     if (this.options.closeBtnVisible) {
       this.closeButton = $('<a>')
         .addClass('gsi_modal_base_closebtn')
-        .attr({ 'href': 'javascript:void(0);' }).html('×').click(
+        .attr({ 'href': 'javascript:void(0);' }).html('×').on('click',
           L.bind(function () {
             this.hide();
           }, this)
@@ -9253,7 +9266,7 @@ GSI.Modal.BaseClass = L.Evented.extend({
         display: "none",
         cursor: "pointer"
       })
-      .click(function () {
+      .on('click',function () {
       });
 
     $(document.body).append(GSI.Modal.blind);
@@ -9287,9 +9300,9 @@ GSI.Modal.Dialog = GSI.Modal.BaseClass.extend({
     this.buttonFrame = $('<div>').addClass('gsi_modal_dialog_btn_frame');
 
     this.positiveButton = $('<a>').attr({ "href": "javascript:void(0);" })
-      .html(this.options.positiveButtonText).click(L.bind(this.onPositiveButtonClick, this));
+      .html(this.options.positiveButtonText).on('click',L.bind(this.onPositiveButtonClick, this));
     this.negativeButton = $('<a>').attr({ "href": "javascript:void(0);" })
-      .html(this.options.nagativeButtonText).click(L.bind(this.onNegativeButtonClick, this));
+      .html(this.options.nagativeButtonText).on('click',L.bind(this.onNegativeButtonClick, this));
 
     this.buttonFrame.append(this.positiveButton).append(this.negativeButton);
 
@@ -9510,6 +9523,8 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
 
     frame.append(content);
 
+    // 202303
+    this.container.addClass('gsi_modal_dialog_display');
     return frame;
   },
   show: function () {
@@ -9518,11 +9533,12 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     GSI.Modal.blind.on('mousedown', L.bind(function () { this.hide(); }, this));
     $(GSI.Modal.blind).on('touchstart', L.bind(function () { this.hide(); }, this));
 
-    $(window).resize(L.bind(function () { this.hide(true); }, this));
+    $(window).on('resize',L.bind(function () { this.hide(true); }, this));
 
     this.closeButton.css({ "color": "#fff", "padding-top": "0.3em", "padding-right": "0.3em" });
   },
   createBlind: function () {
+    // 202303 displayはclassで管理する。
     if (GSI.Modal.blind) return;
 
     GSI.Modal.blind = $('<div>')
@@ -9535,11 +9551,12 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
         width: '100%',
         height: '100%',
         "z-index": GSI.Modal.zIndexOffset,
-        display: "none",
         cursor: "pointer"
       })
-      .click(function () {
+      .on('click',function () {
       });
+
+      GSI.Modal.blind.addClass('gsi_modal_dialog_display');
 
     $(document.body).append(GSI.Modal.blind);
   },
@@ -9784,7 +9801,7 @@ GSI.OnOffSwitch = L.Evented.extend({
     }).addClass('checkbox');
     this.frame.append(this.input);
     if (this.options.checked) {
-      this.input.attr({ "checked": true });
+      this.input.prop('checked', true);
     }
 
     var label = $('<label>').addClass('label').attr({
@@ -9801,10 +9818,10 @@ GSI.OnOffSwitch = L.Evented.extend({
 
     if (GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8) {
       this._initCheckBoxIE8();
-      this.frame.click(L.bind(this.onFrameClick, this));
+      this.frame.on('click',L.bind(this.onFrameClick, this));
     }
     else {
-      this.input.click(L.bind(function () { this.fire('change'); }, this));
+      this.input.on('click',L.bind(function () { this.fire('change'); }, this));
     }
   },
   _initCheckBoxIE8: function () {
@@ -9818,17 +9835,15 @@ GSI.OnOffSwitch = L.Evented.extend({
     }
   },
   onFrameClick: function () {
-    this.input.attr({ "checked": !this.input.is(":checked") });
+    this.input.prop('checked', !this.input.is(":checked"));
     this._initCheckBoxIE8();
     this.fire('change');
   },
   checked: function (value) {
     if (value == true) {
-      this.input.attr({ "checked": true });
       this.input.prop({ "checked": true });
     }
     else if (value == false) {
-      this.input.attr({ "checked": false });
       this.input.prop({ "checked": false });
     }
 
@@ -9879,7 +9894,7 @@ GSI.ToggleSwitch = L.Evented.extend({
     }).addClass('checkbox');
     this.frame.append(this.input);
     if (this.options.checked) {
-      this.input.attr({ "checked": true });
+      this.input.prop('checked', true);
     }
 
     var label = $('<label>').addClass('label').attr({
@@ -9896,10 +9911,10 @@ GSI.ToggleSwitch = L.Evented.extend({
 
     if (GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8) {
       this._initCheckBoxIE8();
-      this.frame.click(L.bind(this.onFrameClick, this));
+      this.frame.on('click',L.bind(this.onFrameClick, this));
     }
     else {
-      this.input.click(L.bind(function () { this.fire('change'); }, this));
+      this.input.on('click',L.bind(function () { this.fire('change'); }, this));
     }
   },
   _initCheckBoxIE8: function () {
@@ -9913,17 +9928,15 @@ GSI.ToggleSwitch = L.Evented.extend({
     }
   },
   onFrameClick: function () {
-    this.input.attr({ "checked": !this.input.is(":checked") });
+    this.input.prop( 'checked', !this.input.is(":checked"));
     this._initCheckBoxIE8();
     this.fire('change');
   },
   checked: function (value) {
     if (value == true) {
-      this.input.attr({ "checked": true });
       this.input.prop({ "checked": true });
     }
     else if (value == false) {
-      this.input.attr({ "checked": false });
       this.input.prop({ "checked": false });
     }
 
@@ -10049,7 +10062,7 @@ GSI.PagePrinter = L.Evented.extend({
       popup.options.autoPan = autoPan;
     }
 
-    $(window).resize();
+    $(window).trigger('resize',);
 
   },
   _initialize: function () {
@@ -10258,7 +10271,7 @@ GSI.PagePrinter = L.Evented.extend({
     this._mapContainer.css({ width: paperSize.w + 'px', height: paperSize.h + 'px' });
     this._map.invalidateSize();
 
-    $(window).resize();
+    $(window).trigger('resize',);
 
     this._map.setView(center, zoom);
 
@@ -10357,20 +10370,20 @@ GSI.PagePrinter = L.Evented.extend({
     else
       this._paperSizeSelect[0].selectedIndex = 0;
 
-    this._paperSizeSelect.change(L.bind(this._paperSizeChage, this));
+    this._paperSizeSelect.on('change',L.bind(this._paperSizeChage, this));
     td.append($('<span>').html('用紙サイズ：').addClass('no_print'));
     td.append(this._paperSizeSelect);
     tr.append(td);
 
     // 印刷ボタン
     td = $('<td>').css({ width: "64px" });
-    var printBtn = $('<button>').html('印刷').addClass('no_print').click(L.bind(this.print, this));
+    var printBtn = $('<button>').html('印刷').addClass('no_print').on('click',L.bind(this.print, this));
     td.append(printBtn);
     tr.append(td);
 
     // 戻るボタン
     td = $('<td>').css({ width: "120px" });
-    var backBtn = $('<button>').css({ 'white-space': 'nowrap' }).html('元の画面に戻る').addClass('no_print').click(L.bind(this.hide, this));
+    var backBtn = $('<button>').css({ 'white-space': 'nowrap' }).html('元の画面に戻る').addClass('no_print').on('click',L.bind(this.hide, this));
     td.append(backBtn);
     tr.append(td);
 
@@ -10901,7 +10914,9 @@ GSI.PageStateManager = L.Class.extend({
       var tileList = this._mapLayerList.getTileList();
 
       for (var i = 0; i < tileList.length; i++) {
-        if (!tileList[i]._isOutside && !tileList[i]._isComparePhoto)
+        // 202303 条件を変更
+//        if (!tileList[i]._isOutside && !tileList[i]._isComparePhoto)
+        if (!tileList[i]._isOutside)
           tileIdList.push(tileList[i]);
       }
     }
@@ -10937,7 +10952,9 @@ GSI.PageStateManager = L.Class.extend({
       var tileList = this._gsimaps._subMap._mapLayerList.getTileList();
 
       for (var i = 0; i < tileList.length; i++) {
-        if (!tileList[i]._isOutside && !tileList[i]._isComparePhoto)
+        // 202303 条件を変更
+//        if (!tileList[i]._isOutside && !tileList[i]._isComparePhoto)
+        if (!tileList[i]._isOutside)
           tileIdList.push(tileList[i]);
       }
     }
@@ -11007,12 +11024,14 @@ GSI.Searcher = L.Class.extend({
     this.dialog = dialog;
     this.formSelector = formSelector;
     this.querySelector = querySelector;
-    $(this.querySelector).ahPlaceholder({
-      placeholderAttr: 'placeholder',
-      likeApple: true
-    }).attr({ "title": CONFIG.TOOLTIP.TOP.QUERY });
-    $(this.formSelector).submit(L.bind(this.onSubmit, this));
-    $('#magnifyimage').click(L.bind(this.onSubmit, this));
+    // 202303
+    // $(this.querySelector).ahPlaceholder({
+    //   placeholderAttr: 'placeholder',
+    //   likeApple: true
+    // }).attr({ "title": CONFIG.TOOLTIP.TOP.QUERY });
+    $(this.querySelector).attr({ "title": CONFIG.TOOLTIP.TOP.QUERY });
+    $(this.formSelector).on('submit',L.bind(this.onSubmit, this));
+    $('#magnifyimage').on('click',L.bind(this.onSubmit, this));
     L.setOptions(this, options);
   },
 
@@ -11020,7 +11039,7 @@ GSI.Searcher = L.Class.extend({
     event.preventDefault();
 
     var query = $(this.querySelector).val();
-    if ($.trim(query) == '') return;
+    if (((query) ? query.trim() : '') == '') return;
 
     var qType = this.checkQuery(query);
 
@@ -11150,7 +11169,7 @@ GSI.Searcher = L.Class.extend({
     });
   },
   checkQuery: function (q) {
-    q = $.trim(q);
+    q = (q) ? q.trim() : '';
     q = q.replace(',', ' ');
 
     if (q == '') {
@@ -11196,7 +11215,7 @@ GSI.Searcher = L.Class.extend({
     }
   },
   parseLatLngText2: function (s) {
-    s = $.trim(s);
+    s = (s) ? s.trim() : '';
     s = s.replace(',', ' ');
     var latwSign;
     var lngwSign;
@@ -11263,7 +11282,7 @@ GSI.Searcher = L.Class.extend({
     return null;
   },
   parseLatLngText3: function (s) {
-    s = $.trim(s);
+    s = (s) ? s.trim() : '';
     s = s.replace(',', ' ');
 
     var matchArr = s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
@@ -11305,7 +11324,7 @@ GSI.Searcher = L.Class.extend({
 
   },
   parseLatLngText4: function (s) {
-    s = $.trim(s);
+    s = (s) ? s.trim() : '';
 
     var matchArr = s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/)
     var revflg = false;
@@ -11342,7 +11361,7 @@ GSI.Searcher = L.Class.extend({
 
   },
   parseLatLngText: function (s) {
-    s = $.trim(s);
+    s = (s) ? s.trim() : '';
     s = s.replace(',', ' ');
 
     var latLng = s.split(' ');
@@ -11476,7 +11495,7 @@ GSI.Control.Spacer = L.Control.extend({
   onAdd: function (map) {
     this._map = map;
     this._container = L.DomUtil.create('div');
-    $(this._container).css({ margin: 0, padding: 0, heght: 0, width: 0 });
+    $(this._container).css({ margin: 0, padding: 0, height: 0, width: 0 });
     return this._container;
   },
   onRemove: function (map) {
@@ -12054,11 +12073,11 @@ GSI.KML = L.FeatureGroup.extend({
         if (window.ActiveXObject) {
           data = new ActiveXObject("Microsoft.XMLDOM");
           data.async = false;
-          data.loadXML($.trim(result.data));
+          data.loadXML((result.data) ? result.data.trim() : '');
         }
         else if (window.DOMParser) {
           data = new DOMParser().parseFromString(
-            $.trim(result.data),
+            (result.data) ? result.data.trim() : '',
             "application/xml"
           );
         }
@@ -14045,7 +14064,7 @@ GSI.MapToImage = L.Evented.extend({
 
     var radius = div.css("border-radius") || div.css("-moz-border-radius") || div.css("-webkit-border-radius");
     if (radius) {
-      radius = $.trim(radius);
+      radius = (radius) ? radius.trim() : '';
       var parts = radius.split(" ");
       if (parts.length > 0)
         radius = parseInt(parts[0]);
@@ -14080,12 +14099,12 @@ GSI.MapToImage = L.Evented.extend({
     if (marker.css("margin-left")) margin.left = parseFloat(marker.css("margin-left"));
     if (marker.css("margin-top")) margin.top = parseFloat(marker.css("margin-top"));
     if (marker.css("margin")) {
-      var parts = $.trim(marker.css("margin")).split(" ");
-      if (parts.length > 0) margin.top = parseFloat($.trim(parts[0]));
-      if (parts.length > 3) margin.left = parseFloat($.trim(parts[3]));
+      var parts = ((marker.css("margin")) ? marker.css("margin").trim() : '').split(" ");
+      if (parts.length > 0) margin.top = parseFloat((parts[0]) ? parts[0].trim() : '');
+      if (parts.length > 3) margin.left = parseFloat((parts[3]) ? parts[3].trim() : '');
 
     }
-    if ($.trim(div.html()) == "") {
+    if (((div.html()) ? div.html().trim() : '') == '') {
 
       var bgColor = "#000";
       if (div.css("background-color")) bgColor = div.css("background-color");
@@ -14151,7 +14170,7 @@ GSI.MapToImage = L.Evented.extend({
       var angle90 = div.css("writing-mode")
         || div.css("-moz-writing-mode") || div.css("-o-writing-mode")
         || div.css("-ms-writing-mode") || div.css("-webkit-writing-mode");
-      if (angle90) angle90 = $.trim(angle90);
+      if (angle90) angle90 = (angle90) ? angle90.trim() : '';
       else {
         var matches = cssText.match(/vertical-rl/);
         if (matches) angle90 = "vertical-rl";
@@ -14161,7 +14180,7 @@ GSI.MapToImage = L.Evented.extend({
       var textBaseline = "top";
 
       if (transformOrign && transformOrign != "") {
-        transformOrign = $.trim(transformOrign);
+        transformOrign = (transformOrign) ? transformOrign.trim() : '';;
         var parts = transformOrign.split(" ");
         if (parts.length == 1) {
           if (parts[0] == "right" || parts[0] == "bottom") {
@@ -14207,7 +14226,7 @@ GSI.MapToImage = L.Evented.extend({
       var parts = fontFamily.split(',');
       fontFamily = "";
       for (var k = 0; k < parts.length; k++) {
-        fontFamily += (fontFamily == "" ? "" : ",") + "'" + $.trim(parts[k]).replace(/[\'\"]/g, "") + "'";
+        fontFamily += (fontFamily == "" ? "" : ",") + "'" + ((parts[k]) ? parts[k].trim() : '').replace(/[\'\"]/g, "") + "'";
       }
 
       this._mapTexture.font = (fontStyle != "" ? fontStyle + " " : "") + fontWeight + " " + fontSize + " " + fontFamily + "";
@@ -15723,7 +15742,7 @@ GSI.MapToImageWindow = L.Evented.extend({
       this._text = $("<div>").addClass("gsi_maptoimage_window_text").html(GSI.TEXT.MAPTOIMAGE.WINDOW_MSG);
       this._frame.append(this._text);
 
-      this._closeBtn = $("<a>").addClass("close_btn").attr({ "href": "javascript:void(0);" }).html("×").click(L.bind(function () { this.hide(); }, this));
+      this._closeBtn = $("<a>").addClass("close_btn").attr({ "href": "javascript:void(0);" }).html("×").on('click',L.bind(function () { this.hide(); }, this));
       this._frame.append(this._closeBtn);
 
       var checkFrame = $("<div>").addClass("gsi_maptoimage_window_check_frame");
@@ -15753,13 +15772,13 @@ GSI.MapToImageWindow = L.Evented.extend({
       this._frame.append(checkFrame);
 
       var buttonFrame = $("<div>").addClass("gsi_maptoimage_window_button_frame");
-      this._dlImageButton = $("<a>").attr({ "href": "javascript:void(0);" }).html(GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEIMGBTN).click(L.bind(function () {
+      this._dlImageButton = $("<a>").attr({ "href": "javascript:void(0);" }).html(GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEIMGBTN).on('click',L.bind(function () {
         var canvas = this.getDownloadImageCanvas();
 
         GSI.Utils.saveFile("image/png", this._fileName + ".png", this._makeImage(canvas.toDataURL()));
 
       }, this));
-      this._dlWorldButton = $("<a>").attr({ "href": "javascript:void(0);" }).html(GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEPGWBTN).click(L.bind(function () {
+      this._dlWorldButton = $("<a>").attr({ "href": "javascript:void(0);" }).html(GSI.TEXT.MAPTOIMAGE.WINDOW_SAVEPGWBTN).on('click',L.bind(function () {
 
         var blob = new Blob([this._worldFileText], { "type": "text/plain" })
 
@@ -16771,7 +16790,7 @@ GSI.Control.MapSplitControl = L.Control.extend({
     this._splitEndButton = $("<a>").addClass("normalbutton")
       .attr({ "href": "javascript:void(0)" }).html(this.options.caption);
 
-    this._splitEndButton.click(L.bind(function () {
+    this._splitEndButton.on('click',L.bind(function () {
 
       try {
 
@@ -16869,7 +16888,7 @@ GSI.Control.MapCompareControl = L.Control.extend({
     this._splitEndButton = $("<a>").addClass("normalbutton")
       .attr({ "href": "javascript:void(0)" }).html(this.options.caption);
 
-    this._splitEndButton.click(L.bind(function () {
+    this._splitEndButton.on('click',L.bind(function () {
 
       $("body").tooltip("destroy").tooltip({
         "show": { duration: 300 },
@@ -17197,8 +17216,8 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
 
     for (var i = 0; i < data.colors.length; i++) {
       var c = data.colors[i];
-      if (jQuery.type(c.color) == "string") {
-        var color = GSI.ReliefTileLayer.colorStringToRGBA(c.color);
+      if (c.color !== null && typeof c.color === "string") {
+          var color = GSI.ReliefTileLayer.colorStringToRGBA(c.color);
 
         c.color = color;
       }
@@ -17331,7 +17350,7 @@ GSI.ReliefTileLayer.colorStringToRGBA = function (c) {
   var toHex = function (v) {
     return '0x' + (('0000' + v.toString(16).toUpperCase()).substr(-4));
   };
-  if (jQuery.type(c) == "string") {
+  if (c !== null && typeof c === "string") {
     var color = {
       r: 0, g: 0, b: 0, a: 0
     };
@@ -17373,7 +17392,7 @@ GSI.ReliefTileLayer.encodeElevationData = function (data) {
     var colorText = ""
 
     if (c && c.color) {
-      if (jQuery.type(c.color) == "string") {
+      if (typeof c.color === "string") {
         if (c.color.charAt(0) == "#")
           colorText = c.color.slice(1);
         else
@@ -18795,7 +18814,7 @@ GSI.Canvas.PathProcs = {
     var dashArray = null;
     var options = this.options;
     if (options.dashArray) {
-      if ($.isArray(options.dashArray))
+      if (Array.isArray(options.dashArray))
         dashArray = $.extend([], options.dashArray);
       else {
         var dashParts = options.dashArray.split(',');
@@ -18853,7 +18872,7 @@ GSI.Canvas.PathProcs = {
     var dashArray = null;
     var isPolygon = (this instanceof L.Polygon);
     if (options.dashArray) {
-      if ($.isArray(options.dashArray))
+      if (Array.isArray(options.dashArray))
         dashArray = $.extend([], options.dashArray);
       else {
         var dashParts = options.dashArray.split(',');
@@ -19104,7 +19123,7 @@ L.DivIcon.prototype._setIconStyles = function (img, name) {
     var angle90 = div.css("writing-mode")
       || div.css("-moz-writing-mode") || div.css("-o-writing-mode")
       || div.css("-ms-writing-mode") || div.css("-webkit-writing-mode");
-    if (angle90) angle90 = $.trim(angle90);
+    if (angle90) angle90 = (angle90) ? angle90.trim() : '';
     else {
       var matches = cssText.match(/vertical-rl/);
       if (matches) angle90 = "vertical-rl";
@@ -19500,7 +19519,8 @@ GSI.MapLayerList = L.Evented.extend({
     }
   },
 
-  appendComparePhoto : function(layerInfo) {
+  // 202303 isHideを追加
+  appendComparePhoto : function(layerInfo, isHide) {
     if ( this.hasComparePhotoTile() ) return;
 
     var info = $.extend({
@@ -19511,6 +19531,7 @@ GSI.MapLayerList = L.Evented.extend({
     info._visibleInfo.opacity = 1.0;
     info._isComparePhoto = true;
     info._visibleInfo.layer = new GSI.ComparePhotoLayer(this._mapManager,false, undefined, layerInfo);
+    if (isHide) info._visibleInfo._isHidden = true;
 
     info._visibleInfo.layer.on("change", L.bind(function(info){
       var title = info._visibleInfo.layer.getActiveTitle();
@@ -19532,6 +19553,11 @@ GSI.MapLayerList = L.Evented.extend({
     GSI.Utils.setMixBlendMode(info, info._visibleInfo.blend);
     this.tileList.unshift(info);
     this._initZIndex(this.tileList);
+
+    // 202303 hideの場合は非表示
+    if (isHide) {
+      this._mapManager.getMap().removeLayer(info._visibleInfo.layer);
+    }
 
     this.fire('change');
 
@@ -19648,7 +19674,7 @@ GSI.MapLayerList = L.Evented.extend({
   },
 
   append: function (info, noFinishMove, isHide, Confirm_FLAG, blend) {
-
+    
     if (this.exists(info)) return;
     info._appendInfo = null;
 
@@ -19662,7 +19688,7 @@ GSI.MapLayerList = L.Evented.extend({
 
     // 時系列表示
     if ( info.id == CONFIG.COMPAREPHOTO_ID ) {
-      this.appendComparePhoto(info);
+      this.appendComparePhoto(info, isHide);
       return;
     }
 
@@ -19702,6 +19728,12 @@ GSI.MapLayerList = L.Evented.extend({
         if (!info._visibleInfo._isHidden) {
           info._visibleInfo.grayscale = this._mapManager._baseLayer.isGrayScale;
           this._mapManager._baseLayer.setActiveId(info.id);
+          // 202303
+          this._mapManager._map.addLayer(this._mapManager._baseLayer);
+        }
+        else {
+          // 202303
+          this._mapManager.getMap().removeLayer(this._mapManager._baseLayer);
         }
         this.tileList.push(info);
         this._initZIndex(this.tileList);
@@ -22541,7 +22573,7 @@ GSI.HouiLineDialog = GSI.Dialog.extend({
       }
 
     }, this);
-    input.click(refreshHandler);
+    input.on('click',refreshHandler);
     container.append(input).append(label);
 
     if (value == 1) {
@@ -23440,7 +23472,7 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend({
       .addClass("normalbutton threedareadialog_button")
       .attr({ "href": "javascript:void(0);" })
       .html(GSI.TEXT.THREEDAREA.DIALOG_OKBTN)
-      .click(L.bind(this._onOkClick, this));
+      .on('click',L.bind(this._onOkClick, this));
 
     this._buttonFrame
       .append(this._errorMessage)
@@ -23891,7 +23923,8 @@ GSI.ThreeDAreaDialog = GSI.Dialog.extend({
     } else {
       var size = this._getInputSize();
 
-      if (size)
+      // 202303 条件追加
+      if (size && this._sizeSelectLayer)
         this._sizeSelectLayer.setSize(size);
     }
   }
@@ -24063,7 +24096,7 @@ GSI.MapToImageAreaSelectDialog = GSI.Dialog.extend({
       .addClass("normalbutton threedareadialog_button")
       .attr({ "href": "javascript:void(0);" })
       .html(GSI.TEXT.THREEDAREA.DIALOG_OKBTN)
-      .click(L.bind(this._onOkClick, this));
+      .on('click',L.bind(this._onOkClick, this));
 
     this._buttonFrame
       .append(this._errorMessage)
@@ -24861,7 +24894,8 @@ GSI.MapToImageAreaSelectDialog = GSI.Dialog.extend({
     } else {
       var size = this._getInputSize();
 
-      if (size)
+      // 202303 条件追加
+      if (size && this._sizeSelectLayer)
         this._sizeSelectLayer.setSize(size);
     }
   }
@@ -28291,9 +28325,10 @@ GSI.MeasureDialog = GSI.Dialog.extend({
     this.distanceRadio = $('<input>').attr({
       'id': 'GSI_MeasureDialog_distance',
       'type': 'radio',
-      'name': 'measure',
-      'checked': true
-    }).click(L.bind(this.onMeasureTypeChange, this));
+      'name': 'measure'//,
+//      'checked': true
+    }).on('click',L.bind(this.onMeasureTypeChange, this));
+    this.distanceRadio.prop('checked', true);
     this.distanceLabel = $('<label>').attr({ 'for': 'GSI_MeasureDialog_distance' }).append(this.distanceRadio)
       .append($('<span>').html(GSI.TEXT.MEASURE.DIALOG_DISTANCE_CAPTION));
 
@@ -28301,9 +28336,10 @@ GSI.MeasureDialog = GSI.Dialog.extend({
     this.areaRadio = $('<input>').attr({
       'id': 'GSI_MeasureDialog_area',
       'type': 'radio',
-      'name': 'measure',
-      'checked': false
-    }).click(L.bind(this.onMeasureTypeChange, this));
+      'name': 'measure'//,
+//      'checked': false
+    }).on('click',L.bind(this.onMeasureTypeChange, this));
+    this.areaRadio.prop('checked', false);
     this.areaLabel = $('<label>').attr({ 'for': 'GSI_MeasureDialog_area' }).append(this.areaRadio)
       .append($('<span>').html(GSI.TEXT.MEASURE.DIALOG_AREA_CAPTION));
 
@@ -28311,9 +28347,10 @@ GSI.MeasureDialog = GSI.Dialog.extend({
     this.featureRadio = $('<input>').attr({
       'id': 'GSI_MeasureDialog_feature',
       'type': 'radio',
-      'name': 'measure',
-      'checked': false
-    }).click(L.bind(this.onMeasureTypeChange, this));
+      'name': 'measure'//,
+//      'checked': false
+    }).on('click',L.bind(this.onMeasureTypeChange, this));
+    this.featureRadio.prop('checked', false);
     this.featureLabel = $('<label>').attr({ 'for': 'GSI_MeasureDialog_feature' }).append(this.featureRadio)
       .append($('<span>').html(GSI.TEXT.MEASURE.DIALOG_OBJECT_CAPTION));
 
@@ -28321,9 +28358,10 @@ GSI.MeasureDialog = GSI.Dialog.extend({
     this.multiRadio = $('<input>').attr({
       'id': 'GSI_MeasureDialog_multi',
       'type': 'radio',
-      'name': 'measure',
-      'checked': false
-    }).click(L.bind(this.onMeasureTypeChange, this));
+      'name': 'measure'//,
+//      'checked': false
+    }).on('click',L.bind(this.onMeasureTypeChange, this));
+    this.multiRadio.prop('checked', false);
     this.multiLabel = $('<label>').attr({ 'for': 'GSI_MeasureDialog_multi' }).append(this.multiRadio)
       .append($('<span>').html(GSI.TEXT.MEASURE.DIALOG_MULTI_CAPTION));
 
@@ -29023,7 +29061,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
 
     this._orderDescCheck = $("<input>").attr({ "id": id, "type": "checkbox" }).addClass("normalcheck");
 
-    this._orderDescCheck.click(L.bind(function () {
+    this._orderDescCheck.on('click',L.bind(function () {
       var data = this._makeElevationData(!this._orderDescCheck.is(":checked"));
       data.desc = this._orderDescCheck.is(":checked");
       this._refreshReriefEdit(data);
@@ -29060,7 +29098,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     id = "gsi_editreliefdialog_gradate" + GSI.EditReliefDialog._labelIdInc;
 
     this._gradateInput = $("<input>")
-      .click(L.bind(function () {
+      .on('click',L.bind(function () {
         this._refreshGradationBar();
       }, this))
       .addClass("normalcheck").attr({ "id": id, "type": "checkbox" });
@@ -29084,7 +29122,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     var reflectionFrame = $("<div>").css({ "padding": "4px", "width": "100%" });
     a = $("<a>").addClass("normalbutton").css({ "text-align": "center", "width": "100%", "padding-left": "7px", "padding-right": "7px" }).attr({ "href": "javascript:void(0);" }).html("上記の内容で地図に反映");
 
-    a.click(L.bind(function () {
+    a.on('click',L.bind(function () {
       this._reflection();
       var isshow = false;
       for(var i=0; i < this._mapLayerList.tileList.length; i++){
@@ -29316,7 +29354,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
         "title": "スタイルをファイルから読み込み"
       });
 
-    a.click(L.bind(this._showLoadView, this));
+    a.on('click',L.bind(this._showLoadView, this));
     a.append(img);
     frame.append(a);
 
@@ -29328,7 +29366,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
         "title": "スタイルをファイルに保存"
       });
 
-    a.click(L.bind(this._save, this));
+    a.on('click',L.bind(this._save, this));
     a.append(img);
     frame.append(a);
 
@@ -29344,7 +29382,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       img.attr({ "title": CONFIG.TOOLTIP.EDITRELIEF.HANREI });
     }
 
-    a.click(L.bind(function () {
+    a.on('click',L.bind(function () {
       this._saveHanrei();
     }, this));
     frame.append(a);
@@ -29362,7 +29400,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     if (CONFIG.TOOLTIP && CONFIG.TOOLTIP.EDITRELIEF) {
       img.attr({ "title": CONFIG.TOOLTIP.EDITRELIEF.AUTO });
     }
-    a.click(L.bind(function () {
+    a.on('click',L.bind(function () {
       this._createAutoNewData();
     }, this));
     frame.append(a);
@@ -29378,7 +29416,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     if (CONFIG.TOOLTIP && CONFIG.TOOLTIP.EDITRELIEF) {
       img.attr({ "title": CONFIG.TOOLTIP.EDITRELIEF.LOW });
     }
-    a.click(L.bind(function () {
+    a.on('click',L.bind(function () {
       this._createLowNewData();
     }, this));
     frame.append(a);
@@ -29394,7 +29432,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     if (CONFIG.TOOLTIP && CONFIG.TOOLTIP.EDITRELIEF) {
       img.attr({ "title": CONFIG.TOOLTIP.EDITRELIEF.RESET });
     }
-    a.click(L.bind(function () {
+    a.on('click',L.bind(function () {
       if (window.confirm("編集中の色情報は削除されます。\n初期状態に戻してもよろしいですか？")) {
         var data = GSI.ReliefTileLayer.getElevationSampleData();
         this._refreshReriefEdit(data);
@@ -29577,7 +29615,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       var buttonFrame = $("<div>").addClass("button_frame");
 
       var btn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("上記の内容で作成");
-      btn.click(L.bind(function () {
+      btn.on('click',L.bind(function () {
         if (this._newSplitRadio.is(":checked"))
           this._createNewData();
         else
@@ -29587,7 +29625,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       buttonFrame.append(btn);
 
       btn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("キャンセル");
-      btn.click(L.bind(function () {
+      btn.on('click',L.bind(function () {
 
         var data = this._mapLayerList.getElevationData();
         if (!data || data["default"])
@@ -29960,14 +29998,14 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       var buttonFrame = $("<div>").addClass("button_frame");
 
       var btn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("ファイルを読み込む");
-      btn.click(L.bind(function () {
+      btn.on('click',L.bind(function () {
         this._loadData(this._loadFileInput);
       }, this));
 
       buttonFrame.append(btn);
 
       btn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("キャンセル");
-      btn.click(L.bind(function () {
+      btn.on('click',L.bind(function () {
         this._loadDataView.fadeOut(200);
       }, this));
 
@@ -30164,7 +30202,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     var h = td.find("div").innerHeight();
     var canvas = td.find("canvas")[0];
 
-    canvas.width = w
+    canvas.width = w;
     canvas.height = h;
     var ctx = canvas.getContext('2d');
 
@@ -30377,10 +30415,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       td = $("<td>").append(input);
       tr.append(td);
       input
-        .focus(L.bind(function (elem) {
-          elem.select();
+        .on('focus',L.bind(function (elem) {
+          elem.trigger('select');
         }, this, input))
-        .blur(L.bind(function (tr) {
+        .on('blur', L.bind(function (tr) {
 
           this._checkInputElevation(tr);
         }, this, tr))
@@ -30408,8 +30446,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
             return false;
           }
         }))
-        .click(function () {
-          $(this).select();
+        .on('click',function () {
+          $(this).trigger('select');
           return false;
         });
 
@@ -30471,7 +30509,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
     if (next) {
       td = $("<td>");
       a = $("<a>").attr({ "title": "この行を削除", "href": "javascript:void(0);" }).addClass("btn").addClass("remove_btn");
-      a.click(L.bind(function (prev, current, next, tr) {
+      a.on('click',L.bind(function (prev, current, next, tr) {
         this._removeLine(tr);
 
       }, this, prev, current, next, tr));
@@ -30482,7 +30520,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       td = $("<td>");
       a = $("<a>").attr({ "title": "ここに追加", "href": "javascript:void(0);" }).addClass("btn")
         .addClass((desc ? "append_prev_btn" : "append_next_btn")).html("+");
-      a.click(L.bind(function (prev, current, next, tr) {
+      a.on('click',L.bind(function (prev, current, next, tr) {
         this._appendLine(tr);
       }, this, prev, current, next, tr));
 
@@ -30662,7 +30700,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
       newTr.insertBefore(tr);
     }
 
-    newTr.find("input[type=text]").focus();
+    newTr.find("input[type=text]").trigger('focus');
 
     this._refreshElevationFrom();
     this._refreshGradationBar();
@@ -31136,7 +31174,7 @@ GSI.CSVLoadDialog = GSI.Dialog.extend({
     if (!hasList) {
       this._fileQueue = [];
     }
-    if ($.isArray(txt)) {
+    if (Array.isArray(txt)) {
       var list = txt;
       for (var i = 0; i < list.length; i++) {
         this._fileQueue.push({
@@ -32041,7 +32079,7 @@ GSI.Utils.saveFile = function (contentType, fileName, blob, func) {
       $("body").append(GSI.SaveFileWindow._dummyButton);
 
       setTimeout(function () {
-        GSI.SaveFileWindow._dummyButton[0].click();
+        GSI.SaveFileWindow._dummyButton[0].trigger('click');
         setTimeout(function () {
           if (GSI.SaveFileWindow._dummyButton) GSI.SaveFileWindow._dummyButton.remove();
           GSI.SaveFileWindow._dummyButton = null;
@@ -32089,9 +32127,9 @@ GSI.SaveFileWindow = L.Evented.extend({
 
     this._create();
 
-    this._fileNameInput.focus();
+    this._fileNameInput.trigger('focus');
     this._container.fadeIn(200, L.bind(function () {
-      this._fileNameInput.focus();
+      this._fileNameInput.trigger('focus');
     }, this));
 
   },
@@ -32108,12 +32146,12 @@ GSI.SaveFileWindow = L.Evented.extend({
 
   _onFileNameFocus: function () {
     setTimeout(L.bind(function () {
-      this._fileNameInput.select();
+      this._fileNameInput.trigger('select');
     }, this), 1);
   },
 
   _onFileNameBlur: function () {
-    var fileName = $.trim(this._fileNameInput.val());
+    var fileName = (this._fileNameInput.val()) ? this._fileNameInput.val().trim() : '';
     if (fileName == "") {
       this._fileNameInput.val(this._fileName);
     } else {
@@ -32139,7 +32177,7 @@ GSI.SaveFileWindow = L.Evented.extend({
   _onFileNameKeyPress: function (evt) {
     if (evt.keyCode == 13) {
       this._onFileNameBlur();
-      this._okButton[0].click();
+      this._okButton[0].trigger('click');
     }
   },
 
@@ -33053,11 +33091,11 @@ GSI.CrossSectionView.VectorFileLoader = L.Evented.extend({
           if (window.ActiveXObject) {
             data = new ActiveXObject("Microsoft.XMLDOM");
             data.async = false;
-            data.loadXML($.trim(text));
+            data.loadXML((text) ? text.trim() : '');
           }
           else if (window.DOMParser) {
             data = new DOMParser().parseFromString(
-              $.trim(text),
+              (text) ? text.trim() : '',
               "application/xml"
             );
           }
@@ -33658,7 +33696,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend({
     // 開閉ボタン
     this._optionToggleButton = $("<a>")
       .attr({ "href": "javascript:void(0);" }).html("オプション").addClass("option-toggle-button")
-      .click(L.bind(function () {
+      .on('click',L.bind(function () {
         if (this._optionFrame.is(":visible")) {
           this._optionFrame.slideUp(300);
           this._optionToggleButton.removeClass("open");
@@ -34094,7 +34132,7 @@ GSI.CrossSectionViewDisplayDialog = GSI.Dialog.extend({
     this._ratioResetButton = $("<a>").attr({ "href": "javascript:void(0);" }).html("等倍に戻す").addClass("normalbutton");
     container.append(this._ratioResetButton);
 
-    this._ratioResetButton.click(L.bind(function () {
+    this._ratioResetButton.on('click',L.bind(function () {
       this._ratioVertInput.val(1).data({ "vert": 1 });
       this._scaleSliderContainer.slider("value", 0);
       this._refreshRatio();
@@ -35368,14 +35406,19 @@ GSI.HashOptions = L.Class.extend({
     this.Hash();
   },
   Callback: function (t, o, hash) {
-
+    
     if (t == "moveend") {
       hash += o.vHashOptions;
       o.vHash = hash;
-      if (CONFIG.USECOOKIE) $.cookie(CONFIG.COOKIEKEY_HASH, hash, { path: '/', expires: 365 });
+      // 202303
+//      if (CONFIG.USECOOKIE) $.cookie(CONFIG.COOKIEKEY_HASH, hash, { path: '/', expires: 365 });
+      if (CONFIG.USECOOKIE) Cookies.set(CONFIG.COOKIEKEY_HASH, hash, { path: '/', expires: 365 });
     }
     else if (t == "hashchange") {
       o.HashSetProc(hash);
+      // 202303 &baseの値をチェック。
+      hash = o.baseHashCheck(hash);
+
       location.replace(hash);
     }
     return hash;
@@ -35416,7 +35459,7 @@ GSI.HashOptions = L.Class.extend({
       this._cookieHash = hash;
     }
     if (force || (!this.eHashChange && this.vHash != hash)) {
-      if (CONFIG.USECOOKIE) $.cookie(CONFIG.COOKIEKEY_HASH, hash, { path: '/', expires: 365 });
+      if (CONFIG.USECOOKIE) Cookies.set(CONFIG.COOKIEKEY_HASH, hash, { path: '/', expires: 365 });
       location.replace(hash);
       this.vHash = hash;
       this.vHashOptions = hash_options;
@@ -35903,7 +35946,81 @@ GSI.HashOptions = L.Class.extend({
     }
     location.hash = newop;
     this._gsimaps._mainMap._confirmDlg.hide();
+  },
+
+  baseHashCheck: function(hash) {
+    // 202303
+    // baseMapの状況に応じてhashを書き換える。
+    var baseDisp = this._checkBaseDispParams(hash);
+
+    if (!baseDisp) {
+      for(var i=0; i < CONFIG.BASEMAPLIST.length; i++) {
+        var baseOption = '&base=';
+        baseOption += CONFIG.BASEMAPLIST[i].id;
+        if (hash.indexOf(baseOption) != -1) {
+          hash= hash.replace(baseOption, '');
+        }
+      }
+    } else {
+      // baseMapが表示されていて&base=がハッシュに存在せず、ls=baseMapが存在する場合は&base=を追加する。
+      if (this._gsimaps._queryParams._baseMap) {
+        var baseOption = '/&base=';
+
+        if (this._gsimaps._queryParams._baseMap) {
+          var lsOption = '&ls=' + this._gsimaps._queryParams._baseMap;
+          // &baseをチェック
+          if (hash.indexOf(baseOption) == -1) {
+            // &lsをチェック
+            if (hash.indexOf(lsOption) != -1) {
+              baseOption += this._gsimaps._queryParams._baseMap;
+              baseOption += '&';
+              hash= hash.replace('/&', baseOption);
+            }
+          }
+
+        }
+
+      }
   }
+
+    return hash;
+  }, 
+  _checkBaseDispParams: function(hash) {
+    // lsの値とdispの値からbaseのdispを判断する。
+    // 202303 baseMap非表示時にlsからbaseMapを取得する。
+
+    var params = this._gsimaps._queryParams._parse(hash);
+    var layers = (params["ls"]) ? this._gsimaps._queryParams.params["ls"].split('|') : null;
+    var disp = params["disp"];
+
+    if (layers && disp) {
+        
+      for (var i = 0; i < layers.length; i++) {
+        if (((layers[i]) ? layers[i].trim() : '') == '') continue;
+        var parts = layers[i].split(',');
+
+        if (CONFIG.BASETILES.length >= 1) {
+
+          for (n = 0; n < CONFIG.BASETILES.length; n++) {
+            if (CONFIG.BASETILES[n].id == parts[0]) {
+
+              if (disp.length > i && disp.charAt(i) == '0') {
+                  return false;
+              } else {
+                  return true;
+              }
+
+            }
+          }
+        }
+
+      }
+      
+    }
+
+    return false;
+  }
+
 });
 
 /************************************************************************
@@ -35955,7 +36072,7 @@ GSI.QueryParams = L.Class.extend({
     if (CONFIG.USECOOKIE) {
       if (!locationHash || locationHash == "" || locationHash == "#" ||
         locationHash.match(CONFIG.DEFAULTHASH)) {
-        locationHash = $.cookie(CONFIG.COOKIEKEY_HASH);
+        locationHash = Cookies.get(CONFIG.COOKIEKEY_HASH);
         if (!locationHash) locationHash = "";
       }
     } else {
@@ -36197,6 +36314,34 @@ GSI.QueryParams = L.Class.extend({
       if (this._baseMap != "") {
         fBaseMap = true;
       }
+    } else {
+      // 202303 baseMap非表示時にlsからbaseMapを取得する。
+      var layers = (this.params["ls"]) ? this.params["ls"].split('|') : null;
+      var disp = this.params["disp"];
+
+      if (layers && disp) {
+        
+        for (var i = 0; i < layers.length; i++) {
+          if (((layers[i]) ? layers[i].trim() : '') == '') continue;
+          var parts = layers[i].split(',');
+  
+          if (0 < CONFIG.BASETILES.length) {
+            for (n = 0; n < CONFIG.BASETILES.length; n++) {
+              if (CONFIG.BASETILES[n].id == parts[0]) {
+                if (disp.length > i) {
+                  // 個々の設定自体は無条件にしてもOK
+                  this._baseMap = parts[0];
+                  fBaseMap = true;
+                  break;
+                  }
+              }
+            }
+          }
+  
+        }
+        
+      }
+
     }
 
     if (!fBaseMap) {
@@ -36229,6 +36374,34 @@ GSI.QueryParams = L.Class.extend({
       if (this._baseMap2 != "") {
         fBaseMap = true;
       }
+    } else {
+      // 202303 baseMap非表示時にls2からbaseMap2を取得する。
+      var layers = (this.params["ls2"]) ? this.params["ls2"].split('|') : null;
+      var disp = this.params["disp2"];
+
+      if (layers && disp) {
+        
+        for (var i = 0; i < layers.length; i++) {
+          if (((layers[i]) ? layers[i].trim() : '') == '') continue;
+          var parts = layers[i].split(',');
+  
+          if (0 < CONFIG.BASETILES.length) {
+            for (n = 0; n < CONFIG.BASETILES.length; n++) {
+              if (CONFIG.BASETILES[n].id == parts[0]) {
+  
+                if (disp.length > i) {
+                  this._baseMap2 = parts[0];
+                  fBaseMap = true;
+                  break;
+                  }
+              }
+            }
+          }
+  
+        }
+        
+      }
+
     }
 
     if (!fBaseMap) {
@@ -36314,7 +36487,7 @@ GSI.QueryParams = L.Class.extend({
       }
 
       for (var i = 0; i < layers.length; i++) {
-        if ($.trim(layers[i]) == '') continue;
+        if (((layers[i]) ? layers[i].trim() : '') == '') continue;
         var parts = layers[i].split(',');
         var $hdn = false;
 
@@ -36412,7 +36585,7 @@ GSI.QueryParams = L.Class.extend({
       var blds = this.params["blend2"];
 
       for (var i = 0; i < layers.length; i++) {
-        if ($.trim(layers[i]) == '') continue;
+        if (((layers[i]) ? layers[i].trim() : '') == '') continue;
         var parts = layers[i].split(',');
         var $hdn = false;
 
@@ -38229,11 +38402,11 @@ GSI.SharePanel = L.Evented.extend({
 
     // url
     this._urlTextarea = $("<textarea>")
-      .focus(function () {
-        setTimeout(L.bind(function () { $(this).select(); }, this), 1);
+      .on('focus',function () {
+        setTimeout(L.bind(function () { $(this).trigger('select'); }, this), 1);
       })
-      .click(function () {
-        setTimeout(L.bind(function () { $(this).select(); }, this), 1);
+      .on('click',function () {
+        setTimeout(L.bind(function () { $(this).trigger('select'); }, this), 1);
         return false;
       });
     this._urlPanel.append(this._urlTextarea);
@@ -38251,7 +38424,7 @@ GSI.SharePanel = L.Evented.extend({
         "href": "javascript:void(0);",
         "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.FACEBOOK : "")
       });
-      a.click(function () { GSI.SHARE.showFacebook(); });
+      a.on('click',function () { GSI.SHARE.showFacebook(); });
       container.append(a);
     }
     // twitter
@@ -38260,7 +38433,7 @@ GSI.SharePanel = L.Evented.extend({
         "href": "javascript:void(0);",
         "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.TWITTER : "")
       });
-      a.click(function () { GSI.SHARE.showTwitter(); });
+      a.on('click',function () { GSI.SHARE.showTwitter(); });
       container.append(a);
     }
 
@@ -38271,7 +38444,7 @@ GSI.SharePanel = L.Evented.extend({
           "href": "javascript:void(0);",
           "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.SAVEIMAGE : "")
         });
-        a.click(L.bind(function () {
+        a.on('click',L.bind(function () {
           this._gsimaps.executeSaveImage();
         }, this));
         container.append(a);
@@ -38284,7 +38457,7 @@ GSI.SharePanel = L.Evented.extend({
         "href": "javascript:void(0);",
         "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.QRCODE : "")
       });
-      a.click(L.bind(function () {
+      a.on('click',L.bind(function () {
         this._gsimaps.showQRCodeDialog();
       }, this));
       container.append(a);
@@ -38309,7 +38482,7 @@ GSI.SharePanel = L.Evented.extend({
           "href": "javascript:void(0);",
           "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.SAVEHTML : "")
         });
-        a.click(L.bind(function () {
+        a.on('click',L.bind(function () {
           this._gsimaps.showShareDialog(GSI.ShareDialog.MODE.FILE);
         }, this));
         container.append(a);
@@ -38321,14 +38494,14 @@ GSI.SharePanel = L.Evented.extend({
           "href": "javascript:void(0);",
           "title": (CONFIG.TOOLTIP && CONFIG.TOOLTIP.SHARE ? CONFIG.TOOLTIP.SHARE.IFRAME : "")
         });
-        a.click(L.bind(function () {
+        a.on('click',L.bind(function () {
           this._gsimaps.showShareDialog(GSI.ShareDialog.MODE.BUILTIN);
         }, this));
         container.append(a);
       }
     }
 
-    container.find("a").click(L.bind(function () {
+    container.find("a").on('click',L.bind(function () {
       this.hide();
     }, this));
 
@@ -42790,14 +42963,14 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     btn = $('<a>').addClass("").attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_fileopen.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","LOAD") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, "file_load"));
+    ).on('click',L.bind(this._toolBtnClick, this, "file_load"));
     frame.append(btn);
     this._openFileButton = btn;
 
     btn = $('<a>').attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_filesave.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","SAVE") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, "file_save"));
+    ).on('click',L.bind(this._toolBtnClick, this, "file_save"));
     frame.append(btn);
     this._saveFileButton = btn;
 
@@ -42808,49 +42981,49 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     btn = $('<a>').addClass(GSI.SakuzuListItem.POINT).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_mark.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","MARKER") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT));
     frame.append(btn);
 
     // 円（マーカー）
     btn = $('<a>').addClass(GSI.SakuzuListItem.POINT_CIRCLE).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_markc.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","CIRCLEMARKER") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT_CIRCLE));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT_CIRCLE));
     frame.append(btn);
 
     // 線
     btn = $('<a>').addClass(GSI.SakuzuListItem.LINESTRING).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_line.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","LINE") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.LINESTRING));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.LINESTRING));
     frame.append(btn);
 
     // ポリゴン
     btn = $('<a>').addClass(GSI.SakuzuListItem.POLYGON).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_polygon.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","POLYGON") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POLYGON));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POLYGON));
     frame.append(btn);
 
     // 円
     btn = $('<a>').addClass(GSI.SakuzuListItem.CIRCLE).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_circle.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","CIRCLE") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.CIRCLE));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.CIRCLE));
     frame.append(btn);
 
     // ポイント(テキスト)
     btn = $('<a>').addClass(GSI.SakuzuListItem.POINT_TEXT).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_text.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","TEXT") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT_TEXT));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.POINT_TEXT));
     frame.append(btn);
 
     // フリーハンド
     btn = $('<a>').addClass(GSI.SakuzuListItem.FREEHAND).attr({ "href": "javascript:void(0);" }).append(
       $('<img>').attr({ 'src': 'image/sakuzu/icon_freehand.png',
       'title': GSI.Utils.getTooltipText("SAKUZU","FREEHAND") }).css({ 'width': '24px', 'height': '24px' })
-    ).click(L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.FREEHAND));
+    ).on('click',L.bind(this._toolBtnClick, this, GSI.SakuzuListItem.FREEHAND));
     frame.append(btn);
 
     frame.append($('<div>').css({ clear: 'both' }));
@@ -42927,8 +43100,10 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
       var id = 'GSI_SakuzuDialog_check' + GSI.Utils.getCurrentID();
 
       // 表示チェック
-      var checkBox = $('<input>').attr({ 'id': id, 'type': 'checkbox', 'checked': item.getVisible() }).addClass('normalcheck');
-      checkBox.click(L.bind(function (checkBox, item) {
+//      var checkBox = $('<input>').attr({ 'id': id, 'type': 'checkbox', 'checked': item.getVisible() }).addClass('normalcheck');
+      var checkBox = $('<input>').attr({ 'id': id, 'type': 'checkbox'}).addClass('normalcheck');
+      checkBox.prop('checked', item.getVisible());
+      checkBox.on('click',L.bind(function (checkBox, item) {
         item.setVisible(checkBox.is(':checked'));
       }, this, checkBox, item));
 
@@ -42978,9 +43153,11 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
       if (dataType != GSI.SakuzuListItem.IMAGE && dataType != GSI.SakuzuListItem.IMAGEICON) {
         tr = $('<tr>');
         id = 'GSI_SakuzuDialog_label_check' + GSI.Utils.getCurrentID();
-        var checkbox2 = $('<input>').attr({ 'id': id, 'type': 'checkbox', 'checked': item.getIconLabelVisible() }).addClass('normalcheck');
+//        var checkbox2 = $('<input>').attr({ 'id': id, 'type': 'checkbox', 'checked': item.getIconLabelVisible() }).addClass('normalcheck');
+        var checkbox2 = $('<input>').attr({ 'id': id, 'type': 'checkbox'}).addClass('normalcheck');
+        checkbox2.prop('checked', item.getIconLabelVisible());
 
-        checkbox2.click(L.bind(function (checkBox2, item) {
+        checkbox2.on('click',L.bind(function (checkBox2, item) {
           item.setIconLabelVisible(checkBox2.is(':checked'));
           // ラベル選択コンボボックス 表示/非表示
           if (checkBox2.is(':checked')) {
@@ -43027,7 +43204,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
         keyNameList.forEach(function(val,index,ar) {
           keyNameSelect.append($('<option>').html(val).val(val));
         });
-        keyNameSelect.change(L.bind(function (selectBox, item) {
+        keyNameSelect.on('change',L.bind(function (selectBox, item) {
           var arylist = item._layer.getLayers();
           var selval = selectBox.val();
           item._iconLabelSelectValue = selval
@@ -43093,19 +43270,19 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
         var labelMiddle = $("<a>").attr({ "href": "javascript:void(0);" }).html("中").addClass("middle");
         var labelSmall = $("<a>").attr({ "href": "javascript:void(0);" }).html("小").addClass("small");
 
-        labelLarge.click(L.bind(function (labelSizeFrame, item) {
+        labelLarge.on('click',L.bind(function (labelSizeFrame, item) {
           item.setIconLabelSize("large");
           this._refreshIconLabelSizeButton(labelSizeFrame, item);
         }, this, labelSizeFrame, item));
 
         labelLarge.attr({"title":GSI.Utils.getTooltipText("SAKUZU","LABEL_L")});
 
-        labelMiddle.click(L.bind(function (labelSizeFrame, item) {
+        labelMiddle.on('click',L.bind(function (labelSizeFrame, item) {
           item.setIconLabelSize("middle");
           this._refreshIconLabelSizeButton(labelSizeFrame, item);
         }, this, labelSizeFrame, item));
 
-        labelSmall.click(L.bind(function (labelSizeFrame, item) {
+        labelSmall.on('click',L.bind(function (labelSizeFrame, item) {
           item.setIconLabelSize("small");
           this._refreshIconLabelSizeButton(labelSizeFrame, item);
         }, this, labelSizeFrame, item));
@@ -43132,14 +43309,14 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
       this._listUL.append( li );
 
       if (editBtn) {
-        editBtn.click(L.bind(this._onEditSakuzuItemClick, this, item, li ));
+        editBtn.on('click',L.bind(this._onEditSakuzuItemClick, this, item, li ));
         editBtn.attr({"title":GSI.Utils.getTooltipText("SAKUZU","EDIT")});
       }
       if ( clearBtn ){
-        clearBtn.click(L.bind(this._onClearButtonClick, this, item));
+        clearBtn.on('click',L.bind(this._onClearButtonClick, this, item));
         clearBtn.attr({"title":GSI.Utils.getTooltipText("SAKUZU","REMOVE")});
       }
-      if (opacityBtn) opacityBtn.click(L.bind(this._onOpacityBtnClick, this, item, opacityBtn, tr));
+      if (opacityBtn) opacityBtn.on('click',L.bind(this._onOpacityBtnClick, this, item, opacityBtn, tr));
 
     }, this));
 
@@ -43203,8 +43380,8 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
     }, this));
 
     if (this._hideOpacityWindowHandler) {
-      $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
-      $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+      $(document.body).off('mousedown', this._hideOpacityWindowHandler);
+      $(document.body).off('touchstart', this._hideOpacityWindowHandler);
 
     }
     this._hideOpacityWindowHandler = L.bind(function (event) {
@@ -43223,13 +43400,13 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
       }
       if (!hit) {
         this._opacityWindow.slideUp(200);
-        $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
-        $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+        $(document.body).off('mousedown', this._hideOpacityWindowHandler);
+        $(document.body).off('touchstart', this._hideOpacityWindowHandler);
       }
     }, this);
 
-    $(document.body).bind('mousedown', this._hideOpacityWindowHandler);
-    $(document.body).bind('touchstart', this._hideOpacityWindowHandler);
+    $(document.body).on('mousedown', this._hideOpacityWindowHandler);
+    $(document.body).on('touchstart', this._hideOpacityWindowHandler);
 
     this._opacityWindow.hide().slideDown(200);
   },
@@ -44059,8 +44236,8 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
         var parts = style.dashArray.split(",");
         if (parts.length >= 2) {
           dashArrayMode = 'dash';
-          var val1 = parseInt($.trim(parts[0]));
-          var val2 = parseInt($.trim(parts[1]));
+          var val1 = parseInt((parts[0]) ? parts[0].trim() : '');
+          var val2 = parseInt((parts[1]) ? parts[1].trim() : '');
           if (style.lineCap && style.lineCap == "butt") {
             if (val1 == val2) dashArrayMode = "dot";
           } else {
@@ -44215,7 +44392,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
 
     var btn = $('<a>').attr({ 'href': 'javascript:void(0);' }).addClass("btn")
       .html('<img title="この行を削除" src="image/sakuzu/icon_remove.png">')
-      .click(L.bind(
+      .on('click',L.bind(
         function (tr) {
           var no = 0;
           var trList = this._infoTableTbody.find('tr');
@@ -44243,7 +44420,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     td = $('<td>').css({ width: "24px", "text-align": "center" });
     var btn = $('<a>').attr({ 'href': 'javascript:void(0);' }).addClass("btn")
       .html('<img title="この下に行を追加" src="image/sakuzu/icon_enter.png">')
-      .click(L.bind(
+      .on('click',L.bind(
         function (tr) {
 
           var insertTr = this._createEditInfoTableLine(0, "", "");
@@ -44362,7 +44539,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     this._lineWeightSelect.append($('<option>').html("10px").val("10"));
     this._lineWeightSelect.append($('<option>').html("15px").val("15"));
     this._lineWeightSelect.append($('<option>').html("25px").val("25"));
-    this._lineWeightSelect.change(L.bind(lineStyleChange, this));
+    this._lineWeightSelect.on('change',L.bind(lineStyleChange, this));
 
     tr.append($('<td>').append(this._lineWeightSelect));
 
@@ -44390,7 +44567,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     this._lineTypeSelect.append($('<option>').html("実線").val("normal"));
     this._lineTypeSelect.append($('<option>').html("破線").val("dash"));
     this._lineTypeSelect.append($('<option>').html("点線").val("dot"));
-    this._lineTypeSelect.change(L.bind(lineStyleChange, this));
+    this._lineTypeSelect.on('change',L.bind(lineStyleChange, this));
 
     tr.append($('<td>').append(this._lineTypeSelect));
 
@@ -44432,14 +44609,14 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     );
 
     this._lineOpacityInput.on("focus", L.bind(function (sliderChangeHandler) {
-      this._lineOpacityInput.select();
+      this._lineOpacityInput.trigger('select');
       if (this._lineInputCheckTimer) {
         clearTimeout(this._lineInputCheckTimer);
         this._lineInputCheckTimer = null;
       }
       this._lineInputCheckTimer = setInterval(L.bind(function (sliderChangeHandler) {
         var opacityText = this._lineOpacityInput.val();
-        opacityText = $.trim(opacityText);
+        opacityText = (opacityText) ? opacityText.trim() : '';
         var reg = new RegExp(/^[0-9]*$/);
         if (reg.test(opacityText)) {
           var opacity = parseInt(opacityText);
@@ -44460,7 +44637,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
       }
 
       var opacityText = this._lineOpacityInput.val();
-      opacityText = $.trim(opacityText);
+      opacityText = (opacityText) ? opacityText.trim() : '';
       var valid = false;
       var reg = new RegExp(/^[0-9]*$/);
       if (reg.test(opacityText)) {
@@ -44546,14 +44723,14 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     );
 
     this._fillOpacityInput.on("focus", L.bind(function (sliderChangeHandler) {
-      this._fillOpacityInput.select();
+      this._fillOpacityInput.trigger('select');
       if (this._fillInputCheckTimer) {
         clearTimeout(this._fillInputCheckTimer);
         this._fillInputCheckTimer = null;
       }
       this._fillInputCheckTimer = setInterval(L.bind(function (sliderChangeHandler) {
         var opacityText = this._fillOpacityInput.val();
-        opacityText = $.trim(opacityText);
+        opacityText = (opacityText) ? opacityText.trim() : '';
         var reg = new RegExp(/^[0-9]*$/);
         if (reg.test(opacityText)) {
           var opacity = parseInt(opacityText);
@@ -44574,7 +44751,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
       }
 
       var opacityText = this._fillOpacityInput.val();
-      opacityText = $.trim(opacityText);
+      opacityText = (opacityText) ? opacityText.trim() : '';
       var valid = false;
       var reg = new RegExp(/^[0-9]*$/);
       if (reg.test(opacityText)) {
@@ -44602,7 +44779,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     if ( useInner ) {
       this._polyInnerModeBtn = $('<a>').attr({ 'href': 'javascript:void(0);' })
         .html(GSI.TEXT.SAKUZU.DIALOG_EDIT_POLYINNERBTN)
-        .addClass('plyinnerbtn').click(L.bind(this._onPolyInnerClick, this));
+        .addClass('plyinnerbtn').on('click',L.bind(this._onPolyInnerClick, this));
 
       editFrame.append(this._polyInnerModeBtn);
     }
@@ -44625,7 +44802,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
 
       this._polyInnerOkBtn = $("<a>").attr({ 'href': 'javascript:void(0);' })
         .html(GSI.TEXT.SAKUZU.DIALOG_EDIT_POLYINNER_OKBTN)
-        .addClass('normalbutton').click(L.bind(this._onPolyInnerOkClick, this));
+        .addClass('normalbutton').on('click',L.bind(this._onPolyInnerOkClick, this));
 
       btnFrame.append(this._polyInnerOkBtn);
 
@@ -44758,7 +44935,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
 
     this._pointEditTextFrame.append(messageFrame);
 
-    this._pointEditTextModeButton.click(L.bind(function () {
+    this._pointEditTextModeButton.on('click',L.bind(function () {
       if (this._pointEditTextArea.val() != "" && !this._pointEditTextArea.hasClass("textmode")) {
         if (!confirm('スタイル等の情報が失われる可能性があります。よろしいですか？')) return;
       }
@@ -45110,7 +45287,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
 
     // 情報
     this._toggleInfoBtn = $('<a>').html(GSI.TEXT.SAKUZU.DIALOG_EDIT_INFOFREE_BTN).attr({ 'href': 'javascript:void(0);' }).addClass('toggleinfobtn')
-      .click(L.bind(function () {
+      .on('click',L.bind(function () {
 
         if (this._infoFreeWordTextarea.is(':visible')) {
           this._infoFreeWordTextarea.fadeOut('fast', L.bind(function () {
@@ -45122,7 +45299,7 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
           this._infoTable.fadeOut('fast', L.bind(function () {
             this._toggleInfoBtn.html(GSI.TEXT.SAKUZU.DIALOG_EDIT_INFOTABLE_BTN);
             var description = this._infoTableToFreeWordText();
-            this._infoFreeWordTextarea.focus();
+            this._infoFreeWordTextarea.trigger('focus');
             if (description != '') this._infoFreeWordTextarea.val(description);
             this._infoFreeWordTextarea.fadeIn('fast');
           }, this));
@@ -45388,7 +45565,7 @@ GSI.SakuzuSaveFileWindow = L.Evented.extend({
     selectFrame.append(radio);
     selectFrame.append(label);
 
-    radio.click(L.bind(this._onSaveTypeChange, this, radio));
+    radio.on('click',L.bind(this._onSaveTypeChange, this, radio));
 
     id = 'GSI_SakuzuDialog_check' + GSI.Utils.getCurrentID();
     var radio = $('<input>').attr({ id: id, type: "radio", name: "gsi_sakuzu_dialog_savetype", value: "geojson" }).addClass('normalcheck');
@@ -45396,7 +45573,7 @@ GSI.SakuzuSaveFileWindow = L.Evented.extend({
     selectFrame.append(radio);
     selectFrame.append(label);
 
-    radio.click(L.bind(this._onSaveTypeChange, this, radio));
+    radio.on('click',L.bind(this._onSaveTypeChange, this, radio));
 
     // テキストエリア
     var textareaFrame = $("<div>").addClass("textarea-frame");
@@ -45404,7 +45581,7 @@ GSI.SakuzuSaveFileWindow = L.Evented.extend({
     this._fileSaveTextarea = $('<textarea>').attr({ 'wrap': 'off' }).css({ 'readonly': 'readonly' });
     this._fileSaveTextarea.on("focus", L.bind(function () {
       setTimeout(L.bind(function () {
-        this._fileSaveTextarea.select();
+        this._fileSaveTextarea.trigger('select');
       }, this), 0);
     }, this));
     textareaFrame.append(this._fileSaveTextarea);
@@ -45430,7 +45607,7 @@ GSI.SakuzuSaveFileWindow = L.Evented.extend({
 
   _onSaveTypeChange: function (radio) {
 
-    this._fileSaveTextarea.focus();
+    this._fileSaveTextarea.trigger('focus');
     switch (radio.val()) {
       case 'kml':
         this._fileSaveTextarea.val(this._sakuzuList.toKML());
@@ -45966,7 +46143,7 @@ GSI.MapMenu = L.Evented.extend({
       .html('<img src="" class="" title="地図を選択">')
       .css({ "white-space": "nowrap", "position": "relative" })
       .addClass('gsi-mapmenu-btn')
-      .click(L.bind(this._onItemClick, this));
+      .on('click',L.bind(this._onItemClick, this));
 
     var title = $("<div>").html("地図");
     elem.append(title);
@@ -46524,7 +46701,7 @@ GSI.BaseMapPanel = GSI.MapPanelContainer.extend({
     var a = $( "<a>")
       .attr({"href":"javascript:void(0);","title": ""+item.title+""})
       .data({"item":item})
-      .click( L.bind(this._onItemClick,this, item));
+      .on('click', L.bind(this._onItemClick,this, item));
 
     var thumbImage = item.thumb;
     if ( !thumbImage || thumbImage == "" ) {
@@ -46734,8 +46911,8 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     frame.append(this._showAllButton);
     frame.append(onoffFrame);
 
-    this._showAllButton.click(L.bind(this._onShowAllClick, this));
-    this._hideAllButton.click(L.bind(this._onHideAllClick, this));
+    this._showAllButton.on('click',L.bind(this._onShowAllClick, this));
+    this._hideAllButton.on('click',L.bind(this._onHideAllClick, this));
 
     return frame;
   },
@@ -46974,9 +47151,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
   _hideItemTooltip: function (a, item) {
     if (this._hideToolTipHandler) {
-      $(document.body).unbind('mousedown', this._hideToolTipHandler);
-      $(document.body).unbind('touchstart', this._hideToolTipHandler);
-      this._listFrame.unbind('scroll', this._hideToolTipHandler);
+      $(document.body).off('mousedown', this._hideToolTipHandler);
+      $(document.body).off('touchstart', this._hideToolTipHandler);
+      this._listFrame.off('scroll', this._hideToolTipHandler);
       this._hideToolTipHandler = null;
     }
     if (this._itemTooltip) {
@@ -47278,7 +47455,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         var a = $('<a>').html(target.title).attr({ 'href': 'javascript:void(0);' });
         var span = $('<span>').html("&nbsp;&gt;&nbsp;");
         pankz.prepend(span);
-        a.click(
+        a.on('click',
           L.bind(this._onFolderClick, this, a)
         ).data({ 'data': target });
         pankz.prepend(a);
@@ -47304,7 +47481,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         var a = $('<a>').html(target.title).attr({ 'href': 'javascript:void(0);' });
         var span = $('<span>').html("&nbsp;&gt;&nbsp;");
         this._titleTextFrame.prepend(span);
-        a.click(
+        a.on('click',
           L.bind(this._onFolderClick, this, a)
         ).data({ 'data': target });
         this._titleTextFrame.prepend(a);
@@ -47356,7 +47533,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         'href': 'javascript:void(0);',
         'title' : GSI.Utils.getTooltipText("SELECTMAP","AREA") }).addClass('area_btn').html("");
       li.append(areaBtn);
-      areaBtn.unbind('click').bind('click', L.bind(this._onAreaBtnClick, this, a, item));
+      areaBtn.off('click').on('click', L.bind(this._onAreaBtnClick, this, a, item));
     }
     // 自分で作る色別標高図 設定
     if(item.id == CONFIG.FREERELIEFID){
@@ -47364,14 +47541,14 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         'href': 'javascript:void(0);',
         'title' : GSI.Utils.getTooltipText("SELECTMAP","SETTING") }).addClass('setting_btn').html("");
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
+      settingBtn.off('click').on('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
     }
     // 詳細
     var descriptionBtn = $('<a>').attr({
       'href': 'javascript:void(0);',
       'title' : GSI.Utils.getTooltipText("SELECTMAP","INFORMATION") }).addClass('description_btn').html("i");
     li.append(descriptionBtn);
-    descriptionBtn.unbind('click').bind('click', L.bind(this._onLayerMouseEnter, this, a, item));
+    descriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
 
     if (CONFIG.VISIBLELAYERTYPE) {
       var info = $('<div>').addClass('info');
@@ -47397,7 +47574,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       li.removeClass('nococotile');
     }
 
-    a.click(L.bind(this.onItemClick, this, a));
+    a.on('click',L.bind(this.onItemClick, this, a));
   },
 
   _onAreaBtnClick : function(a, item) {
@@ -47480,10 +47657,10 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     var title = $('<div>').addClass('title').html(item.title);
     var num = $('<div>').addClass('num').append($('<span>').html(entriesCount));
     if (entriesCount >= 0) {
-      a.addClass('folder').append(title).click(L.bind(this._onFolderClick, this, a));
+      a.addClass('folder').append(title).on('click',L.bind(this._onFolderClick, this, a));
     }
     else {
-      a.addClass('folder').append(title).click(L.bind(this._onFolderClick, this, a));
+      a.addClass('folder').append(title).on('click',L.bind(this._onFolderClick, this, a));
     }
 
     if (item.iconUrl && item.iconUrl != "") {
@@ -47501,7 +47678,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       title.addClass("withinfo");
       var flddescriptionBtn = $('<a>').attr({ 'href': 'javascript:void(0);' }).addClass('flddescription_btn').html("i");
       li.append(flddescriptionBtn);
-      flddescriptionBtn.unbind('click').bind('click', L.bind(this._onLayerMouseEnter, this, a, item));
+      flddescriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
     }
   },
 
@@ -47522,8 +47699,10 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     }
     else {
       this._expandFolder(item);
-      if (this._checkEvacuationLayer() == false && !CONFIG.layerEvacuationIsConfirmOK) {
-        this._mapManager._evacDialog.hide();
+      // 202303 hideにする条件を変更。
+//      if (this._checkEvacuationLayer() == false && !CONFIG.layerEvacuationIsConfirmOK) {
+      if (this._checkEvacuationLayer() == false) {
+          this._mapManager._evacDialog.hide();
       }
     }
   },
@@ -47654,31 +47833,6 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     var target = this.current;
 
     if (a) item = a.data('data');
-
-    if (GSI.GLOBALS.gsimaps._mainMap._zoomGuide.getVisible()
-    && !a[0].className.includes('view')
-    && this.onZoomCheck(item)) {      
-
-      $("#zoomGuideCheckbox").off('change').on('change', function(){
-        var bol = $('#zoomGuideCheckbox').is(":checked");
-        GSI.GLOBALS.gsimaps._mainMap._zoomGuide.setVisible(!bol);
-      });
-
-      // var posid = this._mapManager.options.position;
-      // posid = posid.replace('full','left');
-      var mintxt = '', maxtxt = '', minmaxtxt = GSI.TEXT.ANNAI.MINMAX;
-      if (item.minZoom) mintxt = item.minZoom;
-      if (item.maxZoom) maxtxt = item.maxZoom;
-      minmaxtxt = minmaxtxt.replace('min', mintxt);
-      minmaxtxt = minmaxtxt.replace('max', maxtxt);
-      $('#zoomGuideCheckbox').prop('checked', false);
-      $('#zoomGuideMinMax').text(minmaxtxt);
-      $('#zoomGuidePanel').show();
-      clearTimeout(GSI.ZOOMGUIDETIMER);
-      GSI.ZOOMGUIDETIMER = setTimeout(function(){
-        $('#zoomGuidePanel').slideUp();
-      },3000);
-    }
 
     this._current_id = item.id;
 
@@ -47812,6 +47966,55 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         this._mapLayerList._editReliefDialog.hide();
       }
     }
+
+    // 202303 evacDialog生成後にzoomGuideを調整
+    if (GSI.GLOBALS.gsimaps._mainMap && GSI.GLOBALS.gsimaps._mainMap._zoomGuide.getVisible()
+        && !a[0].className.includes('view') && this.onZoomCheck(item)) {      
+
+      $("#zoomGuideCheckbox").off('change').on('change', function(){
+        var bol = $('#zoomGuideCheckbox').is(":checked");
+        GSI.GLOBALS.gsimaps._mainMap._zoomGuide.setVisible(!bol);
+      });
+
+      // var posid = this._mapManager.options.position;
+      // posid = posid.replace('full','left');
+      var mintxt = '', maxtxt = '', minmaxtxt = GSI.TEXT.ANNAI.MINMAX;
+      if (item.minZoom) mintxt = item.minZoom;
+      if (item.maxZoom) maxtxt = item.maxZoom;
+      minmaxtxt = minmaxtxt.replace('min', mintxt);
+      minmaxtxt = minmaxtxt.replace('max', maxtxt);
+      $('#zoomGuideCheckbox').prop('checked', false);
+      $('#zoomGuideMinMax').text(minmaxtxt);
+
+      // 202303 evacDialogが表示されている、もしくはこれから表示される場合に表示位置を調整する。
+      var evacDialogOffset = $('#evacDialogContainer').offset();
+      var evacCheck = false;
+
+      if (target && target.title_evac && target.title_evac == CONFIG.layerEvacuationFolderSYS) {
+        if (!this._mapLayerList.exists(item)) {
+          if (this._mapManager._dialogManager.isVisibleDialog(GSI.GLOBALS.evacDialog) == false) {
+            evacCheck = true;
+          }
+        }
+      }
+      
+      if (evacDialogOffset || evacCheck) {
+        var bottom = Number($(window).height()) - (Number(evacDialogOffset.top));
+        bottom += 'px';
+        $('#zoomGuidePanel').css('bottom', bottom);
+      }
+
+      $('#zoomGuidePanel').show();
+      clearTimeout(GSI.ZOOMGUIDETIMER);
+      GSI.ZOOMGUIDETIMER = setTimeout(function(){
+        $('#zoomGuidePanel').slideUp(function() {
+          if (evacDialogOffset) {
+            $('#zoomGuidePanel').css('bottom', '35px');
+          }
+        });
+      },3000);
+    }
+
   },
   selectReliefFree: function (a, item) {
     //var target = this.current;
@@ -47996,9 +48199,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       this._itemTooltip.stop().hide().fadeIn('normal');
 
       if (this._hideToolTipHandler) {
-        $(document.body).unbind('mousedown', this._hideToolTipHandler);
-        $(document.body).unbind('touchstart', this._hideToolTipHandler);
-        this._listFrame.unbind('scroll', this._hideToolTipHandler);
+        $(document.body).off('mousedown', this._hideToolTipHandler);
+        $(document.body).off('touchstart', this._hideToolTipHandler);
+        this._listFrame.off('scroll', this._hideToolTipHandler);
         this._hideToolTipHandler = null;
       }
 
@@ -48018,9 +48221,9 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         }
       }, this);
 
-      $(document.body).bind('mousedown', this._hideToolTipHandler);
-      $(document.body).bind('touchstart', this._hideToolTipHandler);
-      this._listFrame.bind('scroll', this._hideToolTipHandler);
+      $(document.body).on('mousedown', this._hideToolTipHandler);
+      $(document.body).on('touchstart', this._hideToolTipHandler);
+      this._listFrame.on('scroll', this._hideToolTipHandler);
 
     }
     else {
@@ -48086,7 +48289,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
     li.append(a);
 
-    a.click(L.bind(function (item) {
+    a.on('click',L.bind(function (item) {
       if (item.type == "LayerGroup" && item.layerType != "multiLayer") {
         this._hideSearchResult();
         this.onFolderClick(null, item);
@@ -48112,7 +48315,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
           && this._searchResult.find(e.target).length <= 0
           && this._queryInput[0] != e.target
         ) {
-          this._queryInput[0].blur();
+          this._queryInput[0].trigger('blur');
           this._hideSearchResult();
         }
       }, this);
@@ -48282,7 +48485,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       "title": GSI.Utils.getTooltipText("SELECTMAP","RESET"),
       "href":"javascript:void(0);"}).html("リセット");
 
-    resetButton.click(L.bind(this._onResetClick, this));
+    resetButton.on('click',L.bind(this._onResetClick, this));
     this._headerFrame.append(title);
     this._headerFrame.append(resetButton);
     this._controlFrame = this._createControl();
@@ -48319,7 +48522,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
     var dummy = $('<div>').html('&nbsp;').css({ "font-size": '9.5pt' });
     frame.append(dummy);
 
-    this._saveOutsideTileBtn.click(L.bind(this._sasveOutsideTileBtnClick, this));
+    this._saveOutsideTileBtn.on('click',L.bind(this._sasveOutsideTileBtnClick, this));
 
     return frame;
   },
@@ -48563,7 +48766,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
     // 透過
     var opacityBtn = $("<a>").addClass("opacity_btn")
     .attr({ "href": "javascript:void(0);","title": GSI.Utils.getTooltipText("SELECTMAP","OPACITY") }).html('透過率');
-    opacityBtn.click(L.bind(function (li) { this._onOpacityBtnClick(li); }, this,li));
+    opacityBtn.on('click',L.bind(function (li) { this._onOpacityBtnClick(li); }, this,li));
     li.append(opacityBtn);
     buttonElements.opacity = opacityBtn;
 
@@ -48578,7 +48781,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
     }
     // メニューボタン
     var menuBtn = $("<a>").addClass("menubtn").attr({ "href": "javascript:void(0);"});
-    menuBtn.click(L.bind(this._onMenuButtonClick, this, menuBtn, buttonElements));
+    menuBtn.on('click',L.bind(this._onMenuButtonClick, this, menuBtn, buttonElements));
     li.append(menuBtn);
 
     // 自分で作る色別標高図 設定
@@ -48586,7 +48789,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       var settingBtn = $("<span>").addClass('setting_btn')
       .attr({"title": GSI.Utils.getTooltipText("SELECTMAP","SETTING")});
       li.append(settingBtn);
-      settingBtn.unbind('click').bind('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
+      settingBtn.off('click').on('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
       li.addClass("free_relief_id");
       buttonElements.colorSet = settingBtn;
     }
@@ -48596,7 +48799,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
       var outsideEditBtn = $('<span>').addClass('outside_edit_btn').html("編集");
       li.append(outsideEditBtn);
-      outsideEditBtn.unbind('click').bind('click', L.bind(this._onOutsideEidtEnter, this, a, item));
+      outsideEditBtn.off('click').on('click', L.bind(this._onOutsideEidtEnter, this, a, item));
     }
     else {
 
@@ -48604,14 +48807,14 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
         .attr({"title": GSI.Utils.getTooltipText("SELECTMAP","INFORMATION")})
         .addClass('description_btn').html("i");
       li.append(descriptionBtn);
-      descriptionBtn.unbind('click').bind('click', L.bind(this._onLayerMouseEnter, this, a, item));
+      descriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
     }
 
     // 閉じる
     var closeBtn = $("<span>").addClass('closebtn')
       .attr({"title": GSI.Utils.getTooltipText("SELECTMAP","REMOVE")});
     li.append(closeBtn);
-    closeBtn.unbind('click').bind('click', L.bind(this._onRemoveClick, this, li));
+    closeBtn.off('click').on('click', L.bind(this._onRemoveClick, this, li));
 
     // ソート
     if (isTile && !fBaseMap && (!isFirstTile || !isLastTile)) {
@@ -48620,11 +48823,11 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       var upButton = $("<a>").attr({
         "title": GSI.Utils.getTooltipText("SELECTMAP","UP"),
         "href": "javascript:void(0);" }).addClass("up")
-        .click(L.bind(function () { this._up(li); }, this));
+        .on('click',L.bind(function () { this._up(li); }, this));
       var downButton = $("<a>").attr({
         "title": GSI.Utils.getTooltipText("SELECTMAP","DOWN"),
         "href": "javascript:void(0);" }).addClass("down")
-        .click(L.bind(function () { this._down(li); }, this));
+        .on('click',L.bind(function () { this._down(li); }, this));
 
       if (isFirstTile)
         upButton.addClass("disabled");//.hide();
@@ -48644,7 +48847,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
     }
 
-    a.click(L.bind(this._onItemClick, this, li, a, viewMark));
+    a.on('click',L.bind(this._onItemClick, this, li, a, viewMark));
   },
 
   _onMenuButtonClick : function(menuBtn,menuElements) {
@@ -48866,9 +49069,9 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
 
   _hideItemTooltip: function (a, item) {
     if (this._hideToolTipHandler) {
-      $(document.body).unbind('mousedown', this._hideToolTipHandler);
-      $(document.body).unbind('touchstart', this._hideToolTipHandler);
-      this._listFrame.unbind('scroll', this._hideToolTipHandler);
+      $(document.body).off('mousedown', this._hideToolTipHandler);
+      $(document.body).off('touchstart', this._hideToolTipHandler);
+      this._listFrame.off('scroll', this._hideToolTipHandler);
       this._hideToolTipHandler = null;
     }
     if (this._itemTooltip) {
@@ -48968,7 +49171,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
         var span = $('<span>').html("&nbsp;&gt;&nbsp;");
         pankz.prepend(span);
 
-        a.click(
+        a.on('click',
           L.bind(this._onPankzFolderClick, this, a)
         ).data({ 'data': target });
 
@@ -49141,9 +49344,9 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       this._itemTooltip.stop().hide().fadeIn('normal');
 
       if (this._hideToolTipHandler) {
-        $(document.body).unbind('mousedown', this._hideToolTipHandler);
-        $(document.body).unbind('touchstart', this._hideToolTipHandler);
-        this._listFrame.unbind('scroll', this._hideToolTipHandler);
+        $(document.body).off('mousedown', this._hideToolTipHandler);
+        $(document.body).off('touchstart', this._hideToolTipHandler);
+        this._listFrame.off('scroll', this._hideToolTipHandler);
         this._hideToolTipHandler = null;
       }
 
@@ -49173,9 +49376,9 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
         }
       }, this);
 
-      $(document.body).bind('mousedown', this._hideToolTipHandler);
-      $(document.body).bind('touchstart', this._hideToolTipHandler);
-      this._listFrame.bind('scroll', this._hideToolTipHandler);
+      $(document.body).on('mousedown', this._hideToolTipHandler);
+      $(document.body).on('touchstart', this._hideToolTipHandler);
+      this._listFrame.on('scroll', this._hideToolTipHandler);
 
     }
     else {
@@ -49269,8 +49472,8 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
     }, this));
 
     if (this._hideOpacityWindowHandler) {
-      $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
-      $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+      $(document.body).off('mousedown', this._hideOpacityWindowHandler);
+      $(document.body).off('touchstart', this._hideOpacityWindowHandler);
 
     }
     this._hideOpacityWindowHandler = L.bind(function (event) {
@@ -49289,13 +49492,13 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       }
       if (!hit) {
         this._opacityWindow.slideUp(200);
-        $(document.body).unbind('mousedown', this._hideOpacityWindowHandler);
-        $(document.body).unbind('touchstart', this._hideOpacityWindowHandler);
+        $(document.body).off('mousedown', this._hideOpacityWindowHandler);
+        $(document.body).off('touchstart', this._hideOpacityWindowHandler);
       }
     }, this);
 
-    $(document.body).bind('mousedown', this._hideOpacityWindowHandler);
-    $(document.body).bind('touchstart', this._hideOpacityWindowHandler);
+    $(document.body).on('mousedown', this._hideOpacityWindowHandler);
+    $(document.body).on('touchstart', this._hideOpacityWindowHandler);
 
     this._opacityWindow.hide().slideDown(200);
 
@@ -49496,7 +49699,7 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
       a.html(title);
 
       a.on("click",L.bind(function(elem) {
-        elem.click();
+        elem.trigger('click');
         this.hide();
       },this,elem));
 
@@ -49510,7 +49713,7 @@ GSI.ShowingMapListPanel.PopupLayerMenu = L.Evented.extend({
 
       onOff.on('change', L.bind(function(elem,onOff,evt){
         if ( elem[0].checked != onOff.checked() ) {
-          elem.click();
+          elem.trigger('click');
         }
       }, this, elem, onOff));
     }
@@ -50215,7 +50418,7 @@ GSI.Menu.IconButton = GSI.MenuBase.extend({
     this.fire("click");
     if ( this._container ) {
       try{
-        this._container.blur();
+        this._container.trigger('blur');
       } catch(e) {}
     }
   }
@@ -50760,11 +50963,11 @@ GSI.GSIMaps = L.Evented.extend({
   },
   _initialize: function (queryParams) {
     if (!CONFIG.USECOOKIE) {
-      $.cookie(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
+      Cookies.set(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
     } else {
-      if ($.cookie(CONFIG.COOKIEKEY_HASH)) {
-        $.cookie(CONFIG.COOKIEKEY_HASH_PREV,
-          $.cookie(CONFIG.COOKIEKEY_HASH), { path: '/' });
+      if (Cookies.get(CONFIG.COOKIEKEY_HASH)) {
+        Cookies.set(CONFIG.COOKIEKEY_HASH_PREV,
+          Cookies.get(CONFIG.COOKIEKEY_HASH), { path: '/' });
       }
     }
 
@@ -51188,14 +51391,14 @@ GSI.GSIMaps = L.Evented.extend({
     if (CONFIG.USECOOKIE) {
       if (!locationHash || locationHash == "" || locationHash == "#" ||
         locationHash.match(CONFIG.DEFAULTHASH)) {
-        locationHash = $.cookie(CONFIG.COOKIEKEY_HASH);
+        locationHash = Cookies.get(CONFIG.COOKIEKEY_HASH);
         if (!locationHash || locationHash == "") locationHash = "";
         if (locationHash != "" && locationHash.charAt(0) != "#") locationHash = "";
         if (locationHash != "") {
           location.replace(locationHash);
         }
       } else {
-        var prevLocationHash = $.cookie(CONFIG.COOKIEKEY_HASH_PREV);
+        var prevLocationHash = Cookies.get(CONFIG.COOKIEKEY_HASH_PREV);
         if (prevLocationHash) {
           if (prevLocationHash != locationHash) {
             this.showConfirmPrevState();
@@ -51602,7 +51805,7 @@ GSI.GSIMaps = L.Evented.extend({
 
     }, this);
     this._header.on('topmessagechange', adjustWindow);
-    $(window).resize(adjustWindow);
+    $(window).on('resize',adjustWindow);
 
     // 初期位置設定
     map.setView(this._startUpCenter, this._startUpZoom, { reset: true });
@@ -51671,11 +51874,11 @@ GSI.GSIMaps = L.Evented.extend({
 
     }, this), false);
 
-    $("#title_twitter").click(function () {
+    $("#title_twitter").on('click',function () {
       GSI.SHARE.showTwitter();
     });
 
-    $("#title_facebook").click(function () {
+    $("#title_facebook").on('click',function () {
       GSI.SHARE.showFacebook();
     });
 
@@ -51776,7 +51979,7 @@ GSI.GSIMaps = L.Evented.extend({
 
     switch (evt.item.id) {
       case "reset":
-        $.cookie(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
+        Cookies.set(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
         location.href = location.pathname;
         break;
 
@@ -51801,7 +52004,7 @@ GSI.GSIMaps = L.Evented.extend({
         var a = $("<a>");
         $("body").append(a);
         a.attr({ "href": "http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php", "target": "_blank" })
-          .click(L.bind(function (a) {
+          .on('click',L.bind(function (a) {
             var map = this._mainMap.getMap();
             var center = map.getCenter();
             var z = map.getZoom();
@@ -52185,9 +52388,9 @@ GSI.SaveStateManager = L.Evented.extend({
 
   setVisible: function (on) {
     if (GSI.SaveStateManager.checkEnableCookie()) {
-      $.cookie(CONFIG.COOKIEKEY_USECOOKIE, on ? "1" : "0", { path: '/', expires: 365 });
+      Cookies.set(CONFIG.COOKIEKEY_USECOOKIE, on ? "1" : "0", { path: '/', expires: 365 });
       if (!on) {
-        $.cookie(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
+        Cookies.set(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
       }
       CONFIG.USECOOKIE = on;
       if (this._gsimaps._hash_options) this._gsimaps._hash_options.HashCreate(true);
@@ -52224,7 +52427,7 @@ GSI.SaveStateManager.checkEnableCookie = function () {
 };
 
 CONFIG.USECOOKIE = GSI.SaveStateManager.checkEnableCookie()
-  && ($.cookie(CONFIG.COOKIEKEY_USECOOKIE) != "0");
+  && (Cookies.get(CONFIG.COOKIEKEY_USECOOKIE) != "0");
 
 $(document).ready(function () {
 
@@ -52232,8 +52435,8 @@ $(document).ready(function () {
     return;
   }
 
-  $(".logoarea a").click(function () {
-    $.cookie(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
+  $(".logoarea a").on('click', function () {
+    Cookies.set(CONFIG.COOKIEKEY_HASH, null, { path: '/', expires: -1 });
     return true;
   });
 

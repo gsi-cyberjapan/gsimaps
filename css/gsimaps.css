@@ -10925,3 +10925,39 @@ MapMenu
 #incompatible{
 	display: none;
 }
+
+.ie-note{
+	max-width: 750px;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border: solid 1px #999999;
+}
+
+.ie-note__msg{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+.ie-note__msg span{
+	display: inline-block;	
+	font-size: 18px;
+	color: #fff;
+	padding: 10px 15px;
+	background-color: #333333;
+	margin-top: 8px;
+	margin-bottom: 12px;
+}
+
+.ie-note__att{
+	font-size: 12px;
+}
+
+.gsi_modal_dialog_display {
+	display: none;
+}
