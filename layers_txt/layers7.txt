@@ -4605,7 +4605,7 @@
               "type": "Layer",
               "id": "denshichikeizu50000",
               "title": "電子地形図50000の更新情報",
-              "url": "./xyz/denshichikeizu50000/{z}/{x}/{y}.geojson",
+              "url": "https://maps.gsi.go.jp/xyz/denshichikeizu50000/{z}/{x}/{y}.geojson",
               "cocotile": true,
               "minZoom": 5,
               "maxZoom": 18,
