@@ -295,9 +295,63 @@
 			"legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
 			"html": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
 			}
-		]
-		}
-		]
-		}
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "四国の防災風土資源マップ（四国防災共同教育センター提供）",
+          "src": "",
+          "iconUrl": "",
+          "toggleall": false,
+          "html" : "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年3月22日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "sikoku_suigai",
+              "title": "水害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/sikoku_suigai.PNG",
+              "url": "https://maps.gsi.go.jp/xyz/sikoku_suigai/{z}/{x}/{y}.geojson",
+              "minZoom": 7,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年3月22日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "sikoku_dosya",
+              "title": "土砂災害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/sikoku_dosya.PNG",
+              "url": "https://maps.gsi.go.jp/xyz/sikoku_dosya/{z}/{x}/{y}.geojson",
+              "minZoom": 7,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年3月22日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "sikoku_jishin-tsunami",
+              "title": "地震・津波",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/sikoku_jishin-tsunami.PNG",
+              "url": "https://maps.gsi.go.jp/xyz/sikoku_jishin-tsunami/{z}/{x}/{y}.geojson",
+              "minZoom": 7,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年3月22日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "sikoku_kassui",
+              "title": "渇水",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/sikoku_kassui.PNG",
+              "url": "https://maps.gsi.go.jp/xyz/sikoku_kassui/{z}/{x}/{y}.geojson",
+              "minZoom": 7,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年3月22日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

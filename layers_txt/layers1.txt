@@ -625,7 +625,7 @@
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
           "url": "https://maps.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
           "cocotile": true,
-          "minZoom": 2,
+          "minZoom": 14,
           "maxZoom": 18,
           "html": "<div class='layer_text'><p><a target=\"_blank\" href=\"https://www.gsi.go.jp/gazochosa/gazochosa40001.html\">電子国土基本図（オルソ画像）</a>として整備されている2007年以降に撮影された空中写真です。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。"
         },
@@ -728,6 +728,7 @@
           "url": "https://maps.gsi.go.jp/xyz/lndst/{z}/{x}/{y}.png",
           "cocotile": true,
           "minZoom": 2,
+          "maxNativeZoom": 13,
           "maxZoom": 15,
           "html": "<div class='layer_text'><p>ランドサット衛星から撮影した日本周辺の写真です。</p></div><br>一部、国土地理院と東海大学との共同研究による<br>データソース：<br>Landsat8画像（GSI,TSIC,GEO Grid/AIST）<br>Landsat8画像（courtesy of the U.S. Geological Survey）<br>海底地形（GEBCO）"
         },

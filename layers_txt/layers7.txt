@@ -809,9 +809,9 @@
           "entries": [
             {
               "type": "Layer",
-              "id": "southpole_satellite_250000_spec",
+              "id": "southpole_spec",
               "title": "南極の地理空間情報（整備範囲へジャンプ）",
-              "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/2/2/3.geojson",
+              "url": "https://maps.gsi.go.jp/xyz/southpole_spec/2/2/3.geojson",
               "html": "<div class='layer_text'><p>南極の情報が整備されている範囲を表示します。</p></div>概ね、東経15度から59度、南緯65度から79度の範囲の一部となります。",
               "maxNativeZoom": 2,
               "maxZoom": 18
@@ -967,7 +967,7 @@
                   "type": "Layer",
                   "id": "_southpole_50000_spec_2",
                   "title": "1:50,000　南極地形図（標高版）整備範囲",
-                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec_2/{z}/{x}/{y}.geojson",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec_2/2/2/3.geojson",
                   "cocotile": false,
                   "html": "",
                   "maxNativeZoom": 2,
