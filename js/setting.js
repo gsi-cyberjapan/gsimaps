@@ -270,6 +270,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_suwanosejima": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_suwanosejima/vlcd_suwanosejima.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_suwanosejima/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_akitayake": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/vlcd_akitayake.csv",
     "layer": {
