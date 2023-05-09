@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "令和5年石川県能登地方の地震",
+      "iconUrl": "./image/system/folder_new.png",
+      "toggleall": false,
+      "src": "./layers_20230506noto.txt"
+    }
+  ]
+}
