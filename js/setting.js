@@ -345,6 +345,15 @@ CONFIG.CONFIRM_LAYERS = {
       "2018_sekisyokurittai_azumayama",
       "20190807asama_sekisyoku"
     ]
+  },
+  "lakechart": {
+    "title": "免責事項・ご利用上の注意",
+    "message": "湖沼データの湖岸線等は湖沼調査時点のものであり電子地形図と異なる場合があります。​" +
+      "湖沼データの測量年は「i」ボタンの選択メニューからお調べいただくか、​<a target='_blank' href='https://www.gsi.go.jp/kankyochiri/koshouchousa-list.html'>こちら</a>で確認できます。",
+    "withBlend": true,
+    "layers": [
+      "lakedata",
+    ]
   }
 };
 
