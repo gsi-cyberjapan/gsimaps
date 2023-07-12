@@ -2,6 +2,29 @@
   "layers": [
     {
       "type": "LayerGroup",
+      "title": "斜め写真",
+      "toggleall": false,
+      "entries": [
+          {
+              "type": "Layer",
+              "id": "20230629rain_0711naname",
+              "title": "久留米地区（7/11撮影）",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+              "url": "https://maps.gsi.go.jp/xyz/20230629rain_0711naname/{z}/{x}/{y}.geojson",
+              "minZoom": 2,
+              "maxZoom": 18,
+              "maxNativeZoom": 2,
+              "area" : {
+                "lat" : 33.328305,
+                "lng" : 130.654392,
+                "zoom" : 13
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/11撮影）</div><div class=\"gsi_layerinfo_kaisetu\">斜め写真の方向アイコンは、カメラのシャッターが押された位置に表示しています。アイコンの示す方向は、撮影方向の概略を示しております。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R5_0629_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
       "title": "浸水推定図",
       "toggleall": false,
       "entries": [
