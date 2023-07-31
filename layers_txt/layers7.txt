@@ -1488,6 +1488,14 @@
                   "entries": [
                   {
                       "type": "Layer",
+                      "id": "toz202307",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202307/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                  {
+                      "type": "Layer",
                       "id": "toz202306",
                       "title": "6月更新",
                       "url": "https://maps.gsi.go.jp/xyz/toz202306/{z}/{x}/{y}.geojson",
@@ -4088,7 +4096,16 @@
                   "title": "2023年更新情報",
                   "toggleall": false,
                   "entries": [
-                  {
+                  	{
+                      "type": "Layer",
+                      "id": "fgd_update_2023_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2023_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                  	{
                       "type": "Layer",
                       "id": "fgd_update_2023_04",
                       "title": "4月更新",
