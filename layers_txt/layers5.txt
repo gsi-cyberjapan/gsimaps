@@ -350,6 +350,115 @@
               "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
             }
           ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "大分県災害データアーカイブ（大分大学減災・復興デザイン教育研究センター（CERD）提供）",
+          "src": "",
+          "iconUrl": "",
+          "toggleall": false,
+          "html" : "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>",
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "oita_quake",
+              "title": "地震災害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_quake.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_quake/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_volcano",
+              "title": "火山災害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_volcano.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_volcano/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_wind_rain",
+              "title": "風水害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_wind_rain.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_wind_rain/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_slope",
+              "title": "土砂災害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_slope.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_slope/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_blizzard",
+              "title": "雪氷災害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_blizzard.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_blizzard/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_fire",
+              "title": "火災",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_fire.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_fire/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_drought",
+              "title": "日照りの害",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_drought.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_drought/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_monument",
+              "title": "災害伝承碑",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_monument.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_monument/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "oita_etc",
+              "title": "その他",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/oita_etc.png",
+              "url": "https://maps.gsi.go.jp/xyz/oita_etc/{z}/{x}/{y}.geojson",
+              "minZoom": 9,
+              "maxZoom": 18,
+              "maxNativeZoom": 9,
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://archive.cerd-edison.com/\">大分県災害データアーカイブ</a>は、NHK大分放送局及び大分大学減災・復興デザイン教育研究センター(CERD)が、大分県で、過去に「どのような」災害が起き、「どこで」被害が発生したのか、およそ1300年間の記録をまとめたものです。<br>※本レイヤは令和5年9月6日時点の情報です。</div><br><div class=\"layer_text\">※災害発生箇所等の情報について、正確な位置を示すとは限らないことをご了承ください。</div>"
+            }
+          ]
         }
       ]
     }
