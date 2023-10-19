@@ -651,15 +651,25 @@
           "html": "<div class='layer_text'>航空レーザ測量の点検用等に2004年以降に撮影された空中写真です。</div>ズームレベル14～18で表示されます。"
         },
         {
-          "type": "Layer",
-          "id": "rinya",
-          "title": "森林（国有林）の空中写真（林野庁）",
-          "url": "https://maps.gsi.go.jp/xyz/rinya/{z}/{x}/{y}.png",
-          "cocotile": false,
-          "minZoom": 2,
-          "maxZoom": 18,
-          "html": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示します。"
-        },
+           "type": "Layer",
+           "id": "rinya",
+           "title": "森林（国有林）の空中写真（林野庁）",
+           "url": "https://maps.gsi.go.jp/xyz/rinya/{z}/{x}/{y}.png",
+           "cocotile": false,
+           "minZoom": 2,
+           "maxZoom": 18,
+           "html": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。<div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/rinya.pdf\">承認番号</a></div>"
+         },
+         {
+           "type": "Layer",
+           "id": "rinya_m",
+           "title": "森林（民有林）の空中写真",
+           "url": "https://maps.gsi.go.jp/xyz/rinya_m/{z}/{x}/{y}.png",
+           "cocotile": false,
+           "minZoom": 2,
+           "maxZoom": 18,
+           "html": "<div class='layer_text'><p>2013年以降に整備した森林（民有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。<div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/rinya_m.pdf\">承認番号</a></div>"
+         },
         {
           "type": "LayerGroup",
           "title": "東日本大震災後正射画像",
