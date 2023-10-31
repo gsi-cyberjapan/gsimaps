@@ -1273,7 +1273,7 @@
               "cocotile": false,
               "minZoom": 2,
               "maxZoom": 18,
-              "html": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。<div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/rinya.pdf\">承認番号</a></div>"
+              "html": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。"
             },
             {
               "type": "Layer",
@@ -4173,6 +4173,15 @@
                   "title": "2023年更新情報",
                   "toggleall": false,
                   "entries": [
+                  	{
+                      "type": "Layer",
+                      "id": "fgd_update_2023_10",
+                      "title": "10月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2023_10/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
                   	{
                       "type": "Layer",
                       "id": "fgd_update_2023_07",
