@@ -771,7 +771,7 @@ if ((ua.indexOf("msie") >= 0) && (vs.indexOf("msie 9") >= 0)) {
  ************************************************************************/
 CONFIG.HELPMENU = [
   { 'Moji': 'ヘルプ', 'Img': './image/help/help_icon.png', 'Link': 'https://maps.gsi.go.jp/help/' },
-  { 'Moji': 'Twitter', 'Img': './image/help/twitter.png', 'Link': 'https://twitter.com/gsi_cyberjapan' },
+  { 'Moji': 'Twitter', 'Img': './image/help/x.png', 'Link': 'https://x.com/gsi_cyberjapan' },
   { 'Moji': 'GitHub', 'Img': './image/help/github.png', 'Link': 'https://github.com/gsi-cyberjapan' },
   { 'Moji': 'パートナーネットワーク', 'Img': './image/help/partner_icon.png', 'Link': 'https://maps.gsi.go.jp/pn/' },
   { 'Moji': '国土地理院トップ', 'Img': './image/help/gsi_top.png', 'Link': 'http://www.gsi.go.jp/' }
@@ -874,12 +874,13 @@ CONFIG.SAKUZU = {
   SYMBOL: {
     URL: "https://maps.gsi.go.jp/portal/sys/v4/symbols/",
     FILES: [
-      // 汎用記号（●（光沢）、●、○、■（影付き）、■、×、▲（影付き）、△、★）
+      // 汎用記号（●（光沢）、●、○、■（影付き）、■、□、×、▲（影付き）、△、★）
       '080.png', '081.png', '082.png', '083.png', '805.png', '806.png', '807.png', '808.png', '809.png', '810.png',
       '076.png', '077.png', '078.png', '079.png', '395.png', '396.png', '397.png', '398.png', '399.png', '400.png',
       '097.png', '098.png', '099.png', '100.png', '389.png', '390.png', '391.png', '392.png', '393.png', '394.png',
       '084.png', '085.png', '086.png', '087.png', '811.png', '812.png', '813.png', '814.png', '815.png', '816.png',
       '088.png', '089.png', '090.png', '091.png', '817.png', '818.png', '819.png', '820.png', '821.png', '822.png',
+      '880.png', '881.png', '882.png', '883.png', '884.png', '885.png', '886.png', '887.png', '888.png', '889.png',
       '092.png', '093.png', '094.png', '095.png', '096.png', '695.png', '696.png', '697.png', '698.png', '699.png',
       '101.png', '102.png', '103.png', '104.png', '823.png', '824.png', '825.png', '826.png', '827.png', '828.png',
       '105.png', '106.png', '107.png', '108.png', '829.png', '830.png', '831.png', '832.png', '833.png', '834.png',
