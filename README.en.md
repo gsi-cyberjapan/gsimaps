@@ -34,4 +34,4 @@ See the [LICENSE file](LICENSE) also.
 
 ## hashtag
 The hashtag for this repository is #gsimaps .
-Twitter: https://twitter.com/hashtag/gsimaps
+X: https://x.com/hashtag/gsimaps
