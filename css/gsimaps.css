@@ -5840,7 +5840,7 @@ form {
 	height: 26px;
 	width: 26px;
 	/*background-color:#4086cd;*/
-	background-image: url(../image/system/twitter.png);
+	background-image: url(../image/system/x.png);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	/*
@@ -8535,7 +8535,7 @@ form {
 }
 .gsi-share-panel .gsi-share-panel-icons a.twitter {
   background-color: transparent;
-  background-image: url(../image/system/twitter.png);
+  background-image: url(//maps.gsi.go.jp/image/system/x.png);
 
 }
 
