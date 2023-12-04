@@ -29,7 +29,7 @@ CONFIG.TOOLTIP.SELECTMAP = {
 // 共有・保存
 CONFIG.TOOLTIP.SHARE = {
   "FACEBOOK" : "表示している地図をFacebookに投稿します", 
-  "TWITTER" : "表示している地図をTwitterに投稿します", 
+  "TWITTER" : "表示している地図をXに投稿します", 
   "SAVEIMAGE" : "表示している地図を画像として保存します", 
   "QRCODE" : "表示している地図のQRコードを表示します",
   "SAVEHTML" : "表示している地図をHTMLとして保存します",
