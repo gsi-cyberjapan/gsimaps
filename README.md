@@ -3,7 +3,7 @@
 
 ## hashtag
 このレポジトリのハッシュタグは #gsimaps です。
-Twitter: https://twitter.com/hashtag/gsimaps
+X: https://x.com/hashtag/gsimaps
 
 ## 地理院地図
 
