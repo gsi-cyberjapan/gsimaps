@@ -1,0 +1,502 @@
+{
+  "layers": [
+  	{
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "珠洲地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20240102noto_suzu_0102do",
+              "title": "珠洲地区（1/2撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.461506,
+                "lng" : 137.285843,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20240102_noto_suzu_0105do",
+              "title": "珠洲地区（1/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102_noto_suzu_0105do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.487697,
+                "lng" : 137.333908,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "輪島東地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20240102noto_wazimahigashi_0102do",
+              "title": "輪島東地区（1/2撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102noto_wazimahigashi_0102do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.393346,
+                "lng" : 137.042770,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "輪島中地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20240102noto_wazimanaka_0102do",
+              "title": "輪島中地区（1/2撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0102do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.347507,
+                "lng" : 136.943207,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            },
+            {
+              "type": "Layer",
+              "id": "20240102_noto_wazimanaka_0105do",
+              "title": "輪島中地区（1/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102_noto_wazimanaka_0105do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.347507,
+                "lng" : 136.943207,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "穴水地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20240102_noto_anamizu_0105do",
+              "title": "穴水地区（1/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102_noto_anamizu_0105do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.256293,
+                "lng" : 137.066116,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "七尾地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20240102_noto_nanao_0105do",
+              "title": "七尾地区（1/5撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20240102_noto_nanao_0105do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 37.089726,
+                "lng" : 136.892138,
+                "zoom" : 14
+              },
+              "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "珠洲地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_suzu_0102suichoku",
+          "title": "珠洲地区（1/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.461506,
+           "lng" : 137.285843,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+         {
+          "type": "Layer",
+          "id": "20240102noto_suzu_0105suichoku",
+          "title": "珠洲地区（1/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0105suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.461506,
+           "lng" : 137.285843,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "輪島東地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_wazimahigashi_0102suichoku",
+          "title": "輪島東地区（1/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimahigashi_0102suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.393346,
+           "lng" : 137.042770,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "輪島中地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_wazimanaka_0102suichoku",
+          "title": "輪島中地区（1/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0102suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.347507,
+           "lng" : 136.943207,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20240102noto_wazimanaka_0105suichoku",
+          "title": "輪島中地区（1/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0105suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.347507,
+           "lng" : 136.943207,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "輪島西地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_wazimanishii_0105suichoku",
+          "title": "輪島西地区（1/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0105suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.397710,
+           "lng" : 136.864929,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "穴水地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_anamizu_0105suichoku",
+          "title": "穴水地区（1/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0105suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.256293,
+           "lng" : 137.066116,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "七尾地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20240102noto_nanao_0105suichoku",
+          "title": "七尾地区（1/5撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_nanao_0105suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.089718,
+           "lng" : 136.892097,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       }
+     ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜面崩壊・堆積分布データ",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+       {
+         "type": "LayerGroup",
+         "title": "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）",
+         "id": "20240106noto_suzu_wazimahigashi_houkaichi",
+         "toggleall": false,
+         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が1月2日及び1月5日に撮影した空中写真（正射画像）を用いて、令和6年能登半島地震によって生じたと考えられる斜面崩壊地や土砂堆積箇所を判読したものです。<br>2.現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の地震による崩壊地等以外の箇所を表示している場合があります。<br>3.斜面崩壊・堆積分布は個々の範囲がおおむね100平方メートル以上のものを表しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+         "entries": [
+           {
+             "type": "Layer",
+             "id": "20240106noto_suzu_wazimahigashi_cloud_poly",
+             "title": "雲による未読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_cloud_poly/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_suzu_wazimahigashi_hokai_all",
+             "title": "斜面崩壊・堆積範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_hokai_all/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_suzu_wazimahigashi_handoku_area",
+             "title": "判読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_handoku_area/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           }
+         ]
+       },
+       {
+         "type": "LayerGroup",
+         "title": "斜面崩壊・堆積分布データ（輪島中地区）",
+         "id": "20240106noto_wazimanaka_houkaichi",
+         "toggleall": false,
+         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が1月2日及び1月5日に撮影した空中写真（正射画像）を用いて、令和6年能登半島地震によって生じたと考えられる斜面崩壊地や土砂堆積箇所を判読したものです。<br>2.現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の地震による崩壊地等以外の箇所を表示している場合があります。<br>3.斜面崩壊・堆積分布は個々の範囲がおおむね100平方メートル以上のものを表しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+         "entries": [
+           {
+             "type": "Layer",
+             "id": "20240106noto_wazimanaka_cloud_poly",
+             "title": "雲による未読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_cloud_poly/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_wazimanaka_hokai_all",
+             "title": "斜面崩壊・堆積範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_hokai_all/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_wazimanaka_handoku_area",
+             "title": "判読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_handoku_area/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           }
+         ]
+       },
+       {
+         "type": "LayerGroup",
+         "title": "斜面崩壊・堆積分布データ（穴水地区）",
+         "id": "20240106noto_anamizu_houkaichi",
+         "toggleall": false,
+         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が1月5日に撮影した空中写真（正射画像）を用いて、令和6年能登半島地震によって生じたと考えられる斜面崩壊地や土砂堆積箇所を判読したものです。<br>2.現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の地震による崩壊地等以外の箇所を表示している場合があります。<br>3.斜面崩壊・堆積分布は個々の範囲がおおむね100平方メートル以上のものを表しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+         "entries": [
+           {
+             "type": "Layer",
+             "id": "20240106noto_anamizu_cloud_poly",
+             "title": "雲による未読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_cloud_poly/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_anamizu_hokai_all",
+             "title": "斜面崩壊・堆積範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_hokai_all/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240106noto_anamizu_handoku_area",
+             "title": "判読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_handoku_area/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           }
+         ]
+       }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "津波浸水域データ（珠洲地区、輪島東地区）",
+      "id": "20240102noto_suzu_wazimahigashi_0103shinsuii",
+      "toggleall": false,
+      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が令和6年1月2日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波浸水域を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20240103noto_suzu_wazimahigashi_cloud_poly",
+          "title": "雲による未読範囲",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0103cloud_poly/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18
+        },
+        {
+          "type": "Layer",
+          "id": "20240102noto_suzu_wazimahigashi_0104rev",
+          "title": "津波浸水域（珠洲、輪島東地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0104rev/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18
+        },
+        {
+          "type": "Layer",
+          "id": "20240102noto_suzu_wazimahigashi_0103handoku_area",
+          "title": "判読範囲",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0103handoku_area/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt"
+    }
+  ]
+}

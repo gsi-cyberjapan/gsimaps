@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "令和6年(2024年)能登半島地震",
+      "iconUrl": "./image/system/folder_new.png",
+      "toggleall": false,
+      "src": "./layers_20240102noto.txt"
+    }
+  ]
+}

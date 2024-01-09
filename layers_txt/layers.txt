@@ -1,9 +1,6 @@
 [
 	{
-		"url":"./layers_topic_20230629rain.txt"
-	},
-	{
-		"url":"./layers_topic_20230506noto.txt"
+		"url":"./layers_topic_20240102noto.txt"
 	},
 	{
 		"url":"./layers1.txt"
