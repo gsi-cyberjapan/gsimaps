@@ -494,40 +494,120 @@
     },
     {
       "type": "LayerGroup",
-      "title": "津波浸水域データ（珠洲地区、輪島東地区）",
-      "id": "20240106noto_suzu_wazimahigashi_0103shinsuii",
+      "title": "津波浸水域データ",
+      "iconUrl": "",
       "toggleall": false,
-      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この津波浸水域（推定）は、国土地理院が令和6年1月2日及び1月5日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波到達範囲（堤外地を含む）を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。<br>4.津波到達範囲は速報のため、今後変わりうる場合があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
       "entries": [
-        {
-          "type": "Layer",
-          "id": "20240106noto_suzu_wazimahigashi_0109cloud_poly",
-          "title": "雲による未読範囲",
-          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
-          "cocotile": true,
-          "minZoom": 2,
-          "maxZoom": 18
-        },
-        {
-          "type": "Layer",
-          "id": "20240106noto_suzu_wazimahigashi_0109rev",
-          "title": "津波浸水域（珠洲、輪島東地区）",
-          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
-          "cocotile": true,
-          "minZoom": 2,
-          "maxZoom": 18
-        },
-        {
-          "type": "Layer",
-          "id": "20240106noto_suzu_wazimahigashi_0109handoku_area",
-          "title": "判読範囲",
-          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
-          "cocotile": true,
-          "minZoom": 2,
-          "maxZoom": 18
-        }
-      ]
-    },
+		    {
+		      "type": "LayerGroup",
+		      "title": "津波浸水域データ（珠洲地区、輪島東地区）",
+		      "id": "20240106noto_suzu_wazimahigashi_0103shinsuii",
+              "toggleall": false,
+              "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この津波浸水域（推定）は、国土地理院が令和6年1月2日及び1月5日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波到達範囲（堤外地を含む）を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。<br>4.津波到達範囲は速報のため、今後変わりうる場合があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+              "entries": [
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_suzu_wazimahigashi_0109cloud_poly",
+		          "title": "雲による未読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_suzu_wazimahigashi_0109rev",
+		          "title": "津波浸水域（珠洲、輪島東地区）",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_suzu_wazimahigashi_0109handoku_area",
+		          "title": "判読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        }
+		      ]
+		    },
+		    {
+		      "type": "LayerGroup",
+		      "title": "津波浸水域データ（穴水地区）",
+		      "id": "20240106noto_anamizu_0110shinsuii",
+		      "toggleall": false,
+		      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この津波浸水域（推定）は、国土地理院が令和6年1月5日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波到達範囲（堤外地を含む）を判読して作成したものです。雲による未判読範囲のうち一部、空中写真（垂直写真）を用いて判読したものもあります。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。<br>4.津波到達範囲は速報のため、今後変わりうる場合があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+		      "entries": [
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_anamizu_0110cloud_poly",
+		          "title": "雲による未読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110cloud_poly/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_anamizu_0110rev",
+		          "title": "津波浸水域（穴水地区）",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110rev/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240106noto_anamizu_0110handoku_area",
+		          "title": "判読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110handoku_area/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        }
+		      ]
+		 	},
+		 	{
+		      "type": "LayerGroup",
+		      "title": "津波浸水域データ（七尾地区）",
+		      "id": "20240109noto_nanao_0110shinsuii",
+		      "toggleall": false,
+		      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この津波浸水域（推定）は、国土地理院が令和6年1月5日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波到達範囲（堤外地を含む）を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。<br>4.津波到達範囲は速報のため、今後変わりうる場合があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+		      "entries": [
+		        {
+		          "type": "Layer",
+		          "id": "20240109noto_nanao_0110cloud_poly",
+		          "title": "雲による未読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110cloud_poly/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240109noto_naano_0110rev",
+		          "title": "津波浸水域（七尾地区）",
+		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110rev/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        },
+		        {
+		          "type": "Layer",
+		          "id": "20240109noto_nanao_0110handoku_area",
+		          "title": "判読範囲",
+		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110handoku_area/{z}/{x}/{y}.geojson",
+		          "cocotile": true,
+		          "minZoom": 2,
+		          "maxZoom": 18
+		        }
+		      ]
+		 	}
+		]
+	},
     {
       "type": "LayerGroup",
       "title": "SAR解析結果(ALOS-2)",
