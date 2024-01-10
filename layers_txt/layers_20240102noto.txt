@@ -453,39 +453,75 @@
              "maxZoom": 18
            }
          ]
+       },
+       {
+         "type": "LayerGroup",
+         "title": "斜面崩壊・堆積分布データ（七尾地区）",
+         "id": "20240109noto_nanao_houkaichi",
+         "toggleall": false,
+         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が1月5日に撮影した空中写真（正射画像）を用いて、令和6年能登半島地震によって生じたと考えられる斜面崩壊地や土砂堆積箇所を判読したものです。<br>2.現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の地震による崩壊地等以外の箇所を表示している場合があります。<br>3.斜面崩壊・堆積分布は個々の範囲がおおむね100平方メートル以上のものを表しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+         "entries": [
+           {
+             "type": "Layer",
+             "id": "20240109noto_nanao_cloud_poly",
+             "title": "雲による未読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_cloud_poly/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240109noto_nanao_hokai_all",
+             "title": "斜面崩壊・堆積範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_hokai_all/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           },
+           {
+             "type": "Layer",
+             "id": "20240109noto_nanao_handoku_area",
+             "title": "判読範囲",
+             "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_handoku_area/{z}/{x}/{y}.geojson",
+             "cocotile": true,
+             "minZoom": 2,
+             "maxZoom": 18
+           }
+         ]
        }
       ]
     },
     {
       "type": "LayerGroup",
       "title": "津波浸水域データ（珠洲地区、輪島東地区）",
-      "id": "20240102noto_suzu_wazimahigashi_0103shinsuii",
+      "id": "20240106noto_suzu_wazimahigashi_0103shinsuii",
       "toggleall": false,
-      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が令和6年1月2日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波浸水域を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+      "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240102noto_suzu_wazimahigashi_0103shinsui.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この津波浸水域（推定）は、国土地理院が令和6年1月2日及び1月5日に撮影した空中写真（正射画像）から、令和6年能登半島地震によって生じたと考えられる津波到達範囲（堤外地を含む）を判読して作成したものです。<br>2.現地調査は実施していないことから、実際に浸水のあった箇所でも表示できていない場合があります。また、浸水していない箇所も含んでいる場合があります。<br>3.海岸線は空中写真（正射画像）に合わせて取得しており、地形図と整合していない箇所があります。<br>4.津波到達範囲は速報のため、今後変わりうる場合があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
       "entries": [
         {
           "type": "Layer",
-          "id": "20240103noto_suzu_wazimahigashi_cloud_poly",
+          "id": "20240106noto_suzu_wazimahigashi_0109cloud_poly",
           "title": "雲による未読範囲",
-          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0103cloud_poly/{z}/{x}/{y}.geojson",
+          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18
         },
         {
           "type": "Layer",
-          "id": "20240102noto_suzu_wazimahigashi_0104rev",
+          "id": "20240106noto_suzu_wazimahigashi_0109rev",
           "title": "津波浸水域（珠洲、輪島東地区）",
-          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0104rev/{z}/{x}/{y}.geojson",
+          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18
         },
         {
           "type": "Layer",
-          "id": "20240102noto_suzu_wazimahigashi_0103handoku_area",
+          "id": "20240106noto_suzu_wazimahigashi_0109handoku_area",
           "title": "判読範囲",
-          "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_wazimahigashi_0103handoku_area/{z}/{x}/{y}.geojson",
+          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18
