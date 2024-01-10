@@ -17192,8 +17192,6 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
     this._elevationData = null;
     L.TileLayer.prototype.initialize.call(this, url, options);
 
-    this._requests = {};
-
     this._drawer = new GSI.ReliefTileLayer.TileDrawer();
   },
 
@@ -17241,22 +17239,6 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
 
   },
 
-  _removeTile: function (key) {
-    var req = this._requests[key];
-
-    if (req) {
-      L.DomUtil.remove(req.el);
-
-      if (req.loader) {
-        req.loader.destroy();
-        delete req.loader;
-
-      }
-
-      delete this._requests[key];
-    }
-    L.TileLayer.prototype._removeTile.call(this, key);
-  },
 
   // タイル生成
   createTile: function (coords, done) {
@@ -17275,10 +17257,11 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
 
   // タイル読み込み
   _loadTile: function (tile, coords, done) {
-    var key = this._tileCoordsToKey(coords);
-    var req = this._requests[key];
-    if (req) return;
-    loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
+    // 以前、読み込み中タイルがもう一度読み込みさせようとしていましたが、
+    // その場合、読み込み中タイルが表示されなくなるため、
+    // 現在は同じタイルが読み込まれる可能性があるが、読み込み中タイルをチェックせずに読み込むようにしています。
+
+    var loader = new GSI.FreeReliefDEMLoader(this._map, coords.x, coords.y, coords.z, this._demUrlList, {
         overZooming: true,
       useHillshademap: this._elevationData.useHillshademap,
       hillshademapUrl: this._hillshademapUrl
@@ -17291,18 +17274,12 @@ GSI.ReliefTileLayer = L.TileLayer.extend({
     };
 
     loader.on("load", L.bind(function (e) {
-
       var obj = e.target;
 
       this._drawer.draw(obj._params.tile, obj.getData(), obj.getHillshademapImage());
       obj._params.done(null, obj._params.tile);
 
     }, this));
-
-    this._requests[key] = {
-      el: tile,
-      loader: loader
-    };
 
     loader.load();
   }
