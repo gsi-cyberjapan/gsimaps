@@ -285,6 +285,23 @@
           },
           "maxNativeZoom": 2,
           "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20240102noto_wazimanishii_0111suichoku",
+          "title": "輪島西地区（1/11撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0111suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 37.247548,
+           "lng" : 136.801071,
+           "zoom" : 11
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
           }
         ]
        },
