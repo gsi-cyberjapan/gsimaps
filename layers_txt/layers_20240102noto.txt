@@ -360,7 +360,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_cloud_poly/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -369,7 +370,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_hokai_all/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -378,7 +380,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_handoku_area/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            }
          ]
        },
@@ -396,7 +399,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_cloud_poly/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -405,7 +409,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_hokai_all/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -414,7 +419,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_wazimanaka_handoku_area/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            }
          ]
        },
@@ -432,7 +438,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_cloud_poly/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -441,7 +448,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_hokai_all/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -450,7 +458,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_handoku_area/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            }
          ]
        },
@@ -468,7 +477,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_cloud_poly/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -477,7 +487,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_hokai_all/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            },
            {
              "type": "Layer",
@@ -486,7 +497,8 @@
              "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_handoku_area/{z}/{x}/{y}.geojson",
              "cocotile": true,
              "minZoom": 2,
-             "maxZoom": 18
+             "maxZoom": 18,
+             "maxNativeZoom": 2
            }
          ]
        }
@@ -512,7 +524,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -521,7 +534,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -530,7 +544,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        }
 		      ]
 		    },
@@ -548,7 +563,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110cloud_poly/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -557,7 +573,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110rev/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -566,7 +583,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110handoku_area/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        }
 		      ]
 		 	},
@@ -584,7 +602,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110cloud_poly/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -593,7 +612,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110rev/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        },
 		        {
 		          "type": "Layer",
@@ -602,7 +622,8 @@
 		          "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110handoku_area/{z}/{x}/{y}.geojson",
 		          "cocotile": true,
 		          "minZoom": 2,
-		          "maxZoom": 18
+		          "maxZoom": 18,
+		          "maxNativeZoom": 2
 		        }
 		      ]
 		 	}
