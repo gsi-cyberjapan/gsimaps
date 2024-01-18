@@ -303,7 +303,7 @@
           "src": "",
           "iconUrl": "",
           "toggleall": false,
-          "html" : "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>",
+          "html" : "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和6年1月16日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>",
           "entries": [
             {
               "type": "Layer",
@@ -314,7 +314,7 @@
               "minZoom": 7,
               "maxZoom": 18,
               "maxNativeZoom": 2,
-              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和6年1月16日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
             },
             {
               "type": "Layer",
@@ -325,7 +325,7 @@
               "minZoom": 7,
               "maxZoom": 18,
               "maxNativeZoom": 2,
-              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和6年1月16日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
             },
             {
               "type": "Layer",
@@ -336,7 +336,7 @@
               "minZoom": 7,
               "maxZoom": 18,
               "maxNativeZoom": 2,
-              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和6年1月16日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
             },
             {
               "type": "Layer",
@@ -347,7 +347,7 @@
               "minZoom": 7,
               "maxZoom": 18,
               "maxNativeZoom": 2,
-              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和5年8月21日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
+              "html": "<div class=\"layer_text\"><a target=\"_blank\" href=\"https://www.kagawa-u.ac.jp/dpec/areainfo/\">四国防災共同教育センター</a>が、四国の防災風土資源の現地調査結果を「四国の防災風土資源マップ」として地図に示しています。<br>※令和6年1月16日時点の情報です。</div><br><div class=\"layer_text\">水害、土砂災害、地震・津波、渇水の防災風土資源を表示しています。</div><br><div class=\"layer_text\">また、同センターのホームページでは、現地写真や資料・記録などから、その防災風土資源が生まれた背景や、今日の防災・減災対策に活かすために大切だと思う教訓・考え方を、「災害別 現地探訪用個別調査表」として工学的視点で解説しています。</div>"
             }
           ]
         },
