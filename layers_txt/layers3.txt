@@ -614,34 +614,14 @@
           ]
         },
         {
-          "type": "LayerGroup",
-          "title": "治水地形分類図",
-          "html" : "<div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div>",
-          "toggleall": false,
-          "entries": [
-            {
-              "type": "Layer",
-              "id": "lcmfc2",
-              "title": "治水地形分類図",
-              "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "minZoom": 5,
-              "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
-              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
-              "id": "lcmfc1",
-              "title": "初版(1976～1978年)",
-              "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "minZoom": 2,
-              "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
-              "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/bousaichiri41053.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }
-          ]
+           "type": "Layer",
+           "id": "lcmfc2",
+           "title": "治水地形分類図",
+           "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+           "cocotile": true,
+           "minZoom": 5,
+           "maxZoom": 16,
+           "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg\">凡例を表示</a></div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "LayerGroup",
