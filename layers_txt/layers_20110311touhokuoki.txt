@@ -19,38 +19,38 @@
         {
           "type": "Layer",
           "id": "disaster_lore_20110311",
-          "title": "自然災害伝承碑：東日本大震災（2023年3月2日時点）",
+          "title": "自然災害伝承碑：東日本大震災（2024年1月25日時点）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/837.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_20110311/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 7,
           "maxZoom": 18,
           "maxNativeZoom": 7,
-          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している東北地方太平洋沖地震による被害を伝える自然災害伝承碑を表示します。</div>"
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2024年1月25日時点で公開している東北地方太平洋沖地震による被害を伝える自然災害伝承碑を表示します。</div>"
         },
         {
           "type": "Layer",
           "id": "disaster_lore_19330303",
-          "title": "自然災害伝承碑：昭和三陸地震津波（2023年3月2日時点）",
+          "title": "自然災害伝承碑：昭和三陸地震津波（2024年1月25日時点）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/838.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_19330303/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 7,
           "maxZoom": 18,
           "maxNativeZoom": 7,
-          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している昭和三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2024年1月25日時点で公開している昭和三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
         },
         {
           "type": "Layer",
           "id": "disaster_lore_18960615",
-          "title": "自然災害伝承碑：明治三陸地震津波（2023年3月2日時点）",
+          "title": "自然災害伝承碑：明治三陸地震津波（2024年1月25日時点）",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/839.png",
           "url": "https://maps.gsi.go.jp/xyz/disaster_lore_18960615/{z}/{x}/{y}.geojson",
           "cocotile": true,
           "minZoom": 7,
           "maxZoom": 18,
           "maxNativeZoom": 7,
-          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2023年3月2日時点で公開している明治三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
+          "html": "<div class=\"gsi_layerinfo_subtitle\">自然災害伝承碑とは、過去に起きた自然災害の規模や被害の情報を伝える石碑やモニュメントです。</div><div  class=\"gsi_layerinfo_subtitle\"><a href='https://www.gsi.go.jp/bousaichiri/denshouhi.html' target='_blank'>詳細情報</a></div><div class=\"gsi_layerinfo_subtitle\">2024年1月25日時点で公開している明治三陸地震の津波被害を伝える自然災害伝承碑を表示します。</div>"
         }
       ]
     },
