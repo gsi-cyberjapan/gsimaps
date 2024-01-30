@@ -1332,7 +1332,7 @@
               "iconUrl": "",
               "toggleall": true,
               "id": "minato",
-              "html": "<div class='layer_text'><p>港湾局が登録した「みなとオアシス」の位置を表示します。</p></div>ズームレベル5～9で位置アイコン、ズームレベル10～18で詳細施設が表示されます<br>なお、最新の登録情報については、<a target='_blank' href='http://www.mlit.go.jp/kowan/kowan_tk1_000001.html'>国土交通省ホームページ</a>で確認して下さい。<br>※みなとオアシスとは、みなとを核としたまちづくりを推進するため、住民参加による地域振興の取組が継続的に行われる施設を国土交通省港湾局長が登録するものです。",
+              "html": "<div class='layer_text'><p>港湾局が登録した「みなとオアシス」の位置を表示します。</p></div>なお、最新の登録情報については、<a target='_blank' href='http://www.mlit.go.jp/kowan/kowan_tk1_000001.html'>国土交通省ホームページ</a>で確認して下さい。<br>※みなとオアシスとは、みなとを核としたまちづくりを推進するため、住民参加による地域振興の取組が継続的に行われる施設を国土交通省港湾局長が登録するものです。",
               "entries": [
                 {
                   "type": "Layer",
@@ -1342,7 +1342,7 @@
                   "styleurl": "https://maps.gsi.go.jp/xyz/minato_icon/style.js",
                   "cocotile": false,
                   "minZoom": 5,
-                  "maxZoom": 9,
+                  "maxZoom": 18,
                   "maxNativeZoom": 2,
                   "html": "解説"
                 },
