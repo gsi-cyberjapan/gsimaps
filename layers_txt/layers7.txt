@@ -1375,21 +1375,6 @@
               "toggleall": false,
               "html": "<div class='layer_text'><p>電子国土基本図を更新した地域を年月別に表示します。</p></div>",
               "entries": [
-               {
-                  "type": "LayerGroup",
-                  "title": "2024年登山道更新情報",
-                  "toggleall": false,
-                  "entries": [
-                    {
-                      "type": "Layer",
-                      "id": "toz202401",
-                      "title": "1月更新",
-                      "url": "https://maps.gsi.go.jp/xyz/toz202401/{z}/{x}/{y}.geojson",
-                      "maxNativeZoom": 2,
-                      "cocotile": false
-                    }
-                  ]
-                },
                 {
                   "type": "LayerGroup",
                   "title": "2024年迅速更新情報",
@@ -1416,6 +1401,29 @@
                       "id": "men202401",
                       "title": "1月更新",
                       "url": "https://maps.gsi.go.jp/xyz/men202401/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2024年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                  	{
+                      "type": "Layer",
+                      "id": "toz202402",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202402/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "toz202401",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202401/{z}/{x}/{y}.geojson",
                       "maxNativeZoom": 2,
                       "cocotile": false
                     }
