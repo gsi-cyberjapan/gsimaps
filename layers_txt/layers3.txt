@@ -537,7 +537,7 @@
               "type": "Layer",
               "id": "vlcd",
               "title": "火山土地条件図",
-              "url": "./xyz/vlcd/{z}/{x}/{y}.png",
+              "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
               "cocotile": true,
               "minZoom": 5,
               "maxZoom": 16,
