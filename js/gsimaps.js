@@ -8682,6 +8682,11 @@ GSI.LayersJSON.url2LayerType = function (url) {
   if (url.match(/\.webm$/) || url.match(/\.mp4$/)) {
     return "videooverlay";
   }
+
+  if (url.match(/\.pm\.json$/)) {
+    return "pmtiles";
+  }
+
   var ext = "";
   var layerType = "";
   var matchResult = url.match(/.*\.([^.]+$)/);
@@ -8900,6 +8905,19 @@ GSI.Utils.infoToLayer = function (info, noFinishMove) {
         this.getElement().play();
       }, this))
     }, layer));
+    layer._noFinishMove = noFinishMove;
+  }
+
+  else if (info.layerType == "pmtiles") {
+    // PMTiles
+    var options = {};
+
+    if ((info.minZoom == 0 || info.minZoom) && info.minZoom != "") options.minZoom = info.minZoom;
+    if ((info.maxZoom == 0 || info.maxZoom) && info.maxZoom != "") options.maxZoom = info.maxZoom;
+    if (info.attribution) options.attribution = info.attribution;
+    if (info.bounds && info.bounds != "") options.bounds = info.bounds;
+
+    layer = new GSI.PMTileLayer(info.url, options);
     layer._noFinishMove = noFinishMove;
   }
 
@@ -12693,6 +12711,10 @@ GSI.MultiLayer = L.LayerGroup.extend({
       }
       else if (info.layerType == "videooverlay") {
         // VideoOverlay
+        this.addLayer(layer, true);
+      }
+      else if (info.layerType == "pmtiles") {
+        // PMTiles
         this.addLayer(layer, true);
       }
     }
@@ -19806,6 +19828,16 @@ GSI.MapLayerList = L.Evented.extend({
         this.list.unshift(info);
         this._initZIndexOffset(this.list, 10000);
         this.onLayerLoad(info._visibleInfo.layer);
+      }
+      else if (info.layerType == "pmtiles") {
+        // PMTiles
+        info._visibleInfo.layer.on("loadstart", L.bind(this.onLayerLoadStart, this, info._visibleInfo.layer, "PMTiles"));
+        info._visibleInfo.layer.on("load", L.bind(function (e) { this.onLayerLoad(e.src) }, this));
+
+        if (!info._visibleInfo._isHidden) this.map.addLayer(info._visibleInfo.layer);
+
+        this.list.unshift(info);
+        this._initZIndexOffset(this.list, 10000);
       }
     }
 
@@ -53375,4 +53407,107 @@ function getFileeData(url, key) {
       console.log(data);
     });
   }
+};
+
+/************************************************************************
+ L.MaplibreGL
+  - GSI.PMTileLayer (PMTiles対応レイヤー)
+ ************************************************************************/
+GSI.PMTileLayer = L.MaplibreGL.extend({
+  options:{
+    opacity: 1,
+  },
+  initialize: function (url, options) {
+    let protocol = new pmtiles.Protocol();
+    maplibregl.addProtocol("pmtiles",protocol.tile);
+    this.maplibreGLLayer = L.MaplibreGL.prototype.initialize.call(this, {
+      ...options,
+      style: url,
+      maxzoom: options.maxZoom,
+      minzoom: options.minZoom
+    });
+  },
+  onAdd: function (map) {
+    L.MaplibreGL.prototype.onAdd.call(this, map);
+    this.setGrayscale();
+    this.setOpacity(this.options.opacity);
+    this._map.setMinZoom(this.options.minZoom+1);
+  },
+  onRemove: function (map) {
+    L.MaplibreGL.prototype.onRemove.call(this, map);
+    this._map.setMinZoom(0);
+  },
+  setOpacity:function (opacity) {
+    if(this._glMap){
+      var mapContainer = this._glMap.getContainer();
+      mapContainer.style.opacity = opacity;
+    }
+  },
+  getEvents: function () {
+    return {
+      move: this._fastupdate,
+      zoomanim: this._animateZoom, // applys the zoom animation to the <canvas>
+      zoom: this._pinchZoom, // animate every zoom event for smoother pinch-zooming
+      zoomstart: this._zoomStart, // flag starting a zoom to disable panning
+      zoomend: this._zoomEnd,
+      resize: this._resize
+    };
+  },
+  _fastupdate: function (e) {
+    // update the offset so we can correct for it later when we zoom
+    this._offset = this._map.containerPointToLayerPoint([0, 0]);
+    
+    if (this._zooming) { return; }
+    
+    var size = this.getSize(),
+    container = this._container,
+    gl = this._glMap,
+    offset = this._map.getSize().multiplyBy(this.options.padding),
+    topLeft = this._map.containerPointToLayerPoint([0, 0]).subtract(offset);
+    this._transformGL(gl);
+    L.DomUtil.setPosition(container, this._roundPoint(topLeft));
+    L.Util.requestAnimFrame(function () {
+        if (gl.transform.width !== size.x || gl.transform.height !== size.y) {
+            container.style.width  = size.x + 'px';
+            container.style.height = size.y + 'px';
+            if (gl._resize !== null && gl._resize !== undefined){
+                gl._resize();
+            } else {
+                gl.resize();
+            }
+        } else {
+            // older versions of mapbox-gl surfaced update publicly
+            if (gl._update !== null && gl._update !== undefined){
+                gl._update();
+            } else {
+                gl.update();
+            }
+        }
+    }, this);
+  },
+  _setView:function (coordinate) {
+    this._glMap.setCenter([coordinate.lng, coordinate.lat]);
+  },
+  _resetView:function () {
+    this._setView(this._map.getCenter());
+  },
+  setGrayscale:function () {
+    let mapContainer = this._glMap.getContainer();
+    if(this.isGrayScale){
+      mapContainer.style.filter = 'grayscale(1)';
+    } else {
+      mapContainer.style.filter = '';
+    }
+  },
+  redraw:function () {
+    if(this._glMap){
+      if (!this._baseStyles ){this._baseStyles = this._glMap.getStyle();}
+      this.setGrayscale();
+      this.setOpacity(this.options.opacity);
+    }
+  }
+});
+
+GSI.pmTileLayer = function (url, options) {
+  return new GSI.PMTileLayer(url, options);
 };
