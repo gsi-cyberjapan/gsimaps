@@ -26,7 +26,7 @@
           "cocotile": true,
           "minZoom": 2,
           "maxZoom": 18,
-          "html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>"
+          "html": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>&emsp;<a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto_precaution.pdf\">承認番号</a>"
         },
         {
           "type": "Layer",
@@ -37,12 +37,12 @@
           "minZoom": 14,
           "maxZoom": 18,
           "maxNativeZoom": 11,
-          "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18でおおよその範囲を表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　電子国土基本図（オルソ画像）<br>　　（2007年～）</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#800000\">■</span>　森林（国有林）の空中写真（林野庁）<br>　　（2011年～）</li><li><span style=\"font-size:x-large; color:#ff7f00\">■</span>　簡易空中写真<br>　　（2004年～）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>　国土画像情報<br>　　（第四期：1987年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">全国最新写真（シームレス）撮影期間</div><div class=\"gsi_layerinfo_subtitle\">　ズーム14～18でおおよその範囲を表示します。</div><ul style=\"list-style-type:none\"><li><span style=\"font-size:x-large; color:#fbff45\">■</span>　電子国土基本図（オルソ画像）<br>　　（2007年～）</li><li><span style=\"font-size:x-large; color:#fc4a64\">■</span>　東日本大震災後正射画像<br>　　（2013年9月～2013年12月）</li><li><span style=\"font-size:x-large; color:#48b866\">■</span>　東日本大震災後正射画像<br>　　（2012年10月～2013年5月）</li><li><span style=\"font-size:x-large; color:#4569ff\">■</span>　東日本大震災後正射画像<br>　　（2011年5月～2012年4月）</li><li><span style=\"font-size:x-large; color:#800000\">■</span>　森林（国有林・民有林）の<br>　　　空中写真（林野庁）<br>　　（2011年～）</li><li><span style=\"font-size:x-large; color:#ff7f00\">■</span>　簡易空中写真<br>　　（2004年～）</li><li><span style=\"font-size:x-large; color:#46fdfb\">■</span>　国土画像情報<br>　　（第四期：1987年～1990年）</li><li><span style=\"font-size:x-large; color:#4afe81\">■</span>　国土画像情報<br>　　（第三期：1984年～1986年）</li><li><span style=\"font-size:x-large; color:#ff47d9\">■</span>　国土画像情報<br>　　（第二期：1979年～1983年）</li><li><span style=\"font-size:x-large; color:#766abe\">■</span>　国土画像情報<br>　　（第一期：1974年～1978年）</li></ul><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "LayerGroup",
           "title": "年度別写真（2007年以降）",
-          "html" : "<div class='layer_text'>電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。</div>",
+          "html" : "<div class='layer_text'>電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。</div>",
           "toggleall": false,
           "entries": [
           	{
@@ -51,7 +51,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2023",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -80,7 +80,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2022",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -109,7 +109,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2021",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -138,7 +138,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2020",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -167,7 +167,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2019",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -196,7 +196,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2018",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -225,7 +225,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2017",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -254,7 +254,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2016",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -283,7 +283,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2015",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -312,7 +312,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2014",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -341,7 +341,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2013",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -370,7 +370,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2012",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -399,7 +399,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2011",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -428,7 +428,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2010",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -457,7 +457,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2009",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -486,7 +486,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2008",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
@@ -515,7 +515,7 @@
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
               "id": "nendophoto2007",
-              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林の空中写真）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li>",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
               "entries": [
                 {
                   "type": "Layer",
