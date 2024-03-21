@@ -457,7 +457,8 @@ CONFIG.LAYERTYPELIST = {
   "tms": { caption: "TMS", isTile: true, isTileImage: true },
   "multiLayer": { caption: "複数レイヤ", isTile: false },
   "geotiff": { caption: "GeoTiff", isTile: false },
-  "videooverlay": { caption: "VideoOverlay", isTile: false }
+  "videooverlay": { caption: "VideoOverlay", isTile: false },
+  "pmtiles": { caption: "PMTiles", isTile: false },
 };
 
 // Globe
