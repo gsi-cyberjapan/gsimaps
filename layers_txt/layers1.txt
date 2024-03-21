@@ -7,6 +7,17 @@
       "toggleall": false,
       "html" : "<div class='layer_text'>第二次世界大戦前から現在に至る年代別の写真を閲覧できます。</div>",
       "entries": [
+        	{
+		"type": "Layer",
+		"id": "pm-raster",
+		"title": "PMTile",
+		"url": "/layers_json/pm-test.pm.json",
+		"cocotile": true,
+		"html" : "",
+		"legendUrl": "",
+		"minZoom": 5,
+		"errorTileUrl": "./image/map/no-data-ort.png"
+	},
         {
           "type": "Layer",
           "title": "時系列表示（ZL14以上で表示）",
