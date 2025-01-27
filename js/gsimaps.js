@@ -28253,7 +28253,7 @@ _createLinkContainer: function (parentContainer) {
     var link3Url = {
       "MapLibre版": "https://maps.qchizu.xyz/maplibre/#" + (z-1) + "/" + lat + "/" + lng,
       "o-hinata": "https://kenzkenz.xsrv.jp/open-hinata/#" + z + "/" + lng + "/" + lat + "%3FS%3D1%26L%3D%5B%5B%7B%22id%22%3A%22mw5%22%2C%22ck%22%3Atrue%2C%22o%22%3A1%7D%2C%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%5D",
-      "昔の境界": "https://hanishina.github.io/maps/historymap.html?y=" + lat + "&x=" + lng + "&z=" + z,
+      "昔の境界": "https://hanishina.net/maps/historymap.html?y=" + lat + "&x=" + lng + "&z=" + (z-1),
       "スーパー地形": "https://www.kashmir3d.com/superdemapp/jump?latlon=" + lat + "," + lng,
     };
     $("#goLink3Button").attr('href', link3Url[selectedLink3]);
