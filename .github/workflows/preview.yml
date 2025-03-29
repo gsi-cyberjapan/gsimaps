@@ -1,0 +1,39 @@
+name: Deploy PR previews
+concurrency: preview-${{ github.ref }}
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+permissions:
+  # pr-preview ブランチに書き込みするため
+  contents: write
+
+  # プレビューの URL をコメントに書き込むため
+  issues: write
+  pull-requests: write
+jobs:
+  deploy-preview:
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal'
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: デプロイしないファイルを掃除する
+        run: |
+          rm \
+            .editorconfig \
+            .env \
+            .gitattributes \
+            .gitignore \
+            package.json \
+            package-lock.json
+        if: github.event.action != 'closed'
+      - uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
+          preview-branch: pr-preview
+          umbrella-dir: pr-preview
+          action: auto

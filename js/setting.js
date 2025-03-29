@@ -94,6 +94,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_akitayake": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/vlcd_akitayake.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_iwate": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_iwate/vlcd_iwate.csv",
     "layer": {
@@ -102,10 +110,26 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_akitakoma": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/vlcd_akitakoma.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_chokai": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/vlcd_chokai.csv",
     "layer": {
       "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
+  "vlcd_kurikoma": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/vlcd_kurikoma.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/{z}/{x}/{y}.png",
       "minZoom": 10,
       "maxZoom": 16
     }
@@ -122,6 +146,14 @@ CONFIG.HANREILIST = {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_adatara/vlcd_adatara.csv",
     "layer": {
       "url": "https://maps.gsi.go.jp/xyz/vlcd_adatara/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
+  "vlcd_niigatayake": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/vlcd_niigatayake.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/{z}/{x}/{y}.png",
       "minZoom": 10,
       "maxZoom": 16
     }
@@ -309,6 +341,54 @@ CONFIG.CONFIRM_LAYERS = {
       "kokuarea"
     ]
   },
+  "kokuarea_kanseikentou": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、航空交通管制圏又は航空交通情報圏を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_kanseikentou"
+    ]
+  },
+  "kokuarea_tokubetsukanseiku": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、特別管制区を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_tokubetsukanseiku"
+    ]
+  },
+  "kokuarea_shinnyuukanseiku": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、進入管制区を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_shinnyuukanseiku"
+    ]
+  },
+  "kokuarea_minkankunren": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、民間訓練試験空域（訓練空域）を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_minkankunren"
+    ]
+  },
   "red": {
     "title": "ご利用上の注意",
     "message": "赤色立体地図及びオルソ立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。" +
@@ -340,7 +420,7 @@ CONFIG.CONFIRM_LAYERS = {
     ]
   },
   "swale": {
-    "title": "免責事項・ご利用上の注意", 
+    "title": "免責事項・ご利用上の注意",
     "message": "「明治期の低湿地」データは、近代測量に基づく基準点網の整備前に作図された地図から作成されているため、場所によってはかなりの誤差を含んでいることもありますので注意が必要です。",
     "withBlend": true,
     "layers": [
@@ -1095,6 +1175,13 @@ CONFIG.CHIIKIMESH.GEOJSONURL = 'https://cyberjapandata.gsi.go.jp/xyz/chiikimesh/
 
 CONFIG.DEMURLLIST = [
   {
+    "title": "DEM1A",
+    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+    "minzoom": 9,
+    "maxzoom": 17,
+    "fixed": 1
+  },
+  {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
     "minzoom": 9,
@@ -1132,6 +1219,13 @@ CONFIG.DEMURLLIST = [
 ];
 
 CONFIG.FOOTERDEMURLLIST = [
+  {
+    "title": "DEM1A",
+    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+    "minzoom": 17,
+    "maxzoom": 17,
+    "fixed": 1
+  },
   {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",

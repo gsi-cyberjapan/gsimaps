@@ -1,0 +1,23 @@
+name: Merge Schedule
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  merge_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: geolonia/merge-schedule-action@v0.0.1
+        with:
+          merge_method: squash
+          time_zone: 'Asia/Tokyo'
+          require_statuses_success: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_GITHUB_TOKEN }}

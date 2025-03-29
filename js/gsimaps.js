@@ -15,6 +15,8 @@
   , FILEURL: {}
 };
 GSI.TEXT = GSITEXT;
+GSI.GPS = GSI.GPS || {};
+GSI.GPS.sharedState = { userInteraction: false, otherGPSButtons: [] };
 /************************************************************************
  モバイル判定
 ************************************************************************/
@@ -5171,7 +5173,7 @@ GSI.ShareDialog = GSI.Dialog.extend({
         var currentData = this._gsimaps._subMap._mapLayerList.getElevationData();
         var text = GSI.ReliefTileLayer.encodeElevationData(currentData);
         queryString += (queryString != '' ? '&' : '#') + 'reliefdata2=' + text;
-      } 
+      }
     }
 
     if (additionalParam && additionalParam != '') {
@@ -9267,7 +9269,7 @@ GSI.MapMouse = L.Evented.extend({
     if (this.rightClickTime != null) {
       if ( this._rightClicMoveVisible)
         this._move(latlng);
-      
+
       if(this._mapManager._footer && !this._mapManager._footer.isVisible()){
         this._mapManager._footer.onBtnClick();
       }
@@ -9773,7 +9775,7 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     names["Address"] = "所在地";
     names["DisasterInfo"] = "伝承内容";
     names["Image"] = "概要";
-    names["Limitations"] = "制限事項";    
+    names["Limitations"] = "制限事項";
 
     var title = "";
     var id = "";
@@ -10483,7 +10485,7 @@ GSI.PagePrinter = L.Evented.extend({
   },
 
   _create: function () {
-    this._container = $('<div>').addClass('gsi_pageprinter');//.click( L.bind( function(){this.hide();},this) );		
+    this._container = $('<div>').addClass('gsi_pageprinter');//.click( L.bind( function(){this.hide();},this) );
 
     this._headerContainer = $('<div>').addClass('header_container');
     this._mapContainer = $('<div>').addClass('map_container');
@@ -10499,12 +10501,12 @@ GSI.PagePrinter = L.Evented.extend({
     tr.append(td);
 
     var tdtitle = $('<td>');
-    
+
     tdtitle
       .attr({colspan: "3"})
       .css({"text-align":"center"});
       //.addClass('no_print');
-    
+
     var tid = 'gsi_print_title';
     this._title = $("<input>").attr({"type":"textbox", "id":tid}).css({"width":"420px", border:"solid 1px", "white-space":"no-wrap"});
     var labelTitle = $("<span>").attr({ "for": tid }).html("タイトル：").addClass("no_print");
@@ -19943,7 +19945,7 @@ GSI.MapLayerList = L.Evented.extend({
   },
 
   append: function (info, noFinishMove, isHide, Confirm_FLAG, blend) {
-    
+
     if (this.exists(info)) return;
     info._appendInfo = null;
 
@@ -23378,10 +23380,10 @@ GSI.ElevationLoader = L.Evented.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if ( valueError && url.title=="DEMGM") return null;
-    
+
     return url;
   },
 
@@ -23503,7 +23505,7 @@ GSI.FooterElevationLoader = GSI.ElevationLoader.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if ( valueError && url.title=="DEMGM") return null;
     if ((this._map.getZoom() > url.zoom) && (url.title == "DEMGM")) return null;
@@ -23539,7 +23541,7 @@ GSI.LakeDataLoader = GSI.ElevationLoader.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if (valueError) return null;
     if (this._map.getZoom() > url.zoom) return null;
@@ -26809,7 +26811,9 @@ GSI.MapManager = L.Evented.extend({
     // this._map.addControl(new GSI.Control.ZoomGuidePanel({ position: "bottomright" }, this.options.mapMenuRight ? "right" : "left"));
 
     if (CONFIG.USEGPS) {
-      this._gpsControl = new GSI.Control.GPSButton();
+      this._gpsControl = new GSI.Control.GPSButton({
+        sharedState: GSI.GPS.sharedState
+      });
       this._map.addControl(this._gpsControl);
 
     }
@@ -27107,14 +27111,14 @@ GSI.MapManager = L.Evented.extend({
 
     return  this._comparePhotoControl;
   },
-  
+
   enableLakeData: function(enabled) {
     this._enableLakeData = enabled;
   },
 
   lakeDataEnabled: function() {
     return this._enableLakeData;
-  }  
+  }
 });
 
 /************************************************************************
@@ -27271,7 +27275,7 @@ L.Map.include({
       popup.setLatLng(latlng);
     }
 
-    //			
+    //
     popup._isOpen = true;
 
     if (this.options.multipopup) {
@@ -28419,7 +28423,7 @@ _createLinkContainer: function (parentContainer) {
     } else {
       this._lakedepthLoader.cancel();
     }
-    
+
     if ( !this._lakeStdHeightLoader ) {
       this._lakeStdHeightLoader = new GSI.LakeStdHeightLoader(map);
       this._lakeStdHeightLoader.on("load", L.bind( function(e) {
@@ -34468,7 +34472,7 @@ GSI.CrossSectionView.Graph = L.Evented.extend({
     ctx.translate(-iTranslate, -iTranslate);
 
     this._drawPopupBaloon(ctx, this._mousePontData);
-    return;    
+    return;
   },
 
   // 標高表示用ポップアップ描画
@@ -34599,7 +34603,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend({
   // 初期化
   initialize: function (dialogManager, map, options) {
     this._map = map;
-    this._useDEMTileList = ["DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
+    this._useDEMTileList = ["DEM1A","DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
     this._crossSectionView = new GSI.CrossSectionView(this._map, {
       autoGraph: true
     });
@@ -34761,6 +34765,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend({
       return frame;
     }, this);
 
+    this._optionFrame.append(__createOption("DEM1A"));
     this._optionFrame.append(__createOption("DEM5A"));
     this._optionFrame.append(__createOption("DEM5B"));
     this._optionFrame.append(__createOption("DEM5C"));
@@ -34949,7 +34954,7 @@ GSI.CrossSectionViewDisplayDialog = GSI.Dialog.extend({
           + list[i];
       }
     } else {
-      text = "DEM5A,DEM5B,DEM5C,DEM10B,DEMGM";
+      text = "DEM1A,DEM5A,DEM5B,DEM5C,DEM10B,DEMGM";
     }
     this._titleTextContainer.html("データ:" + text);
   },
@@ -36426,7 +36431,7 @@ GSI.HashOptions = L.Class.extend({
     this.Hash();
   },
   Callback: function (t, o, hash) {
-    
+
     if (t == "moveend") {
       hash += o.vHashOptions;
       o.vHash = hash;
@@ -36637,7 +36642,7 @@ GSI.HashOptions = L.Class.extend({
         var freeRelief2 = this._gsimaps._pageStateManager.getFreeReliefQueryString2();
         if (freeRelief2 != "")
           hash += "&" + freeRelief2;
-  
+
       }
 
       // 等距圏
@@ -36729,7 +36734,7 @@ GSI.HashOptions = L.Class.extend({
     }
     else{
       this._gsimaps._mainMap._layersJSON.initialize_layers_data(layers);
-      this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._mainMap._layersJSON.visibleLayers);  
+      this._gsimaps._mainMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._mainMap._layersJSON.visibleLayers);
     }
 
     var viewSetting = this._gsimaps._queryParams.getViewSetting();
@@ -36818,9 +36823,9 @@ GSI.HashOptions = L.Class.extend({
       }
       else{
         this._gsimaps._subMap._layersJSON.initialize_layers_data(layers2);
-        this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._subMap._layersJSON.visibleLayers);  
+        this._gsimaps._subMap._mapMenu.getShowingMapListPanel().refresh(this._gsimaps._subMap._layersJSON.visibleLayers);
       }
-  
+
       this._gsimaps._subMap._mapLayerList.setElevationData(this._gsimaps._queryParams.getReliefData2());
       if (this._gsimaps._subMap._mapLayerList._editReliefDialog) {
         this._gsimaps._subMap._mapLayerList._editReliefDialog.refresh();
@@ -37004,7 +37009,7 @@ GSI.HashOptions = L.Class.extend({
   }
 
     return hash;
-  }, 
+  },
   _checkBaseDispParams: function(hash) {
     // lsの値とdispの値からbaseのdispを判断する。
     // 202303 baseMap非表示時にlsからbaseMapを取得する。
@@ -37014,7 +37019,7 @@ GSI.HashOptions = L.Class.extend({
     var disp = params["disp"];
 
     if (layers && disp) {
-        
+
       for (var i = 0; i < layers.length; i++) {
         if (((layers[i]) ? layers[i].trim() : '') == '') continue;
         var parts = layers[i].split(',');
@@ -37035,7 +37040,7 @@ GSI.HashOptions = L.Class.extend({
         }
 
       }
-      
+
     }
 
     return false;
@@ -37340,11 +37345,11 @@ GSI.QueryParams = L.Class.extend({
       var disp = this.params["disp"];
 
       if (layers && disp) {
-        
+
         for (var i = 0; i < layers.length; i++) {
           if (((layers[i]) ? layers[i].trim() : '') == '') continue;
           var parts = layers[i].split(',');
-  
+
           if (0 < CONFIG.BASETILES.length) {
             for (n = 0; n < CONFIG.BASETILES.length; n++) {
               if (CONFIG.BASETILES[n].id == parts[0]) {
@@ -37357,9 +37362,9 @@ GSI.QueryParams = L.Class.extend({
               }
             }
           }
-  
+
         }
-        
+
       }
 
     }
@@ -37400,15 +37405,15 @@ GSI.QueryParams = L.Class.extend({
       var disp = this.params["disp2"];
 
       if (layers && disp) {
-        
+
         for (var i = 0; i < layers.length; i++) {
           if (((layers[i]) ? layers[i].trim() : '') == '') continue;
           var parts = layers[i].split(',');
-  
+
           if (0 < CONFIG.BASETILES.length) {
             for (n = 0; n < CONFIG.BASETILES.length; n++) {
               if (CONFIG.BASETILES[n].id == parts[0]) {
-  
+
                 if (disp.length > i) {
                   this._baseMap2 = parts[0];
                   fBaseMap = true;
@@ -37417,9 +37422,9 @@ GSI.QueryParams = L.Class.extend({
               }
             }
           }
-  
+
         }
-        
+
       }
 
     }
@@ -38050,7 +38055,7 @@ GSI.DEMLoader = L.Evented.extend({
     }
 
     if (!this.options.useTileList) {
-      this.options.useTileList = ["DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
+      this.options.useTileList = ["DEM1A","DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
     }
 
     var useTileList = this.options.useTileList;
@@ -38859,6 +38864,38 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
   if (!GSI.DEMLoader.DEMAREA2[key])
     return [
       {
+        id: "DEM1A",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 17,
+        complementList: [
+          {
+            id: "DEM5A",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
         id: "DEM5A",
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
         minZoom: 9,
@@ -39122,6 +39159,38 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
   if (!GSI.DEMLoader.DEMAREA2[key])
     return [
       {
+        id: "DEM1A",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 17,
+        complementList: [
+          {
+            id: "DEM5A",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
         id: "DEM5A",
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
         minZoom: 9,
@@ -39258,6 +39327,7 @@ GSI.Control.GPSButton = L.Control.extend({
 
     this._on = true;
     this._startInitialized = false;
+    this._justStarted = true;
     if (!this._locationWatcher) {
       this._locationWatcher = new GSI.LocationWatcher();
       this._locationWatcher.on("change", L.bind(this._onLocationChange, this));
@@ -39284,17 +39354,15 @@ GSI.Control.GPSButton = L.Control.extend({
 
   _onLocationChange: function (evt) {
     var coords = evt["coords"];
-    this._selfMove = true;
     var zoom = this._map.getZoom();
+    this._selfMove = true;
     if (!this._startInitialized && zoom < 15) {
       this._startInitialized = true;
       this._map.flyTo([coords.latitude, coords.longitude], 15, { duration: 1 });
     } else {
       this._map.panTo([coords.latitude, coords.longitude], { reset: true });
     }
-    this._selfMove = false;
     this._showMarker(coords);
-
   },
   _onZoomStart: function () {
     this._zooming = true;
@@ -39303,11 +39371,21 @@ GSI.Control.GPSButton = L.Control.extend({
     this._zooming = false;
   },
 
-  _onMoveStart: function () {
-    if (!this._selfMove && !this._zooming) {
-      this.stop();
+  _onMoveStart: function (e) {
+    if (this._justStarted) {
+      this._justStarted = false;
+      return;
     }
-    this._selfMove = false;
+    if (this._state.userInteraction && !this._selfMove) {
+      this.stop();
+      if (this._state.otherGPSButtons) {
+        this._state.otherGPSButtons.forEach(function(button) {
+          if (button._on) {
+            button.stop();
+          }
+        });
+      }
+    }
   },
 
   _resetImage: function () {
@@ -39323,6 +39401,20 @@ GSI.Control.GPSButton = L.Control.extend({
   onAdd: function (map) {
     this._on = false;
     this._map = map;
+    this._state = this.options.sharedState || { userInteraction: false, otherGPSButtons: [] };
+
+    if (!this._state.otherGPSButtons.includes(this)) {
+      this._state.otherGPSButtons.push(this);
+    }
+    const container = map.getContainer();
+    container.addEventListener("mousedown", () => { this._state.userInteraction = true; });
+    container.addEventListener("touchstart", () => { this._state.userInteraction = true; });
+
+    this._map.on("moveend", () => {
+      this._state.userInteraction = false;
+      this._selfMove = false;
+    });
+
     this._map.on("movestart", L.bind(this._onMoveStart, this));
     this._map.on("zoomstart", L.bind(this._onZoomStart, this));
     this._map.on("zoomend", L.bind(this._onZoomEnd, this));
@@ -44115,7 +44207,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
   _refreshList: function () {
     //自動調整用css再設定
     this.container.css({height:"auto"});
-    
+
     this._listUL.empty();
 
     var liHeight = 0;
@@ -44500,7 +44592,7 @@ GSI.SakuzuDialog = GSI.Dialog.extend({
           if( evt.button != "cancel") {
             // 終了時のアラート表示 外す
             window._shareDialogFlag = false;
-            if (!window._sakuzuDialogFlag) $(window).off('beforeunload');            
+            if (!window._sakuzuDialogFlag) $(window).off('beforeunload');
             func();
           }
         }, this, func));
@@ -48073,7 +48165,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         }));
         this._ljsSrc.kick(needsrc);
       }
-    }   
+    }
   },
 
   setMapLayerList : function(mapLayerList) {
@@ -48594,11 +48686,13 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       settingBtn.off('click').on('click', L.bind(this._onReliefStyleEidtClick, this, a, item));
     }
     // 詳細
-    var descriptionBtn = $('<a>').attr({
-      'href': 'javascript:void(0);',
-      'title' : GSI.Utils.getTooltipText("SELECTMAP","INFORMATION") }).addClass('description_btn').html("i");
-    li.append(descriptionBtn);
-    descriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
+    if ( item.html ) {
+      var descriptionBtn = $('<a>').attr({
+        'href': 'javascript:void(0);',
+        'title' : GSI.Utils.getTooltipText("SELECTMAP","INFORMATION") }).addClass('description_btn').html("i");
+      li.append(descriptionBtn);
+      descriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
+    }
 
     if (CONFIG.VISIBLELAYERTYPE) {
       var info = $('<div>').addClass('info');
@@ -49019,7 +49113,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
     // 202303 evacDialog生成後にzoomGuideを調整
     if (GSI.GLOBALS.gsimaps._mainMap && GSI.GLOBALS.gsimaps._mainMap._zoomGuide.getVisible()
-        && !a[0].className.includes('view') && this.onZoomCheck(item)) {      
+        && !a[0].className.includes('view') && this.onZoomCheck(item)) {
 
       $("#zoomGuideCheckbox").off('change').on('change', function(){
         var bol = $('#zoomGuideCheckbox').is(":checked");
@@ -49047,7 +49141,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
           }
         }
       }
-      
+
       if (evacDialogOffset || evacCheck) {
         var bottom = Number($(window).height()) - (Number(evacDialogOffset.top));
         bottom += 'px';
@@ -49073,7 +49167,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
 
     if (GSI.GLOBALS.gsimaps._mainMap._zoomGuide.getVisible()
     && !a[0].className.includes('view')
-    && this.onZoomCheck(item)) {      
+    && this.onZoomCheck(item)) {
 
       $("#zoomGuideCheckbox").off('change').on('change', function(){
         var bol = $('#zoomGuideCheckbox').is(":checked");
@@ -50083,7 +50177,7 @@ GSI.ShowingMapListPanel = GSI.MapPanelContainer.extend({
       //this._blendTile(a, item._visibleInfo.blend);
       if (!GSI.Utils.Browser.ie && !GSI.Utils.Browser.edge) {
         GSI.Utils.setMixBlendMode(item, true);
-      } 
+      }
     }
 
     this._mapLayerList.fire("visiblechange");
@@ -52098,7 +52192,9 @@ GSI.GSIMaps = L.Evented.extend({
         "slide": L.bind(function (event, ui) {
 
           this._comparisonSeparater.setLeft( this.getCompareSliderPos(ui.value) );
-
+          // スライダー操作後にフラグをリセット（少し遅延させる）
+          setTimeout(L.bind(function() {
+          }, this), 100);
         }, this)
       });
 

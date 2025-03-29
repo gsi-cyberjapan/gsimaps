@@ -1,0 +1,35 @@
+name: '公開レポジトリへの同期'
+
+on:
+  push:
+    branches: [ gh-pages ]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: private
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_GITHUB_TOKEN }}
+          repository: gsi-cyberjapan/gsimaps
+          path: public
+
+      - name: 公開リポジトリに対して直マージを行う
+        run: |
+          cd public
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git remote add private ../private
+          git fetch private
+          git merge private/gh-pages
+          git push origin gh-pages
