@@ -1,11 +1,12 @@
 {
   "version": 8,
   "name": "ksj-kokuyurinya",
-  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "sources": {
     "kokuyurinya": {
       "type": "vector",
-      "url": "pmtiles://https://mapdata.qchizu.xyz/test/kokuyurinya.pmtiles",
+      "tiles": ["https://qchizu.github.io/vector-tile-generator-kokuyurinya/20250211_095612-tiles/{z}/{x}/{y}.pbf"],
+      "maxzoom": 14,
       "attribution": ""
     }
   },
@@ -23,7 +24,7 @@
         "visibility": "visible"
       },
       "minzoom": 14,
-      "maxzoom": 20
+      "maxzoom": 18
     },
     {
       "id": "detail-line",
@@ -39,7 +40,7 @@
         "visibility": "visible"
       },
       "minzoom": 14,
-      "maxzoom": 20
+      "maxzoom": 18
     },
     {
       "id": "rinshohanmeisho-label",
@@ -49,7 +50,8 @@
       "layout": {
         "text-field": "{林小班名称}",
         "text-size": 13,
-        "text-anchor": "center"
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"]
       },
       "paint": {
         "text-color": "rgb(0, 100, 0)",
@@ -57,7 +59,7 @@
         "text-halo-width": 2
       },
       "minzoom": 15,
-      "maxzoom": 20
+      "maxzoom": 18
     },
     {
       "id": "kokuyurinmeisho-fill",
@@ -98,7 +100,8 @@
       "layout": {
         "text-field": "{国有林名称}",
         "text-size": 13,
-        "text-anchor": "center"
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"]
       },
       "paint": {
         "text-color": "rgb(0, 100, 0)",
@@ -115,23 +118,7 @@
       "type": "fill",
       "paint": {
         "fill-color": "rgb(50, 205, 50)",
-        "fill-opacity": 0.3
-      },
-      "layout": {
-        "visibility": "visible"
-      },
-      "minzoom": 2,
-      "maxzoom": 10
-    },
-    {
-      "id": "keikakukumeisho-line",
-      "source": "kokuyurinya",
-      "source-layer": "keikakukumeisho",
-      "type": "line",
-      "paint": {
-        "line-color": "rgb(0, 100, 0)",
-        "line-opacity": 0.5,
-        "line-width": 1
+        "fill-opacity": 0.4
       },
       "layout": {
         "visibility": "visible"

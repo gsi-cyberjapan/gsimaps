@@ -8,15 +8,14 @@
 
 - 全国Q地図（紹介ページ） https://info.qchizu.xyz
 - 全国Q地図（地図ページ） https://maps.qchizu.xyz
-- 全国Q地図（github版） https://qchizu.github.io/qchizu
-
-※github版では、外部タイル（地理院タイル及びQ地図タイル以外のタイル）の閲覧はできません。
+- 全国Q地図（GitHub版） https://qchizu.github.io/qchizu
 
 ## 利用上の留意点
 
 - 下記のgsimaps (地理院地図)利用上の留意点及び[LICENSE](LICENSE) 及び[LICENSE_LIBRARIES.md](LICENSE_LIBRARIES.md)もあわせてご参照ください。
 - 全国Q地図独自に作成した部分については、Leaflet と同様2項BSDライセンスとします。
 - 本レポジトリにプルリクエストをいただく場合、当該変更を当レポジトリに取り込んだ時点で、2項BSDライセンスの適用とさせていただくことを予め御承知おきください。
+- 全国Q地図で表示可能な外部タイル（地理院タイル及びQ地図タイル以外のタイル）の中には、配信者に個別の許可を取って利用しているものがあります。本コードを利用して新たなサイトを作成する場合、別途許可が必要となることがあります。
 
 ## 謝辞
 

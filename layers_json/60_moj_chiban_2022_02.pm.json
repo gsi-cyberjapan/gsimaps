@@ -1,0 +1,95 @@
+{
+  "version": 8,
+  "name": "60_moj_chiban_2022_01",
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "amx-a": {
+      "type": "vector",
+      "url": "pmtiles://https://habs.rad.naro.go.jp/spatial_data/amx/a.pmtiles",
+      "attribution": ""
+    }
+  },
+  "layers": [
+    {
+      "id": "amx-a-fude-outline-halo",
+      "source": "amx-a",
+      "source-layer": "fude",
+      "type": "line",
+      "paint": {
+        "line-color": "rgba(255, 255, 255)",
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14, 0.2,
+          20, 0.4
+        ],
+        "line-width": 3
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 14,
+      "maxzoom": 20
+    },
+    {
+      "id": "amx-a-fude-outline-1",
+      "source": "amx-a",
+      "source-layer": "fude",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(128, 0, 128)",
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14, 0.2,
+          20, 0.8
+        ],
+        "line-width": 1.5
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 14,
+      "maxzoom": 20
+    },
+    {
+      "id": "amx-a-chiban",
+      "source": "amx-a",
+      "source-layer": "fude",
+      "type": "symbol",
+      "layout": {
+        "text-field": "{地番}",
+        "text-size": 13,
+        "text-anchor": "center"
+      },
+      "paint": {
+        "text-color": "rgb(128, 0, 128)",
+        "text-halo-color": "rgba(255, 255, 255, 0.3)",
+        "text-halo-width": 2
+      },
+      "minzoom": 16,
+      "maxzoom": 20
+    },
+    {
+      "id": "amx-a-daihyo",
+      "type": "circle",
+      "source": "amx-a",
+      "source-layer": "daihyo",
+      "paint": {
+        "circle-radius": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          2, 1,
+          14, 2
+        ],
+        "circle-color": "rgb(128, 0, 128)",
+        "circle-opacity": 0.4
+      },
+      "minzoom": 2,
+      "maxzoom": 14
+    }
+  ]
+}
