@@ -3,7 +3,7 @@
     {
       "type": "LayerGroup",
       "title": "1.新旧の地形図",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -7003,7 +7003,7 @@
             {
               "type": "LayerGroup",
               "title": "福岡県森林基本図",
-              "iconUrl": "../image/layers_txt/folder-q.png",
+              "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
               "toggleall": false,
               "id": "",
               "entries": [
@@ -8957,7 +8957,7 @@
     {
       "type": "LayerGroup",
       "title": "2.空中写真",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -9288,7 +9288,7 @@
         {
           "type": "LayerGroup",
           "title": "1964年新潟地震オルソ画像",
-          "iconUrl": "../image/layers_txt/folder-gaibu.png",
+          "iconUrl": "/image/layers_txt/folder-gaibu.png",
           "toggleall": false,
           "id": "",
           "entries": [
@@ -9325,7 +9325,7 @@
     {
       "type": "LayerGroup",
       "title": "3.公図・地番図・地名",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -9406,7 +9406,7 @@
     {
       "type": "LayerGroup",
       "title": "4.地形・CS立体図",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -9760,7 +9760,7 @@
     {
       "type": "LayerGroup",
       "title": "5.道路・鉄道・交通",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -10048,7 +10048,7 @@
     {
       "type": "LayerGroup",
       "title": "6.環境・自然",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -10178,7 +10178,7 @@
     {
       "type": "LayerGroup",
       "title": "7.農林水産",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -10219,7 +10219,7 @@
     {
       "type": "LayerGroup",
       "title": "8.災害・ハザードマップ",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
@@ -10690,7 +10690,7 @@
     {
       "type": "LayerGroup",
       "title": "9.その他",
-      "iconUrl": "../image/layers_txt/folder-q.png",
+      "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
