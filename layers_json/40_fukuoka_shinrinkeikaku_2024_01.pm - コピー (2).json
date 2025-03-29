@@ -1,0 +1,162 @@
+{
+  "version": 8,
+  "name": "fukuoka-shinrinkeikaku",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "sources": {
+    "shinrinkeikaku": {
+      "type": "vector",
+      "tiles": ["https://qchizu.github.io/vector-tile-generator-fukuoka-shinrinkeikakuzu/20250223_072745-tiles/{z}/{x}/{y}.pbf"],
+      "maxzoom": 15,
+      "attribution": ""
+    },
+    "aza": {
+      "type": "vector",
+      "tiles": ["https://qchizu.github.io/vector-tile-generator-fukuoka-shinrinkeikakuzu/20250223_072745-tiles/{z}/{x}/{y}.pbf"],
+      "maxzoom": 14,
+      "attribution": ""
+    }
+  },
+  "layers": [
+    {
+      "id": "aza-fill",
+      "source": "aza",
+      "source-layer": "aza",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgb(50, 205, 50)",
+        "fill-opacity": 0.3
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 14,
+      "maxzoom": 21
+    },
+    {
+      "id": "aza-line",
+      "source": "aza",
+      "source-layer": "aza",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(0, 100, 0)",
+        "line-opacity": 0.5,
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"],
+          14, 1,
+          15, 2,
+          16, 2,
+          21, 32
+        ]
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 14,
+      "maxzoom": 21
+    },
+    {
+      "id": "aza-label",
+      "source": "aza",
+      "source-layer": "aza",
+      "type": "symbol",
+      "layout": {
+        "text-field": ["coalesce", ["get", "aza"], ""],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          14, 15,
+          20, 90
+        ],
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"]
+      },
+      "paint": {
+        "text-color": "rgb(0, 100, 0)",
+        "text-halo-color": "rgba(255, 255, 255, 0.3)",
+        "text-halo-width": 2
+      },
+      "minzoom": 14,
+      "maxzoom": 21
+    },
+    {
+      "id": "ooaza-fill",
+      "source": "shinrinkeikaku",
+      "source-layer": "ooaza",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgb(50, 205, 50)",
+        "fill-opacity": 0.3
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 13,
+      "maxzoom": 14
+    },
+    {
+      "id": "ooaza-line",
+      "source": "shinrinkeikaku",
+      "source-layer": "ooaza",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(0, 100, 0)",
+        "line-opacity": 0.5,
+        "line-width": 1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 13,
+      "maxzoom": 14
+    },
+    {
+      "id": "ooaza-label",
+      "source": "shinrinkeikaku",
+      "source-layer": "ooaza",
+      "type": "symbol",
+      "layout": {
+        "text-field": ["coalesce", ["get", "ooaza_name"], ""],
+        "text-size": 15,
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"]
+      },
+      "paint": {
+        "text-color": "rgb(0, 100, 0)",
+        "text-halo-color": "rgba(255, 255, 255, 0.3)",
+        "text-halo-width": 2
+      },
+      "minzoom": 13,
+      "maxzoom": 14
+    },
+    {
+      "id": "muni-fill",
+      "source": "shinrinkeikaku",
+      "source-layer": "muni",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgb(50, 205, 50)",
+        "fill-opacity": 0.3
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 2,
+      "maxzoom": 13
+    },
+    {
+      "id": "muni-line",
+      "source": "shinrinkeikaku",
+      "source-layer": "muni",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(0, 100, 0)",
+        "line-opacity": 0.5,
+        "line-width": 1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 12,
+      "maxzoom": 13
+    }
+  ]
+}

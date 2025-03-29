@@ -8760,7 +8760,7 @@ GSI.LayersJSON.url2LayerType = function (url) {
     return "videooverlay";
   }
 
-  if (url.match(/\.pm\.json$/)) {
+  if (url.match(/\.json$/)) {
     return "pmtiles";
   }
 
@@ -54452,7 +54452,7 @@ function getFileeData(url, key) {
 // ★追加部分
 // keichan34の以下のコードをベースに追加
 // https://github.com/keichan34/gsimaps/tree/003-pmtiles-support-with-layerstxt
-// （https://github.com/maplibre/maplibre-gl-leaflet?tab=readme-ov-fileを参照して作成されてもの）
+// （https://github.com/maplibre/maplibre-gl-leaflet?tab=readme-ov-fileを参照して作成されたもの）
 /************************************************************************
  L.MaplibreGL
   - GSI.PMTileLayer
@@ -54971,7 +54971,7 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
         this._glMap.setPaintProperty(targetLayer.id, 'line-width', [
           'case',
           conditions,
-          3,  // ハイライト時の線幅
+          10,  // ハイライト時の線幅
           originalStyle.width
         ]);
         break;

@@ -1,12 +1,11 @@
 {
   "version": 8,
   "name": "ksj-kokuyurinya",
-  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   "sources": {
     "kokuyurinya": {
       "type": "vector",
-      "tiles": ["https://qchizu.github.io/vector-tile-generator-kokuyurinya/20250211_095612-tiles/{z}/{x}/{y}.pbf"],
-      "maxzoom": 14,
+      "url": "pmtiles://https://mapdata.qchizu.xyz/test/kokuyurinya.pmtiles",
       "attribution": ""
     }
   },
@@ -50,8 +49,7 @@
       "layout": {
         "text-field": "{林小班名称}",
         "text-size": 13,
-        "text-anchor": "center",
-        "text-font": ["Noto Sans CJK JP Regular"]
+        "text-anchor": "center"
       },
       "paint": {
         "text-color": "rgb(0, 100, 0)",
@@ -100,8 +98,7 @@
       "layout": {
         "text-field": "{国有林名称}",
         "text-size": 13,
-        "text-anchor": "center",
-        "text-font": ["Noto Sans CJK JP Regular"]
+        "text-anchor": "center"
       },
       "paint": {
         "text-color": "rgb(0, 100, 0)",
