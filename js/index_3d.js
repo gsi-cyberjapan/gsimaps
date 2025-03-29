@@ -7845,6 +7845,38 @@ GSI3D.DEMLoader.getURLList = function (x, y, z) {
 	key = coordsToKey(getCoords(x, y, z, 9));
 	if (!GSI3D.DEMLoader.DEMAREA2[key]) return [
 		{
+	        id: "DEM1A",
+	        url: "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+	        minZoom: 9,
+	        maxZoom: 17,
+	        complementList: [
+	          {
+	            id: "DEM5A",
+	            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+	            minZoom: 9,
+	            maxZoom: 15
+	          },
+	          {
+	            id: "DEM5B",
+	            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+	            minZoom: 9,
+	            maxZoom: 15
+	          },
+	          {
+	            id: "DEM5C",
+	            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+	            minZoom: 9,
+	            maxZoom: 15
+	          },
+	          {
+	            id: "DEM10B",
+	            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+	            minZoom: 9,
+	            maxZoom: 14
+	          }
+	        ]
+      	},
+		{
 			url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
 			minZoom: 9,
 			maxZoom: 15,

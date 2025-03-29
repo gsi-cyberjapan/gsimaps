@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./js.lib/jquery/jquery-ui.css">
 
     <script type="text/javascript" src="./js.lib/three/three.min.js"></script>
-    <script type="text/javascript" src="./js.lib/three/TrackballControls.js"></script> 
+    <script type="text/javascript" src="./js.lib/three/TrackballControls.js"></script>
 
-    <script type="text/javascript" src="./js.lib/poly2tri/poly2tri.min.js"></script> 
-    <script type="text/javascript" src="./js/index_3d.js"></script> 
+    <script type="text/javascript" src="./js.lib/poly2tri/poly2tri.min.js"></script>
+    <script type="text/javascript" src="./js/index_3d.js"></script>
     <style>
 	    html, body  {
             height          : 100%;
@@ -35,9 +35,9 @@
 		    height: 100%;
 		    overflow: hidden;
 	    }
-		
+
 		table{
-	
+
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 			width: 100%;
@@ -65,11 +65,11 @@
 			text-align:left;
 		}
 		td:last-child {
-			
+
 			width:70px;
 			text-align:center;
 		}
-		
+
 		td input {
 			cursor:pointer;
 			text-align: center;
@@ -91,7 +91,7 @@
 		td input:hover {
 			background-color: #fffacd;
 		}
-		
+
 		#gsimap_link {
 			display: block;
 			position:absolute;
@@ -118,7 +118,7 @@
 		#gsimap_link:hover {
 			background-color: #fffacd;
 		}
-		
+
 		#help-panel {
 			display: block;
 			position:absolute;
@@ -178,8 +178,8 @@
 			-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 			-webkit-box-shadow: 0px 0px 1x 1px rgba(0, 0, 0, 0.1);
 		}
-		
-		
+
+
 		#display_scaleinfo
 		{
 			position: absolute;
@@ -203,8 +203,8 @@
 			-webkit-box-shadow: 0px 0px 1x 1px rgba(0, 0, 0, 0.1);
 			*/
 		}
-		
-		
+
+
 		.displayinfo_frame
 		{
 			position: absolute;
@@ -226,29 +226,29 @@
 			-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 			-webkit-box-shadow: 0px 0px 1x 1px rgba(0, 0, 0, 0.1);
 		}
-		
-		
+
+
 		.displayscaleinfo_frame
 		{
 			    position: absolute;
 				bottom: 120px;
 				left: 10px;
 		}
-		
-		
+
+
 		input[type=checkbox] {
 		    display: inline-block;
 		    margin-right: 2px;
 		}
 		input[type=checkbox] + label {
 		    position: relative;
-		     
+
 		    display: inline-block;
 		    margin-right: 8px;
-		     
+
 		    font-size: 10pt;
 		    line-height: 26px;
-		     
+
 		    cursor: pointer;
 		}
 		@media (min-width: 1px) {
@@ -264,7 +264,7 @@
 		        position: absolute;
 		        top: 50%;
 		        left: 0;
-		         
+
 		        -moz-box-sizing: border-box;
 		        box-sizing: border-box;
 		        display: block;
@@ -272,42 +272,42 @@
 		        height: 18px;
 		        line-height: 18px;
 		        margin-top: -9px;
-		         
+
 		        background: #FFF;
 		    }
 		    input[type=checkbox] + label::before {
 		        border: 1px solid #ccc;
 		        border-radius: 50px;
 		        background:#eee;
-		        
+
 		    }
 		    input[type=checkbox]:checked + label::after {
 		        content: "";
 		        position: absolute;
 		        top: 50%;
-		         
+
 		        -moz-box-sizing: border-box;
 		        box-sizing: border-box;
 		        display: block;
 		    }
 		    input[type=checkbox]:checked + label::after {
 		        left: 3px;
-		         
+
 		        width: 15px;
 		        height: 8px;
 		        margin-top: -8px;
-		         
+
 		        border-left: 2px solid #333;
 		        border-bottom: 2px solid #333;
-		         
+
 		        -webkit-transform: rotate(-45deg);
 		        -ms-transform: rotate(-45deg);
 		        transform: rotate(-45deg);
 		    }
 		}
 
-		
-		
+
+
 		#blind
 		{
 			position:absolute;
@@ -323,9 +323,9 @@
 			-khtml-opacity: .70;
 			-moz-opacity: .70;
 			display:none;
-			
+
 		}
-		
+
 		.download
 		{
 			position:absolute;
@@ -336,39 +336,39 @@
 			-moz-border-radius: 3px;/*for Firefox*/
 			-webkit-border-radius: 3px;/*for Safari and chrome*/
 			border-radius: 3px;
-			
-			
-			
-			
+
+
+
+
 			behavior: url(border-radius.htc);/*for IE*/
-			
+
 			box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
 			-moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
 			-webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
-			
+
 			padding:8px;
-	
+
 			opacity: .90;
 			filter: alpha(opacity=90);
 			-ms-filter: "alpha(opacity=90)";
 			-khtml-opacity: .90;
 			-moz-opacity: .90;
-			
+
 			display:none;
-			
+
 		}
 		.download .content
 		{
 			padding:0px 4px 4px 4px;
 		}
-		
+
 		.download .close_btn
 		{
 			position:absolute;
 			right:8px;
 			top:8px;
 			display:block;
-			
+
 			font-size:16px;
 			line-height:16px;
 			height:16px;
@@ -377,13 +377,13 @@
 			text-decoration:none;
 			color:#333;
 		}
-		
+
 		.download .close_btn:hover
 		{
-			
+
 			background-color: #fffacd;
 		}
-		
+
 		.download .title
 		{
 			font-size:12pt;
@@ -394,13 +394,13 @@
 		}
 		.download .content table
 		{
-			
+
 			-moz-border-radius: 3px;/*for Firefox*/
 			-webkit-border-radius: 3px;/*for Safari and chrome*/
 			border-radius: 3px;
 			behavior: url(border-radius.htc);/*for IE*/
 		}
-		
+
 		.download .content table th
 		{
 			font-size:9pt;
@@ -408,14 +408,14 @@
 			padding:0 4px 0 4px;
 			max-width:150px;
 		}
-		
+
 		.download .content table td.filename
 		{
-			
+
 			white-space: nowrap;
 			padding:0 8px 0 8px;
 		}
-		
+
 		.download .content table .button {
 			display: block;
 			white-space: nowrap;
@@ -439,7 +439,7 @@
 		.download .content table .button:hover {
 			background-color: #fffacd;
 		}
-		
+
 		.download.disable .content table .button {
 			color : #aaa;
 			box-shadow:none;
@@ -449,7 +449,7 @@
 		.download.disable .content table .button:hover {
 			background-color: #f3f3f3;
 		}
-		
+
 		.download_progress
 		{
 			position:absolute;
@@ -460,19 +460,19 @@
 			-moz-border-radius: 3px;/*for Firefox*/
 			-webkit-border-radius: 3px;/*for Safari and chrome*/
 			border-radius: 3px;
-			
+
 			font-size:9pt;
-			
-			
+
+
 			behavior: url(border-radius.htc);/*for IE*/
-			
+
 			box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 			-moz-box-shadow: 0px 0px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
 			-webkit-box-shadow: 0px 0px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
-			
+
 			padding:4px;
-	
-			
+
+
 			opacity: .90;
 			filter: alpha(opacity=90);
 			-ms-filter: "alpha(opacity=90)";
@@ -517,7 +517,7 @@
 			-moz-border-radius: 6px;
 			-webkit-border-radius: 6px;
 			border-radius: 6px;
-			
+
 			box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 			-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 			-webkit-box-shadow: 0px 0px 1x 1px rgba(0, 0, 0, 0.1);
@@ -634,7 +634,7 @@
 			</tr>
 		</table>
 		</div>
-	</div>
+	</div><!-- test10 -->
 	<div class="download_progress">・・・・・しばらくお待ちください・・・・・</div>
 </body>
 </html>
