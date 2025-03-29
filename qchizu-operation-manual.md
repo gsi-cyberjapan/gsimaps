@@ -176,6 +176,11 @@ git merge upstream/gh-pages
 
 コンフリクトが発生した場合は解決します。
 
+また、qchizuで不要な以下のファイルを削除します。
+
+- .githubディレクトリ
+- layers_txt内のgsimaps由来のテキスト（anchor.txt、layers.txt、layers0.txt、layers1.txt以外）
+
 ```bash
 # コンフリクトしているファイルを確認
 git status
