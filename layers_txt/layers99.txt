@@ -9038,7 +9038,7 @@
           "legendUrl": "",
           "html": ""
         },
-                {
+        {
           "type": "LayerGroup",
           "title": "1964年新潟地震オルソ画像",
           "iconUrl": "/image/layers_txt/folder-gaibu.png",
@@ -9818,7 +9818,8 @@
               "errorTileUrl": "",
               "cocotile": false,
               "minZoom": 8,
-              "maxZoom": 18,
+              "maxZoom": 19,
+              "maxNativeZoom": 18,
               "legendUrl": "",
               "html": ""
             },
@@ -9864,6 +9865,51 @@
               "cocotile": false,
               "maxZoom": 18,
               "maxNativeZoom": 17,
+              "legendUrl": "",
+              "html": ""
+            },
+            {
+              "type": "Layer",
+              "id": "rinya_2024_rrimap_Ehime",
+              "title": "愛媛県赤色立体地図【愛媛県】",
+              "iconUrl": "",
+              "url": "https://rinya-ehime.geospatial.jp/tile/rinya/2024/rrimap_Ehime/{z}/{x}/{-y}.png",
+              "subdomains": "",
+              "attribution": "<a target=\"_blank\"href=\"https://www.geospatial.jp/ckan/dataset/rrimap_ehime\">愛媛県</a>",
+              "errorTileUrl": "",
+              "cocotile": false,
+              "maxZoom": 19,
+              "maxNativeZoom": 18,
+              "legendUrl": "",
+              "html": ""
+            },
+            {
+              "type": "Layer",
+              "id": "rinya_2024_csmap_Ehime",
+              "title": "愛媛県CS立体図【愛媛県】",
+              "iconUrl": "",
+              "url": "https://rinya-ehime.geospatial.jp/tile/rinya/2024/csmap_Ehime/{z}/{x}/{-y}.png",
+              "subdomains": "",
+              "attribution": "<a target=\"_blank\"href=\"https://www.geospatial.jp/ckan/dataset/csmap_ehime\">愛媛県</a>",
+              "errorTileUrl": "",
+              "cocotile": false,
+              "maxZoom": 19,
+              "maxNativeZoom": 18,
+              "legendUrl": "",
+              "html": ""
+            },
+            {
+              "type": "Layer",
+              "id": "rinya_2024_slope_Ehime",
+              "title": "愛媛県傾斜区分図【愛媛県】",
+              "iconUrl": "",
+              "url": "https://rinya-ehime.geospatial.jp/tile/rinya/2024/slope_Ehime/{z}/{x}/{-y}.png",
+              "subdomains": "",
+              "attribution": "<a target=\"_blank\"href=\"https://www.geospatial.jp/ckan/dataset/slopemap_ehime\">愛媛県</a>",
+              "errorTileUrl": "",
+              "cocotile": false,
+              "maxZoom": 19,
+              "maxNativeZoom": 18,
               "legendUrl": "",
               "html": ""
             },
@@ -10372,6 +10418,21 @@
           "toggleall": false,
           "id": "",
           "src": "./rinya_noto_nagaoka.txt"
+        },
+        {
+          "type": "Layer",
+          "id": "rinya_2024_ls_standtype_Ehime",
+          "title": "愛媛県レーザ林相図【愛媛県】",
+          "iconUrl": "",
+          "url": "https://rinya-ehime.geospatial.jp/tile/rinya/2024/ls_standtype_Ehime/{z}/{x}/{-y}.png",
+          "subdomains": "",
+          "attribution": "<a target=\"_blank\"href=\"https://www.geospatial.jp/ckan/dataset/ls_standtype_ehime\">愛媛県</a>",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "maxZoom": 19,
+          "maxNativeZoom": 18,
+          "legendUrl": "",
+          "html": ""
         }
       ]
     },
