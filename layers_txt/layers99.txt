@@ -9972,13 +9972,13 @@
         {
           "type": "LayerGroup",
           "title": "道路構造物マップシリーズ",
-          "iconUrl": "./mlit_road_bridge.txt",
+          "iconUrl": "",
           "toggleall": false,
           "id": "",
           "entries": [
             {
               "type": "LayerGroup",
-              "title": "2024年度全国橋梁マップ(試験公開)",
+              "title": "2024年度全国橋梁マップ",
               "iconUrl": "",
               "toggleall": false,
               "id": "",
@@ -10017,7 +10017,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "2024年度全国トンネルマップ(試験公開)",
+              "title": "2024年度全国トンネルマップ",
               "iconUrl": "",
               "toggleall": false,
               "id": "",
