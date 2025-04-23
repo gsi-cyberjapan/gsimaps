@@ -1,0 +1,125 @@
+{
+  "version": 8,
+  "name": "地番図2025",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "sources": {
+    "mojxml": {
+      "type": "vector",
+      "tiles": ["https://tiles.kmproj.com/mojxml/2025/{z}/{x}/{y}.mvt?v=3fcae65edaf18b7751c641e8c671bbe9-22"],
+      "attribution": "",
+      "maxzoom": 16,
+      "minzoom": 0,
+      "bounds": [121.992188, 23.966176, 146.008301, 46.051342]
+    }
+  },
+  "layers": [
+    {
+      "id": "mojxml-fude",
+      "source": "mojxml",
+      "source-layer": "mojxml",
+      "type": "fill",
+      "paint": {
+        "fill-color": [
+          "case",
+          ["any",
+            ["!=", ["index-of", "水", ["get", "地番"]], -1],
+            ["!=", ["index-of", "川", ["get", "地番"]], -1],
+            ["!=", ["index-of", "河", ["get", "地番"]], -1]
+          ],
+          "rgba(0, 0, 255, 0.5)",
+          ["any",
+            ["!=", ["index-of", "無地番", ["get", "地番"]], -1],
+            ["!=", ["index-of", "鉄道", ["get", "地番"]], -1],
+            ["!=", ["index-of", "国有地", ["get", "地番"]], -1]
+          ],
+          "rgb(0, 0, 0, 0.5)",
+          ["!=", ["index-of", "堤", ["get", "地番"]], -1],
+          "rgb(134, 74, 43, 0.5)",
+          ["!=", ["index-of", "長狭物不明", ["get", "地番"]], -1],
+          "rgba(255, 255, 0, 0.5)",
+          ["!=", ["index-of", "道", ["get", "地番"]], -1],
+          "rgba(255, 0, 0, 0.5)",
+          "rgb(128, 0, 128, 0.1)"
+        ],
+        "fill-opacity": 1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 16,
+      "maxzoom": 20
+    },
+    {
+      "id": "mojxml-fude-outline",
+      "source": "mojxml",
+      "source-layer": "mojxml",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(128, 0, 128)",
+        "line-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          16, 0.4,
+          20, 0.8
+        ],
+        "line-width": 1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 16,
+      "maxzoom": 20
+    },
+    {
+      "id": "mojxml-chiban",
+      "source": "mojxml",
+      "source-layer": "mojxml",
+      "type": "symbol",
+      "layout": {
+        "text-field": "{地番}",
+        "text-size": 13,
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"]
+      },
+      "paint": {
+        "text-color": "rgb(128, 0, 128)",
+        "text-halo-color": "rgba(255, 255, 255, 0.3)",
+        "text-halo-width": 2
+      },
+      "minzoom": 16,
+      "maxzoom": 20
+    },
+    {
+      "id": "mojxml_agg-fill",
+      "source": "mojxml",
+      "source-layer": "mojxml_agg",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgb(128, 0, 128)",
+        "fill-opacity": 0.1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 0,
+      "maxzoom": 16
+    },
+    {
+      "id": "mojxml_agg-outline",
+      "source": "mojxml",
+      "source-layer": "mojxml_agg",
+      "type": "line",
+      "paint": {
+        "line-color": "rgb(128, 0, 128)",
+        "line-opacity": 0.4,
+        "line-width": 1
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 0,
+      "maxzoom": 16
+    }
+  ]
+}
