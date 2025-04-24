@@ -9363,6 +9363,22 @@
       "entries": [
         {
           "type": "Layer",
+          "id": "60_moj_chiban_2025_01",
+          "title": "2025年2月 法務局地図（登記所備付地図）【KotobaMedia】",
+          "iconUrl": "",
+          "url": "./layers_json/60_moj_chiban_2025_01.json",
+          "subdomains": "",
+          "attribution": "<a target=\"_blank\"href=\"https://tiles.kmproj.com/\">KotobaMedia</a>(<a target=\"_blank\"href=\"https://www.moj.go.jp/MINJI/minji05_00494.html\">法務省</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 1,
+          "maxZoom": 20,
+          "maxNativeZoom": 16,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
           "id": "60_moj_chiban_2022_01",
           "title": "2022年2月 法務局地図（登記所備付地図）【amx-a】",
           "iconUrl": "",
