@@ -6,9 +6,6 @@
 		"url":"./layersMinna.txt"
 	},
 	{
-		"url":"./layers98.txt"
-	},
-	{
 		"url":"./layers1.txt"
 	},
 	{
