@@ -1,0 +1,59 @@
+{
+  "version": 8,
+  "name": "urban_plan_area",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "urban_plan_area": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT001/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 15,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "urban_plan_area_fill",
+      "type": "fill",
+      "source": "urban_plan_area",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "area_classification_ja"],
+          "市街化区域", "#FF9999",
+          "市街化調整区域", "#99CC99",
+          "都市計画区域", "#CCCCCC",
+          "#808080"
+        ],
+        "fill-opacity": 0.3
+      }
+    },
+    {
+      "id": "urban_plan_area_outline",
+      "type": "line",
+      "source": "urban_plan_area",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#696969",
+        "line-width": 1,
+        "line-opacity": 0.8
+      }
+    }
+  ]
+}

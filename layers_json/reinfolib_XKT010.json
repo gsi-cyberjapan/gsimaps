@@ -1,0 +1,113 @@
+{
+  "version": 8,
+  "name": "medical_institution",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "medical_institution": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT010/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 15,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "hospital_symbol",
+      "type": "symbol",
+      "source": "medical_institution",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible",
+        "text-field": "病",
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "text-size": 14,
+        "text-anchor": "center",
+        "text-allow-overlap": true
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "#FF0000",
+        "text-halo-width": 1.5
+      },
+      "filter": ["==", ["get", "P04_001"], 1]
+    },
+    {
+      "id": "clinic_symbol",
+      "type": "symbol",
+      "source": "medical_institution",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible",
+        "text-field": "診",
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "text-size": 14,
+        "text-anchor": "center",
+        "text-allow-overlap": true
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "#0000FF",
+        "text-halo-width": 1.5
+      },
+      "filter": ["==", ["get", "P04_001"], 2]
+    },
+    {
+      "id": "dental_clinic_symbol",
+      "type": "symbol",
+      "source": "medical_institution",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible",
+        "text-field": "歯",
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "text-size": 14,
+        "text-anchor": "center",
+        "text-allow-overlap": true
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "#008000",
+        "text-halo-width": 1.5
+      },
+      "filter": ["==", ["get", "P04_001"], 3]
+    },
+    {
+      "id": "medical_institution_label",
+      "type": "symbol",
+      "source": "medical_institution",
+      "source-layer": "hits",
+      "minzoom": 15,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          ["get", "P04_002_ja"],
+          ""
+        ],
+        "text-size": 14,
+        "text-anchor": "left",
+        "text-offset": [1, 0],
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}

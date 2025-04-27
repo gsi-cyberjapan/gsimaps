@@ -1,0 +1,93 @@
+{
+  "version": 8,
+  "name": "estimated_future_population",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "estimated_future_population": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT013/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 13,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "estimated_future_population_fill",
+      "type": "fill",
+      "source": "estimated_future_population",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "step",
+          ["get", "PT00_2070"],
+          "#ffffff",
+          0,
+          "#ffffff",  
+          5,
+          "#ffecec",  
+          10,
+          "#ffd9d9", 
+          20,
+          "#ffb8b8",  
+          50,
+          "#ff9494", 
+          100,
+          "#ff7070",  
+          200,
+          "#ff4c4c",  
+          500,
+          "#ff0000",  
+          1000,
+          "#d40000",  
+          2000,
+          "#a00078",  
+          5000,
+          "#800060"  
+        ],
+        "fill-opacity": 0.8,
+        "fill-outline-color": "rgba(0, 0, 0, 0.5)"
+      }
+    },
+    {
+      "id": "estimated_future_population_label",
+      "type": "symbol",
+      "source": "estimated_future_population",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          ["number-format",
+            ["round", 
+              ["get", "PT00_2070"]
+            ],
+            {}
+          ],
+          ""
+        ],
+        "text-size": 13,
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "version": 8,
+  "name": "fire_protection_area",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "fire_protection_area": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT014/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 15,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "fire_protection_area_fill",
+      "type": "fill",
+      "source": "fire_protection_area",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "kubun_id"],
+          24,
+          "#FF0066",
+          25,
+          "#FF3399",
+          "#FF6699"
+        ],
+        "fill-opacity": [
+          "match",
+          ["get", "kubun_id"],
+          24,
+          0.5,
+          25,
+          0.1,
+          0.05
+        ]
+      }
+    },
+    {
+      "id": "fire_protection_area_outline",
+      "type": "line",
+      "source": "fire_protection_area",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FF0066",
+        "line-width": 2,
+        "line-opacity": 1
+      }
+    }
+  ]
+}

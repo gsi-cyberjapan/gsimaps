@@ -1,0 +1,78 @@
+{
+  "version": 8,
+  "name": "junior_high_school_district",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "junior_high_school_district": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT005/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 15,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "junior_high_school_district_fill",
+      "type": "fill",
+      "source": "junior_high_school_district",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#00000000",
+        "fill-opacity": 0.3,
+        "fill-outline-color": "green"
+      }
+    },
+    {
+      "id": "junior_high_school_district_outline",
+      "type": "line",
+      "source": "junior_high_school_district",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "green",
+        "line-width": 2,
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "junior_high_school_district_label",
+      "type": "symbol",
+      "source": "junior_high_school_district",
+      "source-layer": "hits",
+      "minzoom": 13,
+      "maxzoom": 19,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          ["get", "A32_004_ja"],
+          ""
+        ],
+        "text-size": 14,
+        "text-anchor": "center",
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "green",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}

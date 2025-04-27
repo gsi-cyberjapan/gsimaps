@@ -1,0 +1,79 @@
+{
+  "version": 8,
+  "name": "location_optimization_plan_area",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "location_optimization_plan_area": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT003/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 13,
+      "maxzoom": 15,
+      "attribution": "国土交通省 不動産情報ライブラリ"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "location_optimization_plan_area_fill",
+      "type": "fill",
+      "source": "location_optimization_plan_area",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "kubun_id"],
+          0,
+          "#D7FFA5",
+          "#009600"
+        ],
+        "fill-opacity": 0.3,
+        "fill-outline-color": [
+          "match",
+          ["get", "kubun_id"],
+          32,
+          "#FF0000",
+          31,
+          "#0000FF",
+          0,
+          "#A0C35F",
+          "#00000000"
+        ]
+      }
+    },
+    {
+      "id": "location_optimization_plan_area_outline",
+      "type": "line",
+      "source": "location_optimization_plan_area",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          ["get", "kubun_id"],
+          32,
+          "#FF0000",
+          31,
+          "#0000FF",
+          0,
+          "#A0C35F",
+          "#00000000"
+        ],
+        "line-width": 2,
+        "line-opacity": 1
+      }
+    }
+  ]
+}
