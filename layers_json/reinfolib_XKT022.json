@@ -51,7 +51,11 @@
       "type": "symbol",
       "source": "XKT022",
       "source-layer": "hits",
+<<<<<<< HEAD
       "minzoom": 15,
+=======
+      "minzoom": 11,
+>>>>>>> faa3e55 ([fix]アトリビューション等)
       "maxzoom": 20,
       "layout": {
         "text-field": [
