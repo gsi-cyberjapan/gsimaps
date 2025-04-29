@@ -5,7 +5,7 @@
   "sources": {
     "kokuyurinya": {
       "type": "vector",
-      "tiles": ["https://qchizu.github.io/vector-tile-generator-kokuyurinya/20250211_095612-tiles/{z}/{x}/{y}.pbf"],
+      "url": "pmtiles://https://mapdata.qchizu.xyz/04_thematic/54_ksj/kokuyurinya/2018_01/kokuyurinya.pmtiles",
       "maxzoom": 14,
       "attribution": ""
     }
