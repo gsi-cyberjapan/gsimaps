@@ -12,7 +12,7 @@
       ],
       "minzoom": 9,
       "maxzoom": 17,
-      "attribution": "国土交通省 不動産情報ライブラリ"
+      "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
   },
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
