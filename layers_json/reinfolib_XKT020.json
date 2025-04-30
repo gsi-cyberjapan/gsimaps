@@ -10,6 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT020/{z}/{x}/{y}.pbf"
       ],
+      "minzoom": 13,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -21,8 +22,8 @@
       "type": "fill",
       "source": "developed_land",
       "source-layer": "hits",
-      "minzoom": 11,
-      "maxzoom": 15,
+      "minzoom": 13,
+      "maxzoom": 20,
       "layout": {
         "visibility": "visible"
       },
@@ -31,12 +32,12 @@
           "match",
           ["get", "embankment_classification"],
           "谷埋め型",
-          "#9BFF9B",
+          "#9CFBA1",
           "腹付け型",
-          "#9B9BFF",
-          "#FF9B9B"
+          "#9D9EFF",
+          "#FC9FA0"
         ],
-        "fill-opacity": 0.3,
+        "fill-opacity": 0.6,
         "fill-outline-color": "#000000"
       }
     },
@@ -45,40 +46,23 @@
       "type": "line",
       "source": "developed_land",
       "source-layer": "hits",
-      "minzoom": 11,
-      "maxzoom": 15,
+      "minzoom": 13,
+      "maxzoom": 20,
       "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#000000",
-        "line-width": 1,
-        "line-opacity": 0.8
-      }
-    },
-    {
-      "id": "developed_land_label",
-      "type": "symbol",
-      "source": "developed_land",
-      "source-layer": "hits",
-      "minzoom": 11,
-      "maxzoom": 15,
-      "layout": {
-        "text-field": [
-          "coalesce",
+        "line-color": [
+          "match",
           ["get", "embankment_classification"],
-          ""
+          "谷埋め型",
+          "#45C94C",
+          "腹付け型",
+          "#4546FF",
+          "#FF4546"
         ],
-        "text-size": 14,
-        "text-anchor": "center",
-        "text-font": ["Noto Sans CJK JP Regular"],
-        "visibility": "visible",
-        "text-allow-overlap": ["step", ["zoom"], false, 14, true]
-      },
-      "paint": {
-        "text-color": "#000000",
-        "text-halo-color": "#FFFFFF",
-        "text-halo-width": 1.5
+        "line-width": 1.5,
+        "line-opacity": 1
       }
     }
   ]
