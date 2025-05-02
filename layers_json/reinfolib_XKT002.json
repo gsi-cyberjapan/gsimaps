@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT002/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -59,8 +59,7 @@
           "#33CCFF",
           "#FFFFFF"
         ],
-        "fill-opacity": 0.3,
-        "fill-outline-color": "#000000"
+        "fill-opacity": 0.3
       }
     },
     {
@@ -74,9 +73,9 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#000000",
+        "line-color": "#666666",
         "line-width": 1,
-        "line-opacity": 0.8
+        "line-opacity": 1
       }
     },
     {
@@ -99,7 +98,7 @@
         "text-allow-overlap": false
       },
       "paint": {
-        "text-color": "#000000",
+        "text-color": "#A40035",
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }

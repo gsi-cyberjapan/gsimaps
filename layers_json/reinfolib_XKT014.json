@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT014/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -22,7 +22,7 @@
       "type": "fill",
       "source": "fire_protection_area",
       "source-layer": "hits",
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"
@@ -30,21 +30,21 @@
       "paint": {
         "fill-color": [
           "match",
-          ["get", "kubun_id"],
-          24,
+          ["get", "fire_prevention_ja"],
+          "防火地域",
           "#FF0066",
-          25,
-          "#FF3399",
-          "#FF6699"
+          "準防火地域",
+          "#FFB3D1",
+          "#000000"
         ],
         "fill-opacity": [
           "match",
-          ["get", "kubun_id"],
-          24,
-          0.5,
-          25,
-          0.1,
-          0.05
+          ["get", "fire_prevention_ja"],
+          "防火地域",
+          0.4,
+          "準防火地域",
+          0.3,
+          1
         ]
       }
     },
@@ -53,14 +53,14 @@
       "type": "line",
       "source": "fire_protection_area",
       "source-layer": "hits",
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"
       },
       "paint": {
         "line-color": "#FF0066",
-        "line-width": 2,
+        "line-width": 1.5,
         "line-opacity": 1
       }
     }

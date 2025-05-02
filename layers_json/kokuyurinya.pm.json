@@ -34,7 +34,7 @@
       "paint": {
         "line-color": "rgb(0, 100, 0)",
         "line-opacity": 0.5,
-        "line-width": 1
+        "line-width": 1.5
       },
       "layout": {
         "visibility": "visible"

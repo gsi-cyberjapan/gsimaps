@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT020/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -22,7 +22,7 @@
       "type": "fill",
       "source": "developed_land",
       "source-layer": "hits",
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"
@@ -32,12 +32,12 @@
           "match",
           ["get", "embankment_classification"],
           "谷埋め型",
-          "#9CFBA1",
+          "#45C94C",
           "腹付け型",
-          "#9D9EFF",
-          "#FC9FA0"
+          "#4546FF",
+          "#FF4546"
         ],
-        "fill-opacity": 0.6,
+        "fill-opacity": 0.3,
         "fill-outline-color": "#000000"
       }
     },
@@ -46,7 +46,7 @@
       "type": "line",
       "source": "developed_land",
       "source-layer": "hits",
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"

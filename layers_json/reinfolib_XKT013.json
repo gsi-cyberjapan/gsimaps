@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT013/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 13,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -22,7 +22,7 @@
       "type": "fill",
       "source": "estimated_future_population",
       "source-layer": "hits",
-      "minzoom": 13,
+      "minzoom": 11,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"
@@ -55,8 +55,23 @@
           5000,
           "#800060"  
         ],
-        "fill-opacity": 0.8,
-        "fill-outline-color": "rgba(0, 0, 0, 0.5)"
+        "fill-opacity": 0.8
+      }
+    },
+    {
+      "id": "estimated_future_population_outline",
+      "type": "line",
+      "source": "estimated_future_population",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#666666",
+        "line-width": 0.5,
+        "line-opacity": 1
       }
     },
     {
