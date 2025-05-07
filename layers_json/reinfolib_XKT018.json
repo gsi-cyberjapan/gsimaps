@@ -1,0 +1,97 @@
+{
+  "version": 8,
+  "name": "city_town_hall",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "city_town_hall": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT018/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 11,
+      "maxzoom": 15,
+      "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "city_town_hall_bg",
+      "type": "circle",
+      "source": "city_town_hall",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-radius": 10,
+        "circle-color": "#C00000"
+      }
+    },
+    {
+      "id": "city_town_hall_point",
+      "type": "symbol",
+      "source": "city_town_hall",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible",
+        "text-field": [
+          "match",
+          ["get", "P05_002"],
+          "1", "役",
+          "2", "支",
+          "3", "行",
+          "4", "公",
+          "5", "集",
+          "他"
+        ],
+        "text-size": 13,
+        "text-font": ["Noto Sans CJK JP Bold"],
+        "text-anchor": "center",
+        "text-justify": "center",
+        "icon-image": "circle",
+        "icon-size": 1,
+        "icon-text-fit": "both",
+        "icon-allow-overlap": true,
+        "text-allow-overlap": true
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "icon-color": "#C00000",
+        "icon-opacity": 0.9
+      }
+    },
+    {
+      "id": "city_town_hall_label",
+      "type": "symbol",
+      "source": "city_town_hall",
+      "source-layer": "hits",
+      "minzoom": 14,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          ["get", "P05_003_ja"],
+          ""
+        ],
+        "text-size": 14,
+        "text-anchor": "left",
+        "text-offset": [1, 0],
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "#C00000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}
