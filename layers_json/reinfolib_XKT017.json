@@ -1,0 +1,62 @@
+{
+  "version": 8,
+  "name": "library",
+  "metadata": {
+    "maputnik:renderer": "mlgljs"
+  },
+  "sources": {
+    "library": {
+      "type": "vector",
+      "tiles": [
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT017/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 11,
+      "maxzoom": 15,
+      "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "library_point",
+      "type": "circle",
+      "source": "library",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "circle-color": "#0000FF",
+        "circle-radius": 5
+      }
+    },
+    {
+      "id": "library_label",
+      "type": "symbol",
+      "source": "library",
+      "source-layer": "hits",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          ["get", "P27_005_ja"],
+          ""
+        ],
+        "text-size": 14,
+        "text-anchor": "left",
+        "text-offset": [0.5, 0],
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "#0000FF",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}
