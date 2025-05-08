@@ -9,6 +9,36 @@
       "entries": [
         {
           "type": "Layer",
+          "id": "reinfolib_XPT001",
+          "title": "不動産価格（取引価格・成約価格）情報",
+          "iconUrl": "",
+          "url": "./layers_json/reinfolib_XPT001.json",
+          "subdomains": "",
+          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "manZoom": 20,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "reinfolib_XPT002_2024",
+          "title": "地価公示・地価調査(2024年)",
+          "iconUrl": "",
+          "url": "./layers_json/reinfolib_XPT002_2024.json",
+          "subdomains": "",
+          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "manZoom": 20,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
           "id": "reinfolib_XKT001",
           "title": "都市計画決定GISデータ (都市計画区域/区域区分)",
           "iconUrl": "",
@@ -265,7 +295,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT021",
-          "title": "地すべり防止地区",
+          "title": "国土数値情報(地すべり防止地区)",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT021.json",
           "subdomains": "",

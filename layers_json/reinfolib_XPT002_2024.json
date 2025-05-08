@@ -1,14 +1,14 @@
 {
   "version": 8,
-  "name": "welfare_facility",
+  "name": "XPT002",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "welfare_facility": {
+    "XPT002": {
       "type": "vector",
       "tiles": [
-        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT011/{z}/{x}/{y}.pbf"
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XPT002/{z}/{x}/{y}.pbf?year=2024"
       ],
       "minzoom": 13,
       "maxzoom": 15,
@@ -18,9 +18,9 @@
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "welfare_facility_point",
+      "id": "point",
       "type": "circle",
-      "source": "welfare_facility",
+      "source": "XPT002",
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,
@@ -28,33 +28,33 @@
         "visibility": "visible"
       },
       "paint": {
-        "circle-color": "#4F0000",
-        "circle-radius": 4
+        "circle-color": "#C00000",
+        "circle-radius": 5
       }
     },
     {
-      "id": "welfare_facility_label",
+      "id": "label",
       "type": "symbol",
-      "source": "welfare_facility",
+      "source": "XPT002",
       "source-layer": "hits",
-      "minzoom": 15,
+      "minzoom": 13,
       "maxzoom": 20,
       "layout": {
         "text-field": [
           "coalesce",
-          ["get", "P14_008_ja"],
+          ["get", "u_current_years_price_ja"],
           ""
         ],
-        "text-size": 16,
+        "text-size": 14,
         "text-anchor": "left",
         "text-offset": [0.5, 0],
         "text-font": ["Noto Sans CJK JP Regular"],
         "visibility": "visible",
-        "text-allow-overlap": ["step", ["zoom"], false, 16, true],
+        "text-allow-overlap": ["step", ["zoom"], false, 17, true],
         "text-max-width": 100
       },
       "paint": {
-        "text-color": "#4F0000",
+        "text-color": "#C00000",
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }

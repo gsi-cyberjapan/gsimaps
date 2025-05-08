@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT017/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -22,7 +22,7 @@
       "type": "circle",
       "source": "library",
       "source-layer": "hits",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 20,
       "layout": {
         "visibility": "visible"
@@ -37,7 +37,7 @@
       "type": "symbol",
       "source": "library",
       "source-layer": "hits",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 20,
       "layout": {
         "text-field": [
@@ -50,7 +50,8 @@
         "text-offset": [0.5, 0],
         "text-font": ["Noto Sans CJK JP Regular"],
         "visibility": "visible",
-        "text-allow-overlap": false
+        "text-allow-overlap": ["step", ["zoom"], false, 16, true],
+        "text-max-width": 100
       },
       "paint": {
         "text-color": "#0000FF",

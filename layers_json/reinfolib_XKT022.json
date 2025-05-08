@@ -28,8 +28,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#b7494c",
-        "fill-opacity": 0.3
+        "fill-color": "#8c2c2e",
+        "fill-opacity": 0.2
       }
     },
     {
@@ -43,7 +43,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#b7494c",
+        "line-color": "#8c2c2e",
         "line-width": 1.5,
         "line-opacity": 1
       }
@@ -53,12 +53,12 @@
       "type": "symbol",
       "source": "collapse_risk_area",
       "source-layer": "hits",
-      "minzoom": 11,
+      "minzoom": 15,
       "maxzoom": 20,
       "layout": {
         "text-field": [
           "coalesce",
-          ["get", "kubun"],
+          ["get", "region_name"],
           ""
         ],
         "text-size": 14,
@@ -68,7 +68,7 @@
         "text-allow-overlap": false
       },
       "paint": {
-        "text-color": "#000000",
+        "text-color": "#8c2c2e",
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }

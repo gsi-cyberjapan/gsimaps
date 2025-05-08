@@ -37,7 +37,7 @@
           17,
           7
         ],
-        "line-color": "#005A3C",
+        "line-color": "#8B0000",
         "line-opacity": 1
       }
     },
@@ -63,7 +63,7 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "#005A3C",
+        "text-color": "#8B0000",
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }

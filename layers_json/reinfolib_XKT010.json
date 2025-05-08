@@ -10,7 +10,7 @@
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT010/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 15,
       "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>"
     }
@@ -18,70 +18,50 @@
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "hospital_symbol",
-      "type": "symbol",
+      "id": "medical_point",
+      "type": "circle",
       "source": "medical_institution",
       "source-layer": "hits",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 20,
-      "layout": {
-        "visibility": "visible",
-        "text-field": "病",
-        "text-font": ["Noto Sans CJK JP Regular"],
-        "text-size": 14,
-        "text-anchor": "center",
-        "text-allow-overlap": true
-      },
+      "layout": {"visibility": "visible"},
       "paint": {
-        "text-color": "#FFFFFF",
-        "text-halo-color": "#FF0000",
-        "text-halo-width": 1.5
-      },
-      "filter": ["==", ["get", "P04_001"], 1]
+        "circle-radius": {"stops": [[13, 5], [14, 10], [15, 12]]},
+        "circle-color": [
+          "match",
+          ["get", "P04_001_name_ja"],
+            "病院", "#CC0000",
+            "診療所", "#0000CC",
+            "歯科診療所", "#006400",
+          "#000000"
+        ],
+        "circle-opacity": 0.9
+      }
     },
     {
-      "id": "clinic_symbol",
+      "id": "medical_symbol",
       "type": "symbol",
       "source": "medical_institution",
       "source-layer": "hits",
-      "minzoom": 11,
+      "minzoom": 14,
       "maxzoom": 20,
       "layout": {
+        "text-field": [
+          "match",
+          ["get", "P04_001_name_ja"],
+          "病院", "病",
+          "診療所", "診",
+          "歯科診療所", "歯",
+          ""
+        ],
+        "text-font": ["Noto Sans CJK JP Bold"],
+        "text-size": {"stops": [[14, 12], [15, 14]]},
         "visibility": "visible",
-        "text-field": "診",
-        "text-font": ["Noto Sans CJK JP Regular"],
-        "text-size": 14,
-        "text-anchor": "center",
         "text-allow-overlap": true
       },
       "paint": {
-        "text-color": "#FFFFFF",
-        "text-halo-color": "#0000FF",
-        "text-halo-width": 1.5
-      },
-      "filter": ["==", ["get", "P04_001"], 2]
-    },
-    {
-      "id": "dental_clinic_symbol",
-      "type": "symbol",
-      "source": "medical_institution",
-      "source-layer": "hits",
-      "minzoom": 11,
-      "maxzoom": 20,
-      "layout": {
-        "visibility": "visible",
-        "text-field": "歯",
-        "text-font": ["Noto Sans CJK JP Regular"],
-        "text-size": 14,
-        "text-anchor": "center",
-        "text-allow-overlap": true
-      },
-      "paint": {
-        "text-color": "#FFFFFF",
-        "text-halo-color": "#008000",
-        "text-halo-width": 1.5
-      },
-      "filter": ["==", ["get", "P04_001"], 3]
+        "text-color": "#FFFFFF"
+      }
     },
     {
       "id": "medical_institution_label",
@@ -101,10 +81,18 @@
         "text-offset": [1, 0],
         "text-font": ["Noto Sans CJK JP Regular"],
         "visibility": "visible",
-        "text-allow-overlap": false
+        "text-allow-overlap": ["step", ["zoom"], false, 16, true],
+        "text-max-width": 100
       },
       "paint": {
-        "text-color": "#000000",
+        "text-color": [
+          "match",
+          ["get", "P04_001_name_ja"],
+          "病院", "#CC0000",
+          "診療所", "#0000CC",
+          "歯科診療所", "#006400",
+          "#000000"
+        ],
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }
