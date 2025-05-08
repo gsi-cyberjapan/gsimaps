@@ -8164,7 +8164,21 @@
           "cocotile": false,
           "minZoom": 1,
           "maxZoom": 20,
-          "maxNativeZoom": 16,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "60_moj_chiban_2025_02",
+          "title": "└塗りつぶしなし",
+          "iconUrl": "",
+          "url": "./layers_json/60_moj_chiban_2025_02.json",
+          "subdomains": "",
+          "attribution": "<a target=\"_blank\"href=\"https://amx-project.github.io/a-spec/\">amx-a</a>(<a target=\"_blank\"href=\"https://www.moj.go.jp/MINJI/minji05_00494.html\">法務省</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 5,
+          "maxZoom": 20,
           "legendUrl": "",
           "html": ""
         },
@@ -8180,7 +8194,6 @@
           "cocotile": false,
           "minZoom": 5,
           "maxZoom": 20,
-          "maxNativeZoom": 16,
           "legendUrl": "",
           "html": ""
         },
@@ -8196,7 +8209,6 @@
           "cocotile": false,
           "minZoom": 5,
           "maxZoom": 20,
-          "maxNativeZoom": 16,
           "legendUrl": "",
           "html": ""
         },

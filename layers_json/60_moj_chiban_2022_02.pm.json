@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "60_moj_chiban_2022_01",
+  "name": "60_moj_chiban_2022_02",
   "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   "sources": {
     "amx-a": {
@@ -10,6 +10,21 @@
     }
   },
   "layers": [
+    {
+      "id": "amx-a-fude",
+      "source": "amx-a",
+      "source-layer": "fude",
+      "type": "fill",
+      "paint": {
+        "fill-color": "rgb(0, 0, 0)",
+        "fill-opacity": 0
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "minzoom": 14,
+      "maxzoom": 20
+    },
     {
       "id": "amx-a-fude-outline-halo",
       "source": "amx-a",
