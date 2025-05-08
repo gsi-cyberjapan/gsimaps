@@ -5,11 +5,7 @@
   "sources": {
     "mojxml": {
       "type": "vector",
-      "tiles": ["https://tiles.kmproj.com/mojxml/2025/{z}/{x}/{y}.mvt"],
-      "attribution": "<a target=\"_blank\"href=\"https://tiles.kmproj.com/\">KotobaMedia</a>(<a target=\"_blank\"href=\"https://www.moj.go.jp/MINJI/minji05_00494.html\">法務省</a>)",
-      "maxzoom": 16,
-      "minzoom": 0,
-      "bounds": [121.992188, 23.966176, 146.008301, 46.051342]
+      "tiles": ["https://tiles.kmproj.com/mojxml/2025.json"]
     }
   },
   "layers": [
