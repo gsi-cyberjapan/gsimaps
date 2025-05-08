@@ -5,7 +5,7 @@
   "sources": {
     "mojxml": {
       "type": "vector",
-      "tiles": ["https://tiles.kmproj.com/mojxml/2025.json"]
+      "url": "https://tiles.kmproj.com/mojxml/2025.json"
     }
   },
   "layers": [
