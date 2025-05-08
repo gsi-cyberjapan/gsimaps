@@ -24,12 +24,13 @@
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,
+      "filter": ["==", ["get", "district_name_ja"], "有弥の里"],
       "layout": {
-        "visibility": "visible"
+      "visibility": "visible"
       },
       "paint": {
-        "circle-color": "#C00000",
-        "circle-radius": 5
+      "circle-color": "#C00000",
+      "circle-radius": 5
       }
     },
     {
