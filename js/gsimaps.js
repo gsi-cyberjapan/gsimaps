@@ -54555,6 +54555,68 @@ function getFileeData(url, key) {
     PMTiles
  ************************************************************************/
 
+/**
+ * 辞書ファイル（dictionary）について
+ * -----------------------------
+ * 
+ * 【目的】
+ * PMTileLayerで表示される属性名・属性値を日本語化し、説明を追加するための辞書機能
+ *
+ * 【命名規則】
+ * スタイルファイル名: style.json
+ * 辞書ファイル名: style.dictionary.json
+ * 
+ * 【保存場所】
+ * スタイルファイル: /path/to/style.json
+ * 辞書ファイル: /layers_json/style.dictionary.json
+ * ※辞書ファイルはルートディレクトリの layers_json フォルダに配置する
+ * 
+ * 【辞書ファイルの構造】
+ * {
+ *   "属性名1": {
+ *     "displayName": "表示名",
+ *     "description": "説明文（省略可）",
+ *     "values": {  // 属性値の変換（省略可）
+ *       "値1": {
+ *         "displayName": "表示値",
+ *         "description": "値の説明（省略可）"
+ *       },
+ *       "値2": {
+ *         "displayName": "表示値2",
+ *         "description": "値の説明2（省略可）"
+ *       }
+ *     }
+ *   },
+ *   "属性名2": {
+ *     "displayName": "表示名2"
+ *     // descriptionやvaluesは省略可能
+ *   }
+ * }
+ *
+ * 【使用例】
+ * 例えば、"school_type": "1" という属性があった場合、
+ * 辞書ファイルに以下のように定義することで表示を変更できる：
+ * 
+ * {
+ *   "school_type": {
+ *     "displayName": "学校区分",
+ *     "description": "学校の種類を示します",
+ *     "values": {
+ *       "1": {
+ *         "displayName": "小学校",
+ *         "description": "学校教育法に定める小学校です"
+ *       },
+ *       "2": {
+ *         "displayName": "中学校",
+ *         "description": "学校教育法に定める中学校です"
+ *       }
+ *     }
+ *   }
+ * }
+ * 
+ * これにより "school_type": "1" は "学校区分: 小学校" と表示される
+ */
+
 //----- 初期化と基本設定 -----//
 // PMTileLayerクラスを定義し、MapLibreGLの機能を拡張する
 GSI.PMTileLayer = L.MaplibreGL.extend({
@@ -54591,17 +54653,90 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     this._maxZoom = options.maxZoom;
     this._minZoom = options.minZoom;
     this._id = options.id;
-    console.log("id", this._id);
 
     // zIndexを自動的に割り当て
     this._zIndex = GSI.PMTileLayer.getNextZIndex();
-    console.log("Layer created with zIndex:", this._zIndex);
 
     this.highlightedFeatures = new Set();
     this.highlightedProperty = null;
 
     // スロットル処理を継承
     this._throttledUpdate = L.Util.throttle(this._update, this.options.updateInterval, this);
+
+    // 辞書ファイルのロード
+    this._loadDictionary(url);
+  },
+
+  // 辞書ファイルをロードする関数
+  _loadDictionary: function(styleUrl) {
+    // スタイルファイルのベース名を取得（パスを除去）
+    const styleFileName = styleUrl.split('/').pop();
+    
+    // layers_jsonディレクトリにある対応する辞書ファイルのURLを生成
+    const dictionaryUrl = `/layers_json/${styleFileName.replace('.json', '.dictionary.json')}`;
+    
+    console.log("Loading dictionary from:", dictionaryUrl);
+    
+    // フェッチして辞書をロード
+    fetch(dictionaryUrl)
+      .then(response => {
+        if (!response.ok) {
+          console.log('Dictionary file not found:', dictionaryUrl);
+          this._dictionary = null;
+          return null;
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data) {
+          console.log('Dictionary loaded:', data);
+          this._dictionary = data;
+        }
+      })
+      .catch(error => {
+        console.error('Error loading dictionary:', error);
+        this._dictionary = null;
+      });
+  },
+
+  // 属性名を変換するヘルパー関数
+  _translatePropertyName: function(key) {
+    if (this._dictionary && this._dictionary[key] && this._dictionary[key].displayName) {
+      return this._dictionary[key].displayName;
+    }
+    return key;
+  },
+
+  // 属性の説明を取得するヘルパー関数
+  _getPropertyDescription: function(key) {
+    if (this._dictionary && this._dictionary[key] && this._dictionary[key].description) {
+      return this._dictionary[key].description;
+    }
+    return null;
+  },
+
+  // 属性値を変換するヘルパー関数
+  _translatePropertyValue: function(key, value) {
+    if (this._dictionary && 
+        this._dictionary[key] && 
+        this._dictionary[key].values && 
+        this._dictionary[key].values[value] && 
+        this._dictionary[key].values[value].displayName) {
+      return this._dictionary[key].values[value].displayName;
+    }
+    return value;
+  },
+
+  // 属性値の説明を取得するヘルパー関数
+  _getPropertyValueDescription: function(key, value) {
+    if (this._dictionary && 
+        this._dictionary[key] && 
+        this._dictionary[key].values && 
+        this._dictionary[key].values[value] && 
+        this._dictionary[key].values[value].description) {
+      return this._dictionary[key].values[value].description;
+    }
+    return null;
   },
 
   // 地図にレイヤーを追加する処理
@@ -54632,7 +54767,6 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     
     pane.style.zIndex = this._zIndex;
     this.options.zIndex = this._zIndex;
-    console.log("zIndex", this.options.zIndex);
     
     // コンテナが存在する場合は新しいpaneに追加
     if (this._container) {
@@ -54645,12 +54779,6 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     
     this.options.pane = paneName;
   },
-
-/*   setZIndex: function (zIndex) {
-    this.options.zIndex = zIndex;
-    this._updateZIndex();
-    return this;
-  }, */
 
   _updateZIndex: function () {
     if (this._map && this.options.pane) {
@@ -54770,31 +54898,6 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     }
   },
 
-/*   _setAutoZIndex: function (pane, compare) {
-
-    var layers = pane.children,
-      edgeZIndex = -compare(Infinity, -Infinity), // -Infinity for max, Infinity for min
-      zIndex, i, len;
-
-    for (i = 0, len = layers.length; i < len; i++) {
-
-      if (layers[i] !== this._container) {
-        zIndex = parseInt(layers[i].style.zIndex, 10);
-
-        if (!isNaN(zIndex)) {
-          edgeZIndex = compare(edgeZIndex, zIndex);
-        }
-      }
-    }
-
-    this.options.zIndex = this._container.style.zIndex =
-      (isFinite(edgeZIndex) ? edgeZIndex : 0) + compare(1, -1);
-    
-    console.log('edgeZIndex:', edgeZIndex);
-    console.log('this.options.zIndex:', this.options.zIndex);
-    console.log('this._container.style.zIndex:', this._container.style.zIndex);
-  }, */
-
   // 地図のグレースケール表示を切り替える関数
   setGrayscale: function () {
     // 地図のコンテナを取得
@@ -54898,15 +55001,15 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     }
   },
   
-  // ポップアップの内容を作成する処理
+  // ポップアップの内容を作成する処理の修正
   _createPopupContent: function (properties, isPoint, pointLocation) {
     if (!properties) return 'No properties found';
-  
+
     let html = '<div class="maplibregl-popup-content-wrapper">';
     html += '<div class="popup-header">';
     html += '<span class="popup-title">クリックした地物</span>';
     
-    // ヘッダーの強調ボタンは初期状態でアクティブになる
+    // ヘッダーの強調ボタン
     html += `
       <button 
         class="highlight-btn header-highlight-btn"
@@ -54934,25 +55037,42 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     
     html += '<table class="maplibregl-popup-content-table">';
     
-    // プロパティの内容をテーブルで表示
+    // プロパティの内容をテーブルで表示（翻訳機能を追加）
     for (const [key, value] of Object.entries(properties)) {
       const isHighlighted = this.highlightedProperty === `${key}-${value}`;
-      html += `
-        <tr>
-          <td class="property-key">${key}</td>
-          <td class="property-value">${value}</td>
-          <td class="property-action">
-            <button 
-              class="highlight-btn ${isHighlighted ? 'active' : ''}"
-              data-key="${key}"
-              data-value="${value}"
-              onclick="window.handleHighlight('${key}', '${value}', this)"
-            >
-              ${isHighlighted ? '解除' : '強調'}
-            </button>
-          </td>
-        </tr>
-      `;
+      
+      // 属性名の翻訳
+      const translatedName = this._translatePropertyName(key);
+      const nameDescription = this._getPropertyDescription(key);
+      
+      // 属性値の翻訳
+      const translatedValue = this._translatePropertyValue(key, value);
+      const valueDescription = this._getPropertyValueDescription(key, value);
+      
+      // 辞書に項目がある場合のみtitle属性を設定
+      const keyTitle = (translatedName !== key) ? `title="元の属性名: ${key}"` : '';
+      const valueTitle = (translatedValue !== value && value !== translatedValue) ? `title="元の値: ${value}"` : '';
+      
+      html += `<tr>
+        <td class="property-key" ${keyTitle}>
+          ${translatedName}
+          ${nameDescription ? '<span class="info-icon" title="' + nameDescription + '">ⓘ</span>' : ''}
+        </td>
+        <td class="property-value" ${valueTitle}>
+          ${translatedValue}
+          ${valueDescription ? '<span class="info-icon" title="' + valueDescription + '">ⓘ</span>' : ''}
+        </td>
+        <td class="property-action">
+          <button 
+            class="highlight-btn ${isHighlighted ? 'active' : ''}"
+            data-key="${key}"
+            data-value="${value}"
+            onclick="window.handleHighlight('${key}', '${value}', this)"
+          >
+            ${isHighlighted ? '解除' : '強調'}
+          </button>
+        </td>
+      </tr>`;
     }
     html += '</table>';
     html += '</div>';
@@ -55328,6 +55448,29 @@ style.textContent = `
 
 .header-highlight-btn.active {
   background: #ffa500;
+}
+
+/* 情報アイコンのスタイル */
+.info-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 5px;
+}
+
+.info-icon:hover {
+  background-color: #ddd;
+}
+
+/* ホバーツールチップを非表示 */
+[title]:hover::after {
+  display: none;
 }
 `;
 document.head.appendChild(style);
