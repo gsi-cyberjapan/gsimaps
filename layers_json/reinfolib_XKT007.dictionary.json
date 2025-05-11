@@ -1,0 +1,68 @@
+{
+  "administrativeAreaCode": {
+    "displayName": "行政区域コード"
+  },
+  "preSchoolName_ja": {
+    "displayName": "施設名称"
+  },
+  "schoolCode": {
+    "displayName": "学校コード"
+  },
+  "schoolClassCode": {
+    "displayName": "学校分類コード"
+  },
+  "schoolClassCode_name_ja": {
+    "displayName": "学校分類名"
+  },
+  "location_ja": {
+    "displayName": "所在地"
+  },
+  "administratorCode": {
+    "displayName": "管理者コード"
+  },
+  "administratorCode_name_ja": {
+    "displayName": "管理者"
+  },
+  "closeSchoolCode": {
+    "displayName": "休校コード"
+  },
+  "closeSchoolCode_name_ja": {
+    "displayName": "休校状況"
+  },
+  "welfareFacilityClassCode": {
+    "displayName": "福祉施設大分類コード"
+  },
+  "welfareFacilityClassCode_name_ja": {
+    "displayName": "福祉施設大分類"
+  },
+  "welfareFacilityMiddleClassCode": {
+    "displayName": "福祉施設中分類コード"
+  },
+  "welfareFacilityMiddleClassCode_name_ja": {
+    "displayName": "福祉施設中分類"
+  },
+  "welfareFacilityMinorClassCode": {
+    "displayName": "福祉施設小分類コード"
+  },
+  "welfareFacilityMinorClassCode_name_ja": {
+    "displayName": "福祉施設小分類"
+  },
+  "prefectureCode": {
+    "displayName": "都道府県コード"
+  },
+  "cityCode": {
+    "displayName": "市区町村コード"
+  },
+  "prefectureName_ja": {
+    "displayName": "都道府県名"
+  },
+  "cityName_ja": {
+    "displayName": "市区町村名"
+  },
+  "address_ja": {
+    "displayName": "住所"
+  },
+  "phoneNumber": {
+    "displayName": "電話番号"
+  }
+}

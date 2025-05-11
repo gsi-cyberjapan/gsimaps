@@ -1,0 +1,32 @@
+{
+  "mesh_code": {
+    "displayName": "メッシュコード"
+  },
+  "topographic_classification_code": {
+    "displayName": "微地形区分（28区分）"
+  },
+  "topographic_classification_name_ja": {
+    "displayName": "微地形区分の名称"
+  },
+  "liquefaction_tendency_level": {
+    "displayName": "液状化発生傾向の強弱(6段階区分)"
+  },
+  "note": {
+    "displayName": "説明"
+  },
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

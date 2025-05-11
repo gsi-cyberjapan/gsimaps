@@ -1,0 +1,44 @@
+{
+  "youto_id": {
+    "displayName": "用途地域分類"
+  },
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "city_name": {
+    "displayName": "市区町村名"
+  },
+  "decision_date": {
+    "displayName": "区域設定年月日",
+    "description": "最終告示日"
+  },
+  "decision_classification": {
+    "displayName": "設定区分"
+  },
+  "decision_maker": {
+    "displayName": "設定者名"
+  },
+  "notice_number": {
+    "displayName": "告示番号",
+    "description": "告示番号L（告示番号（最終））"
+  },
+  "use_area_ja": {
+    "displayName": "用途地域名"
+  },
+  "u_floor_area_ratio_ja": {
+    "displayName": "容積率"
+  },
+  "u_building_coverage_ratio_ja": {
+    "displayName": "建蔽率"
+  },
+  "first_decision_date": {
+    "displayName": "当初決定日"
+  },
+  "notice_number_s": {
+    "displayName": "告示番号S",
+    "description": "告示番号（当初）"
+  }
+}

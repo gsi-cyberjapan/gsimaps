@@ -1,0 +1,47 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "prefecture_name": {
+    "displayName": "都道府県名"
+  },
+  "group_code": {
+    "displayName": "行政コード"
+  },
+  "city_name": {
+    "displayName": "市町村名"
+  },
+  "region_name": {
+    "displayName": "区域名"
+  },
+  "address": {
+    "displayName": "所在地"
+  },
+  "notice_date": {
+    "displayName": "告示年月日"
+  },
+  "notice_number": {
+    "displayName": "告示番号"
+  },
+  "landslide_area": {
+    "displayName": "指定面積（ha）"
+  },
+  "charge_ministry_code": {
+    "displayName": "所管省庁コード"
+  },
+  "charge_ministry_name": {
+    "displayName": "所管省庁名"
+  },
+  "A35_002": {
+    "displayName": "指定機関コード"
+  },
+  "A35_002_ja": {
+    "displayName": "指定機関"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

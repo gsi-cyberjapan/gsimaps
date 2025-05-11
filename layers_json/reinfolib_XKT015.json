@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "passengers_by_station",
+  "name": "駅別乗降客数【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "passengers_by_station": {
+    "XKT015": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT015/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "passengers_by_station_line",
       "type": "line",
-      "source": "passengers_by_station",
+      "source": "XKT015",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -40,11 +40,10 @@
         "line-color": "#8B0000",
         "line-opacity": 1
       }
-    },
-    {
+    },    {
       "id": "passengers_by_station_label",
       "type": "symbol",
-      "source": "passengers_by_station",
+      "source": "XKT015",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,

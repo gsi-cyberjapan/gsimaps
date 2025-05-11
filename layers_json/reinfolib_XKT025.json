@@ -1,14 +1,14 @@
 {
   "version": 8,
-  "name": "立地適正化計画【都市計画決定GISデータ】",
+  "name": "地形区分に基づく液状化の発生傾向図【国土交通省都市局】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "XKT003": {
+    "XKT025": {
       "type": "vector",
       "tiles": [
-        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT003/{z}/{x}/{y}.pbf"
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT025/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 11,
       "maxzoom": 15,
@@ -18,9 +18,9 @@
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "location_optimization_plan_area_fill",
+      "id": "liquefaction_fill",
       "type": "fill",
-      "source": "XKT003",
+      "source": "XKT025",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -30,21 +30,27 @@
       "paint": {
         "fill-color": [
           "match",
-          ["get", "kubun_name_ja"],
-          "都市機能誘導区域",
-          "#FF0000",
-          "居住誘導区域",
-          "#FF6666",
-          "立地適正化計画区域",
-          "#66CC66",
+          ["get", "liquefaction_tendency_level"],
+          1,
+          "#C736FF",
+          2,
+          "#FC3314",
+          3,
+          "#FBAD18",
+          4,
+          "#FCF31F",
+          5,
+          "#C8C8CE",
+          6,
+          "#FFFFFF",
           "#000000"
         ],
-        "fill-opacity": 0.3
+        "fill-opacity": 0.6
       }
     },    {
-      "id": "location_optimization_plan_area_outline",
+      "id": "liquefaction_outline",
       "type": "line",
-      "source": "XKT003",
+      "source": "XKT025",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -52,18 +58,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": [
-          "match",
-          ["get", "kubun_id"],
-          32,
-          "#FF0000",
-          31,
-          "#FF6666",
-          0,
-          "#66CC66",
-          "#000000"
-        ],
-        "line-width": 1.5,
+        "line-color": "#666666",
+        "line-width": 0.5,
         "line-opacity": 1
       }
     }

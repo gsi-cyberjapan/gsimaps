@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "urban_plan_area",
+  "name": "都市計画区域/区域区分【都市計画決定GISデータ】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "urban_plan_area": {
+    "XKT001": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT001/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "urban_plan_area_fill",
       "type": "fill",
-      "source": "urban_plan_area",
+      "source": "XKT001",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -42,7 +42,7 @@
     {
       "id": "urban_plan_area_outline",
       "type": "line",
-      "source": "urban_plan_area",
+      "source": "XKT001",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,

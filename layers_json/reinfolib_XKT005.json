@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "junior_high_school_district",
+  "name": "中学校区【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "junior_high_school_district": {
+    "XKT005": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT005/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "junior_high_school_district_fill",
       "type": "fill",
-      "source": "junior_high_school_district",
+      "source": "XKT005",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -31,11 +31,10 @@
         "fill-color": "#006400",
         "fill-opacity": 0.1
       }
-    },
-    {
+    },    {
       "id": "junior_high_school_district_outline",
       "type": "line",
-      "source": "junior_high_school_district",
+      "source": "XKT005",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -51,7 +50,7 @@
     {
       "id": "junior_high_school_district_label",
       "type": "symbol",
-      "source": "junior_high_school_district",
+      "source": "XKT005",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,

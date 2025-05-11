@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "welfare_facility",
+  "name": "福祉施設【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "welfare_facility": {
+    "XKT011": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT011/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "welfare_facility_point",
       "type": "circle",
-      "source": "welfare_facility",
+      "source": "XKT011",
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,
@@ -31,11 +31,10 @@
         "circle-color": "#4F0000",
         "circle-radius": 4
       }
-    },
-    {
+    },    {
       "id": "welfare_facility_label",
       "type": "symbol",
-      "source": "welfare_facility",
+      "source": "XKT011",
       "source-layer": "hits",
       "minzoom": 15,
       "maxzoom": 20,

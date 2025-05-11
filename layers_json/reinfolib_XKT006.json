@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "school",
+  "name": "学校【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "school": {
+    "XKT006": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT006/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "school_point",
       "type": "circle",
-      "source": "school",
+      "source": "XKT006",
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,
@@ -31,11 +31,10 @@
         "circle-color": "purple",
         "circle-radius": 5
       }
-    },
-    {
+    },    {
       "id": "school_label",
       "type": "symbol",
-      "source": "school",
+      "source": "XKT006",
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,

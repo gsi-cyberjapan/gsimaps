@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "developed_land",
+  "name": "大規模盛土造成地マップ【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "developed_land": {
+    "XKT020": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT020/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "developed_land_fill",
       "type": "fill",
-      "source": "developed_land",
+      "source": "XKT020",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -40,11 +40,10 @@
         "fill-opacity": 0.3,
         "fill-outline-color": "#000000"
       }
-    },
-    {
+    },    {
       "id": "developed_land_outline",
       "type": "line",
-      "source": "developed_land",
+      "source": "XKT020",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,

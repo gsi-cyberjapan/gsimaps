@@ -1,0 +1,47 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "prefecture_name": {
+    "displayName": "都道府県名"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "city_name": {
+    "displayName": "市町村名"
+  },
+  "group_code": {
+    "displayName": "行政コード"
+  },
+  "region_name": {
+    "displayName": "区域名"
+  },
+  "address": {
+    "displayName": "所在地"
+  },
+  "A43_004": {
+    "displayName": "危険度ランク"
+  },
+  "public_notice_date": {
+    "displayName": "公示年月日"
+  },
+  "public_notice_number": {
+    "displayName": "公示番号"
+  },
+  "landslide_area": {
+    "displayName": "指定面積（ha）"
+  },
+  "notice_date": {
+    "displayName": "告示日"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

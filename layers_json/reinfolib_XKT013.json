@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "estimated_future_population",
+  "name": "将来推計人口250mメッシュ【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "estimated_future_population": {
+    "XKT013": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT013/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "estimated_future_population_fill",
       "type": "fill",
-      "source": "estimated_future_population",
+      "source": "XKT013",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -61,7 +61,7 @@
     {
       "id": "estimated_future_population_outline",
       "type": "line",
-      "source": "estimated_future_population",
+      "source": "XKT013",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -77,7 +77,7 @@
     {
       "id": "estimated_future_population_label",
       "type": "symbol",
-      "source": "estimated_future_population",
+      "source": "XKT013",
       "source-layer": "hits",
       "minzoom": 13,
       "maxzoom": 20,

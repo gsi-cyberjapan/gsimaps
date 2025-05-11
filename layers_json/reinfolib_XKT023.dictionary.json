@@ -1,0 +1,47 @@
+{
+  "plan_name": {
+    "displayName": "計画名"
+  },
+  "plan_type_ja": {
+    "displayName": "計画区分名"
+  },
+  "kubun_id": {
+    "displayName": "区分コード"
+  },
+  "group_code": {
+    "displayName": "行政コード"
+  },
+  "decision_date": {
+    "displayName": "設定年月日"
+  },
+  "decision_type_ja": {
+    "displayName": "設定区分名"
+  },
+  "decision_maker": {
+    "displayName": "設定者名"
+  },
+  "notice_number": {
+    "displayName": "告示番号"
+  },
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "city_name": {
+    "displayName": "市町村名"
+  },
+  "first_decision_date": {
+    "displayName": "当初決定日"
+  },
+  "notice_number_s": {
+    "displayName": "告示番号S"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

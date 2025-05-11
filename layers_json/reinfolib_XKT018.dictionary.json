@@ -1,0 +1,32 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "P05_001": {
+    "displayName": "行政区域コード"
+  },
+  "P05_002": {
+    "displayName": "施設分類コード"
+  },
+  "P05_002_name_ja": {
+    "displayName": "施設分類名"
+  },
+  "P05_003_ja": {
+    "displayName": "名称"
+  },
+  "P05_004_ja": {
+    "displayName": "所在地"
+  },
+  "address": {
+    "displayName": "住所"
+  }
+}

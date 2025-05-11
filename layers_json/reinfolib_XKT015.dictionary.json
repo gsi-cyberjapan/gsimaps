@@ -1,0 +1,179 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "S12_001_ja": {
+    "displayName": "駅名"
+  },
+  "S12_001c": {
+    "displayName": "駅コード"
+  },
+  "S12_001g": {
+    "displayName": "グループコード"
+  },
+  "S12_002_ja": {
+    "displayName": "運営会社"
+  },
+  "S12_003_ja": {
+    "displayName": "路線名"
+  },
+  "S12_004": {
+    "displayName": "鉄道区分"
+  },
+  "S12_005": {
+    "displayName": "事業者種別"
+  },
+  "S12_006": {
+    "displayName": "重複コード2011"
+  },
+  "S12_007": {
+    "displayName": "データ有無コード2011"
+  },
+  "S12_008": {
+    "displayName": "備考2011"
+  },
+  "S12_009": {
+    "displayName": "乗降客数2011"
+  },
+  "S12_010": {
+    "displayName": "重複コード2012"
+  },
+  "S12_011": {
+    "displayName": "データ有無コード2012"
+  },
+  "S12_012": {
+    "displayName": "備考2012"
+  },
+  "S12_013": {
+    "displayName": "乗降客数2012"
+  },
+  "S12_014": {
+    "displayName": "重複コード2013"
+  },
+  "S12_015": {
+    "displayName": "データ有無コード2013"
+  },
+  "S12_016": {
+    "displayName": "備考2013"
+  },
+  "S12_017": {
+    "displayName": "乗降客数2013"
+  },
+  "S12_018": {
+    "displayName": "重複コード2014"
+  },
+  "S12_019": {
+    "displayName": "データ有無コード2014"
+  },
+  "S12_020": {
+    "displayName": "備考2014"
+  },
+  "S12_021": {
+    "displayName": "乗降客数2014"
+  },
+  "S12_022": {
+    "displayName": "重複コード2015"
+  },
+  "S12_023": {
+    "displayName": "データ有無コード2015"
+  },
+  "S12_024": {
+    "displayName": "備考2015"
+  },
+  "S12_025": {
+    "displayName": "乗降客数2015"
+  },
+  "S12_026": {
+    "displayName": "重複コード2016"
+  },
+  "S12_027": {
+    "displayName": "データ有無コード2016"
+  },
+  "S12_028": {
+    "displayName": "備考2016"
+  },
+  "S12_029": {
+    "displayName": "乗降客数2016"
+  },
+  "S12_030": {
+    "displayName": "重複コード2017"
+  },
+  "S12_031": {
+    "displayName": "データ有無コード2017"
+  },
+  "S12_032": {
+    "displayName": "備考2017"
+  },
+  "S12_033": {
+    "displayName": "乗降客数2017"
+  },
+  "S12_034": {
+    "displayName": "重複コード2018"
+  },
+  "S12_035": {
+    "displayName": "データ有無コード2018"
+  },
+  "S12_036": {
+    "displayName": "備考2018"
+  },
+  "S12_037": {
+    "displayName": "乗降客数2018"
+  },
+  "S12_038": {
+    "displayName": "重複コード2019"
+  },
+  "S12_039": {
+    "displayName": "データ有無コード2019"
+  },
+  "S12_040": {
+    "displayName": "備考2019"
+  },
+  "S12_041": {
+    "displayName": "乗降客数2019"
+  },
+  "S12_042": {
+    "displayName": "重複コード2020"
+  },
+  "S12_043": {
+    "displayName": "データ有無コード2020"
+  },
+  "S12_044": {
+    "displayName": "備考2020"
+  },
+  "S12_045": {
+    "displayName": "乗降客数2020"
+  },
+  "S12_046": {
+    "displayName": "重複コード2021"
+  },
+  "S12_047": {
+    "displayName": "データ有無コード2021"
+  },
+  "S12_048": {
+    "displayName": "備考2021"
+  },
+  "S12_049": {
+    "displayName": "乗降客数2021"
+  },
+  "S12_050": {
+    "displayName": "重複コード2022"
+  },
+  "S12_051": {
+    "displayName": "データ有無コード2022"
+  },
+  "S12_052": {
+    "displayName": "備考2022"
+  },
+  "S12_053": {
+    "displayName": "乗降客数2022"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "disaster_risk_area",
+  "name": "災害危険区域【国土数値情報】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "disaster_risk_area": {
+    "XKT016": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT016/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "disaster_risk_area_fill",
       "type": "fill",
-      "source": "disaster_risk_area",
+      "source": "XKT016",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -48,11 +48,10 @@
         "fill-opacity": 0.5
       },
       "fill-outline-color": "#000000"
-    },
-    {
+    },    {
       "id": "disaster_risk_area_outline",
       "type": "line",
-      "source": "disaster_risk_area",
+      "source": "XKT016",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -80,11 +79,10 @@
         "line-width": 1.5,
         "line-opacity": 0.8
       }
-    },
-    {
+    },    {
       "id": "disaster_risk_area_label",
       "type": "symbol",
-      "source": "disaster_risk_area",
+      "source": "XKT016",
       "source-layer": "hits",
       "minzoom": 16,
       "maxzoom": 20,

@@ -1,14 +1,14 @@
 {
   "version": 8,
-  "name": "急傾斜地崩壊危険区域【国土数値情報】",
+  "name": "高度利用地区【都市計画決定GISデータ】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "XKT022": {
+    "XKT024": {
       "type": "vector",
       "tiles": [
-        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT022/{z}/{x}/{y}.pbf"
+        "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT024/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 11,
       "maxzoom": 15,
@@ -18,9 +18,9 @@
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "collapse_risk_area_fill",
+      "id": "high_use_area_fill",
       "type": "fill",
-      "source": "XKT022",
+      "source": "XKT024",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -28,13 +28,13 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#8c2c2e",
+        "fill-color": "#CF2020",
         "fill-opacity": 0.2
       }
     },    {
-      "id": "collapse_risk_area_outline",
+      "id": "high_use_area_outline",
       "type": "line",
-      "source": "XKT022",
+      "source": "XKT024",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -42,21 +42,21 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#8c2c2e",
+        "line-color": "#CF2020",
         "line-width": 1.5,
         "line-opacity": 1
       }
     },    {
-      "id": "collapse_risk_area_label",
+      "id": "high_use_area_label",
       "type": "symbol",
-      "source": "XKT022",
+      "source": "XKT024",
       "source-layer": "hits",
       "minzoom": 15,
       "maxzoom": 20,
       "layout": {
         "text-field": [
           "coalesce",
-          ["get", "region_name"],
+          ["get", "advanced_name"],
           ""
         ],
         "text-size": 14,
@@ -66,7 +66,7 @@
         "text-allow-overlap": false
       },
       "paint": {
-        "text-color": "#8c2c2e",
+        "text-color": "#CF2020",
         "text-halo-color": "#FFFFFF",
         "text-halo-width": 1.5
       }

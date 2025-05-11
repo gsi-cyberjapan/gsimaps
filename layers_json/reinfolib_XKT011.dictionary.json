@@ -1,0 +1,59 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "P14_001": {
+    "displayName": "都道府県名"
+  },
+  "P14_002": {
+    "displayName": "市区町村名"
+  },
+  "P14_003": {
+    "displayName": "行政区域コード"
+  },
+  "P14_004_ja": {
+    "displayName": "所在地"
+  },
+  "P14_005": {
+    "displayName": "福祉施設大分類コード"
+  },
+  "P14_005_name_ja": {
+    "displayName": "福祉施設大分類名"
+  },
+  "P14_006": {
+    "displayName": "福祉施設中分類コード"
+  },
+  "P14_006_name_ja": {
+    "displayName": "福祉施設中分類名"
+  },
+  "P14_007": {
+    "displayName": "福祉施設小分類コード"
+  },
+  "P14_007_ja": {
+    "displayName": "福祉施設分類"
+  },
+  "P14_008_ja": {
+    "displayName": "名称"
+  },
+  "P14_009": {
+    "displayName": "管理者コード"
+  },
+  "P14_010": {
+    "displayName": "位置正確度コード"
+  },
+  "address": {
+    "displayName": "住所"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "P27_001": {
+    "displayName": "行政区域コード"
+  },
+  "P27_002": {
+    "displayName": "公共施設大分類"
+  },
+  "P27_003": {
+    "displayName": "公共施設小分類"
+  },
+  "P27_003_name_ja": {
+    "displayName": "公共施設小分類名"
+  },
+  "P27_004": {
+    "displayName": "文化施設分類"
+  },
+  "P27_004_name_ja": {
+    "displayName": "文化施設分類名"
+  },
+  "P27_005_ja": {
+    "displayName": "名称"
+  },
+  "P27_006_ja": {
+    "displayName": "所在地"
+  },
+  "P27_007": {
+    "displayName": "管理者コード"
+  },
+  "P27_008": {
+    "displayName": "階数"
+  },
+  "P27_009": {
+    "displayName": "建築年"
+  },
+  "address": {
+    "displayName": "住所"
+  }
+}

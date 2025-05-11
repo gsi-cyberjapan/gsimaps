@@ -1,11 +1,11 @@
 {
   "version": 8,
-  "name": "use_area",
+  "name": "用途地域【都市計画決定GISデータ】",
   "metadata": {
     "maputnik:renderer": "mlgljs"
   },
   "sources": {
-    "use_area": {
+    "XKT002": {
       "type": "vector",
       "tiles": [
         "https://du6jhqfvlioa4.cloudfront.net/ex-api/external/XKT002/{z}/{x}/{y}.pbf"
@@ -20,7 +20,7 @@
     {
       "id": "use_area_fill",
       "type": "fill",
-      "source": "use_area",
+      "source": "XKT002",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -61,11 +61,10 @@
         ],
         "fill-opacity": 0.3
       }
-    },
-    {
+    },    {
       "id": "use_area_outline",
       "type": "line",
-      "source": "use_area",
+      "source": "XKT002",
       "source-layer": "hits",
       "minzoom": 11,
       "maxzoom": 20,
@@ -77,11 +76,10 @@
         "line-width": 1,
         "line-opacity": 1
       }
-    },
-    {
+    },    {
       "id": "use_area_label",
       "type": "symbol",
-      "source": "use_area",
+      "source": "XKT002",
       "source-layer": "hits",
       "minzoom": 15,
       "maxzoom": 20,

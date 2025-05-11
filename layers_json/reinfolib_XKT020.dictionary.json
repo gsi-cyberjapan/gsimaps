@@ -1,0 +1,32 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "embankment_classification": {
+    "displayName": "盛土区分"
+  },
+  "prefecture_name": {
+    "displayName": "都道府県名"
+  },
+  "city_name": {
+    "displayName": "市区町村名"
+  },
+  "embankment_number": {
+    "displayName": "盛土番号"
+  },
+  "notice_date": {
+    "displayName": "告示日"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

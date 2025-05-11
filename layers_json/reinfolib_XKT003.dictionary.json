@@ -1,0 +1,41 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "city_code": {
+    "displayName": "行政区域コード"
+  },
+  "city_name": {
+    "displayName": "市町村名"
+  },
+  "decision_date": {
+    "displayName": "区域設定年月日",
+    "description": "最終告示日"
+  },
+  "decision_classification": {
+    "displayName": "設定区分"
+  },
+  "decision_maker": {
+    "displayName": "設定者名"
+  },
+  "notice_number": {
+    "displayName": "告示番号",
+    "description": "告示番号L（告示番号（最終））"
+  },
+  "kubun_id": {
+    "displayName": "区域コード"
+  },
+  "kubun_name_ja": {
+    "displayName": "区域名"
+  },
+  "area_classification_ja": {
+    "displayName": "区域区分"
+  },
+  "first_decision_date": {
+    "displayName": "当初決定日"
+  },
+  "notice_number_s": {
+    "displayName": "告示番号S",
+    "description": "告示番号（当初）"
+  }
+}

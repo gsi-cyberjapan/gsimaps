@@ -1,0 +1,59 @@
+{
+  "PARKNAME": {
+    "displayName": "自然公園名"
+  },
+  "P13_002": {
+    "displayName": "自然公園区分コード"
+  },
+  "P13_002_ja": {
+    "displayName": "自然公園区分"
+  },
+  "P13_003": {
+    "displayName": "地域区分コード"
+  },
+  "P13_003_ja": {
+    "displayName": "地域区分"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  },
+  "OBJECTID": {
+    "displayName": "シェープID"
+  },
+  "PREFEC_CD": {
+    "displayName": "都道府県コード"
+  },
+  "AREA_CD": {
+    "displayName": "地区コード"
+  },
+  "CTV_NAME": {
+    "displayName": "市町村名"
+  },
+  "FIS_YEAR": {
+    "displayName": "年度"
+  },
+  "THEMA_NO": {
+    "displayName": "主題番号"
+  },
+  "LAYER_NO": {
+    "displayName": "レイヤ番号"
+  },
+  "AREA_SIZE": {
+    "displayName": "ポリゴン面積(ha)"
+  },
+  "IOSIDE_DIV": {
+    "displayName": "内外区分"
+  },
+  "REMARK_STR": {
+    "displayName": "備考"
+  },
+  "Shape_Leng": {
+    "displayName": "シェープの長さ"
+  },
+  "Shape_Area": {
+    "displayName": "シェープの面積"
+  },
+  "OBJ_NAME_ja": {
+    "displayName": "シェープ名"
+  }
+}

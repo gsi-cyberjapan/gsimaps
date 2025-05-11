@@ -1,0 +1,32 @@
+{
+  "P29_001": {
+    "displayName": "行政区域コード"
+  },
+  "P29_002": {
+    "displayName": "学校コード"
+  },
+  "P29_003": {
+    "displayName": "学校分類コード"
+  },
+  "P29_003_name_ja": {
+    "displayName": "学校分類名"
+  },
+  "P29_004_ja": {
+    "displayName": "名称"
+  },
+  "P29_005_ja": {
+    "displayName": "所在地"
+  },
+  "P29_006": {
+    "displayName": "管理者コード"
+  },
+  "P29_007": {
+    "displayName": "休校区分"
+  },
+  "P29_008": {
+    "displayName": "キャンパスコード"
+  },
+  "P29_009_ja": {
+    "displayName": "学校名備考"
+  }
+}

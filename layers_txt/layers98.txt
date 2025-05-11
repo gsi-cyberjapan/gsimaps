@@ -40,7 +40,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT001",
-          "title": "都市計画決定GISデータ (都市計画区域/区域区分)",
+          "title": "都市計画区域/区域区分【都市計画決定GISデータ】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT001.json",
           "subdomains": "",
@@ -55,7 +55,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT002",
-          "title": "都市計画決定GISデータ (用途地域)",
+          "title": "用途地域【都市計画決定GISデータ】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT002.json",
           "subdomains": "",
@@ -67,10 +67,40 @@
           "legendUrl": "",
           "html": ""
         },
+                {
+          "type": "Layer",
+          "id": "reinfolib_XKT023",
+          "title": "地区計画【都市計画決定GISデータ】",
+          "iconUrl": "",
+          "url": "./layers_json/reinfolib_XKT023.json",
+          "subdomains": "",
+          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 20,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "reinfolib_XKT024",
+          "title": "高度利用地区【都市計画決定GISデータ】",
+          "iconUrl": "",
+          "url": "./layers_json/reinfolib_XKT024.json",
+          "subdomains": "",
+          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
+          "maxZoom": 20,
+          "legendUrl": "",
+          "html": ""
+        },
         {
           "type": "Layer",
           "id": "reinfolib_XKT003",
-          "title": "都市計画決定GISデータ (立地適正化計画)",
+          "title": "立地適正化計画【都市計画決定GISデータ】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT003.json",
           "subdomains": "",
@@ -85,7 +115,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT004",
-          "title": "国土数値情報(小学校区)",
+          "title": "小学校区【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT004.json",
           "subdomains": "",
@@ -100,7 +130,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT005",
-          "title": "国土数値情報(中学校区)",
+          "title": "中学校区【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT005.json",
           "subdomains": "",
@@ -115,7 +145,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT006",
-          "title": "国土数値情報(学校)",
+          "title": "学校【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT006.json",
           "subdomains": "",
@@ -130,7 +160,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT007",
-          "title": "国土数値情報(保育園・幼稚園等)",
+          "title": "保育園・幼稚園等【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT007.json",
           "subdomains": "",
@@ -145,7 +175,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT010",
-          "title": "国土数値情報(医療機関)",
+          "title": "医療機関【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT010.json",
           "subdomains": "",
@@ -160,7 +190,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT011",
-          "title": "国土数値情報(福祉施設)",
+          "title": "福祉施設【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT011.json",
           "subdomains": "",
@@ -175,7 +205,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT013",
-          "title": "国土数値情報(将来推計人口250mメッシュ)",
+          "title": "将来推計人口250mメッシュ【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT013.json",
           "subdomains": "",
@@ -190,7 +220,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT014",
-          "title": "都市計画決定GISデータ (防火・準防火地域)",
+          "title": "防火・準防火地域【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT014.json",
           "subdomains": "",
@@ -205,7 +235,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT015",
-          "title": "国土数値情報(駅別乗降客数)",
+          "title": "駅別乗降客数【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT015.json",
           "subdomains": "",
@@ -220,7 +250,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT016",
-          "title": "国土数値情報(災害危険区域)",
+          "title": "災害危険区域【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT016.json",
           "subdomains": "",
@@ -235,7 +265,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT017",
-          "title": "国土数値情報(図書館)",
+          "title": "図書館【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT017.json",
           "subdomains": "",
@@ -250,7 +280,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT018",
-          "title": "国土数値情報(市区町村役場及び集会施設等)",
+          "title": "市区町村役場及び集会施設等【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT018.json",
           "subdomains": "",
@@ -265,7 +295,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT019",
-          "title": "国土数値情報(自然公園地域)",
+          "title": "自然公園地域【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT019.json",
           "subdomains": "",
@@ -280,7 +310,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT020",
-          "title": "国土数値情報(大規模盛土造成地マップ)",
+          "title": "大規模盛土造成地マップ【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT020.json",
           "subdomains": "",
@@ -295,7 +325,7 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT021",
-          "title": "国土数値情報(地すべり防止地区)",
+          "title": "地すべり防止地区【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT021.json",
           "subdomains": "",
@@ -310,14 +340,29 @@
         {
           "type": "Layer",
           "id": "reinfolib_XKT022",
-          "title": "国土数値情報(急傾斜地崩壊危険区域)",
+          "title": "急傾斜地崩壊危険区域【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT022.json",
           "subdomains": "",
           "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>)",
           "errorTileUrl": "",
           "cocotile": false,
-          "minZoom": 5,
+          "minZoom": 2,
+          "maxZoom": 20,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "reinfolib_XKT025",
+          "title": " 地形区分に基づく液状化の発生傾向図【国土交通省都市局】",
+          "iconUrl": "",
+          "url": "./layers_json/reinfolib_XKT025.json",
+          "subdomains": "",
+          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>(<a href=\"https://nlftp.mlit.go.jp/ksj/\">国土数値情報</a>)",
+          "errorTileUrl": "",
+          "cocotile": false,
+          "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
           "html": ""

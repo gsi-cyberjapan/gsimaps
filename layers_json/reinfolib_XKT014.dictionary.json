@@ -1,0 +1,41 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "fire_prevention_ja": {
+    "displayName": "防火・準防火地域名"
+  },
+  "kubun_id": {
+    "displayName": "区分コード"
+  },
+  "city_name": {
+    "displayName": "市区町村名"
+  },
+  "decision_date": {
+    "displayName": "設定年月日"
+  },
+  "decision_classification": {
+    "displayName": "設定区分"
+  },
+  "decision_maker": {
+    "displayName": "設定者名"
+  },
+  "notice_number": {
+    "displayName": "告示番号"
+  },
+  "first_decision_date": {
+    "displayName": "当初決定日"
+  },
+  "notice_number_s": {
+    "displayName": "告示番号S"
+  }
+}

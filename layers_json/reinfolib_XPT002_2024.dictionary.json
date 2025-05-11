@@ -1,0 +1,185 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "prefecture_name_ja": {
+    "displayName": "都道府県名"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "city_county_name_ja": {
+    "displayName": "市郡名"
+  },
+  "ward_town_village_name_ja": {
+    "displayName": "区町村名"
+  },
+  "chome": {
+    "displayName": "町丁・大字名"
+  },
+  "place_name_ja": {
+    "displayName": "地名"
+  },
+  "point_id": {
+    "displayName": "地点ID"
+  },
+  "target_year_name_ja": {
+    "displayName": "対象年"
+  },
+  "land_price_type": {
+    "displayName": "地価区分"
+  },
+  "use_category_name_ja": {
+    "displayName": "用途区分名"
+  },
+  "standard_lot_number_ja": {
+    "displayName": "標準地/基準地番号"
+  },
+  "residence_display_name_ja": {
+    "displayName": "住居表示"
+  },
+  "location_number_ja": {
+    "displayName": "所在及び地番"
+  },
+  "location": {
+    "displayName": "所在及び地番"
+  },
+  "u_current_years_price_ja": {
+    "displayName": "当年価格"
+  },
+  "last_years_price": {
+    "displayName": "前年価格"
+  },
+  "year_on_year_change_rate": {
+    "displayName": "対前年変動率"
+  },
+  "u_cadastral_ja": {
+    "displayName": "地積"
+  },
+  "frontage_ratio": {
+    "displayName": "間口比率"
+  },
+  "depth_ratio": {
+    "displayName": "奥行き比率"
+  },
+  "shape": {
+    "displayName": "形状（間口：奥行き）"
+  },
+  "building_structure_name_ja": {
+    "displayName": "構造"
+  },
+  "u_ground_hierarchy_ja": {
+    "displayName": "地上階層"
+  },
+  "u_underground_hierarchy_ja": {
+    "displayName": "地下階層"
+  },
+  "front_road_name_ja": {
+    "displayName": "前面道路区分"
+  },
+  "front_road_azimuth_name_ja": {
+    "displayName": "前面道路の方位区分"
+  },
+  "front_road_width": {
+    "displayName": "前面道路の幅員"
+  },
+  "front_road_pavement_condition": {
+    "displayName": "前面道路の舗装状況"
+  },
+  "front_road_condition": {
+    "displayName": "前面道路の状況"
+  },
+  "side_road_azimuth_name_ja": {
+    "displayName": "側道の方位区分"
+  },
+  "side_road_name_ja": {
+    "displayName": "側道区分"
+  },
+  "side_road_condition": {
+    "displayName": "その他の接面道路"
+  },
+  "gas_supply_availability": {
+    "displayName": "ガスの有無"
+  },
+  "water_supply_availability": {
+    "displayName": "水道の有無"
+  },
+  "sewer_supply_availability": {
+    "displayName": "下水道の有無"
+  },
+  "nearest_station_name_ja": {
+    "displayName": "最寄り駅名"
+  },
+  "proximity_to_transportation_facilities": {
+    "displayName": "交通施設との近接区分"
+  },
+  "u_road_distance_to_nearest_station_name_ja": {
+    "displayName": "最寄り駅までの道路距離"
+  },
+  "usage_status_name_ja": {
+    "displayName": "利用現況"
+  },
+  "current_usage_status_of_surrounding_land_name_ja": {
+    "displayName": "周辺の土地の利用現況"
+  },
+  "area_division_name_ja": {
+    "displayName": "区域区分"
+  },
+  "regulations_use_category_name_ja": {
+    "displayName": "法規制・用途区分"
+  },
+  "regulations_altitude_district_name_ja": {
+    "displayName": "法規制・高度地区"
+  },
+  "regulations_fireproof_name_ja": {
+    "displayName": "法規制・防火・準防火"
+  },
+  "u_regulations_building_coverage_ratio_ja": {
+    "displayName": "法規制・建蔽率"
+  },
+  "u_regulations_floor_area_ratio_ja": {
+    "displayName": "法規制・容積率"
+  },
+  "regulations_forest_law_name_ja": {
+    "displayName": "法規制・森林法"
+  },
+  "regulations_park_law_name_ja": {
+    "displayName": "法規制・公園法"
+  },
+  "park_forest_law": {
+    "displayName": "森林法、公園法、自然環境等"
+  },
+  "pause_flag": {
+    "displayName": "休止フラグ"
+  },
+  "usage_category_name_ja": {
+    "displayName": "利用区分名"
+  },
+  "total_floor_area": {
+    "displayName": "延床面積（㎡）"
+  },
+  "property_types": {
+    "displayName": "種類"
+  },
+  "current_use": {
+    "displayName": "用途"
+  },
+  "transaction_period": {
+    "displayName": "取引時期"
+  },
+  "city_planning": {
+    "displayName": "都市計画"
+  },
+  "building_years": {
+    "displayName": "建築年"
+  },
+  "transaction_condition": {
+    "displayName": "取引の事情等"
+  }
+}

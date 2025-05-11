@@ -1,0 +1,17 @@
+{
+  "A32_001": {
+    "displayName": "行政区域コード"
+  },
+  "A32_002": {
+    "displayName": "設置主体"
+  },
+  "A32_003": {
+    "displayName": "学校コード"
+  },
+  "A32_004_ja": {
+    "displayName": "名称"
+  },
+  "A32_005": {
+    "displayName": "所在地"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "A48_001": {
+    "displayName": "都道府県名"
+  },
+  "A48_002": {
+    "displayName": "市町村名"
+  },
+  "A48_003": {
+    "displayName": "代表行政コード"
+  },
+  "A48_004": {
+    "displayName": "指定主体区分"
+  },
+  "A48_005_ja": {
+    "displayName": "区域名"
+  },
+  "A48_006": {
+    "displayName": "所在地"
+  },
+  "A48_007": {
+    "displayName": "指定理由コード"
+  },
+  "A48_007_name_ja": {
+    "displayName": "指定理由"
+  },
+  "A48_008_ja": {
+    "displayName": "指定理由詳細"
+  },
+  "A48_009": {
+    "displayName": "告示年月日"
+  },
+  "A48_010": {
+    "displayName": "告示番号"
+  },
+  "A48_011": {
+    "displayName": "根拠条例"
+  },
+  "A48_012": {
+    "displayName": "面積"
+  },
+  "A48_013": {
+    "displayName": "縮尺"
+  },
+  "A48_014": {
+    "displayName": "その他"
+  }
+}

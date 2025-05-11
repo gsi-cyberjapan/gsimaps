@@ -1,0 +1,56 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "P04_001": {
+    "displayName": "医療機関分類"
+  },
+  "P04_001_name_ja": {
+    "displayName": "医療機関分類名"
+  },
+  "P04_002_ja": {
+    "displayName": "施設名称"
+  },
+  "P04_003_ja": {
+    "displayName": "所在地"
+  },
+  "P04_004": {
+    "displayName": "診療科目１"
+  },
+  "P04_005": {
+    "displayName": "診療科目２"
+  },
+  "P04_006": {
+    "displayName": "診療科目３"
+  },
+  "P04_007": {
+    "displayName": "開設者分類"
+  },
+  "P04_008": {
+    "displayName": "病床数"
+  },
+  "P04_009": {
+    "displayName": "救急告示病院"
+  },
+  "P04_010": {
+    "displayName": "災害拠点病院"
+  },
+  "medical_subject_ja": {
+    "displayName": "診療科目"
+  },
+  "address": {
+    "displayName": "住所"
+  },
+  "valid_date": {
+    "displayName": "有効期限"
+  }
+}

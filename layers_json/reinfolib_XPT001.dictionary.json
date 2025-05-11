@@ -1,0 +1,29 @@
+{
+  "prefecture": {
+    "displayName": "都道府県名"
+  },
+  "prefecture_code": {
+    "displayName": "都道府県コード"
+  },
+  "city": {
+    "displayName": "市区町村名"
+  },
+  "city_code": {
+    "displayName": "市区町村コード"
+  },
+  "chome": {
+    "displayName": "地区名（町丁・大字）"
+  },
+  "district_name_ja": {
+    "displayName": "地区名"
+  },
+  "u_current_years_price_ja": {
+    "displayName": "単価（円／㎡）"
+  },
+  "previous_years_price": {
+    "displayName": "前年単価（円／㎡）"
+  },
+  "survey_year": {
+    "displayName": "調査年"
+  }
+}
