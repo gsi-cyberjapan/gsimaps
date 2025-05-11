@@ -119,6 +119,9 @@
   "proximity_to_transportation_facilities": {
     "displayName": "交通施設との近接区分"
   },
+  "proximity_to_transportation_facilitites": {
+    "displayName": "交通施設との近接区分"
+  },
   "u_road_distance_to_nearest_station_name_ja": {
     "displayName": "最寄り駅までの道路距離"
   },

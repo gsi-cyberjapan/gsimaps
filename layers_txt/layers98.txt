@@ -2,26 +2,11 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "不動産情報ライブラリ",
+      "title": "不動産情報ライブラリ（試験公開）",
       "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
       "entries": [
-        {
-          "type": "Layer",
-          "id": "reinfolib_XPT001",
-          "title": "不動産価格（取引価格・成約価格）情報",
-          "iconUrl": "",
-          "url": "./layers_json/reinfolib_XPT001.json",
-          "subdomains": "",
-          "attribution": "<a href=\"https://blog.geolonia.com/2025/04/18/mlit-estate-library-proxy-api\">Geolonia</a>（国土交通省<a href=\"https://www.reinfolib.mlit.go.jp/\">不動産情報ライブラリ</a>)",
-          "errorTileUrl": "",
-          "cocotile": false,
-          "minZoom": 2,
-          "manZoom": 20,
-          "legendUrl": "",
-          "html": ""
-        },
         {
           "type": "Layer",
           "id": "reinfolib_XPT002_2024",
@@ -35,7 +20,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -50,7 +35,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -65,7 +50,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
                 {
           "type": "Layer",
@@ -80,7 +65,7 @@
           "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -95,7 +80,7 @@
           "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -110,7 +95,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -125,7 +110,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -140,7 +125,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -155,7 +140,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -170,7 +155,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -185,7 +170,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -200,12 +185,12 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
           "id": "reinfolib_XKT013",
-          "title": "将来推計人口250mメッシュ【国土数値情報】",
+          "title": "将来推計人口250mメッシュ（2070年）【国土数値情報】",
           "iconUrl": "",
           "url": "./layers_json/reinfolib_XKT013.json",
           "subdomains": "",
@@ -215,7 +200,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -230,7 +215,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -245,7 +230,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -260,7 +245,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -275,7 +260,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -290,7 +275,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -305,7 +290,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -320,7 +305,7 @@
           "minZoom": 2,
           "manZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -335,7 +320,7 @@
           "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -350,7 +335,7 @@
           "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         },
         {
           "type": "Layer",
@@ -365,7 +350,7 @@
           "minZoom": 2,
           "maxZoom": 20,
           "legendUrl": "",
-          "html": ""
+          "html": "<a href=\"https://www.reinfolib.mlit.go.jp/help/contents/\">整備時期等の情報</a>"
         }
       ]
     }
