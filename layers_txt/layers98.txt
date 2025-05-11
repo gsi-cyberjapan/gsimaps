@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "11.不動産情報ライブラリ",
+      "title": "不動産情報ライブラリ",
       "iconUrl": "https://maps.qchizu.xyz/image/layers_txt/folder-q.png",
       "toggleall": false,
       "id": "",
