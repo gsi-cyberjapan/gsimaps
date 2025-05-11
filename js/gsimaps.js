@@ -54672,8 +54672,11 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     // スタイルファイルのベース名を取得（パスを除去）
     const styleFileName = styleUrl.split('/').pop();
     
+    // 現在のベースURLを取得してパスを相対化（GitHub Pagesとローカル両方対応）
+    const baseUrl = window.location.pathname.replace(/\/[^\/]*$/, '/');
+    
     // layers_jsonディレクトリにある対応する辞書ファイルのURLを生成
-    const dictionaryUrl = `/layers_json/${styleFileName.replace('.json', '.dictionary.json')}`;
+    const dictionaryUrl = `${baseUrl}layers_json/${styleFileName.replace('.json', '.dictionary.json')}`;
     
     console.log("Loading dictionary from:", dictionaryUrl);
     
