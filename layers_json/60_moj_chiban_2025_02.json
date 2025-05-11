@@ -15,29 +15,8 @@
       "source-layer": "mojxml",
       "type": "fill",
       "paint": {
-        "fill-color": [
-          "case",
-          ["any",
-            ["!=", ["index-of", "水", ["get", "地番"]], -1],
-            ["!=", ["index-of", "川", ["get", "地番"]], -1],
-            ["!=", ["index-of", "河", ["get", "地番"]], -1]
-          ],
-          "rgba(0, 0, 255, 0.5)",
-          ["any",
-            ["!=", ["index-of", "無地番", ["get", "地番"]], -1],
-            ["!=", ["index-of", "鉄道", ["get", "地番"]], -1],
-            ["!=", ["index-of", "国有地", ["get", "地番"]], -1]
-          ],
-          "rgb(0, 0, 0, 0.5)",
-          ["!=", ["index-of", "堤", ["get", "地番"]], -1],
-          "rgb(134, 74, 43, 0.5)",
-          ["!=", ["index-of", "長狭物不明", ["get", "地番"]], -1],
-          "rgba(255, 255, 0, 0.5)",
-          ["!=", ["index-of", "道", ["get", "地番"]], -1],
-          "rgba(255, 0, 0, 0.5)",
-          "rgb(128, 0, 128, 0.1)"
-        ],
-        "fill-opacity": 1
+        "fill-color": "rgb(0, 0, 0)",
+        "fill-opacity": 0
       },
       "layout": {
         "visibility": "visible"

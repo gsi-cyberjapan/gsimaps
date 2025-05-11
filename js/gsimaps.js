@@ -54912,12 +54912,6 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
 
   //----- クリックとポップアップ処理 -----//
 
-  // 地物がポイントかどうかを判定する関数
-  _isPointFeature: function(feature) {
-    if (!feature || !feature.geometry) return false;
-    return feature.geometry.type === 'Point';
-  },
-
   // 地図クリック時の処理
   _onClick: function (e) {
     if (!this._glMap) return;
@@ -54967,19 +54961,8 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
       
       // 最上位の地物が存在する場合、ポップアップを表示
       if (topFeature && topLayer) {
-        // ポイント判定と位置情報の取得
-        const isPoint = topLayer._isPointFeature(topFeature);
-        let pointLocation = null;
-        
-        if (isPoint && topFeature.geometry && topFeature.geometry.coordinates) {
-          pointLocation = {
-            lng: topFeature.geometry.coordinates[0],
-            lat: topFeature.geometry.coordinates[1]
-          };
-        }
-
         // ポップアップを作成して表示
-        const html = topLayer._createPopupContent(topFeature.properties, isPoint, pointLocation);
+        const html = topLayer._createPopupContent(topFeature.properties);
         const popup = document.createElement('div');
         popup.id = 'custom-popup';
         popup.className = 'custom-popup';
@@ -55001,8 +54984,8 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     }
   },
   
-  // ポップアップの内容を作成する処理の修正
-  _createPopupContent: function (properties, isPoint, pointLocation) {
+  // ポップアップの内容を作成する処理
+  _createPopupContent: function (properties) {
     if (!properties) return 'No properties found';
 
     let html = '<div class="maplibregl-popup-content-wrapper">';
@@ -55022,19 +55005,6 @@ GSI.PMTileLayer = L.MaplibreGL.extend({
     html += '<button class="popup-close-btn" onclick="document.getElementById(\'custom-popup\').remove()">×</button>';
     html += '</div>';
     html += '<div class="popup-body">';
-
-    // ポイント地物の場合はストリートビューへのリンクを表示
-    if (isPoint && pointLocation) {
-      html += `
-        <div class="streetview-link">
-          <a href="https://www.google.com/maps/@?api=1&map_action=pano&parameters&viewpoint=${pointLocation.lat},${pointLocation.lng}" 
-            target="_blank" rel="noopener noreferrer">
-            Googleストリートビュー
-          </a>
-        </div>
-      `;
-    }
-    
     html += '<table class="maplibregl-popup-content-table">';
     
     // プロパティの内容をテーブルで表示（翻訳機能を追加）
