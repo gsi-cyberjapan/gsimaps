@@ -33,7 +33,15 @@
     "displayName": "対象年"
   },
   "land_price_type": {
-    "displayName": "地価区分"
+    "displayName": "地価区分",
+    "values": {
+      "0": {
+        "displayName": "国土交通省地価公示"
+      },
+      "1": {
+        "displayName": "都道府県地価調査"
+      }
+    }
   },
   "use_category_name_ja": {
     "displayName": "用途区分名"
