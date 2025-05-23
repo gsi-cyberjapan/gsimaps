@@ -166,6 +166,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_nks": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_nks/vlcd_nks.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_nks/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_kusatsu": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_kusatsu/vlcd_kusatsu.csv",
     "layer": {
@@ -178,6 +186,14 @@ CONFIG.HANREILIST = {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_asamayama/vlcd_asamayama.csv",
     "layer": {
       "url": "https://maps.gsi.go.jp/xyz/vlcd_asamayama/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
+    "vlcd_mdg": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_mdg/vlcd_mdg.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_mdg/{z}/{x}/{y}.png",
       "minZoom": 10,
       "maxZoom": 16
     }

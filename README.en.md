@@ -19,7 +19,7 @@ Howerver, some important functions such as a function to handle vector tile data
 ## Remarks
 - This repository provides the source code of "GSI Maps" https://maps.gsi.go.jp/ operated by GSI (Geospatial Information Authority of Japan.)
 - As for Leaflet, jQuery, or all other existing software included in this repository, the [Licenses for the respective projects](LICENSE_LIBRARIES.md) applies.
-- According to <a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>GSI Contents License</a> which is based on the Japanese Government's Standard License, 2-clause BSD license, which is the same as Leaflet's, applies for the work by GSI.
+- According to <a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>GSI Contents License</a> which is based on the Public Data License (Version 1.0), 2-clause BSD license, which is the same as Leaflet's, applies for the work by GSI.
 - All the pull requests will be subject to 2-clause BSD License with a credit of GSI after we merge respective pull requests.
 - gsimaps uses <a href='http://newspat.csis.u-tokyo.ac.jp/geocode/'>the serveice operated by CSIS, University of Tokyo</a>.
 - Server-side services called from gsimaps are NOT guaranteed to be always in operation, and are NOT guaranteed to be persistently in operation. 
