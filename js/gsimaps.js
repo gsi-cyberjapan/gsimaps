@@ -28000,15 +28000,16 @@ _createLinkContainer: function (parentContainer) {
   var initialOption = $("<option>").text("=公的=").prop("disabled", true).prop("selected", true);
   var option1 = $("<option>").text("地理院地図").attr("title","【地理院】地理院地図");
   var option2 = $("<option>").text("vector").attr("title","【地理院】地理院地図vector");
-  var option3 = $("<option>").text("地図・写真").attr("title","【地理院】地図・空中写真閲覧サービス");
-  var option4 = $("<option>").text("ﾊｻﾞｰﾄﾞﾏｯﾌﾟ").attr("title","【地理院】重ねるハザードマップ");
-  var option5 = $("<option>").text("基準点").attr("title","【地理院】基準点成果等閲覧サービス");
-  var option6 = $("<option>").text("ひなたGIS").attr("title","【宮崎県】ひなたGIS");
-  var option7 = $("<option>").text("地質図Navi").attr("title","【産総研】地質図Navi");
-  var option8 = $("<option>").text("ｼｰﾑﾚｽ地質図").attr("title","【産総研】日本シームレス地質図V2");
-  var option9 = $("<option>").text("J-SHIS").attr("title","【防災科研】J-SHIS Map");
-  var option10 = $("<option>").text("文化財総覧").attr("title","【奈文研】文化財総覧WebGIS");
-  selectBox1.append(initialOption).append(option1).append(option2).append(option3).append(option4).append(option5).append(option6).append(option7).append(option8).append(option9).append(option10);
+  var option3 = $("<option>").text("点群ﾀｲﾙ").attr("title","【地理院】点群タイル閲覧サイト試験公開");
+  var option4 = $("<option>").text("地図・写真").attr("title","【地理院】地図・空中写真閲覧サービス");
+  var option5 = $("<option>").text("ﾊｻﾞｰﾄﾞﾏｯﾌﾟ").attr("title","【地理院】重ねるハザードマップ");
+  var option6 = $("<option>").text("基準点").attr("title","【地理院】基準点成果等閲覧サービス");
+  var option7 = $("<option>").text("ひなたGIS").attr("title","【宮崎県】ひなたGIS");
+  var option8 = $("<option>").text("地質図Navi").attr("title","【産総研】地質図Navi");
+  var option9 = $("<option>").text("ｼｰﾑﾚｽ地質図").attr("title","【産総研】日本シームレス地質図V2");
+  var option10 = $("<option>").text("J-SHIS").attr("title","【防災科研】J-SHIS Map");
+  var option11 = $("<option>").text("文化財総覧").attr("title","【奈文研】文化財総覧WebGIS");
+  selectBox1.append(initialOption).append(option1).append(option2).append(option3).append(option4).append(option5).append(option6).append(option7).append(option8).append(option9).append(option10).append(option11);
   this._goLink1Button = createButton("GO", "選択したリンク先を開く").attr({"id": "goLink1Button"}).css("width",linkButtonWidth);
 
   var selectBox2 = $("<select>").attr({"id": "link2" ,style:"width: " + selectBoxWidth + ";"});
@@ -28039,11 +28040,9 @@ _createLinkContainer: function (parentContainer) {
   var initialOption = $("<option>").text("=個人=").prop("disabled", true).prop("selected", true);
   var option1 = $("<option>").text("MapLibre版").attr("title","全国Ｑ地図MapLibre版");
   var option2 = $("<option>").text("o-hinata").attr("title","【kenzkenz】open-hinata");
-  var option3 = $("<option>").text("shi法務局").attr("title","【【shi-works】法務局地図XML(PMTiles)");
-  var option4 = $("<option>").text("shiハザード").attr("title","【shi-works】ハザードマップ(PMTiles)");
-  var option5 = $("<option>").text("昔の境界").attr("title","【地図地理Sandbox】むかしの市町村境界マップ");
-  var option6 = $("<option>").text("スーパー地形").attr("title","【地理院】スーパー地形");
-  selectBox3.append(initialOption).append(option1).append(option2).append(option3).append(option4).append(option5);
+  var option3 = $("<option>").text("昔の境界").attr("title","【地図地理Sandbox】むかしの市町村境界マップ");
+  var option4 = $("<option>").text("スーパー地形").attr("title","【地理院】スーパー地形");
+  selectBox3.append(initialOption).append(option1).append(option2).append(option3).append(option4);
   if (CONFIG.MOBILE) {selectBox3.append(option6)};
   this._goLink3Button = createButton("GO", "選択したリンク先を開く").attr({"id": "goLink3Button"}).css("width",linkButtonWidth);
 
@@ -28215,9 +28214,10 @@ _createLinkContainer: function (parentContainer) {
     var link1Url = {
       "地理院地図": "https://maps.gsi.go.jp/#" + z + "/" + lat + "/" + lng,
       "vector": "https://maps.gsi.go.jp/vector/#" + (z-1) + "/" + lat + "/" + lng + "/&ls=vstd&disp=1&d=l",
-      "地図・写真": "https://mapps.gsi.go.jp/maplibSearch.do?centerLat=" + lat + "&centerLon=" + lng + "&zoomLevel=" + z + "&did=pale",
+      "点群ﾀｲﾙ": "https://gsi-cyberjapan.github.io/3dpc-3dtiles/#" + (z-1) + "/" + lat + "/" + lng,
+      "地図・写真": "https://service.gsi.go.jp/map-photos/app/map?search=map#" + z + "/" + lat + "/" + lng,
       "ﾊｻﾞｰﾄﾞﾏｯﾌﾟ": "https://disaportal.gsi.go.jp/maps/?ll=" + lat + "," + lng + "&z=" + z + "&base=pale&vs=c1j0l0u0",
-      "基準点": "https://sokuseikagis1.gsi.go.jp/index.aspx#" + z + "/" + lat + "/" + lng + "/&base=std&ls=std&disp=1&vs=c1z0f0",
+      "基準点": "https://service.gsi.go.jp/kijunten/app/map/#" + z + "/" + lat + "/" + lng,
       "ひなたGIS": "https://hgis.pref.miyazaki.lg.jp/hinata/hinata.html#" + z + "/" + lat + "/" + lng + "&l=%5B%5B%7B%22n%22:%22pale%22,%22o%22:1,%22z%22:-2%7D,%7B%22n%22:%22MapWarperStanford%22,%22o%22:1,%22z%22:0%7D%5D,%5B%7B%22n%22:%22pale%22,%22o%22:1,%22z%22:151%7D%5D%5D",
       "地質図Navi": "https://gbank.gsj.jp/geonavi/geonavi.php#" + z + "," + lat + "," + lng,
       "ｼｰﾑﾚｽ地質図": "https://gbank.gsj.jp/seamless/v2/viewer/?center=" + lat + "%2C" + lng + "&z=" + Math.min(z,13),
@@ -28247,7 +28247,6 @@ _createLinkContainer: function (parentContainer) {
       "今昔マップ": "https://ktgis.net/kjmapw/kjmapw.html?lat="+lat+"&lng="+lng+"&zoom="+z+"&mapOpacity=10&overGSItile=no&altitudeOpacity=2",
       "地価マップ": "https://www.chikamap.jp/chikamap/Map?mid=222&bsw=1903&bsh=977" + "&mpx=" + japanP.x + "&mpy=" + japanP.y + "&mps=" + wagmapZL[z],
       "ヤマタイム": "https://www.yamakei-online.com/yk_map/?latlon=" + lat + "," + lng + "&zoom=" + Math.min(z,17),
-      "docomoエリア": "https://www.docomo.ne.jp/area/servicearea/?rgcd=03&cmcd=5G&scale=2048000&lat=35.690767&lot=139.756853&icid=CRP_IPH_area-5g_to_CRP_AREA_servicearea",
       "at home賃貸": "https://www.athome.co.jp/chintai/fukuoka/map/list/?LAT=" + lat + "&LON=" + lng,
     };
     $("#goLink2Button").attr('href', link2Url[selectedLink2]);
