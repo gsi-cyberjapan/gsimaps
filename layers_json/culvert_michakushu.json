@@ -1,0 +1,73 @@
+{
+  "version": 8,
+  "name": "culvert",
+  "metadata": {"maputnik:renderer": "mlgljs"},
+  "sources": {
+    "culvert": {
+      "type": "vector",
+      "tiles": [
+        "https://mapdata.qchizu.xyz/04_thematic/55_mlit/road_structures_culvert_2024/{z}/{x}/{y}.pbf"
+      ],
+      "maxzoom": 13,
+      "attribution": ""
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "point",
+      "type": "circle",
+      "source": "culvert",
+      "source-layer": "culvert",
+      "minzoom": 2,
+      "maxzoom": 20,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "circle-radius": {"stops": [[4, 1], [11, 4]]},
+        "circle-color": "#A40035",
+        "circle-opacity": 0.8
+      },
+      "filter": ["!=", ["index-of", "措置未着手", ["get", "措置状況"]], -1]
+    },
+    {
+      "id": "label",
+      "type": "symbol",
+      "source": "culvert",
+      "source-layer": "culvert",
+      "minzoom": 14,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "step",
+          ["zoom"],
+          [
+            "coalesce",
+            ["get", "施設名"],
+            ""
+          ],
+          15,
+          [
+            "concat",
+            ["coalesce", ["get", "施設名"], ""],
+            "【",
+            ["coalesce", ["get", "施設名よみ"], ""],
+            "】"
+          ]
+       ],
+        "text-size": 16,
+        "text-anchor": "left",
+        "text-offset": [0.3, 0],
+        "text-font": ["Noto Sans CJK JP Regular"],
+        "visibility": "visible",
+        "text-allow-overlap": ["step", ["zoom"], false, 16, true],
+        "text-max-width": 100
+      },
+      "paint": {
+        "text-color": "#A40035",
+        "text-halo-color": "rgba(255, 255, 255, 0.8)",
+        "text-halo-width": 1.5
+      },
+      "filter": ["!=", ["index-of", "措置未着手", ["get", "措置状況"]], -1]
+    }
+  ]
+}
