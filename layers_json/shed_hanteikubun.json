@@ -1,0 +1,68 @@
+{
+  "version": 8,
+  "name": "shed",
+  "metadata": {"maputnik:renderer": "mlgljs"},
+  "sources": {
+    "shed": {
+      "type": "vector",
+      "tiles": [
+        "https://mapdata.qchizu.xyz/04_thematic/55_mlit/road_structures_shed_2024/{z}/{x}/{y}.pbf"
+      ],
+      "maxzoom": 13,
+      "attribution": ""
+    }
+  },
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "point",
+      "type": "circle",
+      "source": "shed",
+      "source-layer": "shed",
+      "minzoom": 2,
+      "maxzoom": 20,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "circle-radius": {"stops": [[4, 1], [12, 4], [13, 8], [15, 12]]},
+        "circle-color": [
+          "match",
+          ["get", "判定区分"],
+          "Ⅰ", "rgb(33,100,255)",
+          "Ⅱ", "rgb(0,170,0)",
+            "Ⅲ", "rgb(220,80,0)",
+          "Ⅳ", "rgb(106,0,95)",
+          "未点検", "rgb(153,153,153)",
+          "点検対象外", "rgb(153,153,153)",
+          "rgb(153,153,153)"
+        ],
+        "circle-opacity": 0.9
+      }
+    },
+    {
+      "id": "hantei-kubun",
+      "type": "symbol",
+      "source": "shed",
+      "source-layer": "shed",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "layout": {
+        "text-field": [
+          "match",
+          ["get", "判定区分"],
+          "未点検", "未",
+          "点検対象外", "外",
+          ["get", "判定区分"]
+        ],
+        "text-font": ["Noto Sans CJK JP Bold"],
+        "text-size": {"stops": [[13, 10], [15, 13]]},
+        "visibility": "visible",
+        "text-allow-overlap": true
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "rgba(0, 0, 0, 0)",
+        "text-halo-width": 0
+      }
+    }
+  ]
+}
