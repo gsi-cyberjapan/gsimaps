@@ -1,29 +1,80 @@
 {
-  "prefecture": {
-    "displayName": "都道府県名"
+  "price_information_cagegory_name_ja": {
+    "displayName": "価格情報区分"
   },
-  "prefecture_code": {
-    "displayName": "都道府県コード"
-  },
-  "city": {
-    "displayName": "市区町村名"
+  "district_code": {
+    "displayName": "地区コード"
   },
   "city_code": {
     "displayName": "市区町村コード"
   },
-  "chome": {
-    "displayName": "地区名（町丁・大字）"
+  "prefecture_name_ja": {
+    "displayName": "都道府県名"
+  },
+  "city_name_ja": {
+    "displayName": "市区町村名"
   },
   "district_name_ja": {
     "displayName": "地区名"
   },
-  "u_current_years_price_ja": {
-    "displayName": "単価（円／㎡）"
+  "u_transaction_price_total_ja": {
+    "displayName": "取引価格（総額）"
   },
-  "previous_years_price": {
-    "displayName": "前年単価（円／㎡）"
+  "u_unit_price_per_tsubo_ja": {
+    "displayName": "坪単価"
   },
-  "survey_year": {
-    "displayName": "調査年"
+  "floor_plan_name_ja": {
+    "displayName": "間取り"
+  },
+  "u_area_ja": {
+    "displayName": "面積"
+  },
+  "u_transaction_price_unit_price_square_meter_ja": {
+    "displayName": "取引価格（平方メートル単価）"
+  },
+  "land_shape_name_ja": {
+    "displayName": "土地の形状"
+  },
+  "u_land_frontage_ja": {
+    "displayName": "間口"
+  },
+  "u_building_total_floor_area_ja": {
+    "displayName": "建物の延床面積"
+  },
+  "u_construction_year_ja": {
+    "displayName": "建築年"
+  },
+  "building_structure_name_ja": {
+    "displayName": "建物の構造"
+  },
+  "land_use_name_ja": {
+    "displayName": "用途地域"
+  },
+  "future_use_purpose_name_ja": {
+    "displayName": "今後の利用目的"
+  },
+  "front_road_azimuth_name_ja": {
+    "displayName": "前面道路の方位"
+  },
+  "front_road_type_name_ja": {
+    "displayName": "前面道路の種類"
+  },
+  "u_front_road_width_ja": {
+    "displayName": "前面道路の幅員"
+  },
+  "u_building_coverage_ratio_ja": {
+    "displayName": "建蔽率"
+  },
+  "u_floor_area_ratio_ja": {
+    "displayName": "容積率"
+  },
+  "point_in_time_name_ja": {
+    "displayName": "取引時点"
+  },
+  "remark_renovation_name_ja": {
+    "displayName": "改装"
+  },
+  "transaction_contents_name_ja": {
+    "displayName": "取引の事情等"
   }
 }
