@@ -1,0 +1,65 @@
+{
+  "link_key": {
+    "displayName": "リンクキー"
+  },
+  "as_of_ymd": {
+    "displayName": "データ時点"
+  },
+  "keikakuku_": {
+    "displayName": "森林計画区"
+  },
+  "city_name": {
+    "displayName": "市町村"
+  },
+  "ooaza_name": {
+    "displayName": "大字"
+  },
+  "aza": {
+    "displayName": "字"
+  },
+  "rin": {
+    "displayName": "林班"
+  },
+  "syohan": {
+    "displayName": "小班"
+  },
+  "syohan_eda": {
+    "displayName": "小班枝番"
+  },
+  "syohan_ho": {
+    "displayName": "小班補番"
+  },
+  "hoban_men": {
+    "displayName": "面積"
+  },
+  "zyusyu_nam": {
+    "displayName": "樹種"
+  },
+  "rinrei": {
+    "displayName": "林齢"
+  },
+  "kousin_y": {
+    "displayName": "更新年度"
+  },
+  "reikyu": {
+    "displayName": "齢級"
+  },
+  "rinsyu_nam": {
+    "displayName": "林種"
+  },
+  "growth": {
+    "displayName": "施業方法による区分"
+  },
+  "growth_so": {
+    "displayName": "層区分"
+  },
+  "label": {
+    "displayName": "地図表示用ラベル"
+  },
+  "st_area_sh": {
+    "displayName": "ｈａ当たり成長量"
+  },
+  "st_length_": {
+    "displayName": "総成長量"
+  }
+}
