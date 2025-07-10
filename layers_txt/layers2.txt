@@ -16,7 +16,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 15,
           "legendUrl": "https://maps.gsi.go.jp/legend/attension_relief.html",
-          "html": "<div class='layer_text'><p>標高に応じて色分けした地図です。広い範囲を起伏を理解するのに適しています。</p></div>"
+          "html": "<div class='layer_text'><p>標高に応じて色分けした地図です。広い範囲の起伏を理解するのに適しています。</p></div>"
         },
         {
           "type": "Layer",
@@ -1778,7 +1778,7 @@
           "minZoom": 2,
           "maxZoom": 16,
           "maxNativeZoom": 14,
-          "html": "<div class='layer_text'><p>起伏がよくわかる地図です。アジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</p></div>"
+          "html": "<div class='layer_text'><p>地形の起伏を赤色の濃淡で表した地図で、微地形を把握するのに適しています。</p></div>"
         },
         {
           "type": "Layer",

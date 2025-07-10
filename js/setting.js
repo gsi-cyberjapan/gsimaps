@@ -405,27 +405,6 @@ CONFIG.CONFIRM_LAYERS = {
       "kokuarea_minkankunren"
     ]
   },
-  "red": {
-    "title": "ご利用上の注意",
-    "message": "赤色立体地図及びオルソ立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。" +
-      "赤色立体地図及びオルソ立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、" +
-      "<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。",
-    "withBlend": true,
-    "layers": [
-      "red",
-      "20190121_sekisyokurittai_kusatsushiranesan",
-      "20190121_olsorittai_kusatsushiranesan",
-      "oosimared",
-      "miyakejimared",
-      "20180906hokkaido_atsuma_sekishoku",
-      "tarumaered",
-      "20180130_kusatsushiranesan_sekishokurittai",
-      "20180309_sekisyokurittai_kirishima",
-      "kuchinoerabured",
-      "2018_sekisyokurittai_azumayama",
-      "20190807asama_sekisyoku"
-    ]
-  },
   "lakechart": {
     "title": "免責事項・ご利用上の注意",
     "message": "湖沼データの湖岸線等は湖沼調査時点のものであり電子地形図と異なる場合があります。​" +

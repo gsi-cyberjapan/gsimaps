@@ -77,7 +77,7 @@
                   "cocotile": true,
                   "minZoom": 2,
                   "maxZoom": 18,
-                  "html": "<div class=\"gsi_layerinfo_title\">本図はアジア航測株式会社の赤色立体地図作成手法（特許3670274、特許4272146）を使用し、国土地理院が作成したものである。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                  "html": "<div class=\"gsi_layerinfo_title\">赤色立体地図</div><div class=\"gsi_layerinfo_kaisetu\">地形の起伏を赤色の濃淡で表した地図で、微地形を把握するのに適しています。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 },
                 {
                   "type": "LayerGroup",
@@ -156,7 +156,7 @@
 	          "type": "LayerGroup",
 	          "title": "火山基本図データ",
 	          "toggleall": false,
-	          "entries": [            
+	          "entries": [
 	            {
 	              "type": "Layer",
 	              "id": "vbmd_bm",
@@ -166,7 +166,7 @@
 	              "minZoom": 2,
 	              "maxZoom": 18,
 	              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（基図）　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\" target=\"_blank\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><form name=\"vbmd_bm_legend\"><select name=\"vbmd_bm_select\" ><option value=\"l_vbmd_bm_esan\">恵山</option><option value=\"l_vbmd_bm_kurikoma\">栗駒山</option><option value=\"l_vbmd_bm_hakone\">箱根山</option><option value=\"l_vbmd_bm_nishinoshima\">西之島</option><option value=\"l_vbmd_bm_niijima\">新島</option><option value=\"l_vbmd_bm_hachijojima\">八丈島</option><option value=\"l_vbmd_bm_niigatayakeyama\">新潟焼山</option><option value=\"l_vbmd_bm_midagahara\">弥陀ヶ原</option><option value=\"l_vbmd_bm_yakedake\">焼岳</option><option value=\"l_vbmd_bm_kirishimayama\">霧島山</option><option value=\"l_vbmd_bm_sakurajima\">桜島</option><option value=\"l_vbmd_bm_kuchinoerabujima\">口永良部島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_bm_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-	            },            
+	            },
 	            {
 	              "type": "Layer",
 	              "id": "vbmd_colorrel",
@@ -176,7 +176,7 @@
 	              "minZoom": 2,
 	              "maxZoom": 18,
 	              "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（陰影段彩図）　<a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><form name=\"vbmd_relieaf_legend\"><select name=\"vbmd_relief_select\" ><option value=\"l_vbmd_relief_nishinoshima\">西之島</option><option value=\"l_vbmd_relief_niijima\">新島</option><option value=\"l_vbmd_relief_hachijojima\">八丈島</option><option value=\"l_vbmd_relief_niigatayakeyama\">新潟焼山</option><option value=\"l_vbmd_relief_midagahara\">弥陀ヶ原</option><option value=\"l_vbmd_relief_yakedake\">焼岳</option><option value=\"l_vbmd_relief_kirishimayama\">霧島山</option><option value=\"l_vbmd_relief_sakurajima\">桜島</option><option value=\"l_vbmd_relief_kuchinoerabujima\">口永良部島</option></select><input type=\"button\" value=\"標高表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmd_relief_select.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-	            },            
+	            },
 	            {
 	              "type": "Layer",
 	              "id": "vbmd_pm",
@@ -199,5 +199,5 @@
                   "legendUrl": "https://maps.gsi.go.jp/legend/l_vlcd_8krsm.jpg",
                   "html": "<div class=\"gsi_layerinfo_title\">火山土地条件図「霧島山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vlcm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
-  ]          
+  ]
 }

@@ -32,8 +32,122 @@
               "maxZoom": 16,
               "maxNativeZoom": 2,
               "html": "図上クリックすると諸元が表示されます。<br><a href=\"http://www.gsi.go.jp/bousaichiri/inspection.html\" target=\"_blank\">整備一覧</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "active_fault_jishinhonbu",
+              "title": "全国の主要活断層帯（地震調査研究推進本部）",
+              "url": "https://maps.gsi.go.jp/xyz/active_fault/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 11,
+              "maxNativeZoom": 2,
+              "html": "<div class='layer_text'><p>地震調査研究推進本部で公表している主要活断層帯のトレースです（ズームレベル2～11で表示されます）。ご利用にあたっては、地震調査研究推進本部の<a target='_blank' href='https://www.jishin.go.jp/agreement/'>ウェブサイト</a>をご確認ください。</p></div>"
             }
           ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "地形分類（ベクトルタイル提供実験）",
+          "html" : "<div class='layer_text'>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification1",
+              "title": "地形分類（自然地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地形分類（自然地形）は表示するズームレベルにより、以下の3段階に分けられます。</p></div>ズームレベル5～8『広域版』：全国の大分類地形（山地・丘陵、火山地形、台地・段丘、低地ほか）を見ることができます。</p></div>ズームレベル9～13『地域版』：全国の中分類地形（山地、火山地形（明瞭・やや不明瞭）、丘陵・小起伏地、台地･段丘、低地ほか）を見ることができます。</p></div>ズームレベル14～16『詳細版』：主要な平野部について更に細かい地形分類を見ることができます。『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</p></div>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='https://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification3",
+              "title": "諸元情報（自然地形『詳細版』）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification3/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 13,
+              "maxNativeZoom": 13,
+              "html":"<div class='layer_text'><p>地図上をクリックすると「地形分類（自然地形）」のズームレベル14～16で表示される『詳細版』の諸元情報が表示されます。</p></div>『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</a>"
+            },
+            {
+              "type": "Layer",
+              "id": "experimental_landformclassification2",
+              "title": "地形分類（人工地形）",
+              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "html": "<div class='layer_text'><p>地図上をクリックすると「切土地」「盛土地」などが分かります。</p></div>数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "土地条件図",
+          "html" : "<div class='layer_text'><p>土地を形態、成り立ちなどによって、地形分類（山地、台地・段丘、低地、水部、人工地形など）した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "lcm25k_2012",
+              "title": "数値地図25000（土地条件）",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 4,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcm25k",
+              "title": "初期整備版",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "lcm25k_spec",
+              "title": "初期整備版 諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "legendUrl": "",
+              "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+           "type": "Layer",
+           "id": "lcmfc2",
+           "title": "治水地形分類図",
+           "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+           "cocotile": true,
+           "minZoom": 5,
+           "maxZoom": 16,
+           "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg\">凡例を表示</a></div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "swale",
+          "title": "明治期の低湿地",
+          "url": "https://maps.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "toggleall": false,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "legendUrl": "https://maps.gsi.go.jp/legend/lw_legend.pdf",
+          "html": "<div class='layer_text'><p>明治期の地図から、当時の低湿地の分布を示した地図です。土地の液状化と関連が深いと考えられる区域を確認できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div>"
         },
         {
           "type": "LayerGroup",
@@ -607,151 +721,6 @@
         },
         {
           "type": "LayerGroup",
-          "title": "土地条件図",
-          "html" : "<div class='layer_text'><p>土地を形態、成り立ちなどによって、地形分類（山地、台地・段丘、低地、水部、人工地形など）した地図です。</p></div>",
-          "toggleall": false,
-          "entries": [
-            {
-              "type": "Layer",
-              "id": "lcm25k_2012",
-              "title": "数値地図25000（土地条件）",
-              "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "minZoom": 4,
-              "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/lcm25k_2012/lc_legend.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 数値地図25000(土地条件)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_cd25000.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
-              "id": "lcm25k",
-              "title": "初期整備版",
-              "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "maxZoom": 16,
-              "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
-              "id": "lcm25k_spec",
-              "title": "初期整備版 諸元情報",
-              "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
-              "cocotile": true,
-              "maxZoom": 16,
-              "maxNativeZoom": 2,
-              "legendUrl": "",
-              "html": "<div class=\"gsi_layerinfo_title\">初期整備版 諸元情報</div><div class=\"gsi_layerinfo_kaisetu\">図上をクリックすると諸元が表示されます。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">整備一覧</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }
-          ]
-        },
-        {
-          "type": "LayerGroup",
-          "title": "沿岸海域土地条件図",
-          "html" : "<div class='layer_text'><p>沿岸部の地形や水深などを表した地図です。</p></div>",
-          "toggleall": false,
-          "entries": [
-            {
-              "type": "Layer",
-              "id": "ccm1",
-              "title": "平成元年以降",
-              "url": "https://maps.gsi.go.jp/xyz/ccm1/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/CCM2_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            },
-            {
-              "type": "Layer",
-              "id": "ccm2",
-              "title": "昭和63年以前",
-              "url": "https://maps.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
-              "cocotile": true,
-              "maxZoom": 16,
-              "legendUrl": "https://maps.gsi.go.jp/legend/CCM1_hanrei.pdf",
-              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-            }
-          ]
-        },
-        {
-           "type": "Layer",
-           "id": "lcmfc2",
-           "title": "治水地形分類図",
-           "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
-           "cocotile": true,
-           "minZoom": 5,
-           "maxZoom": 16,
-           "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg\">凡例を表示</a></div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-        },
-        {
-          "type": "LayerGroup",
-          "title": "地形分類（ベクトルタイル提供実験）",
-          "html" : "<div class='layer_text'>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</div>",
-          "toggleall": false,
-          "entries": [
-            {
-              "type": "Layer",
-              "id": "experimental_landformclassification1",
-              "title": "地形分類（自然地形）",
-              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
-              "cocotile": true,
-              "minZoom": 5,
-              "maxZoom": 16,
-              "maxNativeZoom": 16,
-              "html": "<div class='layer_text'><p>地形分類（自然地形）は表示するズームレベルにより、以下の3段階に分けられます。</p></div>ズームレベル5～8『広域版』：全国の大分類地形（山地・丘陵、火山地形、台地・段丘、低地ほか）を見ることができます。</p></div>ズームレベル9～13『地域版』：全国の中分類地形（山地、火山地形（明瞭・やや不明瞭）、丘陵・小起伏地、台地･段丘、低地ほか）を見ることができます。</p></div>ズームレベル14～16『詳細版』：主要な平野部について更に細かい地形分類を見ることができます。『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</p></div>地図上をクリックすると「扇状地」「氾濫平野」といった地形分類と、その地形分類の成り立ち、災害リスクが分かります。</p></div>なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='https://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
-            },
-            {
-              "type": "Layer",
-              "id": "experimental_landformclassification3",
-              "title": "諸元情報（自然地形『詳細版』）",
-              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification3/{z}/{x}/{y}.geojson",
-              "cocotile": true,
-              "minZoom": 5,
-              "maxZoom": 13,
-              "maxNativeZoom": 13,
-              "html":"<div class='layer_text'><p>地図上をクリックすると「地形分類（自然地形）」のズームレベル14～16で表示される『詳細版』の諸元情報が表示されます。</p></div>『詳細版』は数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。</a>"
-            },
-            {
-              "type": "Layer",
-              "id": "experimental_landformclassification2",
-              "title": "地形分類（人工地形）",
-              "url": "https://maps.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
-              "cocotile": true,
-              "minZoom": 5,
-              "maxZoom": 16,
-              "maxNativeZoom": 16,
-              "html": "<div class='layer_text'><p>地図上をクリックすると「切土地」「盛土地」などが分かります。</p></div>数値地図25000（土地条件）、脆弱地形調査及び治水地形分類図のデータより作成しています。ズームレベル14～16で表示されます。なお、表示される内容は、調査時点のものであり、最新の状況と異なる場合があることをご了承ください。<br><a target='_blank' href='https://github.com/gsi-cyberjapan/experimental_landformclassification'>ベクトルタイル提供実験</a><br>凡例は地図上をクリックするとポップアップで表示されます。<br><a target='_blank' href='http://www.gsi.go.jp/bousaichiri/lfc_index.html'>解説</a>"
-            }
-          ]
-        },
-        {
-          "type": "LayerGroup",
-          "title": "土地分類基本調査（土地履歴調査）－政策統括官付",
-          "html" : "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
-          "toggleall": false,
-          "src": "./layers_tochibunrui.txt"
-        },
-        {
-          "type": "LayerGroup",
-          "title": "地質図－産総研地質調査総合センター",
-          "html" : "<div class='layer_text'><p>全国の地質図を表示します。</p></div>",
-          "toggleall": false,
-          "src": "./layers_gsj.txt"
-        },
-        {
-          "type": "Layer",
-          "id": "swale",
-          "title": "明治期の低湿地",
-          "url": "https://maps.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png",
-          "cocotile": true,
-          "toggleall": false,
-          "minZoom": 5,
-          "maxZoom": 16,
-          "legendUrl": "https://maps.gsi.go.jp/legend/lw_legend.pdf",
-          "html": "<div class='layer_text'><p>明治期の地図から、当時の低湿地の分布を示した地図です。土地の液状化と関連が深いと考えられる区域を確認できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div>"
-        },
-        {
-          "type": "LayerGroup",
           "title": "湖沼図・湖沼データ",
           "html" : "<div class='layer_text'>湖沼の地形（深さ、起伏）や植生などを示した地図です。</div>",
           "toggleall": false,
@@ -873,6 +842,34 @@
               "maxZoom": 13,
               "maxNativeZoom": 2,
               "html": "<div class=\"gsi_layerinfo_title\">日本の典型地形（その他の地形）</div><div>詳細は<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikaku/tenkei_sonota.html\">こちら</a></div><br>地形項目：<br>隆起準平原、準平原遺物、鋸歯状山稜、キレット、大規模崩壊地、崩壊地、崩壊堆積地形、土石流堆積地形、崖錐、風穴、ペディメント、鉄穴流し跡、高層湿原・池塘、中間湿原、低層湿原、湖沼、堰止湖、厚い段丘礫層、地層等の見える大露頭、指標テフラの見える露頭、断層露頭、不整合露頭<br><br>※本データは平成7～11年に実施した「日本の典型的地形に関する調査」の成果を基に作成しています。<br>※一部の地形の説明には広辞苑（「広辞苑（第六版）平成20年1月、岩波書店」）を参考にしています。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "沿岸海域土地条件図",
+          "html" : "<div class='layer_text'><p>沿岸部の地形や水深などを表した地図です。</p></div>",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "ccm1",
+              "title": "平成元年以降",
+              "url": "https://maps.gsi.go.jp/xyz/ccm1/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/CCM2_hanrei.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 平成元年以降</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "ccm2",
+              "title": "昭和63年以前",
+              "url": "https://maps.gsi.go.jp/xyz/ccm2/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "maxZoom": 16,
+              "legendUrl": "https://maps.gsi.go.jp/legend/CCM1_hanrei.pdf",
+              "html": "<div class=\"gsi_layerinfo_title\">沿岸海域土地条件図 - 昭和63年以前</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/engan16.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             }
           ]
         },
@@ -2341,6 +2338,13 @@
               ]
             }
           ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "土地分類基本調査（土地履歴調査）（国土交通省政策統括官）",
+          "html" : "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
+          "toggleall": false,
+          "src": "./layers_tochibunrui.txt"
         }
       ]
     }
