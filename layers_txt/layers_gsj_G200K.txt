@@ -2279,6 +2279,7 @@
           "minZoom": 2,
           "maxZoom": 13,
           "maxNativeZoom": 13,
+          "tileSize": 512,
           "legendUrl": "https://gbank.gsj.jp/geonavi/docdata/data/pict_data/orgsize_761_legend_12.jpg",
           "bounds": [
             [
