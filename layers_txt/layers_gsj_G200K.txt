@@ -25,7 +25,8 @@
               143.99605
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「北見」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_01kitami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「北見」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_01kitami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -47,7 +48,8 @@
               143.99616
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「帯広」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_02obihiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「帯広」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_02obihiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -69,7 +71,8 @@
               144.00013
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広尾（第2版修正版）」（2024年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_03hiroo2r.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広尾（第2版修正版）」（2024年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_03hiroo2r.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -91,7 +94,8 @@
               142.99618
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「旭川」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_07asashikawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「旭川」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_07asashikawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -113,7 +117,8 @@
               142.99624
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「夕張岳」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_08yubaridake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「夕張岳」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_08yubaridake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -135,7 +140,8 @@
               142.99628
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浦河」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_09urakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浦河」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_09urakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -157,7 +163,8 @@
               141.99632
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「留萌」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_13rumoi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「留萌」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_13rumoi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -179,7 +186,8 @@
               141.99635
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「札幌」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_14sapporo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「札幌」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_14sapporo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -201,7 +209,8 @@
               141.99638
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「苫小牧」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_15tomakomai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「苫小牧」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_15tomakomai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -223,7 +232,8 @@
               141.99638
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「尻屋崎」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_16shiriyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「尻屋崎」（1972年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_16shiriyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -245,7 +255,8 @@
               142
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野辺地（第2版）」（2021年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_17noheji2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野辺地（第2版）」（2021年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_17noheji2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -267,7 +278,8 @@
               141.99645
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八戸」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_18hachinohe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八戸」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_18hachinohe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -289,7 +301,8 @@
               140.9965
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岩内（第2版）」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_20iwanai2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岩内（第2版）」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_20iwanai2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -311,7 +324,8 @@
               141.01468
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「室蘭」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_21muroran.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「室蘭」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_21muroran.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -333,7 +347,8 @@
               140.99649
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「函館及び渡島大島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2228hakodate-oshimaoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「函館及び渡島大島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2228hakodate-oshimaoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -355,7 +370,8 @@
               140.9965
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「青森（第2版）」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_23aomori2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「青森（第2版）」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_23aomori2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -377,7 +393,8 @@
               140.99657
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「弘前及び深浦」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2430hirosaki-fukaura.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「弘前及び深浦」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_2430hirosaki-fukaura.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -399,7 +416,8 @@
               139.99648
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久遠」（1979年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_27kudo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久遠」（1979年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK54_27kudo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -421,7 +439,8 @@
               145.99607
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「標津」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_25shibetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「標津」（1971年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_25shibetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -443,7 +462,8 @@
               145.99601
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「根室」（1975年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_26nemuro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「根室」（1975年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_26nemuro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -465,7 +485,8 @@
               144.99591
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「斜里」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_31shari.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「斜里」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_31shari.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -487,7 +508,8 @@
               144.99603
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「釧路」（1976年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_32kushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「釧路」（1976年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NK55_32kushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -509,7 +531,8 @@
               143.99606
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「紋別」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_06monbetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「紋別」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_06monbetsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -531,7 +554,8 @@
               142.99621
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「枝幸」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_11esashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「枝幸」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_11esashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -553,7 +577,8 @@
               142.99619
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名寄」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_12nayoro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名寄」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_12nayoro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -575,7 +600,8 @@
               142.18718
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「稚内」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_16wakkanai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「稚内」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_16wakkanai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -597,7 +623,8 @@
               141.99619
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「天塩」（1968年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_17teshio.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「天塩」（1968年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_17teshio.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -619,7 +646,8 @@
               141.99616
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「羽幌」（1962年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_18haboro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「羽幌」（1962年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL54_18haboro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -641,7 +669,8 @@
               145.99594
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「知床岬」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_30shiretokomisaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「知床岬」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_30shiretokomisaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -663,7 +692,8 @@
               144.996
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「網走」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_36abashiri.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「網走」（1970年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NL55_36abashiri.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         }
       ]
     },
@@ -692,7 +722,8 @@
               154.05338
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小笠原諸島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG54_08ogasawara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小笠原諸島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG54_08ogasawara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -714,7 +745,8 @@
               140.9968
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「千葉」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_19chiba.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「千葉」（1983年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_19chiba.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -736,7 +768,8 @@
               140.99673
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大多喜」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_20otaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大多喜」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_20otaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -758,7 +791,8 @@
               139.99687
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「東京」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_25tokyo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「東京」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_25tokyo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -780,7 +814,8 @@
               140.00009
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「横須賀（第2版）」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_26yokosuka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「横須賀（第2版）」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_26yokosuka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -802,7 +837,8 @@
               139.99697
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「三宅島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_27miyakejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「三宅島」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_27miyakejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -824,7 +860,8 @@
               139.74695
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「御蔵島」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_28mikurajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「御蔵島」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_28mikurajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -846,7 +883,8 @@
               140.44702
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八丈島」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_29hachijojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八丈島」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_29hachijojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -868,7 +906,8 @@
               138.99692
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甲府」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_31kofu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甲府」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_31kofu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -890,7 +929,8 @@
               138.99701
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「静岡及び御前崎（第2版）」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_3233shizuoka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「静岡及び御前崎（第2版）」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI54_3233shizuoka2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -912,7 +952,8 @@
               142.08134
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「盛岡」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_13morioka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「盛岡」（1984年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_13morioka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -934,7 +975,8 @@
               141.99652
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「一関」（2005年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_14ichinoseki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「一関」（2005年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_14ichinoseki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -956,7 +998,8 @@
               141.99656
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石巻（第2版）」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_15ishinomaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石巻（第2版）」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_15ishinomaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -978,7 +1021,8 @@
               141.06099
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福島」（2003年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1622fukushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福島」（2003年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1622fukushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1000,7 +1044,8 @@
               141.04987
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「白河」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1723shirakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「白河」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1723shirakawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1022,7 +1067,8 @@
               140.99654
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「秋田及び男鹿」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1925akita-oga.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「秋田及び男鹿」（1980年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_1925akita-oga.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1044,7 +1090,8 @@
               140.99671
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新庄及び酒田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_2026shinjo-sakata.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新庄及び酒田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_2026shinjo-sakata.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1066,7 +1113,8 @@
               140.99667
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「仙台」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_21sendai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「仙台」（1987年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_21sendai.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1088,7 +1136,8 @@
               140.99682
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「水戸（第2版）」（2001年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_24mito2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「水戸（第2版）」（2001年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_24mito2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1110,7 +1159,8 @@
               139.99668
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「村上」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_27murakami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「村上」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_27murakami.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1132,7 +1182,8 @@
               139.99681
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新潟（第2版）」（2011年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_28niigata2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「新潟（第2版）」（2011年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_28niigata2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1154,7 +1205,8 @@
               139.99667
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「日光」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_29nikko.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「日光」（2000年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_29nikko.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1176,7 +1228,8 @@
               139.99672
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇都宮」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_30utsunomiya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇都宮」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_30utsunomiya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1198,7 +1251,8 @@
               138.99687
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「相川及び長岡の一部」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_3334aikawa-nagaoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「相川及び長岡の一部」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_3334aikawa-nagaoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1220,7 +1274,8 @@
               138.99691
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長岡（第2版）」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_34nagaoka2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長岡（第2版）」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_34nagaoka2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1242,7 +1297,8 @@
               138.99682
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高田」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_35takada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高田」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_35takada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1264,7 +1320,8 @@
               138.99681
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長野」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_36nagano.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長野」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ54_36nagano.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         }
       ]
     },
@@ -1293,7 +1350,8 @@
               137.99699
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「飯田（第2版）」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_01iida2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「飯田（第2版）」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_01iida2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1315,7 +1373,8 @@
               137.99714
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「豊橋及び伊良湖岬」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_0203toyohashi-irakozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「豊橋及び伊良湖岬」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_0203toyohashi-irakozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1337,7 +1396,8 @@
               136.99706
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岐阜」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_07gifu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岐阜」（1992年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_07gifu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1359,7 +1419,8 @@
               136.99714
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名古屋（第3版）」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_08nagoya3rd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「名古屋（第3版）」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_08nagoya3rd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1381,7 +1442,8 @@
               137.0001
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「伊勢」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_09ise.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「伊勢」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_09ise.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1403,7 +1465,8 @@
               136.99718
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「木本」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_10kinomoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「木本」（1991年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_10kinomoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1425,7 +1488,8 @@
               136.00018
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮津（第2版）」（2022年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_13miyazu2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮津（第2版）」（2022年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_13miyazu2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1447,7 +1511,8 @@
               135.99722
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「京都及大阪」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_14kyoto-osaka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「京都及大阪」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_14kyoto-osaka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1469,7 +1534,8 @@
               135.99729
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「和歌山」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_15wakayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「和歌山」（1998年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_15wakayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1491,7 +1557,8 @@
               135.99724
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「田辺」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_16tanabe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「田辺」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_16tanabe.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1513,7 +1580,8 @@
               134.99736
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鳥取」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_19tottori.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鳥取」（1974年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_19tottori.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1535,7 +1603,8 @@
               134.99736
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「姫路」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_20himeji.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「姫路」（1981年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_20himeji.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1557,7 +1626,8 @@
               134.99724
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳島（第2版）」（1995年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_21tokushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳島（第2版）」（1995年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_21tokushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1579,7 +1649,8 @@
               134.99737
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「剣山」（1969年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_22kenzan.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「剣山」（1969年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_22kenzan.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1601,7 +1672,8 @@
               133.99726
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松江及び大社」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_2531matsue-taisya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松江及び大社」（1982年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_2531matsue-taisya.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1623,7 +1695,8 @@
               133.99738
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高梁」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_26takahashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高梁」（1996年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_26takahashi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1645,7 +1718,8 @@
               133.99733
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岡山及び丸亀」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_27okayama-marugame.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「岡山及び丸亀」（2002年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_27okayama-marugame.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1667,7 +1741,8 @@
               134.00002
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高知（第2版）」（2018年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_28kochi2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高知（第2版）」（2018年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_28kochi2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1689,7 +1764,8 @@
               133.99752
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「窪川」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_29kubokawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「窪川」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_29kubokawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1711,7 +1787,8 @@
               132.9975
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浜田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_32hamada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「浜田」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_32hamada.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1733,7 +1810,8 @@
               132.99742
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広島」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_33hiroshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「広島」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_33hiroshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1755,7 +1833,8 @@
               133.00008
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松山（第2版）」（2016年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_34matsuyama2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「松山（第2版）」（2016年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_34matsuyama2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1777,7 +1856,8 @@
               133.03831
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇和島」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_35uwajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宇和島」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI53_35uwajima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1799,7 +1879,8 @@
               137.50014
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「輪島（第2版）」（2019年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_04wajima2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「輪島（第2版）」（2019年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_04wajima2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1821,7 +1902,8 @@
               137.4971
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「七尾･富山」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_0511nanao-toyama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「七尾･富山」（1967年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_0511nanao-toyama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1843,7 +1925,8 @@
               138.00009
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「富山（第2版）」（2023年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_05toyama2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「富山（第2版）」（2023年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_05toyama2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1865,7 +1948,8 @@
               137.99701
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高山」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_06takayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「高山」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_06takayama.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1887,7 +1971,8 @@
               136.99705
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「金沢」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_12kanazawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「金沢」（1999年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_12kanazawa.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1909,7 +1994,8 @@
               133.6641
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「西郷」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_3036saigo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「西郷」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NJ53_3036saigo.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         }
       ]
     },
@@ -1938,7 +2024,8 @@
               125.49839
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮古島」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_05061112miyakojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮古島」（1978年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_05061112miyakojima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1960,7 +2047,8 @@
               124.49845
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石垣島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_1218ishigakijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「石垣島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_1218ishigakijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -1982,7 +2070,8 @@
               124.63165
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「魚釣島」（2008年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_16uotsurijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「魚釣島」（2008年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG51_16uotsurijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2004,7 +2093,8 @@
               129.06923
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳之島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_131920tokunoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「徳之島」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_131920tokunoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2026,7 +2116,8 @@
               131.36341
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「与論島及び那覇」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_20262127yoronto-naha.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「与論島及び那覇」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_20262127yoronto-naha.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2048,7 +2139,8 @@
               127.49813
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久米島」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_2733kumejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「久米島」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NG52_2733kumejima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2070,7 +2162,8 @@
               131.99756
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮崎」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_01miyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「宮崎」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_01miyazaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2092,7 +2185,8 @@
               131.13884
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「開聞岳及び黒島の一部」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_020814kaimondake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「開聞岳及び黒島の一部」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_020814kaimondake.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2114,7 +2208,8 @@
               131.0811
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「屋久島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_0309yakushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「屋久島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_0309yakushima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2136,7 +2231,8 @@
               130.99776
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鹿児島」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_07kagoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「鹿児島」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_07kagoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2158,7 +2254,8 @@
               130.01061
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甑島及び黒島」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_1314koshikijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「甑島及び黒島」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_1314koshikijima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2180,7 +2277,8 @@
               129.99792
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「中之島及び宝島」（2008年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_1617nakanoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「中之島及び宝島」（2008年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_1617nakanoshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2202,7 +2300,8 @@
               130.05843
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「奄美大島」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_18amamioshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「奄美大島」（1994年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NH52_18amamioshima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2224,7 +2323,8 @@
               131.9976
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「山口及び見島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_0203yamaguchi-mishima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「山口及び見島」（2007年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_0203yamaguchi-mishima.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2246,7 +2346,8 @@
               131.99997
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「中津」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_04nakatsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「中津」（2009年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_04nakatsu.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2268,7 +2369,8 @@
               132.01365
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大分（第2版）」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_05oita2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「大分（第2版）」（2015年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_05oita2nd.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2279,6 +2381,7 @@
           "minZoom": 2,
           "maxZoom": 13,
           "maxNativeZoom": 13,
+          "tileSize": 512,
           "legendUrl": "https://gbank.gsj.jp/geonavi/docdata/data/pict_data/orgsize_761_legend_12.jpg",
           "bounds": [
             [
@@ -2312,7 +2415,8 @@
               130.99778
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小串」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_09kogushi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「小串」（2006年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_09kogushi.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2334,7 +2438,8 @@
               130.99772
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福岡」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_10fukuoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福岡」（1993年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_10fukuoka.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2356,7 +2461,8 @@
               130.99776
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「熊本」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_11kumamoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「熊本」（2004年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_11kumamoto.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2378,7 +2484,8 @@
               130.9977
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八代及び野母崎の一部」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_1218yatsushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「八代及び野母崎の一部」（2010年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_1218yatsushiro.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2400,7 +2507,8 @@
               129.99775
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「厳原」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_15izuhara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「厳原」（1990年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_15izuhara.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2422,7 +2530,8 @@
               129.99782
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「唐津（第2版）」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_16karatsu2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「唐津（第2版）」（1997年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_16karatsu2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2444,7 +2553,8 @@
               129.99776
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長崎（第2版）」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_17nagasaki2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「長崎（第2版）」（1989年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_17nagasaki2ed.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2466,7 +2576,8 @@
               129.99788
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野母崎」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_18nomozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「野母崎」（1977年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_18nomozaki.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         },
         {
           "type": "Layer",
@@ -2488,7 +2599,8 @@
               128.99795
             ]
           ],
-          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福江及び富江」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_2324fukue-tomie.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>"
+          "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">20万分の1地質図幅「福江及び富江」（1986年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G200_NI52_2324fukue-tomie.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+          "tileSize": 512
         }
       ]
     }
