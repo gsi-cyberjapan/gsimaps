@@ -26,7 +26,7 @@ CONFIG.LAYERTYPEDISPLAY = false;
 
 var MATEST = {
   enabled: null,
-  
+
   proxyUrl: function( url )
   {
     return url;
@@ -2518,11 +2518,11 @@ Proj4js.defs['EPSG:4301'] = "+proj=longlat +ellps=bessel +towgs84=-146.336,506.8
 
 dslorethumbnail_click = function(elements){
   var x = new GSI.Modal.dsloreDialog(elements);
-  x.show();  
-  
+  x.show();
+
   //return false;
 };
-  
+
 
 GSI.GLOBALS.isBaseLayer = function( info ) {
   var isBase = false;
@@ -2735,14 +2735,14 @@ GSI.Utils.world2Japan = function(latLng){
 
 
 GSI.Utils.latLngToDMS = function(latLng) {
-  
+
   var latLng = { lat : latLng.lat, lng : latLng.lng};
   var latMinus = ( latLng.lat < 0 ? -1 : 1 );
   var lngMinus = ( latLng.lng < 0 ? -1 : 1 );
-  
+
   latLng.lat = Math.abs( latLng.lat);
   latLng.lng = Math.abs( latLng.lng);
-  
+
   var latD = Math.floor(latLng.lat);
   var latM = Math.floor( ( latLng.lat - latD ) * 60 );
   var latS = (latLng.lat-latD-(latM/60))*3600;
@@ -2813,7 +2813,7 @@ GSI.Utils.ConverUnit = function(map, shape, radius, unit_src, unit_to)
         radius = r;
     }
 
-    if(unit_src == "m"  && unit_to == "px"){ 
+    if(unit_src == "m"  && unit_to == "px"){
         var r_latlng = shape.getBounds();
         var n_p = map.latLngToContainerPoint(r_latlng._northEast);
         var s_p = map.latLngToContainerPoint(r_latlng._southWest);
@@ -2834,7 +2834,7 @@ GSI.Utils.getNextOutsideTileNo = function(){
 };
 
 GSI.Utils.Cookie = MA.Class.extend( {
-  
+
   _config : {
     defaults : {}
   },
@@ -2843,11 +2843,11 @@ GSI.Utils.Cookie = MA.Class.extend( {
   {
     return this._config.raw ? s : encodeURIComponent(s);
   },
-  _decode : function (s) 
+  _decode : function (s)
   {
     return this._config.raw ? s : decodeURIComponent(s);
   },
-  _stringifyCookieValue : function(value) 
+  _stringifyCookieValue : function(value)
   {
     return this._encode(this._config.json ? JSON.stringify(value) : String(value));
   },
@@ -2863,7 +2863,7 @@ GSI.Utils.Cookie = MA.Class.extend( {
       return this._config.json ? JSON.parse(s) : s;
     } catch(e) {}
   },
-  _read : function(s, converter) 
+  _read : function(s, converter)
   {
     //var value = this._config.raw ? s : this._parseCookieValue(s);
     return this._config.raw ? s : this._parseCookieValue(s);
@@ -2873,7 +2873,7 @@ GSI.Utils.Cookie = MA.Class.extend( {
     var result = key ? undefined : {};
     var cookies = document.cookie ? document.cookie.split('; ') : [];
 
-    for (var i = 0, l = cookies.length; i < l; i++) 
+    for (var i = 0, l = cookies.length; i < l; i++)
     {
       var parts = cookies[i].split('=');
       var name = this._decode(parts.shift());
@@ -2896,7 +2896,7 @@ GSI.Utils.Cookie = MA.Class.extend( {
 
     if (typeof options.expires === 'number') {
       var hours = options.expires, t = options.expires = new Date();
-      t.setTime(+t + hours * 1000 * 60 * 60 );// 
+      t.setTime(+t + hours * 1000 * 60 * 60 );//
     }
 
     return (document.cookie = [
@@ -2906,12 +2906,12 @@ GSI.Utils.Cookie = MA.Class.extend( {
       options.domain  ? '; domain=' + options.domain : '',
       options.secure  ? '; secure' : ''
     ].join(''));
-  
+
 
   },
   remove : function (key, options)
   {
-    if (this.get(key) === undefined) 
+    if (this.get(key) === undefined)
     {
       return false;
     }
@@ -3179,18 +3179,18 @@ GSI.DialogManager = MA.Class.extend( {
       if ( !container.css ) container = container.container;
       container.css({'z-index':zIndex, opacity: opacity} );
       container.addClass( "deactive");
-      
+
       zIndex++;
       idx++;
     }
 
     if ( this.visibleList.length > 0 )
     {
-      
+
       var container = this.visibleList[this.visibleList.length - 1];
       if ( !container.css ) container = container.container;
       container.css({'z-index':zIndex, opacity: 0.95} );
-      
+
       container = this.visibleList[i];
       if ( !container.css ) container = container.container;
       container.removeClass( "deactive");
@@ -3418,33 +3418,33 @@ GSI.UTM.Utils = {
     {
       result.north += usngStr.charAt(j++)
     }
-    
+
     return result;
   },
   _USNGtoUTM : function (zone,mylet,sq1,sq2,east,north)
-  { 
+  {
     var result = {};
-    
+
     //Starts (southern edge) of N-S zones in millons of meters
     var zoneBase = [1.1,2.0,2.9,3.8,4.7,5.6,6.5,7.3,8.2,9.1,   0, 0.8, 1.7, 2.6, 3.5, 4.4, 5.3, 6.2, 7.0, 7.9];
 
-    var segBase = [0,2,2,2,4,4,6,6,8,8,   0,0,0,2,2,4,4,6,6,6];  //Starts of 2 million meter segments, indexed by zone 
-    
+    var segBase = [0,2,2,2,4,4,6,6,8,8,   0,0,0,2,2,4,4,6,6,6];  //Starts of 2 million meter segments, indexed by zone
+
     // convert easting to UTM
-    var eSqrs="ABCDEFGHJKLMNPQRSTUVWXYZ".indexOf(sq1);          
-    var appxEast=1+eSqrs%8; 
+    var eSqrs="ABCDEFGHJKLMNPQRSTUVWXYZ".indexOf(sq1);
+    var appxEast=1+eSqrs%8;
 
     // convert northing to UTM
     var letNorth = "CDEFGHJKLMNPQRSTUVWX".indexOf(mylet);
     if (zone%2)  //odd number zone
-    var nSqrs="ABCDEFGHJKLMNPQRSTUV".indexOf(sq2) 
+    var nSqrs="ABCDEFGHJKLMNPQRSTUV".indexOf(sq2)
     else        // even number zone
-    var nSqrs="FGHJKLMNPQRSTUVABCDE".indexOf(sq2); 
+    var nSqrs="FGHJKLMNPQRSTUVABCDE".indexOf(sq2);
 
     var zoneStart = zoneBase[letNorth];
     var appxNorth = Number(segBase[letNorth])+nSqrs/10;
     if ( appxNorth < zoneStart)
-      appxNorth += 2; 	  
+      appxNorth += 2;
 
     result.N=appxNorth*1000000+Number(north)*Math.pow(10,5-north.length);
     result.E=appxEast*100000+Number(east)*Math.pow(10,5-east.length)
@@ -3463,46 +3463,46 @@ GSI.UTM.Utils = {
     var ECC_PRIME_SQUARED = ECC_SQUARED / (1 - ECC_SQUARED);
     var E1 = (1 - Math.sqrt(1 - ECC_SQUARED)) / (1 + Math.sqrt(1 - ECC_SQUARED));
     var RAD_2_DEG   = 180.0 / Math.PI;
-    
+
     // remove 500,000 meter offset for longitude
-    var xUTM = parseFloat(UTMEasting) - EASTING_OFFSET; 
+    var xUTM = parseFloat(UTMEasting) - EASTING_OFFSET;
     var yUTM = parseFloat(UTMNorthing);
     var zoneNumber = parseInt(UTMZoneNumber);
 
-    // origin longitude for the zone (+3 puts origin in zone center) 
-    var lonOrigin = (zoneNumber - 1) * 6 - 180 + 3; 
+    // origin longitude for the zone (+3 puts origin in zone center)
+    var lonOrigin = (zoneNumber - 1) * 6 - 180 + 3;
 
     // M is the "true distance along the central meridian from the Equator to phi
     // (latitude)
     var M = yUTM / k0;
-    var mu = M / ( EQUATORIAL_RADIUS * (1 - ECC_SQUARED / 4 - 3 * ECC_SQUARED * 
+    var mu = M / ( EQUATORIAL_RADIUS * (1 - ECC_SQUARED / 4 - 3 * ECC_SQUARED *
                   ECC_SQUARED / 64 - 5 * ECC_SQUARED * ECC_SQUARED * ECC_SQUARED / 256 ));
 
     // phi1 is the "footprint latitude" or the latitude at the central meridian which
     // has the same y coordinate as that of the point (phi (lat), lambda (lon) ).
-    var phi1Rad = mu + (3 * E1 / 2 - 27 * E1 * E1 * E1 / 32 ) * Math.sin( 2 * mu) 
+    var phi1Rad = mu + (3 * E1 / 2 - 27 * E1 * E1 * E1 / 32 ) * Math.sin( 2 * mu)
                 + ( 21 * E1 * E1 / 16 - 55 * E1 * E1 * E1 * E1 / 32) * Math.sin( 4 * mu)
                 + (151 * E1 * E1 * E1 / 96) * Math.sin(6 * mu);
     var phi1 = phi1Rad * RAD_2_DEG;
 
     // Terms used in the conversion equations
-    var N1 = EQUATORIAL_RADIUS / Math.sqrt( 1 - ECC_SQUARED * Math.sin(phi1Rad) * 
+    var N1 = EQUATORIAL_RADIUS / Math.sqrt( 1 - ECC_SQUARED * Math.sin(phi1Rad) *
               Math.sin(phi1Rad));
     var T1 = Math.tan(phi1Rad) * Math.tan(phi1Rad);
     var C1 = ECC_PRIME_SQUARED * Math.cos(phi1Rad) * Math.cos(phi1Rad);
-    var R1 = EQUATORIAL_RADIUS * (1 - ECC_SQUARED) / Math.pow(1 - ECC_SQUARED * 
+    var R1 = EQUATORIAL_RADIUS * (1 - ECC_SQUARED) / Math.pow(1 - ECC_SQUARED *
                 Math.sin(phi1Rad) * Math.sin(phi1Rad), 1.5);
     var D = xUTM / (N1 * k0);
 
     // Calculate latitude, in decimal degrees
     var lat = phi1Rad - ( N1 * Math.tan(phi1Rad) / R1) * (D * D / 2 - (5 + 3 * T1 + 10
-        * C1 - 4 * C1 * C1 - 9 * ECC_PRIME_SQUARED) * D * D * D * D / 24 + (61 + 90 * 
+        * C1 - 4 * C1 * C1 - 9 * ECC_PRIME_SQUARED) * D * D * D * D / 24 + (61 + 90 *
           T1 + 298 * C1 + 45 * T1 * T1 - 252 * ECC_PRIME_SQUARED - 3 * C1 * C1) * D * D *
           D * D * D * D / 720);
     lat = lat * RAD_2_DEG;
 
     // Calculate longitude, in decimal degrees
-    var lng = (D - (1 + 2 * T1 + C1) * D * D * D / 6 + (5 - 2 * C1 + 28 * T1 - 3 * 
+    var lng = (D - (1 + 2 * T1 + C1) * D * D * D / 6 + (5 - 2 * C1 + 28 * T1 - 3 *
             C1 * C1 + 8 * ECC_PRIME_SQUARED + 24 * T1 * T1) * D * D * D * D * D / 120) /
             Math.cos(phi1Rad);
 
@@ -3516,9 +3516,9 @@ GSI.UTM.Utils = {
     {
       var usngp = this._parseUSNGText(s,usngp);
       if ( !usngp ) return null;
-      var coords = this._USNGtoUTM(usngp.zone,usngp.mylet,usngp.sq1,usngp.sq2,usngp.east,usngp.north) 
-      
-      if (usngp.mylet < 'N') 
+      var coords = this._USNGtoUTM(usngp.zone,usngp.mylet,usngp.sq1,usngp.sq2,usngp.east,usngp.north)
+
+      if (usngp.mylet < 'N')
       {
         coords.N -= NORTHING_OFFSET
       }
@@ -3568,7 +3568,7 @@ GSI.UTM.Utils = {
       y10mNumber = zero + Math.floor( y /10 );
       y10mNumber = y10mNumber.substr(y10mNumber.length - num, num);
     }
-    
+
     var letters = GSI.UTM.Utils.findGridLetters(zone, Math.floor( y /10 ) * 10, Math.floor( x /10 ) * 10);
     return zone + mark + letters + x10mNumber + y10mNumber;
   },
@@ -3711,7 +3711,7 @@ GLOBE.CLASS.DIALOG = function( elementId )
 {
   this._initialize(elementId);
 };
-GLOBE.CLASS.DIALOG.prototype = 
+GLOBE.CLASS.DIALOG.prototype =
 {
   id: null,
   container: null,
@@ -3719,35 +3719,35 @@ GLOBE.CLASS.DIALOG.prototype =
   headerTitle: null,
   closeBtn: null,
   contentFrame: null,
-  
+
   containerClass : 'gsi_dialog',
   headerClass : 'gsi_dialog_header',
   contentClass : 'gsi_dialog_content',
-  
+
   defaultTop   : '50px',
   defaultLeft  : '10px',
   defaultRight : '',
-  
+
   resizable : true,
   draggable : true,
-  
+
   // ダイアログを作成する
   _initialize: function(elementId)
   {
     this._originalDialog = true;
     this.id = elementId;
-    
+
     if ( !GSI.Dialog._dialogManager )GSI.Dialog._dialogManager = new GSI.DialogManager();
 
     GSI.Dialog._dialogManager.append( this );
-    
+
   },
-  
+
   createDialog: function()
   {
     this._createDialogHeader();
     this._createDialogContent();
-    
+
     this.container = $('<div></div>')
       .attr('id', this.id)
       .addClass(this.containerClass)
@@ -3759,12 +3759,12 @@ GLOBE.CLASS.DIALOG.prototype =
         'position': 'absolute',
         'overflow': 'hidden'
       });
-    
+
     if ( this.defaultTop )    this.container.css('top', this.defaultTop);
     if ( this.defaultLeft )   this.container.css('left', this.defaultLeft);
     if ( this.defaultRight )  this.container.css('right', this.defaultRight);
     if ( this.defaultBottom ) this.container.css('bottom', this.defaultBottom);
-    
+
     if ( this.resizable )
     {
       this.container.resizable({
@@ -3790,20 +3790,20 @@ GLOBE.CLASS.DIALOG.prototype =
           this.adjustPosition();
         }.bind(this)
       });
-      
+
       $(window).on('resize', function(){
         this.adjustPosition();
       }.bind(this));
     }
-    
+
     $(document.body).append(this.container);
   },
-  
+
   // ダイアログヘッダを作成して返す（内部関数）
   _createDialogHeader: function()
   {
     this.headerFrame = $('<div></div>').addClass(this.headerClass);
-    
+
     this.headerTitle = $('<div></div>').addClass('title');
     this.closeBtn = $('<a href="javascript:void(0);">×</a>')
       .addClass('closebtn')
@@ -3812,36 +3812,36 @@ GLOBE.CLASS.DIALOG.prototype =
         this.hide();
         this.onAfterClose();
       }.bind(this));
-    
+
     var $cont = $('<div>　　　</div>');
     this.headerTitle.append($cont);
-    
+
     this.headerFrame.append(this.headerTitle);
     this.headerFrame.append(this.closeBtn);
   },
-  
+
   // ダイアログコンテンツを作成して返す（内部関数）
   _createDialogContent: function()
   {
     this.contentFrame = $('<div></div>').addClass(this.contentClass);
-    
+
     var $cont = $('<div>　　　</div>');
     this.contentFrame.append($cont);
   },
-  
+
   // ダイアログヘッダを書き込む
   setDialogHeader: function( $element )
   {
     var $header = (!$element ? $('<div>　</div>') : $element);
     this.headerTitle.empty().append($header);
   },
-  
+
   // ダイアログコンテンツを書き込む（引数はjQueryObject）
   setDialogContent: function( $element )
   {
     this.contentFrame.empty().append($element);
   },
-  
+
   // 位置修正
   adjustPosition: function()
   {
@@ -3853,7 +3853,7 @@ GLOBE.CLASS.DIALOG.prototype =
     {
       this.container.animate({'top': ($(window).height()-30) + 'px'}, 100);
     }
-    
+
     if ( this.container.offset().left < this.container.outerWidth(true) / -2 )  //左
     {
       this.container.animate({'left': (this.container.outerWidth(true) / -2) + 'px'}, 100);
@@ -3863,11 +3863,11 @@ GLOBE.CLASS.DIALOG.prototype =
       this.container.animate({'left': ($(window).width()-(this.container.outerWidth(true) / 2)) + 'px'}, 100);
     }
   },
-  
+
   // ダイアログを表示する
   show: function()
   {
-    
+
     GSI.Dialog._dialogManager.appendVisibleList( this );
     this.onBeforeShow();
     this.container.show(300, function(){
@@ -3875,7 +3875,7 @@ GLOBE.CLASS.DIALOG.prototype =
     }.bind(this));
     //this.onActive();
   },
-  
+
   // ダイアログを非表示にする
   hide: function()
   {
@@ -3885,35 +3885,35 @@ GLOBE.CLASS.DIALOG.prototype =
       this.onAfterClose();
     }.bind(this));
   },
-  
-  
+
+
   // ダイアログがアクティブになった時
   onActive: function()
   {
     //GLOBE.DIALOGMANAGER.activeIs(this.id)
     GSI.Dialog._dialogManager.activate( this );
   },
-  
+
   ///// 設定可能イベント
-  
+
   // ドラッグ開始時
   onDragStart: function(){},
-  
+
   // ドラッグ終了時
   onDragStop: function(){},
-  
+
   // サイズ変更時
   onResize: function(){},
-  
+
   // ダイアログを開く直前
   onBeforeShow: function(){},
-  
+
   // ダイアログを開いた直後
   onAfterShow: function(){},
-  
+
   // ダイアログを閉じる直前
   onBeforeClose: function(){},
-  
+
   // ダイアログを閉じた直後
   onAfterClose:  function(){}
 };
@@ -3929,7 +3929,7 @@ GLOBE.MENU = {};
 /***** 機能ボタン *****/
 GLOBE.MENU.FUNC = {
   container: null,
-  
+
   options:{
     zIndex   : 15000,
     position : 'right',
@@ -3986,22 +3986,22 @@ GLOBE.MENU.FUNC = {
       }
     }
   },
-  
+
   map: null,
   rootItem: {},
-  
+
   create: function()
   {
     this.map = $('#cesiumContainer');
-    
+
     this.initialize( CONFIG.FUNCMENU );
   },
-  
+
   onBtnClick: function(event)
   {
     this.container.append('<div>追加</div>');
   },
-  
+
   initialize : function ( treeConfig )
   {
     this.initializeTree( treeConfig );
@@ -4009,7 +4009,7 @@ GLOBE.MENU.FUNC = {
     this.map.on( 'touchstart', function(){ this.hide(); }.bind(this) );
     $( window ).on( 'resize', function(){ this.hide(true); }.bind(this) );
   },
-  
+
   initializeTree : function(treeConfig)
   {
     // トップボタン生成
@@ -4019,7 +4019,7 @@ GLOBE.MENU.FUNC = {
       .addClass( 'menu_btn' )
       .attr( 'id', 'menu_func' )
       .click( this.onItemClick.bind(this) );
-      
+
     $(document.body).append(elem);
 
     this.rootItem = {
@@ -4032,7 +4032,7 @@ GLOBE.MENU.FUNC = {
 
     this.initializeTreeItems( this.rootItem, treeConfig, 1);
   },
-  
+
   initializeTreeItems : function( parent, treeConfig, depth  )
   {
     if ( treeConfig.children && treeConfig.children.length > 0  )
@@ -4058,7 +4058,7 @@ GLOBE.MENU.FUNC = {
 
         if ( childConfig.typeA && childConfig.typeA == 'check' )
         {
-          
+
         }
         else
         {
@@ -4102,7 +4102,7 @@ GLOBE.MENU.FUNC = {
       $( document.body).append( ul );
     }
   },
-  
+
   hideChildren : function(info, noEffect)
   {
     if ( info.childrenFrame )
@@ -4133,12 +4133,12 @@ GLOBE.MENU.FUNC = {
       }
     }
   },
-  
+
   _fireOnShow : function()
   {
-    
+
   },
-  
+
   showChildFrame : function(elem, isRoot, option, isHide)
   {
     var effect = ( isRoot  ? this.options.rootEffect : this.options.otherEffect );
@@ -4175,7 +4175,7 @@ GLOBE.MENU.FUNC = {
       }
     }
   },
-  
+
   onItemClick : function( event )
   {
     var target =  event.currentTarget;
@@ -4289,15 +4289,15 @@ GLOBE.MENU.FUNC = {
       this.hide();
     }
   },
-  
+
   // マウスオーバー時のイベント
   onItemMouseover : function( event )
   {
     var target =  event.currentTarget;
     var info = $( target ).data( 'data' );
-    
+
     var zoom = GLOBE.MAP.getCurrentZoom();
-    
+
     switch ( info.id )
     {
       case 'gsi3d_2048':
@@ -4308,13 +4308,13 @@ GLOBE.MENU.FUNC = {
         break;
     }
   },
-  
+
   // マウスアウト時のイベント
   onItemMouseout : function( event )
   {
     var target =  event.currentTarget;
     var info = $( target ).data( 'data' );
-    
+
     switch ( info.id )
     {
       case 'gsi3d_2048':
@@ -4325,19 +4325,19 @@ GLOBE.MENU.FUNC = {
         break;
     }
   },
-  
+
   hide : function(noEffect)
   {
     this.hideChildren( this.rootItem, noEffect );
   },
-  
+
   openLink : function( url )
   {
     GLOBE.MAP.currents.zoomlevel = GLOBE.MAP.getCurrentZoom();
     var currents = GLOBE.MAP.currents;
     var centerLatLng = GLOBE.MAP.getCenterPosition(true);
     var u = '';
-    
+
     switch ( url )
     {
       case 'gsi2d':
@@ -4363,7 +4363,7 @@ GLOBE.MENU.FUNC = {
             showlayers.push( layers[i] );
           }
         }
-        
+
         u  = 'https://maps.gsi.go.jp/index_3d.html'
           + '?z=' + currents.zoomlevel
           + '&lat=' + centerLatLng[0]
@@ -4375,14 +4375,14 @@ GLOBE.MENU.FUNC = {
           + '#&a=' + currents.heightPower;
         break;
     }
-    
+
     if ( u )
     {
       //console.log("url", u);
       window.open( u, 'GSIMAPS' );
     }
   },
-  
+
   // 地理院地図3Dでの、おおよその表示範囲を示す矩形を表示
   showSampleScreenRect : function(showFlg, pxsize)
   {
@@ -4390,7 +4390,7 @@ GLOBE.MENU.FUNC = {
     {
       var rect = GLOBE.DIALOG.GSI3DCUSTOM.getCenterRectFromPixelsize(pxsize);
       var entity = GLOBE.DIALOG.GSI3DCUSTOM.getSampleRectEntity('sampleRect', rect);
-      
+
       GLOBE.MAP.viewer.entities.add(entity);
       this._sampleRectEntity = entity;
     }
@@ -4405,7 +4405,7 @@ GLOBE.MENU.FUNC = {
 /***** 情報ボタン *****/
 GLOBE.MENU.INFO = {
   container: null,
-  
+
   create: function()
   {
     this.container = $('<div>情報</div>')
@@ -4417,7 +4417,7 @@ GLOBE.MENU.INFO = {
       .on('click', this.onClick.bind(this))
       .appendTo(document.body);
   },
-  
+
   onClick: function()
   {
       GSI.GLOBALS.viewListDialog.show();
@@ -4428,7 +4428,7 @@ GLOBE.MENU.INFO = {
 /***** カメラリセットボタン *****/
 GLOBE.MENU.CAMERARESET = {
   container: null,
-  
+
   create: function()
   {
     this.container = $('<div>視点<br>リセット</div>')
@@ -4440,7 +4440,7 @@ GLOBE.MENU.CAMERARESET = {
       .on('click', this.onClick.bind(this))
       .appendTo(document.body);
   },
-  
+
   onClick: function()
   {
     GLOBE.MAP.flyToDefault();
@@ -4454,7 +4454,7 @@ GLOBE.MENU.POINTINFO = {
   _mouseEventHandler: null,
   _canvas: null,
   _state: 0,
-  
+
   create: function()
   {
     this.container = $('<div>地点<br>情報</div>')
@@ -4465,12 +4465,12 @@ GLOBE.MENU.POINTINFO = {
       })
       .on('mouseup', this.onClick.bind(this))
       .appendTo(document.body);
-    
+
     this._mouseEventHandler = new Cesium.ScreenSpaceEventHandler(GLOBE.MAP.viewer.scene.canvas);
-    
+
     this._createCursorHelp();
   },
-  
+
   // ボタン押下時のイベントハンドラ
   onClick: function(event)
   {
@@ -4483,7 +4483,7 @@ GLOBE.MENU.POINTINFO = {
       this.beginInfoMode(event);
     }
   },
-  
+
   // 地点情報モードを開始
   beginInfoMode: function(event)
   {
@@ -4499,17 +4499,17 @@ GLOBE.MENU.POINTINFO = {
         'left'    : (event.pageX + diffX) + "px"
       });
     };
-    
+
     this._mouseEventHandler.setInputAction( GLOBE.MAP.showPointInfo, Cesium.ScreenSpaceEventType.LEFT_CLICK );
     this._beforeCursor = $("#" + GLOBE.MAP.mapElementId).css("cursor") || "auto";
     $("#" + GLOBE.MAP.mapElementId).css('cursor', 'url("./image/system/cursor_target64.cur"), help');
     $("body").on("mousemove.cursorhelp", mousemoveHandler.bind(this));
     this._canvas.show();
     mousemoveHandler(event);
-    
+
     this._state = 1;
   },
-  
+
   // 地点情報モードを終了
   endInfoMode: function(event)
   {
@@ -4517,10 +4517,10 @@ GLOBE.MENU.POINTINFO = {
     $("#" + GLOBE.MAP.mapElementId).css("cursor", this._beforeCursor);
     $("body").off("mousemove.cursorhelp");
     this._canvas.hide();
-    
+
     this._state = 0;
   },
-  
+
   // 地点情報モードの吹き出しを作成
   _createCursorHelp: function()
   {
@@ -4532,19 +4532,19 @@ GLOBE.MENU.POINTINFO = {
     var radius         = 10;
     var lineWidth      = 3;
     var textlineSpace  = 15;
-    
+
     var font = fontSize + 'px "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif';
-    
+
     var textRows = ['調べたい地点を','左クリック'];
-    
+
     var balloonWidth  = 0;
     var balloonHeight = 0;
-    
+
     // 新規作成
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
     ctx.font = font;
-    
+
     // サイズ計測
     balloonHeight = balloonPadding * 2 + fontSize + (textlineSpace + fontSize) * (textRows.length - 1);
     balloonWidth = 0;
@@ -4554,17 +4554,17 @@ GLOBE.MENU.POINTINFO = {
       balloonWidth = (balloonWidth > metrix.width ? balloonWidth : metrix.width);
     }
     balloonWidth += balloonPadding * 2;
-    
+
     canvas.height = balloonHeight + balloonMargin * 2 + parseInt(lineWidth / 2);
     canvas.width  = balloonWidth + anchorWidth + balloonMargin + parseInt(lineWidth / 2);	//marginはanchorの反対側だけ
-    
+
     // 吹き出し描画
     var balloonLeft   = balloonMargin + anchorWidth;
     var balloonRight  = balloonLeft + balloonWidth;
     var balloonTop    = balloonMargin;
     var balloonBottom = balloonMargin + balloonHeight;
     var balloonCenter = (balloonMargin * 2 + balloonHeight) / 2;
-    
+
     ctx.font = font;
     ctx.shadowBlur = balloonMargin;
     ctx.shadowColor = '#666666';
@@ -4587,7 +4587,7 @@ GLOBE.MENU.POINTINFO = {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
-    
+
     // テキスト描画
     ctx.shadowBlur = 0;
     ctx.shadowOffsetX = 0;
@@ -4600,7 +4600,7 @@ GLOBE.MENU.POINTINFO = {
       var y = balloonTop + balloonPadding + lineWidth + fontSize + (fontSize + textlineSpace)*i;
       ctx.fillText(textRows[i], x, y );
     }
-    
+
     this._canvas = $(canvas).css({'display':'none'});
     $("#" + GLOBE.MAP.mapElementId).append(this._canvas);
   }
@@ -4632,13 +4632,13 @@ GSI.COCOTileLayer = MA.Class.extend({
   },
   setVisible : function( on)
   {
-    
+
   },
   refresh : function()
   {
     if ( this.visible )
     {
-      
+
     }
   },
   _reset: function (e) {},
@@ -4805,7 +4805,7 @@ GSI.COCOTileLayer = MA.Class.extend({
   },
   _loadTile: function (tile, tilePoint) {
     this._adjustTilePoint(tilePoint);
-        
+
         this._loadTileAjax(this._url.concat(), tile, tilePoint);
   },
   _loadTileAjax: function (url, tile, tilePoint){
@@ -4903,15 +4903,15 @@ GLOBE.SEARCHFORM = {
   QUERY_QUERY : 4,
   QUERY_EXCHANGE : 7,
   QUERY_LATLNGNE : 8,
-  
+
   formSelector: '#search_f',
   querySelector: '#query',
   magnifySelector: '#magnifyimage',
-  
+
   query: '',
   chimeiAjax: null,
   dialog: null,
-  
+
   // このオブジェクトを活性化（最初に呼ぶ）
   create: function()
   {
@@ -4919,19 +4919,19 @@ GLOBE.SEARCHFORM = {
     $(this.formSelector).on( 'submit', this.onSubmit.bind(this) );
     $(this.magnifySelector).on( 'click', this.onSubmit.bind(this) );
   },
-  
+
   // イベント：検索フォームの送信時
   onSubmit: function( event )
   {
     event.preventDefault();
-    
+
     var query = $( this.querySelector ).val();
     if ( $.trim(query) == '' ) return;
-    
+
     GLOBE.MAP.clearPinLayers("SEARCH");
-    
+
     var qType = this.checkQuery(query);
-    
+
     if ( qType == this.QUERY_QUERY )
     {
       this.searchStart( query );
@@ -4957,7 +4957,7 @@ GLOBE.SEARCHFORM = {
       else if ( qType == this.QUERY_UTMPOINT )
       {
         var latLng = GSI.UTM.Utils.point2LatLng( query );
-        
+
         if ( latLng )
         {
           this.setView( [ latLng.lat, latLng.lng ] );
@@ -4970,7 +4970,7 @@ GLOBE.SEARCHFORM = {
       else if ( qType == this.QUERY_EXCHANGE )
       {
         var latLng = this.parseLatLngText3( query );
-        
+
         if (!latLng)
         {
           alert( '緯度経度を正しく入力して下さい\n');
@@ -5004,17 +5004,17 @@ GLOBE.SEARCHFORM = {
         }
       }
     }
-    
+
     this.query = query;
-    
+
     return false;
   },
-  
+
   setView: function( latLng )
   {
     this.getDemPng( latLng );
   },
-  
+
   clearSearch : function()
   {
     if ( this.chimeiAjax )
@@ -5024,14 +5024,14 @@ GLOBE.SEARCHFORM = {
     }
     this.dialog.clear();
   },
-  
+
   searchStart : function( q )
   {
     this.clearSearch();
     this.dialog.show();
     this.chimeiAjax = this.searchChimei( q, "","" );
   },
-  
+
   searchChimei : function (q, pref, muni)
   {
     var constraint = '';
@@ -5049,12 +5049,12 @@ GLOBE.SEARCHFORM = {
       }
     });
   },
-  
+
   setChimeiRusult : function(json)
   {
     this.dialog.setChimeiResult( json );
   },
-  
+
   // 検索タイプを判定。判定結果を返す。
   checkQuery : function( q )
   {
@@ -5095,7 +5095,7 @@ GLOBE.SEARCHFORM = {
         return this.QUERY_LATLNGNE;
       }
       else if ( ( q.match(/^(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) )
-          || 
+          ||
           ( q.match(/^(?:E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(?:N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}['分′])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/) ) )
       {
         //°′″表記
@@ -5107,7 +5107,7 @@ GLOBE.SEARCHFORM = {
       }
     }
   },
-  
+
   parseLatLngText2 : function( s )
   {
     s = $.trim(s);
@@ -5186,10 +5186,10 @@ GLOBE.SEARCHFORM = {
   {
     s = $.trim(s);
     s = s.replace( ',', ' ' );
-    
+
     var matchArr =  s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
     var revflg = false;
-    
+
     if (!matchArr)
     {
       matchArr =  s.match(/^(E|W|東経|西経|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*(?:,|\s)(N|S|北緯|南緯|-|\+)*([0-9]{1,3}[度°])([0-9]{1,2}[分′'])*([0-9]{1,2}(?:\.[0-9]+)*[秒″\"])*$/);
@@ -5200,13 +5200,13 @@ GLOBE.SEARCHFORM = {
     {
       lath = parseInt(matchArr[2]);
       lonh = parseInt(matchArr[6]);
-      
+
       latm = matchArr[3] ? parseFloat(matchArr[3]) / 60 : 0;
       lonm = matchArr[7] ? parseFloat(matchArr[7]) / 60 : 0;
 
       lats = matchArr[4] ? parseFloat(matchArr[4]) / 3600 : 0;
       lons = matchArr[8] ? parseFloat(matchArr[8]) / 3600 : 0;
-      
+
       var la = lath + latm + lats;
       var lo = lonh + lonm + lons;
 
@@ -5228,16 +5228,16 @@ GLOBE.SEARCHFORM = {
       return [la, lo];
     }
     return null;
-    
+
   },
-  
+
   parseLatLngText4 : function( s )
   {
     s = $.trim(s);
 
     var matchArr = s.match(/^(N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/)
     var revflg = false;
-    
+
     if (!matchArr)
     {
       matchArr = s.match(/^(E|W|東経|西経|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)(?:,|\s)(N|S|北緯|南緯|-|\+)*([0-9]{1,3}(?:\.[0-9]+)*)/)
@@ -5267,16 +5267,16 @@ GLOBE.SEARCHFORM = {
 
         return [lat, lon];
       }
-      
+
       return null;
     }
     catch( e )
     {
       return null;
     }
-    
+
   },
-  
+
   parseLatLngText : function( s )
   {
     s = $.trim(s);
@@ -5291,7 +5291,7 @@ GLOBE.SEARCHFORM = {
       var lat = parseFloat( latLng[0] );
       var lng = parseFloat( latLng[1] );
       result =  [ lat, lng ];
-      
+
       return result;
     }
     catch( e )
@@ -5312,7 +5312,7 @@ GLOBE.SEARCHFORM = {
         var vX_Tile   = Math.floor(vX_px / 256);
         var vY_Tile	  = Math.floor(vY_px / 256);
     var demUrl = "https://maps.gsi.go.jp/xyz/dem_png/" + z + "/" + vX_Tile + "/" + vY_Tile + ".png";
-      
+
     if ( latlng )
     {
       var aj =$.ajax ({
@@ -5328,7 +5328,7 @@ GLOBE.SEARCHFORM = {
     GLOBE.MAP.pindrop(latLng[1], latLng[0], "SEARCH");
     GLOBE.MAP.fly(latLng[1], latLng[0], z2height);
   }
-  
+
 };
 
 
@@ -5345,14 +5345,14 @@ GLOBE.DIALOGMANAGER = {
     'z-index': 1,
     'opacity': 0.8
   },
-  
+
   dialogIds: [],
   activeDialogId: null,
-  
+
   activeIs: function( id )
   {
     this.activeDialogId = id;
-    
+
     var newIds = [];
     for ( var i=0; i<this.dialogIds.length; i++ )
     {
@@ -5365,7 +5365,7 @@ GLOBE.DIALOGMANAGER = {
     this.dialogIds = newIds;
     this.refreshZindex();
   },
-  
+
   refreshZindex: function()
   {
     for ( var i=0; i<this.dialogIds.length; i++ )
@@ -5400,41 +5400,41 @@ GLOBE.DIALOG.LOADOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_l
   options: {
     title: '外部タイル読込'
   },
-  
+
   defaultTop:   '45px',
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'auto',
-  
+
   defaultPixelsize: 256,
   sampleBorderSize: 3,
   sampleHandleSize: 15,
   sampleHandleIndent: 3,
-  
+
   resizable: false,
-  
+
   onBeforeShow: function()
   {
     this._map = GLOBE.MAP;
     this._mapLayerList = GSI.GLOBALS.mapLayerList;
     this._viewListDialog = GSI.GLOBALS.viewListDialog;
   },
-  
+
   create: function()
   {
     this.createDialog();
     this.container.css({'width':'300px'});
-    
+
     this.setDialogHeader( this.createHeader() );
     this.setDialogContent( this.createContent() );
   },
-  
+
   createHeader: function () {
     this.title = $('<div>').html(this.options.title);
 
     return $('<div>').append(this.title);
   },
-  
+
   createContent: function () {
     this.frame = $('<div>').css({ "padding": "5px" }).addClass("gsi_loadoutsidetiledialog_content");
 
@@ -5861,24 +5861,24 @@ GLOBE.DIALOG.EDITOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_e
   options: {
     title: '外部タイル編集'
   },
-  
+
   defaultTop:   'auto',
   defaultLeft:  'auto',
   defaultRight: 'auto',
   defaultBottom:'auto',
-  
+
   defaultPixelsize: 256,
   sampleBorderSize: 3,
   sampleHandleSize: 15,
   sampleHandleIndent: 3,
-  
+
   resizable: false,
-  
+
   onBeforeShow: function()
   {
     this._map = GLOBE.MAP;
   },
-  
+
   // 表示
   showEditDialog: function(target) {
     this._target = target;
@@ -5894,22 +5894,22 @@ GLOBE.DIALOG.EDITOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_e
     this._maxZoomSelect.val(this._target.maxZoom);
     this._maxNativeZoomSelect.val(this._target.maxNativeZoom);
   },
-  
+
   create: function()
   {
     this.createDialog();
     this.container.css({'width':'300px'});
-    
+
     this.setDialogHeader( this.createHeader() );
     this.setDialogContent( this.createContent() );
   },
-  
+
   createHeader: function () {
     this.title = $('<div>').html(this.options.title);
 
     return $('<div>').append(this.title);
   },
-  
+
   createContent: function () {
     this.frame = $('<div>').css({ "padding": "5px" }).addClass("gsi_editoutsidetiledialog_content");
     var div = null;
@@ -6036,9 +6036,9 @@ GLOBE.DIALOG.EDITOUTSIDETILE = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_e
 
     return select;
   },
-  
+
   onChange: function(target) {}
-  
+
 });
 
 
@@ -6048,28 +6048,28 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
   options: {
     title: '3D範囲を選択'
   },
-  
+
   defaultTop:   '45px',
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'auto',
-  
+
   defaultPixelsize: 256,
   sampleBorderSize: 3,
   sampleHandleSize: 15,
   sampleHandleIndent: 3,
-  
+
   resizable: false,
-  
+
   create: function()
   {
     this.createDialog();
     this.container.css({'width':'220px'});
-    
+
     this.setDialogHeader( this.createHeader() );
     this.setDialogContent( this.createContent() );
   },
-  
+
   createHeader : function()
   {
     this._title = $( '<div>' ).html( this.options.title );
@@ -6079,7 +6079,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
   createContent : function()
   {
     this._content = $( '<div>' ).addClass( 'gsi_threeddialog_content' );
-    
+
     var html = '<table><tbody><tr>'
       + '<td style="white-space: nowrap;">左上緯度:</td>'
       + '<td style="white-space: nowrap;"><input type="text" id="threed_input1"></td>'
@@ -6105,9 +6105,9 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         + '<div class="errormessage" style="display: none;">大きさを256×256～2048×2048の範囲で指定して下さい。</div>'
         + '<a class="normalbutton threedareadialog_button" id="threed_ok" href="javascript:void(0);" style="display: inline-block;">O　K</a>'
       + '</div>';
-    
+
     this._content.html(html);
-    
+
     setTimeout(function(){
       $('#threed_input1').on('change keyup', this.updateSampleRect.bind(this));
       $('#threed_input2').on('change keyup', this.updateSampleRect.bind(this));
@@ -6143,26 +6143,26 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         window.open( u, 'GSIMAPS' );
       }.bind(this));
     }.bind(this), 1);
-    
+
     return this._content;
   },
-  
+
   onAfterShow: function()
   {
     GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableTilt = false;
     GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableZoom = false;
     GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableRotate = false;
-    
+
     GLOBE.MAP.currents.zoomlevel = GLOBE.MAP.getCurrentZoom();
     var currents = GLOBE.MAP.currents;
     var centerLatLng = GLOBE.MAP.getCenterPosition(true);
-    
+
     height = currents.height;
     if ( currents.zoomlevel > 0 && currents.zoomlevel <= 18 )
     {
       height = CONFIG.Z2HEIGHT[ currents.zoomlevel ];
     }
-    
+
     GLOBE.MAP.viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(centerLatLng[1], centerLatLng[0], height),
       orientation: {
@@ -6174,7 +6174,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       complete: this.setDefaultContent.bind(this)
     });
   },
-  
+
   onAfterClose: function()
   {
     if ( this._sampleRect )
@@ -6183,7 +6183,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableZoom = true;
       GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableRotate = true;
       GLOBE.MAP.viewer.camera.moveEnd.removeEventListener(this._cameraMoveHandler);
-      
+
       var collection = GLOBE.MAP.viewer.entities;
       collection.remove(this._sampleRect);
       collection.remove(this._sampleBorder);
@@ -6192,7 +6192,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       collection.remove(this._sampleLbHandle);
       collection.remove(this._sampleRbHandle);
       collection.remove(this._sampleCenterHandle);
-      
+
       this._sampleRect = undefined;
       this._sampleBorder = undefined;
       this._sampleLtHandle = undefined;
@@ -6202,22 +6202,22 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       this._sampleCenterHandle = undefined;
     }
   },
-  
+
   setDefaultContent : function()
   {
     var rect = this.getCenterRectFromPixelsize( this.defaultPixelsize );
     this.sampleZoomlevel = GLOBE.MAP.currents.zoomlevel;
-    
+
     $('#threed_input1').val(rect._gsidata.north);
     $('#threed_input2').val(rect._gsidata.west);
     $('#threed_input3').val(rect._gsidata.south);
     $('#threed_input4').val(rect._gsidata.east);
     $('#threed_input5').val(this.defaultPixelsize);
     $('#threed_input6').val(this.defaultPixelsize);
-    
+
     this.updateSampleRect(null, true);
   },
-  
+
   updateSampleRect : function( event, fromSizeFlg )
   {
     var north = $('#threed_input1').val() * 1;
@@ -6226,7 +6226,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     var east  = $('#threed_input4').val() * 1;
     var x     = $('#threed_input5').val() * 1;
     var y     = $('#threed_input6').val() * 1;
-    
+
     var err = false;
     if ( north=='' || isNaN(north) || north>90 )  { $('#threed_input1').addClass('error'); err=true; } else { $('#threed_input1').removeClass('error'); }
     if ( west =='' || isNaN(west ) )              { $('#threed_input2').addClass('error'); err=true; } else { $('#threed_input2').removeClass('error'); }
@@ -6252,10 +6252,10 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       $('#threed_input2, #threed_input4').removeClass('error');
     }
     if ( err ) return;
-    
+
     var rect = Cesium.Rectangle.fromDegrees(west, south, east, north);
     var center = Cesium.Rectangle.center(rect);
-    
+
     rect._gsidata = {
       north : north,
       south : south,
@@ -6266,29 +6266,29 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         Cesium.Math.toDegrees(center.longitude)
       ]
     };
-    
+
     if ( !this._sampleRect )
     {
       var collection = GLOBE.MAP.viewer.entities;
-      
+
       this._sampleRect = this.getSampleRectEntity('sampleRect', rect);
       collection.add(this._sampleRect);
-      
+
       this._sampleBorder = this.getSampleBorderEntity('sampleBorder', rect);
       collection.add(this._sampleBorder);
-      
+
       this._sampleLtHandle = this.getSampleHandleEntity('sampleLtHandle', Cesium.Cartesian3.fromDegrees(west, north));
       collection.add(this._sampleLtHandle);
-      
+
       this._sampleRtHandle = this.getSampleHandleEntity('sampleRtHandle', Cesium.Cartesian3.fromDegrees(east, north));
       collection.add(this._sampleRtHandle);
-      
+
       this._sampleLbHandle = this.getSampleHandleEntity('sampleLbHandle', Cesium.Cartesian3.fromDegrees(west, south));
       collection.add(this._sampleLbHandle);
-      
+
       this._sampleRbHandle = this.getSampleHandleEntity('sampleRbHandle', Cesium.Cartesian3.fromDegrees(east, south));
       collection.add(this._sampleRbHandle);
-      
+
       this._sampleCenterHandle = new Cesium.Entity({
         id: 'sampleCenterHandle',
         billboard: {
@@ -6303,9 +6303,9 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         position: Cesium.Cartesian3.fromRadians(center.longitude, center.latitude)
       });
       collection.add(this._sampleCenterHandle);
-      
-      
-      
+
+
+
       this._screenSpaceEventHandler = new Cesium.ScreenSpaceEventHandler(GLOBE.MAP.viewer.scene.canvas);
       this._screenSpaceEventHandler.setInputAction(function(event){
         var viewer = GLOBE.MAP.viewer;
@@ -6325,11 +6325,11 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
           }
         }
       }.bind(this), Cesium.ScreenSpaceEventType.LEFT_DOWN);
-      
-      
-      
+
+
+
       this._screenSpaceEventHandler.setInputAction(function(event){
-        
+
         var pickList = GLOBE.MAP.viewer.scene.drillPick(event.endPosition);
         if ( !pickList.length )
         {
@@ -6368,7 +6368,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
             $('#cesiumContainer').css({'cursor':'auto'});
           }
         }
-        
+
         if ( this._sampleRect && this._draggingItem )
         {
           var currentCartesian = GLOBE.MAP.windowPositionToCartesian(event.endPosition);
@@ -6377,20 +6377,20 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
           var currentLng = Cesium.Math.toDegrees(currentCartographic.longitude);
           currentLat = GSI.Utils.round(currentLat, 6);
           currentLng = GSI.Utils.round(currentLng, 6);
-          
+
           if ( this._draggingItem == this._sampleCenterHandle )
           {
             var beforeLat = this._sampleRect._gsidata.center[0];
             var beforeLng = this._sampleRect._gsidata.center[1];
-            
+
             var diffX = beforeLng - currentLng;
             var diffY = beforeLat - currentLat;
-            
+
             var west  = this._sampleRect._gsidata.west - diffX;
             var north = this._sampleRect._gsidata.north - diffY;
             var east  = this._sampleRect._gsidata.east - diffX;
             var south = this._sampleRect._gsidata.south - diffY;
-            
+
             $('#threed_input1').val(north);
             $('#threed_input2').val(west);
             $('#threed_input3').val(south);
@@ -6422,11 +6422,11 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
             this.updateSampleRect();
           }
         }
-        
+
       }.bind(this), Cesium.ScreenSpaceEventType.MOUSE_MOVE);
-      
-      
-      
+
+
+
       this._screenSpaceEventHandler.setInputAction(function(event){
         if ( this._draggingItem )
         {
@@ -6434,9 +6434,9 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         }
         GLOBE.MAP.viewer.scene.screenSpaceCameraController.enableInputs = true;
       }.bind(this), Cesium.ScreenSpaceEventType.LEFT_UP);
-      
-      
-      
+
+
+
       this._cameraMoveHandler = function(){
         if ( this._sampleBorder )
         {
@@ -6445,7 +6445,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       }.bind(this);
       GLOBE.MAP.viewer.camera.moveEnd.addEventListener(this._cameraMoveHandler);
     }
-    
+
     if ( fromSizeFlg )
     {
       rect = this.getRectFromPixelsize(x, y, rect._gsidata.center);
@@ -6453,12 +6453,12 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       west  = rect._gsidata.west;
       south = rect._gsidata.south;
       east  = rect._gsidata.east;
-      
+
       var nw = Cesium.Cartesian3.fromDegrees(west, north);
       var ne = Cesium.Cartesian3.fromDegrees(east, north);
       var sw = Cesium.Cartesian3.fromDegrees(west, south);
       var se = Cesium.Cartesian3.fromDegrees(east, south);
-      
+
       $('#threed_input1').val(rect._gsidata.north);
       $('#threed_input2').val(rect._gsidata.west);
       $('#threed_input3').val(rect._gsidata.south);
@@ -6470,16 +6470,16 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       var ne = Cesium.Cartesian3.fromDegrees(east, north);
       var sw = Cesium.Cartesian3.fromDegrees(west, south);
       var se = Cesium.Cartesian3.fromDegrees(east, south);
-      
+
       var nw2 = GLOBE.MAP.viewer.scene.cartesianToCanvasCoordinates(nw);
       var se2 = GLOBE.MAP.viewer.scene.cartesianToCanvasCoordinates(se);
       y = Math.round((se2.y - nw2.y) / this._pixelRatio);
       x = Math.round((se2.x - nw2.x) / this._pixelRatio);
-      
+
       $('#threed_input5').val(x);
       $('#threed_input6').val(y);
     }
-    
+
     this._sampleRect.polygon.hierarchy = new Cesium.PolygonHierarchy([nw, ne, se, sw]);
     this._sampleRect._gsidata = rect._gsidata;
     this._sampleBorder.corridor.positions = [nw, ne, se, sw, nw];
@@ -6489,8 +6489,8 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     this._sampleLbHandle.position = sw;
     this._sampleRbHandle.position = se;
     this._sampleCenterHandle.position = Cesium.Cartesian3.fromRadians(center.longitude, center.latitude);
-    
-    
+
+
     if ( x < 256 || x > 2048 || y < 256 || y > 2048  )
     {
       this._content.find('.errormessage').show();
@@ -6500,7 +6500,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
       this._content.find('.errormessage').hide();
     }
   },
-  
+
   // 1ピクセルあたりの度数を返す（経度のみ有効）
   getDegreesPerPixel : function( zoomlevel )
   {
@@ -6511,39 +6511,39 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     var latPerTile = 360 / ytiles;
     var lngPerPixel = lngPerTile / 255; //1ピクセルあたりの度数
     var latPerPixel = latPerTile / 255;
-    
+
     return [latPerPixel, lngPerPixel];
   },
-  
+
   // 指定のピクセルサイズに合わせたRectangleを返す（中心地点は画面中央）
   getCenterRectFromPixelsize : function( pxsize )
   {
     var centerLatLng = GLOBE.MAP.getCenterPosition(true);
-    
+
     return this.getRectFromPixelsize(pxsize, pxsize, centerLatLng);
   },
-  
+
   // 指定のピクセルサイズに合わせたRectangleを返す（中心地点を指定）
   getRectFromPixelsize : function( pixelSizeX, pixelSizeY, centerLatLng )
   {
     GLOBE.MAP.currents.zoomlevel = GLOBE.MAP.getCurrentZoom();
     var currents = GLOBE.MAP.currents;
-    
+
     var degs = this.getDegreesPerPixel(GLOBE.MAP.currents.zoomlevel);
     var lngPerPixel = degs[1];
     var latPerPixel = degs[0];
-    
+
     //var north = centerLatLng[0] + (latPerPixel * pixelSizeY / 2);
     //var south = centerLatLng[0] - (latPerPixel * pixelSizeY / 2);
     var east  = centerLatLng[1] + (lngPerPixel * pixelSizeX / 2);
     var west  = centerLatLng[1] - (lngPerPixel * pixelSizeX / 2);
-    
+
     var centerCartesian3 = Cesium.Cartesian3.fromDegrees(centerLatLng[1], centerLatLng[0]);
     var westCartesian3   = Cesium.Cartesian3.fromDegrees(west, centerLatLng[0]);
-    
+
     var centerCartesian2 = GLOBE.MAP.viewer.scene.cartesianToCanvasCoordinates(centerCartesian3);
     var westCartesian2   = GLOBE.MAP.viewer.scene.cartesianToCanvasCoordinates(westCartesian3);
-    
+
     var leafletPx = pixelSizeX / 2;
     var cesiumPx = centerCartesian2.x - westCartesian2.x;
     this._pixelRatio = cesiumPx / leafletPx;
@@ -6555,17 +6555,17 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     //console.log("southCartesian2:", southCartesian2);
     if ( northCartesian2.y < 0 ) northCartesian2.y = 0;
     //if ( southCartesian2.y > $("#cesiumContainer").innerHeight() ) southCartesian2.y = $("#cesiumContainer").innerHeight();
-    
+
     var northLatLng = GLOBE.MAP.canvasCoordinatesToLatLng(northCartesian2);
     var southLatLng = GLOBE.MAP.canvasCoordinatesToLatLng(southCartesian2);
-    
+
     var north = northLatLng[0];
     var south = southLatLng[0];
-    
+
     if ( north > 90 ) north = 90;
     if ( south < -90 ) south = -90;
     if ( east > 180 ) east = 180;
-    
+
     var rect = Cesium.Rectangle.fromDegrees(west, south, east, north);
     var center = Cesium.Rectangle.center(rect);
     rect._gsidata = {
@@ -6578,10 +6578,10 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
         Cesium.Math.toDegrees(center.longitude)
       ]
     };
-    
+
     return rect;
   },
-  
+
   // 選択範囲の矩形をentityとして生成して返す
   getSampleRectEntity : function( id, rect, color )
   {
@@ -6610,7 +6610,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     entity._gsidata = rect._gsidata;
     return entity;
   },
-  
+
   // 選択範囲の枠線をentityとして生成して返す
   getSampleBorderEntity : function( id, rect, color )
   {
@@ -6632,13 +6632,13 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     entity._gsidata = rect._gsidata;
     return entity;
   },
-  
+
   // 選択範囲の枠線の太さを返す（メートル単位）
   getSampleBorderWidth : function()
   {
     return parseInt(this.sampleBorderSize * GLOBE.MAP.viewer.camera.positionCartographic.height / 800);
   },
-  
+
   // 選択範囲４隅のハンドルをentityとして生成して返す
   getSampleHandleEntity : function( id, position )
   {
@@ -6652,7 +6652,7 @@ GLOBE.DIALOG.GSI3DCUSTOM = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_3dcus
     ctx.beginPath();
     ctx.fillRect(0, 0, this.sampleHandleSize, this.sampleHandleSize);
     ctx.strokeRect(0, 0, this.sampleHandleSize, this.sampleHandleSize);
-    
+
     var entity = new Cesium.Entity({
       id: id,
       billboard: {
@@ -6676,41 +6676,41 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
   options: {
     title: 'ヘルプ'
   },
-  
+
   defaultTop   : '50px',
   defaultLeft  : 'auto',
   defaultRight : 'auto',
   defaultBottom: 'auto',
-  
+
   resizable: true,
   draggable: true,
-  
+
   _slideContainerId : 'help_container',
   _slideContentClass: 'help_content',
   _slideContainerWidth: '870px',
   _slideContainerHeight: '600px',
-  
+
   _slideContainer: null,
   _slides: null,
   _slideCurrentIndex: 0,
-  
+
   create: function()
   {
     this.createDialog();
-    
+
     this.setDialogHeader( this.createHeader() );
     this.setDialogContent( this.createContent() );
-    this.select(0);	
-    
+    this.select(0);
+
     this.setHelpDialog();
-    
+
     $('#title_help').on('click', function(){
       GLOBE.DIALOG.HELP.show();
     });
-    
+
     $(window).on('resize', this.onResize.bind(this));
   },
-  
+
   createHeader : function()
   {
     this._titleFrame = this.headerFrame
@@ -6732,7 +6732,7 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       }.bind(this));
     return $("<span></span>");
   },
-  
+
   createContent : function()
   {
     this._contentFrame = this.contentFrame.css({
@@ -6740,24 +6740,24 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       'margin': '0 25px',
       'overflow': 'auto'
     });
-    
+
     this._contentList = [];
     this._selectedIndex = -1;
-    
+
     $('#' + this._slideContainerId + ' .' + this._slideContentClass).each( function(index, elem) {
       this._contentList.push( {
         content : $( elem ).clone(),
         title : $( elem ).attr( "title" )
       });
     }.bind(this));
-    
+
     return $("<div></div>");
   },
-  
+
   setHelpDialog : function()
   {
     this._frame = this.container;
-    
+
     if (GSI.Utils.Browser.isSmartMobile)
     {
       this._frame.addClass('help_window_frame mobile');
@@ -6766,15 +6766,15 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
     {
       this._frame.addClass('help_window_frame');
     }
-    
+
     this._frame.css({
       'width': this._slideContainerWidth,
       'height': this._slideContainerHeight,
       'margin-right': 'auto',
       'margin-left' : 'auto'
     });
-    
-    
+
+
     this._contentFrame.on({
       /* フリック開始時 */
       'touchstart': MA.bind( function(e) {
@@ -6800,12 +6800,12 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
         this._accel = (e.originalEvent.changedTouches[0].pageX - this._touchX) * 5;
         this._touchX = e.originalEvent.changedTouches[0].pageX;
         this._touchEndX = this._touchX;
-        
+
       }, this ),
       /* フリック終了 */
       'touchend': MA.bind( function(e) {
         //this._slideX += this._accel;
-        
+
         if ( Math.abs( this._touchEndX - this._touchStartX ) > 50 )
         {
           if ( this._accel > 1 )
@@ -6816,8 +6816,8 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
         //$("#query").val(this._slideX + "/" + this._accel + "/" + this._touchX );
       }, this )
     });
-    
-    
+
+
     this._nextButton = $("<a>")
       .attr({
         "href":"javascript:void(0);"
@@ -6826,7 +6826,7 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       .addClass("help_window_frame_next_button")
       .html("")
       .click( MA.bind( function(){this._nextButton.blur();this.next();}, this ) );
-    
+
     this._prevButton = $("<a>")
       .attr( {
         "href":"javascript:void(0);"
@@ -6835,30 +6835,30 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       .addClass( "help_window_frame_prev_button")
       .html( "" )
       .click( MA.bind( function(){this._prevButton.blur();this.prev();}, this ) );
-    
+
     this._frame.append( this._prevButton);
     this._frame.append( this._nextButton);
-    
+
     this.setCenter();
   },
-  
+
   next : function()
   {
     if ( this._contentList.length > this._selectedIndex+1)
       this.select(this._selectedIndex+1);
     else
-      this.select(0);	
+      this.select(0);
   },
-  
+
   prev : function()
   {
     if ( 0 <= this._selectedIndex-1)
       this.select(this._selectedIndex-1);
     else
-      this.select(this._contentList.length -1);	
-      
+      this.select(this._contentList.length -1);
+
   },
-  
+
   select : function( index )
   {
     if ( this._contentList && this._contentList.length > index && index >= 0 )
@@ -6866,20 +6866,20 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       if ( this._selectedIndex >= 0 )
       {
         this._contentFrame.fadeOut( 100, MA.bind( function(){
-          this._titleFrame.find("span").empty().append( this._contentList[index].title ); 
+          this._titleFrame.find("span").empty().append( this._contentList[index].title );
           this._contentFrame.empty().append( this._contentList[index].content );
           this._contentFrame.fadeIn( 100 );
         }, this));
       }
       else
       {
-        this._titleFrame.find("span").empty().append( this._contentList[index].title ); 
+        this._titleFrame.find("span").empty().append( this._contentList[index].title );
         this._contentFrame.empty().append( this._contentList[index].content );
       }
       this._selectedIndex = index;
     }
   },
-  
+
   setCenter: function()
   {
     this.container.css({
@@ -6887,12 +6887,12 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       'left': ($(window).width() - this.container.outerWidth(true)) / 2 + 'px'
     });
   },
-  
+
   onAfterShow: function()
   {
     this.onResize();
   },
-  
+
   onResize: function()
   {
     this.adjustHelp();
@@ -6900,7 +6900,7 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       'height': (this.container.height() - this.headerFrame.outerHeight(true)) + 'px'
     });
   },
-  
+
   adjustHelp: function()
   {
     if ( this.container.outerWidth(true) >= $(window).width() )
@@ -6911,7 +6911,7 @@ GLOBE.DIALOG.HELP = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_help'), {
       });
       this.setCenter();
     }
-    
+
     if ( this.container.offset().top + this.container.outerHeight(true) >= $(window).height() )
     {
       var diff = this.container.outerHeight(true) - this.container.height();
@@ -6931,15 +6931,15 @@ GLOBE.DIALOG.INFOBOX = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_infobox')
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'10px',
-  
+
   resizable: false,
-  
+
   create: function()
   {
     this.createDialog();
     this.initPosition();
   },
-  
+
   initPosition: function()
   {
     this.container
@@ -6950,24 +6950,24 @@ GLOBE.DIALOG.INFOBOX = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_infobox')
         'width': 'auto',
         'min-width': '88px'
       });
-    
+
     this.container.css('top', this.defaultTop);
     this.container.css('left', this.defaultLeft);
     this.container.css('right', this.defaultRight);
     this.container.css('bottom', this.defaultBottom);
-    
+
     this.contentFrame.css({
       'padding': '10px',
       'background-color': '#fff',
       'color': '#000'
     });
   },
-  
+
   onBeforeShow: function()
   {
     this.initPosition();
   },
-  
+
   onDragStart: function()
   {
     this.container.css({
@@ -6982,35 +6982,35 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
   options: {
     title: 'ファイル読込'
   },
-  
+
   defaultTop:   '100px',
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'auto',
-  
+
   resizable: true,
-  
+
   _list: [],
-  
+
   create: function()
   {
     this.createDialog();
     this.container.css({'width':'360px'});
-    
+
     this.setDialogHeader( this.createHeader() );
     this.setDialogContent( this.createContent() );
-    
+
     this.initializeDroppable();
   },
-  
+
   initializeDroppable: function()
   {
     if(!window.FileReader) {
       return false;
     }
-    
+
     var elm = $('#' + GLOBE.MAP.mapElementId);
-    
+
     var cancelEvent = function(event) {
       event.preventDefault();
       event.stopPropagation();
@@ -7018,21 +7018,21 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
     }
     elm.bind("dragenter", cancelEvent);
     elm.bind("dragover", cancelEvent);
-    
+
     var handleDroppedFile = function(event) {
       this.show();
       this._createFileLoadPanel();
-      
+
       this.uploadFile( event.originalEvent.dataTransfer.files );
-      
+
       cancelEvent(event);
       return false;
-      
+
     }.bind(this);
-    
+
     elm.bind("drop", handleDroppedFile);
   },
-  
+
   createHeader : function()
   {
     this._title = $( '<div>' ).html( this.options.title );
@@ -7045,7 +7045,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
     this._createTopPanel();
     return this._sakuzuFrame;
   },
-  
+
   _createTopPanel : function()
   {
     // 初期画面
@@ -7058,11 +7058,11 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
 
     this._sakuzuFrame.append( this._topPanel );
   },
-  
+
   _createTopPanelList : function()
   {
     var frame = $( '<div>' ).addClass( 'gsi_sakuzu_dialog_list' );
-    
+
     $('<div>ファイルを選択</div>')
       .addClass('normalbutton')
       .css({
@@ -7078,7 +7078,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       })
       .on('click', this._showFileLoadPanel.bind(this))
       .appendTo(frame);
-    
+
     this._listTable = $( '<table>' ).css( { 'width' : '100%'} );
     this._listTBody = $( '<tbody>' );
 
@@ -7088,7 +7088,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
 
     return frame;
   },
-  
+
   _refreshList : function()
   {
     this._listTBody.empty();
@@ -7096,7 +7096,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
     for ( var i=0; i<this._list.length; i++ )
     {
       var item = this._list[i];
-      
+
       var tr = $( '<tr>' );
       var td = null;
       var id = 'GSI_SakuzuDialog_check' + item.id;
@@ -7104,7 +7104,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       // 表示チェック
       var checkBox = $( '<input>' ).attr( { 'id': id, 'type' : 'checkbox', 'checked' : item.visible } ).addClass( 'normalcheck' );
       var label = $( '<label>' ).attr( {'for': id} ).html( item.file );
-      
+
       // 名称
       var title = $( '<div>' ).append( checkBox ).append( label )
         .css( { "word-break": "break-all"} )
@@ -7120,19 +7120,19 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       // ボタン類
       td = $( '<td>' ).css({"text-align":"right"}).append( num );
       tr.append( td );
-      
+
       var buttonClassName = 'normalbutton sakuzubutton' + ( layerCount <= 0 ? ' disabled' : '' );
-      
+
       var clearBtn = $( '<a>' ).attr( {"href":"javascript:void(0);"} ).html( '削除' ).addClass(buttonClassName);
       td = $( '<td>' ).append( clearBtn );
       tr.append( td );
       this._listTBody.append( tr );
-      
+
       // アイコンラベル
       tr = $( '<tr>' );
       id = 'GSI_SakuzuDialog_label_check' + item.id ;
       var checkBox2 = $( '<input>' ).attr( { 'id': id, 'type' : 'checkbox', 'checked' : item.visibleOfLabel } ).addClass( 'normalcheck' );
-      
+
       label = $( '<label>' ).attr( {'for': id} ).html( 'アイコンのラベルを表示' );
       td = $( '<td>' ).attr({"colspan":4, "align":"right"}).append(checkBox2).append( label );
 
@@ -7167,14 +7167,14 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
 
       tr.append( td );
       this._listTBody.append( tr );
-      
-      
+
+
       // イベント
       checkBox.click( MA.bind( function(checkBox, checkBox2, item){
         GLOBE.MAP.hide_showLayer("upload", "", item.id, checkBox.is(':checked'), checkBox2.is(':checked'));
         item.visible = checkBox.is(':checked');
       }, this, checkBox, checkBox2, item ) );
-      
+
       checkBox2.click( MA.bind( function(checkBox, checkBox2, item, keyNameSelect){
         GLOBE.MAP.hide_showLabel("upload", "", item.id, checkBox.is(':checked'), checkBox2.is(':checked'));
         item.visibleOfLabel = checkBox2.is(':checked');
@@ -7196,11 +7196,11 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
           $('#' + checkBox2[0].id + 'div').slideUp(200);;
         }
       }, this, checkBox, checkBox2, item, keyNameSelect) );
-      
+
       clearBtn.click( MA.bind( this._clearLayer, this, item ) );
     }
   },
-  
+
   _createFileLoadPanel : function()
   {
     // ファイル読込パネル
@@ -7253,7 +7253,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
 
     return frame;
   },
-  
+
   _onFileLoadOkClick : function()
   {
     if ( this._fileLoadInput )
@@ -7276,7 +7276,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       if ( text != '' )
       {
         var fileName = $.trim( this._fileLoadNameInput.val() );
-        
+
         if ( this.isJSON(text) )
         {
           GLOBE.MAP.drawGeojson(text, fileName, null, this.onAfterDataLoad.bind(this));
@@ -7296,7 +7296,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       }
     }
   },
-  
+
   isJSON: function( text )
   {
     try
@@ -7309,7 +7309,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       return false;
     }
   },
-  
+
   isXML: function( text )
   {
     try
@@ -7322,7 +7322,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       return false;
     }
   },
-  
+
   _onFileLoad : function( event )
   {
     if ( event.error )
@@ -7340,12 +7340,12 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       this._showTopPanel( this._fileLoadPanel );
     }
   },
-  
+
   _onFileLoadCancelClick : function()
   {
     this._showTopPanel( this._fileLoadPanel );
   },
-  
+
   _showTopPanel : function( beforePanel )
   {
     this._createTopPanel();
@@ -7364,7 +7364,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       this._topPanel.show();
     }
   },
-  
+
   _showFileLoadPanel : function()
   {
     this._createFileLoadPanel();
@@ -7386,7 +7386,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
     window.history.pushState({url: url, title: document.title}, document.title, url);
     if(GSI.FILEURL[fKey]) GSI.FILEURL[fKey] = null;
   },
-  
+
   _clearLayer: function( item )
   {
     if ( confirm('このレイヤーを削除します。よろしいですか？') )
@@ -7409,10 +7409,10 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       this._refreshList();
     }
   },
-  
+
   uploadFile: function( files, fkey){
     var file = files[0];
-    
+
     // geojsonかkmlかどうかチェック
     if ( !file || !file.name ) return false;
     var ext = file.name.match(/(.*)(?:\.([^.]+$))/)[2];
@@ -7420,11 +7420,11 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       alert("geojsonまたはkmlファイルを選択して下さい。");
       return;
     }
-    
+
     var reader = new FileReader();
     reader.onload = function(evt){
       var res = evt.target.result;
-      
+
       // Geojson描画
       if(ext == "geojson"){
         GLOBE.MAP.drawGeojson(res, file.name, fkey, this.onAfterDataLoad.bind(this));
@@ -7432,12 +7432,12 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       }else if(ext == "kml"){
         GLOBE.MAP.drawKml(res, file.name, null, fkey, this.onAfterDataLoad.bind(this));
       }
-      
+
     }.bind(this);
 
     reader.readAsText(file, "UTF-8");
   },
-  
+
   onAfterDataLoad: function( item )
   {
     if ( item )
@@ -7454,7 +7454,7 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
       alert("読み込みに失敗しました。\n\n「JSON形式」か「KML形式」であることをご確認ください。");
     }
   },
-  
+
   reloadAllKml: function()
   {
     for ( var i=0; i<this._list.length; i++ )
@@ -7470,33 +7470,33 @@ GLOBE.DIALOG.FILEREAD = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_fileread
 
 /***** 高さ倍率ダイアログ *****/
 GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heightpower'), {
-  
+
   defaultTop:   '140px',
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'auto',
-  
+
   sliderId: 'gsi_height_power_slider',
   tboxId: 'gsi_height_power_tbox',
-  
+
   // このオブジェクトを活性化（最初に呼ぶ）
   create: function()
   {
     this.createDialog();
-    
+
     this.onBeforeClose = function()
     {
       //this.clear();
     }
-    
+
     this.setDialogHeader('高さ倍率');
     this._initializeContent();
   },
-  
+
   _initializeContent: function()
   {
     this.frame = $('<div></div>');
-      
+
     this.label = $('<div>高さ方向の倍率：</div>')
       .css({
         'margin': '20px',
@@ -7504,7 +7504,7 @@ GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heigh
         'text-align': 'center'
       })
       .appendTo(this.frame);
-    
+
     this.tbox = $('<input type="tel" size="3">')
       .attr('id', this.tboxId)
       .val(GLOBE.MAP.initials.heightPower)
@@ -7514,23 +7514,23 @@ GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heigh
       .on('click', function(){ this.select(); })
       .on('keyup change', this.onTboxChange.bind(this))
       .appendTo( this.label );
-    
+
     this.sliderFrame = $('<div></div>')
       .css({
         'position' : 'relative',
         'margin' : '20px'
       })
       .appendTo(this.frame);
-      
+
     this.slider = $('<div></div>')
       .attr('id', this.sliderId)
       .css({
         //'margin' : '0 30px 0 20px'
       })
       .appendTo(this.sliderFrame);
-    
+
     this.setDialogContent( this.frame );
-    
+
     this.slider.slider({
       max: GLOBE.MAP.heightPowerMax,
       min: GLOBE.MAP.heightPowerMin,
@@ -7540,7 +7540,7 @@ GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heigh
       change: this.sliderValueToMap.bind(this)
     });
   },
-  
+
   tboxToSlider: function( e )
   {
     var v = this.tbox.val();
@@ -7549,28 +7549,28 @@ GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heigh
       this.slider.slider('value', v);
     }
   },
-  
+
   sliderToTbox: function( e, ui )
   {
     this.tbox.val( ui.value );
   },
-  
+
   onSliderChange: function( e, ui )
   {
     this.sliderToTbox( e, ui );
   },
-  
+
   onTboxChange: function( e )
   {
     this.tboxToSlider( e );
   },
-  
+
   sliderValueToMap: function( e, ui )
   {
     GSI.GLOBALS.layerTreeDialog._userControlStarted = false;
     GLOBE.MAP.setHeightPower( ui.value );
     GLOBE.DIALOG.FILEREAD.reloadAllKml();
-    
+
     var list = GSI.GLOBALS.mapLayerList.getList();
     for ( var i=0; i<list.length; i++ )
     {
@@ -7584,40 +7584,40 @@ GLOBE.DIALOG.HEIGHTPOWER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_heigh
 
 /***** リンクを取得ダイアログ *****/
 GLOBE.DIALOG.GETLINK = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_getlink'), {
-  
+
   defaultTop:   '180px',
   defaultLeft:  'auto',
   defaultRight: '10px',
   defaultBottom:'auto',
-  
+
   resizable: false,
-  
+
   // このオブジェクトを活性化（最初に呼ぶ）
   create: function()
   {
     this.createDialog();
-    
+
     this.onBeforeClose = function()
     {
       //this.clear();
     }
-    
+
     this._initializeHeader();
     this._initializeContent();
   },
-  
+
   _initializeHeader: function()
   {
     this.setDialogHeader('リンクを取得');
   },
-  
+
   _initializeContent: function()
   {
     this.setDialogContent( this.createContent() );
     this._createTextareaContent(true);
     this._setMessage();
   },
-  
+
   createContent : function()
   {
     this._frame = $( '<div>' ).addClass( 'gsi_sharedialog_frame' );
@@ -7635,33 +7635,33 @@ GLOBE.DIALOG.GETLINK = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_getlink')
 
     return this._frame;
   },
-  
+
   _createTextareaContent : function()
   {
     var frame = $( '<div>' ).addClass( 'textareacontent' );
-    
+
     var textareaFrame = $( '<div>' );
     this._textarea = $( '<textarea>' ).attr( {rows:4, readonly:"readonly", 'wrap':'off'} ).click( function(){ this.select();} );
     this._textarea.focus();
     this._textarea.val( '' );
     textareaFrame.append( this._textarea );
-    
+
     frame.append( textareaFrame );
-    
+
     this._textareaFrame.append( frame );
     this._textareaContent = frame;
   },
-  
+
   _setMessage : function()
   {
     this._messageFrame.empty();
-    
+
     var msg = "次のURLをメール等で送付することで、現在表示されている地図を共有することができます。";
-    
+
     var img = $( '<img>' ).attr( {'src': 'image/system/info.png'} );
     this._messageFrame.append(img).append( $('<div>').html(msg) );
   },
-  
+
   onBeforeShow: function()
   {
     this._textarea.val(location.href);
@@ -7671,30 +7671,30 @@ GLOBE.DIALOG.GETLINK = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_getlink')
 
 /***** 検索ダイアログ *****/
 GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), {
-  
+
   selectFrame: null,
   listFrame: null,
   listContainer: null,
-  
+
   kenSelect: null,
   shiSelect: null,
-  
+
   addressResult: [],
   chimeiResult: [],
-  
+
   markerNamePrefix: 'search_result_',
   normalMarkerUrl: 'image/system/search_result.png',
   activeMarkerUrl: 'image/system/search_result_active.png',
   markerLayer: null,
   markers: [],
-  
+
   // このオブジェクトを活性化（最初に呼ぶ）
   create: function()
   {
     this.createDialog();
     this._initializeHeader();
     this._initializeContent();
-    
+
     this.onResize = function()
     {
       var h1 = this.container.height();
@@ -7704,12 +7704,12 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
         'max-height': (h1 - h2 - h3 - 2) + 'px'
       });
     }
-    
+
     this.onBeforeClose = function()
     {
       this.clear();
     }
-    
+
     this.createMarkerLayer();
     this.container.css({
       top: '42px',
@@ -7717,18 +7717,18 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     });
 
   },
-  
+
   // ダイアログのヘッダを初期化
   _initializeHeader: function()
   {
     this.setTitle( '検索中' );
   },
-  
+
   // ダイアログの内容を初期化
   _initializeContent: function()
   {
     this.frame = $( '<div>' );
-    
+
     var selectFrame = $( '<div>' ).addClass( "searchresultdialog_select_frame" );
     this.selectFrame = selectFrame;
 
@@ -7755,7 +7755,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     this.frame.append( selectFrame );
 
     this.listFrame = $( '<div>' ).addClass( 'searchresultdialog_ul_frame' );
-    
+
     var w = $(window).width();
     var h = $(window).height();
     if (h > w ){
@@ -7775,7 +7775,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     //return this.frame;
     this.setDialogContent(this.frame);
   },
-  
+
 
   // 都道府県選択エレメントを初期化
   initializeKenSelect : function()
@@ -7800,24 +7800,24 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       }
     }
   },
-  
+
   // イベント：都道府県を選択した時
   onKenChange : function()
   {
     this.clearMarkers();
-    
+
     var selectedKen = this.kenSelect.val().split( ',');
     var selectedKenCode = selectedKen[0];
     var selectedKenName = selectedKen[1];
-    
+
     var $select = this.shiSelect;
     $select.empty();
     $select.append( $('<option>').html("市区町村").val("," ) );
-    
+
     for( var key in GSI.MUNI_ARRAY )
     {
       var muni = GSI.MUNI_ARRAY[ key ].split( ',' );
-      
+
       if ( muni.length == 4 )
       {
         if ( selectedKenCode == muni[0] )
@@ -7829,7 +7829,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     }
     this.showResult();
   },
-  
+
   // イベント：市町村を選択した時
   onShiChange : function()
   {
@@ -7841,17 +7841,17 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     this.clearMarkers();
     this.showResult();
   },
-  
+
   // ダイアログのタイトルを表示
   setTitle : function( title )
   {
     var subTitle = $( '<a>' ).html( "協力:東大CSIS" ).addClass( 'searchresultdialog_subtitle' )
       .css( {'font-size':'7pt'} ).attr('href', 'https://geocode.csis.u-tokyo.ac.jp/home/simple-geocoding/')
       .attr('target', '_blank');
-    
+
     this.headerTitle.html( title ).append( subTitle );
   },
-  
+
   // Jsonから検索結果一覧を作成
   setChimeiResult : function( result )
   {
@@ -7875,7 +7875,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     this.chimeiResult = result;
     this.showResult();
   },
-  
+
   // 検索結果一覧を作成
   showResult : function()
   {
@@ -7883,7 +7883,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
 
     var selectedKen = this.kenSelect.val().split( ',');
     var selectedKenCode = selectedKen[0];
-    
+
     var selectedSi = this.shiSelect.val().split( ',');
     var selectedSiCode = selectedSi[0];
 
@@ -7893,7 +7893,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     var ul = this.listContainer;
     ul.empty();
     var viewNum = 0;
-    
+
     var results = [this.addressResult,this.chimeiResult];
     var that = this;
     var num = 0;
@@ -7901,7 +7901,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       num += this.length;
       $.each(this,function() {
         var record = this;
-        
+
         var addressCode = "";
         if (record.properties.addressCode) {
           addressCode = parseInt(record.properties.addressCode,10)+"";
@@ -7917,7 +7917,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
             if (dataSource == 5 || dataSource == null || dataSource == undefined)  return;
           }
         }
-        
+
         var li = $( '<li>' );
         var muniNm = "";
         if (addressCode) {
@@ -7962,7 +7962,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     this.setTitle( '検索結果:' + num + '件中' + viewNum + '件表示' );
     this.show();
   },
-  
+
   // 検索結果データを初期化
   clear : function()
   {
@@ -7978,23 +7978,23 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
     this.shiSelect.empty();
     this.shiSelect.append( $('<option>').html("市区町村").val("," ) );
     this.typeSelect[0].selectedIndex = 0;
-    
+
     this.clearMarkers();
     GLOBE.DIALOG.INFOBOX.hide();
   },
-  
+
   // 地図上の検索結果マーカーを全て削除
   clearMarkers : function()
   {
     this.removeMarkersByKey(this.markerNamePrefix);
   },
-  
+
   // 検索結果を作成。<a>を返す。
   makeItem : function( item, index, subTitle )
   {
     var a = $( '<a>' ).attr( { 'href' : 'javascript:void(0);' } );
     var title = item.properties.title;
-    
+
     var div = $( '<div>' ).html( title ).addClass('title');
     a.append( div );
 
@@ -8011,7 +8011,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       "padding-left": '32px',
       "background" : "url(" + this.normalMarkerUrl + ") no-repeat 0px 50%"
     });
-    
+
     var data = {
       type: 'SEARCH',
       title: title,
@@ -8019,46 +8019,46 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       lon: item.geometry.coordinates[0],
       lat: item.geometry.coordinates[1]
     };
-    
+
     this.addMarker(item.geometry.coordinates[0], item.geometry.coordinates[1], this.markerNamePrefix + index, data);
-    
+
     return a;
   },
-  
+
   // イベント：検索結果をクリックした時
   onResultClick: function( index, item )
   {
     var lon = item.geometry.coordinates[0];
     var lat = item.geometry.coordinates[1];
-    
+
     GLOBE.DIALOG.INFOBOX.hide();
     GLOBE.MAP.fly( lon, lat, CONFIG.Z2HEIGHT[15] );
   },
-  
+
   // イベント：検索結果にマウスカーソルを乗せた時
   onResultMouseover: function( index, item )
   {
     var lon = item.geometry.coordinates[0];
     var lat = item.geometry.coordinates[1];
-    
+
     this.showActiveMarker(true, lon, lat);
   },
-  
+
   // イベント：検索結果からマウスカーソルが離れた時
   onResultMouseout: function( index, item )
   {
     var lon = item.geometry.coordinates[0];
     var lat = item.geometry.coordinates[1];
-    
+
     this.showActiveMarker(false);
   },
-  
+
   // マーカーレイヤー作成
   createMarkerLayer: function()
   {
     this.markerLayer = GLOBE.MAP.createMarkerLayer();
   },
-  
+
   // 指定のマーカーをハイライト
   showActiveMarker: function(bool, lon, lat)
   {
@@ -8082,38 +8082,38 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       }
     }
   },
-  
+
   // マーカーを配置
   addMarker: function(lon, lat, uniqueKey, data)
   {
     if ( this.markerLayer.isDestroyed() ) this.createMarkerLayer();
-    
+
     var key = uniqueKey || 'default';
-    
+
     if ( this.markers[key] )
     {
       this.removeMarker(key);
     }
-    
+
     var pinObj = GLOBE.MAP.addMarker(this.markerLayer, lon, lat, this.normalMarkerUrl, "LEFT", "BOTTOM", data);
-    
+
     this.markers[key] = {
       'obj' : pinObj,
       'lon' : lon,
       'lat' : lat,
       'data': data
     };
-    
+
     return pinObj;
   },
-  
+
   // マーカーを削除
   removeMarker: function( uniqueKey )
   {
     if ( this.markerLayer.isDestroyed() ) this.createMarkerLayer();
-    
+
     var key = uniqueKey || 'default';
-    
+
     if ( this.markers[key] )
     {
       GLOBE.MAP.removeMarker( this.markerLayer, this.markers[key].obj );
@@ -8121,7 +8121,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       this.markers[key] = null;
     }
   },
-  
+
   // マーカーを削除（接頭語が一致するもの全て）
   removeMarkersByKey: function( keyPrefix )
   {
@@ -8134,7 +8134,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
       }
     }
   },
-  
+
   // マーカーを全て削除
   removeMarkersAll: function()
   {
@@ -8157,7 +8157,7 @@ GLOBE.DIALOG.SEARCH = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_search'), 
 GLOBE.MAP = {
   viewer: null,
   mapElementId: 'cesiumContainer',
-  
+
   // 既定値
   defaults: {
     basemap: 'std',
@@ -8177,49 +8177,49 @@ GLOBE.MAP = {
   },
   initials: {},	// URLパラメータを含めた初期値
   currents: {},	// 現在の値
-  
+
   defaultFlyHeight: 4000,
-  
+
   heightPowerMin: 0,
   heightPowerMax: 9.9,
   heightPowerStep: 0.1,
-  
+
   centerMarkerUrl: 'image/system/crosshairs.png',
   centerMarkerLayer: null,
   centerMarker: null,
-  
+
   updates: {
     corridor: []
   },
-  
+
   _imagePrimitiveLayersHash: {},
-  
+
   isIE: GSI.Utils.Browser.ie,
-  
+
   _dispAddrMode: 0,
   create: function()
   {
     // URLまたは既定値から初期設定
     this.initSetting();
-    
+
     // 地図を作成
     this.viewer = this.initViewer();
-    
+
     this.viewer.scene.terrainProviderChanged.addEventListener(function(){
       // terrainにドレープするためtrueにする（変更）
       // 地表にオブジェクトを接着するためfalseとする
       this.viewer.scene.globe.depthTestAgainstTerrain = false;
     }.bind(this));
-    
+
     this.viewer.camera.moveStart.addEventListener( this.onCameraMoveStart.bind(this) );
     this.viewer.camera.moveEnd.addEventListener( this.onCameraMoveEnd.bind(this) );
-    
+
     this.centerMarkerLayer = this.createMarkerLayer();
-    
+
     this.setClickEvent();
-    
+
     this.setDirectionSign();
-    
+
     if ( CONFIG.ISFROMGSIMAP )
     {
       var height = this.initials.height - (this.initials.height * 0.02 * (18 - this.getCurrentZoom()));
@@ -8267,7 +8267,7 @@ GLOBE.MAP = {
     {
       this.initPosition();
     }
-    
+
     $(window).on('hashchange', function(){
       if ( this._hashChangeLock )
       {
@@ -8279,7 +8279,7 @@ GLOBE.MAP = {
       }
     }.bind(this));
   },
-  
+
   initSetting : function()
   {
     /*******************************************************************************************
@@ -8289,13 +8289,13 @@ GLOBE.MAP = {
     １）#[height]/[lat]/[lon]/[倍率]/[heading]/[pitch]/[roll]/&base=[BaseMap]&base_grayscale=[Gray]&ls=[Layers]&disp=[表示]
     ２）#[zoom]/[lat]/[lon]/&base=[BaseMap]&base_grayscale=[Gray]&ls=[Layers]&disp=[表示]
     ３）#[zoom]/[lat]/[lon]/[倍率]/&base=[BaseMap]&base_grayscale=[Gray]&ls=[Layers]&disp=[表示]&d=[Dlg]
-    
+
     ■パラメータ補足
     ・１は、地理院地図Globeが動的に生成するハッシュ。
     ・２と３は、地理院地図準拠。
     ・heading, pitch, rollの指定があれば、最初のパラメータはheightとして解釈（１）。その他の場合はzoomとして解釈（２または３）。
     ・heightとzoomを同時に指定することは出来ない。
-    
+
     height:  カメラの高さ（メートル）
     zoom:    ズームレベル（heading, pitch, rollの指定が無い場合、heightをzoomとして解釈する）
     lat:     カメラの緯度
@@ -8313,9 +8313,9 @@ GLOBE.MAP = {
             l: 「表示できる情報」ダイアログを開く
     *******************************************************************************************/
     $.extend(this.initials, this.defaults);
-    
+
     var params = location.hash.replace(/^#/, '').split('/');
-    
+
     if ( CONFIG.ISFROMGSIMAP )
     {
       this.initials.zoomlevel = parseInt( isNaN(params[0]) || params[0] < 1 || params[0] > 18 ? this.defaults.zoomlevel : params[0]*1 );
@@ -8325,14 +8325,14 @@ GLOBE.MAP = {
     {
       this.initials.height = ( isNaN(params[0]) || params[0] <= 0 ? this.defaults.height : params[0]*1 );
     }
-    
+
     this.initials.lat     = ( isNaN(params[1]) ? this.defaults.lat : params[1]*1 );
     this.initials.lon     = ( isNaN(params[2]) ? this.defaults.lon : params[2]*1 );
     this.initials.heightPower = ( isNaN(params[3]) ? this.defaults.heightPower : params[3]*1 );
     this.initials.heading = ( isNaN(params[4]) || isNaN(params[5]) || isNaN(params[6]) ? this.defaults.heading : params[4]*1 );
     this.initials.pitch   = ( isNaN(params[4]) || isNaN(params[5]) || isNaN(params[6]) ? this.defaults.pitch : params[5]*1 );
     this.initials.roll    = ( isNaN(params[4]) || isNaN(params[5]) || isNaN(params[6]) ? this.defaults.roll  : params[6]*1 );
-    
+
     var params2 = location.hash.split('&');
     for ( var i=1; i<params2.length; i++ )
     {
@@ -8341,7 +8341,7 @@ GLOBE.MAP = {
       {
         var key = params3[0];
         var val = params3[1];
-        
+
         switch ( key )
         {
           case 'base':
@@ -8355,15 +8355,15 @@ GLOBE.MAP = {
         }
       }
     }
-    
+
     $.extend(this.currents, this.initials);
-    
+
     this._beforeHeight = this.currents.height;
   },
-  
+
   initViewer : function()
   {
-    
+
     // viewerのインスタンス作成-------------
     var viewer = new Cesium.Viewer(this.mapElementId, {
       imageryProvider : Cesium.createOpenStreetMapImageryProvider({
@@ -8384,39 +8384,39 @@ GLOBE.MAP = {
       mapProjection: new Cesium.WebMercatorProjection(),
       creditContainer: "cesiumCreditContainer"
     });
-    
+
     viewer.scene.globe.baseColor = Cesium.Color.WHITE;
 
     for ( var i=0; i<viewer.scene.imageryLayers.length; i++ )
     {
       viewer.scene.imageryLayers._layers[i].show = false;
     }
-    
+
     // terrain
     this.setTerrainProvider(viewer);
-    
+
     /*
     var globe = viewer.scene.globe;
       globe._surface._tileProvider._debug.wireframe = true;
     */
-    
+
     return viewer;
   },
-  
+
   setTerrainProvider: function(viewer)
   {
     this.currents.heightPower = (this.currents.heightPower ? this.currents.heightPower : this.defaults.heightPower);
-    
+
     var options = $.extend( CONFIG.TERRAINPROVIDEROPTIONS, {heightPower: this.currents.heightPower} );
     var terrainProvider = new Cesium.JapanGSITerrainProvider(options);
-    
+
     viewer.terrainProvider = terrainProvider;
     viewer.terrainProvider.heightmapTerrainQuality = 0.1;
     viewer.terrainProvider.hasVertexNormals = false;
     viewer.terrainProvider.hasWaterMask = false;
     viewer.terrainProvider.requestVertexNormals = true;
   },
-  
+
   // カメラ操作開始時のハンドラ
   onCameraMoveStart: function()
   {
@@ -8425,13 +8425,13 @@ GLOBE.MAP = {
       this._rotateDirectionSignTimer = setInterval(this.rotateDirectionSign.bind(this), 200);
     }
   },
-  
+
   // カメラ操作終了時のハンドラ
   onCameraMoveEnd: function()
   {
     clearInterval(this._rotateDirectionSignTimer);
     this._rotateDirectionSignTimer = null;
-    
+
     var latLng = this.getCameraPosition();
     if ( Math.abs(this._beforeHeight - latLng[2]) > this._beforeHeight * 0.1 )
     {
@@ -8441,13 +8441,13 @@ GLOBE.MAP = {
     this.setPositionHash();
     this.updateClamp();
   },
-  
+
   onZoomChange: function(height)
   {
     // Corridorの再描画
     var removeList = [];
     var addList = [];
-    
+
     for ( var i=0; i<this.viewer.scene.primitives._primitives.length; i++ )
     {
       var primitive = this.viewer.scene.primitives._primitives[i];
@@ -8469,14 +8469,14 @@ GLOBE.MAP = {
     {
       this.viewer.scene.primitives.add(addList[i]);
     }
-    
-    
+
+
     // SingleTileImageryLayerの再描画
     for ( var key in this._singleImageryLayersHash )
     {
       this._singleImageryLayersHash[key].reload();
     }
-    
+
     // ImagePrimitiveの再描画
     for ( var key in this._imagePrimitiveLayersHash )
     {
@@ -8485,11 +8485,11 @@ GLOBE.MAP = {
         this._imagePrimitiveLayersHash[key].reload();
       }
     }
-    
-    
+
+
     this._beforeHeight = height;
   },
-  
+
   initPosition: function()
   {
     // カメラポジション
@@ -8502,15 +8502,15 @@ GLOBE.MAP = {
       }
     });
   },
-  
+
   // 現在の状態に従ってURLを更新する
   updateHash: function()
   {
     var dlg = (GSI.GLOBALS.queryParams._viewListDialogVisible ? 'v' : '')
           + (GSI.GLOBALS.queryParams._layerTreeDialogVisible ? 'l' : '');
-    
-    
-    
+
+
+
     var hash = this.currents.height + '/' + this.currents.lat + '/' + this.currents.lon + '/' + this.currents.heightPower + '/'
       + this.currents.heading + '/' + this.currents.pitch + '/' + this.currents.roll + '/'
       + '&base=' + this.currents.basemap
@@ -8519,7 +8519,7 @@ GLOBE.MAP = {
       + '&disp=' + this.currents.layersShow
       + '&lcd=' + (GSI.GLOBALS.layerTreeDialog ? GSI.GLOBALS.layerTreeDialog.getCurrentPath() : '')
       + (dlg ? '&d=' + dlg : '');
-    
+
     if ( this.currents.freeReliefData != undefined && this.currents.freeReliefData != "" ) {
       hash += "&reliefdata=" + this.currents.freeReliefData;
     }
@@ -8527,7 +8527,7 @@ GLOBE.MAP = {
     for(var key of Object.keys(GSI.FILEURL)){
       if(GSI.FILEURL[key]) hash += '&' + key + '=' + GSI.FILEURL[key];
     }
-    
+
     this._hashChangeValue = '#' + hash;
     if ( this._hashChangeTimer )
     {
@@ -8538,15 +8538,15 @@ GLOBE.MAP = {
       this._hashChangeLock = true;
       location.replace(this._hashChangeValue);
     }.bind(this), 300);
-    
+
   },
-  
+
   // 地図を操作した時に呼ぶ
   setPositionHash: function()
   {
     var cartesian = this.viewer.camera.position;
     var latLng = this.getCameraPosition();
-    
+
     this.currents.lat = latLng[0];
     this.currents.lon = latLng[1];
     this.currents.height = latLng[2];
@@ -8556,12 +8556,12 @@ GLOBE.MAP = {
     this.currents.zoomlevel = this.getCurrentZoom();
     this.updateHash();
   },
-  
+
   // レイヤーの状態を変更した時に呼ぶ
   setLayersHash: function()
   {
-        
-    
+
+
     var list = GSI.GLOBALS.mapLayerList.getList();
     var tile = GSI.GLOBALS.mapLayerList.getTileList();
     var layers = "";
@@ -8586,15 +8586,15 @@ GLOBE.MAP = {
           layersShow += ( tile[i]._visibleInfo._isHidden ? '0' : '1' );
         }
       }
-      
+
       if ( tile[i].id == CONFIG.FREERELIEFID ) {
         hasFreeRelief = true;
       }
-      
+
       layers += (tile[i]._visibleInfo.opacity < 1 ? ',' + tile[i]._visibleInfo.opacity.toFixed(2)*1 : '');
     }
-    
-    
+
+
     for ( var i=list.length-1; i>=0; i-- )
     {
       layers += '|' + list[i].id;
@@ -8605,22 +8605,22 @@ GLOBE.MAP = {
     layers = ( layers ? layers.replace(/^\|/, '') : '' );
     this.currents.layers = layers;
     this.currents.layersShow = layersShow;
-    
-    
+
+
     this.currents.freeReliefData = "";
     if ( hasFreeRelief ) {
-      
+
       var currentData = GSI.GLOBALS.mapLayerList.getElevationData();
       var text = GSI3D.ReliefTileLayer.encodeElevationData(currentData);
       if ( text != undefined ) {
         this.currents.freeReliefData = text;
       }
     }
-    
-    
+
+
     this.updateHash();
   },
-  
+
   // マーカーレイヤー作成
   createMarkerLayer: function()
   {
@@ -8631,18 +8631,18 @@ GLOBE.MAP = {
     this.viewer.scene.primitives.add(markerLayer);
     return markerLayer;
   },
-  
+
   // 指定のレイヤーへマーカーを追加
   addMarker: function(markerLayer, lon, lat, imageUrl, hOrigin, vOrigin, data)
   {
     // hOrigin = [ "LEFT" || "CENTER" || "RIGHT" ]
     // vOrigin = [ "BOTTOM" || "CENTER" || "TOP" ]
-    
+
     var h = ( hOrigin ? hOrigin : "LEFT" );
     var v = ( vOrigin ? vOrigin : "BOTTOM" );
     var ho = 1;
     var vo = 1;
-    
+
     switch ( h.toUpperCase() )
     {
       case "RIGHT":
@@ -8655,7 +8655,7 @@ GLOBE.MAP = {
         ho = Cesium.HorizontalOrigin.LEFT;
         break;
     }
-    
+
     switch ( v.toUpperCase() )
     {
       case "TOP":
@@ -8668,7 +8668,7 @@ GLOBE.MAP = {
         vo = Cesium.VerticalOrigin.BOTTOM;
         break;
     }
-    
+
     var pinObj = markerLayer.add({
       image : imageUrl,
       horizontalOrigin : ho,
@@ -8677,16 +8677,16 @@ GLOBE.MAP = {
       heightReference : Cesium.HeightReference.CLAMP_TO_GROUND
     });
     if ( data ) pinObj["data"] = data;
-    
+
     return pinObj;
   },
-  
+
   // 指定のレイヤーから指定のマーカーを削除
   removeMarker: function(markerLayer, marker)
   {
     markerLayer.remove( marker );
   },
-  
+
   /*
   * レイヤー削除
   * layerName : レイヤー名
@@ -8715,7 +8715,7 @@ GLOBE.MAP = {
         var targetLayer = this.getLayerById(layerId);
         this.viewer.imageryLayers.remove(targetLayer, true);
       }
-      
+
     // 「ファイルから読み込み」--------------------
     }else if(type == "upload"){
       // 【 Primitive 】
@@ -8731,10 +8731,10 @@ GLOBE.MAP = {
       // 【SingleTile】
       this.removeSingleImageryLayer(id);
     }
-    
+
     GLOBE.MAP.removeImagePrimitive( id );
   },
-  
+
   /*
   * レイヤーの表示/非表示を切り替える
   */
@@ -8801,7 +8801,7 @@ GLOBE.MAP = {
           entities[i].show = isShow;
         }
       }
-      
+
       // 【アイコン代替】
       this.showSingleImageryLayer(id, isShow);
       this.showImagePrimitive(id, isShow);
@@ -8842,7 +8842,7 @@ GLOBE.MAP = {
           }
         }
       }
-      
+
       // 【 Entity 】
       var dataSource = this.getDataSourceById(id);
       if(dataSource)
@@ -8882,7 +8882,7 @@ GLOBE.MAP = {
         for (var j=0; j<curPrimitive._billboards.length; j++) {
           var curBillboard = curPrimitive._billboards[j];
           if(curBillboard._index != 1) continue;
-          
+
           if(curBillboard.gsidata && curBillboard.gsidata._markerType === "CircleMarker") continue;     //always show name for CircleMarker
 
           var innerID = curBillboard.innerID;
@@ -8894,7 +8894,7 @@ GLOBE.MAP = {
         for (var j = 0; j < curPrimitive.get(1).length; j++){
           var imgPrimitive = curPrimitive._primitives[0];
           if(!imgPrimitive) continue;
-          
+
           var innerID = imgPrimitive._primitives[0].gsidata.layerId;
           var strShow = innerID && pairs[innerID] && pairs[innerID][key] ? pairs[innerID][key] : "";
           curPrimitive.get(1).get(j).image = Cesium.writeTextToCanvas(strShow, imageOptions);
@@ -9044,7 +9044,7 @@ GLOBE.MAP = {
         targetLayer.alpha = value / 100;
     }
   },
-  
+
   /*
   * 画像調整
   */
@@ -9056,37 +9056,37 @@ GLOBE.MAP = {
       targetLayer[type] = value / 1;
     }
   },
-  
+
   // 指定の位置へ移動
   fly: function(lon, lat, z)
   {
     z = ( z === undefined ? this.defaultFlyHeight : z );
-    
+
     this.viewer.scene.camera.flyTo({
       destination : Cesium.Cartesian3.fromDegrees(lon, lat, z),
       complete: function(){
-        
+
       }
     });
   },
-  
+
   // 既定の位置へ移動
   flyToDefault: function()
   {
     this.fly(this.defaults.lon, this.defaults.lat, this.defaults.height);
   },
-  
+
   // flyTo等の完了時に呼ぶ
   adjustFly: function()
   {
     var latLng = this.getCameraPosition();
-    
+
     if ( latLng[2] < CONFIG.Z2HEIGHT[15] )
     {
       this.fly(latLng[1], latLng[0], CONFIG.Z2HEIGHT[15]);
     }
   },
-  
+
   /*
   * レイヤーIDからレイヤーを取得
   */
@@ -9099,7 +9099,7 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   /*
   * primitiveIDからprimitiveCollectionを取得
   */
@@ -9117,7 +9117,7 @@ GLOBE.MAP = {
 
     return array;
   },
-  
+
   /*
   * dataSourceIDからdataSourceを取得
   */
@@ -9130,7 +9130,7 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   /*
   * クリック/タップ/選択した地名の位置にピンをドロップ
   */
@@ -9142,7 +9142,7 @@ GLOBE.MAP = {
     if(!type){
       type = "pin";
     }
-    
+
     var billboardCollection = new Cesium.BillboardCollection({
       scene : this.viewer.scene
     });
@@ -9158,7 +9158,7 @@ GLOBE.MAP = {
       heightReference : Cesium.HeightReference.CLAMP_TO_GROUND
     });
   },
-  
+
   // 既存のピン(billboards)がある場合は消去
   clearPinLayers: function(type)
   {
@@ -9170,14 +9170,14 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   // 中心地点に印を表示（現在はカメラ位置を返すが、仕様を変更する予定）
   showCenterMarker: function(lon, lat)
   {
     if ( this.centerMarkerLayer.isDestroyed() ) this.centerMarkerLayer = this.createMarkerLayer();
-    
+
     var pos = this.getCameraPosition();
-    
+
     this.centerMarker = this.addMarker(
       this.centerMarkerLayer,
       ( lon ? lon : pos.lon ),
@@ -9187,13 +9187,13 @@ GLOBE.MAP = {
       "CENTER"
     );
   },
-  
+
   // 中心地点の印を非表示
   hideCenterMarker: function()
   {
-    
+
   },
-  
+
   // canvas上の位置からcartesian3を返す
   canvasCoordinatesToCartesian: function(cartesian2)
   {
@@ -9202,7 +9202,7 @@ GLOBE.MAP = {
     //return cartesian3;
     return this.viewer.camera.pickEllipsoid(cartesian2);
   },
-  
+
   // canvas上の位置からcartographicを返す
   canvasCoordinatesToCartographic: function(cartesian2)
   {
@@ -9210,7 +9210,7 @@ GLOBE.MAP = {
     var cartographic = (cartesian3 ? Cesium.Cartographic.fromCartesian(cartesian3, this.viewer.scene.globe.ellipsoid) : undefined);
     return cartographic;
   },
-  
+
   // canvas上の位置からlatLngを返す
   canvasCoordinatesToLatLng: function(cartesian2)
   {
@@ -9225,7 +9225,7 @@ GLOBE.MAP = {
     }
     return latLng;
   },
-  
+
   // cartographicからcartesian3を返す(heightは任意）
   cartographicToCartesian: function(cartographic, height)
   {
@@ -9238,7 +9238,7 @@ GLOBE.MAP = {
       return Cesium.Cartesian3.fromDegrees(cartographic.longitude, cartographic.latitude, height);
     }
   },
-  
+
   // ウィンドーの中心地点までの距離を返す（戻り値はpromise）
   DistanceToCenter: function(useCameraFlg)
   {
@@ -9253,7 +9253,7 @@ GLOBE.MAP = {
       return distance;
     });
   },
-  
+
   // ウィンドーの中心座標を返す
   getCenterPosition: function(useCameraFlg)
   {
@@ -9273,14 +9273,14 @@ GLOBE.MAP = {
       return undefined;
     }
   },
-  
+
   // カメラ位置から latLng : [lat, lon, height] を返す
   getCameraPosition: function()
   {
     var cartesian = this.viewer.camera.position;
     return this.degreesFromCartesian(cartesian);
   },
-  
+
   // Cartesian から latLng : [lat, lon, height] を返す
   degreesFromCartesian: function(cartesian)
   {
@@ -9291,7 +9291,7 @@ GLOBE.MAP = {
     var lat = Cesium.Math.toDegrees(cartographic.latitude).toFixed(8) * 1;
     return [ lat, lon, height ];
   },
-  
+
   getCurrentZoom: function()
   {
     var zoom = 1;
@@ -9310,22 +9310,22 @@ GLOBE.MAP = {
       if ( zoom < 2 ) zoom = 2;
       if ( zoom > 18 ) zoom = 18;
     }
-    
+
     return zoom;
   },
-  
+
   setHeightPower: function( val )
   {
     this.currents.heightPower = val;
     this.setTerrainProvider(this.viewer);
     this.updateHash();
   },
-  
+
   // 渡されたgeojsonデータが高さを持つかどうかの真偽値を返す
   is3dGeojson: function(coord)
   {
     if ( !coord || !coord.length || coord.length < 1 ) return false;
-    
+
     if ( !Array.isArray(coord[0]) )
     {
       //POINT
@@ -9341,10 +9341,10 @@ GLOBE.MAP = {
       //POLYGON
       return (coord[0][0].length >= 3 ? true : false);
     }
-    
+
     return false;
   },
-  
+
   /*
   * geojson追加
   */
@@ -9368,12 +9368,12 @@ GLOBE.MAP = {
         var description = this.getEntityDescription(feature.properties);
         var geomType    = feature.geometry.type;
         var markerType = feature.properties._markerType;
-        
+
         var html = (markerType == 'DivIcon' ? feature.properties._html : name);
         var ellipsoid = this.viewer.scene.globe.ellipsoid;
-        
+
         var depthFlag = GLOBE.MAP.is3dGeojson(coord);
-        
+
         // ライン用のデータ
         var gene = {
           kind: "corridor",
@@ -9386,14 +9386,14 @@ GLOBE.MAP = {
           width: null,
           isIE: this.isIE
         };
-        
+
         // ポイント(アイコン,TEXT)-------------
         if(geomType == "Point" && (markerType == "Icon" || markerType == "DivIcon")){
           var position    = Cesium.Cartesian3.fromDegrees(coord[0], coord[1], (coord.length>=3 ? coord[2] : 0), ellipsoid);
           var imageURL    = "";
           if (markerType == "DivIcon")
           {
-            imageURL = "image/system/icon_nothing.png"; 
+            imageURL = "image/system/icon_nothing.png";
           }
           else{
             if (feature.properties._iconUrl && feature.properties._iconUrl != ""){
@@ -9403,17 +9403,17 @@ GLOBE.MAP = {
               imageURL = "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png"
             }
           }
-          
+
           if ( depthFlag )
           {
             if ( (coord.length>=3 ? coord[2] : 0) < 0 ) continue;
           }
-          
+
           lonArray.push(coord[0]);
           latArray.push(coord[1]);
-          
+
           this.addSingleImageryLayer(id, name, position, imageURL);
-          
+
           if ( GLOBE.MAP.isDirectionIcon(imageURL) )
           {
             GLOBE.MAP.addImagePrimitive({
@@ -9442,7 +9442,7 @@ GLOBE.MAP = {
             this.getPrimitiveDiv_Icon(position, html, depthFlag, feature.properties._iconSize, feature.properties._iconAnchor) :
             this.getPrimitivePoint_Icon(position, imageURL, name, depthFlag, feature.properties._iconSize, feature.properties._iconAnchor)
           );
-          
+
           for(var j=0; j<billboards.length; j++){
             var billboard = billboardCollection.add(billboards[j]);
             billboard["description"] = description;
@@ -9455,7 +9455,7 @@ GLOBE.MAP = {
             }
           }
           }
-          
+
         // ポイント（円・ピクセル指定）
         }else if(feature.properties._markerType == "CircleMarker"){
           /*
@@ -9477,9 +9477,9 @@ GLOBE.MAP = {
 
           lonArray.push(coord[0]);
           latArray.push(coord[1]);
-          
+
           var cmCanvas = this.getCircleCanvas(radius, strokeWidth, strokeColor, strokeOpacity, fillColor, fillOpacity);
-          
+
           // Billboardとして追加する
           var billboardCollection = new Cesium.BillboardCollection({
             scene : this.viewer.scene
@@ -9488,7 +9488,7 @@ GLOBE.MAP = {
           this.viewer.scene.primitives.add(billboardCollection);
 
           var billboards = this.getPrimitivePoint_Icon(position, cmCanvas, name, depthFlag, [cmCanvas.width, cmCanvas.height], [cmCanvas.width/2, cmCanvas.height/2]);
-          
+
           for(var j=0; j<billboards.length; j++){
             var billboard = billboardCollection.add(billboards[j]);
             billboard["description"] = description;
@@ -9500,9 +9500,9 @@ GLOBE.MAP = {
               "_isLabel"    : (j==1 ? true : false)
             }
           }
-          
-          
-          
+
+
+
         // ポイント(円)-----------------------
         }else if(feature.geometry.type == "Point" && feature.properties._markerType == "Circle"){
           var position    = new Cesium.Cartesian3.fromDegrees(coord[0], coord[1], (coord.length>=3 ? coord[2] : 0));
@@ -9531,7 +9531,7 @@ GLOBE.MAP = {
               })
             });
             primitiveArray.push(primitive);
-            
+
           // 【 IE以外 】
           }else{
             // 円をGroundPrimitiveとして追加する
@@ -9541,19 +9541,19 @@ GLOBE.MAP = {
             });
             primitiveArray.push(primitive);
           }
-          
+
           // 枠線をGroundPrimitiveとして追加する
           if(feature.properties._opacity > 0){
             var positions = this.getCirclePosition(position, radius);
-            
+
             gene.position = positions;
             gene.color    = strokeColor;
             gene.width    = strokeWidth;
-            
+
             var linePrimitive = ( this.isIE || depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
             primitiveArray.push(linePrimitive);
           }
-          
+
         // ラインストリング-------------------
         }else if(feature.geometry.type == "LineString"){
           var position = this.getPosition(coord, depthFlag);
@@ -9569,9 +9569,9 @@ GLOBE.MAP = {
           gene.position = position;
           gene.color    = color;
           gene.width    = width;
-          
+
           var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
-          
+
           primitiveArray.push(linePrimitive);
 
         // ポリゴン---------------------------
@@ -9589,7 +9589,7 @@ GLOBE.MAP = {
           var lonlatArray = this.getLonLatArrayForGeojson(coord);
           Array.prototype.push.apply(lonArray, lonlatArray.lon);
           Array.prototype.push.apply(latArray, lonlatArray.lat);
-          
+
           // 【 IE11 または 3d 】
           if( this.isIE || depthFlag ){
             // ポリゴンをPrimitiveとして追加する
@@ -9611,12 +9611,12 @@ GLOBE.MAP = {
             });
           }
           primitiveArray.push(primitive);
-          
+
           // 枠線をPrimitiveとして追加する
           gene.position = hierarchy.positions;
           gene.color    = strokeColor;
           gene.width    = strokeWidth;
-          
+
           if(feature.properties._opacity > 0){
             var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
             primitiveArray.push(linePrimitive);
@@ -9676,7 +9676,7 @@ GLOBE.MAP = {
       }
     }*/
   },
-  
+
   /*
   * kml追加
   　追加時はcurrentIdにはnullを指定。再読み込み時は自身のidを指定。
@@ -9688,7 +9688,7 @@ GLOBE.MAP = {
       // Reloadの場合：消しておく
       GLOBE.MAP.deleteLayer('upload', '', currentId);
     }
-    
+
     try{
       var id = ( currentId ? currentId : this.getNewId() );
       var latArray = [];
@@ -9706,30 +9706,30 @@ GLOBE.MAP = {
       // 高さ情報があるかどうか
       var depthFlag = true;
       depthFlag = (kml.toLowerCase().indexOf("<altitudemode>clamptoground</altitudemode>") >=0 ? false : depthFlag);
-      
+
       var parsedKml = $.parseXML(kml);
-      
+
       // 既定のスタイル設定（存在しなければ）
       parsedKml = this.applyDefaultStyleToKML(parsedKml);
-      
+
       $(parsedKml).find('Style href').each(function(index, element){
         $(element).text( MATEST.proxyUrl( $(element).text() ) );
       });
-      
+
       var result = {};
-      
+
       // 高さ情報がある場合は倍率を適用
       parsedKml = this.applyHeightPowerToKML(parsedKml, result);
       depthFlag = (!result.depthFlag ? false : depthFlag);
-      
+
       dataSource.load(parsedKml).then(function(dataSource){
         // 高さ情報がある場合はそのままentityとして描画----------------
         if(depthFlag){
           len = dataSource.entities.values.length;
           dataSource["id"] = id;
-          
+
           this.initKmlDataSource(dataSource);
-          
+
           if ( !currentId )
           {
             this.viewer.flyTo(dataSource, {
@@ -9746,7 +9746,7 @@ GLOBE.MAP = {
           var entities = dataSource._entityCollection.values;
           len = entities.length;
           dataSource["id"] = id;
-          
+
           for(var i=0; i<entities.length; i++)
           {
             entities[i].show = false;  // いったん非表示にする
@@ -9761,13 +9761,13 @@ GLOBE.MAP = {
               Array.prototype.push.apply(lonArray, arrayList.lon);
               Array.prototype.push.apply(latArray, arrayList.lat);
             }
-            
+
           }
           //this.viewer.flyTo(entities);
-          
+
           // dataSource削除
           this.viewer.dataSources.remove(dataSource);
-          
+
           if ( !currentId )
           {
             // ズーム
@@ -9812,11 +9812,11 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   initKmlDataSource : function( dataSource )
   {
     var entities = dataSource.entities.values;
-    
+
     for(var i=0; i<entities.length; i++)
     {
       var entity = entities[i];
@@ -9825,7 +9825,7 @@ GLOBE.MAP = {
       };
 
       entity["innerID"] = this.getNewId();
-      
+
       if (entity.billboard != undefined)
       {
         // アイコンとラベルの再設定
@@ -9835,7 +9835,7 @@ GLOBE.MAP = {
         entity.label.fillColor    = Cesium.Color.BLACK;
         entity.label.pixelOffset  = new Cesium.Cartesian2(20, -20);
         entity.label.show         = false;
-        
+
         var url = entity.billboard.image._value;
         if ( url.match(/http/) )
         {
@@ -9865,7 +9865,7 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   /*------------------------------*
   * KMLのentityをpritimiveに変換 *
   *------------------------------*/
@@ -9879,24 +9879,24 @@ GLOBE.MAP = {
     var name        = (entity._name ? entity._name : "");
     var description = (entity._description ? entity._description._value : "");
       description = $("<div/>").html(description).find("div").html();
-    
+
     var depthFlag = false;
     var primitiveArray = [];
-    
+
     // ポイント(アイコン)-----------------
     if(entity._billboard != undefined){
       var position    = entity._position._value;
       var imageURL    = entity._billboard._image._value;
-      
+
       // 緯度経度を配列に入れる
       var cartographic = ellipsoid.cartesianToCartographic(position);
       var lon = Cesium.Math.toDegrees(cartographic.longitude);
       var lat = Cesium.Math.toDegrees(cartographic.latitude);
       lonArray.push(lon);
       latArray.push(lat);
-      
+
       this.addSingleImageryLayer(id, name, position, imageURL);
-      
+
       if ( GLOBE.MAP.isDirectionIcon(imageURL) )
       {
         GLOBE.MAP.addImagePrimitive({
@@ -9933,7 +9933,7 @@ GLOBE.MAP = {
             }
         }
       }
-      
+
     // ポリゴン(円含む)----------------------
     }else if(entity._polygon != undefined){
       var hierarchy   = entity._polygon._hierarchy._value;
@@ -9950,7 +9950,7 @@ GLOBE.MAP = {
         lonArray.push(lon);
         latArray.push(lat);
       }
-      
+
       // ポリゴン
       // 【 IE11 】
       if(this.isIE){
@@ -9978,7 +9978,7 @@ GLOBE.MAP = {
       primitive["name"]        = name;
       primitive["innerID"]     = GLOBE.MAP.getNewId();
       this.viewer.scene.primitives.add(primitive);
-      
+
       // 枠線をPrimitiveとして追加する
       var gene = {
         kind: "corridor",
@@ -9997,7 +9997,7 @@ GLOBE.MAP = {
         var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
         this.viewer.scene.primitives.add(linePrimitive);
       }
-      
+
     // ラインストリング----------------------
     }else if(entity._polyline != undefined){
       var position = entity._polyline._positions._value;
@@ -10012,7 +10012,7 @@ GLOBE.MAP = {
         lonArray.push(lon);
         latArray.push(lat);
       }
-      
+
       var gene = {
         kind: "corridor",
         type: "upload_GroundPrimitive",
@@ -10025,7 +10025,7 @@ GLOBE.MAP = {
         isIE: this.isIE,
         innerID: GLOBE.MAP.getNewId()
       };
-      
+
       //var linePrimitive = this.createCorridorPrimitive(gene);
       var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
       this.viewer.scene.primitives.add(linePrimitive);
@@ -10036,7 +10036,7 @@ GLOBE.MAP = {
       "lat" : latArray
     }
   },
-  
+
   // 方位計を表示する
   setDirectionSign: function()
   {
@@ -10052,7 +10052,7 @@ GLOBE.MAP = {
         'height': '1px'
       })
       .appendTo( $("body") );
-      
+
     var img = $("<img>")
       .attr("src", "./image/system/directionsign.png")
       .css({
@@ -10070,23 +10070,23 @@ GLOBE.MAP = {
         this.rotateDirectionSign();
       }.bind(this))
       .appendTo( div );
-    
+
     this._directionSignMode = '2d';
     this._directionSignDivElement = div;
     this._directionSignElement = img;
   },
-  
+
   // 方位計をカメラの向きに合わせて回転する
   rotateDirectionSign: function()
   {
     var heading = Cesium.Math.toDegrees(this.viewer.camera.heading).toFixed(2) * -1;
     var pitch = Cesium.Math.toDegrees(this.viewer.camera.pitch).toFixed(2) * 1;
     var roll = Cesium.Math.toDegrees(this.viewer.camera.roll).toFixed(2) * 1;
-    
+
     if ( pitch > 0 ) pitch = 0;
     pitch = pitch + 90;
     if ( pitch > 60 ) pitch = 60;
-    
+
     if ( this._directionSignMode == '3d' )
     {
       this._directionSignElement.css({
@@ -10100,16 +10100,16 @@ GLOBE.MAP = {
       });
     }
   },
-  
+
   // 方向アイコンか否かを判定
   isDirectionIcon: function(url)
   {
     if ( !url ) return false;
-    
+
     var regExp = new RegExp(/^https?\:/);
     var targetUrl = url.replace(regExp, '');
     var result = false;
-    
+
     for ( var i=0; i<CONFIG.DIRECTION_ICONS.length; i++ )
     {
       var directionUrl = CONFIG.DIRECTION_ICONS[i].replace(regExp, '');
@@ -10119,10 +10119,10 @@ GLOBE.MAP = {
         break;
       }
     }
-    
+
     return result;
   },
-  
+
   // 画像をprimitiveとして配置（地図と共に回転）
   /* [gsidata]
     {
@@ -10146,15 +10146,15 @@ GLOBE.MAP = {
     var imageURL    = gsidata.imageUrl;
     var imageSize   = (gsidata.imageSize && Array.isArray(gsidata.imageSize) ? gsidata.imageSize : null);
     var imageAnchor = (gsidata.imageAnchor && Array.isArray(gsidata.imageAnchor) ? gsidata.imageAnchor : [0, 0]);
-    
+
     gsidata.usePopup = gsidata.usePopup ? true : false;
     gsidata.usePositionIcon = gsidata.usePositionIcon ? true : false;
     gsidata._state = 0;
     gsidata._reloadCalled = false;
-    
+
     var cartographic = Cesium.Cartographic.fromCartesian(gsidata.position);
     if ( gsidata.hasHeight && cartographic.height < 0 ) return;
-    
+
     // レイヤー単位データ作成
     if ( !this._imagePrimitiveLayersHash[id] )
     {
@@ -10167,25 +10167,25 @@ GLOBE.MAP = {
         "reload"  : function(){
           var layerdata = this._imagePrimitiveLayersHash[id];
           if ( !layerdata ) return;
-          
+
           layerdata.scalePromise = undefined;
-          
+
           for ( var i=0; i<layerdata.gsilist.length; i++ )
           {
             var gsidata = layerdata.gsilist[i];
             var imagePrimitive = gsidata._imagePrimitive;
             var labelPrimitive = gsidata._labelPrimitive;
-            
+
             if ( imagePrimitive )
             {
               gsidata._alpha = imagePrimitive.appearance.material.uniforms.color.alpha;
             }
-            
+
             if ( labelPrimitive )
             {
               gsidata.labelShow = labelPrimitive.show;
             }
-            
+
             if ( gsidata._state < 6 )
             {
               gsidata._reloadCalled = true;
@@ -10195,14 +10195,14 @@ GLOBE.MAP = {
               this.addImagePrimitive(gsidata);
             }
           }
-          
+
         }.bind(this)
       };
     }
-    
+
     var layerdata = this._imagePrimitiveLayersHash[id];
     if ( layerdata.removed ) return;
-    
+
     if ( !layerdata.collection || layerdata.collection.isDestroyed() )
     {
       var collection = new Cesium.PrimitiveCollection();
@@ -10210,80 +10210,80 @@ GLOBE.MAP = {
       collection["primitiveType"] = "imagePrimitive";
       this._imagePrimitiveLayersHash[id].collection = collection;
       this.viewer.scene.primitives.add(collection);
-      
+
       // 画像コレクションとラベルコレクションを作成
       var imageCollection = collection.add( new Cesium.PrimitiveCollection() );
       var labelCollection = collection.add( new Cesium.BillboardCollection({scene: this.viewer.scene}) );
       collection.raiseToTop(labelCollection);
     }
-    
-    
+
+
     // 最初のアクセス時のみリストへ追加
     if ( gsidata._gsiindex == undefined )
     {
       layerdata.gsilist.push(gsidata);
       gsidata._gsiindex = layerdata.gsilist.length - 1;
     }
-    
-    
+
+
     var multiple = 0.000000012;
-    
+
     // <2d> 画像の倍率を一律に決定（他のprimitiveと値を共有）
     if ( !gsidata.hasHeight && layerdata.scalePromise == undefined )
     {
       layerdata.scalePromise = this.DistanceToCenter(true)
       .then(function(distance){
         if ( gsidata._reloadCalled ) return Cesium.when.reject(3);
-        
+
         gsidata._state = 3;
         var scale = distance * multiple;
-        
+
         return Cesium.when.resolve(scale);
       });
     }
-    
+
     // <3d> 画像の倍率を決定（primitive個別）
     var scalePromise3d = function(){
       var distance = Cesium.Cartesian3.distance(position, this.viewer.camera.position);
       var scale = distance * multiple;
       return Cesium.when.resolve(scale);
     }.bind(this);
-    
-    
-    
+
+
+
     var west = 0;
     var east = 0;
     var north = 0;
     var south = 0;
     var that = this;
-    
-    
+
+
     var onloadHandler2 = function(scale){
       if ( gsidata._reloadCalled ) return Cesium.when.reject(4);
-      
+
       gsidata._state = 4;
-      
+
       var latLng = that.degreesFromCartesian(position);
       var tempWest = latLng[1];
       var tempEast = latLng[1]+(gsidata.imageSize[0] * scale);
       var tempNorth = latLng[0];
       var tempSouth = latLng[0]-(gsidata.imageSize[1] * scale);
-      
+
       var latPerWidth  = (tempEast - tempWest) / gsidata._img.width;
       var lngPerHeight = (tempNorth - tempSouth) / gsidata._img.height;
-      
+
       west = tempWest - imageAnchor[0] * latPerWidth;
       east = tempEast - imageAnchor[0] * latPerWidth;
       north = tempNorth + imageAnchor[1] * lngPerHeight;
       south = tempSouth + imageAnchor[1] * lngPerHeight;
-      
+
       return Cesium.when.resolve(1);
     };
-    
-    
+
+
     var onloadHandler3 = function(){
       if ( gsidata._reloadCalled ) return Cesium.when.reject(5);
-      
+
       return Cesium.sampleTerrain(that.viewer.terrainProvider, that.currents.zoomlevel, [
         Cesium.Cartographic.fromDegrees(west, north),
         Cesium.Cartographic.fromDegrees(west, south),
@@ -10291,26 +10291,26 @@ GLOBE.MAP = {
         Cesium.Cartographic.fromDegrees(east, south)
       ]);
     };
-    
-    
+
+
     var onloadHandler4 = function(updatedPositions){
       if ( gsidata._reloadCalled ) return Cesium.when.reject(6);
-      
+
       gsidata._state = 5; //BUILDING3
-      
+
       var maxHeight = 0;
       for( var i=0; i<updatedPositions.length; i++ )
       {
         maxHeight = (updatedPositions[i].height > maxHeight ? updatedPositions[i].height : maxHeight);
       }
-      
+
       return Cesium.when.resolve(maxHeight);
     };
-    
-    
+
+
     var onloadHandler5 = function(primitiveHeight){
       if ( gsidata._reloadCalled ) return Cesium.when.reject(7);
-      
+
       var rect = Cesium.Rectangle.fromDegrees(west, south, east, north);
       var primitive = new Cesium.Primitive({
         geometryInstances : new Cesium.GeometryInstance({
@@ -10335,7 +10335,7 @@ GLOBE.MAP = {
       });
       if ( gsidata._alpha != undefined ) primitive.appearance.material.uniforms.color.alpha = gsidata._alpha;
       primitive.gsidata = gsidata;
-      
+
       // 以前のprimitiveを破棄
       if ( gsidata._imagePrimitive )
       {
@@ -10345,36 +10345,36 @@ GLOBE.MAP = {
       {
         layerdata.collection.get(1).remove(gsidata._labelPrimitive);
       }
-      
-      
+
+
       gsidata._imagePrimitive = primitive;
       if ( !layerdata.collection.isDestroyed() )
       {
         layerdata.collection.get(0).add(primitive);
       }
-      
-      
+
+
       if ( gsidata.name )
       {
         var ellipsoid = GLOBE.MAP.viewer.scene.ellipsoid;
         var cartographic = Cesium.Cartographic.fromCartesian(gsidata.position, ellipsoid);
         gsidata.position = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, primitiveHeight, ellipsoid);
-        
+
         var label = GLOBE.MAP.getPrimitivePoint_IconLabel(gsidata.position, gsidata.name, true);
-        
+
         if ( !layerdata.collection.isDestroyed() && label )
         {
           label.show = (gsidata.labelShow ? true : false);
           gsidata._labelPrimitive = layerdata.collection.get(1).add(label);
         }
       }
-      
+
       gsidata._state = 6; //COMPLETE
-      
+
       return Cesium.when.resolve(primitive);
     };
-    
-    
+
+
     var onloadOtherwise = function(error){
       if ( typeof error == 'object' )
       {
@@ -10387,16 +10387,16 @@ GLOBE.MAP = {
         that.addImagePrimitive(gsidata);
       }
     };
-    
-    
-    
+
+
+
     // 画像単位データ作成関数（戻り値はpromise）
     var onloadHandler = function(){
       gsidata._state = 2; //LOADED AND WAIT
       gsidata.imageSize = [gsidata._img.width, gsidata._img.height];
-      
+
       var promise;
-      
+
       if ( gsidata.hasHeight )
       {
         // 3d
@@ -10427,9 +10427,9 @@ GLOBE.MAP = {
         }
       }
     };
-    
-    
-    
+
+
+
     // 画像のプレロード
     if ( gsidata._img )
     {
@@ -10440,37 +10440,37 @@ GLOBE.MAP = {
       var imgObj = new Image();
       imgObj.onload = onloadHandler;
       gsidata._img = imgObj;
-      
+
       if ( imageSize && imageSize[0] && imageSize[1] )
       {
         imgObj.width  = imageSize[0];
         imgObj.height = imageSize[1];
       }
-      
+
       imgObj.src = MATEST.proxyUrl(imageURL);
     }
-    
+
     gsidata._state = 1; //LOADING
-    
+
   },
-  
+
   // addImagePrimitiveにより配置された画像の透明度を変更
   alphaImagePrimitive: function( id, alpha )
   {
     var layerdata = this._imagePrimitiveLayersHash[id]
     if ( !layerdata ) return false;
-    
+
     for ( var i=0; i<layerdata.gsilist.length; i++ )
     {
       layerdata.gsilist[i]._alpha = alpha;
       var imagePrimitive = layerdata.gsilist[i]._imagePrimitive;
       var labelPrimitive = layerdata.gsilist[i]._labelPrimitive;
-      
+
       if ( imagePrimitive )
       {
         imagePrimitive.appearance.material.uniforms.color.alpha = alpha;
       }
-      
+
       if ( labelPrimitive )
       {
         labelPrimitive.outlineColor = labelPrimitive.outlineColor.withAlpha(alpha);
@@ -10478,16 +10478,16 @@ GLOBE.MAP = {
       }
     }
   },
-  
+
   // addImagePrimitiveにより配置された画像の表示・非表示を切り替え
   showImagePrimitive: function( id, bool )
   {
     var layerdata = this._imagePrimitiveLayersHash[id]
     if ( !layerdata ) return false;
-    
+
     layerdata.collection.show = bool;
   },
-  
+
   // addImagePrimitiveにより配置された画像を削除
   removeImagePrimitive: function( id )
   {
@@ -10502,11 +10502,11 @@ GLOBE.MAP = {
     layerdata.removed = true;
     this.viewer.scene.primitives.remove(layerdata.collection);
   },
-  
+
   addSingleImageryLayer: function( id, name, position, imageURL )
   {
     if ( !CONFIG.TILEASICON_ENABLED ) return false;
-    
+
     if ( !this._singleImageryLayersHash )
     {
       this._singleImageryLayersHash = {};
@@ -10534,28 +10534,28 @@ GLOBE.MAP = {
           {
             this.addSingleImageryLayer( list[i].id, list[i].name, list[i].position, list[i].url );
           }
-          
+
         }.bind(this)
       };
     }
     this._singleImageryLayersHash[id].length += 1;
-    
+
     var imgObj = new Image();
     imgObj.onload = function(){
       var imgMag = this.currents.height * 0.000000009;
       var latLng = this.degreesFromCartesian(position);
       var layers = this.viewer.scene.imageryLayers;
-      
+
       var tempWest = latLng[1];
       var tempEast = latLng[1]+(imgObj.width * imgMag);
       var tempSouth = latLng[0];
       var tempNorth = latLng[0]+(imgObj.height * imgMag);
-      
+
       var west  = tempWest  - ((tempEast - tempWest) / 2);
       var east  = tempEast  - ((tempEast - tempWest) / 2);
       var south = tempSouth - ((tempNorth - tempSouth) / 2);
       var north = tempNorth - ((tempNorth - tempSouth) / 2);
-      
+
       var rect = Cesium.Rectangle.fromDegrees(west, south, east, north);
       var provider = new Cesium.SingleTileImageryProvider({
         url : MATEST.proxyUrl(imageURL),
@@ -10566,77 +10566,77 @@ GLOBE.MAP = {
         rectangle : rect
       });
       this.viewer.scene.imageryLayers.add(layer);
-      
+
       layer.gsidata = {
         "id"   : id,
         "name" : name,
         "position" : position,
         "url"  : imageURL
       };
-      
+
       if ( layer.alpha == 1 )
       {
         this.alphaSingleImageryLayer(id, 0.99999);
       }
-      
+
       var hash = this._singleImageryLayersHash[id];
       hash.layers.push(layer);
       hash.loadcnt += 1;
-      
+
       if ( hash.length == hash.loadcnt && hash.removed )
       {
         this.removeSingleImageryLayer(id);
       }
       imgObj = null;
-      
+
     }.bind(this);
     imgObj.src = imageURL;
-    
+
   },
-  
+
   alphaSingleImageryLayer: function( id, alpha )
   {
     if ( !this._singleImageryLayersHash || !this._singleImageryLayersHash[id] ) return false;
-    
+
     layers = this._singleImageryLayersHash[id].layers;
     for ( var i=0; i<layers.length; i++ )
     {
       layers[i].alpha = alpha;
     }
   },
-  
+
   showSingleImageryLayer: function( id, bool )
   {
     if ( !this._singleImageryLayersHash || !this._singleImageryLayersHash[id] ) return false;
-    
+
     layers = this._singleImageryLayersHash[id].layers;
     for ( var i=0; i<layers.length; i++ )
     {
       layers[i].show = bool;
     }
   },
-  
+
   removeSingleImageryLayer: function( id )
   {
     if ( !this._singleImageryLayersHash || !this._singleImageryLayersHash[id] ) return false;
-    
+
     this._singleImageryLayersHash[id].removed = true;
     layers = this._singleImageryLayersHash[id].layers;
-    
+
     for ( var i=0; i<layers.length; i++ )
     {
       this.viewer.scene.imageryLayers.remove(layers[i]);
     }
-    
+
     this._singleImageryLayersHash[id].layers = [];
   },
-  
+
   // ラインのプリミティブを作成。（高さが必要）
   createPolylinePrimitive: function(gene)
   {
     gene.kind = "polyline";
     gene.type = "upload_polyline";
-    
+
     var collection = new Cesium.PolylineCollection();
     var primitive = collection.add({
       positions : gene.position,
@@ -10653,16 +10653,16 @@ GLOBE.MAP = {
     collection["gene"]        = gene;
     return collection;
   },
-  
+
   // ラインのプリミティブを作成。（地面へ描画するため高さは不要）
   createCorridorPrimitive: function(gene)
   {
     var geomInstance = null;
     var primitive = null;
-    
+
     var latLng = this.getCameraPosition();
     var width = gene.width * latLng[2] / 600;
-    
+
     // 【 IE11 】
     if(gene.isIE){
       // Primitiveとして追加する
@@ -10691,7 +10691,7 @@ GLOBE.MAP = {
     primitive["gene"]        = gene;
     return primitive;
   },
-  
+
   // 円を描いたcanvasを返す（ピクセル指定の円描画に利用）
   getCircleCanvas: function(radius, lineWidth, lineColor, lineOpacity, fillColor, fillOpacity)
   {
@@ -10704,7 +10704,7 @@ GLOBE.MAP = {
     var lineWidth   = (isNaN(lineWidth)   ? CONFIG.DEFAULTSTYLES.weight : lineWidth);
     var x = radius*1 + lineWidth*1;
     var y = radius*1 + lineWidth*1;
-    
+
     var canvas = document.createElement('canvas');
     canvas.width  = (radius + lineWidth) * 2;
     canvas.height = (radius + lineWidth) * 2;
@@ -10718,12 +10718,12 @@ GLOBE.MAP = {
     ctx.stroke();
     return canvas;
   },
-  
+
   getPrimitiveDiv_Icon: function(position, html, hasHeight, size, anchor)
   {
     var height = (hasHeight ? this.degreesFromCartesian(position)[2] : 0 );
     if ( !anchor ) anchor = [0, 0];
-    
+
     html = (html == '' ? '　' : html);
     var $html = $.parseHTML(html);
     if ( $html[0].nodeType == 3 )
@@ -10735,9 +10735,9 @@ GLOBE.MAP = {
       $html = $(html);
     }
     html = $html.text();
-    
+
     var array = [];
-    
+
     if ( html != '　' )
     {
       // ラベル
@@ -10753,9 +10753,9 @@ GLOBE.MAP = {
         "backgroundColor" : ($html.css('background-color') ? Cesium.Color.fromCssColorString($html.css('background-color')) : Cesium.TRANSPARENT),
         "padding" : ($html.css('padding') ? parseInt($html.css('padding')) : 0)
       };
-      
+
       var canvas = Cesium.writeTextToCanvas(html, options);
-      
+
       array.push({
         "image"           : canvas,
         "width"           : canvas.width,
@@ -10771,10 +10771,10 @@ GLOBE.MAP = {
           //"translucencyByDistance" : new Cesium.NearFarScalar(1.5e2, 1.0, 8.0e6, 0.0)
       });
     }
-    
+
     return array;
   },
-  
+
   /*
   * ポイント(アイコン)のprimitive作成
   */
@@ -10782,9 +10782,9 @@ GLOBE.MAP = {
   {
     if ( !anchor ) anchor = [0, 0];
     if ( !size )   size   = [undefined, undefined];
-    
+
     var array = [];
-    
+
     // アイコン
     array.push({
       "image"           : MATEST.proxyUrl(imageURL),
@@ -10798,18 +10798,18 @@ GLOBE.MAP = {
       "heightReference" : (hasHeight ? Cesium.HeightReference.NONE : Cesium.HeightReference.CLAMP_TO_GROUND),
       "color"           : new Cesium.Color(1, 1, 1, (CONFIG.TILEASICON_ENABLED ? CONFIG.TILEASICON_ICONALPHA : 1))
     });
-    
+
     var label = this.getPrimitivePoint_IconLabel(position, name, hasHeight);
     if ( label ) array.push(label);
-    
+
     return array;
   },
-  
+
   // アイコンラベルを作成するオプションを返す
   getPrimitivePoint_IconLabel: function(position, name, hasHeight)
   {
     if ( !name ) return;
-    
+
     // ラベル
     var imageOptions = {
       "font" : 'normal 20px "メイリオ"',
@@ -10821,7 +10821,7 @@ GLOBE.MAP = {
       "backgroundColor" : Cesium.TRANSPARENT,
       "padding"         : 0
     };
-    
+
     var labelOptions = {
       "image"           : Cesium.writeTextToCanvas(name, imageOptions),
       "verticalOrigin"  : Cesium.VerticalOrigin.CENTER,
@@ -10837,14 +10837,14 @@ GLOBE.MAP = {
     if ( name == "Icon・高さ無し・回転" ) console.log("label:", labelOptions);
     return labelOptions;
   },
-  
+
   /*
   * ポイント(サークル)のGeometryInstanceを作成
   */
   getPrimitiveIcon_Circle: function(position, fillColor, radius, isIE)
   {
     var height = this.degreesFromCartesian(position)[2];
-    
+
     var ellipse = new Cesium.EllipseGeometry({
       "center" : position,
       "height" : height,
@@ -10894,7 +10894,7 @@ GLOBE.MAP = {
       "width"        : width,
       "vertexFormat" : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
     });
-    
+
     var geometryInstance = new Cesium.GeometryInstance({
       geometry : corridor,
       attributes : {
@@ -10906,7 +10906,7 @@ GLOBE.MAP = {
     return geometryInstance;
 
   },
-  
+
   // ラインのGeometryInstanceを作成（GroundPrimitive不可。widthはピクセル指定）
   getPrimitivePolyline: function(positions, color, width, isIE)
   {
@@ -10917,7 +10917,7 @@ GLOBE.MAP = {
       //colors    : [color]
       //"vertexFormat" : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
     });
-    
+
     var geometryInstance = new Cesium.GeometryInstance({
       geometry : Cesium.PolylineGeometry.createGeometry(polyline),
       attributes : {
@@ -10925,17 +10925,17 @@ GLOBE.MAP = {
       },
       id: 'color'
     });
-    
+
     return geometryInstance;
   },
-  
+
   // 高さに倍率を掛ける（JSON用）
   applyHeightPowerToJSON: function( json )
   {
     //（仕様無し）
     return json;
   },
-  
+
   // 高さに倍率を掛ける（KML用）
   applyHeightPowerToKML: function( kml, result )
   {
@@ -10948,7 +10948,7 @@ GLOBE.MAP = {
       for ( var i=0; i<beforeCoordArg.length; i++ )
       {
         if (beforeCoordArg[i] == '') continue;
-        
+
         var pointArg = beforeCoordArg[i].split(',');
         if ( pointArg.length >= 3 )
         {
@@ -10964,7 +10964,7 @@ GLOBE.MAP = {
         afterCoordArg.push( pointArg.join(',') );
       }
       $(element).text( afterCoordArg.join(' ') );
-      
+
       if ( _3dFlg && !$(element).parents('Placemark').find('altitudeMode')[0] )
       {
         $(element).parents('Placemark').find('Point, LineString, Polygon').prepend('<altitudeMode>absolute</altitudeMode>');
@@ -10981,7 +10981,7 @@ GLOBE.MAP = {
     //console.log(kml);
     return kml;
   },
-  
+
   applyDefaultStyleToKML: function(kml)
   {
     if ( !$(kml).find("kml > Style")[0] && !$(kml).find("kml > Document > Style")[0] )
@@ -10994,7 +10994,7 @@ GLOBE.MAP = {
       // outline: 1 (boolean)
       // icon: https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png
       // icon-scale: 1
-      
+
       // ダミー生成 (Style)
       var $styleParent = $(kml).find("kml > Document");
       if ( !$styleParent[0] )
@@ -11002,17 +11002,17 @@ GLOBE.MAP = {
         $styleParent = $(kml).find("kml");
       }
       $("<dummygsiglobestyle>dummy</dummygsiglobestyle>").prependTo( $styleParent );
-      
+
       // ダミー生成 (styleUrl)
       $(kml).find("Placemark").each(function(index, element){
         $("<dummygsiglobestyleurl>dummy</dummygsiglobestyleurl>").prependTo( $(element) );
       });
-      
-      
+
+
       // 無効な要素を削除
       $(kml).find("Placemark > Style").remove();
-      
-      
+
+
       // 既定のスタイル
       // 線
       var lineStyle = '<LineStyle>'
@@ -11033,17 +11033,17 @@ GLOBE.MAP = {
 
       var textStyle    = '<Style id="GsiDefaultStyles">' + lineStyle + polyStyle + iconStyle + '</Style>';
       var textStyleUrl = '<styleUrl>#GsiDefaultStyles</styleUrl>';
-      
+
       var textKml = new XMLSerializer().serializeToString(kml);
       textKml = textKml.replace(/<dummygsiglobestyle[ >].+?<\/dummygsiglobestyle>/, textStyle);
       textKml = textKml.replace(/<dummygsiglobestyleurl[ >].+?<\/dummygsiglobestyleurl>/g, textStyleUrl);
-      
+
       kml = $.parseXML(textKml);
     }
 
     return kml;
   },
-  
+
   /*
   * InfoBOXに表示する内容を返す
   */
@@ -11055,7 +11055,7 @@ GLOBE.MAP = {
     if(prop.description == undefined){
       for(var key in prop){
         if ( key.charAt(0) == "_" || key == "name") continue;
-        
+
         if ( key.match(/^(iframe|description)$/) )
         {
           str += '<tr><td colspan="2">' + prop[key] + '</td></tr>';
@@ -11078,7 +11078,7 @@ GLOBE.MAP = {
 
     return str;
   },
-  
+
   // PolygonのcoordinatesからPolygonHierarchyオブジェクトを返す（Geojson用）
   geojsonCoordinateToPolygonHierarchy : function(coord)
   {
@@ -11106,30 +11106,30 @@ GLOBE.MAP = {
         return Cesium.Cartesian3.fromDegreesArray(result);
       }
     };
-    
+
     var positions = null;
     var holes = [];
-    
+
     if ( Array.isArray(coord) )
     {
       positions = getCartesian3(coord, 0);
-      
+
       for ( var i=1; i<coord.length; i++ )
       {
         holes.push( new Cesium.PolygonHierarchy( getCartesian3(coord, i) ) );
       }
     }
-    
+
     return new Cesium.PolygonHierarchy(positions, holes);
   },
-  
+
   /*
   * Cartesian3の配列を返す
   */
   getPosition: function(coord, hasHeight)
   {
     var arr = [];
-    
+
     for(var i=0; i<coord.length; i++){
       if(Array.isArray(coord[i][0])){
         for(var j=0; j<coord[i].length; j++){
@@ -11143,7 +11143,7 @@ GLOBE.MAP = {
         if ( hasHeight ) arr.push(coord[i][2]);
       }
     }
-    
+
     if ( hasHeight )
     {
       return Cesium.Cartesian3.fromDegreesArrayHeights(arr);
@@ -11153,7 +11153,7 @@ GLOBE.MAP = {
       return Cesium.Cartesian3.fromDegreesArray(arr);
     }
   },
-  
+
   /*
   * ポイント(円)のCartesian3の配列を返す
   */
@@ -11180,7 +11180,7 @@ GLOBE.MAP = {
 
     return array;
   },
-  
+
   /*
   * 緯度の配列・経度の配列を返す【GeoJSON用】
   */
@@ -11206,7 +11206,7 @@ GLOBE.MAP = {
     }
     return res;
   },
-  
+
   /*
   * カラーコードからRGBに変換
   */
@@ -11218,7 +11218,7 @@ GLOBE.MAP = {
 
     return [r, g, b];
   },
-  
+
   /*
   * ランダムな12桁の文字列を返す
   */
@@ -11226,14 +11226,14 @@ GLOBE.MAP = {
   {
     return Math.random().toString(10).slice(-12);
   },
-  
+
   getNewId: function()
   {
     this._getNewIdCallCount = (this._getNewIdCallCount ? this._getNewIdCallCount + 1 : 1);
     var id = "_" + ("000000000" + this._getNewIdCallCount.toString()).slice(-11);
     return id;
   },
-  
+
   updateClamp : function()
   {
     if ( this.currents.height > 150000 ) return [];
@@ -11248,7 +11248,7 @@ GLOBE.MAP = {
     var cnt = 0;
     this._updateClamp( rectLatLng, this.viewer.scene.primitives, cnt );
   },
-  
+
   _updateClamp : function( rectLatLng, collection, cnt )
   {
     for ( var i=0; i<collection.length; i++ )
@@ -11268,7 +11268,7 @@ GLOBE.MAP = {
             var latLng = this.degreesFromCartesian(billboard._actualClampedPosition);
             var cartographic = Cesium.Cartographic.fromDegrees(latLng[1], latLng[0]);
             var height = this.viewer.scene.globe.getHeight(cartographic);
-            
+
             if ( rectLatLng.west <= latLng[1] && latLng[1] <= rectLatLng.east && rectLatLng.south <= latLng[0] && latLng[0] <= rectLatLng.north )
             {
               if ( Math.abs(height - latLng[2]) >= 50 )
@@ -11283,7 +11283,7 @@ GLOBE.MAP = {
     }
     //console.log("update:", cnt);
   },
-  
+
   setClickEvent : function ()
   {
     // 左クリック
@@ -11291,17 +11291,17 @@ GLOBE.MAP = {
     this._screenSpaceEventHandler.setInputAction(function(event){
       var viewer = GLOBE.MAP.viewer;
       var obj = viewer.scene.pick(event.position);
-      
+
       var title = "";
       var html = "";
-      
+
       var usePositionIcon = false;
-      
+
       if ( obj && obj.primitive && obj.primitive.data && obj.primitive.data.type == 'SEARCH' )
       {
         // 検索アイコンクリック
         data = obj.primitive.data;
-        
+
         title = data.title;
         html = '<table>'
           + '<tr><th width="100">住所：</th><td>' + data.subTitle + '</td></tr>'
@@ -11332,7 +11332,7 @@ GLOBE.MAP = {
         }
         usePositionIcon = obj.primitive.gsidata.usePositionIcon;
       }
-      
+
       if ( usePositionIcon )
       {
         GLOBE.MAP.clearPinLayers("INFO");
@@ -11344,7 +11344,7 @@ GLOBE.MAP = {
           GLOBE.MAP.pindrop(lng, lat, "INFO", Cesium.Color.BLACK);
         }
       }
-      
+
       if ( title || html )
       {
         html = $('<div>' + html + '</div>');
@@ -11356,13 +11356,13 @@ GLOBE.MAP = {
         };
         box.show();
       }
-      
+
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
-    
+
     //右クリックイベント
     this._screenSpaceEventHandler.setInputAction( GLOBE.MAP.showPointInfo, Cesium.ScreenSpaceEventType.RIGHT_CLICK );
   },
-  
+
   // 画面位置(cartesian2)から地図上の位置(cartesian3)を返す
   windowPositionToCartesian: function( windowPosition )
   {
@@ -11371,35 +11371,35 @@ GLOBE.MAP = {
     var cartesian = viewer.scene.globe.pick(ray, viewer.scene);
     return cartesian;
   },
-  
+
   // 画面位置(cartesian2)から地図上の位置(latLng)を返す
   windowPositionToLatLng: function( windowPosition )
   {
     var cartesian = this.windowPositionToCartesian(windowPosition);
     if ( !cartesian ) return undefined;
-    
+
     var viewer = GLOBE.MAP.viewer;
     var cartographic = viewer.scene.globe.ellipsoid.cartesianToCartographic(cartesian);
     var lat = Cesium.Math.toDegrees(cartographic.latitude);
     var lon = Cesium.Math.toDegrees(cartographic.longitude);
-    
+
     lat = (isNaN(lat) ? lat : lat * 1);
     lon = (isNaN(lon) ? lon : lon * 1);
-    
+
     return [lat, lon];
   },
-  
+
   // 地点情報ダイアログを表示する
   showPointInfo: function( event )
   {
     GLOBE.MENU.POINTINFO.endInfoMode();
-    
+
     var latLng = GLOBE.MAP.windowPositionToLatLng( event.position );
     if ( !latLng ) return false;
-    
+
     var lat = latLng[0];
     var lon = latLng[1];
-    
+
     var height = GLOBE.MAP.viewer.scene.camera.positionCartographic.height;
     height = (isNaN(height) ? height : height * 1);
 
@@ -11439,7 +11439,7 @@ GLOBE.MAP = {
 
     GLOBE.MAP.clearPinLayers("FOOTER");
     GLOBE.MAP.pindrop(lon, lat, "FOOTER");
-    
+
     GLOBE.MAP.vDemAlt      = "---";
     GLOBE.MAP.vDemAltSRC   = "---";
     /*
@@ -11460,14 +11460,14 @@ GLOBE.MAP = {
       //this._elevationLoader = new GSI.ElevationLoader();
       this._elevationLoader.on("load",MA.bind( function(evt) {
         if ( evt.h || evt.h == 0 ) {
-          
+
           GLOBE.MAP.vDemAlt    = evt.h.toFixed(evt.fixed != undefined ? evt.fixed : 0) + "m";
           GLOBE.MAP.vDemAltSRC = evt.title;
           var outPutHeightSrc = "（" + "データソース：" + GLOBE.MAP.vDemAltSRC + "）";
           GLOBE.MAP.outPutHeight= GLOBE.MAP.vDemAlt + '<span style="font-size:9px">' +outPutHeightSrc + '</span>';
-          
+
           GLOBE.DIALOG.FOOTER.refreshDEMHeight();
-          
+
         }
       },this));
     } else {
@@ -11491,7 +11491,7 @@ GLOBE.MAP = {
     } else {
       this._lakedepthLoader.cancel();
     }
-    
+
     if ( !this._lakeStdHeightLoader ) {
       this._lakeStdHeightLoader = new GSI.LakeStdHeightLoader();
       this._lakeStdHeightLoader.on("load",MA.bind( function(evt) {
@@ -11542,7 +11542,7 @@ GLOBE.MAP = {
         GLOBE.DIALOG.FOOTER._initializeContent(lon,lat,height,address);
       }
     });
-  }, 
+  },
 
   // 202303 時系列表示ダイアログを取得
   getComparePhotoControl: function() {
@@ -11605,11 +11605,11 @@ GLOBE.MAP = {
       }
 
     }
-    
+
     return zoom;
   },
 
-  
+
   /*
   edit310 ↓delete
   execRefreshAlt : function (vDemAltTypeN,vDemAltTileX,vDemAltTileY)
@@ -11655,7 +11655,7 @@ GLOBE.MAP = {
     },
     execRefreshAltTxt : function (vDem)
   {
-  
+
         if(GLOBE.MAP.vDemAltTypeN == -1){
             return;
         }
@@ -11675,12 +11675,12 @@ GLOBE.MAP = {
                 }
             }
         }
-    
+
         this.getElevationRusult(GLOBE.MAP.vDemAlt, GLOBE.MAP.vDemAltSRC);
         if(!f){
             GLOBE.MAP.vDemAltTypeN++;
             //this.execRefreshAlt();
-            
+
           GLOBE.MAP.execRefreshAlt(GLOBE.MAP.vDemAltTypeN,GLOBE.MAP.vDemAltTileX,GLOBE.MAP.vDemAltTileY);
         }
     },
@@ -11690,7 +11690,7 @@ GLOBE.MAP = {
         var f = false;
         var oCanvasTile        = document.createElement("canvas");
             oCanvasTile.width  = this.DemPng.width;
-            oCanvasTile.height = this.DemPng.height;  
+            oCanvasTile.height = this.DemPng.height;
         var oCanvasTileContext = oCanvasTile.getContext("2d");
         oCanvasTileContext.drawImage(this.DemPng, 0, 0);
         if(oCanvasTile.height >= this.vY_TilePX){
@@ -11729,9 +11729,9 @@ GLOBE.MAP = {
     var outPutHeight = data;
     var outPutHeightSrc = "（" + "データソース：" + GLOBE.MAP.vDemAltSRC + "）";
     this.outPutHeight= data + '<span style="font-size:9px">' +outPutHeightSrc + '</span>';
-    
+
     GLOBE.DIALOG.FOOTER.refreshDEMHeight();
-    
+
   }
   */
 
@@ -11845,7 +11845,7 @@ GSI.ElevationLoader = MA.Class.extend({
       }
     }
     return list;
-    
+
     /*
     var zoomList = [];
     for( var i=0; i<20; i++ ) {
@@ -11859,7 +11859,7 @@ GSI.ElevationLoader = MA.Class.extend({
         zoomList[z].push(item);
       }
     }
-    
+
     if ( !this.options.useTileList) {
       this.options.useTileList = ["DEM5A","DEM5B","DEM5C","DEM10B","DEMGM"];
     }
@@ -11882,13 +11882,13 @@ GSI.ElevationLoader = MA.Class.extend({
             }
             item.complementList = complementList;
           }
-          result.push( zoomList[z][i]); 
+          result.push( zoomList[z][i]);
         }
       }
     }
 
     if ( result.length <= 0 && useTileList.indexOf("DEMGM")==0) {
-      
+
       result.push( {
         id: "DEMGM",
         url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
@@ -11919,10 +11919,10 @@ GSI.ElevationLoader = MA.Class.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if ( valueError && url.title=="DEMGM") return null;
-    
+
     return url;
   },
 
@@ -12015,10 +12015,10 @@ GSI.ElevationLoader = MA.Class.extend({
     var tileInfo = this._getTileInfo(this._current.pos.lat, this._current.pos.lng, url.zoom);
     this._img = document.createElement("img");
     this._img.setAttribute("crossorigin", "anonymous");
-  
+
     this._imgLoadHandler = MA.bind(this._onImgLoad, this, url, this._current, tileInfo, this._img);
     this._imgLoadErrorHandler = MA.bind(this._onImgLoadError, this, url, this._current, tileInfo, this._img);
-  
+
     this._img.addEventListener("load", this._imgLoadHandler);
     this._img.addEventListener("error", this._imgLoadErrorHandler);
     this._img.src = this._makeUrlFromTile(url, tileInfo);
@@ -12087,7 +12087,7 @@ GSI.FooterElevationLoader = GSI.ElevationLoader.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if ( valueError && url.title=="DEMGM") return null;
     if ((GLOBE.MAP.getCurrentZoom() > url.zoom) && (url.title == "DEMGM")) return null;
@@ -12109,7 +12109,7 @@ GSI.LakeDataLoader = GSI.ElevationLoader.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if (valueError) return null;
     if (GLOBE.MAP.getCurrentZoom() > url.zoom) return null;
@@ -12186,39 +12186,39 @@ GSI.LakeStdHeightLoader = GSI.LakeDataLoader.extend({
     ];
   }
 });
-  
+
 
 GSI.LayerTreeSearcher = MA.Class.extend( {
   includes: MA.Mixin.Events,
-  
+
   options : {
     serchNum : 200
   },
-  
+
   initialize : function( input, layersJSON )
   {
     //L.setOptions( this, {} );
-    
+
     this._targetInput = input;
     this._layersJSON = layersJSON;
     this._queryString = "";
-    
+
   },
-  
-  
+
+
   start : function()
   {
     if ( !this._state )
       this._state = {};
-    
+
     this._firstCheck = true;
     this._check();
   },
-  
+
   _parseQuery : function(q)
   {
     var result = $.trim(q).split(/\s+/);
-    
+
     var noData = true;
     for( var i=0; i<result.length; i++ )
     {
@@ -12228,33 +12228,33 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
         break;
       }
     }
-    
+
     return ( noData ? [] : result );
   },
-  
+
   _queryEquals :function( q1, q2 )
   {
     if ( !q1 && q2 ) return false;
     if ( q1.length != q2.length ) return false;
-    
+
     for( var i=0; i<q1.length; i++ )
     {
       if ( q1[i] != q2[i] ) return false;
     }
-    
+
     return true;
-    
-    
+
+
   },
-  
+
   _check : function()
   {
     if ( this._checkTimerId ) clearTimeout( this._checkTimerId );
     this._checkTimerId = null;
-    
+
     var q  =this._targetInput.val();
     var queryList = this._parseQuery( this._targetInput.val() );
-    
+
     if ( !this._queryEquals( this._state.queryList, queryList) )
     {
       this._state.queryList=queryList;
@@ -12265,21 +12265,21 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       this.fire( "focus" );
       this._firstCheck = false;
     }
-    
-    
+
+
     this._checkTimerId = setTimeout( MA.bind( function(){
-      
+
       this._check();
     }, this ),500 );
   },
-  
+
   stop : function()
   {
     if ( this._checkTimerId ) clearTimeout( this._checkTimerId );
     this._checkTimerId = null;
   },
-  
-  
+
+
   _search : function()
   {
     this._stopSearch();
@@ -12292,19 +12292,19 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
     }
     this._state.result = [];
     this._state.resultHash = {};
-    
+
     this._state.convertedQueryList = [];
     for( var i =0; i<this._state.queryList.length; i++ )
     {
       this._state.convertedQueryList.push( this._convertSearchString( this._state.queryList[i]) );
     }
-    
+
     if ( !this._layerList )
     {
       this._layerList = [];
       this._createLayerList( this._layerList, this._layersJSON.tree );
     }
-    
+
     this._searching = true;
     this.fire( "start" );
     this._searchIndex = -1;
@@ -12312,34 +12312,34 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       //if ( item.src && item.src != "" )
       //console.log( item );
   },
-  
+
   _stopSearch : function()
   {
-    
+
     if ( this._loadEntriesRequest )
       this._loadEntriesRequest.abort();
     this._loadEntriesRequest = null;
-    
+
     if ( this._searchTimerId ) clearTimeout( this._searchTimerId );
     this._searchTimerId = null;
     delete this._state["result"];
-    
-    
+
+
     if( this._searching )
       this.fire( "finish", {} );
-    
+
     this._searching = false;
   },
-  
+
   _convertSearchItem : function(item)
   {
-    
+
     if ( !item._forSearch )
       item._forSearch = {};
-      
+
     if ( !item._forSearch.title )
       item._forSearch.title = this._convertSearchString(item.title);
-    
+
     if ( !item.tag || item.tag == "" ) return;
     var tags = $.trim(item.tag).split(/\s+/);
     if ( !item._forSearch.tags )
@@ -12350,12 +12350,12 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
         item._forSearch.tags.push( this._convertSearchString(tags[i]) );
       }
     }
-    
-    
+
+
   },
   _convertSearchString : function(src)
   {
-    
+
     src = src.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
       return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
@@ -12364,10 +12364,10 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
     src = src.replace(reg, function (s) {
       return String.fromCharCode(s.charCodeAt(0) - 65248);
     }).replace(/[‐－―]/g, '-');
-    
+
     src = src.replace(/[～?]/g, '~');
     src = src.replace(/　/g, ' ');
-    
+
     reg = new RegExp('(' + Object.keys(GSI.LayerTreeSearcher.hanKanaMap).join('|') + ')', 'g');
     src= src
       .replace(reg, function (match) {
@@ -12375,16 +12375,16 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       })
       .replace(/ﾞ/g, '゛')
       .replace(/ﾟ/g, '゜');
-      
+
     return src.toLowerCase();
   },
-  
-  
+
+
   _hitCheck : function(item )
   {
     var queryList = [];
-    
-    
+
+
     for( var i=0; i<this._state.convertedQueryList.length; i++ )
     {
       queryList.push( {
@@ -12392,13 +12392,13 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
         hit : false
       } );
     }
-    
-    
-    
+
+
+
     // 親のチェック
     if ( item.type!="LayerGroup"  && item.parent )
     {
-      
+
       for( var i=0; i<queryList.length; i++ )
       {
         var q = queryList[i]
@@ -12419,7 +12419,7 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
             }
           }
         }
-        
+
       }
     }
     // チェック
@@ -12443,9 +12443,9 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
           }
         }
       }
-      
+
     }
-    
+
     var hit = true;
     for( var i=0; i<queryList.length; i++ )
     {
@@ -12453,57 +12453,57 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       {
         hit = false;
       }
-      
+
     }
-    
-    
-    
+
+
+
     if ( !hit && item.layerType == "multiLayer" && item.entries )
     {
       for( var i=0; i<item.entries.length; i++ )
       {
-        
+
         this._convertSearchItem( item.entries[i] );
         if ( this._hitCheck( item.entries[i] ) )
         {
-          
+
           hit = true;
           break;
         }
       }
     }
-    
-    
-    
+
+
+
     return hit;
   },
-  
-  
+
+
   _searchNext : function()
   {
     if ( this._searchTimerId ) clearTimeout( this._searchTimerId );
     this._searchTimerId = null;
-    
-    
+
+
     this._searchIndex ++ ;
-    
+
     if ( this._searchIndex >= this._layerList.length )
     {
       // 終了
       if( this._searching )
         this.fire( "finish", {result:this._state.result} );
-      
+
       this._searching = false;
       return;
     }
-    
+
     var len = this._layerList.length;
     var end = this._searchIndex+this.options.serchNum;
     var hitList = [];
-    
+
     for( var i=this._searchIndex; i<end && i<this._layerList.length; i++ )
     {
-      
+
       var item = this._layerList[i];
       this._convertSearchItem( item );
       item._forSearch.hit = false;
@@ -12527,21 +12527,21 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       {
         item._forSearch.hit = false;
       }
-      
+
       */
-      
+
       if ( item.src && item.src!="" && !item.entries )
       {
-        
-        if ( !this._loadEntries(item) ) 
+
+        if ( !this._loadEntries(item) )
         {
           this.fire( "hit", {list:hitList, result: this._state.result} );
           return;
         }
-        
+
       }
-      
-      
+
+
       if ( this._hitCheck( item ) )
       {
         /*
@@ -12551,14 +12551,14 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
         }
         else
         */
-        
+
         if ( !this._state.result )
         {
           this._state.result = [];
           this._state.resultHash = {};
         }
-        
-          
+
+
         if ( !item.id || item.id == "" || !this._state.resultHash[ item.id ] )
         {
           this._state.resultHash[ item.id ] = item;
@@ -12567,27 +12567,27 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
             this._state.result.push( item );
             hitList.push( item );
           }
-          
+
         }
         else
           this._state.resultHash[ item.id ] = item;
       }
       else
         item._forSearch.hit = false;
-      
+
       this._searchIndex++;
     }
-    
+
     this._searchIndex--;
-    
+
     this.fire( "hit", {list:hitList, result: this._state.result} );
-    
-    
+
+
     this._searchTimerId = setTimeout( MA.bind( this._searchNext, this ),100 );
-    
+
   },
-  
-  
+
+
   _parseLayers : function(data, item)
   {
     var json = JSON.parse(data);
@@ -12598,40 +12598,40 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
         json.layers[i].parent  = item;
         json.layers[i].src_url = item.src_url;
       }
-      
+
       item.entries = json.layers;
       this._layersJSON._initializeTree(item.entries, item);
     }
-    
+
     var list = [];
     this._createLayerList( list, item.entries );
-    
+
     for( var i = list.length-1; i>=0; i-- )
     {
       this._layerList.splice( this._searchIndex+1, 0, list[i]);
     }
   },
-  
+
   _loadEntries : function(item)
   {
-    
+
     if( !item.src_ && item.src.indexOf('./') == 0 )
     {
       var path = item.src_url.substring(0, item.src_url.lastIndexOf('/'));
       item.src_ = true;
       item.src  = path + "/" + item.src.substr(2);
     }
-    
-    
+
+
     if ( GSI.LayerTreeDialog.layersJSONCache &&
       GSI.LayerTreeDialog.layersJSONCache[item.src] )
     {
       this._parseLayers( 	GSI.LayerTreeDialog.layersJSONCache[item.src], item );
-      
+
       return true;
     }
-    
-    
+
+
     this._loadEntriesRequest = $.ajax({
       type     : "GET",
       url      : item.src,
@@ -12639,44 +12639,44 @@ GSI.LayerTreeSearcher = MA.Class.extend( {
       cache    : true
     })
     .done( MA.bind(function(item,data ) {
-      
+
       if ( !GSI.LayerTreeDialog.layersJSONCache ) GSI.LayerTreeDialog.layersJSONCache = {};
       GSI.LayerTreeDialog.layersJSONCache[item.src] = data;
       this._parseLayers( data, item );
-      
+
         this._searchIndex--;
     }, this, item) )
     .fail( MA.bind(function(item,data ) {
       // スキップ
     }, this, item) )
     .always( MA.bind(function() {
-      
+
       this._searchNext();
-      
+
     }, this) );
-    
+
     return false;
   },
-  
+
   _createLayerList : function( result, list )
   {
     if ( !list ) return;
-    
+
     for ( var i=0; i<list.length; i++ )
     {
       var item = list[i];
-      
+
       result.push( item );
       if ( item["type"] == "LayerGroup" && item.layerType != "multiLayer" )
       {
         this._createLayerList( result, item.entries );
       }
-      
+
     }
-    
+
   }
-  
-  
+
+
 
 
 } );
@@ -12715,7 +12715,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     title : '情報リスト'
   },
   _activeTabIndex : -1,
-  
+
   initialize : function(mapLayerList,cocoTileLayer, layersTab, options)
   {
     this.mapLayerList = mapLayerList;
@@ -12728,17 +12728,17 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         this.container.attr('id', 'dialog_layertree');
     this.container.css( { top: '50px'} );
   },
-  
+
   _clearSearch : function()
   {
     this._searchResult.find("ul").empty().hide();
     this._hideSearchResult();
   },
-  
+
   _startSearch : function()
   {
     this._searchResult.find("ul").empty().scrollTop( 0 ).hide();
-    
+
     this._searchResultTextFrame.find("span").html("検索中");
     this._searchResultTextFrame.css( {"background-image":"url(./image/system/loading003.gif)"} );
     /*
@@ -12750,9 +12750,9 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   },
   _makePankzu : function( target )
   {
-    
+
     if ( target._appendInfo ) target = target._appendInfo;
-    
+
     target = target.parent;
     var result = '';
     while( target )
@@ -12765,32 +12765,32 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   },
   _makeSearchResultItem : function( item )
   {
-    
+
     var cocoVisible = this.cocoTileLayer.getVisible();
     var li = $( "<li>" );
-    
+
     if ( item.type == "LayerGroup" )
       li.addClass("folder");
-    
+
     li.data({"item":item});
-    
+
     if ( !cocoVisible || !item.cocotile || item.hasTile )
       li.removeClass("nococotile");
     else
       li.addClass("nococotile");
-      
+
     var a = $( "<a>" ).attr({"href":"javascript:void(0);"});
-    
+
     var div = $( "<div>" ).addClass("pankuzu").html(this._makePankzu( item ));
-    
+
     a.append( div );
-    
+
     div = $( "<div>" ).addClass("title").html(item.title);
-    
+
     a.append( div );
-    
+
     li.append( a );
-    
+
     a.click( MA.bind( function(item){
       if ( item.type=="LayerGroup" )
       {
@@ -12803,22 +12803,22 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       }
       //this._hideSearchResult();
     }, this,item ) );
-    
+
     return li;
   },
-  
+
   _showSearchResult : function()
   {
-  
+
     this.listFrame.stop().hide();
     this._searchResult.stop().show();
     this._titleTextFrame.hide();
     this._searchResultTextFrame.show();
-    
+
     if ( !this._searchResultWindowMouseDown )
     {
       this._searchResultWindowMouseDown = MA.bind( function(e){
-        if ( this._searchResult[0] != e.target 
+        if ( this._searchResult[0] != e.target
           && this._searchResult.find( e.target ).length <=0
           && this._queryInput[0] != e.target
           )
@@ -12828,38 +12828,38 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
       }, this );
     }
-    
-    
+
+
   },
-  
+
   _onClearSearchClick : function()
   {
     this._hideSearchResult();
   },
-  
+
   _hideSearchResult : function()
   {
     this._searchResult.stop().hide();
     this.listFrame.stop().show();
     this._searchResultTextFrame.hide();
     this._titleTextFrame.show();
-    
+
   },
-  
-  
+
+
   _appendSearchResult : function(list, all)
   {
     var cocoVisible = this.cocoTileLayer.getVisible();
     var ul = this._searchResult.find( "ul" );
     if ( all.length > 0 )ul.show();
-    
+
     for( var i=0; i<list.length; i++ )
     {
       ul.append( this._makeSearchResultItem(list[i]) );
     }
-    
-    
-    
+
+
+
     if ( all )
     {
       var num = this._getSearchResultNum();
@@ -12872,18 +12872,18 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         .html("検索中" + ( cocoVisible ? "(表示範囲) " : "" ) + ":" );
     }
   },
-  
+
   _getSearchResultNum : function()
   {
     var result = 0;
-    
+
     var ul = this._searchResult.find( "ul" );
     var list = ul.find("li").not(".nococotile");
-    
+
     for( var i=0; i<list.length; i++ )
     {
       var item = $( list[i] ).data("item");
-      
+
       if ( item.type == "LayerGroup" && item.entries )
       {
         for ( var j=0; j<item.entries.length; j++ )
@@ -12894,18 +12894,18 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       else
         result++;
     }
-    
+
     return result;
   },
   _refreshSearchResult : function()
   {
     if ( !this._searchResult ) return;
-    
+
     var cocoVisible = this.cocoTileLayer.getVisible();
     var ul = this._searchResult.find( "ul" );
-    
+
     var liList = ul.find("li");
-    
+
     for( var i=0;i<liList.length; i++ )
     {
       var li = $(liList[i] );
@@ -12915,13 +12915,13 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       else
         li.addClass("nococotile");
     }
-    
+
     this._finishSearch();
   },
-  
+
   _finishSearch : function(list)
   {
-    
+
     var cocoVisible = this.cocoTileLayer.getVisible();
     var ul = this._searchResult.find( "ul" );
     var num = this._getSearchResultNum();
@@ -12929,60 +12929,60 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       .find("span")
       .html("検索結果" + ( cocoVisible ? "(表示範囲) " : "" ) + ":" + num + "件");
   },
-  
+
   createHeader : function()
   {
     this.headerFrame.addClass( "tab");
     this._titleFrame = $( '<div>' );
     this._titleFrame.append($("<div>").html("情報リスト"));
-    
+
     this._tabFrame = $( '<div>' ).addClass("layertreedialog_tab_frame");
-    
+
     for( var i=0; i<this.layersTab.length; i++ )
     {
       var  tabInfo = this.layersTab[i];
-      
+
       var a = $("<a>").css({"font-size":"90%"})
       .attr( {"href":"javascript:void(0);"} )
       .data ({"tabInfo":tabInfo, "idx" : i})
       .click(MA.bind(this._onTabClick, this ) )
       .css( {"z-index": this.layersTab.length - i} );
-      
+
       var leftTriangle = $("<div>").html("").addClass("left_triangle").append("<div>");
       var centerTitle = $("<div>").html(tabInfo.caption).addClass("center_text");
       var rightTriangle = $("<div>").html("").addClass("right_triangle").append("<div>");
-      
+
       a.append( leftTriangle ).append( centerTitle ).append( rightTriangle );
-      
+
       this._tabFrame.append( a );
     }
-    
+
     //this._tabFrame.append( $("<div>").css({"clear":"both"}) );
     //this._titleTextFrame = $( '<div>' ).append( $('<span>').html(this.options.title ) ).addClass("title_frame");
     //this._titleFrame.append(this._tabFrame).append( this._titleTextFrame);//.append(this._titleControlFrame);
-    
-    
+
+
     this._tabFrame.append( $("<div>").css({"clear":"both"}) );
     this._titleFrame.append(this._tabFrame); //.append( this._titleTextFrame);//.append(this._titleControlFrame);
-    
-    
-    
-    
+
+
+
+
     this._tabScrollLeftBtn = $( "<a>" )
       .addClass("tab_scroll_btn")
       .addClass("tab_scroll_left")
       .attr({"href":"javascript:void(0);"})
       .on( "mousedown", MA.bind(this._onTabScrollLeftMouseDown, this) )
       .on( "mouseup", MA.bind(this._onTabScrollLeftMouseUp, this) );
-      
+
     this._tabScrollRightBtn = $( "<a>" )
       .addClass("tab_scroll_btn")
       .addClass("tab_scroll_right")
       .on( "mousedown", MA.bind(this._onTabScrollRightMouseDown, this) )
       .on( "mouseup", MA.bind(this._onTabScrollRightMouseUp, this) );
-      
+
     this._titleFrame.append(this._tabScrollLeftBtn).append(this._tabScrollRightBtn);
-    
+
     if ( this.layersTab.length <= 1 )
     {
       this.headerFrame.removeClass( "tab");
@@ -12991,12 +12991,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabFrame.hide();
     }
     this.activateTab(0);
-    
-    
+
+
     return this._titleFrame;
-    
+
   },
-  
+
   _onTabClick : function(event)
   {
     var a = $(event.currentTarget );
@@ -13010,30 +13010,30 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         GSI.GLOBALS.evacDialog.hide();
       }
     }
-    
+
 
     this.activateTab(newidx);
   },
-  
+
   activateTab : function(idx)
   {
-    
-    
+
+
     this._tabFrame.find("a").removeClass("active");
     this._tabFrame.find("a").eq(idx).addClass("active");
-    
-    
+
+
     var tabArr = this._tabFrame.find("a");
     for( var i=0; i<tabArr.length; i++ )
     {
       var zIndex = tabArr.length -i;
       if ( idx == i ) zIndex = 99;
-      
+
       $( tabArr[i]).css( {"z-index":zIndex} );
     }
-    
-    
-    
+
+
+
     if ( this._activeTabIndex != idx )
     {
       this._activeTabIndex = idx;
@@ -13043,8 +13043,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         this.onFolderClick_Proc(this.tree[this._activeTabIndex]);
       }
     }
-    
-    
+
+
     this._initializeTabScrollBtns();
   },
 
@@ -13059,8 +13059,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 
     this.listFrame.css( { "max-height": 'none', height: height + 'px'} );
     */
-    
-    
+
+
     GSI.Dialog.prototype._onResize.call(this);
     var height = this.container.outerHeight( false )
       - this.headerFrame.outerHeight( true )
@@ -13072,22 +13072,22 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     this.listFrame.css( { "max-height": 'none', height: height + 'px'} );
 
     this._searchResult.css( { "max-height": 'none', height: height + 'px'} );
-    
-    
+
+
     this._initializeTabScrollBtns();
-    
+
   },
-  
-  
+
+
   _initializeTabScrollBtns : function()
   {
     var scrollLeft = this._tabFrame.scrollLeft();
-    
+
     var scrollContainerWidth = this._tabFrame.outerWidth();
     var scrollInnerWidth = this._tabFrame.find("a").last().position().left-10 +
       this._tabFrame.find("a").last().outerWidth(true) + scrollLeft;
-    
-    
+
+
     if ( scrollContainerWidth < scrollInnerWidth )
     {
       var scrollMax = scrollInnerWidth - scrollContainerWidth;
@@ -13098,7 +13098,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       }
       else
         this._tabScrollRightBtn.removeClass("deactive");
-        
+
       if ( scrollLeft > 0 )
         this._tabScrollLeftBtn.removeClass("deactive");
       else
@@ -13110,7 +13110,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollRightBtn.addClass("deactive");
       this._tabFrame.scrollLeft(0);
     }
-    
+
     if ( scrollContainerWidth >= scrollInnerWidth)
     {
       this._tabScrollLeftBtn.hide();
@@ -13121,9 +13121,9 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollLeftBtn.show();
       this._tabScrollRightBtn.show();
     }
-    
+
   },
-  
+
   _onTabScrollLeftMouseDown : function()
   {
     if ( this._tabScrollLeftTimer )
@@ -13132,41 +13132,41 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollLeft();
     }, this ), 10 );
   },
-  
+
   _onTabScrollLeftMouseUp : function()
   {
     if ( this._tabScrollLeftTimer )
       clearTimeout(  this._tabScrollLeftTimer );
     this._tabScrollLeftTimer = null;
   },
-  
-  
+
+
   _tabScrollLeft : function()
   {
     var scrollLeft = this._tabFrame.scrollLeft();
     var scrollContainerWidth = this._tabFrame.outerWidth();
     var scrollInnerWidth = this._tabFrame.find("a").last().position().left-10 +
       this._tabFrame.find("a").last().outerWidth(true) + scrollLeft;
-    
+
     var scrollMax = scrollInnerWidth - scrollContainerWidth;
     scrollLeft-=2;
     if ( scrollLeft < 0 ) scrollLeft = 0;
     this._tabFrame.scrollLeft(scrollLeft);
-    
-    
+
+
     if ( scrollLeft > 0 )
     {
       this._tabScrollLeftBtn.removeClass("deactive");
     }
     else
       this._tabScrollLeftBtn.addClass("deactive");
-    
-    
+
+
     if ( scrollMax <= scrollLeft )
       this._tabScrollRightBtn.addClass("deactive");
     else
       this._tabScrollRightBtn.removeClass("deactive");
-      
+
     if ( scrollContainerWidth >= scrollInnerWidth)
     {
       this._tabScrollLeftBtn.hide();
@@ -13177,7 +13177,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollLeftBtn.show();
       this._tabScrollRightBtn.show();
     }
-    
+
     if ( !this._tabScrollLeftBtn.hasClass("deactive") )
     {
       this._tabScrollLeftTimer = setTimeout( MA.bind( function(){
@@ -13185,8 +13185,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       }, this ), 10 );
     }
   },
-  
-  
+
+
   _onTabScrollRightMouseDown : function()
   {
     if ( this._tabScrollRightTimer )
@@ -13195,39 +13195,39 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollRight();
     }, this ), 10 );
   },
-  
+
   _onTabScrollRightMouseUp : function()
   {
     if ( this._tabScrollRightTimer )
       clearTimeout(  this._tabScrollRightTimer );
     this._tabScrollRightTimer = null;
   },
-  
+
   _tabScrollRight : function()
   {
     var scrollLeft = this._tabFrame.scrollLeft();
     var scrollContainerWidth = this._tabFrame.outerWidth();
     var scrollInnerWidth = this._tabFrame.find("a").last().position().left-10 +
       this._tabFrame.find("a").last().outerWidth(true) + scrollLeft;
-    
+
     var scrollMax = scrollInnerWidth - scrollContainerWidth;
     scrollLeft+=2;
     if ( scrollLeft> scrollMax ) scrollLeft = scrollMax;
     this._tabFrame.scrollLeft(scrollLeft);
-    
-    
-    
+
+
+
     if ( scrollLeft > 0 )
       this._tabScrollLeftBtn.removeClass("deactive");
     else
       this._tabScrollLeftBtn.addClass("deactive");
-    
-    
+
+
     if ( scrollMax <= scrollLeft )
       this._tabScrollRightBtn.addClass("deactive");
     else
       this._tabScrollRightBtn.removeClass("deactive");
-      
+
     if ( scrollContainerWidth >= scrollInnerWidth)
     {
       this._tabScrollLeftBtn.hide();
@@ -13238,8 +13238,8 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       this._tabScrollLeftBtn.show();
       this._tabScrollRightBtn.show();
     }
-    
-    
+
+
     if ( !this._tabScrollRightBtn.hasClass("deactive") )
     {
       this._tabScrollRightTimer = setTimeout( MA.bind( function(){
@@ -13247,14 +13247,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       }, this ), 10 );
     }
   },
-  
-  
+
+
   createContent : function()
   {
     this._contentFrame = $('<div>');
     this._searchFrame = this.createSearchFrame();
     this._contentFrame.append( this._searchFrame  );
-    
+
     this._controlFrame = this._createControl();
     this.listFrame = $( '<div>' ).addClass( 'layertreedialog_ul_frame' );
 
@@ -13264,28 +13264,28 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     this.listContainer.append( li );
     this.listFrame.append( this.listContainer );
     this._contentFrame.append( this._controlFrame );
-    
-    
+
+
     this._titleTextFrame = $( '<div>' ).append( $('<span>').html("" ) ).addClass("layertreedialog_pankz_frame");
     this._contentFrame.append( this._titleTextFrame  );
-    
+
     this._searchResultTextFrame = $( '<div>' ).append( $('<span>').html(this.options.title ) ).addClass("layertreedialog_searchresult_text_frame").hide()
-    
+
     this._clearSearchButton = $( "<a>" ).attr({"href":"javascript:void(0);"}).html("×検索解除");
     this._clearSearchButton.on("click", MA.bind(this._onClearSearchClick,this));
-    
+
     this._searchResultTextFrame.append( this._clearSearchButton );
     this._contentFrame.append( this._searchResultTextFrame  );
-    
+
     this._contentFrame.append( this.listFrame );
-    
-    
-    
+
+
+
     //this._closeSearchResultButton= $("<a>").addClass("closebtn").attr({"href":"javascript:void(0);"}).html("×");
     this._searchResult = $( "<div>" ).addClass("layertreedialog_searchresult_frame").hide();
     this._searchResult.append( $("<ul>") );
-    
-    
+
+
     this._contentFrame.append( this._searchResult );
 
     return this._contentFrame;
@@ -13305,7 +13305,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
 
     return frame;
   },
-  
+
   createSearchFrame : function()
   {
     // 検索
@@ -13327,12 +13327,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         this._layerTreeSearcher.stop();
       }, this ) );
     this._searchFrame.append( this._queryInput );
-    
-    
+
+
     return this._searchFrame;
-    
+
   },
-  
+
   setMaxScrollHeight : function( maxHeight )
   {
     if ( this.listFrame )
@@ -13344,7 +13344,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     {
       this._searchResult.css( { 'max-height' : maxHeight + 'px'} );
     }
-    
+
     if ( this._contentFrame )
     {
       this._contentFrame.css( { 'height' : 'auto'} );
@@ -13376,14 +13376,14 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   {
     GSI.GLOBALS.queryParams._layerTreeDialogVisible = true;
     GLOBE.MAP.updateHash();
-    
+
     GSI.Dialog.prototype.show.call(this);
   },
   hide : function()
   {
     GSI.GLOBALS.queryParams._layerTreeDialogVisible = false;
     GLOBE.MAP.updateHash();
-    
+
     this._hideItemTooltip();
     if ( !CONFIG.LAYERTREEDIALOGKEEPCURRENT )
     {
@@ -13420,7 +13420,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     }
     this.contentFrame.scrollTop( 0 );
     this.listContainer.empty();
-    
+
     if ( this.options.currentPath )
     {
       this._initializeList_CurrentPath( this.options.currentPath );
@@ -13429,10 +13429,10 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     else{
       this._initializeListProc();
     }
-    
+
     if ( this.current && this.current.toggleall )
     {
-      
+
     }
     else
     {
@@ -13554,7 +13554,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   {
     var current = null;
     if ( !path || path == '' ) return null;
-    
+
         this._CurrentData_SRC    = new Array();
         this._CurrentData_SRC_ID = "";
 
@@ -13573,7 +13573,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   {
         var fInit = true;
         if(this._initializeList_ID_Mode == "visible"){
-            if(current == null){            
+            if(current == null){
             for(var i = 0; i < this.visibleLayers.length; i++){
               var l = this.visibleLayers[i];
                     if(l.id == this._initializeList_ID_Mode_ID){
@@ -13601,13 +13601,13 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             {
               this._tabFrame.find("a").removeClass("active");
               this._tabFrame.find("a").eq(i).addClass("active");
-              
+
               var tabArr = this._tabFrame.find("a");
               for( var j=0; j<tabArr.length; j++ )
               {
                 var zIndex = tabArr.length -j;
                 if ( i == j ) zIndex = 99;
-                
+
                 $( tabArr[j]).css( {"z-index":zIndex} );
               }
               this._activeTabIndex = i;
@@ -13661,7 +13661,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
                     break;
                 }
             }
-            
+
         }
 
         return current;
@@ -13753,10 +13753,10 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     }
     if ( num > 0 )
     {
-      
+
     }
     else
-    
+
     {
       var title = ( !this.tree || this.tree.length <= this._activeTabIndex ? this.options.title : this.tree[this._activeTabIndex ].title );
       var span = $( '<span>' ).html( title ); //.attr( { 'href' : 'javascript:void(0);' } );
@@ -13766,7 +13766,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   _makeFolder : function(li, a, item)
   {
     var cocoVisible = false;
-    
+
     var entriesCount = -1;
         if ( item.entries ){
             entriesCount = item.entries.length;
@@ -13821,12 +13821,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         else{
             a.addClass( 'folder' ).append( title ).click( MA.bind( this.onFolderClick, this, a) );
         }
-    
-    
+
+
     if ( item.iconUrl && item.iconUrl  != "" )
       title.css({"background-image":"url(" + item.iconUrl +")"});
-    
-    
+
+
     if ( !isVisible )
     {
       a.addClass( 'nococotile' );
@@ -13873,7 +13873,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       legend =$( '<a>' ).html( '凡例を表示' ).addClass( 'legend' ).attr( { 'href' : item.legendUrl, 'target' : '_blank' } );
     }
     if ( legend )
-      infoFrame.append( legend );        
+      infoFrame.append( legend );
 
     if ( item.html )
     {
@@ -13881,16 +13881,16 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     }
     if ( description )
       infoFrame.append( description );
-    
+
     return infoFrame;
   },
-  
+
   _onReliefStyleEidtClick :function(a, item)
   {
     this._curItem = undefined;
     this._hideItemTooltip();
     windowSize = GSI.Utils.getScreenSize();
-    
+
     if ( !GSI.GLOBALS.mapLayerList._editReliefDialog )
     {
       GSI.GLOBALS.mapLayerList._editReliefDialog = new GSI.EditReliefDialog( this._map, GSI.GLOBALS.mapLayerList, {
@@ -13902,7 +13902,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     }
     GSI.GLOBALS.mapLayerList._editReliefDialog.show();
   },
-  
+
   _showItemTooltip : function( a, item )
   {
     if ( item  )
@@ -13928,7 +13928,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
         this._curItem = item;
       }
-    
+
       if ( !this._itemTooltip )
       {
         this._itemTooltip = $( '<div>' ).addClass( 'gsi_layertreedialog_itemtooltip' ).hide();
@@ -14004,7 +14004,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
 
         this._hideItemTooltip();
-        
+
         if ( event.type == "scroll" )
         {
           this._toolTipViewCounter = 0;
@@ -14040,7 +14040,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     var cocoVisible = false;
 
     var target = this.current;
-    
+
     //種類の表示
     var title;
     if ( CONFIG.LAYERTYPEDISPLAY )
@@ -14051,7 +14051,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     {
       title = $( '<div>' ).addClass( 'title' ).html( item.title );
     }
-    
+
     var icon = item.iconUrl;
     if(icon){
       title.css(
@@ -14061,7 +14061,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         }
       );
     }
-        
+
     if ( GSI.GLOBALS.isBaseLayer( item ) )
     {
       if ( this.mapLayerList.exists( item ) )
@@ -14084,7 +14084,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     a.addClass( 'item' ).append( title);
 
     if ( item.id == CONFIG.FREERELIEFID ) {
-      var settingBtn =  $('<a>').attr({ 
+      var settingBtn =  $('<a>').attr({
         'href': 'javascript:void(0);',
         'title' : 'スタイル変更'}).addClass('setting_btn').html("");
       li.append(settingBtn);
@@ -14214,7 +14214,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       if ( this._checkEvacuationLayer() == false )
       {
         GSI.GLOBALS.confirmDlg.onPositiveButtonClick = MA.bind(this.onConfirmOkClick, this, item);
-        GSI.GLOBALS.confirmDlg.show();			
+        GSI.GLOBALS.confirmDlg.show();
       }
       else
       {
@@ -14266,13 +14266,13 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   onItemClick : function( a, item )
   {
     this._userControlStarted = true;
-    
+
     var target = this.current;
     //var item = a.data( 'data' );
     if ( a ) item = a.data( 'data' );
 
     this._current_id = item.id;
-    
+
     if ( GSI.GLOBALS.isBaseLayer( item ) )
     {
       if ( $(a).hasClass('view') )
@@ -14288,7 +14288,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     }
     if ( item._isBaseLayer ) {
       this.mapLayerList.setBaseLayer( item );
-    } else if ( target && target.title_evac && target.title_evac == CONFIG.layerEvacuationFolderSYS ) {		
+    } else if ( target && target.title_evac && target.title_evac == CONFIG.layerEvacuationFolderSYS ) {
       var f = false;
       if(this.mapLayerList.exists(item)){
           f = true;
@@ -14304,7 +14304,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
       }
     } else if (target && target.title_disasterlore && target.title_disasterlore == CONFIG.DisasterLoreFolderSYS) {
       var f = false;
-    
+
       if (item.id == CONFIG.DisasterLoreAll){
         if (this.mapLayerList.exists(item)) {
           f = true;
@@ -14339,12 +14339,12 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
     else
     {
         if(!this.mapLayerList.exists(item))
-        { 
+        {
           this.mapLayerList.append(item);
             GSI.Utils.sendSelectedLayer(this._current_id);
         }
-        else 
-          { 
+        else
+          {
             this.mapLayerList.remove(item);
             // 202303
             if (item.id == CONFIG.COMPAREPHOTO_ID) {
@@ -14352,7 +14352,7 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
             }
           }
         }
-    
+
     if ( item && item.id == CONFIG.FREERELIEFID )
     {
       if ( item._visibleInfo) this._onReliefStyleEidtClick( a, item );
@@ -14391,16 +14391,16 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
   },
   selectReliefFree : function( a, item )
   {
-   
+
     if(!this.mapLayerList.exists(item))
-    { 
+    {
 
       this._userControlStarted = true;
-    
+
       //var target = this.current;
       //var item = a.data( 'data' );
       //if ( a ) item = a.data( 'data' );
-  
+
       this._current_id = item.id;
 
       this.mapLayerList.append(item);
@@ -14413,9 +14413,9 @@ GSI.LayerTreeDialog = GSI.Dialog.extend( {
         else if ( GSI.GLOBALS.mapLayerList && GSI.GLOBALS.mapLayerList._editReliefDialog ) {
           GSI.GLOBALS.mapLayerList._editReliefDialog.hide();
         }
-      } 
+      }
     }
-    
+
   }
 
 });
@@ -14487,7 +14487,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     frame.append( this._RbtnTxtAdd );
 
     frame.append( frameRange );
-    
+
     var dummy = $('<div>').html( '&nbsp;' ).css( { "font-size": '9.5pt' } );
     frame.append(dummy );
 
@@ -14496,7 +14496,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
     return frame;
   },
-  
+
   // (_sasveOutsideTileBtnClick)
   _saveOutsideTileBtnClick: function () {
     var layersJSON = {
@@ -14563,7 +14563,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     GLOBE.MAP.lakedataEnabled = enabled;
     GLOBE.DIALOG.FOOTER.refreshLakeDepth(enabled);
   },
-  
+
   _onAddClick : function()
   {
         GSI.GLOBALS.layerTreeDialog.show();
@@ -14600,7 +14600,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   {
     //タイルクリア
     var std = CONFIG.BASETILES[0];
-    
+
     if ( id )
     {
       for ( var i=0; i<CONFIG.BASETILES.length; i++ )
@@ -14612,10 +14612,10 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         }
       }
     }
-    
+
     this._removeAll();
     this.mapLayerList.setBaseLayer( std );
-    
+
   },
   _showAll : function( list )
   {
@@ -14638,7 +14638,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       if ( !item._visibleInfo._isHidden  )
       {
         item._onOffSwitch.checked( false );
-        
+
         item._visibleInfo._isHidden = true;
         this.map.removeLayer( item._visibleInfo.layer );
       }
@@ -14671,14 +14671,14 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   {
     GSI.GLOBALS.queryParams._viewListDialogVisible = true;
     GLOBE.MAP.updateHash();
-    
+
     GSI.Dialog.prototype.show.call(this,noActivate);
   },
   hide : function()
   {
     GSI.GLOBALS.queryParams._viewListDialogVisible = false;
     GLOBE.MAP.updateHash();
-    
+
     GSI.Dialog.prototype.hide.call(this);
   },
   initializeList : function()
@@ -14717,7 +14717,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     var liList = this.tileListContainer.find( 'li' );
     var list = [];
         var f = true;
-        
+
         var baseLayerIndex = -1;
         for  ( var i=0; i<liList.length; i++ )
         {
@@ -14729,38 +14729,38 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       this.tileListContainer.sortable("cancel");
       return;
     }
-        
+
     for  ( var i=0; i<liList.length; i++ )
     {
       var item = $(liList[i]).data( 'data' );
-            
+
         if ( item ) list.push( item );
     }
-    
+
     var lastTileExtra = ( this.getBaseLayerExists() ? 2 : 1 );
-    
+
         if(f){
       for ( var i=0; i<liList.length; i++ )
       {
         var li = $( liList[i] );
         var isFirstTile = ( i==0 );
         var isLastTile = ( i >= list.length - lastTileExtra );
-        
+
         if ( isFirstTile )
           li.find(".updown_frame a.up").hide();
         else
           li.find(".updown_frame a.up").show();
-          
 
-        if ( isLastTile ) 
+
+        if ( isLastTile )
           li.find(".updown_frame a.down").hide();
         else
           li.find(".updown_frame a.down").show();
       }
-      
+
         this.mapLayerList.refreshTileList(list);
     }
-    
+
     this.updateCombineLayer('onSortChange');
     GLOBE.MAP.setLayersHash();
   },
@@ -14792,7 +14792,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       return "外部タイル";
     }
     if (target._appendInfo) target = target._appendInfo;
-    
+
     target = target.parent;
     var result = '';
     while( target )
@@ -14821,27 +14821,27 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
             }
             li.find("a").removeClass("nococotile");
     }
-    
-    
+
+
     if ( isFirstTile )
       li.find(".updown_frame a.up").hide();
     else
       li.find(".updown_frame a.up").show();
-      
 
-    if ( isLastTile ) 
+
+    if ( isLastTile )
       li.find(".updown_frame a.down").hide();
     else
       li.find(".updown_frame a.down").show();
-    
+
   },
   _makeLayer : function( li, a, item, isTile, isFirstTile, isLastTile )
   {
     var cocoVisible = this.cocoTileLayer.getVisible();
-    
+
     if (item._isOutside)
       li.addClass("outside");
-    
+
         var vClass = 'item_frame';
         var vClassTitle = 'title';
         if(item._isBaseLayer){
@@ -14855,7 +14855,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     li.data( { 'data' : item } );
 
         a.append( frame );
-        
+
     // タイトル
     var title = $( '<div>' ).addClass( vClassTitle );
     var icon = item.iconUrl;
@@ -14902,7 +14902,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
             li.append( mpElement );
     }
-    
+
         // グレースケール
         if(item._isBaseLayer)
         {
@@ -14915,17 +14915,17 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
           grayScale.on( 'change', MA.bind( this._gray_scale, this, a, grayScale ) );
 
           li.append( grayScaleElement);
-          
+
       grayScale.fire('change');
         }
-        
+
     // 透過
     var opacityBtn =$("<a>").addClass("opacity_btn").attr( {"href":"javascript:void(0);"} ).html('透過率');
     opacityBtn.click( MA.bind(function(){ this._onOpacityBtnClick(li); }, this ));
     li.append( opacityBtn );
 
     if ( item.id == CONFIG.FREERELIEFID ) {
-      var settingBtn =  $('<a>').attr({ 
+      var settingBtn =  $('<a>').attr({
         'href': 'javascript:void(0);',
         'title' : 'スタイル変更'}).addClass('setting_btn').html("");
       li.append(settingBtn);
@@ -14935,7 +14935,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
       li.addClass('free_relief_id');
     }
-    
+
     // 詳細
     if (item._isOutside) {
       var outsideEditBtn = $('<span>').addClass('outside_edit_btn').html("編集");
@@ -14947,12 +14947,12 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       li.append( descriptionBtn );
       descriptionBtn.unbind('click').bind('click', MA.bind(this._onLayerMouseEnter, this, a, item));
     }
-    
+
     // 閉じる
     var closeBtn = $( '<div>' ).addClass( 'closebtn' );
     li.append(closeBtn );
       closeBtn.unbind( 'click' ).bind( 'click', MA.bind( this.onRemoveClick, this, li ) );
-    
+
     // ソート
     if ( isTile &&  !item._isBaseLayer && ( !isFirstTile || !isLastTile ) )
     {
@@ -14961,24 +14961,24 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         .click( MA.bind( function(){this._up(li);}, this ) );
       var downButton = $ ( "<a>" ).attr( {"href":"javascript:void(0);"} ).addClass( "down" )
         .click( MA.bind( function(){this._down(li);}, this ) );
-      
+
       if ( isFirstTile )
       {
         upButton.hide();
       }
-      if ( isLastTile ) 
+      if ( isLastTile )
       {
         downButton.hide();
       }
-      
+
       updownFrame.append( upButton ).append( downButton );
       li.append(updownFrame );
     }
-    
+
     a.click( MA.bind( this.onItemClick, this, li, a, viewMark) );
-    
+
   },
-  
+
   // (_onOutsideEidtEnter)
   _onOutsideEditEnter: function (a, item) {
     if (!this._editOutsideDialog) {
@@ -14988,15 +14988,15 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       //	effect: CONFIG.EFFECTS.DIALOG
       //});
       this._editOutsideDialog = GLOBE.DIALOG.EDITOUTSIDETILE;
-      
+
       this._editOutsideDialog.onChange = MA.bind(function(target){
         this.mapLayerList.updateTileLayer(target);
       }, this);
     }
-    
+
     this._editOutsideDialog.showEditDialog(item);
   },
-  
+
   // 合成スイッチ切り替え時の処理
   _onBlendSwitchChange : function( a, mp )
   {
@@ -15012,7 +15012,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         //this._blendTile( a, mp.checked() );
         this.updateCombineLayer('_onBlendSwitchChange');
   },
-  
+
   // 必要に応じて合成レイヤーを構成あるいは廃棄する
   updateCombineLayer : function(callfrom)
   {
@@ -15027,19 +15027,19 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         break;
       }
     }
-    
+
     var layers = this.map.viewer.imageryLayers;
     var combineLayerIndex = tileList.length;
-    
+
     var openCombineLayerFnc = function(){
 
       if ( this._beforeCombineLayer )
       {
         layers.remove(this._beforeCombineLayer);
       }
-      
+
       this._beforeCombineLayer = this._currentCombineLayer;
-      
+
       if ( this._beforeCombineLayer )
       {
         layers.lowerToBottom(this._beforeCombineLayer);
@@ -15055,11 +15055,11 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
           tileList : tileList
         })
       , combineLayerIndex);
-      
+
     }.bind(this);
-    
+
     var closeCombineLayerFnc = function(){
-      
+
       if ( this._beforeCombineLayer )
       {
         layers.remove(this._beforeCombineLayer);
@@ -15067,7 +15067,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       layers.remove(this._currentCombineLayer);
       this._beforeCombineLayer  = undefined;
       this._currentCombineLayer = undefined;
-      
+
     }.bind(this);
 
     if ( anyCombineEnabled )
@@ -15079,11 +15079,11 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       closeCombineLayerFnc();
     }
   },
-  
+
   _onOpacityBtnClick : function(li)
   {
-    
-    
+
+
     var item = li.data('data');
     var opacity = ( item._visibleInfo ? item._visibleInfo.opacity : 1 );
     if ( !this._opacityWindow )
@@ -15108,7 +15108,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       top: offset.top + li.find("a.opacity_btn").outerHeight() -4,
       left :offset.left - 200 + 'px'
     }).data( { "item" : item } );
-    
+
     var opacityPercentage = Math.round( 100 - ( opacity * 100 ) );
     this._opacityValue.html('透過率:' + opacityPercentage + '%');
     this._opacitySlider.data({"__target_item":item}).slider( "option", "value", opacityPercentage );
@@ -15120,7 +15120,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       if ( opacity < 0 ) opacity = 0;
       if ( opacity > 1 ) opacity = 1;
       opacity = 1- opacity;
-      
+
       //310-指定レイヤの透過率を設定
       if (item._visibleInfo.layer.type == "GeojsonTile_QuadtreePrimitive" )
       {
@@ -15134,25 +15134,25 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
           item._visibleInfo.layer.alpha = opacity;
       }
       item._visibleInfo.opacity = opacity;
-      
+
       this.updateCombineLayer('_opacitySlider');
       GLOBE.MAP.setLayersHash();
     }, this ) );
-    
+
     if ( this._hideOpacityWindowHandler )
     {
       $( document.body ).unbind( 'mousedown', this._hideOpacityWindowHandler );
       $( document.body ).unbind( 'touchstart', this._hideOpacityWindowHandler );
-    
+
     }
     this._hideOpacityWindowHandler  = MA.bind( function(event)
     {
-      if ( !this._opacityWindow 
+      if ( !this._opacityWindow
         || event.target == this._opacityWindow[0]
           || $(event.target).is(".opacity_btn")) return;
 
       var parents = $( event.target ).parents();
-      
+
       var hit = false;
       for( var i=0; i<parents.length; i++ )
       {
@@ -15172,9 +15172,9 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
     $( document.body ).bind( 'mousedown', this._hideOpacityWindowHandler );
     $( document.body ).bind( 'touchstart', this._hideOpacityWindowHandler );
-    
+
     this._opacityWindow.hide().slideDown(200);
-    
+
   },
   _up : function(li)
   {
@@ -15188,14 +15188,14 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         hit = true;
         break;
       }
-      
+
     }
-    if ( hit ) li.prev().before( li.detach() ); 
-    
+    if ( hit ) li.prev().before( li.detach() );
+
     this.onSortChange();
     this._initializeList( true );
   },
-  
+
   _down : function(li)
   {
     var item = li.data('data');
@@ -15212,15 +15212,15 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         }
         break;
       }
-      
+
     }
-    if ( hit ) li.next().after( li.detach() ); 
-    
+    if ( hit ) li.next().after( li.detach() );
+
     this.onSortChange();
     this._initializeList( true );
   },
-  
-  
+
+
 
   Refresh : function(visibleLayers)
   {
@@ -15243,7 +15243,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
     var list     = this.mapLayerList.getList();
     var tileList = this.mapLayerList.getTileList();
-    
+
     if ( list.length <= 0 && tileList.length <= 0 )
     {
       this.listContainer.empty();
@@ -15266,7 +15266,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   _initializeListOne : function( list,liList, ul, liRefresh, isTile )
   {
     var lastTileExtra = ( this.getBaseLayerExists() ? 2 : 1 );
-    
+
     for ( var i= 0; i<list.length; i++ )
     {
       var item = list[i];
@@ -15274,7 +15274,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 
       if ( liRefresh )
       {
-        this._updateLayer( li, item, isTile, 
+        this._updateLayer( li, item, isTile,
             i==0,
             i >= list.length - lastTileExtra );
       }
@@ -15282,7 +15282,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       {
           var a = $( '<a>' ).attr( { 'href':'javascript:void(0);' } );
           a.data( { 'data' : item } );
-        this._makeLayer(li, a, item, isTile, 
+        this._makeLayer(li, a, item, isTile,
           i==0,
           i >= list.length - lastTileExtra );
 
@@ -15322,13 +15322,13 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       if (item.id == CONFIG.COMPAREPHOTO_ID) {
         this.mapLayerList.map.showComparePhotoControl();
       }
-      
+
     }
     else
     {
       item._visibleInfo._isHidden = true;
       //310-選択中の情報に残したまま非表示（地図からレイヤ削除）
-      
+
       if(item._isBaseLayer){
         item._visibleInfo.layer.alpha = 0;
       } else{
@@ -15356,7 +15356,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
             a.removeClass("view");
             a.addClass("nococotile");
         }
-        
+
         this.updateCombineLayer('onItemClick');
         GLOBE.MAP.setLayersHash();
   },
@@ -15383,7 +15383,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       this._saveOutsideTileBtn.show();
     else
       this._saveOutsideTileBtn.hide();
-    
+
     this._enableLakeDepth(false);
     this.initializeList();
     this.updateCombineLayer('onMapLayerListChange');
@@ -15392,12 +15392,12 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   onRemoveClick : function(li)
   {
     var item = li.data( 'data' );
-    
-    
+
+
     if ( item && item.id == CONFIG.FREERELIEFID && GSI.GLOBALS.mapLayerList._editReliefDialog )
       GSI.GLOBALS.mapLayerList._editReliefDialog.hide();
-    
-    
+
+
         if(item.parent && item.parent.title_sys && item.parent.title_sys == CONFIG.layerBaseFolderSYS){
             //310-ベースマップの場合の削除
             item._visibleInfo.layer.alpha = 0;
@@ -15408,7 +15408,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       li.remove();
       if ( this._userResized ) this._onResize();
     }, this, li ) );
-    
+
     GLOBE.MAP.setLayersHash();
   },
   _onLayerMouseEnter : function( a, item )
@@ -15447,17 +15447,17 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       description =$( '<div>' ).addClass( 'description' ).html( item.html );
     }
     if ( description ) infoFrame.append( description );
-    
+
     return infoFrame;
   },
-  
-  
+
+
   _onReliefStyleEidtClick :function(a, item)
   {
     this._curItem = undefined;
         this._hideItemTooltip();
     windowSize = GSI.Utils.getScreenSize();
-    
+
     if ( !GSI.GLOBALS.mapLayerList._editReliefDialog )
     {
       GSI.GLOBALS.mapLayerList._editReliefDialog = new GSI.EditReliefDialog( this._map, GSI.GLOBALS.mapLayerList, {
@@ -15469,8 +15469,8 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     }
     GSI.GLOBALS.mapLayerList._editReliefDialog.show();
   },
-  
-  
+
+
   _showItemTooltip : function( a, item )
   {
     if ( item  )
@@ -15495,7 +15495,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         }
         this._curItem = item;
       }
-    
+
       if ( !this._itemTooltip )
       {
         this._itemTooltip = $( '<div>' ).addClass( 'gsi_layertreedialog_itemtooltip' ).hide();
@@ -15581,7 +15581,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
                     }
             this._hideItemTooltip();
                 }
-        
+
         if ( event.type == "scroll" )
         {
           this._toolTipViewCounter = 0;
@@ -15632,7 +15632,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
             var v1 = v - (v2 * 5);
             v = (v2 - 1) * 5 + v1;
         }
-        
+
         else{
             v++;
         }
@@ -15644,7 +15644,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
     v = (100 - v) / 100;
 
     var item = a.data( 'data' );
-    
+
     item._visibleInfo.layer.setOpacity( v );
       item._visibleInfo.opacity = v;
     },
@@ -15687,15 +15687,15 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
   {
     var item = a.data( 'data' );
     item._visibleInfo._grayScale = sw.checked();
-    
+
     var beforeSaturation = item._visibleInfo.layer.saturation;
     item._visibleInfo.layer.saturation = ( item._visibleInfo._grayScale ? 0 : 1 );
-    
+
     if ( beforeSaturation != item._visibleInfo.layer.saturation )
     {
       this.updateCombineLayer('_gray_scale');
     }
-    
+
     GLOBE.MAP.setLayersHash();
   },
   _checkEvacuationLayer : function()
@@ -15704,20 +15704,20 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
       {
         var l = this.mapLayerList.getList();
         for(i = 0 ; i < l.length; i++ )
-        {				
+        {
           if ( l[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
           {
             return true;
-          }				
+          }
         }
         var tl = this.mapLayerList.getTileList();
 
         for(i = 0 ; i < tl.length; i++ )
-        {				
+        {
           if ( tl[i].id.indexOf(CONFIG.layerEvacuationHeader) >= 0 )
           {
             return true;
-          }			
+          }
         }
       }
     if( GSI.GLOBALS.layerTreeDialog.current )
@@ -15727,7 +15727,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
         return true;
       }
     }
-    
+
 
       GSI.GLOBALS.evacDialog.hide();
     CONFIG.layerEvacuationIsConfirmOK = false;
@@ -15793,38 +15793,38 @@ GSI.MapLayerList = MA.Class.extend( {
     options = MA.setOptions(this, options);
     this._elevationData = GSI.ReliefTileLayer.getElevationSampleData();
   },
-  
+
   getElevationData : function()
   {
     return ( this._elevationData  ? $.extend(true, {}, this._elevationData ) : null );
   },
-  
-  
+
+
   setElevationData : function(data)
   {
     if ( !data )
       this._elevationData = data;
     else
       this._elevationData = $.extend(true, {}, data );
-      
+
     for( var i=0; i<this.tileList.length; i++ )
     {
       var info = this.tileList[i];
-      
+
       if ( info.id == CONFIG.FREERELIEFID && info._visibleInfo && info._visibleInfo.layer)
       {
         //info._visibleInfo.layer.setElevationData( this._elevationData );
-        
+
         //310-タイル表示
         //this.map.addLayer(info._visibleInfo.layer,true);
-        
+
         var layers = this.map.viewer.imageryLayers;
         info._visibleInfo.layer._remove(this.map.viewer);
         //this.map.viewer.imageryLayers.remove(info._visibleInfo.layer );
-        
+
         //info._visibleInfo.layer .destroy();
         info._visibleInfo.layer = null;
-        
+
         info._freeReliefData = this._elevationData;
         info._visibleInfo.layer = layers.addImageryProvider(
           new Cesium.JapanGSIImageryProvider(info)
@@ -15838,17 +15838,17 @@ GSI.MapLayerList = MA.Class.extend( {
         };
         info._visibleInfo.layer.alpha = info._visibleInfo.opacity;
         info._visibleInfo.layer._setVisible(this.map.viewer, true);
-        
+
       }
     }
     this._initZIndex( this.tileList );
     this.fire('tilechange');
-    
-    
+
+
     GLOBE.MAP.setLayersHash();
   },
-  
-  
+
+
   appendKML : function( info )
   {
     if ( this.exists( info ) ) return;
@@ -15863,8 +15863,8 @@ GSI.MapLayerList = MA.Class.extend( {
       this.append( infoList[i], true, isHide );
     }
   },
-  
-  
+
+
   // 外部タイルのimageryLayerを新しく作成し地図へ反映する
   appendOutSideTile: function (url, caption, layerOptions)
   {
@@ -15894,8 +15894,8 @@ GSI.MapLayerList = MA.Class.extend( {
 
     //options.tms = true;
     //info._visibleInfo.layer = new GSI.TileLayer(info.url, options);
-    
-    
+
+
     this._setOutsideTileLayer(info);
 
     //this.map.addLayer(info._visibleInfo.layer, true, info._visibleInfo.blend);
@@ -15905,15 +15905,15 @@ GSI.MapLayerList = MA.Class.extend( {
 
     this.fire('change');
   },
-  
-  
+
+
   // 外部タイルのimageryLayerを設定する
   _setOutsideTileLayer: function(info)
   {
     //console.log("_setOutsideTileLayer", info);
     var layers = this.map.viewer.imageryLayers;
     var layerIndex = layers.indexOf(info._visibleInfo.layer);
-    
+
     if ( layerIndex == -1 )
     {
       layerIndex = null;
@@ -15923,7 +15923,7 @@ GSI.MapLayerList = MA.Class.extend( {
       this.map.viewer.imageryLayers.remove(info._visibleInfo.layer );
       info._visibleInfo.layer = null;
     }
-    
+
     info._visibleInfo.layer = layers.addImageryProvider(
       new Cesium.JapanGSIImageryProvider(info), layerIndex
     );
@@ -15937,16 +15937,16 @@ GSI.MapLayerList = MA.Class.extend( {
     info._visibleInfo.layer.alpha = info._visibleInfo.opacity;
     info._visibleInfo.layer._setVisible(this.map.viewer, !info._visibleInfo._isHidden);
   },
-  
-  
+
+
   // 既存の外部タイルimageryLayerを更新し地図へ反映する
   updateTileLayer: function (info)
   {
     this._setOutsideTileLayer(info);
     this.fire('change');
   },
-  
-  
+
+
   setBaseLayer : function( info )
   {
     var hit = false;
@@ -15957,27 +15957,27 @@ GSI.MapLayerList = MA.Class.extend( {
         this.map.viewer.imageryLayers.remove(this.tileList[i]._visibleInfo.layer, true);
         this.tileList[i]._visibleInfo = null;
         this.tileList[i] = info;
-        
+
         hit = true;
         break;
       }
     }
-    
-    
+
+
     info._isBaseLayer = true;
     info._visibleInfo = {};
     info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
     info._visibleInfo._grayScale = info.initialGrayScale;
     info.initialOpacity = null;
     info.initialGrayScale = null;
-    
+
     //190529 ext ここから
     var no_para_url = info.url.split("?")[0];
     var info_url_ext = info.url.substr(no_para_url.length-3,3)
     if(info.url.split("?")[1]){
       var url_para = info.url.split("?")[1];
       var info_url_ext = info_url_ext + "?" + url_para;
-    }		
+    }
     //190529 ext ここまで
 
     var baseMapImageryProvider = Cesium.createOpenStreetMapImageryProvider({
@@ -15997,15 +15997,15 @@ GSI.MapLayerList = MA.Class.extend( {
     info._visibleInfo.layer._remove = function(viewer) {
       viewer.imageryLayers.remove(this, true);
     };
-    
+
     if ( !hit )
     {
       this.tileList.push( info );
     }
-    
+
     this.fire('change');
   },
-  
+
   append : function( info, noFinishMove, isHide ,Confirm_FLAG)
   {
     if ( this.exists( info ) ) return;
@@ -16015,32 +16015,8 @@ GSI.MapLayerList = MA.Class.extend( {
         var KARI=this;
         var mes ="航空法第132条で規定する無人航空機の飛行禁止空域のうち、航空法施行規則第236条第1号から第3号までに掲げる空域（空港等の周辺空域）を表示します。緑色の面は、上空での飛行が禁止される制限表面を表します。紫色の面は、上空及びその下の空域での飛行が禁止される進入表面及び転移表面並びに上空の空域で飛行が禁止される空港等の敷地を表します。<br>" +
                 "なお、この情報には誤差が含まれている場合があります。また空港等の敷地については工事等により変更がある場合がありますので、境界付近等正確な空域については空港等の管理者に確認願います。<br>" +
-                "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。" 
+                "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。"
         jConfirm2(mes, '留意事項', 480, function(r) {
-          if(r) {
-            KARI.append(info, noFinishMove, isHide ,1);
-          }
-        });
-        return;
-      }
-    }
-    if (( info.id=="red" ) ||
-      ( info.id=="20180906hokkaido_atsuma_sekishoku" ) || 
-      ( info.id=="tarumaered" ) || 
-      ( info.id=="20180130_kusatsushiranesan_sekishokurittai" ) || 
-      ( info.id=="20180309_sekisyokurittai_kirishima" ) || 
-      ( info.id=="kuchinoerabured" ) || 
-      ( info.id=="2018_sekisyokurittai_azumayama" ) || 
-      ( info.id=="20190121_sekisyokurittai_kusatsushiranesan") ||
-      ( info.id=="20190121_olsorittai_kusatsushiranesan") ||
-          ( info.id=="miyakejimared") ||
-      ( info.id=="20190807asama_sekisyoku") ||
-      ( info.id=="oosimared")
-    )
-    {
-      if(Confirm_FLAG == null){
-        var KARI=this;
-        jConfirm2("赤色立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。赤色立体地図を利用される場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a>に記載のとおり、<a target='_blank' href='https://www.rrim.jp/researcher/'>アジア航測株式会社の許諾条件</a>を確認してご利用下さい。", 'ご利用上の注意', 480, function(r) {
           if(r) {
             KARI.append(info, noFinishMove, isHide ,1);
           }
@@ -16057,16 +16033,16 @@ GSI.MapLayerList = MA.Class.extend( {
     }
 
     var tileChanged = false;
-    
+
     info._visibleInfo = {};
     info._visibleInfo.opacity = ( info.initialOpacity ? info.initialOpacity : 1.0 );
     //if ( isHide ) info._visibleInfo._isHidden = true;
     info._visibleInfo._isHidden = ( isHide ? true : false );
     info.initialOpacity = null;
-    
-    
+
+
     info._visibleInfo.layer = null; //GSI.Utils.infoToLayer(info, noFinishMove );
-    
+
     //310-とりあえずコメントアウト
     //if ( info._visibleInfo.layer)
     {
@@ -16074,7 +16050,7 @@ GSI.MapLayerList = MA.Class.extend( {
       {
         if ( info._visibleInfo._isCombine == undefined )
           info._visibleInfo._isCombine = true;
-        
+
         /*
         var fBaseMap = false;
         if(info.parent && info.parent != null && info.parent.title_sys == CONFIG.layerBaseFolderSYS){
@@ -16083,7 +16059,7 @@ GSI.MapLayerList = MA.Class.extend( {
         if ( !info._visibleInfo._isHidden)
         {
           if(fBaseMap){
-            
+
             info._visibleInfo.grayscale = GSI.GLOBALS.baseLayer.isGrayScale;
             //310-ベースマップ切り替え
             GSI.GLOBALS.baseLayer.setActiveId(info.id);
@@ -16094,12 +16070,12 @@ GSI.MapLayerList = MA.Class.extend( {
           }
         }
         if(fBaseMap) this.tileList.push( info );
-        
+
         else this.tileList.unshift( info );
         */
         if ( info._isBaseLayer )
         {
-        
+
         }
         else
         {
@@ -16127,13 +16103,13 @@ GSI.MapLayerList = MA.Class.extend( {
             //310-タイル表示
             //this.map.addLayer(info._visibleInfo.layer,true);
             var layers = this.map.viewer.imageryLayers;
-            
-            
+
+
             if ( info.id == CONFIG.FREERELIEFID )
             {
               info._freeReliefData = GSI.GLOBALS.mapLayerList.getElevationData();
             }
-            
+
             info._visibleInfo.layer = layers.addImageryProvider(
               new Cesium.JapanGSIImageryProvider(info)
             );
@@ -16150,9 +16126,9 @@ GSI.MapLayerList = MA.Class.extend( {
           // okw
         }
         this.tileList.unshift( info );
-        
+
         this._initZIndex( this.tileList );
-        
+
         tileChanged = true;
       }
       else if ( info.layerType=="kml" )
@@ -16164,7 +16140,7 @@ GSI.MapLayerList = MA.Class.extend( {
         info._visibleInfo.layer = new GLOBE.KMLLayer(this.map,info);
         info._visibleInfo.layer._setVisible(null, !info._visibleInfo._isHidden);
         /*
-        if ( !info._visibleInfo._isHidden ) 
+        if ( !info._visibleInfo._isHidden )
         {
           info._visibleInfo.layer._setVisible(null,true);
           //310-KML表示
@@ -16183,7 +16159,7 @@ GSI.MapLayerList = MA.Class.extend( {
         info._visibleInfo.layer = new GLOBE.GeoJSONLayer(this.map,info);
         info._visibleInfo.layer._setVisible(null, !info._visibleInfo._isHidden);
         /*
-        if ( !info._visibleInfo._isHidden ) 
+        if ( !info._visibleInfo._isHidden )
         {
           info._visibleInfo.layer._setVisible(null,true);
           //310-KML表示
@@ -16203,7 +16179,7 @@ GSI.MapLayerList = MA.Class.extend( {
           info._visibleInfo.layer = new GLOBE.VectorTileLayer(this.map,info);
           info._visibleInfo.layer._setVisible(this.map.viewer, !info._visibleInfo._isHidden);
           /*
-          if ( !info._visibleInfo._isHidden ) 
+          if ( !info._visibleInfo._isHidden )
           {
             info._visibleInfo.layer._setVisible(null,true);
             //310-KML表示
@@ -16229,7 +16205,7 @@ GSI.MapLayerList = MA.Class.extend( {
             });
             info._visibleInfo.layer.type    = "GeojsonTile_QuadtreePrimitive";
             this.map.viewer.scene.primitives.add(info._visibleInfo.layer);
-            
+
             info._visibleInfo.layer._remove = function(viewer) {
               info._visibleInfo.layer._setVisible(viewer, false);
               var len = GLOBE.MAP.viewer.scene.primitives.length;
@@ -16247,7 +16223,7 @@ GSI.MapLayerList = MA.Class.extend( {
                 */
               }
             };
-            
+
             info._visibleInfo.layer._setVisible = function(viewer,visible) {
               info._visibleInfo.layer.tileProvider.show(visible);
               var len = GLOBE.MAP.viewer.scene.primitives.length;
@@ -16261,7 +16237,7 @@ GSI.MapLayerList = MA.Class.extend( {
                 }
               }
             };
-            
+
             info._visibleInfo.layer._setVisible(null, !info._visibleInfo._isHidden);
             /*
             if ( info._visibleInfo._isHidden )
@@ -16278,9 +16254,9 @@ GSI.MapLayerList = MA.Class.extend( {
       else if ( info.layerType=="topojson_tile" )
       {
       // タイルTopoJSON
-        if ( !info._visibleInfo._isHidden ) 
+        if ( !info._visibleInfo._isHidden )
         {
-          
+
         }
         this.list.unshift( info );
         this._initZIndexOffset( this.list, 10000 );
@@ -16291,10 +16267,10 @@ GSI.MapLayerList = MA.Class.extend( {
         info._visibleInfo .layer.on("loadstart", MA.bind( this.onLayerLoadStart, this, info._visibleInfo.layer, "TopoJSON"  ) );
         info._visibleInfo .layer.on( "load", MA.bind( function(e){ this.onLayerLoad(e.src) },this));
         info._visibleInfo .layer .load();
-        
+
         if ( !info._visibleInfo._isHidden )
         {
-          
+
         }
         this.list.unshift( info );
         this._initZIndexOffset( this.list, 10000 );
@@ -16302,10 +16278,10 @@ GSI.MapLayerList = MA.Class.extend( {
       else if ( info.layerType=="tms" )
       {
       // TMS
-        
-        if ( !info._visibleInfo._isHidden ) 
+
+        if ( !info._visibleInfo._isHidden )
         {
-          
+
         }
         this.tileList.unshift( info );
         this._initZIndex( this.tileList );
@@ -16318,19 +16294,19 @@ GSI.MapLayerList = MA.Class.extend( {
         this.list.unshift( info );
         this._initZIndexOffset( this.list, 10000 );
       }
-      
-      
+
+
     }
-    
+
     if ( tileChanged ) this.fire('tilechange');
     this.fire('change');
   },
-  
-  
-  
+
+
+
   _setTileGeoJSONAlpha : function(layer, alpha)
   {
-    
+
     var len = this.map.viewer.scene.primitives.length;
     for(var i=0; i<len; i++){
       var primitiveCollection = this.map.viewer.scene.primitives._primitives[i];
@@ -16376,7 +16352,7 @@ GSI.MapLayerList = MA.Class.extend( {
   _initZIndexOffset : function( list, offset )
   {
     var zIndex = 0;
-    
+
     for ( var i=list.length-1; i>= 0; i-- )
     {
       var info = list[i];
@@ -16404,7 +16380,7 @@ GSI.MapLayerList = MA.Class.extend( {
       }
       else baseLayer = null;
     }
-    
+
     for ( var i=0; i< list.length; i++ )
     {
       var info = list[i];
@@ -16418,7 +16394,7 @@ GSI.MapLayerList = MA.Class.extend( {
         }
       }
     }
-    
+
     // ベースレイヤーを一番下
     if ( baseLayer ) this.map.viewer.imageryLayers.lowerToBottom(baseLayer);
   },
@@ -16438,13 +16414,13 @@ GSI.MapLayerList = MA.Class.extend( {
           return true;
         }
       }
-      
+
       for ( var i=0; i<this.tileList.length; i++ )
       {
         if ( this.tileList[i].id == info.id )return true;
-        
+
       }
-      
+
     }
     else
     {
@@ -16455,7 +16431,7 @@ GSI.MapLayerList = MA.Class.extend( {
           return true;
         }
       }
-      
+
       for ( var i=0; i<this.list.length; i++ )
       {
         if ( this.list[i].id == info.id ) return true;
@@ -16504,8 +16480,8 @@ GSI.MapLayerList = MA.Class.extend( {
           break;
         }
       }
-      
-      
+
+
       if ( !targetInfo )
       {
         for ( var i=0; i<this.list.length; i++ )
@@ -16519,20 +16495,20 @@ GSI.MapLayerList = MA.Class.extend( {
         }
       }
     }
-    
+
     if (targetInfo)
     {
       //310-指定レイヤを削除
-      if (targetInfo._visibleInfo.layer && targetInfo._visibleInfo.layer._remove) 
+      if (targetInfo._visibleInfo.layer && targetInfo._visibleInfo.layer._remove)
         targetInfo._visibleInfo.layer._remove( this.map.viewer );
 
       // 202303
       if (targetInfo.id == CONFIG.COMPAREPHOTO_ID) {
         targetInfo._visibleInfo.layer.onRemove();
       }
-      
+
       targetInfo._visibleInfo = null;
-      
+
       if ( tileChanged ) this.fire('tilechange');
     }
     this.fire('change');
@@ -16543,8 +16519,8 @@ GSI.MapLayerList = MA.Class.extend( {
     {
       var info = this.list[i];
     //310-指定レイヤを削除
-      
-      if (info._visibleInfo.layer && info._visibleInfo.layer._remove) 
+
+      if (info._visibleInfo.layer && info._visibleInfo.layer._remove)
         info._visibleInfo.layer._remove( this.map.viewer );
       info._visibleInfo = null;
     }
@@ -16554,7 +16530,7 @@ GSI.MapLayerList = MA.Class.extend( {
     {
       var info = this.tileList[i];
       //310-指定レイヤを削除
-      
+
       if (info._visibleInfo.layer && info._visibleInfo.layer._remove) {
         // 202303
         if (info.id == CONFIG.COMPAREPHOTO_ID) {
@@ -16585,7 +16561,7 @@ GSI.MapLayerList = MA.Class.extend( {
   },
 
   // 202303 時系列表示追加
-  appendComparePhoto : function(info, isHide) { 
+  appendComparePhoto : function(info, isHide) {
 
     if ( this.hasComparePhotoTile() ) return;
 
@@ -16606,7 +16582,7 @@ GSI.MapLayerList = MA.Class.extend( {
 
     info._visibleInfo.layer.alpha = info._visibleInfo.opacity;
     info._visibleInfo.layer._setVisible(this.map.viewer, !info._visibleInfo._isHidden);
-    
+
     // info._visibleInfo.layerの変更時のイベントを追加
     info._visibleInfo.layer.on("change", MA.bind(function(info) {
       var title = info._visibleInfo.layer.getActiveTitle();
@@ -16615,14 +16591,14 @@ GSI.MapLayerList = MA.Class.extend( {
         title = null;
       }
       info.title = (title ? "時系列表示("+ title + ")" : "時系列表示" );
-      
+
       this.fire("tilechange");
       this.fire("change");
     }, this, info));
 
     this.tileList.unshift(info);
     this._initZIndex(this.tileList);
-    
+
     // 時系列選択レイヤを表示
     if (!info._visibleInfo._isHidden) {
       this.map.showComparePhotoControl();
@@ -16718,13 +16694,13 @@ GSI.Utils.infoToLayer = function( info, noFinishMove )
       options.maxNativeZoom =info.maxNativeZoom;
       options._maxNativeZoom =info.maxNativeZoom;
     }
-    
+
     if ( info.maxCanvasZoom  && info.maxCanvasZoom!="" )
     {
       options.maxCanvasZoom =info.maxCanvasZoom;
       options._maxCanvasZoom =info.maxCanvasZoom;
     }
-    
+
     if ( info.attribution )
     {
       options.attribution =info.attribution;
@@ -16740,7 +16716,7 @@ GSI.Utils.infoToLayer = function( info, noFinishMove )
       options.styleurl =info.styleurl;
       options._styleurl =info.styleurl;
     }
-    
+
   }
   else if ( info.layerType=="topojson_tile" )
   {
@@ -16891,12 +16867,12 @@ GSI.QueryParams = MA.Class.extend( {
   {
     return ( this._position ? this._position  : defaultPosition );
   },
-  
+
   getReliefData : function()
   {
     return this._reliefData;
   },
-  
+
   getZoom : function( defaultZoom )
   {
     return ( this._zoom ? this._zoom  : defaultZoom );
@@ -16919,7 +16895,7 @@ GSI.QueryParams = MA.Class.extend( {
   getBaseMapGrayScale : function()
   {
     return this._baseMapGrayScale;
-  },        
+  },
   getLayers : function()
   {
     return this._layers;
@@ -16999,7 +16975,7 @@ GSI.QueryParams = MA.Class.extend( {
                 fBaseMap = true;
             }
     }
-    
+
         if(!fBaseMap){
             this.params["base"] = CONFIG.layerBaseDefaultID;
             this._initBaseMap();
@@ -17047,7 +17023,7 @@ GSI.QueryParams = MA.Class.extend( {
       vParams = this.params["ls"];
 
       var disp = this.params["disp"];
-      
+
       var layers = this.params["ls"].split( '|' );
 
       // urlのgeojsonとkmlの読み込み
@@ -17060,7 +17036,7 @@ GSI.QueryParams = MA.Class.extend( {
           }
         }
       }
-            
+
       for ( var i=0; i<layers.length; i++ )
       {
         if ( $.trim( layers[i] ) == '' ) continue;
@@ -17240,7 +17216,7 @@ GSI.QueryParams = MA.Class.extend( {
     var reliefData = this.params["reliefdata"];
     if ( reliefData )
       this._reliefData = GSI3D.ReliefTileLayer.decodeElevationDataText(reliefData);
-      
+
   },
   _parse : function( queryString, separator )
   {
@@ -17296,15 +17272,15 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
     });
     this._dispAddrMode = GLOBE.MAP._dispAddrMode;
   },
-  
+
   _initializeContent: function(lon,lat,height,addressK,addressY)
   {
     lon = (isNaN(lon) ? lon : lon * 1);
     lat = (isNaN(lat) ? lat : lat * 1);
     height = (isNaN(height) ? height : height * 1);
-    
+
       var ellipsoid = GLOBE.MAP.viewer.scene.globe.ellipsoid;
-          
+
       this.frame = $('<div></div>');
       this.addrKanji = '---';
       this.addrYomi = '---';
@@ -17388,7 +17364,7 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
         'font-size':' 9pt'
       })
       .appendTo(this.frame);
-    
+
     this.outPutHeight = $('<div><span class="footer_label">標高：</span><span id="DemHeight">---</span></div>')
       .appendTo(this.frame);
 
@@ -17399,15 +17375,15 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
       .appendTo(this.frame);
 
     $('<div style="height: 22pt;"></div>').appendTo(this.frame);  //empty
-    
+
     this.setDialogContent( this.frame );
-    
+
     this.refreshDEMHeight();
     this.refreshLakeDepth(GLOBE.MAP.lakedataEnabled);
   },
 
   refreshDEMHeight : function(){
-    
+
     if ( GLOBE.MAP.outPutHeight && this.outPutHeight )
     {
       this.outPutHeight.find("#DemHeight").html(GLOBE.MAP.outPutHeight);
@@ -17437,7 +17413,7 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
     }
     this.outPutLakeDepth.find("#LakeBottomHeight").html(outPutLakeBottomHeight);
   },
-  
+
   onDragStart: function()
   {
     this.container.css({
@@ -17445,7 +17421,7 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
       'bottom': 'auto'
     });
   },
-  
+
   onBeforeClose: function()
   {
     GLOBE.MAP.clearPinLayers("FOOTER");
@@ -17463,7 +17439,7 @@ GLOBE.DIALOG.FOOTER = $.extend({}, new GLOBE.CLASS.DIALOG('gsi_dialog_footer'), 
       this._addr.html(this.addrKanji);
     }
     // var map = this._mapManager.getMap();
-    // if (!map) return;	
+    // if (!map) return;
   }
 });
 
@@ -17482,9 +17458,9 @@ GSI.map = function (id, options) {
   - GLOBE.VectorLayer
 ************************************************************************/
 GLOBE.VectorLayer = MA.Class.extend( {
-  
+
   options : {
-    
+
   },
   _IEHeight : 3500,
 
@@ -17507,12 +17483,12 @@ GLOBE.VectorLayer = MA.Class.extend( {
     this._map = map;
     options = MA.setOptions(this, options);
     this._load();
-    
+
     this._moveEndHandler = this._onCameraMoveEnd.bind(this);
     this._map.viewer.camera.moveEnd.addEventListener(this._moveEndHandler);
     this._beforeHeight = GLOBE.MAP.currents.height;
   },
-  
+
   setAlpha : function(alpha)
   {
     if ( this._dataSource )
@@ -17522,7 +17498,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
       {
         var entity = entities[i];
         var material = null;
-        
+
         if ( entity.billboard )
         {
           var color = (entity.billboard.color ? entity.billboard.color : new Cesium.Color(1, 1, 1, 1));
@@ -17536,7 +17512,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
         {
           material = entity.polygon.material;
         }
-        
+
         if ( material )
         {
           var color = (material.color ? material.color._value : new Cesium.Color(0, 0, 0, 1));
@@ -17546,7 +17522,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
         }
       }
     }
-    
+
     if ( this._primitives )
     {
       for( var i=0; i<this._primitives.length; i++ )
@@ -17561,7 +17537,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
         }
       }
     }
-    
+
     if ( this._billboardCollection )
     {
       for( var i=0; i<this._billboardCollection.length; i++ )
@@ -17582,7 +17558,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
         }
       }
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.alphaSingleImageryLayer(this._layerId, alpha);
@@ -17593,12 +17569,12 @@ GLOBE.VectorLayer = MA.Class.extend( {
   {
     //if( this._visible == visible ) return;
     this._visible = visible;
-    
+
     if ( this._dataSource )
     {
       this._dataSource.show = visible;
     }
-    
+
     if ( this._primitives )
     {
       for( var i=0; i<this._primitives.length; i++ )
@@ -17606,37 +17582,37 @@ GLOBE.VectorLayer = MA.Class.extend( {
         this._primitives[i].show = this._visible;
       }
     }
-    
+
     if ( this._billboardCollection )
     {
       this._billboardCollection.show = this._visible;
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.showSingleImageryLayer(this._layerId, this._visible);
       GLOBE.MAP.showImagePrimitive(this._layerId, this._visible);
     }
   },
-  
-  _remove : function() 
+
+  _remove : function()
   {
     if ( this._ajax )
     {
       try
       {
         this._ajax.abort();
-        
+
       }
       catch(e){}
       this._ajax = null;
     }
-    
+
     if ( this._dataSource )
     {
       this._map.viewer.dataSources.remove(this._dataSource, true);
     }
-    
+
     if ( this._primitives )
     {
       for( var i=0; i<this._primitives.length; i++ )
@@ -17644,33 +17620,33 @@ GLOBE.VectorLayer = MA.Class.extend( {
         this._map.viewer.scene.primitives.remove(this._primitives[i]);
       }
     }
-    
+
     if ( this._billboardCollection )
     {
       this._map.viewer.scene.primitives.remove(this._billboardCollection);
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.removeSingleImageryLayer(this._layerId);
       GLOBE.MAP.removeImagePrimitive(this._layerId);
     }
-    
+
     this._primitives = null;
     this._billboardCollection = null;
     this._layerId = null;
     this._map.viewer.camera.moveEnd.removeEventListener(this._moveEndHandler);
-    
+
     GLOBE.DIALOG.INFOBOX.hide();
   },
-  
-  _redraw : function() 
+
+  _redraw : function()
   {
     if ( this._dataSource )
     {
       this._map.viewer.dataSources.remove(this._dataSource, true);
     }
-    
+
     if ( this._primitives )
     {
       for( var i=0; i<this._primitives.length; i++ )
@@ -17678,29 +17654,29 @@ GLOBE.VectorLayer = MA.Class.extend( {
         this._map.viewer.scene.primitives.remove(this._primitives[i]);
       }
     }
-    
+
     if ( this._billboardCollection )
     {
       this._map.viewer.scene.primitives.remove(this._billboardCollection);
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.removeSingleImageryLayer(this._layerId);
       GLOBE.MAP.removeImagePrimitive(this._layerId);
     }
-    
+
     this._primitives = [];
     this._billboardCollection = null;
-    
+
     this._onLoad();
   },
-  
+
   _load : function()
   {
     this._remove();
     this._primitives = [];
-    
+
     this._ajax = $.ajax({
       type: "GET",
       url: MATEST.proxyUrl(this.options.url),
@@ -17710,10 +17686,10 @@ GLOBE.VectorLayer = MA.Class.extend( {
       error : MA.bind(this._onLoadError, this)
     });
   },
-  
+
   _onLoad : function(){},
   _onLoadError : function(){},
-  
+
   _onCameraMoveEnd: function()
   {
     var latLng = GLOBE.MAP.getCameraPosition();
@@ -17722,12 +17698,12 @@ GLOBE.VectorLayer = MA.Class.extend( {
       this._onZoomChange(latLng[2]);
     }
   },
-  
+
   _onZoomChange: function(height)
   {
     var removeList = [];
     var addList = [];
-    
+
     for ( var i=0; i<this._map.viewer.scene.primitives._primitives.length; i++ )
     {
       var primitive = this._map.viewer.scene.primitives._primitives[i];
@@ -17763,16 +17739,16 @@ GLOBE.VectorLayer = MA.Class.extend( {
     this._primitives = newList;
     this._beforeHeight = height;
   },
-  
+
   _getPrimitivePointIcon : function(position, imageURL, name)
   {
     return GLOBE.MAP.getPrimitivePoint_Icon(position, imageURL, name);
   },
-  
+
   _getPrimitiveIconCircle : function(position, fillColor, radius, isIE)
   {
     var height = GLOBE.MAP.degreesFromCartesian(position)[2];
-    
+
     // IEの場合は高さを調整する
     if(isIE){
       var ellipse = new Cesium.EllipseGeometry({
@@ -17800,8 +17776,8 @@ GLOBE.VectorLayer = MA.Class.extend( {
 
     return geometryInstance;
   },
-  
-  
+
+
   _getPrimitivePolygon : function(hierarchy, color, isIE)
   {
 
@@ -17846,7 +17822,7 @@ GLOBE.VectorLayer = MA.Class.extend( {
         "vertexFormat" : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
       });
     }
-    
+
     var geometryInstance = new Cesium.GeometryInstance({
       geometry : myGeometry,
       attributes : {
@@ -17857,14 +17833,14 @@ GLOBE.VectorLayer = MA.Class.extend( {
 
     return geometryInstance;
   },
-  
-  
+
+
   // ラインのプリミティブを作成。（高さが必要）
   createPolylinePrimitive: function(gene)
   {
     gene.kind = "polyline";
     gene.type = "upload_polyline";
-    
+
     var collection = new Cesium.PolylineCollection();
     var primitive = collection.add({
       positions : gene.position,
@@ -17880,16 +17856,16 @@ GLOBE.VectorLayer = MA.Class.extend( {
     primitive["gene"]        = gene;
     return collection;
   },
-  
+
   // ラインのプリミティブを作成。（地面へ描画するため高さは不要）
   createCorridorPrimitive: function(gene)
   {
     var geomInstance = null;
     var primitive = null;
-    
+
     var latLng = GLOBE.MAP.getCameraPosition();
     var width = gene.width * latLng[2] / 600;
-    
+
     // 【 IE11 】
     if(gene.isIE){
       // Primitiveとして追加する
@@ -17929,7 +17905,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
   {
     GLOBE.VectorLayer.prototype.initialize.call(this, map,options);
   },
-  
+
   _onLoad : function(kml)
   {
     if ( kml )
@@ -17940,12 +17916,12 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
     {
       kml = this._originalData;
     }
-    
+
     //try{
       //var id = getRandomStr();
       var latArray = [];
       var lonArray = [];
-      
+
       // いったんdataSource追加
       this._dataSource = new Cesium.KmlDataSource({
         camera: this._map.viewer.scene.camera,
@@ -17955,40 +17931,40 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
       // 高さ情報があるかどうか
       this._depthFlag = (kml.indexOf("<altitudeMode>") >=0 )? true : false;
       this._kml = $.parseXML(kml);
-      
+
       // 高さ情報がある場合は倍率を適用
       var result = {};
       this._kml = ( this._depthFlag ? GLOBE.MAP.applyHeightPowerToKML(this._kml, result) : this._kml );
       this._depthFlag = (!result.depthFlag ? false : this._depthFlag);
-      
+
       this._dataSource.load(this._kml).then( MA.bind( this._onKMLParse, this ) );
-      
-      
+
+
     //}
     //catch(e){
     //}
-    
-    
+
+
   },
-  
+
   _onKMLParse : function(dataSource)
   {
     this._dataSource = dataSource;
     this._draw( this._dataSource );
   },
-  
+
   _draw : function(dataSource)
   {
     var id = this._uniqueId;
     var latArray = [];
     var lonArray = [];
-    
+
     //try{
       // 高さ情報がある場合はそのままentityとして描画----------------
       if(this._depthFlag)
       {
         GLOBE.MAP.initKmlDataSource(dataSource);
-        
+
         if ( GSI.GLOBALS.layerTreeDialog._userControlStarted )
         {
           this._map.viewer.flyTo(dataSource, {
@@ -18001,10 +17977,10 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
       {
       // 高さ情報がない場合はentityをprimitiveに変換して描画---------
         var entities = dataSource._entityCollection.values;
-        
+
         for(var i=0; i<entities.length; i++){
           entities[i].show = false;  // いったん非表示にする
-          
+
           if(entities[i]._children.length > 0){
             for(var j=0; j<entities[i]._children.length; j++){
               var arrayList = this._convertEntityToPrimitive(entities[i]._children[j], id);
@@ -18019,7 +17995,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         }
         // dataSource削除
         this._map.viewer.dataSources.remove(dataSource);
-        
+
         if ( GSI.GLOBALS.layerTreeDialog._userControlStarted )
         {
           // ズーム
@@ -18046,9 +18022,9 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
     //}
     //catch(e){
     //}
-    
+
   },
-  
+
   _convertEntityToPrimitive :function(entity, id)
   {
     var isIE = GSI.Utils.Browser.ie;
@@ -18060,23 +18036,23 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
     var name        = (entity._name)? entity._name : "名称なし";
     var description = (entity._description)? entity._description._value : "";
       description = $("<div/>").html(description).find("div").html();
-    
+
     var label = "";
-    
+
     // ポイント(アイコン)-----------------
     if(entity._billboard != undefined){
       var position    = entity._position._value;
       var imageURL    = entity._billboard._image._value;
-      
+
       // 緯度経度を配列に入れる
       var cartographic = ellipsoid.cartesianToCartographic(position);
       var lon = Cesium.Math.toDegrees(cartographic.longitude);
       var lat = Cesium.Math.toDegrees(cartographic.latitude);
       lonArray.push(lon);
       latArray.push(lat);
-      
+
       GLOBE.MAP.addSingleImageryLayer(id, name, position, imageURL);
-      
+
       if ( GLOBE.MAP.isDirectionIcon(imageURL) )
       {
         GLOBE.MAP.addImagePrimitive({
@@ -18103,7 +18079,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
           scene: this._map.viewer.scene
         });
         this._billboardCollection.add(billboardCollection);
-        
+
         var billboards = this._getPrimitivePointIcon(position, imageURL, label);
         for(var j=0; j<billboards.length; j++){
           var billboard = billboardCollection.add(billboards[j]);
@@ -18116,7 +18092,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
               }
         }
       }
-      
+
     // ポリゴン(円含む)----------------------
     }else if(entity._polygon != undefined){
       var primitiveArray = [];
@@ -18134,7 +18110,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         lonArray.push(lon);
         latArray.push(lat);
       }
-      
+
       // ポリゴン
       // 【 IE11 】
       if(isIE){
@@ -18149,7 +18125,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
           })
         });
         primitiveArray.push(primitive);
-        
+
       // 【 IE11以外 】
       }else{
         // ポリゴンをGroundPrimitiveとして追加する
@@ -18159,7 +18135,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         });
         primitiveArray.push(groundPrimitive);
       }
-      
+
       // 枠線をPrimitiveとして追加する
       var gene = {
         kind: "corridor",
@@ -18175,7 +18151,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         var linePrimitive = this.createCorridorPrimitive(gene);
         primitiveArray.push(linePrimitive);
       }
-      
+
       for(var j=0; j<primitiveArray.length; j++){
         var primitive = primitiveArray[j];
           primitive["description"] = description;
@@ -18183,7 +18159,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
           primitive._defaultColor = color;
         this._map.viewer.scene.primitives.add(primitive);
         primitive.show =this._visible;
-        
+
         this._primitives.push( primitive );
       }
 
@@ -18201,7 +18177,7 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         lonArray.push(lon);
         latArray.push(lat);
       }
-      
+
       var gene = {
         kind: "corridor",
         type: "KmlLayer",
@@ -18213,29 +18189,29 @@ GLOBE.KMLLayer = GLOBE.VectorLayer.extend( {
         isIE: isIE
       };
       var primitive = this.createCorridorPrimitive(gene);
-      
+
       primitive._defaultColor = color;
       primitive["description"] = description;
       primitive["name"]        = name;
       this._map.viewer.scene.primitives.add(primitive);
       primitive.show =this._visible;
       this._primitives.push( primitive );
-      
+
     }
-    
+
     return {
       "lon" : lonArray,
       "lat" : latArray
     }
   },
-  
-  
+
+
   _onLoadError : function(text)
   {
-    
+
   }
-  
-  
+
+
 } );
 
 
@@ -18248,7 +18224,7 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
   {
     GLOBE.VectorLayer.prototype.initialize.call(this, map,options);
   },
-  
+
   _onLoad : function(geojson)
   {
     if ( geojson )
@@ -18259,7 +18235,7 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
     {
       geojson = this._originalData;
     }
-    
+
     //try{
       var latArray = [];
       var lonArray = [];
@@ -18269,26 +18245,26 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
     //}
     //catch(e){
     //}
-    
-    
+
+
   },
-  
-  
+
+
   _draw : function(geojson)
   {
     var latArray = [];
     var lonArray = [];
-    
+
     if ( !geojson )
     {
       geojson = this._geoJSON;
     }
-    
+
     var id     = this._uniqueId;
     var len    = geojson.features.length;
     var viewer = this._map.viewer;
     var isIE = GSI.Utils.Browser.ie;
-    
+
     for(var i=0; i<len; i++){
       var primitiveArray = [];
 
@@ -18298,13 +18274,13 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
       var description = this._getEntityDescription(feature.properties);
       var geomType    = feature.geometry.type;
       var markerType = feature.properties._markerType;
-      
+
       var html = (markerType == 'DivIcon' ? feature.properties._html : name);
       var ellipsoid = viewer.scene.globe.ellipsoid;
-      
+
       var depthFlag = GLOBE.MAP.is3dGeojson(coord);
-      
-      
+
+
       // ライン用のデータ
       var gene = {
         kind: "corridor",
@@ -18317,12 +18293,12 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
         width: null,
         isIE: isIE
       };
-      
+
       // ポイント(アイコン,TEXT)-------------
       if(geomType == "Point" && (markerType == "Icon" || markerType == "DivIcon")){
         var position    = new Cesium.Cartesian3.fromDegrees(coord[0], coord[1], (coord.length>=3 ? coord[2] : 0), ellipsoid);
         var imageURL    = "";
-        
+
         if (markerType == "DivIcon"){
           "image/system/icon_nothing.png";
         }
@@ -18337,9 +18313,9 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
 
         lonArray.push(coord[0]);
         latArray.push(coord[1]);
-        
+
         GLOBE.MAP.addSingleImageryLayer(id, name, position, imageURL);
-        
+
         if ( GLOBE.MAP.isDirectionIcon(imageURL) )
         {
           GLOBE.MAP.addImagePrimitive({
@@ -18362,18 +18338,18 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
           {
             this._billboardCollection = new Cesium.PrimitiveCollection();
             viewer.scene.primitives.add(this._billboardCollection);
-          
+
           }
           var billboardCollection = new Cesium.BillboardCollection({
             scene: viewer.scene
           });
           this._billboardCollection.add(billboardCollection);
-          
+
           var billboards = (markerType == "DivIcon" ?
             GLOBE.MAP.getPrimitiveDiv_Icon(position, html, depthFlag, feature.properties._iconSize, feature.properties._iconAnchor) :
             GLOBE.MAP.getPrimitivePoint_Icon(position, imageURL, name, depthFlag, feature.properties._iconSize, feature.properties._iconAnchor)
           );
-          
+
           for(var j=0; j<billboards.length; j++){
             var billboard = billboardCollection.add(billboards[j]);
               billboard.show = this._visible;
@@ -18420,11 +18396,11 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
           // アウトラインをPrimitiveとして追加する
           if(feature.properties._opacity > 0){
             var positions = this._getCirclePosition(position, radius);
-            
+
             gene.position = positions;
             gene.color    = strokeColor;
             gene.width    = strokeWidth;
-            
+
             var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
           }
         // 【 IE以外 】
@@ -18437,20 +18413,20 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
           primitive._defaultColor = fillColor;
           primitiveArray.push(primitive);
         }
-        
+
         // 枠線をPrimitiveとして追加する
         if(feature.properties._opacity > 0){
           var positions = this._getCirclePosition(position, radius);
-          
+
           gene.position = positions;
           gene.color    = strokeColor;
           gene.width    = strokeWidth;
-          
+
           var linePrimitive = ( isIE || depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
           linePrimitive._defaultColor = strokeColor;
           primitiveArray.push(linePrimitive);
         }
-        
+
       // ラインストリング-------------------
       }else if(feature.geometry.type == "LineString"){
         var position = this._getPosition(coord, depthFlag);
@@ -18466,7 +18442,7 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
         gene.position = position;
         gene.color    = color;
         gene.width    = width;
-        
+
         var linePrimitive = ( depthFlag ? this.createPolylinePrimitive(gene) : this.createCorridorPrimitive(gene) );
         linePrimitive._defaultColor = color;
         primitiveArray.push(linePrimitive);
@@ -18510,12 +18486,12 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
         }
         primitive._defaultColor = color;
         primitiveArray.push(primitive);
-        
+
         // 枠線をPrimitiveとして追加する
         gene.position = hierarchy.positions;
         gene.color    = strokeColor;
         gene.width    = strokeWidth;
-        
+
         var linePrimitive = ( depthFlag ? GLOBE.MAP.createPolylinePrimitive(gene) : GLOBE.MAP.createCorridorPrimitive(gene) );
         linePrimitive._defaultColor = strokeColor;
         primitiveArray.push(linePrimitive);
@@ -18532,9 +18508,9 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
           this._primitives.push( primitive );
         }
       }
-      
+
     }
-    
+
     if ( GSI.GLOBALS.layerTreeDialog._userControlStarted )
     {
       /*
@@ -18556,13 +18532,13 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
       });
       */
     }
-    
+
     this._layerId = id;
   },
-  
+
   _getEntityDescription : function (prop){
     var str = "";
-    
+
     // テーブル記述の場合
     if(prop.description == undefined){
       for(var key in prop){
@@ -18689,9 +18665,9 @@ GLOBE.GeoJSONLayer = GLOBE.VectorLayer.extend( {
   },
   _onLoadError : function(text)
   {
-    
+
   }
-  
+
 } );
 
 /************************************************************************
@@ -18799,12 +18775,12 @@ GSI.OnOffSwitch = MA.Class.extend( {
       this.input.attr( {"checked": false} );
       this.input.prop( {"checked": false} );
     }
-    
+
     if ( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8 )
     {
       this._initCheckBoxIE8();
     }
-    
+
     return this.input.is( ':checked' );
   }
 });
@@ -18911,12 +18887,12 @@ GSI.ToggleSwitch = MA.Class.extend( {
       this.input.attr( {"checked": false} );
       this.input.prop( {"checked": false} );
     }
-    
+
     if ( GSI.Utils.Browser.ie && GSI.Utils.Browser.version <= 8 )
     {
       this._initCheckBoxIE8();
     }
-    
+
     return this.input.is( ':checked' );
   }
 });
@@ -18938,13 +18914,13 @@ GSI.ToggleSwitch = MA.Class.extend( {
 GLOBE.VectorTileLayer = MA.Class.extend( {
 
   options : {
-    
+
   },
   _visible : true,
   _map : null,
   _styleLoaded : false,
   _layerId : null,
-  
+
   initialize : function(map,options)
   {
     this._visible = true;
@@ -18953,18 +18929,18 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     this._styleLoad();
     GLOBE.VectorTileLayer._add( map, this );
   },
-  
+
   _styleLoad : function()
   {
     var styleUrl =this.options.styleurl;
-    
+
     if ( styleUrl && styleUrl != '' )
       styleUrl = styleUrl;
     else
       styleUrl = this.options.url.replace(/\/\{z\}.*/,"") + '/style.js';
-    
+
     var data = null;
-    
+
     this._styleLoading = true;
     this._styleAjax = $.ajax({
       type: "GET",
@@ -18977,7 +18953,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
 
     });
   },
-  
+
   _defaultLoadStyle : function()
   {
     var styleUrl = './js/style.js';
@@ -18995,7 +18971,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       async : true
     });
   },
-  
+
   _onStyleLoad : function(result)
   {
     try
@@ -19012,12 +18988,12 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         return 15;
       };
       data = eval( "(" + data + ")" );
-      
+
       this.options = $.extend( {}, data.options, this.options );
       //this.options = $.extend( {}, this.options, data.options );
-      
+
       if ( data.geojsonOptions ) this.geojsonOptions =  data.geojsonOptions;
-      for ( var i=0; i<this._tiles.length; i++ ) 
+      for ( var i=0; i<this._tiles.length; i++ )
       {
         var tile = this._tiles[i];
         if ( !tile.geoJSON ) continue;
@@ -19026,21 +19002,21 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
           tile.geoJSON[i].options = this.geojsonOptions;
         }
       }
-      
+
     }
     catch( e ){}
-    
-    
+
+
     this._styleLoading = false;
     this._styleLoaded = true;
     this._load();
   },
-  
+
   getZoomLevel : function()
   {
         var tilesToRender = this._map.viewer.scene.globe._surface._tilesToRender;
   },
-  
+
   _load : function()
   {
     this.options.proxy = {
@@ -19052,14 +19028,14 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     this.options.geojsonOptions = this.geojsonOptions;
     this.options.drawPoint = MA.bind( this._onDrawPoint, this  );
     this._provider = new Cesium.JapanGSIVectorTileProvider(this.options);
-    
+
     this._layer = this._map.viewer.imageryLayers.addImageryProvider(
       this._provider
     );
     this._layer.show = this._visible;
-    
+
   },
-  
+
   _featureToDescription : function( feature )
   {
     if ( this.geojsonOptions  )
@@ -19093,9 +19069,9 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     for( var key in feature.properties )
     {
       if ( key.charAt( 0 ) == "_" || key == "name" ) continue;
-      
+
       var tr = $("<tr>");
-      
+
       if ( key.match(/^(name|description|iframe)$/) )
       {
         $("<td>").attr("colspan", 2).html(feature.properties[key]).appendTo(tr);
@@ -19107,23 +19083,23 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       }
       trArr.push( tr );
     }
-    
+
     if ( trArr.length > 0 )
     {
       var table = $("<table>");
       var tbody = $("<tbody>");
-      
+
       for( var i=0; i<trArr.length; i++ )
       {
         tbody.append( trArr[i] );
       }
-      
+
       table.append(tbody);
       var div = $("<div>").append(table);
-      
+
       result =div.html();
     }
-    
+
     return result;
   },
   _remove : function()
@@ -19134,13 +19110,13 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     this._map.viewer.scene.primitives.remove( this._bollboardCollection );
     this._map.viewer.scene.primitives.remove( this._polylineCollection );
     this._map.viewer.scene.primitives.remove( this._corridorCollection );
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.removeSingleImageryLayer(this._layerId);
       GLOBE.MAP.removeImagePrimitive(this._layerId);
     }
-    
+
     this._provider = null;
     this._layer = null;
     this._bollboardCollection = null;
@@ -19151,7 +19127,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
   setAlpha : function(alpha)
   {
     if ( !this._layer ) return;
-    
+
     if ( this._bollboardCollection )
     {
       for(var j=0; j<this._bollboardCollection.length; j++){
@@ -19167,7 +19143,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         }
       }
     }
-    
+
     if ( this._polylineCollection )
     {
       for(var j=0; j<this._polylineCollection.length; j++){
@@ -19175,7 +19151,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         //this._polylineCollection.get(j).color = new Cesium.Color(color.red, color.green, color.blue, alpha);
       }
     }
-    
+
     if ( this._corridorCollection )
     {
       for(var j=0; j<this._corridorCollection.length; j++){
@@ -19190,25 +19166,25 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         }
       }
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.alphaSingleImageryLayer(this._layerId, alpha);
       GLOBE.MAP.alphaImagePrimitive(this._layerId, alpha);
     }
-    
+
     this._layer.alpha = alpha;
   },
   _setVisible : function( viewer, visible )
   {
     this._visible = visible;
-    
+
     var zoom = this._map.getCurrentZoom();
     var isVisible = (( this.options.minZoom ? this.options.minZoom : 0 ) <= zoom );
-    
+
     if ( !this._visible ) isVisible= false;
     if ( !this._layer ) return;
-    
+
     if ( this._bollboardCollection )
     {
       for(var j=0; j<this._bollboardCollection.length; j++){
@@ -19216,31 +19192,31 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         this._bollboardCollection.get(j).show = isVisible;
       }
     }
-    
+
     if ( this._polylineCollection )
     {
       for(var j=0; j<this._polylineCollection.length; j++){
         this._polylineCollection.get(j).show = isVisible;
       }
     }
-    
+
     if ( this._corridorCollection )
     {
       for(var j=0; j<this._corridorCollection.length; j++){
         this._corridorCollection.get(j).show = isVisible;
       }
     }
-    
+
     if ( this._layerId )
     {
       GLOBE.MAP.showSingleImageryLayer(this._layerId, visible);
       GLOBE.MAP.showImagePrimitive(this._layerId, visible);
     }
-    
+
     this._layer.show = this._visible;
   },
-  
-  
+
+
   _onDrawPoint : function(feature, info, tileBounds)
   {
     if( !this._bollboardCollection )
@@ -19251,19 +19227,19 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         //this._viewer.scene.primitives.add(LabelCollection);
       this._map.viewer.scene.primitives.add(this._bollboardCollection);
     }
-    
+
     if ( !this._polylineCollection )
     {
       this._polylineCollection = new Cesium.PolylineCollection();
       this._map.viewer.scene.primitives.add(this._polylineCollection);
     }
-    
+
     if ( !this._corridorCollection )
     {
       this._corridorCollection = new Cesium.PrimitiveCollection();
       this._map.viewer.scene.primitives.add(this._corridorCollection);
     }
-    
+
     if( feature.geometry && feature.geometry.coordinates && feature.geometry.coordinates.length >=2 )
     {
       var latLng = {
@@ -19271,16 +19247,16 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         lng:feature.geometry.coordinates[0]
       };
       var layer= null;
-      
+
       if ( !GSI.GLOBALS.map ) GSI.GLOBALS.map = {};
       GSI.GLOBALS.map._z = info.z;
       GSI.GLOBALS.map.getZoom = function() {
         return this._z;
       };
-      
+
       if ( info.geojsonOptions && info.geojsonOptions.pointToLayer )
         layer = info.geojsonOptions.pointToLayer( feature, latLng );
-      
+
       if ( layer && layer._layers )
       {
         for( var i=0; i<layer._layers.length; i++ )
@@ -19288,17 +19264,17 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       }else
         this._drawPoint( feature, info, tileBounds, layer, latLng );
     }
-    
+
   },
-  
+
   _drawPoint : function( feature, info, tileBounds, layer, latLng )
   {
-  
+
     var size = {
       w : 12,
       h : 12
     };
-    
+
     var style = {
       stroke : true,
       weight : 2,
@@ -19308,7 +19284,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       fillColor:'#0033ff',
       fillOpacity : 0.1
     };
-    
+
     for( var key in feature.properties )
     {
       if ( key.charAt(0) == "_" )
@@ -19316,16 +19292,16 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         style[key.substr(1)] = feature.properties[key];
       }
     }
-    
-    
+
+
     var description = "test";
-    
+
     var zoom = this._map.getCurrentZoom();
     var isVisible = (( this.options.minZoom ? this.options.minZoom : 0 ) <= zoom );
-    
+
     if ( !this._visible ) isVisible= false;
     var canLoadMarker = false;
-    
+
     if ( layer )
     {
       if ( ( layer instanceof L.CircleMarker ) )
@@ -19338,18 +19314,18 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       else if ( layer instanceof L.Rectangle  )
       {
         var rect = Cesium.Rectangle.fromDegrees(
-          layer._bounds._latlngs[0][1], layer._bounds._latlngs[0][0], 
+          layer._bounds._latlngs[0][1], layer._bounds._latlngs[0][0],
           layer._bounds._latlngs[1][1], layer._bounds._latlngs[1][0]);
         var material = Cesium.Material.fromType('Color');
         var color = Cesium.Color.fromCssColorString(layer.options.color);
         color.alpha = layer.options.opacity;
         material.uniforms.color = color;//new Cesium.Color(1.0, 1.0, 0.0, style.opacity);
-        
+
         // Corridorで実装
         var primitive = this.createCorridorPrimitive(layer, color, isVisible);
         this._corridorCollection.add(primitive);
-        
-        
+
+
         /*
         // Polylineで実装
         this._polylineCollection.add({
@@ -19364,9 +19340,9 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
           _color : color
         });
         */
-        
-        
-        
+
+
+
         //this._divtIconToBillboardCollection( isVisible, latLng, layer, style,feature );
         /*
         this._map.viewer.scene.groundPrimitives.add(new Cesium.GroundPrimitive({
@@ -19384,9 +19360,9 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         }));
         */
         canLoadMarker = true;
-        
+
       }
-      
+
       else if ( ( layer instanceof L.Marker ) && ( layer.options.icon instanceof L.DivIcon ) )
       {
         this._divtIconToBillboardCollection( isVisible, latLng, layer, style,feature );
@@ -19396,7 +19372,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       //else if ( layer.options && layer.options.icon)
       {
         var iconOptions =  layer.options.icon.options;
-          
+
         if ( iconOptions.iconUrl && iconOptions.iconUrl != "")
         {
           if ( iconOptions.iconSize )
@@ -19405,11 +19381,11 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
             size.h = iconOptions.iconSize[1];
             style.radius = size.w / 2;
           }
-          
+
           if ( !feature.__firstLoaded )
           {
             feature.__firstLoaded = true;
-            
+
             var img = new Image();
             img.crossOrigin = "anonymous";
             img.width = size.w;
@@ -19421,13 +19397,13 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
             img.onload = function() {
               this._this._imageToBillboardCollection( isVisible, this._latLng, this, this._size, feature );
             };
-            
+
             img.onerror= function() {
               this._this._defaultIconToBillboardCollection( isVisible, this._latLng, this._size, feature );
             };
             img.src = GSI.Utils.convertIconURL(iconOptions.iconUrl);
           }
-          
+
           canLoadMarker = true;
         }
         else if ( iconOptions.html && iconOptions.html != '' )
@@ -19439,9 +19415,9 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
             // 図形
             size.w = div.outerWidth();
             size.h = div.outerHeight();
-            
+
             var fillColor = div.css("background-color");
-            
+
             if ( !fillColor )
             {
               fillColor = div.css("background");
@@ -19449,18 +19425,18 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
             var canvasColor = this._styleColor2CanvasColor( fillColor, style.color );
             style.color = canvasColor.color;
             style.opacity = canvasColor.opacity;
-            
+
             var radius = div.css("border-radius");
           }
           else
           {
-            
+
           }
           div.remove();
         }
-        
+
       }
-      
+
     }
     else
     {
@@ -19472,8 +19448,8 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
           size.h = feature.properties._iconSize[1];
           style.radius = size.w / 2;
         }
-        
-        
+
+
         var img = new Image();
         img.crossOrigin = "anonymous";
         img.width = size.w;
@@ -19485,32 +19461,32 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         img.onload = function() {
           this._this._imageToBillboardCollection( isVisible, this._latLng, this, this._size, feature );
         };
-        
+
         img.onerror= function() {
           this._this._defaultIconToBillboardCollection( isVisible, this._latLng, this._size, this._style, feature );
         };
         img.src = GSI.Utils.convertIconURL(feature.properties._iconUrl);
-        
+
         canLoadMarker = true;
       }
-      
+
     }
-    
+
     if ( !canLoadMarker )
     {
       this._defaultIconToBillboardCollection( isVisible, latLng, size, style,feature );
-      
+
     }
-    
+
   },
-  
+
   createCorridorPrimitive : function( data, color, show )
   {
     //_corridorCollection
     var visible = (show ? true : false);
     var latLng = GLOBE.MAP.getCameraPosition();
     var width = (data.options.weight ? data.options.weight * latLng[2] / 600 : 0);
-    
+
     var primitive = new Cesium.GroundPrimitive({
       geometryInstances : [
         new Cesium.GeometryInstance({
@@ -19535,7 +19511,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     primitive.show = visible;
     return primitive;
   },
-  
+
   _styleColor2CanvasColor : function( src, defaultColor )
   {
     var reg = /rgba.*\((.+?)\)/g;
@@ -19549,9 +19525,9 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     if ( match )
     {
       var s = RegExp.$1;
-      
+
       var parts = s.split( "," );
-      
+
       if ( parts.length >3 )
       {
         var r = parseInt( $.trim(parts[0]) );
@@ -19573,14 +19549,14 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       opacity : opacity
     };
   },
-  
+
   _defaultIconToBillboardCollection : function( isVisible, latLng, size, style,feature )
   {
     if ( !this._bollboardCollection ) return;
-    
+
     size.w += (style.weight ? style.weight * 2 : 0);
     size.h += (style.weight ? style.weight * 2 : 0);
-    
+
     var canvas = document.createElement("canvas");
     canvas.width = size.w + (style.weight ? style.weight : 0);
     canvas.height = size.h + (style.weight ? style.weight : 0);
@@ -19625,13 +19601,13 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         //scaleByDistance : new Cesium.NearFarScalar(1.0e2, 1.5, 1.0e5, 0.0),
         translucencyByDistance : new Cesium.NearFarScalar(1.5e2, 1.0, 8.0e6, 0.0),
       verticalOrigin : Cesium.VerticalOrigin.CENTER
-      
+
     });
     icon._feature = feature;
     icon._ownerLayer = this;
     icon.show = isVisible;
   },
-  
+
   _measureText : function( text, font )
   {
     var ctx = null;
@@ -19648,17 +19624,17 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       //this._textMeasureCanvas
       ctx.clearRect(0, 0, 100, 100);
     }
-    
+
     ctx.font = font;
     ctx.fillStyle  = "rgb(0, 0, 0)";
     var result = {
       w:ctx.measureText( text).width, h:0
     };
-    
+
     ctx.textAligin  = 'left';
     ctx.textBaseline  = 'top';
     ctx.fillText( text, 0, 0);
-    
+
     var pixels = ctx.getImageData(0, 0, 100, 100);
     var data = pixels.data;
     var currentRow = -1;
@@ -19676,19 +19652,19 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     result.h += 2;
     return result;
   },
-  
+
   _divtIconToBillboardCollection : function( isVisible, latLng, layer, style,feature )
   {
     if ( !this._bollboardCollection ) return;
     var canvas = document.createElement("canvas");
-    
-    
-    
+
+
+
     var html = layer.options.icon.options.html;
     var radius = 0;
     var element = $( "<div>" ).html( html );
     element = ( element.children().length > 0 ? $(element.children()[0]) : element );
-    
+
     var text = $.trim(element.text());
     var background = null;
     var color = 'rgb(0, 0, 0)';
@@ -19703,37 +19679,37 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
     };
     var horizontalOrigin = Cesium.HorizontalOrigin.CENTER  ;
     var verticalOrigin = Cesium.VerticalOrigin.CENTER ;
-    
-    
+
+
     if ( element.css( "width" ) || element.css( "width" ) == 0 )
       size.w = parseInt(element.css( "width" ));
     if ( element.css( "height" ) || element.css( "height" ) == 0 )
       size.h = parseInt( element.css( "height" ) );
     if ( element.css( "border-radius" ) )
       radius = parseInt( element.css( "border-radius" ) );
-    
+
     if ( element.css( "background-color" ) )
       background = element.css( "background-color" ) ;
-    
+
     if ( !background && element.css( "background" ) )
       background =  element.css( "background" );
-    
+
     if ( background )
       background = this._styleColor2CanvasColor( background );
-    
+
     if ( element.css( "opacity" ) || element.css( "opacity" ) == 0 )
       opacity = parseInt(element.css( "opacity" ) );
-    
+
     if ( element.css( "color" ) )
       color = this._styleColor2CanvasColor( element.css( "color" ), color );
     if ( element.css( "font-size" ) )
       fontSize = element.css( "font-size" );
-    
+
     if ( element.css( "font-weight" ) )
       fontWeight = element.css( "font-weight" );
     fontSize = ( parseInt( fontSize ) * 1.5 ) + "px"
-    
-    
+
+
     var textShadow = element.css("text-shadow") || element.css("-ms-text-shadow") || '';
     if ( textShadow )
     {
@@ -19746,7 +19722,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       };
     }
     else textShadow = '';
-    
+
     if ( size.w <= 0 ) size.w = 3;
     if ( size.h <= 0 ) size.h = 3;
     if ( text == "" )
@@ -19755,7 +19731,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       canvas.height = size.h;
       var ctx = canvas.getContext('2d');
       ctx.beginPath();
-      
+
       if ( radius > 0 )
       {
         if ( radius >= size.w /2 )
@@ -19793,29 +19769,29 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       ctx.fill();
       ctx.restore();
       ctx.fillStyle="blue";
-      
+
     }
     else
     {
-      
+
       //ctx.fillStyle = "red";
       //ctx.fillText("赤色でfillText", 10, 75);
-      
+
       var font = ( fontWeight != "" ? fontWeight +" " : "") +fontSize +" '" + fontFamily +"'";
-      
+
       var textSize = this._measureText(text, font);
-      
+
       var ctx = canvas.getContext('2d');
       ctx.clearRect(0,0, canvas.width, canvas.height );
       ctx.beginPath();
-      
+
       size.w = textSize.w+(radius ? radius : 2 );
       size.h = textSize.h+(radius ? radius : 4 );
       canvas.width = size.w;
       canvas.height = size.h ;
-      
+
       ctx.font = font;
-      
+
       if ( background )
       {
         ctx.save();
@@ -19828,10 +19804,10 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         ctx.fill();
         ctx.restore();
       }
-      
+
       //ctx.fillStyle="red";
       //ctx.fillRect( 0, 0, size.w, size.h );
-      
+
       ctx.textAlign  = 'center';
       ctx.textBaseline  = 'middle';
       if ( textShadow && textShadow != '' )
@@ -19840,27 +19816,27 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
         ctx.strokeStyle = textShadow;
         ctx.strokeText(text, size.w/2, size.h/2 );
       }
-      
+
       ctx.fillStyle= ( color.color ? color.color : color );
       ctx.fillText( text, size.w/2, size.h/2 );
-      
-      
-      
-      
+
+
+
+
       if ( layer.options.icon.options.iconAnchor && layer.options.icon.options.iconAnchor.length >= 2 )
       {
         var anchor = {
           left : size.w/2,
           top : size.h/2
         };
-        
+
         margin.left = anchor.left - parseInt(layer.options.icon.options.iconAnchor[0]);
         margin.top = anchor.top - parseInt(layer.options.icon.options.iconAnchor[1]);
       }
     }
-    
-    
-    
+
+
+
     var icon = this._bollboardCollection.add({
       position : Cesium.Cartesian3.fromDegrees(latLng.lng, latLng.lat, 0),
         image : canvas.toDataURL(),
@@ -19870,36 +19846,36 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       pixelOffset  : new Cesium.Cartesian2( margin.left, margin.top ),
         //scaleByDistance : new Cesium.NearFarScalar(1.0e2, 1.5, 1.0e5, 0.0),
         translucencyByDistance : new Cesium.NearFarScalar(1.5e2, 1.0, 8.0e6, 0.0)
-      
+
     });
     icon.horizontalOrigin = horizontalOrigin;
     icon.verticalOrigin = verticalOrigin;
     icon._feature = feature;
     icon._ownerLayer = this;
     icon._originalLayer = layer;
-    
+
     icon.show = isVisible;
   },
-  
+
   _imageToBillboardCollection : function( isVisible, latLng, img,size, feature )
   {
     if ( !this._bollboardCollection ) return;
     var canvas = document.createElement("canvas");
     canvas.width = size.w;
     canvas.height = size.h;
-    
-    
+
+
     var ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0,0, size.w, size.h );
-    
-    
+
+
     var position = Cesium.Cartesian3.fromDegrees(latLng.lng, latLng.lat, 0);
     var imageURL = canvas.toDataURL();
-    
-    
+
+
     this._layerId = ( this._layerId ? this._layerId : GLOBE.MAP.getNewId() );
     GLOBE.MAP.addSingleImageryLayer(this._layerId, feature.name, position, imageURL);
-    
+
     if ( GLOBE.MAP.isDirectionIcon(feature.properties._iconUrl) )
     {
       GLOBE.MAP.addImagePrimitive({
@@ -19932,7 +19908,7 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
       image.show = isVisible;
     }
   }
-  
+
 } );
 
 
@@ -19942,10 +19918,10 @@ GLOBE.VectorTileLayer = MA.Class.extend( {
 GLOBE.VectorTileLayer._remove = function(layer)
 {
   clearTimeout(layer._clearTimeout);
-  
+
   if ( !GLOBE.VectorTileLayer._layers  )
     GLOBE.VectorTileLayer._layers = [];
-  
+
   for( var i=0; i<GLOBE.VectorTileLayer._layers.length; i++ )
   {
     if ( GLOBE.VectorTileLayer._layers[i] == layer )
@@ -19954,43 +19930,43 @@ GLOBE.VectorTileLayer._remove = function(layer)
       break;
     }
   }
-  
-  
+
+
   if ( GLOBE.VectorTileLayer._layers.length <= 0 && GLOBE.VectorTileLayer._mouseEventHandler )
   {
     GLOBE.VectorTileLayer._mouseEventHandler.destroy();
     GLOBE.VectorTileLayer._mouseEventHandler = null;
   }
-  
+
   if ( GLOBE.VectorTileLayer._layers.length <= 0 && GLOBE.VectorTileLayer._moveEventHandler )
   {
     this._map.viewer.camera.moveEnd.removeEventListener(GLOBE.VectorTileLayer._moveEventHandler);
     GLOBE.VectorTileLayer._moveEventHandler = null;
   }
-  
+
   GLOBE.DIALOG.INFOBOX.hide();
 };
 
 GLOBE.VectorTileLayer._add = function(map, layer)
 {
   GLOBE.VectorTileLayer._map = map;
-  if ( !GLOBE.VectorTileLayer._layers ) 
+  if ( !GLOBE.VectorTileLayer._layers )
     GLOBE.VectorTileLayer._layers = [];
   GLOBE.VectorTileLayer._layers.push( layer );
-  
+
   if ( !GLOBE.VectorTileLayer._moveEventHandler )
   {
     GLOBE.VectorTileLayer._moveEventHandler = function() {
       var zoom = GLOBE.VectorTileLayer._map.getCurrentZoom();
       var beforeHeight = (layer._beforeHeight ? layer._beforeHeight : 0);
       var latLng = GLOBE.MAP.getCameraPosition();
-      
+
       for ( var layerNo = GLOBE.VectorTileLayer._layers.length-1; layerNo>=0; layerNo-- )
       {
         layer = GLOBE.VectorTileLayer._layers[layerNo];
         if ( !layer || !layer._visible ) continue;
         var minZoom = ( layer.options.minZoom ? layer.options.minZoom : 0 );
-        
+
         if ( layer._bollboardCollection )
         {
           for( var i=0; i<layer._bollboardCollection.length; i++ )
@@ -20011,13 +19987,13 @@ GLOBE.VectorTileLayer._add = function(map, layer)
           {
             layer._corridorCollection.get(i).show = ( zoom >= minZoom );
           }
-          
+
           // corridor再描画
           if ( Math.abs(beforeHeight - latLng[2]) > beforeHeight * 0.1 )
           {
             var removeList = [];
             var addList = [];
-            
+
             for( var i=0; i<layer._corridorCollection.length; i++ )
             {
               var primitive = layer._corridorCollection.get(i);
@@ -20028,7 +20004,7 @@ GLOBE.VectorTileLayer._add = function(map, layer)
                 removeList.push(primitive);
               }
             }
-            
+
             // 削除
             for ( var i=0; i<removeList.length; i++ )
             {
@@ -20048,17 +20024,17 @@ GLOBE.VectorTileLayer._add = function(map, layer)
     layer._clearTimeout = setInterval(GLOBE.VectorTileLayer._moveEventHandler, 1000);
   }
   if ( GLOBE.VectorTileLayer._mouseEventHandler ) return;
-  
-  
+
+
   GLOBE.VectorTileLayer._mouseEventHandler = new Cesium.ScreenSpaceEventHandler(map.viewer.scene.canvas);
   GLOBE.VectorTileLayer._mouseEventHandler.setInputAction(function(click) {
-    
+
     var layer = null;
     var originalLayer = null;
     var map = GLOBE.VectorTileLayer._map;
     var pickedObject = map.viewer.scene.pick(click.position);
     var feature = null;
-    
+
     if ( pickedObject && pickedObject.primitive._feature )
     {
       if ( pickedObject.primitive && pickedObject.primitive._feature )
@@ -20068,14 +20044,14 @@ GLOBE.VectorTileLayer._add = function(map, layer)
         originalLayer = pickedObject.primitive._originalLayer;
       }
     }
-    
+
     if ( !feature )
     {
       if ( !GLOBE.VectorTileLayer._layers ) return;
-      
+
       var ellipsoid = map.viewer.scene.globe.ellipsoid;
       var cartesian = map.viewer.scene.camera.pickEllipsoid(click.position,ellipsoid );
-      
+
       if (cartesian)
       {
         var cartographic = ellipsoid.cartesianToCartographic(cartesian);
@@ -20085,25 +20061,25 @@ GLOBE.VectorTileLayer._add = function(map, layer)
         {
           layer = GLOBE.VectorTileLayer._layers[layerNo];
           if ( !layer || !layer._visible ) continue;
-          
+
           var tilesToRender = map.viewer.scene.globe._surface._tilesToRender;
           //this.getZoomLevel();
           if ( Cesium.defined( tilesToRender ) )
           {
             var levels = {};
-            
+
             for( var i=0; i<tilesToRender.length; i++ )
             {
-              
+
               if ( tilesToRender[i]._level < 18 )
                 levels[ tilesToRender[i]._level + '' ] = true;
               else
                 levels[ '18' ] = true;
             }
-            
+
             for( var level in levels )
             {
-              feature = layer._provider.pick( { 
+              feature = layer._provider.pick( {
                 lat:lat,
                 lng :lng ,
                 level : parseInt(level ) //tilesToRender[i]._level
@@ -20111,14 +20087,14 @@ GLOBE.VectorTileLayer._add = function(map, layer)
               if ( feature ) break;
             }
           }
-          
+
           if ( feature ) break;
         }
-        
+
       }
-    
+
     }
-    
+
     // featureからdescription生成
     var len = map.viewer.dataSources.length;
     for(var i=len-1; i>=0; i--){
@@ -20131,7 +20107,7 @@ GLOBE.VectorTileLayer._add = function(map, layer)
     {
       var description = ( originalLayer && originalLayer._popupText ? originalLayer._popupText :
         layer._featureToDescription(feature) );
-      
+
       if ( description && description != "")
       {
         GLOBE.MAP.clearPinLayers("INFO");
@@ -20142,7 +20118,7 @@ GLOBE.VectorTileLayer._add = function(map, layer)
           var lng = latLng[1];
           GLOBE.MAP.pindrop(lng, lat, "INFO", Cesium.Color.BLACK);
         }
-        
+
         var box = GLOBE.DIALOG.INFOBOX;
         //box.setDialogHeader(layer.options.title);
         box.setDialogHeader(feature.properties.name);
@@ -20153,7 +20129,7 @@ GLOBE.VectorTileLayer._add = function(map, layer)
         box.show();
       }
     }
-    
+
   }, Cesium.ScreenSpaceEventType.LEFT_CLICK );
 } ;
 
@@ -20168,7 +20144,7 @@ L.LatLng = function (lat, lng) {
   this.lng = lng;
 
 };
-L.latLng = function (a, b) { 
+L.latLng = function (a, b) {
   if (a instanceof L.LatLng) {
     return a;
   }
@@ -20192,7 +20168,7 @@ L.latLng = function (a, b) {
 };
 
 L.Marker = MA.Class.extend( {
-  
+
   options : {},
   _latlng : null,
   _popupText : "",
@@ -20200,7 +20176,7 @@ L.Marker = MA.Class.extend( {
     MA.setOptions(this, options);
     this._latlng = L.latLng(latlng);
   },
-  
+
   bindPopup  : function(s)
   {
     this._popupText= s;
@@ -20214,7 +20190,7 @@ L.marker = function (latlng, options) {
 
 
 L.Icon = MA.Class.extend( {
-  
+
   options: {
     className: ''
   },
@@ -20230,7 +20206,7 @@ L.icon = function (options) {
 
 
 L.DivIcon = L.Icon.extend( {
-  
+
 } );
 
 L.divIcon = function (options) {
@@ -20248,7 +20224,7 @@ L.latLngBounds = function (southWest, northEast) {
 };
 
 L.Rectangle = MA.Class.extend( {
-  
+
   options : {},
   _bounds : null,
   initialize: function (bounds, options) {
@@ -20263,7 +20239,7 @@ L.rectangle = function (bounds, options) {
 
 
 L.Circle = MA.Class.extend( {
-  
+
   options : {},
   _latlng : null,
   _radius : 5,
@@ -20284,7 +20260,7 @@ L.circle = function (latlng, options) {
 };
 
 L.CircleMarker = MA.Class.extend( {
-  
+
   options : {},
   _latlng : null,
   _radius : 5,
@@ -20305,7 +20281,7 @@ L.circleMarker = function (latlng, options) {
 };
 
 L.FeatureGroup = MA.Class.extend( {
-  
+
   initialize: function (layers) {
     this._layers = [];
 
@@ -20676,7 +20652,7 @@ GSI.EvacuationManager = MA.Class.extend({
   accept : function()
   {
     var d;
-    
+
     if (this._queryParams.params["disp"])
     {
       d = this._queryParams.params["disp"];
@@ -20748,7 +20724,7 @@ GSI.EvacuationManager = MA.Class.extend({
             }
             dct++;
           }
-        }			
+        }
       }
     }
   },
@@ -20847,7 +20823,7 @@ GSI.EvacDialog = MA.Control.extend( {
     this._container = MA.DomUtil.create('div', 'evac_dialog');
     //content
     var frame =$('<div>').addClass('evac_dialog_content').html(this.createContent());
-    
+
     $(this._container).css({'opacity':'0.7','right':'10px','bottom':'10px','position':'absolute','display':'none'}).append(frame);
 
     return this._container
@@ -20897,29 +20873,29 @@ GSI.Utils.lpad = function(src, letter, num)
 
 
 GSI.EditReliefDialog = GSI.Dialog.extend( {
-  
+
   options : {
     title : "自分で作る色別標高図",
     width : "300px",
     transparentGradate : false
   },
-  
+
   initialize : function( map, mapLayerList, options)
   {
     this._map = map;
     this._mapLayerList = mapLayerList;
     GSI.Dialog.prototype.initialize.call(this,  options);
   },
-  
-  
-  
+
+
+
   show : function ()
   {
     if ( !this.getVisible() )
     {
       if ( this._newDataView ) this._newDataView.hide();
       if ( this._loadDataView ) this._loadDataView.hide();
-      
+
       var data = this._mapLayerList.getElevationData();
       if (data && !data["default"] )
       {
@@ -20928,15 +20904,15 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       else
         this._showNewDataView();
     }
-    
+
     GSI.Dialog.prototype.show.call(this);
-    
+
   },
   afterShow : function()
   {
     this._refreshGradationBar();
   },
-  
+
   hide : function ()
   {
     GSI.Dialog.prototype.hide.call(this);
@@ -20950,27 +20926,27 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
   createContent : function()
   {
     this.frame = $( '<div>' ).addClass("gsi_editreliefdialog_content");
-    
-    
+
+
     var controlFrame = this._createControl();
     this.frame.append( controlFrame );
-    
-    
-    
+
+
+
     var editFrame = $( "<div>" ).css({"margin":"4px"});
-    
+
 
     var orderFrame = $("<div>"); //.css({ "padding": "4px" });
-    
+
     if ( !GSI.EditReliefDialog._labelIdInc ) GSI.EditReliefDialog._labelIdInc = 0;
-    
-    
-    
+
+
+
     // 降順チェック
-    
+
     GSI.EditReliefDialog._labelIdInc++;
     var id = "gsi_editreliefdialog_ordercheck" + GSI.EditReliefDialog._labelIdInc;
-    
+
     this._orderDescCheck = $("<input>").attr({ "id": id, "type": "checkbox" }).addClass("normalcheck");
 
     this._orderDescCheck.click(MA.bind(function () {
@@ -20982,7 +20958,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     var orderLabel = $("<label>").attr({ "for": id }).html("降順に並べる");
     orderFrame.append(this._orderDescCheck).append(orderLabel);
 
-    
+
     // カラーパターン選択
 
     this._colorPatternSelect = $("<a>").attr({"href":"javascript:void(0);"})
@@ -20997,43 +20973,43 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     // リスト
     this._scrollFrame = $( "<div>" ).addClass("scroll_frame");
     editFrame.append( this._scrollFrame );
-    
+
     this.frame.append( editFrame );
-    
-    
+
+
     // 単位
     this.frame.append( $("<div>").css({"padding-left":"30px","font-size": "9.5pt"}).html("(単位:m)") );
-    
+
 
     var optionFrame = $( "<div>" ).css({"text-align":"left","margin":"4px"});
-    
+
     var label = null;
     var div = null;
-    
+
     div = $( "<div>" ).addClass("gsi_editreliefdialog_options");
     this._gradateInput = $( "<input>" )
       .click( MA.bind( function(){
         this._refreshGradationBar();
       },this ) )
       .addClass("normalcheck").attr({"id":"gsi_editreliefdialog_gradate","type":"checkbox"});
-    
+
     label = $("<label>").attr({"for":"gsi_editreliefdialog_gradate"}).html("グラデーション").css({"font-size":"9pt"});
     div.append( this._gradateInput).append( label );
     optionFrame.append( div );
-    
+
     this._useHillshademapInput = $( "<input>" ).addClass("normalcheck").attr({"id":"gsi_editreliefdialog_usehillshademap","type":"checkbox"});
     label = $("<label>").attr({"for":"gsi_editreliefdialog_usehillshademap"}).html("陰影(日本周辺)").css({"font-size":"9pt"});
     div.append( this._useHillshademapInput).append( label );
     optionFrame.append( div );
-    
-    
+
+
     this.frame.append( optionFrame );
-    
-    
+
+
       // 地図に反映
     var reflectionFrame = $( "<div>" ).css({"padding":"4px", "width":"100%"});
     a = $( "<a>" ).addClass("normalbutton").css({"text-align":"center","width":"100%","padding-left":"7px","padding-right":"7px"}).attr( {"href":"javascript:void(0);"} ).html( "上記の内容で地図に反映" );
-    
+
     a.click( MA.bind( function() {
       this._reflection();
       var isshow = false;
@@ -21061,24 +21037,24 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       }
 
     },this ) );
-    
+
     reflectionFrame.append( a );
-    
+
     this.frame.append( reflectionFrame );
-    
+
     return this.frame;
   },
-  
-  
+
+
   _onColorPatternSelectClick : function() {
     if ( !this._colorPatternSelectPanel ) {
       this._colorPatternSelectPanel = $( "<div>").addClass("gsi_editreliefdialog_patternselectpanel").hide();
-      
+
       var ul = $("<ul>");
-      
+
       for( var i=0; i<CONFIG.FREERELIEF_COLORPATTERNS.length; i++ ) {
         var pattern = CONFIG.FREERELIEF_COLORPATTERNS[i];
-        
+
         var li = $( "<li>");
         var a = $( "<a>").attr({"href":"javascript:void(0);"}).on("click",MA.bind(function(pattern){
           this._hideColorPatternSelectPanel();
@@ -21094,7 +21070,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         ul.append(li);
       }
       this._colorPatternSelectPanel.append( ul );
-      
+
     }
     $("body").append( this._colorPatternSelectPanel );
 
@@ -21120,7 +21096,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     }).slideDown(200);
   },
   _hideColorPatternSelectPanel : function() {
-    
+
     if ( this._colorPatternSelectPanelHideCheckHandler) {
       $("body").off("mousedown", this._colorPatternSelectPanelHideCheckHandler );
       this._colorPatternSelectPanelHideCheckHandler = null;
@@ -21129,7 +21105,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       this._colorPatternSelectPanel.hide();
       this._colorPatternSelectPanel.remove();
       this._colorPatternSelectPanel = null;
-    
+
     }
   },
   _drawPatternSample : function(canvas, pattern, w,h) {
@@ -21140,10 +21116,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
     var colors = pattern.colors;
 
-    var blockWidth = Math.ceil( w / (colors.length-1) ); 
-    
+    var blockWidth = Math.ceil( w / (colors.length-1) );
+
     for( var i=0; i<colors.length-1; i++ ) {
-      
+
       var color1 = colors[i];
       var color2 = colors[i+1];
       var startX = i*blockWidth;
@@ -21157,8 +21133,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
           imageData.data[idx] = r;
           imageData.data[idx+1] = g
           imageData.data[idx+2] = b;
-          imageData.data[idx+3] = 255; 
-          
+          imageData.data[idx+3] = 255;
+
         }
       }
     }
@@ -21174,8 +21150,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         imageData.data[idx] = r;
         imageData.data[idx+1] = g
         imageData.data[idx+2] = b;
-        imageData.data[idx+3] = 255; 
-        
+        imageData.data[idx+3] = 255;
+
       }
     }
     */
@@ -21239,7 +21215,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
     var splitColor = function ( c1, c2, num) {
       var result = [];
-      // 
+      //
       for( var i=0; i<num; i++) {
 
         var p = (i+1) / (num+1);
@@ -21253,7 +21229,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       }
       return result;
     };
-    
+
     var result = [];
 
     for( var i=colorLength-1; i>=0; i-- ) {
@@ -21266,7 +21242,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
           sNum --;
         }
       }
-      
+
       result.unshift( colors[i+1]);
       if ( sNum <= 0 ) continue;
       console.log( "分割位置", (i+1) + "~" + (i), "分割数", sNum);
@@ -21280,11 +21256,11 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     console.log( result );
     return result;
   },
-  
+
   _createControl : function()
   {
     var frame = $( '<div>' ).addClass("gsi_editreliefdialog_control_frame");
-    
+
     var a = null;
     var img = null;
     /*
@@ -21296,12 +21272,12 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         "title":"スタイルを新規作成"
       } );
     a.click( L.bind( this._showNewDataView, this ) );
-    
+
     a.append( img );
     frame.append( a );
     */
-    
-    
+
+
     // 読込ボタン
     a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
     img = $( "<img>" ).css({"width":"24px","height":"24px"})
@@ -21309,11 +21285,11 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         "src":"image/elevation/icon-open.png",
         "title":"スタイルをファイルから読み込み"
       } );
-    
+
     a.click( MA.bind( this._showLoadView, this ) );
     a.append( img );
     frame.append( a );
-    
+
     // 保存ボタン
     a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
     img = $( "<img>" )
@@ -21321,15 +21297,15 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         "src":"image/elevation/icon-save.png",
         "title":"スタイルをファイルに保存"
       } );
-    
+
     a.click( MA.bind( this._save, this ) );
     a.append( img );
     frame.append( a );
-    
-    
+
+
     // 新しく作成
     a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
-    
+
     img = $("<img>").css({ "width": "24px", "height": "24px" })
       .attr({
         "src": "image/elevation/icon-auto.png",
@@ -21341,7 +21317,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       this._createAutoNewData();
     },this ) );
     frame.append( a );
-    
+
     // 低い位置
     a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
     img = $("<img>").css({ "width": "24px", "height": "24px" })
@@ -21355,11 +21331,11 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       this._createLowNewData();
     },this ) );
     frame.append( a );
-    
-    
+
+
     // 初期状態に戻す
     a = $( "<a>" ).attr( {"href":"javascript:void(0);"} );
-    
+
     img = $("<img>").css({ "width": "24px", "height": "24px" })
       .attr({
         "src": "image/elevation/icon-reset.png",
@@ -21377,16 +21353,16 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       }
     },this ) );
     frame.append( a );
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     return frame;
   },
-  
+
   // 新規データ作成ビュー作成
   _showNewDataView: function () {
     if (!this._newDataView) {
@@ -21398,7 +21374,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       var div = null;
       var label = null;
 
-      
+
       // 表示範囲の標高値から作成
 
       dt = $("<dt>");
@@ -21573,7 +21549,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
       var btn = $("<a>").addClass("normalbutton").attr({ "href": "javascript:void(0);" }).html("上記の内容で作成");
       btn.click(MA.bind(function () {
-        if( this._newSplitRadio.is(":checked")) 
+        if( this._newSplitRadio.is(":checked"))
           this._createNewData();
         else
         this._createAutoNewData();
@@ -21623,8 +21599,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     var tileList = [];
 
 
-    
-    
+
+
     var mapContainerSize = {
       width:$("#"+GLOBE.MAP.mapElementId ).outerWidth(),
       height:$("#"+GLOBE.MAP.mapElementId ).outerHeight()
@@ -21633,26 +21609,26 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
     var latLng1 = GLOBE.MAP.windowPositionToLatLng( {x:0,y:0} );
     var latLng2 = GLOBE.MAP.windowPositionToLatLng( {x:mapContainerSize.width,y:mapContainerSize.height} );
-    
+
     var _getTileInfo = function (lat, lng, z) {
       var lng_rad = lng * Math.PI / 180;
       var R = 128 / Math.PI;
       var worldCoordX = R * (lng_rad + Math.PI);
       var pixelCoordX = worldCoordX * Math.pow(2, z);
       var tileCoordX = Math.floor(pixelCoordX / 256);
-  
+
       var lat_rad = lat * Math.PI / 180;
       var worldCoordY = - R / 2 * Math.log((1 + Math.sin(lat_rad)) / (1 - Math.sin(lat_rad))) + 128;
       var pixelCoordY = worldCoordY * Math.pow(2, z);
       var tileCoordY = Math.floor(pixelCoordY / 256);
-  
+
       return {
         x: tileCoordX,
         y: tileCoordY,
         pX: Math.floor(pixelCoordX - tileCoordX * 256),
         pY: Math.floor(pixelCoordY - tileCoordY * 256)
       };
-  
+
     };
 
     var zoom = GLOBE.MAP.getCurrentZoom();
@@ -21664,10 +21640,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     var maxX = Math.max(p1.x,p2.x);
     var maxY = Math.max(p1.y,p2.y);
 
-    
+
     for (var x=minX; x<=maxX; x++) {
       for (var y=minY; y<=maxY; y++) {
-        
+
         tileList.push( {coords:{
           x: x,
           y:y,
@@ -21675,13 +21651,13 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         }})
       }
     }
-    
+
     if ( tileList.length <= 0 ) {
       // エラー
       return;
     }
 
-    
+
     this._loadingPanel.show();
     this._loadingMessage.show();
 
@@ -21703,7 +21679,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             break;
           }
         }
-        
+
         var dem = e.target.getData();
         if ( dem ) {
           for( var i=0; i<dem.length; i++ ) {
@@ -21712,7 +21688,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             if ( ( !minMax.min && minMax.min != 0) || minMax.min > h ) {
               minMax.min = h;
             }
-            
+
             if ( ( !minMax.max && minMax.max != 0) || minMax.max < h ) {
               minMax.max = h;
             }
@@ -21730,23 +21706,23 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             colors[i].h = Math.round(low + (hi - low) * p);
           }
           colors[ colors.length-2].h = hi;
-          
+
 
           var data = {
             gradate: false,
             useHillshademap: false,
             colors: colors
             /*
-            colors: this._makeColors( 5, 
+            colors: this._makeColors( 5,
               Math.floor(minMax.min), Math.floor( minMax.max ), "#2db4b4", "#b43d09")
               */
           };
-          
+
           this._refreshReriefEdit(data);
           if (!this._createAfterReflectionInput || this._createAfterReflectionInput.is(":checked")) {
             this._reflection();
           }
-          
+
           this._loadingMessage.hide();
           this._loadingPanel.hide();
           if( this._newDataView ) this._newDataView.fadeOut(200);
@@ -21761,7 +21737,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
   // 低い範囲を表示
   _createLowNewData: function() {
-    
+
     // loading
     if ( !this._loadingPanel ) {
       this._loadingPanel = $( "<div>").addClass("loadingpanel");
@@ -21777,16 +21753,16 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       height:$("#"+GLOBE.MAP.mapElementId ).outerHeight()
     };
 
-    
+
     var latLng = GLOBE.MAP.windowPositionToLatLng( {x:mapContainerSize.width/2, y:mapContainerSize.height/2} );
     if ( !latLng ) return false;
-    
 
-    
+
+
     this._loadingPanel.show();
     this._loadingMessage.show();
 
-    
+
     if ( this._elevationLoader ) this._elevationLoader.cancel();
     this._elevationLoader = new GSI.ElevationLoader();
     this._elevationLoader.on("load", MA.bind(function (e) {
@@ -21811,8 +21787,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         useHillshademap: false,
         colors: colors
       };
-      
-      
+
+
       this._refreshReriefEdit(data);
       if (!this._createAfterReflectionInput || this._createAfterReflectionInput.is(":checked")) {
         this._reflection();
@@ -21820,7 +21796,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
           this._reflection();
         }, 10);
       }
-      
+
       this._loadingMessage.hide();
       this._loadingPanel.hide();
       if( this._newDataView ) this._newDataView.fadeOut(200);
@@ -21836,7 +21812,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
   _createNewData : function()
   {
-    
+
     if (this._newDefaultRadio && this._newDefaultRadio.is(":checked")) {
       var data = GSI.ReliefTileLayer.getElevationSampleData();
       data["default"] = false;
@@ -21879,7 +21855,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
     var low = getNumber(this._lowElevationInput.val());
     var hi = getNumber(this._hiElevationInput.val());
-    
+
 
     //var low = getInt(this._lowElevationInput.val());
     //var hi = getInt(this._hiElevationInput.val());
@@ -21914,11 +21890,11 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       this._reflection();
     }
     if( this._newDataView ) this._newDataView.fadeOut(200);
-    
+
   },
-  
+
   _makeColors : function(num, low, hi, loColor, hiColor) {
-    
+
     var loRgb = GSI3D.ReliefTileLayer.colorStringToRGBA(loColor);
     var hiRgb = GSI3D.ReliefTileLayer.colorStringToRGBA(hiColor);
 
@@ -21960,82 +21936,82 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     return colors;
   },
 
-  _showLoadView : function() 
+  _showLoadView : function()
   {
     if ( !this._loadDataView )
     {
       this._loadDataView = $( "<div>" ).addClass("loaddataview").hide();
-      
-      
+
+
       var fileFrame = $( "<div>" ).addClass("file_frame");
-      
-      
+
+
       var messageFrame = $("<div>").addClass("message_frame");
-      
+
       messageFrame
         .append( $("<img>").attr({"src":"image/system/info.png"}))
         .append( $("<div>").html("読み込むファイルを指定して下さい。") );
       this._loadDataView.append( messageFrame );
-      
-      
+
+
       this._loadFileInput = $( "<input>" ).attr({"type":"file"});
       fileFrame.append( this._loadFileInput );
-      
+
       this._loadDataView.append( fileFrame );
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
       var optionFrame = $("<div>").addClass("option_frame");
-      
-      
+
+
       this._loadFileAfterReflectionInput = $( "<input>" ).addClass("normalcheck")
         .attr({"id":"gsi_editreliefdialog_file_afterreclection", "type":"checkbox"}).prop({"checked":"checked"});
-      
+
       var label = $( "<label>" ).html("読み込み後地図に反映")
         .attr({"for":"gsi_editreliefdialog_file_afterreclection"} );
-      
+
       optionFrame.append( this._loadFileAfterReflectionInput ).append( label );
-      
+
       this._loadDataView.append( optionFrame );
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
       var buttonFrame = $("<div>").addClass("button_frame");
-      
+
       var btn = $( "<a>" ).addClass("normalbutton").attr({"href":"javascript:void(0);"}).html("ファイルを読み込む");
       btn.click( MA.bind(function(){
         this._loadData(this._loadFileInput);
       },this ) );
-      
+
       buttonFrame.append( btn );
-      
-      
+
+
       btn = $( "<a>" ).addClass("normalbutton").attr({"href":"javascript:void(0);"}).html("キャンセル");
       btn.click( MA.bind(function(){
         this._loadDataView.fadeOut(200);
       },this ) );
-      
+
       buttonFrame.append( btn );
-      
+
       this._loadDataView.append( buttonFrame );
-      
-      
-      
-      
-      
+
+
+
+
+
       this.frame.append( this._loadDataView );
     }
-    
+
     this._loadDataView.fadeIn(300);
-    
+
   },
-  
+
   _loadData : function(input, isNew)
   {
     var file = null;
@@ -22057,7 +22033,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         var data = JSON.parse(text);
         data.gradate =  ( data.gradate ?true : false );
         data.useHillshademap =  ( data.useHillshademap ? true : false );
-        
+
         if ( data.colors.length < 2 )
         {
           alert( "自分で作る色別標高図形式のファイルを指定して下さい" );
@@ -22069,9 +22045,9 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             data.colors[i].h = this._reliefRound(Number(data.colors[i].h));
           //data.colors[i].h = parseInt( data.colors[i].h );
         }
-        
+
         this._refreshReriefEdit(data);
-        
+
         if ( isNew )
         {
           if ( this._createAfterReflectionInput.is(":checked") )
@@ -22095,42 +22071,42 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         console.log( e );
         alert( "自分で作る色別標高図形式のファイルを指定して下さい。" );
       }
-      
+
     }, this );
-    
+
     reader.readAsText(file);
   },
-  
+
   _save : function()
   {
     var data = this._makeElevationData();
-    
+
     var text = JSON.stringify(data,null, "  ");
-    
+
     var blob = new Blob([text], { "type" : "text/plain"})
-    
+
     var fileName = 'relief' + GSI.Utils.getTimeStampString();
-    
+
     if(window.navigator.msSaveBlob)
     {
       window.navigator.msSaveOrOpenBlob( blob, fileName + ".txt" );
     }
     else
     {
-      
+
       var url = window.URL || window.webkitURL;
       var dummy =$("<a>").attr( {
         "download" : fileName + ".txt",
         "href" : url.createObjectURL(blob)
       } );
-      
+
       $("body").append(dummy);
       dummy[0].click();
       dummy.remove();
     }
-    
+
   },
-  
+
   _makeElevationData : function(desc)
   {
     var data = {
@@ -22139,8 +22115,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       desc: (desc != undefined ? desc : this._orderDescCheck.is(":checked")),
       colors : []
     };
-    
-    
+
+
     var inputs = this._scrollFrame.find("input.elevation");
     var colorSelects = this._scrollFrame.find("a.color");
     if (data.desc) {
@@ -22181,29 +22157,29 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     for( var i=0; i<colorSelects.length; i++ )
     {
       var input = null;
-      
+
       if ( i < inputs.length )
         input = $( inputs[i] );
-      
+
       var colorSelect = $( colorSelects[i] );
-      
+
       data.colors.push( {
         h :  ( input ? parseInt(input.val()) : null ),
         color : colorSelect.data("color")
       } );
-      
+
     }
     */
     return data;
-    
+
   },
   _reflection : function(data)
   {
     if (!data) data  = this._makeElevationData();
     this._mapLayerList.setElevationData( data );
-    
+
   },
-  
+
   _rgbToColor : function(rgb)
   {
     return "#"
@@ -22211,53 +22187,53 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       +("00" + rgb.g.toString(16).toUpperCase()).substr(-2)
       +("00" + rgb.b.toString(16).toUpperCase()).substr(-2);
   },
-  
+
   _refreshGradationBar : function()
   {
     var tr = this._scrollFrame.find("table.colors").find("tr");
     var td = $(tr[0]).find( "td.gradationbar" );
-    
+
     td.prop({"rowspan":tr.length} );
-    
+
     if ( !this._gradateInput.is(":checked") )
     {
       td.hide();
       return;
     }
-    
+
     td.show();
     var w = td.find( "div" ).innerWidth();
     var h = td.find( "div" ).innerHeight();
     var canvas = td.find( "canvas" )[0];
-    
-    
+
+
     canvas.width = w
-    canvas.height = h; 
+    canvas.height = h;
     var ctx = canvas.getContext( '2d' );
-    
+
     ctx.fillStyle = "rgb(255, 255, 255)";
     ctx.clearRect(0, 0, w, h);
     ctx.beginPath();
-    
-    
-    
+
+
+
     var lineHeight = Math.round( h / tr.length );
-    
+
     var prev = null;
-    
+
     for ( var idx=0; idx<tr.length; idx++ )
     {
       var color=$(tr[idx]).find( "a.color" ).data("color");
       if ( color ) color =GSI3D.ReliefTileLayer.colorStringToRGBA(color );
-      
+
       var startY = idx*lineHeight;// - Math.round( lineHeight/ 2 )-1;
-      
+
       for( var y=startY; y< startY+lineHeight; y++ )
       {
         var yP = (y-startY) / lineHeight;
-        
+
         if ( color  )
-        { 
+        {
           var c = {
             r:color.r,
             g:color.g,
@@ -22280,18 +22256,18 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             }
             else
             {
-              //if ( yP < 0.5 ) 
+              //if ( yP < 0.5 )
               ctx.globalAlpha = 1;
             }
           }
-          
+
           if( c.r > 255 ) c.r = 255;
           if( c.g > 255 ) c.g = 255;
           if( c.b > 255 ) c.b = 255;
           if( c.a > 255 ) c.a = 255;
-          
+
           ctx.fillStyle = "rgb(" + c.r + "," + c.g + "," + c.b +")";
-          
+
         }
         else
         {
@@ -22303,23 +22279,23 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
               b:prev.b,
               a:255
             };
-            
+
             if ( this.options.transparentGradate )
             {
               c.a = prev.a + Math.round( ( - prev.a  ) * yP );
             }
             else
             {
-              
-              //if ( yP > 0.5 ) 
+
+              //if ( yP > 0.5 )
                 c.a = 0;
             }
-            
+
             if( c.r > 255 ) c.r = 255;
             if( c.g > 255 ) c.g = 255;
             if( c.b > 255 ) c.b = 255;
             if( c.a > 255 ) c.a = 255;
-            
+
             ctx.fillStyle = "rgb(" + c.r + "," + c.g + "," + c.b +")";
             ctx.globalAlpha = c.a  / 255;
           }
@@ -22328,20 +22304,20 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
             ctx.fillStyle = "rgb(255,255,255)";
             ctx.globalAlpha = 0;
           }
-          
-          
+
+
         }
         ctx.fillRect(0, y, w, 1);
       }
-      
+
       prev = color;
     }
-    
+
     var y = tr.length*lineHeight - Math.round( lineHeight/ 2 )-1;
     ctx.fillRect(0, y, w, lineHeight);
-    
+
   },
-  
+
   _refreshReriefEdit : function(data, skipRefreshGradationBar)
   {
     this._scrollFrame.empty();
@@ -22349,38 +22325,38 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     if ( this._newDataView )
       this._newDataView.remove();
     this._newDataView = null;
-    
+
     var frame = $( "<div>" );
-    
+
     if ( !data )
     {
       data = GSI.ReliefTileLayer.getElevationSampleData();
       //data["default"] = true;
     }
-    
+
     if ( data.gradate )
       this._gradateInput.prop({"checked":"checked"} );
     else
       this._gradateInput.removeProp("checked");
-      
-      
+
+
     if ( data.useHillshademap )
       this._useHillshademapInput.prop({"checked":"checked"} );
     else
       this._useHillshademapInput.removeProp("checked");
-      
-    
+
+
     if (data.desc)
       this._orderDescCheck.prop({ "checked": "checked" });
     else
       this._orderDescCheck.removeProp("checked");
 
 
-    
+
     var table = $( "<table>" ).addClass("colors");
-    
+
     var colors = data.colors;
-    
+
     if (data.desc) {
       for (var i = colors.length - 1; i >= 0; i--) {
         var next = (i < colors.length - 1 ? colors[i + 1] : null);
@@ -22402,9 +22378,9 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
       }
     }
-    
+
     //グラデーション
-    
+
     var td = $("<td>")
       .addClass( "gradationbar" )
       .css({"position":"relative","width":"16px"}).attr({"rowspan":table.find("tr").length} );
@@ -22416,8 +22392,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     div.append( canvas );
     td.append( div );
     $( table.find("tr")[0] ).prepend(td);
-    
-    
+
+
     var removeButtons = frame.find("a.remove_btn");
     if ( removeButtons.length <= 2 ){
       if (removeButtons.length > 0){
@@ -22438,12 +22414,12 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     this._scrollFrame.scrollTop(0);
     if ( !skipRefreshGradationBar ) this._refreshGradationBar();
   },
-  
+
   _createLine : function( prev, current, next, desc )
   {
     var tr = $( "<tr>" ).addClass("line");
     var td = null;
-    
+
     if ( !prev )
     {
       td = $( "<td>" ).html("&nbsp;").addClass("from");
@@ -22454,10 +22430,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       td = $( "<td>" ).html(prev.h).addClass("from");
       tr.append( td );
     }
-    
+
     td = $( "<td>" ).html("-");
     tr.append( td );
-    
+
     if ( next )
     {
       var input = $( "<input>" )
@@ -22472,7 +22448,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
           elem.select();
         },this,input ))
         .blur( MA.bind(function(tr) {
-          
+
           this._checkInputElevation( tr );
         },this,tr ) )
         .on("keydown", MA.bind(function(e){
@@ -22482,8 +22458,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
           if ( e.ctrlKey || e.metaKey) return;
 
-          if( ( !str.match(/[0-9.-]/) ) 
-            && (keyCode != 8 && keyCode != 46 && keyCode != 189 && keyCode != 190 ) 
+          if( ( !str.match(/[0-9.-]/) )
+            && (keyCode != 8 && keyCode != 46 && keyCode != 189 && keyCode != 190 )
             && (keyCode != 37 && keyCode != 38 && keyCode != 39 && keyCode != 40 )){
             e.preventDefault();
             e.stopPropagation();
@@ -22503,16 +22479,16 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
           $(this).select();
           return false;
         });
-  
+
     }
     else
     {
       td = $( "<td>" ).html("&nbsp;").addClass("to");
       tr.append( td );
     }
-    
+
     td = $( "<td>" );
-    
+
     var color = current.color ;
     if ( color )
     {
@@ -22522,13 +22498,13 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     {
       color = null;
     }
-    
+
     var a = $( "<a>" ).attr({"href":"javascript:void(0);"}).addClass("color");
     a.css( {
       "background" : ( color  ? color : 'url("./image/system/transparent_bg.png")' )
     } )
     .data( {"color":color, "colorpicker":a} );
-    
+
     var this$ = this;
     a.ColorPicker({
       onSubmit : function(hsb, hex, rgb, el)
@@ -22564,30 +22540,30 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     });
     td.append( a );
     tr.append( td );
-    
-    
+
+
     //
-    
+
     if ( next )
     {
       td = $("<td>");
       a = $("<a>").attr({"title":"この行を削除","href":"javascript:void(0);"} ).addClass("btn").addClass("remove_btn");
       a.click( MA.bind(function(prev,current,next, tr) {
         this._removeLine( tr );
-        
+
       },this, prev, current, next, tr ) );
       td.append( a);
       tr.append( td );
-      
+
       //
       td = $("<td>");
-      
+
       a = $("<a>").attr({ "title": "ここに追加", "href": "javascript:void(0);" }).addClass("btn")
         .addClass((desc ? "append_prev_btn" : "append_next_btn")).html("+");
       a.click( MA.bind(function(prev,current,next, tr) {
         this._appendLine( tr );
       },this, prev, current, next, tr ) );
-      
+
       td.append( a);
       tr.append( td );
     }
@@ -22600,7 +22576,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     }
     return tr;
   },
-  
+
   _checkInputElevation : function(tr)
   {
     var desc = this._orderDescCheck.is(":checked");
@@ -22609,8 +22585,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       return String.fromCharCode(s.charCodeAt(0) - 65248);
     });
     h = h.replace(/[ー－‐]/g,"-" );
-    
-    
+
+
     //if(h.match(/^-?[0-9]+$/) )
     //	h = parseInt(h);
     var x = Number(h);
@@ -22618,8 +22594,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       h = this._reliefRound(x);
     else
       h = null;
-    
-    
+
+
     var nextH = (desc ? tr.prev() : tr.next()).find("input.elevation").val();
     if ( h!= null && nextH )
     {
@@ -22627,14 +22603,14 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         return String.fromCharCode(s.charCodeAt(0) - 65248);
       });
       nextH = nextH.replace(/[ー－‐]/g,"-" );
-        
+
       //if(nextH.match(/^-?[0-9]+$/) )
       //	nextH = parseInt(nextH);
       if (nextH.match(/^[-]?([1-9]\d*|0)(\.\d+)?$/))
         nextH = this._reliefRound(Number(nextH));
       else
         nextH = null;
-      
+
       if ( nextH != null && h >= nextH )
       {
         h = nextH -1;
@@ -22644,8 +22620,8 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         tr.find("input.elevation").val(h)
       }
     }
-    
-    
+
+
     var prevH = (desc ? tr.next() : tr.prev()).find("input.elevation").val();
     if ( h!= null && prevH )
     {
@@ -22653,14 +22629,14 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         return String.fromCharCode(s.charCodeAt(0) - 65248);
       });
       prevH = prevH.replace(/[ー－‐]/g,"-" );
-        
+
       //if(prevH.match(/^-?[0-9]+$/) )
       //	prevH = parseInt(prevH);
       if (prevH.match(/^[-]?([1-9]\d*|0)(\.\d+)?$/))
         prevH = this._reliefRound(Number(prevH));
       else
         prevH = null;
-      
+
       if ( prevH != null && h <= prevH )
       {
         h = prevH +1;
@@ -22670,7 +22646,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         tr.find("input.elevation").val(h)
       }
     }
-    
+
     if ( h!= null )
     {
       var nextTr = (desc ? tr.prev() : tr.next());
@@ -22684,19 +22660,19 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
   {
     var inputs = this._scrollFrame.find("input.elevation");
     if ( inputs.length <= 2 ) return;
-    
+
     tr.remove();
-    
+
     var removeButtons = this._scrollFrame.find("a.remove_btn");
     if ( removeButtons.length <= 2 )
       removeButtons.hide();
     else
       removeButtons.show();
-    
+
     this._refreshElevationFrom();
     this._refreshGradationBar();
   },
-  
+
   _trToData : function( tr )
   {
     var h = tr.find( "input.elevation" ).val();
@@ -22715,16 +22691,16 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
     }
     else
       h = null;
-    
-    
+
+
     color = tr.find( "a.color" ).data("color");
-    
+
     return {
       h : h,
       color : color
     };
   },
-  
+
   _appendLine : function( tr )
   {
     var appendNext = !this._orderDescCheck.is(":checked");
@@ -22799,10 +22775,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
       removeButtons.show();
 
   },
-  
+
   _refreshElevationFrom : function()
   {
-    
+
     var orderDesc = this._orderDescCheck.is(":checked");
 
     var trArr = this._scrollFrame.find("tr.line");
@@ -22817,7 +22793,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
       prev = current;
     }
-    
+
   },
 
   _reliefRound: function(val){
@@ -22841,7 +22817,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 
     return res;
   }
-  
+
 } );
 
 /*******************************************************
@@ -22928,28 +22904,28 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
   getContent: function () {
     var frame = $('<div>').addClass('gsi_modal_dialog_content');
     var content = this._createContent(this.options.uri);
-  
+
     frame.append(content);
-  
+
     return frame;
   },
   show: function(){
     GSI.Modal.BaseClass.prototype.show.call(this, this.options);
-  
+
     GSI.Modal.blind.on('mousedown', MA.bind(function () { this.hide(); }, this));
     $(GSI.Modal.blind).on('touchstart', MA.bind(function () { this.hide(); }, this));
-  
+
     $(window).resize(MA.bind(function () { this.hide(true); }, this));
   //   GSI.Modal.blind.on('mousedown', L.bind(function () { this.hide(); }, this));
   //   $(GSI.Modal.blind).on('touchstart', L.bind(function () { this.hide(); }, this));
-  
+
   //   $(window).resize(L.bind(function () { this.hide(true); }, this));
-  
+
     this.closeButton.css({"color":"#fff","padding-top":"0.3em","padding-right":"0.3em"});
   },
   createBlind: function () {
     if (GSI.Modal.blind) return;
-  
+
     GSI.Modal.blind = $('<div>')
     .css({
       opacity: 0.4,
@@ -22965,15 +22941,15 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     })
     .click(function () {
     });
-  
+
     $(document.body).append(GSI.Modal.blind);
   },
   _createContent: function(){
     var ws = GSI.Utils.getScreenSize();
-    var ary = this.options.uri.split("\\");   
+    var ary = this.options.uri.split("\\");
     var imgy = ws.h * 0.6;//0.7は極端に横長にすると縦が不足する
     var imgx = ws.w * 0.7;
-  
+
     var names={};
     names["LoreName"] = "碑名";
     names["DisasterName"]="災害名";
@@ -22982,7 +22958,7 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     names["Address"]="所在地";
     names["DisasterInfo"] = "伝承内容";
     names["Image"]="概要";
-  
+
     var title = "";
     var id = "";
     for(var e = 0; e < ary.length; e+=2){
@@ -22993,38 +22969,38 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
       id = ary[e + 1];
     }
     }
-  
+
     var tbl = $("<table>").css({"min-width":"240px","max-width":"280px"});
     var outertbl = $("<table>").css({"border": "none"});
-  
+
     var tr;
     var outertr = $("<tr>").css({"vertical-align":"top"});
     var titletr = $("<tr>");
     var lefttd = $("<td>").attr({"align":"center"});
     var righttd = $("<td>").attr({"align":"center"});
     var titleth = $("<th>").addClass("gsi_dsloreinfodialog_div_table_th");
-  
+
     var ldiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
     var rdiv = $("<div>").addClass('gsi_dsloreinfodialog_inner_div');
     var titletbl = $("<table>").attr({"id": "dsloredialog_title"}).css({"border":"none","width":"100%"});
     var contdiv = $("<div>").addClass('gsi_dsloreinfodialog_div').css({"overflow-y":"auto"});
     var iddiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
     var outerdiv = $("<div>").addClass('gsi_dsloreinfodialog_div');
-  
+
     titletbl.append(titletr.append(titleth.html(title)));
     outerdiv.append(titletbl);
-  
+
     tr=$("<tr>").append($("<th>").html("概要").attr({"colspan":2}));
     tbl.append(tr);
-  
+
     for(h in names){
     for(var j = 0; j < ary.length; j+=2){
       if (h == ary[j]){
       if (ary[j] == "Image"){
-  
+
         var img = $("<img>");
-  
-        
+
+
         img.on("load", MA.bind(function(){
         if (img[0].clientHeight > imgy){
           img.css({"width":"auto","height":imgy + "px"})
@@ -23033,9 +23009,9 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
           }
         this.adjustWindow();
         },this));
-  
+
         $(rdiv).append(img.attr({"src" : ary[j + 1]}).css({"width": imgx, "height": "auto"}));
-  
+
       }
       else{
         if ( (ary[j] != "") && (ary[j + 1] != "") ){
@@ -23054,22 +23030,22 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
             ary[j + 1] = ary[j + 1].replace(hit, atag);
             mt = ms.exec(ary[j + 1]);
           }
-        }  
+        }
         $(tr).append( $("<td>").css({"width": c2w}).html(ary[j + 1]) );
-  
+
         $(tbl).append(tr);
         }
       }
-    
+
       }
     }
     }
-  
+
     ldiv.append(tbl);
     lefttd.append(ldiv);
-  
+
     iddiv.html("ID:" + id);
-  
+
     if (ws.h < ws.w){
     righttd.append(rdiv);
     outertr.append(lefttd);
@@ -23082,7 +23058,7 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     else{
     iddiv.css({"text-align":"left"});
     ldiv.append(iddiv);
-  
+
     $(ldiv).css({"height":"100px"});
     righttd.append(rdiv);
     outertr.append(righttd);
@@ -23090,12 +23066,12 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     outertr = $("<tr>").append(lefttd);
     outertbl.append(outertr);
     }
-  
+
     contdiv.append(outertbl);
     outerdiv.append(contdiv);
-  
+
     return outerdiv;
-  
+
   },
   onPositiveButtonClick: function () {
     this.hide();
@@ -23104,7 +23080,7 @@ GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
     this.hide();
   }
   });
-  
+
 
 
 
@@ -23143,24 +23119,24 @@ GSI3D.bind = function (fn, obj)
 *************************************************************/
 GSI3D.Event = function()
 {
-  
+
   this.on = function(key,fnc)
   {
     if ( !this._events ) this._events = {};
     if ( !this._events[key] )
       this._events[key] = [];
-    
+
     this._events[key].push( fnc );
-    
+
     return this;
   };
-  
-  
+
+
   this.off = function(key,fnc)
   {
     if ( !this._events ) this._events = {};
     if ( !this._events[key] ) return;
-    
+
     if ( !fnc )
     {
       this._events[key] = [];
@@ -23175,34 +23151,34 @@ GSI3D.Event = function()
           break;
         }
       }
-      
+
     }
-    
-    
+
+
     return this;
   };
-  
+
   this.fire = function(key,params)
   {
     if ( !this._events ) this._events = {};
     if ( !this._events[key] ) return;
-    
+
     var arr = this._events[key];
-    
+
     var p = $.extend( false, {target:this}, params );
-    
+
     var p = {target:this};
-    
+
     for( var paramKey in params )
     {
       p[ paramKey ] = params[ paramKey ];
     }
-    
+
     for( var i=0; i<arr.length; i++ )
     {
       arr[i]( p );
     }
-    
+
   }
 };
 
@@ -23252,17 +23228,17 @@ GSI3D.point = function( x, y )
 
 *************************************************************/
 GSI3D.DEMManager = function( options) {
-  
+
   this._loaders = {};
-  
-  
+
+
   this.options = $.extend( true,
     {
       useHillshademap : false
-    }, 
+    },
     options );
-    
-  
+
+
 };
 
 
@@ -23281,7 +23257,7 @@ GSI3D.DEMManager.prototype.append = function(x,y,z)
   y = parseInt(y);
   z = parseInt(z);
   var key = this.xyzToKey( x,y,z );
-  
+
   this._loaders[key] = {
     coords : {x:x,y:y,z:z},
     loader : null
@@ -23297,7 +23273,7 @@ GSI3D.DEMManager.prototype.getDEM = function(x,y,z)
   {
     result = this._loaders[key].loader.getData();
   }
-  
+
   return result;
 };
 
@@ -23310,7 +23286,7 @@ GSI3D.DEMManager.prototype.getHillshademapImage = function(x,y,z)
   {
     result = this._loaders[key].loader.getHillshademapImage();
   }
-  
+
   return result;
 };
 
@@ -23321,21 +23297,21 @@ GSI3D.DEMManager.prototype.load = function()
   {
     var loader = this._loaders[key];
     loader.loader
-      = new GSI3D.DEMLoader( 
+      = new GSI3D.DEMLoader(
         loader.coords.x, loader.coords.y, loader.coords.z,
         $.extend( true, [], this._demUrlList), {
           overZooming : true,
           useHillshademap : this.options.useHillshademap
-        } ); 
-    
+        } );
+
     loader.loader._key = key;
     loader.loader.on( "load", GSI3D.bind( function(e){
       this._loaders[e.target._key]._loaded = true;
       this._checkLoaded();
-      
+
     }, this ) );
   }
-  
+
   for( var key in this._loaders )
   {
     this._loaders[key].loader.load();
@@ -23361,17 +23337,17 @@ GSI3D.DEMManager.prototype._checkLoaded = function()
       loaded = false;
     }
     else current++;
-    
+
     max++;
   }
   this.fire( "progress", {max:max,current:current} );
-  
+
   if( loaded )
   {
     this._loaded = true;
     this.fire( "load" );
   }
-  
+
 };
 
 
@@ -23384,26 +23360,26 @@ GSI3D.DEMManager.prototype._checkLoaded = function()
 
 *************************************************************/
 GSI3D.DEMLoader = function( x,y,z, urlList, options) {
-  
-  
+
+
   this._hillshademapUrl = 'https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png';
-  
+
   this._coords = {
     x : x,
     y : y,
     z : z
   };
-  
+
   this.options = $.extend( true,
     {
       minZoom : 8,
       overZooming : true,
       useHillshademap : false,
       tms : false
-    }, 
+    },
     options );
-  
-  
+
+
   this._urlList = urlList;
 };
 GSI3D.DEMLoader.prototype = new GSI3D.Event();
@@ -23423,7 +23399,7 @@ GSI3D.DEMLoader.prototype.destroy = function()
     delete this._demImage;
     this._demImage = null;
   }
-  
+
   if ( this._hillshademapImage )
   {
     this._hillshademapImage.onload = null;
@@ -23432,7 +23408,7 @@ GSI3D.DEMLoader.prototype.destroy = function()
     delete this._hillshademapImage;
     this._hillshademapImage = null;
   }
-  
+
   if ( this._demData )
   {
     delete this._demData;
@@ -23455,7 +23431,7 @@ GSI3D.DEMLoader.prototype.getHillshademapImage = function()
 
 GSI3D.DEMLoader.prototype.load = function()
 {
-  
+
   this._demData = null;
   this._demLoaded = false;
   this._currentCoords = $.extend( true, {}, this._coords );
@@ -23478,7 +23454,7 @@ GSI3D.DEMLoader.prototype.load = function()
   if (this.options.useHillshademap) {
     this._loadHillshademap(this._currentCoords);
   }
-  
+
 };
 
 
@@ -23497,7 +23473,7 @@ GSI3D.DEMLoader.prototype._makeUrlList = function(list) {
       zoomList[z].push(item);
     }
   }
-  
+
   if ( !this.options.useTileList) {
     this.options.useTileList = ["DEM1A","DEM5A","DEM5B","DEM5C","DEM10B","DEMGM"];
   }
@@ -23520,13 +23496,13 @@ GSI3D.DEMLoader.prototype._makeUrlList = function(list) {
           }
           item.complementList = complementList;
         }
-        result.push( zoomList[z][i]); 
+        result.push( zoomList[z][i]);
       }
     }
   }
 
   if ( result.length <= 0 && useTileList.indexOf("DEMGM")==0) {
-    
+
     result.push( {
       id: "DEMGM",
       url: "https://cyberjapandata.gsi.go.jp/xyz/demgm_png/{z}/{x}/{y}.png",
@@ -23540,7 +23516,7 @@ GSI3D.DEMLoader.prototype._makeUrlList = function(list) {
 
 GSI3D.DEMLoader.prototype._loadHillshademap = function( coords )
 {
-  
+
   var url = this.getDEMTileUrl(this._hillshademapUrl, coords);
   this._hillshademapImage = document.createElement('img');
   $(this._hillshademapImage)
@@ -23554,38 +23530,38 @@ GSI3D.DEMLoader.prototype._loadHillshademap = function( coords )
       this._hillshademapLoadError();
     }, this)
   );
-  
+
   this._hillshademapImage.setAttribute('crossOrigin', 'anonymous');
   this._hillshademapImage.setAttribute('role', 'presentation');
-  
+
   this._hillshademapImage.src = url;
 };
 
 
 GSI3D.DEMLoader.prototype._nextZoom = function()
 {
-  
+
   var nextZoom = this._currentCoords.z - 1;
-  
+
   if ( nextZoom < this.options.minZoom )
   {
     this._demLoadError();
     return;
   }
-  
+
   var scale = Math.pow( 2, this._coords.z- nextZoom );
   var point = GSI3D.point( this._coords.x*256/scale, this._coords.y*256/scale)
     .divideBy(256).floor();
-  
+
   this._currentCoords = {
     x : point.x,
     y : point.y,
     z : nextZoom
   };
-  
+
   this._startLoadDEM( this._currentCoords );
-  
-  
+
+
 };
 
 
@@ -23598,7 +23574,7 @@ GSI3D.DEMLoader.prototype._startLoadDEM  = function( coords )
 
 GSI3D.DEMLoader.prototype.getDEMTileUrl = function (url, coords)
 {
-  
+
   return url.replace("{x}",coords.x ).replace("{y}",coords.y ).replace("{z}",coords.z );
 };
 
@@ -23607,7 +23583,7 @@ GSI3D.DEMLoader.prototype._loadDEM = function(urlList,  coords)
 {
   var targetUrl = null;
   var z = coords.z;
-  
+
   while(urlList.length > 0){
     var urlInfo = urlList.shift();
     if ( urlInfo.minZoom <= z && z <= urlInfo.maxZoom )
@@ -23616,7 +23592,7 @@ GSI3D.DEMLoader.prototype._loadDEM = function(urlList,  coords)
       break;
     }
   }
-  
+
   if ( !targetUrl )
   {
     //err
@@ -23630,9 +23606,9 @@ GSI3D.DEMLoader.prototype._loadDEM = function(urlList,  coords)
   }
 
   var url =  this.getDEMTileUrl( targetUrl.url, coords );
-  
+
   this._demImage = document.createElement('img');
-  
+
   $(this._demImage)
   .on( 'load', GSI3D.bind(
     function(urlList,coords,targetUrl) {
@@ -23644,28 +23620,28 @@ GSI3D.DEMLoader.prototype._loadDEM = function(urlList,  coords)
       this._loadDEM( urlList,  coords );
     }, this, urlList,coords)
   );
-  
+
   this._demImage.setAttribute('crossOrigin', 'anonymous');
   this._demImage.setAttribute('role', 'presentation');
-  
+
   this._demImage.src = url;
-  
+
 };
 
 
 GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
 {
   var scale=1,lt,rb,point, idx = 0, destIdx = 0;
-  
+
   if ( this._coords.z != coords.z )
   {
     scale = Math.pow( 2, this._coords.z- coords.z );
-    
+
     lt = GSI3D.point( coords.x*256*scale, coords.y*256*scale );
     rb = GSI3D.point( (coords.x+1)*256*scale, (coords.y+1)*256*scale );
-    
+
     point = GSI3D.point( this._coords.x*256, this._coords.y*256 );
-    
+
     point.x -= lt.x;
     point.y -= lt.y;
   }
@@ -23677,16 +23653,16 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
   var pow2_8 = GSI3D.DEMLoader.pow2_8;
   var pow2_23 = GSI3D.DEMLoader.pow2_23;
   var pow2_24 = GSI3D.DEMLoader.pow2_24;
-  
+
   var demData = ( this._demData ? this._demData : [] );
-  
+
   var canvas = GSI3D.DEMLoader.getCanvas();
   var ctx = canvas.getContext("2d");
   ctx.drawImage( this._demImage, 0,0, 256, 256 );
   var data = ctx.getImageData( 0, 0, 256, 256 ).data;
   var hasErrorPixel = false;
-  
-  
+
+
   for(var y = 0; y < 256; ++y)
   {
     for(var x = 0; x < 256; ++x)
@@ -23701,25 +23677,25 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
         }
         else
           idx = (y*256*4) + (x *4);
-          
-          
+
+
         var r = data[ idx+0 ];
         var g = data[ idx+1 ];
         var b = data[ idx+2 ];
         var h = 0;
         if ( r != 128 || g!=0 || b!= 0 )
         {
-          
+
           var d = r * pow2_16 + g * pow2_8 + b;
           h = ( d < pow2_23  ) ? d : d - pow2_24;
           if ( h == -pow2_23 )h = 0;
           else h *= 0.01;
-          
+
           if ( isNaN( h ) )
           {
             console.log( r,g,b,h);
           }
-          
+
           demData[destIdx] = h;
         }
         else
@@ -23730,12 +23706,12 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
       }
       destIdx++;
     }
-    
+
   }
-  
+
   if ( this._demData ) {
     hasErrorPixel = false;
-    
+
     for( var i=0; i<demData.length; i++ ) {
       if ( demData[i] == null ) {
         hasErrorPixel = true;
@@ -23745,7 +23721,7 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
     if ( hasErrorPixel ) {
       hasErrorPixel = false;
       var complementList = $.extend( true,[], this._urlList );
-      
+
       for ( var i=0; i<complementList.length; i++ ) {
         if ( complementList[i].url == targetUrl.url &&
             complementList[i].minZoom == targetUrl.minZoom &&
@@ -23757,28 +23733,28 @@ GSI3D.DEMLoader.prototype._demLoadSuccess = function(urlList,coords,targetUrl )
           }
           break;
         }
-          
+
       }
     }
-  }	
+  }
   this._demData = demData;
-  
-  
+
+
   if ( hasErrorPixel && targetUrl.complementList )
   {
     // DEM5aなどの境目補完
     // urlリストを補完用に変更
     this._urlList = $.extend( true,[], targetUrl.complementList );
     this._startLoadDEM( this._currentCoords );
-  
+
   }
   else
   {
-    
+
     this._demLoaded = true;
     this._checkLoaded();
   }
-  
+
 };
 
 
@@ -23799,7 +23775,7 @@ GSI3D.DEMLoader.prototype._hillshademapLoadSuccess = function()
 
 GSI3D.DEMLoader.prototype._hillshademapLoadError = function()
 {
-  
+
   this._hillshademapLoaded = true;
   this._hillshademapError = true;
   this._checkLoaded();
@@ -23808,7 +23784,7 @@ GSI3D.DEMLoader.prototype._hillshademapLoadError = function()
 
 GSI3D.DEMLoader.prototype._checkLoaded = function()
 {
-  if ( this._demLoaded && 
+  if ( this._demLoaded &&
     (!this.options.useHillshademap || this._hillshademapLoaded ) )
   {
     this.fire("load");
@@ -24066,7 +24042,7 @@ GSI3D.ReliefTileLayer.colorStringToRGBA = function (c)
     var color = {
       r:0,g:0,b:0,a:0
     };
-    
+
     try
     {
       if ( c.substring(0, 1) == "#" && c.length == 7 )
@@ -24085,11 +24061,11 @@ GSI3D.ReliefTileLayer.colorStringToRGBA = function (c)
       }
     }
     catch(e){}
-    
+
     c = color;
   }
-  
-  
+
+
   return c;
 };
 // カラーパターンのhtmlカラーをRGBに
@@ -24108,18 +24084,18 @@ for( var i=0; i<CONFIG.FREERELIEF_COLORPATTERNS.length; i++ ) {
 GSI3D.ReliefTileLayer.encodeElevationData = function(data)
 {
   if ( !data ) return;
-  
+
   var result = "";
-  
+
   for( var i=0; i<data.colors.length; i++ )
   {
     var c = data.colors[i];
-    
+
     var hText = "";
     if ( c.h || c.h == 0)
       hText = c.h.toString(16);
     var colorText = ""
-    
+
     if ( c && c.color)
     {
       if ( jQuery.type(c.color) == "string" )
@@ -24131,22 +24107,22 @@ GSI3D.ReliefTileLayer.encodeElevationData = function(data)
       }
       else
       {
-        
-        colorText = 
+
+        colorText =
           ("00" + c.color.r.toString(16).toUpperCase()).substr(-2)
           +("00" + c.color.g.toString(16).toUpperCase()).substr(-2)
           +("00" + c.color.b.toString(16).toUpperCase()).substr(-2);
       }
     }
-    
+
     result += ( result == "" ? "" : "G" ) +hText + "G" + colorText;
-    
-    
+
+
   }
-  
+
   //parseInt(suji2,2);
-  
-  
+
+
   var flags = ( data.gradate ? "1" : 0) + ( data.useHillshademap ? "1" : 0);
   result = parseInt(flags,2) + result;
   return result.toUpperCase();
@@ -24157,17 +24133,17 @@ GSI3D.ReliefTileLayer.decodeElevationDataText = function(txt)
   var result = {};
   try
   {
-  
+
     var flags = parseInt( txt.charAt(0) ).toString(2);
     flags = ('00' + flags).slice(-2);
-    
+
     result.gradate = ( flags.charAt(0) == "1" ? true : false );
     result.useHillshademap = ( flags.charAt(1) == "1" ? true : false );
-    
+
     txt = txt.slice( 1 ) ;
-    
+
     var parts = txt.split( "G" );
-    
+
     result.colors = [];
     for ( var i=0; i<parts.length; i+=2 )
     {
@@ -24196,22 +24172,22 @@ GSI3D.ReliefTileLayer.decodeElevationDataText = function(txt)
           item.h = parseInt(parts[i], 16);
         }
       }
-      
+
       if ( parts[i+1] == "" )
         item.color=null;
       else
         item.color = GSI3D.ReliefTileLayer.colorStringToRGBA("#"+parts[i+1] );
-        
+
       result.colors.push(item);
     }
-    
+
   }
   catch(e)
   {
     console.log( e);
     result = null;
   }
-  
+
   return result;
 };
 
@@ -24230,7 +24206,7 @@ GSI3D.ReliefTileLayer.getCanvas = function()
     GSI3D.ReliefTileLayer._canvas.width =256;
     GSI3D.ReliefTileLayer._canvas.height =256;
   }
-  
+
   return GSI3D.ReliefTileLayer._canvas;
 };
 
@@ -24240,9 +24216,9 @@ GSI3D.ReliefTileLayer.getEncodedElevationSampleData = function()
 {
   return GSI3D.ReliefTileLayer._encodedSampleData;
 };
-  
 
-GSI3D.ReliefTileLayer._encodedSampleData = 
+
+GSI3D.ReliefTileLayer._encodedSampleData =
   GSI3D.ReliefTileLayer.encodeElevationData(GSI3D.ReliefTileLayer._sampleData);
 
 
@@ -24280,25 +24256,25 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype.getElevationData= function()
 GSI3D.ReliefTileLayer.TileDrawer.prototype._initializeElevationData = function( data )
 {
   if ( !data || !data.colors ) return null;
-  
+
   var result = {
     gradate : data.gradate,
     useHillshademap : data.useHillshademap,
     colors : []
   };
-  
+
   for( var i=0; i<data.colors.length; i++ )
   {
     var c = data.colors[i];
     if ( jQuery.type(c.color) == "string" )
     {
       var color = GSI3D.ReliefTileLayer.colorStringToRGBA(c.color );
-      
+
       c.color = color;
     }
     result.colors.push( c );
   }
-  
+
   result.colors.sort(function(a,b){
     if (!a.h && a.h != 0) return 1;
     if (!b.h && b.h != 0) return -1;
@@ -24313,15 +24289,15 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype._initializeElevationData = function( 
 GSI3D.ReliefTileLayer.TileDrawer.prototype._hToColor = function( h )
 {
   if ( h == null ) return null;
-  
+
   var colors = this._elevationData.colors;
   var prev = null;
   var current = null;
-  
+
   for( var i=0; i<colors.length; i++ )
   {
     var color = colors[i];
-    
+
     if( !color.h && color.h != 0 ) continue;
     if ( color.h >= h )
     {
@@ -24333,25 +24309,25 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype._hToColor = function( h )
       else
       {
         current =colors[ 0 ];
-        
+
       }
       break;
     }
-    
-    
+
+
   }
-  
-  
+
+
   if ( !current ) return colors[colors.length-1].color;
   if ( !prev ) return current.color;
-  
+
   if ( !this._elevationData.gradate )
   {
     return current.color;
   }
-  
+
   var p = ( h - prev.h ) / ( current.h- prev.h );
-  
+
   var result = {
     r:0,g:0,b:0,a:0
   };
@@ -24408,11 +24384,11 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype._hToColor = function( h )
 GSI3D.ReliefTileLayer.TileDrawer.prototype.draw = function(dstCanvas, demData, hillshadeMapImage)
 {
   if ( !this._elevationData || !demData ) return;
-  
+
   var destCtx = dstCanvas.getContext( '2d' );
   var destData = destCtx.createImageData(256,256);
   var hillshadeData = null;
-  
+
   if ( hillshadeMapImage )
   {
     var hillshadeCanvas = GSI3D.ReliefTileLayer.TileDrawer.getCanvas();
@@ -24420,20 +24396,20 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype.draw = function(dstCanvas, demData, h
     hillshadeCtx.drawImage( hillshadeMapImage, 0, 0 );
     hillshadeData = hillshadeCtx.getImageData( 0, 0, 256, 256 ).data;
   }
-      
-      
+
+
   var idx = 0, destIdx=0, color, hillshadeColor={r:0,g:0,b:0,a:0};
   for(var y = 0; y < 256; ++y)
   {
     for(var x = 0; x < 256; ++x)
     {
       color = this._hToColor( demData[ idx ] );
-      
+
       if ( color )
       {
         if ( hillshadeData )
         {
-          
+
           hillshadeColor.r =  hillshadeData[destIdx];
           hillshadeColor.g =  hillshadeData[destIdx+1];
           hillshadeColor.b =  hillshadeData[destIdx+2];
@@ -24445,7 +24421,7 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype.draw = function(dstCanvas, demData, h
         }
         else
         {
-          
+
           destData.data[destIdx] = color.r;
           destData.data[destIdx+1] = color.g;
           destData.data[destIdx+2] = color.b;
@@ -24459,16 +24435,16 @@ GSI3D.ReliefTileLayer.TileDrawer.prototype.draw = function(dstCanvas, demData, h
         destData.data[destIdx+2] = 0;
         destData.data[destIdx+3] = 0;
       }
-      
+
       destIdx += 4;
       idx++;
     }
-    
-    
+
+
   }
-  
+
   destCtx.putImageData(destData, 0, 0);
-  
+
 };
 
 
@@ -24500,14 +24476,14 @@ GSI.LayersJSON = MA.Class.extend( {
   },
   initialize : function (options)
   {
-    
+
     this._load_base   = false;
     this._loadingData = null;
     this._data        = [];
     this._urlData = {};
     this._tabs = null;//$.extend( true,[], options.layersTab );
     this._tabUrl = options.tabsUrl;
-    
+
     /*
     for ( var i=0; i<this._tabs .length; i++ )
     {
@@ -24557,7 +24533,7 @@ GSI.LayersJSON = MA.Class.extend( {
         else{
             this.options.visibleLayers = layers;
         }
-    
+
         var fBaseMap = false;
     for ( var i=0; i<this.options.visibleLayers.length; i++ )
     {
@@ -24571,7 +24547,7 @@ GSI.LayersJSON = MA.Class.extend( {
       this.visibleLayers.push( info );
       if ( !this.visibleLayersHash[ layerData.id ] )
         this.visibleLayersHash[ layerData.id ] = [];
-        
+
       this.visibleLayersHash[ layerData.id ].push( info );
     }
     },
@@ -24638,11 +24614,11 @@ GSI.LayersJSON = MA.Class.extend( {
         }
     },
     */
-    
+
     add : function(layers)
   {
     if(!layers) return;
-    
+
     for (var i = 0; i < layers.length; i++)
     {
       var url = "" ;
@@ -24650,21 +24626,21 @@ GSI.LayersJSON = MA.Class.extend( {
         url = layers[i].url;
       else
         url = layers[i];
-        
+
       if ( !this._urlData[url] )
         this._urlData[ url ] = {};
-        
-        
+
+
       this._loadingUrlList.push( {url:url,isDetail:true, top: layers[i].top} );
     }
-    
+
     //if(this.currentFileIndex == -1){
     //	this._loadNext();
     //}
-    
+
     for ( var url in this._urlData )
     {
-      if ( this._urlData[url].req || ( this._urlData[url].loaded && !this._urlData[url].error ) ) 
+      if ( this._urlData[url].req || ( this._urlData[url].loaded && !this._urlData[url].error ) )
       {
         continue;
       }
@@ -24677,10 +24653,10 @@ GSI.LayersJSON = MA.Class.extend( {
         error : MA.bind(this._onLoadError, this, url)
       });
     }
-    
+
     this._loadFinishCheck();
   },
-  
+
   load : function()
   {
     // タブ情報読み込み
@@ -24734,10 +24710,10 @@ GSI.LayersJSON = MA.Class.extend( {
       this._loadLayers();
     }
   },
-  
+
   _tabLoaded : function()
   {
-    
+
     if ( !this._tabs )
     {
       alert("タブ情報が読み込めません");
@@ -24745,12 +24721,12 @@ GSI.LayersJSON = MA.Class.extend( {
     }
     this._loadLayers();
   },
-  
+
   _loadLayers : function()
   {
     for ( var url in this._urlData )
     {
-      if ( this._urlData[url].req || ( this._urlData[url].loaded && !this._urlData[url].error ) ) 
+      if ( this._urlData[url].req || ( this._urlData[url].loaded && !this._urlData[url].error ) )
       {
         continue;
       }
@@ -24782,24 +24758,24 @@ GSI.LayersJSON = MA.Class.extend( {
     var originalLayers = $.extend( true, [], json.layers );
     if(!this._load_base)
     {
-      json_base = { 
-        "layers": [ 
-          { 
-            "type": "LayerGroup", 
-            "title": CONFIG.layerBaseFolder, 
-            "title_sys": CONFIG.layerBaseFolderSYS, 
-            "iconUrl": "", 
-            "open": false, 
-            "toggleall": false, 
-            "entries": [] 
-          } 
-        ] 
+      json_base = {
+        "layers": [
+          {
+            "type": "LayerGroup",
+            "title": CONFIG.layerBaseFolder,
+            "title_sys": CONFIG.layerBaseFolderSYS,
+            "iconUrl": "",
+            "open": false,
+            "toggleall": false,
+            "entries": []
+          }
+        ]
       };
-      
-      
+
+
       json_base.layers[0].entries = json.layers.concat();
-      
-      
+
+
       if ( this._urlData )
       {
         this._urlData[ url ].req = null;
@@ -24807,10 +24783,10 @@ GSI.LayersJSON = MA.Class.extend( {
         this._urlData[ url ].layers = $.extend( true, [], json.layers );
       }
       json      = json_base;
-      
+
         }
         */
-    
+
     var initEvecDisaster = function(entries, func) {
       if  (!entries) return;
       for( var i=0; i<entries.length; i++ ) {
@@ -24826,7 +24802,7 @@ GSI.LayersJSON = MA.Class.extend( {
         }
       }
     };
-    
+
     if ( (json.layers) && (json.layers[0].title) && (!json.layers[0].title_sys) )
     {
       var hybridjson = JSON.parse("{ \"layers\":[] }");
@@ -24850,28 +24826,28 @@ GSI.LayersJSON = MA.Class.extend( {
         }
       }
       json = hybridjson;
-      
-    
+
+
     }
-    
-  
+
+
     if ( json.layers ){
       this._onLoad_SRC_URL(json.layers, url);
     }
-    
+
     if ( this._urlData )
     {
       this._urlData[ url ].req = null;
       this._urlData[ url ].loaded = true;
       this._urlData[ url ].layers = $.extend( true, [], json.layers );
     }
-    
-  
-    
+
+
+
     this._loadFinishCheck();
-    
+
   },
-  
+
   _loadFinishCheck : function()
   {
     var loaded = true;
@@ -24884,38 +24860,38 @@ GSI.LayersJSON = MA.Class.extend( {
       }
     }
     if ( !loaded ) return;
-    
+
     for ( var i=0; i<this._loadingUrlList.length; i++ )
     {
       // concatは？
-      
+
       var urlData = this._urlData[this._loadingUrlList[i].url];
       if ( this._loadingUrlList[i].isDetail )
       {
         if(!this._load_base)
         {
-          var jsonBase = { 
-            "layers": [ 
-              { 
-                "type": "LayerGroup", 
-                "title": CONFIG.layerBaseFolder, 
-                "title_sys": CONFIG.layerBaseFolderSYS, 
-                "iconUrl": "", 
-                "open": false, 
-                "toggleall": false, 
-                "entries": [] 
-              } 
-            ] 
+          var jsonBase = {
+            "layers": [
+              {
+                "type": "LayerGroup",
+                "title": CONFIG.layerBaseFolder,
+                "title_sys": CONFIG.layerBaseFolderSYS,
+                "iconUrl": "",
+                "open": false,
+                "toggleall": false,
+                "entries": []
+              }
+            ]
           };
-          
-          
+
+
           jsonBase.layers[0].entries =  $.extend(true,[],urlData.layers ).concat();
-          
+
           urlData = jsonBase;
-          
+
         }
         if ( !urlData.layers ) continue;
-        
+
         if ( this._loadingUrlList[i].top )
         {
           var baseLayerGroupIndex = null;
@@ -24932,7 +24908,7 @@ GSI.LayersJSON = MA.Class.extend( {
             this._data[this._detailTabIndex].entries.splice(baseLayerGroupIndex, 0,
               $.extend(true,{},urlData.layers[j] ) );
             baseLayerGroupIndex ++;
-            
+
           }
 
         }
@@ -24957,16 +24933,16 @@ GSI.LayersJSON = MA.Class.extend( {
         }
       }
     }
-    
-    
+
+
     this._loadingUrlList = null;
-    
+
     var _data = this._data.concat();
     this._initializeTreeCopy(_data, null);
     this._original = $.extend(true, [], _data);
 
     this.layers = [];
-    
+
     if ( !this._tabDataLoaded )
     {
       this._loadingUrlList = [];
@@ -24979,23 +24955,23 @@ GSI.LayersJSON = MA.Class.extend( {
           var url = this._tabs[i].layers[j];
           if ( !this._urlData[url] )
             this._urlData[ url ] = {};
-            
-            
+
+
           this._loadingUrlList.push( {url:url,isDetail:this._tabs[i].isDetail, tabIndex:i} );
         }
       }
     }
-    
-    
+
+
     this._initializeData( this._data, null );
-    
+
     this.fire( "load", { tree: this.tree, visibleLayers : this.visibleLayers, visibleLayersHash: this.visibleLayersHash } );
 
   },
-  
+
   /*
   },
-    
+
   load : function()
   {
     if ( this.ajax )
@@ -25106,7 +25082,7 @@ GSI.LayersJSON = MA.Class.extend( {
       }
       json = hybridjson;
     }
-    
+
         if ( json.layers ){
             this._onLoad_SRC_URL(json.layers, this._loadingData[ this.currentFileIndex ].url);
         }
@@ -25246,11 +25222,11 @@ GSI.LayersJSON = MA.Class.extend( {
   _initializeTree : function( tree, parent )
   {
     if ( !this.layersHash ) this.layersHash = {};
-    
+
     if ( !tree ) return;
     var folderCount = 0;
     if ( !this._baseLayerList ) this._baseLayerList = {};
-    
+
     for ( var i=0; i<tree.length; i++ )
     {
       if ( tree[i].type == "Layer" )
@@ -25271,7 +25247,7 @@ GSI.LayersJSON = MA.Class.extend( {
           var layerInfo = this.visibleLayersHash[ info.id ];
           info.initialOpacity = layerInfo.initialOpacity;
           this.visibleLayersHash[ info.id ].info = info;
-          
+
           for ( var j = 0; j<this.visibleLayersHash[ info.id ].length; j++ )
           {
             var layerInfo = this.visibleLayersHash[ info.id ][j];
@@ -25279,11 +25255,11 @@ GSI.LayersJSON = MA.Class.extend( {
             if ( ! this.visibleLayersHash[ info.id ][j].info  )
               this.visibleLayersHash[ info.id ][j].info = info;
           }
-          
+
         }
-        
+
         var isBase = GSI.GLOBALS.isBaseLayer( info );
-        
+
         if ( parent.title_sys == CONFIG.layerBaseFolderSYS || isBase )
         {
           this._baseLayerList[ info.id ] = info;
@@ -25299,12 +25275,12 @@ GSI.LayersJSON = MA.Class.extend( {
             a= a.parent;
           }
         }
-        
-        
+
+
         if (!this.layersHash[info.id] )
           this.layersHash[info.id] = info;
-        
-        
+
+
         this.layers.push( info );
       }
       else
@@ -25331,10 +25307,10 @@ GSI.LayersJSON = MA.Class.extend( {
           }
           if (!this.layersHash[info.id] )
             this.layersHash[info.id] = info;
-          
+
           this.layers.push( info );
         }
-        
+
       }
       tree[i].parent = parent;
       this._initializeTree( tree[i].entries, tree[i]);
@@ -25442,28 +25418,28 @@ GSI.LayersJSON.url2LayerType = function (url) {
 
 GLOBE.MultiLayer = MA.Class.extend( {
   includes: MA.Mixin.Events,
-  
+
   initialize : function(map,info,options)
   {
-    
+
     this._visible = true;
     this._map = map;
     this._info = info;
-    
+
     this._layers = [];
     this._initializeLayers( this._layers, this._info.entries );
     options = MA.setOptions(this, options);
-    
+
   },
-  
-  
+
+
   _initializeLayers : function(result, list)
   {
-    
+
     for( var i=0; i<list.length; i++ )
     {
       var item = list[i];
-      
+
       if ( item.entries )
       {
         this._initializeLayers( this._layers, item.entries );
@@ -25471,20 +25447,20 @@ GLOBE.MultiLayer = MA.Class.extend( {
       else
       {
         this._infoToLayer( item );
-        
+
         result.push( item );
-        
+
       }
     }
   },
-  
+
   _infoToLayer : function( info )
   {
     info._visibleInfo = {};
-    
+
     if ( info.layerType=="tile" )
     {
-      
+
       if ( !info._visibleInfo.layer)
       {
         //310-タイル表示
@@ -25502,7 +25478,7 @@ GLOBE.MultiLayer = MA.Class.extend( {
         };
       }
       info._visibleInfo.layer.alpha = this._info._visibleInfo.opacity;
-    
+
     }
     else if ( info.layerType=="kml" )
     {
@@ -25524,12 +25500,12 @@ GLOBE.MultiLayer = MA.Class.extend( {
     {
     // タイルTopoJSON
     }
-    
+
   },
-  
+
   _setTileGeoJSONAlpha : function(layer, alpha)
   {
-    
+
     var len = this._map.viewer.scene.primitives.length;
     for(var i=0; i<len; i++){
       var primitiveCollection = this._map.viewer.scene.primitives._primitives[i];
@@ -25541,7 +25517,7 @@ GLOBE.MultiLayer = MA.Class.extend( {
       }
     }
   },
-  
+
   setAlpha : function( alpha )
   {
     for( var i=0; i<this._layers.length; i++ )
@@ -25551,38 +25527,38 @@ GLOBE.MultiLayer = MA.Class.extend( {
         info._visibleInfo.layer.setAlpha( alpha );
       else
         info._visibleInfo.layer.alpha =  alpha;
-      
+
     }
   },
   _remove : function( viewer )
   {
-    
+
     for( var i=0; i<this._layers.length; i++ )
     {
       var info =  this._layers[i];
       if ( info._visibleInfo.layer._remove )
       {
         info._visibleInfo.layer._remove( viewer );
-        
+
       }
-      
+
     }
   },
-  
+
   _setVisible  :function(viewer, visible)
   {
-    
+
     for( var i=0; i<this._layers.length; i++ )
     {
       var info =  this._layers[i];
       if ( info._visibleInfo.layer._setVisible )
       {
         info._visibleInfo.layer._setVisible( viewer,visible );
-        
+
       }
-      
+
     }
-    
+
   }
 } );
 
@@ -25596,28 +25572,28 @@ GSI.AddrLoader = MA.Class.extend({
   initialize: function (map, options) {
     this._url = 'https://cyberjapandata.gsi.go.jp/xyz/lv01_plg/14/{x}/{y}.geojson';
   },
-  
+
   cancel: function () {
     if (this._request) {
     this._request.abort();
     this._request = null;
     }
   },
-  
+
   destroy: function () {
     this.clearEvents();
     this.cancel();
   },
-  
+
   load: function (pos) {
     this.cancel();
-  
+
     var tileInfo = this._getTileInfo(pos.lat, pos.lng, 14);
-  
+
     var url = this._url;
     url = url.replace("{x}", tileInfo.x).replace("{y}", tileInfo.y)
-  
-  
+
+
     $.ajax({
     type: "GET",
     dataType: "JSON",
@@ -25625,29 +25601,29 @@ GSI.AddrLoader = MA.Class.extend({
     })
     .done(MA.bind(this._onLoad, this, url, pos, tileInfo))
     .fail(MA.bind(this._onLoadError, this, pos, tileInfo));
-  
-  
+
+
   },
-  
+
   _onLoad: function (url, pos, tileInfo, e) {
     this._request = null;
     var data = e;
-  
+
     var hitFeature = null;
     if (data && data.features) {
     var targetPos = [pos.lng, pos.lat];
     for (var i = 0; i < data.features.length; i++) {
       var feature = data.features[i];
       if (!feature.geometry || !feature.geometry.coordinates) continue;
-  
+
       var coords = feature.geometry.coordinates;
       if (feature.geometry.type != "MultiPolygon") {
       coords = [coords];
       }
-  
+
       for (var j = 0; j < coords.length; j++) {
       var ret = null;
-  
+
       ret = this._isPointInPolygon(targetPos, coords[j][0]);
       if (ret) {
         for (var k = 1; k < coords[j].length; k++) {
@@ -25666,100 +25642,100 @@ GSI.AddrLoader = MA.Class.extend({
       }
       if (hitFeature) break;
     }
-  
-  
+
+
     }
-  
+
     var title = "";
     var titleYomi = null;
     var titleEng = null;
     if (hitFeature) {
-  
+
     var properties = hitFeature.properties;
     try {
       title = properties["pref"] + properties["muni"];
       if (properties["LV01"]){
         title += properties["LV01"];
       }
-  
+
       //読み
       titleYomi = properties["pref_kana"] + properties["muni_kana"];
       if (properties["Lv01_kana"]){
         titleYomi += properties["Lv01_kana"];
       }
-      
+
       // var code = parseInt(properties["行政コード"]);
       // var muni = GSI.MUNI_ARRAY["" + code];
       // if (muni) {
-  
+
       //   var muniParts = muni.split(",");
       //   if (muniParts.length >= 2) title += muniParts[1].trim();
       //   if (muniParts.length >= 4) title += muniParts[3].trim();
       //   title += (properties["LV01"] ? properties["LV01"] : "")
-  
+
       //   //読み
       //   titleYomi = properties["pref_kana"] + properties["muni_kana"] + properties["Lv01_kana"];
       // }
     } catch (ex) {
       console.log(ex);
     }
-  
+
     }
     this.fire("load", { "feature": hitFeature, "title": title, "titleYomi": titleYomi, "titleEng": titleEng, "lon": pos.lng, "lat": pos.lat });
   },
-  
+
   _isPointInPolygon: function (point, polygon) {
     var wn = 0;
-  
+
     for (var i = 0; i < polygon.length - 1; i++) {
     if ((polygon[i][1] <= point[1]) && (polygon[i + 1][1] > point[1])) {
       var vt = (point[1] - polygon[i][1]) / (polygon[i + 1][1] - polygon[i][1]);
       if (point[0] < (polygon[i][0] + (vt * (polygon[i + 1][0] - polygon[i][0])))) {
-  
+
       ++wn;
-  
+
       }
     }
     else if ((polygon[i][1] > point[1]) && (polygon[i + 1][1] <= point[1])) {
       var vt = (point[1] - polygon[i][1]) / (polygon[i + 1][1] - polygon[i][1]);
       if (point[0] < (polygon[i][0] + (vt * (polygon[i + 1][0] - polygon[i][0])))) {
-  
+
       --wn;
-  
+
       }
     }
     }
     return (wn != 0);
-  
+
   },
-  
+
   _onLoadError: function (tileInfo, e) {
     this.fire("load", {"lat": tileInfo.lat, "lon": tileInfo.lng});
   },
-  
+
   _getTileInfo: function (lat, lng, z) {
     var lng_rad = lng * Math.PI / 180;
     var R = 128 / Math.PI;
     var worldCoordX = R * (lng_rad + Math.PI);
     var pixelCoordX = worldCoordX * Math.pow(2, z);
     var tileCoordX = Math.floor(pixelCoordX / 256);
-  
+
     var lat_rad = lat * Math.PI / 180;
     var worldCoordY = - R / 2 * Math.log((1 + Math.sin(lat_rad)) / (1 - Math.sin(lat_rad))) + 128;
     var pixelCoordY = worldCoordY * Math.pow(2, z);
     var tileCoordY = Math.floor(pixelCoordY / 256);
-  
+
     return {
     x: tileCoordX,
     y: tileCoordY,
     pX: Math.floor(pixelCoordX - tileCoordX * 256),
     pY: Math.floor(pixelCoordY - tileCoordY * 256)
     };
-  
+
   }
-  
+
   });
-  
+
 
 function loadfile(files, key){
   GLOBE.DIALOG.FILEREAD.uploadFile(files, key);
@@ -25876,7 +25852,7 @@ function getFileData(url, key) {
   },
 
   adjust : function() {
-    
+
     this._slider.adjust(this._parentContainer);
 
   },
@@ -26310,7 +26286,7 @@ GLOBE.ComparePhotoLayer = MA.TileLayer.extend( {
       }
 
       this._mapLayerList.fire('tilechange');
-      this._mapLayerList.fire('change'); 
+      this._mapLayerList.fire('change');
 
       this.fire("change", {index:this.activeIndex});
     }
@@ -26323,7 +26299,7 @@ GLOBE.ComparePhotoLayer = MA.TileLayer.extend( {
     if ( this._layerInfo && !this._map) {
 
       this._layerInfo._visibleInfo.opacity = this.options.opacity ? this.options.opacity :this.opacity;
-      
+
       var layers = this._map.viewer.imageryLayers;
 
       this._layer = layers.addImageryProvider(
@@ -26653,14 +26629,14 @@ GLOBE.ComparePhotoContainsChecker = MA.Class.extend( {
   defaultLeft:  '10%',
   defaultRight: 'auto',
   defaultBottom:'auto',
-  
+
   resizable: true,
 
   initialize: function() {
     this._photoLayerList = CONFIG.COMPAREPHOTO_PHOTOLIST;
     this._activeIndex = -1;
   },
-  
+
   create: function()
   {
     this.initialize();
@@ -26670,7 +26646,7 @@ GLOBE.ComparePhotoContainsChecker = MA.Class.extend( {
     this.setDialogHeader(this.createHeader());
 //    this.setDialogContent(this.createContent());
   },
-  
+
   initPosition: function()
   {
     this.container
@@ -26681,12 +26657,12 @@ GLOBE.ComparePhotoContainsChecker = MA.Class.extend( {
         'width': '80%',
         'min-width': '88px'
       });
-    
+
     this.container.css('top', this.defaultTop);
     this.container.css('left', this.defaultLeft);
     this.container.css('right', this.defaultRight);
     this.container.css('bottom', this.defaultBottom);
-    
+
     this.contentFrame.css({
       'padding': '10px',
       'background-color': '#333',
@@ -26710,12 +26686,12 @@ GLOBE.ComparePhotoContainsChecker = MA.Class.extend( {
 
     return this._content;
   },
-  
+
   onBeforeShow: function()
   {
     this.initPosition();
   },
-  
+
   onDragStart: function()
   {
     this.container.css({

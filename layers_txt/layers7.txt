@@ -1187,7 +1187,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "土地分類基本調査（土地履歴調査）－政策統括官付",
+              "title": "土地分類基本調査（土地履歴調査）（国土交通省政策統括官）",
               "html": "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
               "toggleall": false,
               "src": "./layers_tochibunrui.txt"
@@ -1244,7 +1244,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "地質図－産総研地質調査総合センター",
+              "title": "地質図（産総研地質調査総合センター）",
               "html": "<div class='layer_text'><p>全国の地質図を表示します。</p></div>",
               "toggleall": false,
               "src": "./layers_gsj.txt"
