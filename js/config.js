@@ -1094,7 +1094,6 @@ $(function (){
 					editingData._editedData.maxNativeZoom = f.find("select[name='maxNativeZoom']").val();
 					editingData._editedData.legendUrl     = f.find("input[name=legendUrl]"       ).val();
 					editingData._editedData.description   = f.find("textarea[name=html]"         ).val();
-					editingData._editedData.tileSize      = f.find("select[name=tileSize]"       ).val();
 
 					if(onChange){
                         onChange(_onChangeParam,editingData);
@@ -1296,7 +1295,6 @@ $(function (){
 				fEditLayerForm.find("select[name='maxNativeZoom']").val(_data.maxNativeZoom ? _data.maxNativeZoom : "").on("change", this, onBlur);
 			    fEditLayerForm.find("input[name=legendUrl]"       ).val(_data.legendUrl     ? _data.legendUrl     : "").on("blur"  , this, onBlur);
 				fEditLayerForm.find("textarea[name=html]"         ).val(_data.description   ? _data.description   : "").on("blur"  , this, onBlur);
-				fEditLayerForm.find("select[name='tileSize']"     ).val(_data.tileSize      ? _data.tileSize      : "").on("blur"  , this, onBlur);
 
 				onLayerTypeChangeProc(o);
 
@@ -1467,9 +1465,6 @@ $(function (){
                     }
 					newItem.legendUrl   = item.legendUrl;
 					newItem.html        = ( item.description ? item.description : "" );
-					if ( item.tileSize && item.tileSize != '' ) {
-					  newItem.tileSize   = parseInt(item.tileSize);
-					}
 				}
 
 				parent.push( newItem );
