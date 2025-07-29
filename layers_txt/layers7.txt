@@ -840,11 +840,16 @@
             {
               "type": "Layer",
               "id": "southpole_spec",
-              "title": "南極の地理空間情報（整備範囲へジャンプ）",
-              "url": "https://maps.gsi.go.jp/xyz/southpole_spec/2/2/3.geojson",
+              "title": "南極の地理空間情報（整備範囲）",
+              "url": "https://maps.gsi.go.jp/xyz/southpole_spec/{z}/{x}/{y}.geojson",
               "html": "<div class='layer_text'><p>南極の情報が整備されている範囲を表示します。</p></div>概ね、東経15度から59度、南緯65度から79度の範囲の一部となります。",
               "maxNativeZoom": 2,
-              "maxZoom": 18
+              "maxZoom": 18,
+              "area": {
+                "lat": -69.004121,
+                "lng": 39.582034,
+                "zoom": 2
+              }
             },
             {
               "type": "Layer",
@@ -997,7 +1002,7 @@
                   "type": "Layer",
                   "id": "_southpole_50000_spec_2",
                   "title": "1:50,000　南極地形図（標高版）整備範囲",
-                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec_2/2/2/3.geojson",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_50000_spec_2/{z}/{x}/{y}.geojson",
                   "cocotile": false,
                   "html": "",
                   "maxNativeZoom": 2,
@@ -1025,6 +1030,32 @@
                   "id": "_southpole_satellite_250000_spec",
                   "title": "1:250,000　南極衛星画像図（楕円体高版）整備範囲",
                   "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec/{z}/{x}/{y}.geojson",
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 18
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "1:250,000　南極衛星画像図（標高版）",
+              "id": "southpole_satellite_250000_2",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>1:250,000　南極衛星画像図（標高版）<br><br>1:250,000　南極衛星画像図（標高版）については、等高線の高さは標高を使用しています。<br><br><br></p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/antarctic/southpole_satellite_250000_2.png\">凡例</a><br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "southpole_satellite_250000_2",
+                  "title": "1:250,000　南極衛星画像図（標高版）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_2/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "southpole_satellite_250000_spec_2",
+                  "title": "1:250,000　南極衛星画像図（標高版）整備範囲",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_spec_2/{z}/{x}/{y}.geojson",
                   "html": "",
                   "maxNativeZoom": 2,
                   "maxZoom": 18
@@ -1270,7 +1301,7 @@
               "minZoom": 15,
               "maxZoom": 18,
               "maxNativeZoom": 15,
-              "html": "<div class='layer_text'><p>ボーリング柱状図を見ることができます。</p></div>国土地盤情報サイト <a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/'>KuniJiban</a> が提供する国土交通省の地盤情報です（ズームレベル15以上で表示されます）。ご利用にあたっては<a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/terms.html'>利用規約</a>を遵守いただけますようお願い致します。<br>＜凡例＞<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/098.png' width='15' height='15'>XML提供<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/099.png' width='15' height='15'>PDF提供"
+              "html": "<div class='layer_text'><p>ボーリング柱状図を見ることができます。</p></div>国土地盤情報サイト <a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/'>KuniJiban</a> が提供する国土交通省の地盤情報です（ズームレベル15以上で表示されます）。ご利用にあたっては<a target='_blank' href='http://www.kunijiban.pwri.go.jp/jp/terms.html'>利用規約</a>を遵守いただけますようお願い致します。"
             },
             {
               "type": "Layer",
