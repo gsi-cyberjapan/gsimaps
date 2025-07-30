@@ -8742,10 +8742,6 @@ GSI.Utils.infoToLayer = function (info, noFinishMove) {
     if (info.maxNativeZoom && info.maxNativeZoom != "") options.maxNativeZoom = info.maxNativeZoom;
     if (info.attribution) options.attribution = info.attribution;
     if (info.bounds && info.bounds != "") options.bounds = L.latLngBounds(info.bounds);
-    if (info.tileSize && info.tileSize !== "")
-      options.printTileSize = info.tileSize
-    else
-      options.printTileSize = 256
     if (info.id == CONFIG.FREERELIEFID)
       layer = new GSI.ReliefTileLayer(info.url, options);
     else
@@ -13980,8 +13976,7 @@ GSI.MapToImage = L.Evented.extend({
           item.drawLayer = new GSI.MapToImage.TileLayer(this._map, layer, {
             opacity: item.opacity,
             grayscale: item.grayscale,
-            blend: item.blend, pixelBounds: this.options.pixelBounds,
-            printTileSize: layer.options.printTileSize
+            blend: item.blend, pixelBounds: this.options.pixelBounds
           });
         }
       }
@@ -15102,7 +15097,6 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
     var tileSize = this._getTileSize();
     var origin = this._map.getPixelOrigin();
     var pixelBounds = (this.options.pixelBounds ? this.options.pixelBounds : this._map.getPixelBounds());
-    var printTileSize = this.options.printTileSize ? this.options.printTileSize : 256;
     var loadCounter = 0;
 
     for (var i = 0; i < this._queue.length; i++) {
@@ -15141,7 +15135,7 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
         height: tileSize + "px"
       }).attr({ "crossorigin": "anonymous" });
       tilePoint.img[0].setAttribute("crossorigin", "anonymous");
-      tilePoint.size = printTileSize;
+      tilePoint.size = tileSize;
       tilePoint.pos = tilePos;
       tilePoint.img.on("load", L.bind(this._onTileLoad, this, tilePoint));
       tilePoint.img.on("error", L.bind(this._onTileLoadError, this, tilePoint));
@@ -15249,13 +15243,13 @@ GSI.MapToImage.TileLayer = L.Evented.extend({
       else {
         if (this.options.blend) {
           texture.globalCompositeOperation = "multiply";
-          texture.drawImage(tilePoint.img[0], 0, 0, tilePoint.size, tilePoint.size,
+          texture.drawImage(tilePoint.img[0], 0, 0, tilePoint.img[0].width, tilePoint.img[0].height,
             tilePoint.pos.x, tilePoint.pos.y,
             256, 256);
           texture.globalCompositeOperation = "source-over";
         }
         else {
-          texture.drawImage(tilePoint.img[0], 0, 0, tilePoint.size, tilePoint.size,
+          texture.drawImage(tilePoint.img[0], 0, 0, tilePoint.img[0].width, tilePoint.img[0].height,
             tilePoint.pos.x, tilePoint.pos.y,
             256, 256);
 

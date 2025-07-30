@@ -121,7 +121,7 @@ SOFTWARE.
         }
 		*/
 		this._test = 0;
-		
+
 		this._urlList = [];
 		this._tileList = options.tileList;
 		for ( var i=0; i<this._tileList.length; i++ )
@@ -148,7 +148,7 @@ SOFTWARE.
         //this._maximumLevel = defaultValue(options.maximumLevel, parsedLayers[2]);
 		//this._minimumLevel = options.minZoom;
 		this._maximumLevel = (options.maxZoom ? options.maxZoom + 1 : options.maxZoom);
-		
+
         this._rectangle = defaultValue(options.rectangle, this._tilingScheme.rectangle);
 
         // Check the number of tiles at the minimum level.  If it's more than four,
@@ -173,7 +173,7 @@ SOFTWARE.
     };
 
 	function buildImageUrl(imageryProvider, x, y, level) {
-		
+
 		var tileList = imageryProvider._tileList;
 		var urlList = [];
 		//var urlList = imageryProvider._urlList.concat();
@@ -188,7 +188,7 @@ SOFTWARE.
 				var tileX = x;
 				var tileY = y;
 				var tileL = level;
-				
+
 				if ( tileList[i].maxNativeZoom != null && tileList[i].maxNativeZoom < level )
 				{
 					var mag = Math.pow(2, level - tileList[i].maxNativeZoom);
@@ -196,13 +196,13 @@ SOFTWARE.
 					var tileY = parseInt(tileY / mag);
 					var tileL = tileList[i].maxNativeZoom;
 				}
-				
+
 				if ( tileList[i].tms )
 				{
 					var tileMaxIndex = (tileL == 0 ? 0 : Math.pow(2, tileL) - 1);
 					tileY = tileMaxIndex - tileY;
 				}
-				
+
 				urlList.push( tileList[i].url.replace( "{x}", tileX ).replace( "{y}", tileY ).replace( "{z}", tileL ) );
 			}
 		}
@@ -216,7 +216,7 @@ SOFTWARE.
 					urlList[i] = proxy.getURL(urlList[i]);
 			}
 		}
-		
+
 		return urlList;
 	}
 
@@ -332,7 +332,7 @@ SOFTWARE.
         return undefined;
     };
 
-    JapanGSICombineImageryProvider.prototype.requestImage = function(x, y, level) {
+  JapanGSICombineImageryProvider.prototype.requestImage = function(x, y, level) {
 		if (!this._ready) {
 		    throw new DeveloperError('requestImage must not be called before the imagery provider is ready.');
 		}
@@ -348,52 +348,52 @@ SOFTWARE.
 		}
 		var urlList = buildImageUrl(this, x, y, level);
 		var tileList = this._tileList;
-		
-		
+
+
 		var fncToGrayScale = function( ctx )
 		{
 			var src = ctx.getImageData(0, 0, 256, 256);
 			var dst = ctx.createImageData(256,256);
-			
+
 			for (var i = 0; i < src.data.length; i=i+4) {
 			    var pixel = (src.data[i] + src.data[i+1] + src.data[i+2]) / 3;
 			    dst.data[i] = dst.data[i+1] = dst.data[i+2] = pixel;
 			    dst.data[i+3] = src.data[i+3];
 			}
-			
+
 			ctx.putImageData(dst, 0, 0);
 		};
-		
-		
+
+
 		var fncCombine = function( ctx, overCtx, opacity, mode )
 		{
 			opacity = parseFloat(opacity);
-			
+
 			var src = ctx.getImageData(0, 0, 256, 256);
 			var dst = ctx.createImageData(256,256);
 			var imgData = overCtx.getImageData(0,0,256,256);
-			
+
 			for (var i = 0; i < src.data.length; i=i+4) {
-				
+
 				var c1 = {
 					r : src.data[i],
 					g : src.data[i+1],
 					b : src.data[i+2],
 					a : src.data[i+3]
 				};
-				
+
 				var c2 = {
 					r : imgData.data[i],
 					g : imgData.data[i+1],
 					b : imgData.data[i+2],
 					a : imgData.data[i+3]
 				};
-				
+
 				var r = 0;
 				var g = 0;
 				var b = 0;
 				var a = 0;
-				
+
 
 				if (c2.a == 0 || opacity == 0){
 					//a=0と透過100%は乗算しない
@@ -411,7 +411,7 @@ SOFTWARE.
 							b = c1.b + ( ( c2.b - c1.b ) * opacity );
 							a = c1.a + ( ( c2.a - c1.a ) * opacity );
 							break;
-							
+
 						case 2: //乗算
 							r = c1.r * ( c2.r / 255 );
 							g = c1.g * ( c2.g / 255 );
@@ -434,24 +434,24 @@ SOFTWARE.
 				g = Math.floor(g);
 				b = Math.floor(b);
 				a = Math.floor(a);
-				
-				
+
+
 				if ( r > 255 ) r = 255;
 				if ( g > 255 ) g = 255;
 				if ( b > 255 ) b = 255;
 				if ( a > 255 ) a = 255;
-				
-				
+
+
 				dst.data[i] = r;
 				dst.data[i+1] = g;
 				dst.data[i+2] = b;
 				dst.data[i+3] = a;
-				
-				
+
+
 			}
 			ctx.putImageData(dst, 0, 0);
-		}		
-		
+		}
+
 		var promiseList = [];
 		for ( var i=0; i<urlList.length; i++ )
 		{
@@ -466,11 +466,11 @@ SOFTWARE.
 						return deferred.promise;
 					});
 				};
-				
-				
+
+
 				loadRelief.createImage = function(info, deferred) {
-					
-					var loader = new GSI3D.DEMLoader( 
+
+					var loader = new GSI3D.DEMLoader(
 						info.coords.x, info.coords.y, info.coords.z,
 						$.extend( true, [], []), {
 							overZooming : true,
@@ -478,29 +478,29 @@ SOFTWARE.
 						} );
 					loader.on("load",function(e) {
 						var deferred = e.target._params.deferred;
-						
+
 						var canvas = document.createElement("canvas");
-						
+
 						canvas.width=256;
 						canvas.height=256;
-						
+
 						var ctx = canvas.getContext('2d');
-						e.target._params.info.target._reliefDrawer.draw( canvas, 
+						e.target._params.info.target._reliefDrawer.draw( canvas,
 							e.target.getData(), e.target.getHillshademapImage() );
 						deferred.resolve(canvas);
 					});
-					
+
 					loader._params = {
 						info:info,
 						deferred : deferred
 					}
 					loader.load();
-					
+
 					return deferred.promise;
 				};
-				
-				
-				
+
+
+
 				if ( !this._reliefDrawer )
 					this._reliefDrawer = new GSI3D.ReliefTileLayer.TileDrawer(GSI.GLOBALS.mapLayerList.getElevationData());
 				var deferred = Cesium.when.defer();
@@ -510,18 +510,18 @@ SOFTWARE.
 						coords : {x:x,y:y, z: level}
 					}, deferred)
 				);
-			
+
 			}
 			else if ( tileList[i].maxNativeZoom != null && tileList[i].maxNativeZoom < level )
 			{
 				var mag = Math.pow(2, level - tileList[i].maxNativeZoom);
-				
+
 				var tileX = parseInt(x / mag);
 				var indexInTileX = (x / mag - tileX) * mag;
-				
+
 				var tileY = parseInt(y / mag);
 				var indexInTileY = (y / mag - tileY) * mag;
-				
+
 				var promise = Cesium.when.reject();
 				if ( mag <= 256 )
 				{
@@ -532,7 +532,7 @@ SOFTWARE.
 								var canvas = document.createElement("canvas");
 								canvas.width  = 256;
 								canvas.height = 256;
-								
+
 								var blockSize = parseInt(canvas.width / mag);
 								var sx = blockSize * indexInTileX;
 								var sy = blockSize * indexInTileY;
@@ -542,12 +542,12 @@ SOFTWARE.
 								var dy = 0;
 								var dw = canvas.width;
 								var dh = canvas.height;
-								
+
 								var ctx = canvas.getContext('2d');
 								ctx.clearRect( 0, 0, canvas.width, canvas.height );
 								ctx.beginPath();
 								ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
-								
+
 								return Cesium.when.resolve( canvas );
 							}
 							catch(e)
@@ -559,10 +559,26 @@ SOFTWARE.
 				}
 				promiseList.push( promise );
 			}
-			else
-				promiseList.push( ImageryProvider.loadImage(this, urlList[i]) );
+			else {
+        //promiseList.push( ImageryProvider.loadImage(this, urlList[i]) ); // original code
+        promise = ImageryProvider.loadImage(this, urlList[i])
+          .then(function(image) {
+            try {
+              var canvas = document.createElement("canvas");
+              canvas.width  = 256;
+              canvas.height = 256;
+              var ctx = canvas.getContext('2d');
+              ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, 256, 256);
+              return Cesium.when.resolve( canvas );
+            } catch (e) {
+              console.log("Error at Load Image", e);
+              return Cesium.when.reject();
+            }
+          })
+        promiseList.push ( promise );
+      }
 		}
-		
+
 		var canvasWidth = 256;
 		var canvasHeight = 256;
 
@@ -578,13 +594,13 @@ SOFTWARE.
 				workCtx.globalAlpha = 1;
 				workCtx.fillStyle = "#fff";
 				workCtx.fillRect( 0, 0, canvasWidth, canvasHeight );
-				
+
 				var tempCanvas = document.createElement("canvas");
 				tempCanvas.width  = canvasWidth;
 				tempCanvas.height = canvasHeight;
 				var tempCtx = tempCanvas.getContext("2d");
 				tempCtx.globalAlpha = 1;
-				
+
 				for ( var i=imageList.length-1; i>=0; i-- )
 				{
 					//Promiseを解決できていない分はスキップ
@@ -595,20 +611,20 @@ SOFTWARE.
 					if ( !tile || !tile._visibleInfo || tile._visibleInfo._isHidden ) continue;
 					if ( tile.minZoom != null && tile.minZoom > level ) continue;
 					if ( tile.maxZoom != null && tile.maxZoom < level ) continue;
-					
-					
+
+
 					var opacity = tile._visibleInfo.opacity;
 					if ( opacity == undefined ) opacity = 1;
-					
+
 					tempCtx.clearRect( 0, 0, canvasWidth, canvasHeight );
 					tempCtx.beginPath();
 					tempCtx.drawImage(data, 0, 0);
-					
+
 					if ( tile._visibleInfo._grayScale )
 					{
 						fncToGrayScale(tempCtx);
 					}
-					
+
 					if ( tile._visibleInfo._isCombine && opacity != 1 )
 					{
 						fncCombine( workCtx, tempCtx, opacity, 3 );
@@ -626,7 +642,7 @@ SOFTWARE.
 						workCtx.drawImage( tempCanvas, 0, 0, canvasWidth, canvasHeight );
 					}
 				}
-				
+
 				if ( othis._test )
 				{
 					workCtx.beginPath();
@@ -637,7 +653,7 @@ SOFTWARE.
 					workCtx.font = "20px 'HG正楷書体-PRO'";
 					workCtx.fillText("xyz: " + x + " / " + y + " / " + level, 5, canvasHeight-10);
 				}
-				
+
 				return Cesium.when.resolve( workCtx.getImageData(0, 0, canvasWidth, canvasHeight) );
 			}
 			catch(e)
