@@ -201,23 +201,23 @@ var args = null;
 /*-----------------------------------------------------------------------------------------------*/
 var vLayers = null;
 /* レイヤー配列
-		id          : 
-		url         : 
-		url_type    : 
-		url_ext     : 
-		url_style   : 
-		z           : 
-		x           : 
-		y           : 
-		size        : 
-		zoom        : 
-		zoom_x      : 
-		zoom_y      : 
-		zoom_min    : 
-		zoom_max    : 
-		zoom_native : 
-		opacity     : 
-		grayscale   : 
+		id          :
+		url         :
+		url_type    :
+		url_ext     :
+		url_style   :
+		z           :
+		x           :
+		y           :
+		size        :
+		zoom        :
+		zoom_x      :
+		zoom_y      :
+		zoom_min    :
+		zoom_max    :
+		zoom_native :
+		opacity     :
+		grayscale   :
 */
 var oLayersTM = null;
 var vLayersTM = 100;
@@ -761,7 +761,7 @@ function InitLoadLayersTxt() {
 			, load: null
 			, layers: null
 		};
-		//_Load_Data.push(d);  
+		//_Load_Data.push(d);
 		lyaersJSONList.push(CONFIG.layers[n]);
 	}
 
@@ -1377,7 +1377,7 @@ function InitLoad() {
 				logCnt++;
 				localStorage.setItem("loglist6", logA);
 				localStorage.setItem("logcnt6", logCnt);
-				
+
 				if ( logCnt > 101 )
 				{
 					console.log( logA );
@@ -2615,12 +2615,12 @@ function LoadLayers(z, x, y, nTilesOTS_X, nTilesOTS_Y) {
 			}
 			/*
 			var i= ny_tile * nTilesOTS_X + nx_tile;
-			
+
 			var vTilesDemAry = null;
 	        if(vTilesDem[i] != ""){
 	            vTilesDemAry = vTilesDem[i].replace(/\n/g,",").split(",");
 	        }
-	        
+
 	        for(ny_dem = 0; ny_dem < 256; ny_dem++){
 				for(nx_dem = 0; nx_dem < 256; nx_dem++){
 	                var vTilesDemAryV = 0;
@@ -2633,9 +2633,9 @@ function LoadLayers(z, x, y, nTilesOTS_X, nTilesOTS_Y) {
 					//if ( vTilesDemAryV <= 0 ) vTilesDemAryV= 1000;
 					var xx = ( nx_tile * 256 ) +nx_dem;
 					var yy = ( ny_tile * 256 ) +ny_dem;
-					
+
 					vDem[sizeW * yy + xx] = vTilesDemAryV;
-					
+
 				}
 	    	}
 	    	*/
@@ -2833,7 +2833,7 @@ function LoadLayersProc(oTextureCanvas_2D, x, y, wTileImg, hTileImg) {
 		}
 	}
 
-	
+
 };
 
 function LoadLayers_GeotiffOpener(ctx) {
@@ -2856,7 +2856,7 @@ function LoadLayers_GeotiffOpener(ctx) {
 	vRange_Lat_B = GetTile2Lat(vRange_Y_B + nY, vZ);
 	var vDeg2PxX = vTextureCanvas_W / (vRange_Lon_R - vRange_Lon_L);
 	var vDeg2PxY = vTextureCanvas_H / (LoadLayers_Vectors_MercaY(vRange_Lat_T, vZ) - LoadLayers_Vectors_MercaY(vRange_Lat_B, vZ));
-	
+
 
 	if ( !geoTiffList) return;
 
@@ -3229,11 +3229,11 @@ function LoadLayersCanvas(oTextureCanvas_2D, vUrl, vTile, nx, ny, wTileImg, hTil
 		}
 		else {
 			if (vUrl.multiplytile == 0) {
-				oTextureCanvas_2D.drawImage(vTile, 0, 0, 256, 256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
+				oTextureCanvas_2D.drawImage(vTile, 0, 0, vTile.width, vTile.height, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
 			}
 			else {
 				oTextureCanvas_2D.globalCompositeOperation = "multiply";
-				oTextureCanvas_2D.drawImage(vTile, 0, 0, 256, 256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
+				oTextureCanvas_2D.drawImage(vTile, 0, 0, vTile.width, vTile.height, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
 				oTextureCanvas_2D.globalCompositeOperation = "source-over";
 			}
 			//oTextureCanvas_2D.drawImage(vTile, 0, 0, 256 ,256, nx * wTileImg, ny * hTileImg, wTileImg, hTileImg);
@@ -4872,11 +4872,11 @@ function Draw3DGEOData() {
 
 			oScene.add(mesh);
 			/*
-			var material2 = new THREE.LineBasicMaterial( { 
+			var material2 = new THREE.LineBasicMaterial( {
 				color: color,linewidth:parseInt(weight),
 				opacity: opacity, depthWrite:true,  transparent: true
 			} );
-			
+
 			var geometry2 = new THREE.CircleGeometry( vR, 500 );
 			var mesh2 = new THREE.Mesh( geometry2, material2 );
 			mesh2.position.set( point.x, point.y, point.z );
@@ -5261,10 +5261,10 @@ function _draw3DGEODataPolygon(geometry, viewBox, data) {
 		geometry.vertices.push(new THREE.Vertex(v1));
 		geometry.vertices.push(new THREE.Vertex(v2));
 		geometry.vertices.push(new THREE.Vertex(v3));
-		
+
 		var face = new THREE.Face3( geometry.vertices.length-3, geometry.vertices.length-2, geometry.vertices.length-1 );
 		geometry.faces.push( face );
-		
+
 	}
 	*/
 	return triangles;
@@ -5737,7 +5737,7 @@ function DownloadProc(fname, a) {
 										geo3DData.push(lineData);
 									}
 									/*
-									
+
 									*/
 								}
 								else if (oGeo3DData[i].properties._markerType == "LineString" || oGeo3DData[i].geometry["type"] == "LineString") {
@@ -6190,7 +6190,7 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 	var objPointList = "";
 	var objTextureList = "";
 	var objFaceList = "";
-	
+
 	/*....................................................................
 	 * VALUE
 	 *....................................................................*/
@@ -6459,10 +6459,10 @@ function Download_ConvertFromDem(type, vDem, vZRate, vDistance) {
 
 			}
 		}
-		for (nY = 0; nY < colY; nY++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1)) + " 0 " + (vDemXY * nY) + ",\n"; } // ポイントリスト：左面        
-		for (nY = 0; nY < colY; nY++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * (colX - 1)) + " 0 " + (vDemXY * nY) + ",\n"; } // ポイントリスト：右面        
-		for (nX = 1; nX < colX - 1; nX++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * nX) + " 0 0,\n"; } // ポイントリスト：奥面        
-		for (nX = 1; nX < colX - 1; nX++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * nX) + " 0 " + (vDemXY * (colY - 1)) + ",\n"; } // ポイントリスト：手前面        
+		for (nY = 0; nY < colY; nY++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1)) + " 0 " + (vDemXY * nY) + ",\n"; } // ポイントリスト：左面
+		for (nY = 0; nY < colY; nY++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * (colX - 1)) + " 0 " + (vDemXY * nY) + ",\n"; } // ポイントリスト：右面
+		for (nX = 1; nX < colX - 1; nX++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * nX) + " 0 0,\n"; } // ポイントリスト：奥面
+		for (nX = 1; nX < colX - 1; nX++) { wrlPointList1 += "\t\t\t\t\t\t" + (modelSizeX * (-1) + vDemXY * nX) + " 0 " + (vDemXY * (colY - 1)) + ",\n"; } // ポイントリスト：手前面
 		wrlPointList1 += "\t\t\t\t\t\t" + (Math.round(modelSizeX * (-1) / 2)) + " 0 " + (Math.round(modelSizeY / 2));                                            // ポイントリスト：底面の中心点
 
 		// 面リスト：表面
@@ -8322,6 +8322,3 @@ GSI3D.ReliefTileLayer.TileDrawer.getCanvas = function () {
 	}
 	return GSI3D.ReliefTileLayer.TileDrawer._canvas;
 };
-
-
-
