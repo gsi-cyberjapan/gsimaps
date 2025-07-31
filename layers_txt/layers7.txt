@@ -5724,6 +5724,16 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "3d_pcd_update_2025_07",
+                  "title": "2025年7月提供",
+                  "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2025_07/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 14,
+                  "maxNativeZoom": 2
+                },
+                {
+                  "type": "Layer",
                   "id": "3d_pcd_update_2025_02",
                   "title": "2025年2月提供",
                   "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2025_02/{z}/{x}/{y}.geojson",
