@@ -607,6 +607,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和7年(2025年)8月6日からの大雨",
+              "toggleall": false,
+              "src": "./layers_20250815rain.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和6年9月20日からの大雨",
               "toggleall": false,
               "src": "./layers_20240923rain.txt"
