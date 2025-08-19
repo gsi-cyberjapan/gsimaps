@@ -20,6 +20,110 @@
             "zoom": 12
           },
           "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20250815rain_yatushironishi_0816suichoku_sokuho",
+          "title": "八代西地区（8/16撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushironishi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "area": {
+            "lat": 32.583634,
+            "lng": 130.788628,
+            "zoom": 12
+          },
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20250815rain_yatushirohigashi_0816suichoku_sokuho",
+          "title": "八代東地区（8/16撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushirohigashi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxNativeZoom": 2,
+          "area": {
+            "lat": 32.580774,
+            "lng": 131.024128,
+            "zoom": 12
+          },
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+        {
+      "type": "LayerGroup",
+      "title": "正射画像（速報）",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20250815rain_amakusa_0815do_sokuho",
+          "title": "天草上島地区（8/15撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_amakusa_0815do_sokuho/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "area": {
+            "lat": 32.449665,
+            "lng": 130.333900,
+            "zoom": 12
+          },
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+         {
+          "type": "Layer",
+          "id": "20250815rain_yatsushironishi_0816do_sokuho",
+          "title": "八代西地区（8/16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatsushironishi_0816do_sokuho/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "area": {
+            "lat": 32.586019,
+            "lng": 130.795326,
+            "zoom": 12
+          },
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+         {
+          "type": "Layer",
+          "id": "20250815rain_yatsushirohigashi_0816do_sokuho",
+          "title": "八代東地区（8/16撮影）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatsushirohigashi_0816do_sokuho/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 10,
+          "maxZoom": 18,
+          "area": {
+            "lat": 32.616634,
+            "lng": 131.107475,
+            "zoom": 13
+          },
+          "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+       {
+      "type": "LayerGroup",
+      "title": "斜面崩壊・土石流・堆積分布データ",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa",
+          "title": "斜面崩壊・土石流・堆積分布図データ（天草上島地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 17,
+          "maxNativeZoom": 2
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240923rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が8月15日に撮影した空中写真（正射画像）を判読して取得した、令和7年8月6日からの大雨によって生じたと考えられる斜面崩壊及び土石流箇所並びに堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の大雨によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の大雨によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・土石流・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　令和7年8月18日19時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
         }
       ]
     }
