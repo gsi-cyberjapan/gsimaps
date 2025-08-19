@@ -110,7 +110,7 @@
     },
     {
       "type": "LayerGroup",
-      "title": "斜面崩壊・土石流・堆積分布データ",
+      "title": "斜面崩壊・土石流・堆積分布図データ",
       "iconUrl": "",
       "toggleall": false,
       "entries": [
