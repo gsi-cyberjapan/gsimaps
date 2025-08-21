@@ -124,6 +124,28 @@
           "maxZoom": 17,
           "maxNativeZoom": 2,
           "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20250815rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が8月15日に撮影した空中写真（正射画像）を判読して取得した、令和7年8月6日からの大雨によって生じたと考えられる斜面崩壊及び土石流箇所並びに堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の大雨によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の大雨によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・土石流・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　令和7年8月18日19時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi",
+          "title": "斜面崩壊・土石流・堆積分布図データ（八代東地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 17,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20250815rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が8月16日に撮影した空中写真（正射画像）を判読して取得した、令和7年8月6日からの大雨によって生じたと考えられる斜面崩壊及び土石流箇所並びに堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の大雨によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の大雨によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・土石流・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　令和7年8月19日12時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi",
+          "title": "斜面崩壊・土石流・堆積分布図データ（八代西地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 4,
+          "maxZoom": 17,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20250815rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が8月16日に撮影した空中写真（正射画像）を判読して取得した、令和7年8月6日からの大雨によって生じたと考えられる斜面崩壊及び土石流箇所並びに堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の大雨によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の大雨によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・土石流・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2025年8月19日15時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         }
       ]
     }
