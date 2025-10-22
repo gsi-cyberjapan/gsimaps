@@ -29699,47 +29699,36 @@ GSI.EditReliefDialog = GSI.Dialog.extend({
         useHillshademap: false
       });
       loader.on("load", L.bind(function (loader, tileList, tile, minMax, rangeInfo, e) {
-        for (var i = 0; i < tileList.length; i++) {
-          if (tileList[i] == tile) {
-            tileList.splice(i, 1);
-            break;
-          }
-        }
+        tileList.splice(tileList.indexOf(tile), 1); // 読み込み待ちリストからこのタイルを削除
 
-        var dem = e.target.getData();
+        var dem = Float64Array.from(e.target.getData());
         if (dem) {
-
-          var idx = 0;
-          for (var y = 0; y < 256; y++) {
-            for (var x = 0; x < 256; x++) {
-              var h = dem[idx];
-              idx++;
-              if (tile.coords.x == rangeInfo.tileRange.min.x && x < rangeInfo.offset.min.x) {
-                continue;
-              }
-              if (tile.coords.y == rangeInfo.tileRange.min.y && y < rangeInfo.offset.min.y) {
-                continue;
-              }
-
-              if (tile.coords.x == rangeInfo.tileRange.max.x && x > rangeInfo.offset.max.x) {
-                continue;
-              }
-              if (tile.coords.y == rangeInfo.tileRange.max.y && y > rangeInfo.offset.max.y) {
-                continue;
-              }
-              if (!h && h != 0) continue;
-              if ((!minMax.min && minMax.min != 0) || minMax.min > h) {
-                minMax.min = h;
-              }
-
-              if ((!minMax.max && minMax.max != 0) || minMax.max < h) {
-                minMax.max = h;
-              }
+          let dem_range;
+          if (tile.coords.y == rangeInfo.tileRange.min.y || tile.coords.y == rangeInfo.tileRange.max.y ||
+              tile.coords.x == rangeInfo.tileRange.min.x || tile.coords.x == rangeInfo.tileRange.max.x) {
+            let y_lowerbound = tile.coords.y == rangeInfo.tileRange.min.y ? rangeInfo.offset.min.y : 0;
+            let y_upperbound = tile.coords.y == rangeInfo.tileRange.max.y ? rangeInfo.offset.max.y : 255;
+            let x_lowerbound = tile.coords.x == rangeInfo.tileRange.min.x ? rangeInfo.offset.min.x : 0;
+            let x_upperbound = tile.coords.x == rangeInfo.tileRange.max.x ? rangeInfo.offset.max.x : 255;
+            dem_range = new Float64Array((y_upperbound - y_lowerbound + 1) * (x_upperbound - x_lowerbound + 1));
+            for (var y = y_lowerbound; y <= y_upperbound; y++) {
+              dem_range.set(
+                dem.subarray(y * 256 + x_lowerbound, y * 256 + x_upperbound + 1),
+                (y - y_lowerbound) * (x_upperbound - x_lowerbound + 1)
+              );
             }
+            dem_range.sort();
+          } else {
+            dem_range = dem.toSorted((a, b) => a - b);
           }
+          let localmin = dem_range[Math.floor(dem_range.length * 0.005)];
+          let localmax = dem_range[Math.floor(dem_range.length * 0.995)];
+          minMax.min = (!minMax.max && minMax.max != 0) ? localmin : Math.min(minMax.min, localmin);
+          minMax.max = (!minMax.max && minMax.max != 0) ? localmax : Math.max(minMax.max, localmax);
         }
 
-        if (tileList.length <= 0) {
+        // 全タイル読み込み終了したら
+        if (tileList.length == 0) {
           var colors = $.extend(true, [], GSI.ReliefTileLayer.getElevationSampleData().colors);
           var low = Math.floor(minMax.min);
           var hi = Math.floor(minMax.max);

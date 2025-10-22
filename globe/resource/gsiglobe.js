@@ -21681,18 +21681,12 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         }
 
         var dem = e.target.getData();
-        if ( dem ) {
-          for( var i=0; i<dem.length; i++ ) {
-            var h = dem[i];
-            if ( !h && h != 0 ) continue;
-            if ( ( !minMax.min && minMax.min != 0) || minMax.min > h ) {
-              minMax.min = h;
-            }
-
-            if ( ( !minMax.max && minMax.max != 0) || minMax.max < h ) {
-              minMax.max = h;
-            }
-          }
+        if (dem) {
+          let dem_range = Float64Array.from(dem).sort((a, b) => a - b);
+          let localmin = dem_range[Math.floor(dem_range.length * 0.005)];
+          let localmax = dem_range[Math.floor(dem_range.length * 0.995)];
+          minMax.min = (!minMax.max && minMax.max != 0) ? localmin : Math.min(minMax.min, localmin);
+          minMax.max = (!minMax.max && minMax.max != 0) ? localmax : Math.max(minMax.max, localmax);
         }
 
         if ( tileList.length <= 0 ) {
