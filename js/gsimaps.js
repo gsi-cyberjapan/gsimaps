@@ -45929,7 +45929,7 @@ GSI.GeoJpegMarker = L.Marker.extend({
   },
 
   _getDirectionKey: function (direction) {
-    if (direction >= 337.5 && direction < 22.5) {
+    if (direction >= 337.5 || direction < 22.5) {
       return "n";
     } else if (direction >= 22.5 && direction < 67.5) {
       return "ne";
