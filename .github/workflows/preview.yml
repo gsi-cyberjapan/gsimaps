@@ -8,32 +8,100 @@ on:
       - synchronize
       - closed
 permissions:
-  # pr-preview ブランチに書き込みするため
-  contents: write
-
-  # プレビューの URL をコメントに書き込むため
+  contents: read
   issues: write
   pull-requests: write
+  id-token: write
 jobs:
   deploy-preview:
-    if: github.repository == 'gsimaps-cicd/gsimaps-internal'
-
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal' && github.event.action != 'closed'
     runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ap-northeast-1
+      MANAGEMENT_ROLE_ARN: ${{ secrets.GEOLONIA_DEPLOY_ROLE_ARN }}
+      DEPLOY_ROLE_ARN: ${{ secrets.GSIMAPS_DEPLOY_ROLE_ARN }}
+      PREVIEW_BUCKET_NAME: ${{ secrets.PREVIEW_BUCKET_NAME }}
+      BASIC_AUTH_USER: ${{ secrets.PREVIEW_BASIC_AUTH_USER }}
+      BASIC_AUTH_PASS: ${{ secrets.PREVIEW_BASIC_AUTH_PASS }}
     steps:
       - uses: actions/checkout@v4
-      - name: デプロイしないファイルを掃除する
+      - name: Build
         run: |
-          rm \
-            .editorconfig \
-            .env \
-            .gitattributes \
-            .gitignore \
-            package.json \
-            package-lock.json
-        if: github.event.action != 'closed'
-      - uses: rossjrw/pr-preview-action@v1
+          npm ci
+          npm run build
+      - name: Assume deploy role (GSIMAPS / S3側)
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          source-dir: .
-          preview-branch: pr-preview
-          umbrella-dir: pr-preview
-          action: auto
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
+      - name: Upload artifacts to preview bucket (pr-<number>/ prefix)
+        run: |
+          aws s3 sync ./dist "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/"
+      - name: Assume management role (CloudFront)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
+      - name: Terraform init & apply (CloudFront + Basic auth)
+        working-directory: infra/pr-preview
+        run: |
+          terraform init
+          terraform apply -auto-approve \
+            -var pr_number=${{ github.event.number }} \
+            -var preview_bucket_name=${{ env.PREVIEW_BUCKET_NAME }} \
+            -var basic_auth_user=${{ env.BASIC_AUTH_USER }} \
+            -var basic_auth_pass=${{ env.BASIC_AUTH_PASS }}
+      - name: Get TF outputs
+        id: tf
+        working-directory: infra/pr-preview
+        run: |
+          echo "url=$(terraform output -raw preview_url)" >> $GITHUB_OUTPUT
+
+      - name: Comment preview URL on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = "${{ steps.tf.outputs.url }}";
+            github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body: `PRプレビュー環境: ${url}`
+            })
+  destroy-preview:
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ap-northeast-1
+      MANAGEMENT_ROLE_ARN: ${{ secrets.GEOLONIA_DEPLOY_ROLE_ARN }}
+      DEPLOY_ROLE_ARN: ${{ secrets.GSIMAPS_DEPLOY_ROLE_ARN }}
+      PREVIEW_BUCKET_NAME: ${{ secrets.PREVIEW_BUCKET_NAME }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assume management account
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
+
+      - name: Delete preview objects in S3
+        run: |
+          aws s3 rm "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/" --recursive
+
+      - name: Terraform destroy (CloudFront/Function/OAI等だけ)
+        working-directory: infra/pr-preview
+        run: |
+          terraform init
+          terraform destroy -auto-approve \
+            -var pr_number=${{ github.event.number }} \
+            -var preview_bucket_name=${{ env.PREVIEW_BUCKET_NAME }}
+      - name: Assume deploy role (GSIMAPS / S3)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
+
+      - name: Delete preview objects in S3
+        run: |
+          aws s3 rm "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/" --recursive
