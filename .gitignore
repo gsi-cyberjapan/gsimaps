@@ -23,4 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+/infra/pr-preview/.terraform
+/infra/pr-preview/.terraform.lock.hcl
+
 /features/screenshots

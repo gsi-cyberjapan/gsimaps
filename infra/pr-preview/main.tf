@@ -39,7 +39,7 @@ resource "aws_cloudfront_distribution" "preview" {
   comment             = "Single distribution for all PR previews"
   default_root_object = "index.html"
 
-  origins {
+  origin {
     domain_name              = "${var.preview_bucket_name}.s3.ap-northeast-1.amazonaws.com"
     origin_id                = "s3-preview"
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
@@ -54,8 +54,8 @@ resource "aws_cloudfront_distribution" "preview" {
 
     compress = true
 
-    # 全パスに Basic 認証
-    function_associations {
+    # Basic 認証
+    function_association {
       event_type   = "viewer-request"
       function_arn = aws_cloudfront_function.basic_auth.arn
     }
@@ -71,6 +71,9 @@ resource "aws_cloudfront_distribution" "preview" {
     geo_restriction {
       restriction_type = "none"
     }
+  }
+  viewer_certificate {
+    cloudfront_default_certificate = true
   }
 }
 
