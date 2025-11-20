@@ -27,6 +27,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: デプロイしない不要なファイルは掃除する
+        run: |
+          rm \
+            .editorconfig \
+            .env \
+            .gitattributes \
+            .gitignore \
+            infra/
+            package.json \
+            package-lock.json
       - name: Assume deploy role (GSIMAPS / S3)
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -35,7 +45,7 @@ jobs:
 
       - name: Upload artifacts to preview bucket (pr-<number>/ prefix)
         run: |
-          aws s3 sync ./dist "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/"
+          aws s3 sync . "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/"
 
       - name: Assume management role (GEOLONIA /CloudFront)
         uses: aws-actions/configure-aws-credentials@v4
@@ -68,7 +78,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Assume deploy role (GSIMAPS / S3)
         uses: aws-actions/configure-aws-credentials@v4
         with:
