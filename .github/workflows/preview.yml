@@ -34,7 +34,6 @@ jobs:
             .env \
             .gitattributes \
             .gitignore \
-            infra/
             package.json \
             package-lock.json
       - name: Assume deploy role (GSIMAPS / S3)
