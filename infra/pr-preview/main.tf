@@ -24,9 +24,9 @@ resource "aws_cloudfront_origin_access_control" "oac" {
 }
 
 resource "aws_cloudfront_function" "basic_auth" {
-  name    = "pr-preview-basic-auth-pr-${var.pr_number}"
+  name    = "gsimaps-internal basic_auth"
   runtime = "cloudfront-js-1.0"
-  comment = "Basic auth for PR ${var.pr_number}"
+  comment = "Basic auth for PR preview"
   publish = true
 
   code = templatefile("${path.module}/basic-auth.js.tpl", {

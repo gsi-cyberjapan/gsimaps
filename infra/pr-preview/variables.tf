@@ -1,8 +1,3 @@
-variable "pr_number" {
-  description = "GitHub PR number"
-  type        = string
-}
-
 variable "preview_bucket_name" {
   description = "gsi bucket"
   type        = string
