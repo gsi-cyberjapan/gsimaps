@@ -27,11 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build
-        run: |
-          npm ci
-          npm run build
-
       - name: Assume deploy role (GSIMAPS / S3)
         uses: aws-actions/configure-aws-credentials@v4
         with:
