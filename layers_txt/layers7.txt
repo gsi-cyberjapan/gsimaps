@@ -5809,16 +5809,16 @@
             },
             {
               "type": "LayerGroup",
-              "title": "点群データの提供情報",
-              "html": "<div class='layer_text'><p>点群データを提供した地域を年月別に表示します。</p></div>",
+              "title": "点群データの更新情報",
+              "html": "<div class='layer_text'><p>点群データを更新した地域を年月別に表示します。</p></div>",
               "toggleall": false,
               "entries": [
               	{
                   "type": "LayerGroup",
-                  "title": "点群データ（航空レーザ測量）の<br>提供地域と作業年度",
+                  "title": "点群データ（航空レーザ測量）の<br>刊行範囲と作業年度",
                   "id": "3d_pcd_area_dtil",
                   "toggleall": false,
-                  "html": "<div class=\"gsi_layerinfo_title\">点群データ（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した点群データの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>点群データの提供範囲（概略）</li><li>ズーム：12～14<br>点群データの提供範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/gazochosa/tengun.html\">点群データサイト</a></div>",
+                  "html": "<div class=\"gsi_layerinfo_title\">点群データ（航空レーザ測量）<br>刊行範囲と作業年度</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した点群データの刊行範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>点群データの刊行範囲（概略）</li><li>ズーム：12～14<br>点群データの刊行範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/gazochosa/tengun.html\">点群データサイト</a></div>",
                   "entries": [
                     {
                       "type": "Layer",
@@ -5844,8 +5844,18 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "3d_pcd_update_2025_11",
+                  "title": "2025年11月刊行",
+                  "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2025_11/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 14,
+                  "maxNativeZoom": 2
+                },
+                {
+                  "type": "Layer",
                   "id": "3d_pcd_update_2025_07",
-                  "title": "2025年7月提供",
+                  "title": "2025年7月刊行",
                   "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2025_07/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
@@ -5855,7 +5865,7 @@
                 {
                   "type": "Layer",
                   "id": "3d_pcd_update_2025_02",
-                  "title": "2025年2月提供",
+                  "title": "2025年2月刊行",
                   "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2025_02/{z}/{x}/{y}.geojson",
                   "cocotile": true,
                   "minZoom": 2,
