@@ -1,0 +1,10 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2/ALOS-4)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20251208aomori.txt"
+    }
+  ]
+}

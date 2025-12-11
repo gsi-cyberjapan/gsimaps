@@ -16,6 +16,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和7年青森県東方沖の地震",
+              "toggleall": false,
+              "src": "./layers_20251210aomori.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和6年宮崎県日向灘を震源とする地震",
               "toggleall": false,
               "src": "./layers_20240809hyuganada.txt"
