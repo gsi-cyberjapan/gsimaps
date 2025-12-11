@@ -231,7 +231,7 @@
           "entries": [
             {
               "type": "LayerGroup",
-              "title": "だいち2号（ALOS-2）",
+              "title": "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
               "toggleall": false,
               "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos2.txt"
             },
