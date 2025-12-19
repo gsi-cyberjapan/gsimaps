@@ -246,6 +246,14 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
+  "vlcd_koz": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_koz/vlcd_koz.csv",
+    "layer": {
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_koz/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 16
+    }
+  },
   "vlcd_hachijojima": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_hachijojima/vlcd_hachijojima.csv",
     "layer": {
