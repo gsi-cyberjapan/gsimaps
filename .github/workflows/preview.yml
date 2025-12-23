@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: デプロイしない不要なファイルは掃除する
+      - name: デプロイしないファイルを掃除する
         run: |
           rm \
             .editorconfig \

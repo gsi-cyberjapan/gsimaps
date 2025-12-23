@@ -24,7 +24,7 @@ resource "aws_cloudfront_origin_access_control" "oac" {
 }
 
 resource "aws_cloudfront_function" "basic_auth" {
-  name    = "gsimaps-internal basic_auth"
+  name    = "gsimaps-internal-basic_auth"
   runtime = "cloudfront-js-1.0"
   comment = "Basic auth for PR preview"
   publish = true
