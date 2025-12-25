@@ -65,7 +65,7 @@ jobs:
           PREVIEW_BASE_URL: ${{ env.PREVIEW_BASE_URL }}
         with:
           script: |
-            const url = `${process.env.PREVIEW_BASE_URL}/pr-${{ github.event.number }}/`;
+            const url = `${process.env.PREVIEW_BASE_URL}/pr-${{ github.event.number }}/index.html`;
             github.rest.issues.createComment({
               ...context.repo,
               issue_number: context.issue.number,
