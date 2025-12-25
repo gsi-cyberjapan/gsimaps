@@ -8,16 +8,22 @@ on:
       - synchronize
       - closed
 permissions:
-  # pr-preview ブランチに書き込みするため
-  contents: write
-
-  # プレビューの URL をコメントに書き込むため
+  contents: read
   issues: write
   pull-requests: write
+  id-token: write
+
+env:
+  AWS_REGION: ap-northeast-1
+  DEPLOY_ROLE_ARN: ${{ secrets.GSIMAPS_DEPLOY_ROLE_ARN }}
+  PREVIEW_BASE_URL: ${{ secrets.PREVIEW_BASE_URL }}
+  PREVIEW_BUCKET_NAME: ${{ secrets.PREVIEW_BUCKET_NAME }}
+  MANAGEMENT_ROLE_ARN: ${{ secrets.GEOLONIA_DEPLOY_ROLE_ARN }}
+  CF_DISTRIBUTION_ID: ${{ secrets.CF_DISTRIBUTION_ID }}
+
 jobs:
   deploy-preview:
-    if: github.repository == 'gsimaps-cicd/gsimaps-internal'
-
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal' && github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,10 +36,67 @@ jobs:
             .gitignore \
             package.json \
             package-lock.json
-        if: github.event.action != 'closed'
-      - uses: rossjrw/pr-preview-action@v1
+      - name: Assume deploy role (GSIMAPS / S3)
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          source-dir: .
-          preview-branch: pr-preview
-          umbrella-dir: pr-preview
-          action: auto
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
+
+      - name: Upload artifacts to preview bucket (pr-<number>/ prefix)
+        run: |
+          aws s3 sync . "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/"
+
+      - name: Assume management role (GEOLONIA /CloudFront)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
+
+      - name: Invalidate this PR path
+        if: env.CF_DISTRIBUTION_ID != ''
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${CF_DISTRIBUTION_ID}" \
+            --paths "/pr-${{ github.event.number }}/*"
+
+      - name: Comment preview URL on PR
+        uses: actions/github-script@v7
+        env:
+          PREVIEW_BASE_URL: ${{ env.PREVIEW_BASE_URL }}
+        with:
+          script: |
+            const url = `${process.env.PREVIEW_BASE_URL}/pr-${{ github.event.number }}/index.html`;
+            github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body: `PRプレビュー環境: ${url}`
+            })
+  destroy-preview:
+    if: github.repository == 'gsimaps-cicd/gsimaps-internal' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assume deploy role (GSIMAPS / S3)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
+
+      - name: Delete preview objects in S3
+        run: |
+          aws s3 rm "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/" --recursive
+
+
+      - name: Assume deploy role (GEOLONIA / CloudFront)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
+
+      - name: Invalidate this PR path
+        if: env.CF_DISTRIBUTION_ID != ''
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${CF_DISTRIBUTION_ID}" \
+            --paths "/pr-${{ github.event.number }}/*"
