@@ -31,17 +31,6 @@
           "html": "<div class='layer_text'><p>電子基準点をサポートして詳細な地殻変動を捉えるために設置された<a href=\"http://www.gsi.go.jp/kidou/regmos.html\"  target='_blank'>REGMOS</a>等の位置を表示します。</p></div>"
         },
         {
-          "type": "Layer",
-          "id": "kenchou",
-          "title": "験潮場（海岸昇降検知センター登録）",
-          "url": "https://maps.gsi.go.jp/xyz/kenchou/{z}/{x}/{y}.geojson",
-          "cocotile": false,
-          "minZoom": 2,
-          "maxZoom": 18,
-          "maxNativeZoom": 2,
-          "html": "<div class='layer_text'><p>＜海岸昇降検知センター登録験潮場＞<br>国土地理院、気象庁、海上保安庁、国交省等の験潮場<br>験潮記録から地殻変動を検知しています</p></div><div class=\"gsi_layerinfo_kaisetu\"><br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/655.png' alt='国土地理院'>　国土地理院<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/657.png' alt='気象庁'>　気象庁<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/659.png' alt='海上保安庁'>　海上保安庁<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/661.png' alt='東京大学地震研究所'>　東京大学地震研究所<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/663.png' alt='北海道開発局・沖縄総合事務局'>　北海道開発局・沖縄総合事務局<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/665.png' alt='地方整備局'>　地方整備局<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/667.png' alt='港湾空港技術研究所'>　港湾空港技術研究所<br><img src='https://maps.gsi.go.jp/portal/sys/v4/symbols/669.png' alt='県・その他'>　県・その他</div>"
-        },
-        {
           "type": "LayerGroup",
           "title": "磁気図",
           "html": "<div class='layer_text'><p>全国の磁場の分布を表した地図です。</p></div>",
