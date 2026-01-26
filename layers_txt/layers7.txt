@@ -5833,7 +5833,7 @@
               "minZoom": 2,
               "maxZoom": 13,
               "maxNativeZoom": 2,
-              "html": "<div class=\"gsi_layerinfo_title\">数値地図（国土基本情報）の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">数値地図（国土基本情報）の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。</div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40027.html\" target=\"_blank\">数値地図（国土基本情報）サイト</a></div>"
+              "html": "<div class=\"gsi_layerinfo_title\">数値地図（国土基本情報）の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">数値地図（国土基本情報）の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。<br><br><div class=\"gsi_layerinfo_kaisetu\">更新日リスト：<a href=\"https://dkgd.gsi.go.jp/djbm/updatetile/data/list/list.pdf\" target=\"_blank\">PDF</a>　<a href=\"https://dkgd.gsi.go.jp/djbm/updatetile/data/list/list.csv\" target=\"_blank\">CSV</a></div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40027.html\" target=\"_blank\">数値地図（国土基本情報）サイト</a></div>"
             },
             {
               "type": "Layer",
@@ -5844,7 +5844,7 @@
               "minZoom": 2,
               "maxZoom": 13,
               "maxNativeZoom": 2,
-              "html": "<div class=\"gsi_layerinfo_title\">電子地形図25000の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">電子地形図25000の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。</div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40030.html\" target=\"_blank\">電子地形図25000サイト</a></div>"
+              "html": "<div class=\"gsi_layerinfo_title\">電子地形図25000の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">電子地形図25000の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。<br><br><div class=\"gsi_layerinfo_kaisetu\">更新日リスト：<a href=\"https://dkgd.gsi.go.jp/djbm/updatetile/data/list/list.pdf\" target=\"_blank\">PDF</a>　<a href=\"https://dkgd.gsi.go.jp/djbm/updatetile/data/list/list.csv\" target=\"_blank\">CSV</a></div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40030.html\" target=\"_blank\">電子地形図25000サイト</a></div>"
             },
             {
               "type": "Layer",
