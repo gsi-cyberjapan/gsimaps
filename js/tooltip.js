@@ -23,14 +23,14 @@ CONFIG.TOOLTIP.SELECTMAP = {
   "OPACITY" : "透過率を設定できます",
   "GRAYSCALE" : "灰色基調の地図になります",
   "MULTIPLY" : "下の地図が透けて見えるようになります",
-  "SETTING" : "スタイル変更" 
+  "SETTING" : "スタイル変更"
 };
 
 // 共有・保存
 CONFIG.TOOLTIP.SHARE = {
-  "FACEBOOK" : "表示している地図をFacebookに投稿します", 
-  "TWITTER" : "表示している地図をXに投稿します", 
-  "SAVEIMAGE" : "表示している地図を画像として保存します", 
+  "FACEBOOK" : "表示している地図をFacebookに投稿します",
+  "TWITTER" : "表示している地図をXに投稿します",
+  "SAVEIMAGE" : "表示している地図を画像として保存します",
   "QRCODE" : "表示している地図のQRコードを表示します",
   "SAVEHTML" : "表示している地図をHTMLとして保存します",
   "IFRAME" : "表示している地図を表示するiframeタグを発行します"
@@ -130,13 +130,13 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
    3: "位置情報の取得処理がタイムアウトしました。",
    5: "ご利用中の端末では、現在位置を取得できません。"
  };
- 
+
  // 表示ズームの案内
  GSITEXT.ANNAI = {};
  GSITEXT.ANNAI.MINMAX = 'この情報はズームmin～maxで表示されます。';
  GSITEXT.ANNAI.MSGTXT = 'なお、整備範囲が全国であるとは限りません。';
  GSITEXT.ANNAI.CHKLABEL = '以後、この案内を表示しない';
- 
+
  // 計測
  GSITEXT.MEASURE = {};
  GSITEXT.MEASURE.DIALOG_TITLE = '計測';
@@ -144,47 +144,47 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.MEASURE.DIALOG_AREA_CAPTION = '面積';
  GSITEXT.MEASURE.DIALOG_OBJECT_CAPTION = '選択図形';
  GSITEXT.MEASURE.DIALOG_MULTI_CAPTION = '複数選択';
- 
+
  // 作図関連
  GSITEXT.SAKUZU = {};
  GSITEXT.SAKUZU.SAKUZUTITLE = '新規作図情報';
  GSITEXT.SAKUZU.LOAD_ERROR = 'ファイルが読み込めません。';
  GSITEXT.SAKUZU.LOAD_NOFILE = 'ファイルが選択されていません。';
- 
+
  GSITEXT.SAKUZU.DIALOG_TITLE = '作図・ファイル';
- 
+
  GSITEXT.SAKUZU.DIALOG_LIST_EDITBTN = '編集';
  GSITEXT.SAKUZU.DIALOG_LIST_REMOVEBTN = '削除';
  GSITEXT.SAKUZU.DIALOG_LIST_OPACITYBTN = '透過';
  GSITEXT.SAKUZU.DIALOG_LIST_VISIBLEICONLABELBTN = 'アイコンのラベルを表示';
  GSITEXT.SAKUZU.DIALOG_LIST_SELECTLABEL = 'ラベルとして表示する属性：';
- 
+
  GSITEXT.SAKUZU.DIALOG_LOAD_COMMENT = '<strong>GeoJSON,KML,GeoTag付きJPEG,CSV,GeoTiff</strong>ファイルを選択してください<br>' +
    '<div style="font-size:85%">※ファイルを地図上にドラッグ＆ドロップすることでも読み込めます</div>' +
    '<div style="font-size:85%">※KMP(<a style="word-break:break-all;font-size:85%" href="https://maps.gsi.go.jp/help/pdf/14Mar2017_kmp.pdf" target="_blank">https://maps.gsi.go.jp/help/pdf/14Mar2017_kmp.pdf</a>)に則ってないファイルは保存時に属性が削除されることがあります。</div>';
  GSITEXT.SAKUZU.DIALOG_LOAD_COMMENT_IE8 = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルの内容を入力して下さい<br><div style="font-size:85%">※ファイルを地図上にドラッグ＆ドロップすることでも読み込めます</div>';
  GSITEXT.SAKUZU.DIALOG_LOAD_COMMENT_IE9 = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルを選択してください';
  GSITEXT.SAKUZU.DIALOG_LOAD_FILENAMECAPTION = 'パネル上の表示名';
- 
+
  GSITEXT.SAKUZU.DIALOG_LOAD_OKBTN = '読込を開始';
  GSITEXT.SAKUZU.DIALOG_LOAD_CANCELBTN = '中　止';
  GSITEXT.SAKUZU.DIALOG_LOAD_NOFILE = 'ファイルが選択されていません。';
  GSITEXT.SAKUZU.DIALOG_LOAD_NOTEXT = 'テキストが入力されていません。';
  GSITEXT.SAKUZU.DIALOG_LOAD_ERROR = '読み込みに失敗しました。ファイルの形式をご確認ください。';
- 
+
  GSITEXT.SAKUZU.DIALOG_SAVE_COMMENT = 'ファイル形式を選択して下さい';
  GSITEXT.SAKUZU.DIALOG_SAVE_COMMENT2 = '「TEXT」および「マーカー(円)」で作図した内容はGeoJSON形式でのみ保存可能です。';
  GSITEXT.SAKUZU.DIALOG_SAVE_COMMENT_IE8 = '<strong>KML,GeoJSON,TopoJSON</strong>ファイルの内容を入力して下さい';
  GSITEXT.SAKUZU.DIALOG_SAVE_OKBTN = '上記の内容で保存';
  GSITEXT.SAKUZU.DIALOG_SAVE_OKBTN_CLIPBOARD = 'クリップボードにコピー';
  GSITEXT.SAKUZU.DIALOG_SAVE_CANCELBTN = '戻　る';
- 
+
  GSITEXT.SAKUZU.DIALOG_EDIT_REMOVEBTN = 'オブジェクトの削除';
  GSITEXT.SAKUZU.DIALOG_EDIT_POLYINNERBTN = '中抜きの追加・削除';
  GSITEXT.SAKUZU.DIALOG_EDIT_POLYINNER_MSG = '中抜きの追加・削除中です。<br>対象のポリゴン内に中抜きを作成、またはゴミ箱アイコンをクリックして削除して下さい。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POLYINNER_OKBTN = '現在の状態で中抜きを確定';
  GSITEXT.SAKUZU.DIALOG_EDIT_POLYINNER_CANCELBTN = 'キャンセル';
- 
+
  GSITEXT.SAKUZU.DIALOG_EDIT_FINISHBTN = '確　定　';
  GSITEXT.SAKUZU.DIALOG_EDIT_OKBTN = '確　定';
  GSITEXT.SAKUZU.DIALOG_EDIT_OK2BTN = 'O　K';
@@ -201,44 +201,44 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXT_TEXTMODE_MSG = '表示するテキストを入力して下さい。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXT_HINT = '例1:動物園　\n例2:<span style="background:#00FFFF; color:red; font-size:20pt;">図書館</span>';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXT_TEXTMODE_HINT = '例1:動物園';
- 
+
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTEDIT_CREATEMESSAGE = 'これから地図上に置くマーカーの情報を入力してください。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTEDIT_EDITMESSAGE = '地図上に置いたマーカーの情報を入力してください。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTEDIT_EDIT2MESSAGE = '編集中のマーカーの情報を入力してください。';
- 
+
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXTEDIT_CREATEMESSAGE = 'これから地図上に置くテキストの情報を入力してください。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXTEDIT_EDITMESSAGE = '地図上に置いたテキストの情報を入力してください。';
  GSITEXT.SAKUZU.DIALOG_EDIT_POINTTEXTEDIT_EDIT2MESSAGE = '編集中のテキストの情報を入力してください。';
- 
+
  // 共有
  GSITEXT.SHARE = {};
  GSITEXT.SHARE.DIALOG_TITLE = '共有';
  GSITEXT.SHARE.DIALOG_LINK_TITLE = 'リンクを取得';
  GSITEXT.SHARE.DIALOG_BUILTIN_TITLE = 'ウェブサイトに埋め込む';
  GSITEXT.SHARE.DIALOG_SAVE_TITLE = '名前を付けて一時保存';
- 
+
  GSITEXT.SHARE.DIALOG_LINK_MESSAGE = '次のURLをメール等で送付することで、現在表示されている地図を共有することができます。' + '<div style="font-size:85%;">※作図結果は反映されません。作図結果は、作図・ファイル機能を使ってファイルに保存して共有することをおすすめいたします。</div>';
  GSITEXT.SHARE.DIALOG_BUILTIN_MESSAGE = '次のタグをHTMLファイルに加えることで、地理院地図をウェブサイトに埋め込むことができます。' + '<div style="font-size:85%;">※作図結果は反映されません。作図結果は、作図・ファイル機能を使ってファイルに保存して共有することをおすすめいたします。</div>';
  GSITEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを[上記のHTMLを保存]>ボタンをクリックして保存して下さい。' + '<div style="font-size:85%;">※HTML は一時的なものとしてご利用ください。作図情報は、作図機能を使ってファイルに保存することをおすすめします。</div>';
  GSITEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '次のHTMLをテキストエディタで<strong>文字コードUTF-8</strong>で保存して下さい。';
- 
+
  GSITEXT.SHARE.DIALOG_TEMPLATELOADERROR = '保存したHTMLファイルではこの機能を使うことはできません。';
- 
+
  GSITEXT.SHARE.DIALOG_DOWNLOADBTN = '上記のHTMLを保存';
  GSITEXT.SHARE.DIALOG_COPYBTN = 'クリップボードにコピー';
  GSITEXT.SHARE.DIALOG_NOCOPYMSG = 'URLをコピーしてご利用下さい';
- 
+
  // 共有
  GSITEXT.SHARE.QRCODE_DIALOG_TITLE = 'QRコード';
  GSITEXT.SHARE.MAIL_SUBJECT = '地理院地図';
  GSITEXT.SHARE.MAIL_BODY = "";
- 
+
  // 3D範囲選択
  GSITEXT.THREEDAREA = {};
  GSITEXT.THREEDAREA.DIALOG_TITLE = '3D範囲を選択';
  GSITEXT.THREEDAREA.DIALOG_OKBTN = 'O　K';
  GSITEXT.THREEDAREA.DIALOG_CANCELBTN = '終　了';
- 
+
  // 画像保存
  GSITEXT.MAPTOIMAGE = {};
  GSITEXT.MAPTOIMAGE.WINDOW_MSG = "ファイルを保存する準備が整いました";
@@ -247,22 +247,21 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.MAPTOIMAGE.WINDOW_MSG2 = '※保存したファイルは、国土地理院コンテンツ利用規約に従ってご利用ください。<br>' +
    '<a href="https://maps.gsi.go.jp/help/use.html" target="_blank">地理院タイルのご利用について</a><br>' +
    '<a href="https://maps.gsi.go.jp/help/howtouse.html" class="worldfile-msg" target="_blank">ワールドファイルについて</a>';
- 
+
  GSITEXT.EVAC = {};
  GSITEXT.EVAC.KIYAKU = '最新の状況などは当該市町村にご確認ください。';
- GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>';
+ GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>';
  GSITEXT.EVAC.CONFIRMTOP = '地理院地図及び重ねるハザードマップに掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。';
  GSITEXT.EVAC.ATTENTION = '【ご利用上の注意】';
- GSITEXT.EVAC.CONFIRMITEM1 = '本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。<span style="font-weight:bold; color:#ff0000;">最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span>';
- GSITEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>）。';
+ GSITEXT.EVAC.CONFIRMITEM1 = '本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。なお、最新でない場合や未掲載の場合があるため、<span style="font-weight:bold; color:#ff0000;">最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span>';
+ GSITEXT.EVAC.CONFIRMITEM2 = '本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>）。';
  GSITEXT.EVAC.CONFIRMITEM3 = '指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。';
  GSITEXT.EVAC.ATTENTIONDATA = '【データについて】';
  GSITEXT.EVAC.DATAITEM1 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>';
  GSITEXT.EVAC.DATAITEM2 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">利用方法</a>';
- GSITEXT.EVAC.DATAITEM3 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2" target="blank">市町村別公開日・更新日一覧</a>';
+ GSITEXT.EVAC.DATAITEM3 = '<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>';
  GSITEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
- 
+
  GSITEXT.LINEEDITTIP = '<span style="font-size:11px;">※右クリックで直前の点を取り消すことができます。</span><br>';
 
  GSITEXT.PRINTERCOMMENT = '「用紙サイズ」で選択したサイズや向きで印刷するには、プリンターのプロパティで用紙サイズや向きを設定する必要があります。なお、地図はこのページでもスクロールできます。';
- 
