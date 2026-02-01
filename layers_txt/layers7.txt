@@ -1496,6 +1496,22 @@
               "entries": [
                 {
                   "type": "LayerGroup",
+                  "title": "2026年迅速更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "jin202602",
+                      "title": "2月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202602/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2026年登山道更新情報",
                   "toggleall": false,
                   "entries": [
