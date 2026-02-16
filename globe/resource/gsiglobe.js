@@ -21698,8 +21698,10 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
         if ( tileList.length <= 0 ) {
           var colors = $.extend(true, [], GSI.ReliefTileLayer.getElevationSampleData().colors );
           var low = Math.floor( minMax.min );
-          if ( low < 0 ) low = 0;
-          var hi = Math.floor( minMax.max );
+          var hi = Math.ceil( minMax.max );
+          if (low < 0 && hi > 0){
+            low = 0;
+          }
           colors[ 0].h = low;
           for (var i = 1; i < colors.length - 2; i++) {
             var p = (1 / (colors.length - 1)) * (i);
