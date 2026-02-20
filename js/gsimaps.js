@@ -47297,7 +47297,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         this._makeLayer(li, a, item);
       }
       li.append(a);
-      this._listContainer.append(li);
+      if (!liRefresh) this._listContainer.append(li);
 
       if ((item.entries) || (this._cocoTileLayer.getVisible() && item.cocotile && !item.hasTile)) continue;
 
