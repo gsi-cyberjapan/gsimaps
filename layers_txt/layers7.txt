@@ -5533,6 +5533,43 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "2026年2月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem1a_update_2026_02",
+                      "title": "1ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_update_2026_02/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2026_02",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2026_02/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5b_update_2026_02",
+                      "title": "5ｍメッシュDEM（写真測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5b_update_2026_02/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2025年10月更新",
                   "toggleall": false,
                   "entries": [
