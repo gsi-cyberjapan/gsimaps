@@ -250,7 +250,7 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
 
  GSITEXT.EVAC = {};
  GSITEXT.EVAC.KIYAKU = '最新の状況などは当該市町村にご確認ください。';
- GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>　<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>';
+ GSITEXT.EVAC.KIYAKULINK = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所・指定避難所」について</a>　<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>';
  GSITEXT.EVAC.CONFIRMTOP = '地理院地図及び重ねるハザードマップに掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。';
  GSITEXT.EVAC.ATTENTION = '【ご利用上の注意】';
  GSITEXT.EVAC.CONFIRMITEM1 = '本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。なお、最新でない場合や未掲載の場合があるため、<span style="font-weight:bold; color:#ff0000;">最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span>';
@@ -260,8 +260,18 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.EVAC.DATAITEM1 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho.html" target="blank">「指定緊急避難場所」について</a>';
  GSITEXT.EVAC.DATAITEM2 = '<a href="https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html" target="blank">利用方法</a>';
  GSITEXT.EVAC.DATAITEM3 = '<a href="https://hinanmap.gsi.go.jp/index.html" target="blank">市町村別公開日・更新日一覧</a>';
- GSITEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
+GSITEXT.EVAC.DATAITEM5 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
 
- GSITEXT.LINEEDITTIP = '<span style="font-size:11px;">※右クリックで直前の点を取り消すことができます。</span><br>';
+GSITEXT.VDPF = {};
+GSITEXT.VDPF.CONFIRMTOP = '火山災害発生時の退避のために使用する退避壕・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下の御利用上の注意に同意する場合のみ御利用ください。';
+GSITEXT.VDPF.ATTENTION = '【御利用上の注意】';
+GSITEXT.VDPF.CONFIRMITEM1 = '本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関に御確認ください。';
+GSITEXT.VDPF.CONFIRMITEM2 = '本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。';
+GSITEXT.VDPF.CONFIRMITEM3 = '同一地点で複数の種別が重複している場合は、退避壕、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を右側にずらして表示しています。';
+GSITEXT.VDPF.ATTENTIONDATA = '【データについて】';
+GSITEXT.VDPF.DATAITEM1 = '「火山防災関連施設」ダウンロードページ';
+GSITEXT.VDPF.DATAITEM2 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
+
+GSITEXT.LINEEDITTIP = '<span style="font-size:11px;">※右クリックで直前の点を取り消すことができます。</span><br>';
 
  GSITEXT.PRINTERCOMMENT = '「用紙サイズ」で選択したサイズや向きで印刷するには、プリンターのプロパティで用紙サイズや向きを設定する必要があります。なお、地図はこのページでもスクロールできます。';

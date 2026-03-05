@@ -8298,13 +8298,15 @@ GSI.LayersJSON = L.Evented.extend({
     var initEvecDisaster = function(entries, func) {
       if  (!entries) return;
       for( var i=0; i<entries.length; i++ ) {
-        if (entries[i].title == "指定緊急避難場所") {
+        if (entries[i].title == "指定緊急避難場所・指定避難所") {
           entries[i]["title_evac"] = CONFIG.layerEvacuationFolderSYS;
         } else if (entries[i].title == "自然災害伝承碑") {
           entries[i]["title_evac"] = CONFIG.DisasterLoreFolder;
           entries[i]["title_disasterlore"] = CONFIG.DisasterLoreFolderSYS;
         } else if (entries[i].title == "火山土地条件図　数値データ（火山地形分類）") {
           entries[i]["title_evac"] = CONFIG.VolcanoTerrainFolderSYS;
+        } else if (entries[i].title == "火山防災関連施設") {
+          entries[i]["title_volcano"] = CONFIG.layerVolcanoFolderSYS;
         } else {
           func( entries[i].entries, func );
         }
@@ -8313,7 +8315,7 @@ GSI.LayersJSON = L.Evented.extend({
     if ((json.layers) && (json.layers[0].title) && (!json.layers[0].title_sys)) {
       var hybridjson = JSON.parse("{ \"layers\":[] }");
       for (var ll in json.layers) {
-        if (json.layers[ll].title == "指定緊急避難場所") {
+        if (json.layers[ll].title == "指定緊急避難場所・指定避難所") {
           var json_evac2 = JSON.parse("{ \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.layerEvacuationFolder + "\", \"title_evac\": \"" + CONFIG.layerEvacuationFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] }");
           json_evac2.entries = json.layers[ll].entries.concat();
           hybridjson.layers.push(json_evac2);
@@ -8327,6 +8329,11 @@ GSI.LayersJSON = L.Evented.extend({
           var json_dh = JSON.parse("{ \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.VolcanoTerrainFolder + "\", \"title_volcano_terrain\": \"" + CONFIG.VolcanoTerrainFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] }");
           json_dh.entries = json.layers[ll].entries.concat();
           hybridjson.layers.push(json_dh);
+        }
+        else if (json.layers[ll].title == "火山防災関連施設") {
+          var json_vdpf = JSON.parse("{ \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.layerVolcanoFolder + "\", \"title_volcano\": \"" + CONFIG.layerVolcanoFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] }");
+          json_vdpf.entries = json.layers[ll].entries.concat();
+          hybridjson.layers.push(json_vdpf);
         }
         else {
           initEvecDisaster( json.layers[ll].entries, initEvecDisaster );
@@ -9476,6 +9483,72 @@ GSI.Modal.confirmDialog = GSI.Modal.Dialog.extend({
     dol.append(dli2);
     dol.append(dli3);
     dol.append(dli4);
+    liframe2.append(datten);
+    liframe2.append(dol);
+
+    inframe.append(frmct);
+    inframe.append(liframe1);
+    inframe.append(liframe2);
+
+    frame.append(inframe);
+    var titleFrame = $('<div>').addClass('gsi_modal_dialog_header').html(this.options.title);
+
+    var dialogFrame = GSI.Modal.Dialog.prototype.getContent.call(this);
+
+    this.dialogContent.append(titleFrame);
+    this.dialogContent.append(frame);
+
+    return dialogFrame;
+  },
+  onPositiveButtonClick: function () {
+    this.hide();
+    this.fire('positive');
+  },
+  onNegativeButtonClick: function () {
+    this.hide();
+    this.fire('negative');
+  }
+});
+
+/************************************************************************
+ L.Class
+ - GSI.Modal.BaseClass
+   - GSI.Modal.Dialog
+     - GSI.Modal.volcanoConfirmDialog（火山防災関連施設免責事項選択ダイアログ）
+ ************************************************************************/
+GSI.Modal.volcanoConfirmDialog = GSI.Modal.Dialog.extend({
+  options: {
+    positiveButtonText: 'ＯＫ',
+    nagativeButtonText: 'キャンセル',
+    title: "免責事項"
+    , message: ""
+    , width: 460
+  },
+  getContent: function () {
+    var frame = $('<div>').css({ 'height': '280px', 'overflow': 'auto' }).addClass('gsi_modal_dialog_content');
+    var inframe = $('<div>').css({ 'margin': '10px' });
+    var liframe1 = $('<div>').css({ 'margin': '5px 18px 0px 0px' });
+    var liframe2 = $('<div>').css({ 'margin': '0px 18px 0px 0px' });
+    var frmct = $('<div>').html(GSI.TEXT.VDPF.CONFIRMTOP);
+    var uol = $('<ol>');
+    var li1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.VDPF.CONFIRMITEM1);
+    var li2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.VDPF.CONFIRMITEM2);
+    var li3 = $('<li>').attr({ "value": "3" }).html(GSI.TEXT.VDPF.CONFIRMITEM3);
+    var atten = $('<div>').html(GSI.TEXT.VDPF.ATTENTION);
+
+    var dol = $('<ol>');
+    var dli1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.VDPF.DATAITEM1);
+    var dli2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.VDPF.DATAITEM2);
+    var datten = $('<div>').html(GSI.TEXT.VDPF.ATTENTIONDATA);
+
+    uol.append(li1);
+    uol.append(li2);
+    uol.append(li3);
+    liframe1.append(atten);
+    liframe1.append(uol);
+
+    dol.append(dli1);
+    dol.append(dli2);
     liframe2.append(datten);
     liframe2.append(dol);
 
@@ -26664,6 +26737,7 @@ GSI.MapManager = L.Evented.extend({
     this._initializeFooter(ctrlSetting.contextMenu.visible, viewSetting.footer);
 
     this._confirmDlg = new GSI.Modal.confirmDialog(this._map);
+    this._volcanoConfirmDlg = new GSI.Modal.volcanoConfirmDialog(this._map);
 
     var cs = queryParams.getControlSetting();
 
@@ -47799,6 +47873,15 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
         this._expandFolder(item);
       }
     }
+    else if ((item) && (item.title_volcano && item.title_volcano == CONFIG.layerVolcanoFolderSYS)) {
+      if (!CONFIG.layerVolcanoIsConfirmOK) {
+        this._mapManager._volcanoConfirmDlg.onPositiveButtonClick = L.bind(this.onVolcanoConfirmOkClick, this, item);
+        this._mapManager._volcanoConfirmDlg.show();
+      }
+      else {
+        this._expandFolder(item);
+      }
+    }
     else {
       this._expandFolder(item);
       // 202303 hideにする条件を変更。
@@ -47814,6 +47897,13 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
     this._mapManager._evacDialog.show();
 
     CONFIG.layerEvacuationIsConfirmOK = true;
+    this._expandFolder(item);
+  },
+
+  onVolcanoConfirmOkClick: function (item) {
+    this._mapManager._volcanoConfirmDlg.hide();
+
+    CONFIG.layerVolcanoIsConfirmOK = true;
     this._expandFolder(item);
   },
 

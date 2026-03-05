@@ -337,7 +337,7 @@ CONFIG.HANREILIST = {
 };
 
 
-CONFIG.layerEvacuationFolder = "指定緊急避難場所";
+CONFIG.layerEvacuationFolder = "指定緊急避難場所・指定避難所";
 CONFIG.layerEvacuationFolderSYS = "GSI.MAP.EVAC";
 CONFIG.layerEvacuationHeader = "skhb";
 CONFIG.layerEvacuationIsConfirmOK = false;
@@ -346,6 +346,11 @@ CONFIG.DisasterLoreFolder = "自然災害伝承碑";
 CONFIG.DisasterLoreFolderSYS = "GSI.MAP.DISASTER.LORE";
 CONFIG.DisasterLoreHeader = "disaster_lore";
 CONFIG.DisasterLoreAll = "disaster_lore_all";
+
+CONFIG.layerVolcanoFolder = "火山防災関連施設";
+CONFIG.layerVolcanoFolderSYS = "GSI.MAP.VDPF";
+CONFIG.layerVolcanoHeader = "vdpf";
+CONFIG.layerVolcanoIsConfirmOK = false;
 
 CONFIG.VolcanoTerrainFolder = "火山土地条件図";
 CONFIG.VolcanoTerrainFolderSYS = "GSI.MAP.VOLCANO.TERRAIN";
@@ -428,16 +433,6 @@ CONFIG.CONFIRM_LAYERS = {
     "withBlend": true,
     "layers": [
       "swale"
-    ]
-  },
-  "drone_rz_yz": { // このグループの一意のID
-    "title": "留意事項", // 確認ダイアログに表示するタイトル
-
-    // 表示するメッセージ
-    "message": "　小型無人機等飛行禁止法の対象施設及びその指定敷地等（レッドゾーン）並びにレッドゾーン以外の対象施設周辺地域（イエローゾーン）を表示します（ズームレベル8～18で表示されます）。<br>　対象施設周辺地域（レッドゾーン及びイエローゾーン）の上空では、次に掲げる場合を除き、小型無人機等の飛行が禁止されています。<br>　①　対象施設の管理者又はその同意を得た者が当該対象施設に係る対象施設周辺地域の上空において行う場合<br>　②　土地の所有者等又はその同意を得た者が当該土地の上空において行う場合<br>　③　国又は地方公共団体の業務を実施するために行う場合<br>　①～③の場合でも、都道府県公安委員会等への事前の通報が必要になります。<br>　小型無人機等飛行禁止法の詳細については、<a target='_blank' href='https://www.npa.go.jp/bureau/security/kogatamujinki/index.html'>警察庁ウェブサイト</a>及び同ウェブサイトに掲載の関係府省庁等のウェブサイトを確認してください。<br>　なお、本情報で示すレッドゾーン及びイエローゾーンの範囲には誤差がある場合があります。",
-    "withBlend": false, // 合成するかどうか
-    "layers": [ // レイヤーのIDを配列で指定
-      "drone_rz_yz"
     ]
   }
 };
