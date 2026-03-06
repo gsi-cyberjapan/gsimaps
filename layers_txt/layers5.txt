@@ -103,25 +103,25 @@
             },
             {
               "type": "Layer",
-              "id": "skhb08",
+              "id": "sih",
               "title": "指定一般避難所",
-              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
-              "url": "https://maps.gsi.go.jp/xyz/skhb08/{z}/{x}/{y}.geojson",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/hinan.png",
+              "url": "https://maps.gsi.go.jp/xyz/sih/{z}/{x}/{y}.geojson",
               "minZoom": 11,
               "maxZoom": 18,
               "maxNativeZoom": 10,
-              "html": "<div style='font-weight:bold'>指定一般避難所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した「指定一般避難所」。<br>災害が発生した場合に避難をしてきた被災者が一定期間生活をするための施設。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険から命を守るために緊急的に避難する「指定緊急避難場所」とは異なります。</div></div>"
+              "html": "<div style='font-weight:bold'>指定一般避難所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した「指定一般避難所」。<br>災害が発生した場合に避難をしてきた被災者が一定期間生活をするための施設。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/hinan.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険から命を守るために緊急的に避難する「指定緊急避難場所」とは異なります。</div></div>"
             },
             {
               "type": "Layer",
-              "id": "skhb08",
+              "id": "sfh",
               "title": "指定福祉避難所",
-              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/skhb.png",
-              "url": "https://maps.gsi.go.jp/xyz/skhb08/{z}/{x}/{y}.geojson",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/hinan.png",
+              "url": "https://maps.gsi.go.jp/xyz/sfh/{z}/{x}/{y}.geojson",
               "minZoom": 11,
               "maxZoom": 18,
               "maxNativeZoom": 10,
-              "html": "<div style='font-weight:bold'>指定福祉避難所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した「指定福祉避難所」。<br>一般的な避難所では生活に支障が想定される要配慮者を受け入れるための施設。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
+              "html": "<div style='font-weight:bold'>指定福祉避難所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した「指定福祉避難所」。<br>一般的な避難所では生活に支障が想定される要配慮者を受け入れるための施設。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/hinan.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
             }
           ]
         },
