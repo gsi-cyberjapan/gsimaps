@@ -9464,26 +9464,24 @@ GSI.Modal.confirmDialog = GSI.Modal.Dialog.extend({
     var li1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.EVAC.CONFIRMITEM1);
     var li2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.EVAC.CONFIRMITEM2);
     var li3 = $('<li>').attr({ "value": "3" }).html(GSI.TEXT.EVAC.CONFIRMITEM3);
+    var li4 = $('<li>').attr({ "value": "4" }).html(GSI.TEXT.EVAC.CONFIRMITEM4);
     var atten = $('<div>').html(GSI.TEXT.EVAC.ATTENTION);
 
     var dol = $('<ol>');
     var dli1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.EVAC.DATAITEM1);
     var dli2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.EVAC.DATAITEM2);
     var dli3 = $('<li>').attr({ "value": "3" }).html(GSI.TEXT.EVAC.DATAITEM3);
-    var dli4 = $('<li>').attr({ "value": "4" }).html(GSI.TEXT.EVAC.DATAITEM5);
-    var datten = $('<div>').html(GSI.TEXT.EVAC.ATTENTIONDATA);
 
     uol.append(li1);
     uol.append(li2);
     uol.append(li3);
+    uol.append(li4);
     liframe1.append(atten);
     liframe1.append(uol);
 
     dol.append(dli1);
     dol.append(dli2);
     dol.append(dli3);
-    dol.append(dli4);
-    liframe2.append(datten);
     liframe2.append(dol);
 
     inframe.append(frmct);
