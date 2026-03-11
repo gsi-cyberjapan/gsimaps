@@ -1566,6 +1566,21 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "2026年面的更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "men202602",
+                      "title": "2月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202602/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2026年登山道更新情報",
                   "toggleall": false,
                   "entries": [
