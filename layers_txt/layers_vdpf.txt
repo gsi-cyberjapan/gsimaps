@@ -1,0 +1,820 @@
+{
+  "layers": [
+            {
+                "type": "Layer",
+                "id": "vdpf_ats",
+                "title": "アトサヌプリ",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_ats/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 43.61028,
+                    "lng" : 144.43861,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+	    {
+                "type": "Layer",
+                "id": "vdpf_mak",
+                "title": "雌阿寒岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_mak/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 43.386389,
+                    "lng" : 144.008611,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_tis",
+                "title": "大雪山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_tis/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 43.663611,
+                    "lng" : 142.854167,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_tkc",
+                "title": "十勝岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_tkc/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 43.417778,
+                    "lng" : 142.686389,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_trm",
+                "title": "樽前山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_trm/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 42.690556,
+                    "lng" : 141.376667,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_ktr",
+                "title": "倶多楽",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_ktr/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 42.505278,
+                    "lng" : 141.144444,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_usu",
+                "title": "有珠山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_usu/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 42.543889,
+                    "lng" : 140.839167,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_hkm",
+                "title": "北海道駒ヶ岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_hkm/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 42.063333,
+                    "lng" : 140.677222,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_esn",
+                "title": "恵山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_esn/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 41.804722,
+                    "lng" : 141.166111,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_iwk",
+                "title": "岩木山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_iwk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 40.655833,
+                    "lng" : 140.303056,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_hkd",
+                "title": "八甲田山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_hkd/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 40.658889,
+                    "lng" : 140.877222,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_twd",
+                "title": "十和田",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_twd/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 40.459444,
+                    "lng" : 140.910000,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_aty",
+                "title": "秋田焼山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_aty/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 39.963889,
+                    "lng" : 140.756944,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_iwt",
+                "title": "岩手山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_iwt/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 39.852500,
+                    "lng" : 141.001111,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_atk",
+                "title": "秋田駒ヶ岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_atk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 39.761111,
+                    "lng" : 140.799444,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_chk",
+                "title": "鳥海山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_chk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 39.099167,
+                    "lng" : 140.048889,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_krk",
+                "title": "栗駒山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_krk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 38.960833,
+                    "lng" : 140.788333,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_zao",
+                "title": "蔵王山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_zao/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 38.143611,
+                    "lng" : 140.440000,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_azm",
+                "title": "吾妻山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_azm/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 37.735278,
+                    "lng" : 140.244444,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_adt",
+                "title": "安達太良山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_adt/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 37.633056,
+                    "lng" : 140.283056,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_bnd",
+                "title": "磐梯山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_bnd/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 37.601111,
+                    "lng" : 140.072222,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_nas",
+                "title": "那須岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_nas/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 37.124722,
+                    "lng" : 139.962778,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_nks",
+                "title": "日光白根山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_nks/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.798611,
+                    "lng" : 139.375833,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_kst",
+                "title": "草津白根山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_kst/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.643889,
+                    "lng" : 138.527778,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_asm",
+                "title": "浅間山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_asm/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.406389,
+                    "lng" : 138.523056,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_nyk",
+                "title": "新潟焼山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_nyk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.920833,
+                    "lng" : 138.035833,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_mdg",
+                "title": "弥陀ヶ原",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_mdg/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.571111,
+                    "lng" : 137.589722,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_ykd",
+                "title": "焼岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_ykd/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.226944,
+                    "lng" : 137.586944,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_nrk",
+                "title": "乗鞍岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_nrk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.106389,
+                    "lng" : 137.553611,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_ont",
+                "title": "御嶽山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_ont/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 35.892778,
+                    "lng" : 137.480278,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_hks",
+                "title": "白山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_hks/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 36.155000,
+                    "lng" : 136.771389,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_fji",
+                "title": "富士山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_fji/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 35.360833,
+                    "lng" : 138.727500,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_hkn",
+                "title": "箱根山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_hkn/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 35.233333,
+                    "lng" : 139.020833,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_itb",
+                "title": "伊豆東部火山群 (該当施設なし)",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_itb/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 34.903056,
+                    "lng" : 139.094722,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_izo",
+                "title": "伊豆大島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_izo/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 34.724444,
+                    "lng" : 139.394444,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_njm",
+                "title": "新島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_njm/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 34.396944,
+                    "lng" : 139.270278,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_koz",
+                "title": "神津島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_koz/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 34.219444,
+                    "lng" : 139.153056,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_myk",
+                "title": "三宅島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_myk/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 34.093611,
+                    "lng" : 139.526111,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_htj",
+                "title": "八丈島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_htj/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 33.136944,
+                    "lng" : 139.766111,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_aog",
+                "title": "青ヶ島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_aog/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 32.458333,
+                    "lng" : 139.759167,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_iot",
+                "title": "硫黄島 (該当施設なし)",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_itb/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 24.750556,
+                    "lng" : 141.289167,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_trg",
+                "title": "鶴見岳・伽藍岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_trg/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 33.286667,
+                    "lng" : 131.429722,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_kju",
+                "title": "九重山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_kju/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 33.085833,
+                    "lng" : 131.248889,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_aso",
+                "title": "阿蘇山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_aso/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 32.884444,
+                    "lng" : 131.103889,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_unz",
+                "title": "雲仙岳",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_unz/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 32.761389,
+                    "lng" : 130.298889,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_krs",
+                "title": "霧島山",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_krs/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 31.934167,
+                    "lng" : 130.864444,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_skj",
+                "title": "桜島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_skj/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 31.592500,
+                    "lng" : 130.656667,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_sio",
+                "title": "薩摩硫黄島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_sio/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 30.793056,
+                    "lng" : 130.305278,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_ktn",
+                "title": "口永良部島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_ktn/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 30.443333,
+                    "lng" : 130.217222,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_nkn",
+                "title": "中之島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_nkn/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 29.859167,
+                    "lng" : 129.856944,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            },
+            {
+                "type": "Layer",
+                "id": "vdpf_swn",
+                "title": "諏訪之瀬島",
+                "url": "https://maps.gsi.go.jp/xyz/vdpf_swn/{z}/{x}/{y}.geojson",
+                "cocotile": true,
+                "minZoom": 5,
+                "maxZoom": 18,
+                "area" : {
+                    "lat" : 29.638333,
+                    "lng" : 129.713889,
+                    "zoom" : 11
+                 },
+                "maxNativeZoom": "2",
+                "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。<br>3．同一地点で複数の種別が重複している場合は、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png' alt='' width='100%' height='100%'>"
+            }
+          ]
+}

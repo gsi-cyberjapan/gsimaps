@@ -347,6 +347,11 @@ CONFIG.DisasterLoreFolderSYS = "GSI.MAP.DISASTER.LORE";
 CONFIG.DisasterLoreHeader = "disaster_lore";
 CONFIG.DisasterLoreAll = "disaster_lore_all";
 
+CONFIG.layerVolcanoFolder = "火山防災関連施設";
+CONFIG.layerVolcanoFolderSYS = "GSI.MAP.VDPF";
+CONFIG.layerVolcanoHeader = "vdpf";
+CONFIG.layerVolcanoIsConfirmOK = false;
+
 CONFIG.VolcanoTerrainFolder = "火山土地条件図";
 CONFIG.VolcanoTerrainFolderSYS = "GSI.MAP.VOLCANO.TERRAIN";
 CONFIG.VolcanoTerrainHeader = "volcano_terrain";
