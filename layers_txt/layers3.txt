@@ -185,6 +185,13 @@
               "html": "<div class=\"gsi_layerinfo_title\">火山基本図データ（写真地図）　<a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a>　<a href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps-vbm-data-list.html\" target=\"_blank\">ダウンロード</a></div><div class=\"gsi_layerinfo_kaisetsu\">凡例は火山基本図データ（基図）でご確認ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
             },
             {
+              "type": "LayerGroup",
+              "title": "火山防災関連施設",
+              "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるかご確認ください。<br>3．整備時期等の違いにより、火山基本図及び火山基本図データに含まれている火山防災関連施設に関する情報と本データの情報が異なる場合があります。<br>4．同一地点で複数の種別が重複している場合は、地理院地図では、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】</a><br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</span></a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</span></a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png'  alt='' width='100%' height='100%'>",
+              "toggleall": false,
+              "src": "./layers_vdpf.txt"
+	          },
+            {
               "type": "Layer",
               "id": "vbm",
               "title": "火山基本図",
@@ -194,6 +201,16 @@
               "maxZoom": 18,
               "maxNativeZoom": 17,
               "html": "<div class=\"gsi_layerinfo_title\">火山基本図　<a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a></div><form name=\"vbmlegend\"><select name=\"vbmselect\" ><option value=\"l_vbm_iwaki\">岩木山</option><option value=\"l_vbm_akitayake\">秋田焼山</option><option value=\"l_vbm_zao\">蔵王山</option><option value=\"l_vbm_adatara\">安達太良山</option><option value=\"l_vbm_bandai\">磐梯山</option><option value=\"l_vbm_nasu\">那須岳</option><option value=\"l_vbm_fuji\">富士山</option><option value=\"l_vbm_higashiizu\">東伊豆単成火山群</option><option value=\"l_vbm_satsumatakesima\">薩摩竹島</option><option value=\"l_vbm_satsumaiojima\">薩摩硫黄島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vbmselect.value + '.jpg');\" style=\"font-size:12px;\" /></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            },
+            {
+              "type": "Layer",
+              "id": "vbmd_spec",
+              "title": "諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/vbmd_spec/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "図上をクリックすると諸元が表示されます。青色の枠は火山基本図データの範囲、赤色の枠は火山基本図の範囲を示します。<br><a href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\" target=\"_blank\">整備一覧</a>"
             }
           ]
         },

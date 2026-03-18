@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "災害伝承・避難場所",
+      "title": "災害伝承・避難場所等",
 	"iconUrl": "https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb_20px.png",
       "toggleall": false,
       "html" : "<div class='layer_text'>災害から命を守るための情報や、過去の自然災害の教訓を閲覧できます。</div>",
@@ -11,7 +11,7 @@
           "type": "LayerGroup",
           "title": "指定緊急避難場所",
           "toggleall": false,
-          "html" : "<div class='layer_text'>災害発生時に緊急的に避難する場所です。災害の種類ごとに対応した避難場所を表示します。<br>地理院地図及び重ねるハザードマップに掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。<br>【ご利用上の注意】<br>1.本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。なお、最新でない場合や未掲載の場合があるため、<span style='font-weight:bold; color:#ff0000;'>最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span><br>2.本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href='https://hinanmap.gsi.go.jp/index.html' target='_blank'><span>市町村別公開日・更新日一覧</span></a>）。<br>3.指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。<br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>1.「指定緊急避難場所」について</span></a><br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html' target='_blank'><span>2.利用方法</span></a><br><a href='https://hinanmap.gsi.go.jp/index.html' target='_blank'><span>3.市町村別公開日・更新日一覧</span></a><br><a href='https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101' target='_blank'><span>4.お問い合わせ</span></a></div>",
+          "html" : "<div class='layer_text'>災害発生時に緊急的に避難する場所です。災害の種類ごとに対応した避難場所を表示します。<br>地理院地図及び重ねるハザードマップに掲載されている指定緊急避難場所データ（以下、「本データ」といいます）を利用される場合は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意をご確認いただき、内容に同意された場合のみご利用ください。<br>【ご利用上の注意】<br>1.本データは、災害対策基本法第49条の4に基づき市町村長が指定した指定緊急避難場所の情報を各市町村に提供いただき、当該市町村に確認の上、地図上に表示したものです。<span style='font-weight:bold; color:#ff0000;'>最新かつ詳細の状況などは必ず当該市町村にご確認ください。</span><br>2.本データを、ダウンロードや印刷等を行い国土地理院サーバ外で利用される場合は、本データの更新にあわせて最新の情報をご利用ください（参照：<a href='https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2' target='_blank'><span>市町村別公開日・更新日一覧</span></a>）。<br>3.指定緊急避難場所は、災害種別ごとに指定されています。本データをダウンロードや印刷等を行い国土地理院サーバ外で利用される場合、指定された災害種別を利用者が正確に理解できるよう、十分にご留意ください。<br>【データについて】<br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>1.「指定緊急避難場所」について</span></a><br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho-help.html' target='_blank'><span>2.利用方法</span></a><br><a href='https://www.gsi.go.jp/bousaichiri/hinanbasho.html#info2' target='_blank'><span>3.市町村別公開日・更新日一覧</span></a><br><a href='https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101' target='_blank'><span>4.お問い合わせ</span></a></div>",
       "entries": [
         {
           "type": "Layer",
@@ -102,12 +102,19 @@
           "html": "<div style='font-weight:bold'>指定緊急避難場所</div><div style='padding-left:4px'>災害対策基本法に基づき市町村長が指定した火山現象に対応する「指定緊急避難場所」。<br>「指定緊急避難場所」とは、災害の危険から命を守るために緊急的に避難する場所。</div><div style='font-weight:bold'><span>凡例</span><table style='padding-left:4px'><tbody><tr><td><img src='https://cyberjapandata.gsi.go.jp/portal/sys/v4/symbols/skhb.png'></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho.html' target='_blank'><span>詳細説明</span></a></td><tr><td><a href='http://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html' target='_blank'><span>免責事項・注意事項</span></a></td></tr></tbody></table></div><div><span style='font-weight:bold'>注意点</span><div style='padding-left:4px'>災害の危険に伴い避難をしてきた人々が一定期間滞在する「指定避難所」とは異なります。</div></div>"
         }
       ]
-        },
-        {
-          "type": "LayerGroup",
-          "title": "自然災害伝承碑",
-          "toggleall": false,
-          "html" : "<div class='layer_text'>過去に発生した災害についての様子や教訓が刻まれた碑です。写真や伝承内容を確認することもできます。</div>",
+    },
+    {
+        "type": "LayerGroup",
+        "title": "火山防災関連施設",
+        "html" : "<div class='layer_text'><p>火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br><br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href='https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'><span>国土地理院コンテンツ利用規約</span></a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。<br>【ご利用上の注意】<br>1．本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。<br>2．本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるかご確認ください。<br>3．整備時期等の違いにより、火山基本図及び火山基本図データに含まれている火山防災関連施設に関する情報と本データの情報が異なる場合があります。<br>4．同一地点で複数の種別が重複している場合は、地理院地図では、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。<br><br>【データについて】</a><br><a href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html' target='_blank'>1．「火山防災関連施設データ」ダウンロードページ</span></a><br><a href='https://geoinfo2.gsi.go.jp/contact/inquiry2.aspx?pcode=1004&bcode=100412' target='_blank'>2．お問い合わせ</span></a></div><img src='https://maps.gsi.go.jp/legend/vdpf.png'  alt='' width='100%' height='100%'>",
+        "toggleall": false,
+        "src": "./layers_vdpf.txt"
+    },
+    {
+      "type": "LayerGroup",
+      "title": "自然災害伝承碑",
+      "toggleall": false,
+      "html" : "<div class='layer_text'>過去に発生した災害についての様子や教訓が刻まれた碑です。写真や伝承内容を確認することもできます。</div>",
       "entries": [
         {
           "type": "Layer",
