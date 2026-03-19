@@ -262,13 +262,14 @@ CONFIG.TOOLTIP.CONTEXTMENU = {
  GSITEXT.EVAC.DATAITEM3 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
 
 GSITEXT.VDPF = {};
-GSITEXT.VDPF.CONFIRMTOP = '火山災害発生時の退避のために使用する退避壕・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下の御利用上の注意に同意する場合のみ御利用ください。';
-GSITEXT.VDPF.ATTENTION = '【御利用上の注意】';
-GSITEXT.VDPF.CONFIRMITEM1 = '本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関に御確認ください。';
-GSITEXT.VDPF.CONFIRMITEM2 = '本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるか御確認ください。';
-GSITEXT.VDPF.CONFIRMITEM3 = '同一地点で複数の種別が重複している場合は、退避壕、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を右側にずらして表示しています。';
+GSITEXT.VDPF.CONFIRMTOP = '火山災害発生時の退避のために使用する退避壕（シェルター）・退避舎・ヘリ離着陸場・防災避難港の情報です。火山調査研究推進本部により選定された「活動火山対策のために観測、測量、調査及び研究の充実等が必要な火山」を対象として国土地理院が整備したものです。<br>地理院地図に掲載されている火山防災関連施設データ（以下「本データ」といいます。）は、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="blank">国土地理院コンテンツ利用規約</a>のほか、以下のご利用上の注意に同意する場合のみご利用ください。';
+GSITEXT.VDPF.ATTENTION = '【ご利用上の注意】';
+GSITEXT.VDPF.CONFIRMITEM1 = '本データは、火山防災関連施設の名称、位置等の情報を火山防災避難計画等から収集し、火山防災協議会等の関係機関に確認の上、地図上に表示したものです。個々の施設の状況などについては、関係機関にご確認ください。';
+GSITEXT.VDPF.CONFIRMITEM2 = '本データは、予告なく更新することがあります。ダウンロードして利用する場合などは、最新の情報であるかご確認ください。';
+GSITEXT.VDPF.CONFIRMITEM3 = '整備時期等の違いにより、火山基本図及び火山基本図データに含まれている火山防災関連施設に関する情報と本データの情報が異なる場合があります。';
+GSITEXT.VDPF.CONFIRMITEM4 = '同一地点で複数の種別が重複している場合は、地理院地図では、退避壕（シェルター）、退避舎、ヘリ離着陸場、防災避難港の順を優先順位とし、優先順位の低い種別の記号を東側にずらして表示しています。';
 GSITEXT.VDPF.ATTENTIONDATA = '【データについて】';
-GSITEXT.VDPF.DATAITEM1 = '「火山防災関連施設」ダウンロードページ';
+GSITEXT.VDPF.DATAITEM1 = '<a href="https://www.gsi.go.jp/bousaichiri/volcano-maps-vdpf-data.html" target="blank">「火山防災関連施設データ」ダウンロードページ</a>';
 GSITEXT.VDPF.DATAITEM2 = '<a href="https://geoinfo2.gsi.go.jp/contact/Inquiry2.aspx?pcode=1004&bcode=100411&mcode=10041101" target="blank">お問い合わせ</a>';
 
 GSITEXT.LINEEDITTIP = '<span style="font-size:11px;">※右クリックで直前の点を取り消すことができます。</span><br>';

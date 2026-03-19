@@ -9578,6 +9578,74 @@ GSI.Modal.volcanoConfirmDialog = GSI.Modal.Dialog.extend({
  L.Class
  - GSI.Modal.BaseClass
    - GSI.Modal.Dialog
+     - GSI.Modal.volcanoConfirmDialog（火山防災関連施設免責事項選択ダイアログ）
+ ************************************************************************/
+GSI.Modal.volcanoConfirmDialog = GSI.Modal.Dialog.extend({
+  options: {
+    positiveButtonText: 'ＯＫ',
+    nagativeButtonText: 'キャンセル',
+    title: "免責事項"
+    , message: ""
+    , width: 460
+  },
+  getContent: function () {
+    var frame = $('<div>').css({ 'height': '280px', 'overflow': 'auto' }).addClass('gsi_modal_dialog_content');
+    var inframe = $('<div>').css({ 'margin': '10px' });
+    var liframe1 = $('<div>').css({ 'margin': '5px 18px 0px 0px' });
+    var liframe2 = $('<div>').css({ 'margin': '0px 18px 0px 0px' });
+    var frmct = $('<div>').html(GSI.TEXT.VDPF.CONFIRMTOP);
+    var uol = $('<ol>');
+    var li1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.VDPF.CONFIRMITEM1);
+    var li2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.VDPF.CONFIRMITEM2);
+    var li3 = $('<li>').attr({ "value": "3" }).html(GSI.TEXT.VDPF.CONFIRMITEM3);
+    var li4 = $('<li>').attr({ "value": "4" }).html(GSI.TEXT.VDPF.CONFIRMITEM4);
+    var atten = $('<div>').html(GSI.TEXT.VDPF.ATTENTION);
+
+    var dol = $('<ol>');
+    var dli1 = $('<li>').attr({ "value": "1" }).html(GSI.TEXT.VDPF.DATAITEM1);
+    var dli2 = $('<li>').attr({ "value": "2" }).html(GSI.TEXT.VDPF.DATAITEM2);
+    var datten = $('<div>').html(GSI.TEXT.VDPF.ATTENTIONDATA);
+
+    uol.append(li1);
+    uol.append(li2);
+    uol.append(li3);
+    uol.append(li4);
+    liframe1.append(atten);
+    liframe1.append(uol);
+
+    dol.append(dli1);
+    dol.append(dli2);
+    liframe2.append(datten);
+    liframe2.append(dol);
+
+    inframe.append(frmct);
+    inframe.append(liframe1);
+    inframe.append(liframe2);
+
+    frame.append(inframe);
+    var titleFrame = $('<div>').addClass('gsi_modal_dialog_header').html(this.options.title);
+
+    var dialogFrame = GSI.Modal.Dialog.prototype.getContent.call(this);
+
+    this.dialogContent.append(titleFrame);
+    this.dialogContent.append(frame);
+
+    return dialogFrame;
+  },
+  onPositiveButtonClick: function () {
+    this.hide();
+    this.fire('positive');
+  },
+  onNegativeButtonClick: function () {
+    this.hide();
+    this.fire('negative');
+  }
+});
+
+/************************************************************************
+ L.Class
+ - GSI.Modal.BaseClass
+   - GSI.Modal.Dialog
      - GSI.Modal.dsloreDialog
  ************************************************************************/
 GSI.Modal.dsloreDialog = GSI.Modal.Dialog.extend({
