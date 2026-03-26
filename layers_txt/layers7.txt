@@ -838,18 +838,35 @@
           "html": "<div class='layer_text'>南極の地形図や写真など、南極の情報を閲覧できます。</div>",
           "entries": [
             {
-              "type": "Layer",
-              "id": "southpole_spec",
+              "type": "LayerGroup",
               "title": "南極の地理空間情報（整備範囲）",
-              "url": "https://maps.gsi.go.jp/xyz/southpole_spec/{z}/{x}/{y}.geojson",
-              "html": "<div class='layer_text'><p>南極の情報が整備されている範囲を表示します。</p></div>概ね、東経15度から59度、南緯65度から79度の範囲の一部となります。",
-              "maxNativeZoom": 2,
-              "maxZoom": 18,
+              "id": "southpole_spec",
+              "toggleall": true,
+              "html": "<div class='layer_text'><p>南極の情報が整備されている範囲を表示します。</p></div>概ね、東経15度から59度、南緯65度から79度の範囲の一部となります。<div class=\"gsi_layerinfo_kaisetu\"><p>背景図について</p></div>整備範囲内の地形を概観できるよう、以下のデータソースを使用して、1,000万分1南極大陸に準じた表現で表示した地図です。<br><br>データソース：<br>海岸線、等高線、露岩及び棚氷：SCAR Antarctic Digital Database<br>地名：SCAR Composite Gazetteer of Antarctica、<br>既存の南極地形図及び南極地勢図<br><br><a target=\"_blank\" href=\"https://www.gsi.go.jp/antarctic/index.html\">南極の地理空間情報</a>",
               "area": {
                 "lat": -69.004121,
                 "lng": 39.582034,
                 "zoom": 2
-              }
+              },
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "southpole_spec_ras",
+                  "title": "南極の地理空間情報（整備範囲）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_spec_ras/{z}/{x}/{y}.png",
+                  "cocotile": false,
+                  "html": ""
+                },
+                {
+                  "type": "Layer",
+                  "id": "southpole_spec_vec",
+                  "title": "南極の地理空間情報（整備範囲）",
+                  "url": "https://maps.gsi.go.jp/xyz/southpole_spec_vec/{z}/{x}/{y}.geojson",
+                  "html": "",
+                  "maxNativeZoom": 2,
+                  "maxZoom": 8
+                }
+              ]
             },
             {
               "type": "Layer",

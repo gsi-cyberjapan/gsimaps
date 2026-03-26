@@ -1,0 +1,180 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "道道1145号　薫別川北線",
+        "住所又は概略位置": "北海道標津町字古多糠",
+        "更新日": "2025/09/09",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.02423,
+          43.793232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道242号　北光視距改良",
+        "住所又は概略位置": "北海道置戸町字北光",
+        "更新日": "2025/09/09",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.602316,
+          43.703064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中央自動車道神坂スマートIC",
+        "住所又は概略位置": "岐阜県中津川市神坂",
+        "更新日": "2025/09/13",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.570874,
+          35.518149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "群馬県道68号 桐生伊勢崎線 阿左美大原工区 4車線化",
+        "住所又は概略位置": "群馬県みどり市笠懸町久宮",
+        "更新日": "2025/09/18",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.293766,
+          36.375496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道186号（新笹ヶ峠トンネル）",
+        "住所又は概略位置": "島根県浜田市金城町小国",
+        "更新日": "2025/09/22",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.168918,
+          34.814843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "一般国道8号米原バイパス9工区",
+        "住所又は概略位置": "滋賀県彦根市宮田町",
+        "更新日": "2025/09/23",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.270981,
+          35.288314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "湖北地域消防組合米原出張所",
+        "住所又は概略位置": "滋賀県米原市西円寺",
+        "更新日": "2025/09/23",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/taihigou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.305302,
+          35.325836
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道344号（安田バイパス）",
+        "住所又は概略位置": "山形県酒田市安田",
+        "更新日": "2025/10/06",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.894366,
+          38.950611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ホーバークラフト（大分空港～大分市）",
+        "住所又は概略位置": "大分県国東市安岐町下原",
+        "更新日": "2025/10/09",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.731771,
+          33.475129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ホーバークラフト（大分空港～大分市）",
+        "住所又は概略位置": "大分県大分市大字勢家",
+        "更新日": "2025/10/09",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.593133,
+          33.249271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道249号中屋トンネル工区（線形改良）",
+        "住所又は概略位置": "石川県輪島市縄又町",
+        "更新日": "2025/10/16",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.832024,
+          37.341754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道398号安良町工区（第2工区）",
+        "住所又は概略位置": "秋田県羽後町足田",
+        "更新日": "2025/10/23",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.403857,
+          39.230213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "東海北陸自動車道4車線化（真木トンネル）（拡幅）",
+        "住所又は概略位置": "富山県南砺市真木",
+        "更新日": "2025/10/24",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.876967,
+          36.372494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国道105号（幸屋渡工区）",
+        "住所又は概略位置": "秋田県北秋田市阿仁幸屋渡",
+        "更新日": "2025/10/28",
+        "_markerType": "Icon",
+        "_iconUrl": "./icon/hinannkou.svg",
+        "_iconSize": [
+          20,
+          20
+        ],
+        "_iconAnchor": [
+          10,
+          10
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.429649,
+          39.921033
+        ]
+      }
+    }
+  ]
+}
