@@ -27612,7 +27612,7 @@ GSI.Footer = L.Evented.extend({
   // 標高　表示用コンテナ作成
   _createElevationContainer: function (parentContainer) {
     var container = $("<div>").addClass("item-frame");
-    var heading = $("<span>").addClass("heading").html("標高（全国標高改定以前の値）:");
+    var heading = $("<span>").addClass("heading").html("標高:");
     this._elevationView = $("<span>").addClass("elevation").html("---");
     this._elevationComment = $("<span>").addClass("mini-comment").html("");
 
