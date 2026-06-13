@@ -1554,6 +1554,15 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "jin202606",
+                      "title": "6月更新",
+                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/085.png",
+                      "url": "https://maps.gsi.go.jp/xyz/jin202606/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
                       "id": "jin202605",
                       "title": "5月更新",
                       "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/084.png",
