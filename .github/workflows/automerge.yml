@@ -6,8 +6,6 @@ on:
       - opened
       - edited
       - synchronize
-  schedule:
-    - cron: '*/30 * * * *'
   workflow_dispatch: {}
 
 jobs:
