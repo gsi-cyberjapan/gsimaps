@@ -47,6 +47,64 @@
           "entries": [
           	{
               "type": "LayerGroup",
+              "title": "2026年",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "toggleall": true,
+              "id": "nendophoto2026",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、地方公共団体等の空中写真、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#9400d3\">■</span> 地方公共団体等の空中写真</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "nendophoto2026",
+                  "title": "2026年",
+                  "url": "https://maps.gsi.go.jp/xyz/nendophoto2026/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 14,
+                  "maxZoom": 18
+                },
+                {
+                  "type": "Layer",
+                  "id": "nendophoto2026_spec",
+                  "title": "2026年",
+                  "url": "https://maps.gsi.go.jp/xyz/nendophoto2026/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 13,
+                  "maxNativeZoom": 2
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "2025年",
+              "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+              "toggleall": true,
+              "id": "nendophoto2025",
+              "html": "<div class=\"gsi_layerinfo_subtitle\">電子国土基本図（オルソ画像）、森林（国有林・民有林の空中写真）、地方公共団体等の空中写真、簡易空中写真を撮影年度ごとにまとめたものです。ズームレベル14～18で表示されます。<br>ズームレベル13までで表示される撮影範囲をクリックすると、撮影年月を確認できます。<br>撮影範囲はデータソースごとに以下の色で表示されます。</div><ul style=\"list-style-type:none; padding-left: 10px; margin: 5px\"><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#0000ff\">■</span> 電子国土基本図（オルソ画像）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#008000\">■</span> 森林（国有林・民有林）の<br>　　空中写真（林野庁）（2011年～）</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#9400d3\">■</span> 地方公共団体等の空中写真</li><li style=\"line-height: 1.2\"><span style=\"font-size:x-large; color:#ff00ff\">■</span> 簡易空中写真</li><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/nendophoto_precaution.pdf\">承認番号</a>",
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "nendophoto2025",
+                  "title": "2025年",
+                  "url": "https://maps.gsi.go.jp/xyz/nendophoto2025/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "minZoom": 14,
+                  "maxZoom": 18
+                },
+                {
+                  "type": "Layer",
+                  "id": "nendophoto2025_spec",
+                  "title": "2025年",
+                  "url": "https://maps.gsi.go.jp/xyz/nendophoto2025/{z}/{x}/{y}.geojson",
+                  "cocotile": false,
+                  "minZoom": 2,
+                  "maxZoom": 13,
+                  "maxNativeZoom": 2
+                }
+              ]
+            },
+            {
+              "type": "LayerGroup",
               "title": "2024年",
               "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
               "toggleall": true,
