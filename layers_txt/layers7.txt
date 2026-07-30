@@ -6159,6 +6159,16 @@
                 },
                 {
                   "type": "Layer",
+                  "id": "3d_pcd_update_2026_07",
+                  "title": "2026年7月刊行",
+                  "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2026_07/{z}/{x}/{y}.geojson",
+                  "cocotile": true,
+                  "minZoom": 2,
+                  "maxZoom": 14,
+                  "maxNativeZoom": 2
+                },
+                {
+                  "type": "Layer",
                   "id": "3d_pcd_update_2026_03",
                   "title": "2026年3月刊行",
                   "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2026_03/{z}/{x}/{y}.geojson",
