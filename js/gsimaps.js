@@ -12340,6 +12340,12 @@ L.Util.extend(GSI.KML, {
     var style = {};
     var sl = xml.getElementsByTagName('Style');
 
+    for (var i = 0; i < sl.length; i++) {
+      style['#' + sl[i].getAttribute('id')] = this.parseStyleElement(sl[i]);
+    }
+    return style;
+  },
+  parseStyleElement: function (e) {
     var attributes = {
       color: true, width: true, Icon: true, href: true,
       hotSpot: true, scale: true
@@ -12383,30 +12389,27 @@ L.Util.extend(GSI.KML, {
       return options;
     }
 
-    for (var i = 0; i < sl.length; i++) {
-      var e = sl[i], el;
-      var options = {}, poptions = {}, ioptions = {};
-      el = e.getElementsByTagName('LineStyle');
-      if (el && el[0]) { options = _parse(el[0]); }
-      el = e.getElementsByTagName('PolyStyle');
-      if (el && el[0]) { poptions = _parse(el[0]); }
-      if (poptions.color) { options.fillColor = poptions.color; }
-      if (poptions.opacity || poptions.opacity == 0) { options.fillOpacity = poptions.opacity; }
-      el = e.getElementsByTagName('IconStyle');
-      if (el && el[0]) { ioptions = _parse(el[0]); }
-      if (ioptions.href) {
-        // save anchor info until the image is loaded
-        options.icon = {
-          iconUrl: ioptions.href,
-          shadowUrl: null,
-          iconAnchorRef: { x: ioptions.x, y: ioptions.y },
-          iconAnchorType: { x: ioptions.xunits, y: ioptions.yunits },
-          _iconScale: ioptions.scale
-        };
-      }
-      style['#' + e.getAttribute('id')] = options;
+    var el;
+    var options = {}, poptions = {}, ioptions = {};
+    el = e.getElementsByTagName('LineStyle');
+    if (el && el[0]) { options = _parse(el[0]); }
+    el = e.getElementsByTagName('PolyStyle');
+    if (el && el[0]) { poptions = _parse(el[0]); }
+    if (poptions.color) { options.fillColor = poptions.color; }
+    if (poptions.opacity || poptions.opacity == 0) { options.fillOpacity = poptions.opacity; }
+    el = e.getElementsByTagName('IconStyle');
+    if (el && el[0]) { ioptions = _parse(el[0]); }
+    if (ioptions.href) {
+      // save anchor info until the image is loaded
+      options.icon = {
+        iconUrl: ioptions.href,
+        shadowUrl: null,
+        iconAnchorRef: { x: ioptions.x, y: ioptions.y },
+        iconAnchorType: { x: ioptions.xunits, y: ioptions.yunits },
+        _iconScale: ioptions.scale
+      };
     }
-    return style;
+    return options;
   },
   parseStyleMap: function (xml, existingStyles) {
     var sl = xml.getElementsByTagName('StyleMap');
@@ -12451,6 +12454,14 @@ L.Util.extend(GSI.KML, {
       var url = el[i].childNodes[0].nodeValue;
       for (var a in style[url]) {
         options[a] = style[url][a];
+      }
+    }
+    // inline Style in Placemark overrides shared style (KML spec)
+    el = place.getElementsByTagName('Style');
+    for (i = 0; i < el.length; i++) {
+      var inlineOptions = this.parseStyleElement(el[i]);
+      for (var b in inlineOptions) {
+        options[b] = inlineOptions[b];
       }
     }
     options.geodesic = style.geodesic;
