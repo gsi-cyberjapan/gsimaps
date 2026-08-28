@@ -16,6 +16,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和8年(2026年)熊本地震",
+              "toggleall": false,
+              "src": "./layers_20260729kumamoto.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和7年青森県東方沖の地震",
               "toggleall": false,
               "src": "./layers_20251210aomori.txt"
