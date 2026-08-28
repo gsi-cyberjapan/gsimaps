@@ -1,0 +1,641 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "正射画像（速報）",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "八代地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_yatsushiro_0729do_sokuho",
+              "title": "八代地区（7/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729do_sokuho/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.445320,
+                "lng" : 130.584183,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "熊本県央地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_kumamotokeno_0812do_sokuho",
+              "title": "熊本県央地区（8/12撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamotokeno_0812do_sokuho/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.627232,
+                "lng" : 130.889053,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "正射画像",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "八代地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_yatsushiro_0729do",
+              "title": "八代地区（7/29撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.445320,
+                "lng" : 130.584183,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "熊本１地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_kumamoto1_0803do",
+              "title": "熊本１地区（8/3撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto1_0803do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.840478,
+                "lng" : 130.755244,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "熊本２地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_kumamoto2_0729_0802do",
+              "title": "熊本２地区（7/29、8/2撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto2_0729_0802do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.754076,
+                "lng" : 130.732841,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "熊本３地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_kumamoto3_0731_0801do",
+              "title": "熊本３地区（7/31、8/1撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0731_0801do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.687643,
+                "lng" : 130.702286,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        },
+        {
+          "type": "LayerGroup",
+          "title": "熊本４地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260729kumamoto_kumamoto4_0730do",
+              "title": "熊本４地区（7/30撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto4_0730do/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 32.604531,
+                "lng" : 130.658169,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真（速報）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "八代地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_yatsushiro_0729suichoku_sokuho",
+          "title": "八代地区（7/29撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.445320,
+           "lng" : 130.584183,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本県央地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamotokeno_0812suichoku_sokuho",
+          "title": "熊本県央地区（8/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamotokeno_0812suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.627232,
+           "lng" : 130.889053,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       }
+     ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+      {
+       "type": "LayerGroup",
+       "title": "八代地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_yatsushiro_0729suichoku",
+          "title": "八代地区（7/29撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.445464,
+           "lng" : 130.584183,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本１地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto1_0729suichoku_sokuho",
+          "title": "熊本１地区（7/29撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto1_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.840478,
+           "lng" : 130.755244,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto1_0803suichoku",
+          "title": "熊本１地区（8/3撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto1_0803suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.840366,
+           "lng" : 130.755157,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本２地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto2_0729suichoku_sokuho",
+          "title": "熊本２地区（7/29撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto2_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.754076,
+           "lng" : 130.732841,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto2_0802suichoku_sokuho",
+          "title": "熊本２地区（8/2撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto2_0802suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.753499,
+           "lng" : 130.733871,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本３地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto3_0729suichoku_sokuho",
+          "title": "熊本３地区（7/29撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.713500,
+           "lng" : 130.706406,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto3_0730suichoku_sokuho",
+          "title": "熊本３地区（7/30撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0730suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.682586,
+           "lng" : 130.681343,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto3_0731suichoku_sokuho",
+          "title": "熊本３地区（7/31撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0731suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.682441,
+           "lng" : 130.681343,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          },
+          {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto3_0801suichoku",
+          "title": "熊本３地区（8/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0801suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.682441,
+           "lng" : 130.681343,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本４地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamoto4_0730suichoku_sokuho",
+          "title": "熊本４地区（7/30撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto4_0730suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.604531,
+           "lng" : 130.658169,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本県央地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260729kumamoto_kumamotokeno_0812suichoku",
+          "title": "熊本県央地区（8/12撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamotokeno_0812suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 32.627232,
+           "lng" : 130.889053,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20260728_kumamoto_earthquake.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       }
+     ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜め写真",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "八代地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+           "type": "Layer",
+           "id": "20260729kumamoto_yatsushiro_0729naname",
+           "title": "八代地区（7/29撮影）",
+           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+           "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729naname/{z}/{x}/{y}.geojson",
+           "minZoom": 2,
+           "maxZoom": 18,
+           "maxNativeZoom": 2,
+           "area" : {
+             "lat" : 32.445320,
+             "lng" : 130.584183,
+             "zoom" : 12
+           },
+           "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/29撮影）</div><div class=\"gsi_layerinfo_kaisetu\">カメラアイコンは撮影位置に表示しています。アイコンの向きは撮影方向の概略を示しています。なお、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+         }
+        ]
+       },
+       {
+       "type": "LayerGroup",
+       "title": "熊本４地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+           "type": "Layer",
+           "id": "20260729kumamoto_kumamoto4_0729naname",
+           "title": "熊本４地区（7/29撮影）",
+           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/183.png",
+           "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto4_0729naname/{z}/{x}/{y}.geojson",
+           "minZoom": 2,
+           "maxZoom": 18,
+           "maxNativeZoom": 2,
+           "area" : {
+             "lat" : 32.593684,
+             "lng" : 130.632248,
+             "zoom" : 12
+           },
+           "html": "<div class=\"gsi_layerinfo_title\">斜め写真（7/29撮影）</div><div class=\"gsi_layerinfo_kaisetu\">カメラアイコンは撮影位置に表示しています。アイコンの向きは撮影方向の概略を示しています。なお、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+         }
+        ]
+       }
+     ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜面崩壊・堆積分布データ",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhoukai_dosekiryu_taiseki_yatsushiro",
+          "title": "斜面崩壊・堆積分布データ（八代地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_dosekiryu_taiseki_yatsushiro/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、7月29日に撮影した空中写真（正射画像（速報））を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年7月29日23時50分作成<br>　2026年8月6日13時40分一部更新</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhouka_taiseki_kumamoto1",
+          "title": "斜面崩壊・堆積分布データ（熊本１地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhouka_taiseki_kumamoto1/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、8月3日に撮影した空中写真（正射画像）を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年8月6日13時40分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhoukai_taiseki_kumamoto2",
+          "title": "斜面崩壊・堆積分布データ（熊本２地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamoto2/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、7月29日及び8月2日に撮影した空中写真（正射画像）を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年8月7日11時10分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhoukai_taiseki_kumamoto3",
+          "title": "斜面崩壊・堆積分布データ（熊本３地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamoto3/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、7月31日及び8月1日に撮影した空中写真（正射画像）を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年8月4日13時40分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhoukai_taiseki_kumamoto4",
+          "title": "斜面崩壊・堆積分布データ（熊本４地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamoto4/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、7月30日に撮影した空中写真（正射画像）を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年8月4日13時50分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        },
+        {
+          "type": "Layer",
+          "id": "20260729kumamoto_syamenhoukai_taiseki_kumamotokeno",
+          "title": "斜面崩壊・堆積分布データ（熊本県央地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamotokeno/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20260729kumamoto_syamenhoukai_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が、8月12日に撮影した空中写真（正射画像（速報））を判読して取得した、令和8年熊本地震によって生じたと考えられる斜面崩壊及び堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の地震によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の地震によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年8月14日9時15分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "SAR解析結果(ALOS-2/ALOS-4)",
+      "toggleall": false,
+      "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt"
+    },
+    {
+           "type": "Layer",
+           "id": "std_renewal_test",
+           "title": "標準地図リニューアル版（試験公開）",
+           "url": "https://maps.gsi.go.jp/xyz/std_renewal_test/{z}/{x}/{y}.png",
+           "minZoom": 9,
+           "maxZoom": 14,
+           "maxNativeZoom": 14,
+           "area" : {
+             "lat" : 32.507498,
+             "lng" : 130.601808,
+             "zoom" : 14
+           },
+           "html": "<div class=\"gsi_layerinfo_title\">標準地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の標準地図より情報量を充実させた、令和8年9月末公開予定の標準地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"  
+    },
+    {
+           "type": "Layer",
+           "id": "pale_renewal_test",
+           "title": "淡色地図リニューアル版（試験公開）",
+           "url": "https://maps.gsi.go.jp/xyz/pale_renewal_test/{z}/{x}/{y}.png",
+           "minZoom": 9,
+           "maxZoom": 14,
+           "maxNativeZoom": 14,
+           "area" : {
+             "lat" : 32.507498,
+             "lng" : 130.601808,
+             "zoom" : 14
+           },
+           "html": "<div class=\"gsi_layerinfo_title\">淡色地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の淡色地図より情報量を充実させた、令和8年9月末公開予定の淡色地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"  
+    }
+  ]
+}
