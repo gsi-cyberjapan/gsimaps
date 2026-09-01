@@ -2890,6 +2890,7 @@ function LoadLayersProcVectorData(vLayer) {
 function LoadLayersProcVectorDataKML(data) {
 	var kml = (new DOMParser()).parseFromString(data, 'text/xml');
 	if (kml) {
+		LoadLayersProcVectorDataKML_resolveInlineStyles(kml);
 		data = toGeoJSON.kml(kml);
 		if (data.features) {
 			for (var n = 0; n < data.features.length; n++) {
@@ -3025,6 +3026,42 @@ function initializeZData(data) {
 
 
 }
+
+function LoadLayersProcVectorDataKML_resolveInlineStyles(kml) {
+	var placemarks = kml.getElementsByTagName('Placemark');
+	var inlineStyleIndex = 0;
+	for (var i = 0; i < placemarks.length; i++) {
+		var placemark = placemarks[i];
+		var inlineStyle = null;
+		var styleUrlNode = null;
+		for (var j = 0; j < placemark.childNodes.length; j++) {
+			var child = placemark.childNodes[j];
+			if (child.nodeType != 1) continue;
+			if (child.nodeName == 'Style') {
+				inlineStyle = child;
+			}
+			else if (child.nodeName == 'styleUrl' && !styleUrlNode) {
+				styleUrlNode = child;
+			}
+		}
+		if (!inlineStyle) continue;
+
+		var styleId = inlineStyle.getAttribute('id');
+		if (!styleId) {
+			styleId = '_gsi_inline_style_' + (inlineStyleIndex++);
+			inlineStyle.setAttribute('id', styleId);
+		}
+		if (styleUrlNode) {
+			styleUrlNode.textContent = '#' + styleId;
+		}
+		else {
+			styleUrlNode = kml.createElement('styleUrl');
+			styleUrlNode.textContent = '#' + styleId;
+			placemark.insertBefore(styleUrlNode, placemark.firstChild);
+		}
+	}
+};
+
 function LoadLayersProcVectorDataKML_properties(data, data_style) {
 	data.properties._altitudeMode = data.geometry.altitudeMode;
 

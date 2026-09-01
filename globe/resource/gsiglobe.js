@@ -11004,13 +11004,11 @@ GLOBE.MAP = {
       $("<dummygsiglobestyle>dummy</dummygsiglobestyle>").prependTo( $styleParent );
 
       // ダミー生成 (styleUrl)
+      // Placemark直下のinline Styleは削除せず残す（KML仕様どおりinlineが優先され、
+      // 既定スタイルはinlineに無い属性のみ補完される） refs #166
       $(kml).find("Placemark").each(function(index, element){
         $("<dummygsiglobestyleurl>dummy</dummygsiglobestyleurl>").prependTo( $(element) );
       });
-
-
-      // 無効な要素を削除
-      $(kml).find("Placemark > Style").remove();
 
 
       // 既定のスタイル
