@@ -9937,9 +9937,10 @@ GLOBE.MAP = {
     // ポリゴン(円含む)----------------------
     }else if(entity._polygon != undefined){
       var hierarchy   = entity._polygon._hierarchy._value;
-      var color       = entity._polygon._material._color._value;
-      var strokeColor = entity._polygon._outlineColor._value;
-      var strokeWidth = entity._polygon._outlineWidth._value;
+      // スタイル未定義の場合は既定値を使用
+      var color       = (entity._polygon._material != undefined && entity._polygon._material._color != undefined ? entity._polygon._material._color._value : Cesium.Color.WHITE);
+      var strokeColor = (entity._polygon._outlineColor != undefined ? entity._polygon._outlineColor._value : Cesium.Color.WHITE);
+      var strokeWidth = (entity._polygon._outlineWidth != undefined ? entity._polygon._outlineWidth._value : 1);
 
       // 緯度経度を配列に入れる
       var positions = hierarchy.positions;
@@ -11038,6 +11039,31 @@ GLOBE.MAP = {
 
       kml = $.parseXML(textKml);
     }
+
+    // 塗り色の解釈を2Dに合わせる（<fill>は解釈せず、色が無ければ線色のopacity 0.2）refs #166
+    var kmlNs = kml.documentElement.namespaceURI;
+    $(kml).find("Style").each(function(index, element){
+      $(element).find("PolyStyle > fill").remove();
+
+      var polyStyle = $(element).children("PolyStyle")[0];
+      var polyColor = ( polyStyle ? $(polyStyle).children("color") : null );
+      if ( polyColor && polyColor[0] && polyColor.text() )
+      {
+        return;
+      }
+
+      var lineColor = $(element).find("LineStyle > color").text();
+      var fillColor = ( lineColor && lineColor.length == 8 ? "33" + lineColor.substring(2) : "33ff8833" );
+
+      if ( !polyStyle )
+      {
+        polyStyle = ( kmlNs ? kml.createElementNS(kmlNs, "PolyStyle") : kml.createElement("PolyStyle") );
+        element.appendChild(polyStyle);
+      }
+      var colorElement = ( kmlNs ? kml.createElementNS(kmlNs, "color") : kml.createElement("color") );
+      colorElement.textContent = fillColor;
+      polyStyle.appendChild(colorElement);
+    });
 
     return kml;
   },

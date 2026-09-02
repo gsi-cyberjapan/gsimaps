@@ -3123,6 +3123,11 @@ function LoadLayersProcVectorDataKML_properties(data, data_style) {
 					data.properties._fillOpacity = _color.opacity;
 				}
 			}
+			if (data.properties._fillColor == null) {
+				// 塗り色が無い場合は2Dと同様に線色のopacity 0.2で塗る refs #166
+				data.properties._fillColor = (data.properties._color != null ? data.properties._color : "#3388ff");
+				data.properties._fillOpacity = 0.2;
+			}
 
 			var bounds = null;
 			for (var i = 0; i < data.geometry.coordinates[0].length; i++) {
