@@ -1643,6 +1643,14 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "men202608",
+                      "title": "8月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/men202608/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    },
+                    {
+                      "type": "Layer",
                       "id": "men202607",
                       "title": "7月更新",
                       "url": "https://maps.gsi.go.jp/xyz/men202607/{z}/{x}/{y}.geojson",
