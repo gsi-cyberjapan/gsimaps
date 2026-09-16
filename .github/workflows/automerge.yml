@@ -12,7 +12,7 @@ jobs:
   merge_schedule:
     runs-on: ubuntu-latest
     steps:
-      - uses: geolonia/merge-schedule-action@v0.0.1
+      - uses: geolonia/merge-schedule-action@v0.0.2
         with:
           merge_method: squash
           time_zone: 'Asia/Tokyo'
