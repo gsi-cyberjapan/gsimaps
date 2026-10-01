@@ -33,7 +33,7 @@ jobs:
       CLOUDFRONT_DISTRIBUTION_ID: "E22UPU54MR7TDG"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: gh-pages
           fetch-depth: 0
@@ -59,7 +59,7 @@ jobs:
           sed -i 's/<div id="title_logo_upper">.*<\/div>/<div id="title_logo_upper">地理院地図<\/div>/' globe/index_globe.html
           sed -i 's/<div id="title_logo_lower">.*<\/div>/<div id="title_logo_lower">Globe<\/div>/' globe/index_globe.html
 
-      - uses: aws-actions/configure-aws-credentials@v4
+      - uses: aws-actions/configure-aws-credentials@v6
         if: ${{ env.DEPLOY_ROLE_ARN != '' }}
         with:
           aws-region: ap-northeast-1
@@ -111,7 +111,7 @@ jobs:
       DEPLOY_ROLE_ARN: ${{ secrets.GSIMAPS_DEPLOY_ROLE_ARN }}
       CLOUDFRONT_DISTRIBUTION_ID: "E22UPU54MR7TDG"
     steps:
-      - uses: aws-actions/configure-aws-credentials@v4
+      - uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ap-northeast-1
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
