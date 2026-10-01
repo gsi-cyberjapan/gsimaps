@@ -606,36 +606,6 @@
       "title": "SAR解析結果(ALOS-2/ALOS-4)",
       "toggleall": false,
       "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt"
-    },
-    {
-           "type": "Layer",
-           "id": "std_renewal_test",
-           "title": "標準地図リニューアル版（試験公開）",
-           "url": "https://maps.gsi.go.jp/xyz/std_renewal_test/{z}/{x}/{y}.png",
-           "minZoom": 9,
-           "maxZoom": 14,
-           "maxNativeZoom": 14,
-           "area" : {
-             "lat" : 32.507498,
-             "lng" : 130.601808,
-             "zoom" : 14
-           },
-           "html": "<div class=\"gsi_layerinfo_title\">標準地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の標準地図より情報量を充実させた、令和8年9月末公開予定の標準地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"  
-    },
-    {
-           "type": "Layer",
-           "id": "pale_renewal_test",
-           "title": "淡色地図リニューアル版（試験公開）",
-           "url": "https://maps.gsi.go.jp/xyz/pale_renewal_test/{z}/{x}/{y}.png",
-           "minZoom": 9,
-           "maxZoom": 14,
-           "maxNativeZoom": 14,
-           "area" : {
-             "lat" : 32.507498,
-             "lng" : 130.601808,
-             "zoom" : 14
-           },
-           "html": "<div class=\"gsi_layerinfo_title\">淡色地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の淡色地図より情報量を充実させた、令和8年9月末公開予定の淡色地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"  
     }
   ]
 }
