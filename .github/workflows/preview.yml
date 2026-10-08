@@ -26,7 +26,7 @@ jobs:
     if: github.repository == 'gsimaps-cicd/gsimaps-internal' && github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: デプロイしないファイルを掃除する
         run: |
           rm \
@@ -37,7 +37,7 @@ jobs:
             package.json \
             package-lock.json
       - name: Assume deploy role (GSIMAPS / S3)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
@@ -47,7 +47,7 @@ jobs:
           aws s3 sync . "s3://${{ env.PREVIEW_BUCKET_NAME }}/pr-${{ github.event.number }}/"
 
       - name: Assume management role (GEOLONIA /CloudFront)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
@@ -60,7 +60,7 @@ jobs:
             --paths "/pr-${{ github.event.number }}/*"
 
       - name: Comment preview URL on PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           PREVIEW_BASE_URL: ${{ env.PREVIEW_BASE_URL }}
         with:
@@ -76,9 +76,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Assume deploy role (GSIMAPS / S3)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
@@ -89,7 +89,7 @@ jobs:
 
 
       - name: Assume deploy role (GEOLONIA / CloudFront)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.MANAGEMENT_ROLE_ARN }}
