@@ -1,0 +1,119 @@
+{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真（速報）",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "氷見地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260902rain_himi_0901suichoku_sokuho",
+          "title": "氷見地区（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260902rain_himi_0901suichoku_sokuho/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 36.848719,
+           "lng" : 136.959000,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "速報用写真のため、通常の航空カメラによる撮影画像より画質が低下しています。また、雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R8_0827_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       }
+     ]
+    },
+    {
+     "type": "LayerGroup",
+     "title": "垂直写真",
+     "iconUrl": "",
+     "toggleall": false,
+     "entries": [
+       {
+       "type": "LayerGroup",
+       "title": "氷見地区",
+       "iconUrl": "",
+       "toggleall": false,
+       "entries": [
+         {
+          "type": "Layer",
+          "id": "20260902rain_himi_0901suichoku",
+          "title": "氷見地区（9/1撮影）",
+          "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
+          "url": "https://maps.gsi.go.jp/xyz/20260902rain_himi_0901suichoku/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 2,
+          "maxZoom": 18,
+          "area" : {
+           "lat" : 36.848719,
+           "lng" : 136.959000,
+           "zoom" : 12
+          },
+          "maxNativeZoom": 2,
+          "html": "雲の影響により地上が見えにくい場合があります。</div><div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/R8_0827_heavyrain.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          }
+        ]
+       }
+     ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "正射画像（速報）",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "LayerGroup",
+          "title": "氷見地区",
+          "toggleall": false,
+          "entries": [
+            {
+              "type": "Layer",
+              "id": "20260902rain_himi_0901do_sokuho",
+              "title": "氷見地区（9/1撮影）",
+              "url": "https://maps.gsi.go.jp/xyz/20260902rain_himi_0901do_sokuho/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 10,
+              "maxZoom": 18,
+              "area" : {
+                "lat" : 36.847483,
+                "lng" : 136.959343,
+                "zoom" : 12
+              },
+              "html": "空中写真から自動処理により作成した正射画像です。このため、構造物等に歪みやズレ、不連続が生じているように見える場合があります。また、雲等の影響により地表が見えにくい場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LayerGroup",
+      "title": "斜面崩壊・土石流・堆積分布図データ",
+      "iconUrl": "",
+      "toggleall": false,
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "20260902rain_syamenhoukai_dosekiryu_taiseki_himi",
+          "title": "斜面崩壊・土石流・堆積分布図データ（氷見地区）",
+          "url": "https://maps.gsi.go.jp/xyz/20260902rain_syamenhoukai_dosekiryu_taiseki_himi/{z}/{x}/{y}.geojson",
+          "cocotile": true,
+          "minZoom": 5,
+          "maxZoom": 16,
+          "maxNativeZoom": 2,
+          "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20250902rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この地図は、国土地理院が9月1日に撮影した空中写真（正射画像（速報））を判読して取得した、令和8年8月27日からの大雨によって生じたと考えられる斜面崩壊及び土石流箇所並びに堆積箇所を表示したものです。<br>２．現地調査は実施していないことから、今回の大雨によって実際に崩壊等が生じた箇所でも表示できていない場合や、今回の大雨によらない崩壊等の箇所を表示している場合があり得ます。<br>３．斜面崩壊・土石流・堆積の箇所は、長さ又は幅がおおむね30m以上のものを表示しています。<br>　2026年9月3日17時15分作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+        }
+      ]
+    }
+  ]
+}

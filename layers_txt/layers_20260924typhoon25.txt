@@ -1,0 +1,75 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "浸水推定図",
+      "toggleall": false,
+      "entries": [
+          {
+              "type": "Layer",
+              "id": "20260924typhoon25_kitainbanuma_0922dansaizu",
+              "title": "北印旛沼(令和8年9月22日14時時点)",
+              "url": "https://maps.gsi.go.jp/xyz/20260924typhoon25_kitainbanuma_0922dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "area" : {
+                "lat" : 35.805890,
+                "lng" : 140.266451,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が、標高データ及び国土交通省災害対策用ヘリコプターによる9月22日14時頃の撮影画像を用いて、浸水範囲を推定し、浸水の深さを色の濃淡で表現したものです。</li><li>利用した画像の撮影時点における情報であるため、最大浸水範囲を示したものではありません。</li><li>また、実際には、未着色範囲でも浸水している可能性や、着色範囲でも浸水していない可能性があります。</li></td><td><img src=\"https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0922dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+              "type": "Layer",
+              "id": "20260924typhoon25_kitainbanuma_0924dansaizu",
+              "title": "北印旛沼(令和8年9月24日14時時点)",
+              "url": "https://maps.gsi.go.jp/xyz/20260924typhoon25_kitainbanuma_0924dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "area" : {
+                "lat" : 35.805890,
+                "lng" : 140.266451,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が、標高データ及び国土交通省災害対策用ヘリコプターによる9月24日14時頃の撮影画像を用いて、浸水範囲を推定し、浸水の深さを色の濃淡で表現したものです。</li><li>利用した画像の撮影時点における情報であるため、最大浸水範囲を示したものではありません。</li><li>また、実際には、未着色範囲でも浸水している可能性や、着色範囲でも浸水していない可能性があります。</li></td><td><img src=\"https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0924dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+              "type": "Layer",
+              "id": "20260924typhoon25_kitainbanuma_0925dansaizu",
+              "title": "北印旛沼(令和8年9月25日11時時点)",
+              "url": "https://maps.gsi.go.jp/xyz/20260924typhoon25_kitainbanuma_0925dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "area" : {
+                "lat" : 35.805890,
+                "lng" : 140.266451,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が、標高データ及び国土交通省災害対策用ヘリコプターによる9月25日11時頃の撮影画像を用いて、浸水範囲を推定し、浸水の深さを色の濃淡で表現したものです。</li><li>利用した画像の撮影時点における情報であるため、最大浸水範囲を示したものではありません。</li><li>また、実際には、未着色範囲でも浸水している可能性や、着色範囲でも浸水していない可能性があります。</li></td><td><img src=\"https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0925dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        },
+        {
+              "type": "Layer",
+              "id": "20260924typhoon25_kitainbanuma_1001dansaizu",
+              "title": "北印旛沼(令和8年10月1日16時時点)",
+              "url": "https://maps.gsi.go.jp/xyz/20260924typhoon25_kitainbanuma_1001dansaizu/{z}/{x}/{y}.png",
+              "cocotile": true,
+              "minZoom": 5,
+              "maxZoom": 16,
+              "maxNativeZoom": 16,
+              "area" : {
+                "lat" : 35.805890,
+                "lng" : 140.266451,
+                "zoom" : 14
+              },
+              "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が、標高データ及び国土交通省災害対策用ヘリコプターによる10月1日16時頃の撮影画像を用いて、浸水範囲を推定し、浸水の深さを色の濃淡で表現したものです。</li><li>利用した画像の撮影時点における情報であるため、最大浸水範囲を示したものではありません。</li><li>また、実際には、未着色範囲でも浸水している可能性や、着色範囲でも浸水していない可能性があります。</li></td><td><img src=\"https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_1001dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>"
+        }
+      ]
+    }
+  ]
+}

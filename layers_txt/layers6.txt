@@ -619,6 +619,18 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和8年(2026年)台風第25号",
+              "toggleall": false,
+              "src": "./layers_20260924typhoon25.txt"
+            },
+            {
+              "type": "LayerGroup",
+              "title": "令和8年(2026年)8月27日からの大雨",
+              "toggleall": false,
+              "src": "./layers_20260902rain.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和7年(2025年)8月6日からの大雨",
               "toggleall": false,
               "src": "./layers_20250815rain.txt"

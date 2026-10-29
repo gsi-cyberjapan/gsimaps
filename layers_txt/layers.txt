@@ -1,15 +1,12 @@
 [
 	{
+		"url": "./layers_topic_20260924typhoon25.txt"
+	},
+	{
+		"url": "./layers_topic_20260902rain.txt"
+	},
+	{
 		"url": "./layers_topic_20260729kumamoto.txt"
-	},
-	{
-		"url": "./layers_topic_20250815rain.txt"
-	},
-	{
-		"url": "./layers_topic_20240923rain.txt"
-	},
-	{
-		"url": "./layers_topic_20240102noto.txt"
 	},
 	{
 		"url": "./layers1.txt"
