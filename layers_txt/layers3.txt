@@ -777,6 +777,17 @@
               "minZoom": 5,
               "maxZoom": 16,
               "html": "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。<p>火山ごとに異なる縮尺（地図情報レベル）で作成されていますので、ご留意ください。火山ごとの諸元は、<a target='_blank' href='https://www.gsi.go.jp/bousaichiri/volcano-maps-vlcm.html'>火山土地条件図の整備状況一覧表</a>から確認できます。</p></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps.html\">解説</a><form name=\"vlcdlegend\"><select name=\"vlcdselect\" ><option value=\"l_vlcd_meakan\">雌阿寒岳・雄阿寒岳</option><option value=\"l_vlcd_2tkch\">十勝岳</option><option value=\"l_vlcd_10tarm\">樽前山</option><option value=\"l_vlcd_9usu\">有珠山</option><option value=\"l_vlcd_5hkkm\">北海道駒ヶ岳</option><option value=\"l_vlcd_esn\">恵山</option><option value=\"l_vlcd_akitayakeyama\">秋田焼山</option><option value=\"l_vlcd_iwatesan\">岩手山</option><option value=\"l_vlcd_akitakomagatake\">秋田駒ヶ岳</option><option value=\"l_vlcd_chokai\">鳥海山</option><option value=\"l_vlcd_kurikomayama\">栗駒山</option><option value=\"l_vlcd_zaou\">蔵王山</option><option value=\"l_vlcd_adatara\">安達太良山</option><option value=\"l_vlcd_11band\">磐梯山</option><option value=\"l_vlcd_nks\">日光白根山</option><option value=\"l_vlcd_3ksrn\">草津白根山</option><option value=\"l_vlcd_asamayama\">浅間山</option><option value=\"l_vlcd_niigatayakeyama\">新潟焼山</option><option value=\"l_vlcd_mdg\">弥陀ヶ原</option><option value=\"l_vlcd_yakedake\">焼岳</option><option value=\"ontake_legend\">御嶽山</option><option value=\"l_vlcd_12fuji\">富士山</option><option value=\"l_vlcd_hakone\">箱根山</option><option value=\"l_vlcd_13izuo\">伊豆大島</option><option value=\"l_vlcd_koz\">神津島</option><option value=\"l_vlcd_6mykj\">三宅島</option><option value=\"l_vlcd_hachijojima\">八丈島</option><option value=\"l_vlcd_trg\">鶴見岳・伽藍岳</option><option value=\"l_vlcd_kuju\">くじゅう連山</option><option value=\"l_vlcd_4aso\">阿蘇山</option><option value=\"l_vlcd_7unzn\">雲仙岳</option><option value=\"l_vlcd_8krsm\">霧島山</option><option value=\"l_vlcd_1skrj\">桜島</option><option value=\"l_vlcd_satsumaiou\">薩摩硫黄島</option><option value=\"l_vlcd_suwanosejima\">諏訪之瀬島</option></select><input type=\"button\" value=\"凡例表示\" onclick=\"window.open('https://maps.gsi.go.jp/legend/' + this.form.vlcdselect.value + '.jpg');\" style=\"font-size:12px;\" /></form>"
+            },
+            {
+              "type": "Layer",
+              "id": "vlcd_spec",
+              "title": "諸元情報",
+              "url": "https://maps.gsi.go.jp/xyz/vlcd_spec/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 2,
+              "maxZoom": 16,
+              "maxNativeZoom": 2,
+              "html": "図上をクリックすると諸元が表示されます。オレンジ色の枠は火山土地条件図の範囲を示します。<br><a href=\"https://www.gsi.go.jp/bousaichiri/volcano-maps-vlcm.html\" target=\"_blank\">整備一覧</a>"
             }
           ]
         },
