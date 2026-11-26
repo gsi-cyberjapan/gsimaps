@@ -1,0 +1,17 @@
+{
+"version": 8,
+"name": "pmtiles-test",
+"sources": {
+"std-pmtile": {
+"type": "raster",
+	"url": "pmtiles://https://protomaps.github.io/PMTiles/stamen_toner(raster)CC-BY+ODbL_z3.pmtiles",
+	"attribution": "テスト用PMTilesデータ",
+	"tileSize": 256
+	}
+},
+"layers": [{
+		"id":"std",
+		"source": "std-pmtile",
+		"type": "raster"
+}]
+}
